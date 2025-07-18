@@ -9,5 +9,7 @@ namespace DadVSMe.Inputs
         public virtual void Release() { }
 
         public abstract InputActionMap GetInputActionMap();
+
+        public virtual void Update() { }
     }
 }

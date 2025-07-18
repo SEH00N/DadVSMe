@@ -101,6 +101,24 @@ namespace DadVSMe.Inputs
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""Attack1"",
+                    ""type"": ""Button"",
+                    ""id"": ""2a688ced-3d78-408c-b3ab-7610e0aeea07"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Attack2"",
+                    ""type"": ""Button"",
+                    ""id"": ""6b0b8997-016b-4151-9660-242bb88ec045"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -180,6 +198,28 @@ namespace DadVSMe.Inputs
                     ""action"": ""Move"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""9930136b-0c91-41b3-81fe-3d8c35d03b36"",
+                    ""path"": ""<Keyboard>/a"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Attack1"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""c7af863b-2960-462b-a578-9dd65da4977d"",
+                    ""path"": ""<Keyboard>/s"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Attack2"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -239,6 +279,8 @@ namespace DadVSMe.Inputs
             // Player
             m_Player = asset.FindActionMap("Player", throwIfNotFound: true);
             m_Player_Move = m_Player.FindAction("Move", throwIfNotFound: true);
+            m_Player_Attack1 = m_Player.FindAction("Attack1", throwIfNotFound: true);
+            m_Player_Attack2 = m_Player.FindAction("Attack2", throwIfNotFound: true);
         }
 
         ~@InputActions()
@@ -320,6 +362,8 @@ namespace DadVSMe.Inputs
         private readonly InputActionMap m_Player;
         private List<IPlayerActions> m_PlayerActionsCallbackInterfaces = new List<IPlayerActions>();
         private readonly InputAction m_Player_Move;
+        private readonly InputAction m_Player_Attack1;
+        private readonly InputAction m_Player_Attack2;
         /// <summary>
         /// Provides access to input actions defined in input action map "Player".
         /// </summary>
@@ -335,6 +379,14 @@ namespace DadVSMe.Inputs
             /// Provides access to the underlying input action "Player/Move".
             /// </summary>
             public InputAction @Move => m_Wrapper.m_Player_Move;
+            /// <summary>
+            /// Provides access to the underlying input action "Player/Attack1".
+            /// </summary>
+            public InputAction @Attack1 => m_Wrapper.m_Player_Attack1;
+            /// <summary>
+            /// Provides access to the underlying input action "Player/Attack2".
+            /// </summary>
+            public InputAction @Attack2 => m_Wrapper.m_Player_Attack2;
             /// <summary>
             /// Provides access to the underlying input action map instance.
             /// </summary>
@@ -364,6 +416,12 @@ namespace DadVSMe.Inputs
                 @Move.started += instance.OnMove;
                 @Move.performed += instance.OnMove;
                 @Move.canceled += instance.OnMove;
+                @Attack1.started += instance.OnAttack1;
+                @Attack1.performed += instance.OnAttack1;
+                @Attack1.canceled += instance.OnAttack1;
+                @Attack2.started += instance.OnAttack2;
+                @Attack2.performed += instance.OnAttack2;
+                @Attack2.canceled += instance.OnAttack2;
             }
 
             /// <summary>
@@ -378,6 +436,12 @@ namespace DadVSMe.Inputs
                 @Move.started -= instance.OnMove;
                 @Move.performed -= instance.OnMove;
                 @Move.canceled -= instance.OnMove;
+                @Attack1.started -= instance.OnAttack1;
+                @Attack1.performed -= instance.OnAttack1;
+                @Attack1.canceled -= instance.OnAttack1;
+                @Attack2.started -= instance.OnAttack2;
+                @Attack2.performed -= instance.OnAttack2;
+                @Attack2.canceled -= instance.OnAttack2;
             }
 
             /// <summary>
@@ -477,6 +541,20 @@ namespace DadVSMe.Inputs
             /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
             /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
             void OnMove(InputAction.CallbackContext context);
+            /// <summary>
+            /// Method invoked when associated input action "Attack1" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+            /// </summary>
+            /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+            /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+            /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+            void OnAttack1(InputAction.CallbackContext context);
+            /// <summary>
+            /// Method invoked when associated input action "Attack2" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+            /// </summary>
+            /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+            /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+            /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+            void OnAttack2(InputAction.CallbackContext context);
         }
     }
 }

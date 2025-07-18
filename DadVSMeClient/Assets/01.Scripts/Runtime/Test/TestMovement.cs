@@ -10,8 +10,35 @@ namespace DadVSMe
 
         private void Update()
         {
-            Vector2 movementInput = InputManager.GetInput<PlayerInputReader>().MovementInput;
+            PlayerInputReader inputReader = InputManager.GetInput<PlayerInputReader>();
+            Vector2 movementInput = inputReader.MovementInput;
             characterRigidbody.linearVelocity = movementInput * moveSpeed;
+
+            if(inputReader.GetAttack1Down())
+            {
+                Debug.Log($"[TestMovement] Attack1 Down");
+            }
+            if(inputReader.GetAttack1Up())
+            {
+                Debug.Log($"[TestMovement] Attack1 Up");
+            }
+            if(inputReader.GetAttack1Press())
+            {
+                Debug.Log($"[TestMovement] Attack1 Press");
+            }
+
+            if(inputReader.GetAttack2Down())
+            {
+                Debug.Log($"[TestMovement] Attack2 Down");
+            }
+            if(inputReader.GetAttack2Up())
+            {
+                Debug.Log($"[TestMovement] Attack2 Up");
+            }
+            if(inputReader.GetAttack2Press())
+            {
+                Debug.Log($"[TestMovement] Attack2 Press");
+            }
         }
     }
 }

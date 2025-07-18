@@ -54,6 +54,12 @@ namespace DadVSMe.Inputs
             return inputReader as TInputReader;
         }
 
+        public static void Update()
+        {
+            foreach(var inputReader in inputReaders)
+                inputReader.Value.Update();
+        }
+
         // Legacy Input System
         public static bool GetKeyDown(KeyCode keyCode) => UnityEngine.Input.GetKeyDown(keyCode);
         public static bool GetKeyUp(KeyCode keyCode) => UnityEngine.Input.GetKeyUp(keyCode);
