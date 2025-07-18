@@ -6,7 +6,10 @@ namespace DadVSMe.Entities
     public class EntitySortingOrderProvider : MonoBehaviour
     {
         [SerializeField] SpriteRenderer entitySpriteRenderer = null;
+
         [SerializeField] EntitySortingOrderResolver entitySortingOrderResolver = null;
+        public EntitySortingOrderResolver EntitySortingOrderResolver => entitySortingOrderResolver;
+
         public event Action<EntitySortingOrderProvider> OnSortingOrderChanged;
 
         public int GetSortingOrder()
@@ -18,11 +21,6 @@ namespace DadVSMe.Entities
         {
             entitySpriteRenderer.sortingOrder = sortingOrder;
             OnSortingOrderChanged?.Invoke(this);
-        }
-
-        public bool IsCrossReferenced(EntitySortingOrderProvider otherSortingOrderProvider)
-        {
-            return entitySortingOrderResolver.Contains(otherSortingOrderProvider);
         }
     }
 }

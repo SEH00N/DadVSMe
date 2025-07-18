@@ -28,7 +28,7 @@ namespace DadVSMe.Inputs
         public void OnMove(InputAction.CallbackContext context)
         {
             #if UNITY_EDITOR
-            Debug.Log($"[PlayerInputReader] OnMove Phase : {context.phase}");
+            // Debug.Log($"[PlayerInputReader] OnMove Phase : {context.phase}");
             #endif
 
             if (context.canceled)
@@ -47,7 +47,7 @@ namespace DadVSMe.Inputs
         public void OnAttack1(InputAction.CallbackContext context)
         {
             #if UNITY_EDITOR
-            Debug.Log($"[PlayerInputReader] OnAttack1 Phase : {context.phase}");
+            // Debug.Log($"[PlayerInputReader] OnAttack1 Phase : {context.phase}");s
             #endif
 
             attack1PhaseBuffer = context.phase;
@@ -60,7 +60,7 @@ namespace DadVSMe.Inputs
         public void OnAttack2(InputAction.CallbackContext context)
         {
             #if UNITY_EDITOR
-            Debug.Log($"[PlayerInputReader] OnAttack2 Phase : {context.phase}");
+            // Debug.Log($"[PlayerInputReader] OnAttack2 Phase : {context.phase}");
             #endif
 
             attack2PhaseBuffer = context.phase;
