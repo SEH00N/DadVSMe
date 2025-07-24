@@ -9,6 +9,73 @@
       },
       "hash": "38fecf55e4fd94ccfe58a92ed8ad1a529ba1694e"
     },
+    "com.cysharp.unitask": {
+      "version": "https://github.com/Cysharp/UniTask.git?path=src/UniTask/Assets/Plugins/UniTask",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {},
+      "hash": "f213ff497e4ff462a77319cf677cf20cc0860ca9"
+    },
+    "com.h00n.ai": {
+      "version": "https://github.com/SEH00N/H00N-Unity.git?path=H00N-Unity/Assets/H00N/AI#H00N.AI/0.0.1",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {},
+      "hash": "d51aa8bb7e51b740610bedc30c82e4dbcbb05fa4"
+    },
+    "com.h00n.ai.fsm": {
+      "version": "https://github.com/SEH00N/H00N-Unity.git?path=H00N-Unity/Assets/H00N/AI.FSM#H00N.AI.FSM/0.0.1",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {
+        "com.h00n.ai": "^0.0.1",
+        "com.h00n.extensions": "^0.0.1"
+      },
+      "hash": "182576dd1c215d55063714bdd5934dea8c81a8b3"
+    },
+    "com.h00n.extensions": {
+      "version": "https://github.com/SEH00N/H00N-Unity.git?path=H00N-Unity/Assets/H00N/Extensions#H00N.Extensions/0.0.1",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {},
+      "hash": "4dde6873783f8d165284f82586868bf8327ea514"
+    },
+    "com.h00n.localizations.tmpro": {
+      "version": "https://github.com/SEH00N/H00N-Unity.git?path=H00N-Unity/Assets/H00N/Localizations.TMPro#H00N.Localizations.TMPro/0.0.1",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {
+        "com.unity.localization": "^1.4.5"
+      },
+      "hash": "b8b5b7b113cd57772c39abf9fe1ca8fd4cb519a2"
+    },
+    "com.h00n.resources": {
+      "version": "https://github.com/SEH00N/H00N-Unity.git?path=H00N-Unity/Assets/H00N/Resources#H00N.Resources/0.0.1",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {
+        "com.cysharp.unitask": "^2.5.10"
+      },
+      "hash": "f9eaf94595d8fcb289114a2d753b479ca490e779"
+    },
+    "com.h00n.resources.addressables": {
+      "version": "https://github.com/SEH00N/H00N-Unity.git?path=H00N-Unity/Assets/H00N/Resources.Addressables#H00N.Resources.Addressables/0.0.1",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {
+        "com.cysharp.unitask": "^2.5.10",
+        "com.h00n.resources": "^0.0.1",
+        "com.unity.addressables": "^1.21.21"
+      },
+      "hash": "c2e3d35533f2d14ef5e5d40d181529d3e074df32"
+    },
+    "com.h00n.utilities": {
+      "version": "https://github.com/SEH00N/H00N-Unity.git?path=H00N-Unity/Assets/H00N/Utilities#H00N.Utilities/0.0.1",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {},
+      "hash": "cb872f7a7d7ac5a8db4f4669858c375df22ab420"
+    },
     "com.h8man.2d.navmeshplus": {
       "version": "https://github.com/h8man/NavMeshPlus.git",
       "depth": 0,
@@ -108,6 +175,22 @@
       },
       "url": "https://packages.unity.com"
     },
+    "com.unity.addressables": {
+      "version": "2.6.0",
+      "depth": 0,
+      "source": "registry",
+      "dependencies": {
+        "com.unity.profiling.core": "1.0.2",
+        "com.unity.test-framework": "1.4.5",
+        "com.unity.modules.assetbundle": "1.0.0",
+        "com.unity.modules.jsonserialize": "1.0.0",
+        "com.unity.modules.imageconversion": "1.0.0",
+        "com.unity.modules.unitywebrequest": "1.0.0",
+        "com.unity.scriptablebuildpipeline": "2.4.0",
+        "com.unity.modules.unitywebrequestassetbundle": "1.0.0"
+      },
+      "url": "https://packages.unity.com"
+    },
     "com.unity.ai.navigation": {
       "version": "2.0.8",
       "depth": 0,
@@ -194,6 +277,16 @@
       },
       "url": "https://packages.unity.com"
     },
+    "com.unity.localization": {
+      "version": "1.5.5",
+      "depth": 0,
+      "source": "registry",
+      "dependencies": {
+        "com.unity.addressables": "1.25.0",
+        "com.unity.nuget.newtonsoft-json": "3.0.2"
+      },
+      "url": "https://packages.unity.com"
+    },
     "com.unity.mathematics": {
       "version": "1.3.2",
       "depth": 2,
@@ -212,6 +305,20 @@
     "com.unity.nuget.mono-cecil": {
       "version": "1.11.4",
       "depth": 3,
+      "source": "registry",
+      "dependencies": {},
+      "url": "https://packages.unity.com"
+    },
+    "com.unity.nuget.newtonsoft-json": {
+      "version": "3.2.1",
+      "depth": 1,
+      "source": "registry",
+      "dependencies": {},
+      "url": "https://packages.unity.com"
+    },
+    "com.unity.profiling.core": {
+      "version": "1.0.2",
+      "depth": 1,
       "source": "registry",
       "dependencies": {},
       "url": "https://packages.unity.com"
@@ -258,6 +365,16 @@
         "com.unity.mathematics": "1.2.4",
         "com.unity.modules.terrain": "1.0.0"
       }
+    },
+    "com.unity.scriptablebuildpipeline": {
+      "version": "2.4.0",
+      "depth": 1,
+      "source": "registry",
+      "dependencies": {
+        "com.unity.test-framework": "1.4.5",
+        "com.unity.modules.assetbundle": "1.0.0"
+      },
+      "url": "https://packages.unity.com"
     },
     "com.unity.searcher": {
       "version": "4.9.3",
