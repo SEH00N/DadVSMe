@@ -40,7 +40,7 @@ namespace DadVSMe.Inputs
             if (context.canceled)
             {
                 MovementInput = Vector2.zero;
-                // IsDashed = false;
+                IsDashed = false;
                 return;
             }
 
