@@ -30,8 +30,6 @@ namespace DadVSMe.Entities
             if(overlappedSortingOrderProviders.Contains(otherSortingOrderProvider) == true)
                 return;
 
-            Debug.Log($"[EntitySortingOrderResolver::OnTriggerEnter2D] {otherSortingOrderProvider.name} added. Time : {Time.time}, Name : {gameObject.name}");
-
             AddProvider(otherSortingOrderProvider);
             ReorderSortingOrder(otherSortingOrderProvider);
         }
@@ -49,8 +47,6 @@ namespace DadVSMe.Entities
                 Debug.LogError($"[EntitySortingOrderResolver::OnTriggerExit2D] self-reference detected.");
                 return;
             }
-
-            Debug.Log($"[EntitySortingOrderResolver::OnTriggerExit2D] {otherSortingOrderProvider.name} removed. Time : {Time.time}, Name : {gameObject.name}");
 
             RemoveProvider(otherSortingOrderProvider);
             ReorderSortingOrder(otherSortingOrderProvider);
