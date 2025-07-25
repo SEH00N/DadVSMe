@@ -19,6 +19,8 @@ namespace DadVSMe.Players
         {
             PlayerInputReader inputReader = InputManager.GetInput<PlayerInputReader>();
             Vector2 movementInput = inputReader.MovementInput;
+            if(inputReader.IsDashed)
+                movementInput.x *= 3f;
             entityMovement.SetMovementVelocity(movementInput * moveSpeed);
         }
     }

@@ -119,6 +119,24 @@ namespace DadVSMe.Inputs
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""LeftDash"",
+                    ""type"": ""Button"",
+                    ""id"": ""e766eb63-93b8-4010-a79a-1c4eff26fbb4"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""RightDash"",
+                    ""type"": ""Button"",
+                    ""id"": ""df31f3e2-9d3a-4a10-a557-d3584f93ed1b"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -205,7 +223,7 @@ namespace DadVSMe.Inputs
                     ""path"": ""<Keyboard>/a"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": """",
+                    ""groups"": "";Keyboard&Mouse"",
                     ""action"": ""Attack1"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
@@ -216,8 +234,30 @@ namespace DadVSMe.Inputs
                     ""path"": ""<Keyboard>/s"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": """",
+                    ""groups"": "";Keyboard&Mouse"",
                     ""action"": ""Attack2"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""278322f1-1bb1-454c-95f5-92d80bb8b7a2"",
+                    ""path"": ""<Keyboard>/leftArrow"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": "";Keyboard&Mouse"",
+                    ""action"": ""LeftDash"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""8623354f-318f-4f00-a0fe-543fff474ff8"",
+                    ""path"": ""<Keyboard>/rightArrow"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": "";Keyboard&Mouse"",
+                    ""action"": ""RightDash"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -281,6 +321,8 @@ namespace DadVSMe.Inputs
             m_Player_Move = m_Player.FindAction("Move", throwIfNotFound: true);
             m_Player_Attack1 = m_Player.FindAction("Attack1", throwIfNotFound: true);
             m_Player_Attack2 = m_Player.FindAction("Attack2", throwIfNotFound: true);
+            m_Player_LeftDash = m_Player.FindAction("LeftDash", throwIfNotFound: true);
+            m_Player_RightDash = m_Player.FindAction("RightDash", throwIfNotFound: true);
         }
 
         ~@InputActions()
@@ -364,6 +406,8 @@ namespace DadVSMe.Inputs
         private readonly InputAction m_Player_Move;
         private readonly InputAction m_Player_Attack1;
         private readonly InputAction m_Player_Attack2;
+        private readonly InputAction m_Player_LeftDash;
+        private readonly InputAction m_Player_RightDash;
         /// <summary>
         /// Provides access to input actions defined in input action map "Player".
         /// </summary>
@@ -387,6 +431,14 @@ namespace DadVSMe.Inputs
             /// Provides access to the underlying input action "Player/Attack2".
             /// </summary>
             public InputAction @Attack2 => m_Wrapper.m_Player_Attack2;
+            /// <summary>
+            /// Provides access to the underlying input action "Player/LeftDash".
+            /// </summary>
+            public InputAction @LeftDash => m_Wrapper.m_Player_LeftDash;
+            /// <summary>
+            /// Provides access to the underlying input action "Player/RightDash".
+            /// </summary>
+            public InputAction @RightDash => m_Wrapper.m_Player_RightDash;
             /// <summary>
             /// Provides access to the underlying input action map instance.
             /// </summary>
@@ -422,6 +474,12 @@ namespace DadVSMe.Inputs
                 @Attack2.started += instance.OnAttack2;
                 @Attack2.performed += instance.OnAttack2;
                 @Attack2.canceled += instance.OnAttack2;
+                @LeftDash.started += instance.OnLeftDash;
+                @LeftDash.performed += instance.OnLeftDash;
+                @LeftDash.canceled += instance.OnLeftDash;
+                @RightDash.started += instance.OnRightDash;
+                @RightDash.performed += instance.OnRightDash;
+                @RightDash.canceled += instance.OnRightDash;
             }
 
             /// <summary>
@@ -442,6 +500,12 @@ namespace DadVSMe.Inputs
                 @Attack2.started -= instance.OnAttack2;
                 @Attack2.performed -= instance.OnAttack2;
                 @Attack2.canceled -= instance.OnAttack2;
+                @LeftDash.started -= instance.OnLeftDash;
+                @LeftDash.performed -= instance.OnLeftDash;
+                @LeftDash.canceled -= instance.OnLeftDash;
+                @RightDash.started -= instance.OnRightDash;
+                @RightDash.performed -= instance.OnRightDash;
+                @RightDash.canceled -= instance.OnRightDash;
             }
 
             /// <summary>
@@ -555,6 +619,20 @@ namespace DadVSMe.Inputs
             /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
             /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
             void OnAttack2(InputAction.CallbackContext context);
+            /// <summary>
+            /// Method invoked when associated input action "LeftDash" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+            /// </summary>
+            /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+            /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+            /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+            void OnLeftDash(InputAction.CallbackContext context);
+            /// <summary>
+            /// Method invoked when associated input action "RightDash" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+            /// </summary>
+            /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+            /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+            /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+            void OnRightDash(InputAction.CallbackContext context);
         }
     }
 }

@@ -7,10 +7,16 @@ namespace DadVSMe.Inputs
 {
     public class PlayerInputReader : InputReaderBase, IPlayerActions
     {
+        private const float DASH_INPUT_THRESHOLD = 0.5f;
+
         private InputActionMap inputActionMap = null;
         public override InputActionMap GetInputActionMap() => inputActionMap;
         
         public Vector2 MovementInput { get; private set; }
+
+        private DoublePress leftDashDoublePress = new DoublePress(DASH_INPUT_THRESHOLD);
+        private DoublePress rightDashDoublePress = new DoublePress(DASH_INPUT_THRESHOLD);
+        public bool IsDashed { get; private set; }
 
         private bool attack1PhaseBufferFlag = false;
         private InputActionPhase attack1PhaseBuffer = InputActionPhase.Disabled;
@@ -34,11 +40,36 @@ namespace DadVSMe.Inputs
             if (context.canceled)
             {
                 MovementInput = Vector2.zero;
+                // IsDashed = false;
                 return;
             }
 
-            MovementInput = context.ReadValue<Vector2>();
-            MovementInput = MovementInput.normalized;
+            Vector2 movementInput = context.ReadValue<Vector2>().normalized;
+            MovementInput = movementInput;
+        }
+
+        public void OnLeftDash(InputAction.CallbackContext context)
+        {
+            #if UNITY_EDITOR
+            // Debug.Log($"[PlayerInputReader] OnLeftDash Phase : {context.phase}");
+            #endif
+
+            if(context.started == false)
+                return;
+
+            IsDashed = leftDashDoublePress.Press();
+        }
+
+        public void OnRightDash(InputAction.CallbackContext context)
+        {
+            #if UNITY_EDITOR
+            // Debug.Log($"[PlayerInputReader] OnRightDash Phase : {context.phase}");
+            #endif
+
+            if(context.started == false)
+                return;
+
+            IsDashed = rightDashDoublePress.Press();
         }
 
         public bool GetAttack1Down() => (attack1PhaseBuffer == InputActionPhase.Performed) && (attack1PhaseBufferFlag == true);
