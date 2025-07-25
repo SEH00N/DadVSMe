@@ -35,23 +35,31 @@ namespace DadVSMe.Inputs
         public static TInputReader GetInput<TInputReader>() where TInputReader : InputReaderBase
         {
             Type inputReaderType = typeof(TInputReader);
+            if(inputReaderType != currentInputReaderType)
+                return null;
+
+            return inputReaders[inputReaderType] as TInputReader;
+        }
+
+        public static void ChangeInput<TInputReader>() where TInputReader : InputReaderBase, new()
+        {
+            Type inputReaderType = typeof(TInputReader);
             if (inputReaders.TryGetValue(inputReaderType, out InputReaderBase inputReader) == false)
             {
-                inputReader = ScriptableObject.CreateInstance<TInputReader>();
+                // inputReader = ScriptableObject.CreateInstance<TInputReader>();
+                inputReader = new TInputReader();
                 inputReader.Initialize(inputActions);
                 inputReaders.Add(inputReaderType, inputReader);
             }
 
-            if(inputReaderType != currentInputReaderType)
-            {
-                if(currentInputReaderType != null)
-                    inputReaders[currentInputReaderType].GetInputActionMap().Disable();
-                
-                currentInputReaderType = inputReaderType;
-                inputReader.GetInputActionMap().Enable();
-            }
+            if(inputReaderType == currentInputReaderType)
+                return;
 
-            return inputReader as TInputReader;
+            if(currentInputReaderType != null)
+                inputReaders[currentInputReaderType].GetInputActionMap().Disable();
+            
+            currentInputReaderType = inputReaderType;
+            inputReader.GetInputActionMap().Enable();
         }
 
         public static void Update()

@@ -28,6 +28,8 @@ namespace DadVSMe
         {
             managerList.Add(gameObject.GetOrAddComponent<GlobalCoroutineManager>());
             managerList.ForEach(manager => manager.Initialize());
+
+            InputManager.ChangeInput<PlayerInputReader>();
         }
 
         private void Release()
