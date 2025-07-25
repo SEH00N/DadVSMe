@@ -17,49 +17,49 @@
       "hash": "f213ff497e4ff462a77319cf677cf20cc0860ca9"
     },
     "com.h00n.ai": {
-      "version": "https://github.com/SEH00N/H00N-Unity.git?path=H00N-Unity/Assets/H00N/AI#H00N.AI/0.0.1",
+      "version": "https://github.com/SEH00N/H00N-Unity.git?path=H00N-Unity/Assets/H00N/AI",
       "depth": 0,
       "source": "git",
       "dependencies": {},
-      "hash": "d51aa8bb7e51b740610bedc30c82e4dbcbb05fa4"
+      "hash": "2c4f7a3ec29b0203d0e540c1e6801ee702812832"
     },
     "com.h00n.ai.fsm": {
-      "version": "https://github.com/SEH00N/H00N-Unity.git?path=H00N-Unity/Assets/H00N/AI.FSM#H00N.AI.FSM/0.0.1",
+      "version": "https://github.com/SEH00N/H00N-Unity.git?path=H00N-Unity/Assets/H00N/AI.FSM",
       "depth": 0,
       "source": "git",
       "dependencies": {
         "com.h00n.ai": "^0.0.1",
         "com.h00n.extensions": "^0.0.1"
       },
-      "hash": "182576dd1c215d55063714bdd5934dea8c81a8b3"
+      "hash": "a2f01cf517b9d22a6f7465e2f022cb9e61854cb5"
     },
     "com.h00n.extensions": {
-      "version": "https://github.com/SEH00N/H00N-Unity.git?path=H00N-Unity/Assets/H00N/Extensions#H00N.Extensions/0.0.1",
+      "version": "https://github.com/SEH00N/H00N-Unity.git?path=H00N-Unity/Assets/H00N/Extensions",
       "depth": 0,
       "source": "git",
       "dependencies": {},
-      "hash": "4dde6873783f8d165284f82586868bf8327ea514"
+      "hash": "2c4f7a3ec29b0203d0e540c1e6801ee702812832"
     },
     "com.h00n.localizations.tmpro": {
-      "version": "https://github.com/SEH00N/H00N-Unity.git?path=H00N-Unity/Assets/H00N/Localizations.TMPro#H00N.Localizations.TMPro/0.0.1",
+      "version": "https://github.com/SEH00N/H00N-Unity.git?path=H00N-Unity/Assets/H00N/Localizations.TMPro",
       "depth": 0,
       "source": "git",
       "dependencies": {
         "com.unity.localization": "^1.4.5"
       },
-      "hash": "b8b5b7b113cd57772c39abf9fe1ca8fd4cb519a2"
+      "hash": "2c4f7a3ec29b0203d0e540c1e6801ee702812832"
     },
     "com.h00n.resources": {
-      "version": "https://github.com/SEH00N/H00N-Unity.git?path=H00N-Unity/Assets/H00N/Resources#H00N.Resources/0.0.1",
+      "version": "https://github.com/SEH00N/H00N-Unity.git?path=H00N-Unity/Assets/H00N/Resources",
       "depth": 0,
       "source": "git",
       "dependencies": {
         "com.cysharp.unitask": "^2.5.10"
       },
-      "hash": "f9eaf94595d8fcb289114a2d753b479ca490e779"
+      "hash": "2c4f7a3ec29b0203d0e540c1e6801ee702812832"
     },
     "com.h00n.resources.addressables": {
-      "version": "https://github.com/SEH00N/H00N-Unity.git?path=H00N-Unity/Assets/H00N/Resources.Addressables#H00N.Resources.Addressables/0.0.1",
+      "version": "https://github.com/SEH00N/H00N-Unity.git?path=H00N-Unity/Assets/H00N/Resources.Addressables",
       "depth": 0,
       "source": "git",
       "dependencies": {
@@ -67,14 +67,14 @@
         "com.h00n.resources": "^0.0.1",
         "com.unity.addressables": "^1.21.21"
       },
-      "hash": "c2e3d35533f2d14ef5e5d40d181529d3e074df32"
+      "hash": "2c4f7a3ec29b0203d0e540c1e6801ee702812832"
     },
     "com.h00n.utilities": {
-      "version": "https://github.com/SEH00N/H00N-Unity.git?path=H00N-Unity/Assets/H00N/Utilities#H00N.Utilities/0.0.1",
+      "version": "https://github.com/SEH00N/H00N-Unity.git?path=H00N-Unity/Assets/H00N/Utilities",
       "depth": 0,
       "source": "git",
       "dependencies": {},
-      "hash": "cb872f7a7d7ac5a8db4f4669858c375df22ab420"
+      "hash": "2c4f7a3ec29b0203d0e540c1e6801ee702812832"
     },
     "com.h8man.2d.navmeshplus": {
       "version": "https://github.com/h8man/NavMeshPlus.git",
