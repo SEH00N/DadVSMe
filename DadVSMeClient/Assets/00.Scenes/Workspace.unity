@@ -1811,11 +1811,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 489773008}
-  - component: {fileID: 489773016}
   - component: {fileID: 489773014}
   - component: {fileID: 489773015}
   - component: {fileID: 489773018}
   - component: {fileID: 489773017}
+  - component: {fileID: 489773019}
+  - component: {fileID: 489773020}
   - component: {fileID: 489773011}
   - component: {fileID: 489773012}
   m_Layer: 0
@@ -1942,19 +1943,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityRigidbody: {fileID: 489773011}
---- !u!114 &489773016
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 489773007}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 122df79e8f2b94c57a59de2dfb88aef3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moveSpeed: 5
 --- !u!114 &489773017
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1971,12 +1959,21 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   aiDataContainer:
-    aiDataList: []
+    aiDataList:
+    - wrapType: 2
+      unityObjectReference: {fileID: 0}
+      serializableObjectReference:
+        rid: 3777565259024040133
   defaultState: {fileID: 153847120}
-  anyState: {fileID: 0}
+  anyState: {fileID: 100012352}
   references:
     version: 2
-    RefIds: []
+    RefIds:
+    - rid: 3777565259024040133
+      type: {class: AIData, ns: DadVSMe.Players.FSM, asm: DadVSMe}
+      data:
+        isComboReading: 0
+        isComboFailed: 0
 --- !u!114 &489773018
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1990,6 +1987,33 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fsmBrain: {fileID: 489773017}
+--- !u!114 &489773019
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 489773007}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba86124cac47e4154b394cdd9b315fee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  poolReference: {fileID: 489773020}
+  animator: {fileID: 1814740404}
+  animationEventListener: {fileID: 1814740403}
+--- !u!114 &489773020
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 489773007}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59731d988eb4d4a4ea734b92a123e5c8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &514870883
 GameObject:
   m_ObjectHideFlags: 0
@@ -5792,6 +5816,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1814740401}
   - component: {fileID: 1814740402}
+  - component: {fileID: 1814740404}
+  - component: {fileID: 1814740403}
   m_Layer: 0
   m_Name: Visual
   m_TagString: Untagged
@@ -5869,6 +5895,40 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1814740403
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1814740400}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b1adb445966248b98412033a8511ad9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!95 &1814740404
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1814740400}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 61dccfeec2c794ff5b65736c37bb5b19, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1818776285
 GameObject:
   m_ObjectHideFlags: 0

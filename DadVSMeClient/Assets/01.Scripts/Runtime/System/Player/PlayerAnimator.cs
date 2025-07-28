@@ -7,8 +7,10 @@ namespace DadVSMe.Players
 {
     public class PlayerAnimator : MonoBehaviour, IPoolableBehaviour
     {
-        [SerializeField] Animator animator = null;
         [SerializeField] PoolReference poolReference = null;
+
+        [Space(10f)]
+        [SerializeField] Animator animator = null;
         [SerializeField] PlayerAnimationEventListener animationEventListener = null;
 
         public PoolReference PoolReference => poolReference;
