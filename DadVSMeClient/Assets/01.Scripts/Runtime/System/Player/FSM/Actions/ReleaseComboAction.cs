@@ -4,20 +4,20 @@ namespace DadVSMe.Players.FSM
 {
     public class ReleaseComboAction : FSMAction
     {
-        private AIData aiData = null;
+        private PlayerFSMData fsmData = null;
 
         public override void Init(FSMBrain brain, FSMState state)
         {
             base.Init(brain, state);
-            aiData = brain.GetAIData<AIData>();
+            fsmData = brain.GetAIData<PlayerFSMData>();
         }
 
         public override void EnterState()
         {
             base.EnterState();
 
-            aiData.isComboReading = false;
-            aiData.isComboFailed = false;
+            fsmData.isComboReading = false;
+            fsmData.isComboFailed = false;
         }
     }
 }

@@ -6,25 +6,21 @@ namespace DadVSMe.Players.FSM
     public class AttackAction : FSMAction
     {
         private PlayerAnimator playerAnimator = null;
-        private AIData aiData = null;
-
-        private void Awake()
-        {
-            playerAnimator = brain.GetComponent<PlayerAnimator>();
-        }
+        private PlayerFSMData fsmData = null;
 
         public override void Init(FSMBrain brain, FSMState state)
         {
             base.Init(brain, state);
-            aiData = brain.GetAIData<AIData>();
+            fsmData = brain.GetAIData<PlayerFSMData>();
+            playerAnimator = brain.GetComponent<PlayerAnimator>();
         }
 
         public override void EnterState()
         {
             base.EnterState();
 
-            aiData.isComboReading = false;
-            aiData.isComboFailed = false;
+            fsmData.isComboReading = false;
+            fsmData.isComboFailed = false;
 
             playerAnimator.RemoveAnimationEventListener(EPlayerAnimationEventType.Trigger, HandleAnimationTriggerEvent);
             playerAnimator.AddAnimationEventListener(EPlayerAnimationEventType.Trigger, HandleAnimationTriggerEvent);
@@ -40,8 +36,8 @@ namespace DadVSMe.Players.FSM
         {
             base.ExitState();
 
-            aiData.isComboReading = false;
-            aiData.isComboFailed = false;
+            fsmData.isComboReading = false;
+            fsmData.isComboFailed = false;
 
             playerAnimator.RemoveAnimationEventListener(EPlayerAnimationEventType.Trigger, HandleAnimationTriggerEvent);
             playerAnimator.RemoveAnimationEventListener(EPlayerAnimationEventType.ComboReadingStart, HandleAnimationComboReadingStartEvent);
@@ -55,15 +51,15 @@ namespace DadVSMe.Players.FSM
 
         private void HandleAnimationComboReadingStartEvent(PlayerAnimationEventData eventData)
         {
-            aiData.isComboReading = true;
+            fsmData.isComboReading = true;
         }
 
         private void HandleAnimationComboReadingEndEvent(PlayerAnimationEventData eventData)
         {
-            if(aiData.isComboReading)
-                aiData.isComboFailed = true;
+            if(fsmData.isComboReading)
+                fsmData.isComboFailed = true;
 
-            aiData.isComboReading = false;
+            fsmData.isComboReading = false;
         }
     }
 }

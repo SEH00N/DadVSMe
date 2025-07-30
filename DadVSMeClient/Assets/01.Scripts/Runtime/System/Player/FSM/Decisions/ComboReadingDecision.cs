@@ -4,12 +4,12 @@ namespace DadVSMe.Players.FSM
 {
     public class ComboReadingDecision : FSMDecision
     {
-        private AIData aiData = null;
+        private PlayerFSMData aiData = null;
 
         public override void Init(FSMBrain brain, FSMState state)
         {
             base.Init(brain, state);
-            aiData = brain.GetAIData<AIData>();
+            aiData = brain.GetAIData<PlayerFSMData>();
         }
 
         public override bool MakeDecision()
