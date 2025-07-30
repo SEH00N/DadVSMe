@@ -6,6 +6,7 @@ namespace DadVSMe.Players
     public class Player : MonoBehaviour
     {
         [SerializeField] FSMBrain fsmBrain = null;
+        [SerializeField] PlayerEnemyDetector enemyDetector = null;
 
         // Debug
         private void Start()
@@ -17,6 +18,7 @@ namespace DadVSMe.Players
         {
             fsmBrain.Initialize();
             fsmBrain.SetAsDefaultState();
+            enemyDetector.Initialize();
         }
 
         #if UNITY_EDITOR

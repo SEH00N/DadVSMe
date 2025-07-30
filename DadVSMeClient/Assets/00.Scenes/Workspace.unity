@@ -2053,6 +2053,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1814740401}
+  - {fileID: 714126548}
   - {fileID: 591521632}
   - {fileID: 1036947302}
   m_Father: {fileID: 0}
@@ -2177,7 +2178,7 @@ MonoBehaviour:
       unityObjectReference: {fileID: 0}
       serializableObjectReference:
         rid: 3777565259024040135
-  defaultState: {fileID: 1572051997}
+  defaultState: {fileID: 153847120}
   anyState: {fileID: 100012352}
   references:
     version: 2
@@ -2185,6 +2186,7 @@ MonoBehaviour:
     - rid: 3777565259024040135
       type: {class: PlayerFSMData, ns: DadVSMe.Players.FSM, asm: DadVSMe}
       data:
+        enemies: []
         moveSpeed: 5
         dashSpeed: 15
         isComboReading: 0
@@ -2203,6 +2205,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fsmBrain: {fileID: 489773017}
+  enemyDetector: {fileID: 714126549}
 --- !u!114 &489773019
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2851,6 +2854,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 668232988}
+  - component: {fileID: 668232993}
   - component: {fileID: 668232992}
   - component: {fileID: 668232989}
   - component: {fileID: 668232991}
@@ -2859,8 +2863,8 @@ GameObject:
   - component: {fileID: 668232984}
   - component: {fileID: 668232990}
   m_Layer: 0
-  m_Name: NPC
-  m_TagString: Untagged
+  m_Name: Enemy
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3028,6 +3032,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   npcMovement: {fileID: 668232991}
+--- !u!114 &668232993
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 668232983}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6de1b50382a3b47ec85c0bfab93f1f22, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &713519585
 GameObject:
   m_ObjectHideFlags: 0
@@ -3105,6 +3121,88 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a4195b623faff4dec8cb7bbb50ad6d42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &714126547
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 714126548}
+  - component: {fileID: 714126549}
+  - component: {fileID: 714126550}
+  m_Layer: 0
+  m_Name: EnemyDetector
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &714126548
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 714126547}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.75, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 489773008}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &714126549
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 714126547}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf6f7a8f75036478aa3a5a127f09fe2e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fsmBrain: {fileID: 489773017}
+--- !u!58 &714126550
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 714126547}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_Radius: 2
 --- !u!1 &727599240
 GameObject:
   m_ObjectHideFlags: 0
