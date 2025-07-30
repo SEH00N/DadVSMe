@@ -10,6 +10,8 @@ namespace DadVSMe.Players.FSM
         public bool isComboReading = false;
         public bool isComboFailed = false;
 
+        public int grabAttackCount = 0;
+
         public IAIData Initialize()
         {
             return this;

@@ -18,5 +18,13 @@ namespace DadVSMe.Players
             fsmBrain.Initialize();
             fsmBrain.SetAsDefaultState();
         }
+
+        #if UNITY_EDITOR
+        [ContextMenu("Set FSM State as Default State")]
+        private void SetFSMStateAsDefaultState()
+        {
+            fsmBrain.SetAsDefaultState();
+        }
+        #endif
     }
 }
