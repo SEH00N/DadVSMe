@@ -30,7 +30,7 @@ namespace DadVSMe.Players.FSM
             Vector2 movementInput = inputReader.MovementInput;
             Vector2 velocity = movementInput * fsmData.moveSpeed;
 
-            if(inputReader.IsDashed)
+            if(velocity.x != 0 && inputReader.IsDashed)
                 velocity.x = Mathf.Sign(velocity.x) * fsmData.dashSpeed;
 
             entityMovement.SetMovementVelocity(velocity);
