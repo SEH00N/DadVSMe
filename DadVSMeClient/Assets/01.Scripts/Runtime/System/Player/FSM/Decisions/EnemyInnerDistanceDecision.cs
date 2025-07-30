@@ -1,7 +1,5 @@
-using System.Linq;
 using DadVSMe.Enemies;
 using H00N.AI.FSM;
-using UnityEditor;
 using UnityEngine;
 
 namespace DadVSMe.Players.FSM
@@ -32,16 +30,10 @@ namespace DadVSMe.Players.FSM
             return sqrDistance < distance * distance;
         }
 
-        [Header("Debug")]
-        [SerializeField] bool drawGizmos = false;
-        [SerializeField] bool drawSelected = false;
         #if UNITY_EDITOR
         private void OnDrawGizmos()
         {
-            if(drawGizmos == false)
-                return;
-
-            if(drawSelected && Selection.objects.Contains(gameObject) == false)
+            if(UnityEditor.Selection.activeObject != gameObject)
                 return;
 
             if(pivot == null)
