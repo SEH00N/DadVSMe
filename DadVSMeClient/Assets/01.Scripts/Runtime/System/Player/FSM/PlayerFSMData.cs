@@ -1,11 +1,16 @@
 using H00N.AI;
 using System.Collections.Generic;
 using DadVSMe.Enemies;
+using UnityEngine;
+using DadVSMe.Entities;
 
 namespace DadVSMe.Players.FSM
 {
     public class PlayerFSMData : IAIData
     {
+        public Transform grabPosition = null;
+        public Entity grabbedEntity = null;
+
         public List<Enemy> enemies = new List<Enemy>();
 
         public float moveSpeed = 5f;

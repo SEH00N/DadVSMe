@@ -23,6 +23,7 @@ namespace DadVSMe.Players
         {
             fsmData.enemies.Sort((a, b) => {
                 if(a == null && b == null)
+                    return 0;
 
                 if(a == null)
                     return 1;
