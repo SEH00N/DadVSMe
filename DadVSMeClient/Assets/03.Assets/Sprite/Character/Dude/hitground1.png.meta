@@ -1,0 +1,663 @@
+fileFormatVersion: 2
+guid: b480ccd7a8a844e31a8fe9921b48c68c
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 948427916074471121
+    second: hitground1_0
+  - first:
+      213: 1679016565890744235
+    second: hitground1_1
+  - first:
+      213: -2654389501082750103
+    second: hitground1_2
+  - first:
+      213: 7009903320781301121
+    second: hitground1_3
+  - first:
+      213: 1966082490485229304
+    second: hitground1_4
+  - first:
+      213: -1869572677309549550
+    second: hitground1_5
+  - first:
+      213: -8523355528374052312
+    second: hitground1_6
+  - first:
+      213: 4205521889432791524
+    second: hitground1_7
+  - first:
+      213: 9170680087277667597
+    second: hitground1_8
+  - first:
+      213: -2112137851928739851
+    second: hitground1_9
+  - first:
+      213: -5819786537702409799
+    second: hitground1_10
+  - first:
+      213: 6842007213226700813
+    second: hitground1_11
+  - first:
+      213: -8533492087974781304
+    second: hitground1_12
+  - first:
+      213: 2409263036673381282
+    second: hitground1_13
+  - first:
+      213: 6889778235624354527
+    second: hitground1_14
+  - first:
+      213: -283498688529633568
+    second: hitground1_15
+  - first:
+      213: -4523333576908572937
+    second: hitground1_16
+  - first:
+      213: -7739779364920553521
+    second: hitground1_17
+  - first:
+      213: -8130510147906513811
+    second: hitground1_18
+  - first:
+      213: -8090378759080691691
+    second: hitground1_19
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: iOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: hitground1_0
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 1415
+        width: 419
+        height: 182
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1decea82a2e792d00800000000000000
+      internalID: 948427916074471121
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hitground1_1
+      rect:
+        serializedVersion: 2
+        x: 422
+        y: 1415
+        width: 419
+        height: 182
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: baff9edbba01d4710800000000000000
+      internalID: 1679016565890744235
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hitground1_2
+      rect:
+        serializedVersion: 2
+        x: 842
+        y: 1415
+        width: 419
+        height: 182
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 963bf64ffc6b92bd0800000000000000
+      internalID: -2654389501082750103
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hitground1_3
+      rect:
+        serializedVersion: 2
+        x: 1262
+        y: 1415
+        width: 419
+        height: 182
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 18520012eed284160800000000000000
+      internalID: 7009903320781301121
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hitground1_4
+      rect:
+        serializedVersion: 2
+        x: 1682
+        y: 1415
+        width: 419
+        height: 182
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8f6cc7cbb9de84b10800000000000000
+      internalID: 1966082490485229304
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hitground1_5
+      rect:
+        serializedVersion: 2
+        x: 2102
+        y: 1415
+        width: 418
+        height: 182
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 214303f2e81fd06e0800000000000000
+      internalID: -1869572677309549550
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hitground1_6
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 946
+        width: 419
+        height: 182
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 82a17ec3e45f6b980800000000000000
+      internalID: -8523355528374052312
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hitground1_7
+      rect:
+        serializedVersion: 2
+        x: 422
+        y: 946
+        width: 419
+        height: 182
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4e965ca60e30d5a30800000000000000
+      internalID: 4205521889432791524
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hitground1_8
+      rect:
+        serializedVersion: 2
+        x: 842
+        y: 946
+        width: 419
+        height: 182
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d050fe673fcc44f70800000000000000
+      internalID: 9170680087277667597
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hitground1_9
+      rect:
+        serializedVersion: 2
+        x: 1262
+        y: 946
+        width: 419
+        height: 182
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5ff712370dd20b2e0800000000000000
+      internalID: -2112137851928739851
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hitground1_10
+      rect:
+        serializedVersion: 2
+        x: 1682
+        y: 946
+        width: 419
+        height: 182
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9b9b5af7af6fb3fa0800000000000000
+      internalID: -5819786537702409799
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hitground1_11
+      rect:
+        serializedVersion: 2
+        x: 2102
+        y: 946
+        width: 418
+        height: 182
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d00b9075f41b3fe50800000000000000
+      internalID: 6842007213226700813
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hitground1_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 476
+        width: 419
+        height: 179
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 88e18aa8822f29980800000000000000
+      internalID: -8533492087974781304
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hitground1_13
+      rect:
+        serializedVersion: 2
+        x: 419
+        y: 476
+        width: 420
+        height: 179
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2a3556f87fb6f6120800000000000000
+      internalID: 2409263036673381282
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hitground1_14
+      rect:
+        serializedVersion: 2
+        x: 976
+        y: 483
+        width: 282
+        height: 321
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fd27b9b3dc86d9f50800000000000000
+      internalID: 6889778235624354527
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hitground1_15
+      rect:
+        serializedVersion: 2
+        x: 1396
+        y: 483
+        width: 282
+        height: 321
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0eee6efd17fc01cf0800000000000000
+      internalID: -283498688529633568
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hitground1_16
+      rect:
+        serializedVersion: 2
+        x: 1806
+        y: 515
+        width: 231
+        height: 370
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7f674c3d314e931c0800000000000000
+      internalID: -4523333576908572937
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hitground1_17
+      rect:
+        serializedVersion: 2
+        x: 2226
+        y: 515
+        width: 231
+        height: 370
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fcf030abca7c69490800000000000000
+      internalID: -7739779364920553521
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hitground1_18
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 47
+        width: 250
+        height: 420
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d64d2570910aa2f80800000000000000
+      internalID: -8130510147906513811
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hitground1_19
+      rect:
+        serializedVersion: 2
+        x: 558
+        y: 47
+        width: 249
+        height: 420
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 51831ae126339bf80800000000000000
+      internalID: -8090378759080691691
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      hitground1_0: 948427916074471121
+      hitground1_1: 1679016565890744235
+      hitground1_10: -5819786537702409799
+      hitground1_11: 6842007213226700813
+      hitground1_12: -8533492087974781304
+      hitground1_13: 2409263036673381282
+      hitground1_14: 6889778235624354527
+      hitground1_15: -283498688529633568
+      hitground1_16: -4523333576908572937
+      hitground1_17: -7739779364920553521
+      hitground1_18: -8130510147906513811
+      hitground1_19: -8090378759080691691
+      hitground1_2: -2654389501082750103
+      hitground1_3: 7009903320781301121
+      hitground1_4: 1966082490485229304
+      hitground1_5: -1869572677309549550
+      hitground1_6: -8523355528374052312
+      hitground1_7: 4205521889432791524
+      hitground1_8: 9170680087277667597
+      hitground1_9: -2112137851928739851
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

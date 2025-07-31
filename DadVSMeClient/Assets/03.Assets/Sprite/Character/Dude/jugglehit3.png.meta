@@ -1,0 +1,715 @@
+fileFormatVersion: 2
+guid: a4087af89c8354edfb7c1a32e223c4be
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -2873090253137114377
+    second: jugglehit3_0
+  - first:
+      213: -1394306581395327311
+    second: jugglehit3_1
+  - first:
+      213: 4593060928182920664
+    second: jugglehit3_2
+  - first:
+      213: 1868711698542073880
+    second: jugglehit3_3
+  - first:
+      213: 670786258800790556
+    second: jugglehit3_4
+  - first:
+      213: 2286833171662710420
+    second: jugglehit3_5
+  - first:
+      213: 4099280142388058830
+    second: jugglehit3_6
+  - first:
+      213: -9089219193126686937
+    second: jugglehit3_7
+  - first:
+      213: 6902423074400387451
+    second: jugglehit3_8
+  - first:
+      213: -2729243708680303328
+    second: jugglehit3_9
+  - first:
+      213: 3193140497392469746
+    second: jugglehit3_10
+  - first:
+      213: -2554783412544040875
+    second: jugglehit3_11
+  - first:
+      213: 2037745499190303987
+    second: jugglehit3_12
+  - first:
+      213: 6426117719526242165
+    second: jugglehit3_13
+  - first:
+      213: 212720513669730095
+    second: jugglehit3_14
+  - first:
+      213: 5063899503917262466
+    second: jugglehit3_15
+  - first:
+      213: 8024671937322707598
+    second: jugglehit3_16
+  - first:
+      213: 5831416464430743883
+    second: jugglehit3_17
+  - first:
+      213: -5862033758597850741
+    second: jugglehit3_18
+  - first:
+      213: -721868208372823689
+    second: jugglehit3_19
+  - first:
+      213: 240048105465159174
+    second: jugglehit3_20
+  - first:
+      213: -5032340880066388587
+    second: jugglehit3_21
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: iOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: jugglehit3_0
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 1884
+        width: 272
+        height: 365
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7fa002613abb028d0800000000000000
+      internalID: -2873090253137114377
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jugglehit3_1
+      rect:
+        serializedVersion: 2
+        x: 606
+        y: 1884
+        width: 272
+        height: 365
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1b631f33d8d66ace0800000000000000
+      internalID: -1394306581395327311
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jugglehit3_2
+      rect:
+        serializedVersion: 2
+        x: 1107
+        y: 1884
+        width: 358
+        height: 355
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8d5a1104494ddbf30800000000000000
+      internalID: 4593060928182920664
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jugglehit3_3
+      rect:
+        serializedVersion: 2
+        x: 1608
+        y: 1870
+        width: 361
+        height: 364
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8189733936ffee910800000000000000
+      internalID: 1868711698542073880
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jugglehit3_4
+      rect:
+        serializedVersion: 2
+        x: 2109
+        y: 1870
+        width: 361
+        height: 364
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c1cc8046c8c1f4900800000000000000
+      internalID: 670786258800790556
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jugglehit3_5
+      rect:
+        serializedVersion: 2
+        x: 2610
+        y: 1884
+        width: 396
+        height: 591
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 496298947a67cbf10800000000000000
+      internalID: 2286833171662710420
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jugglehit3_6
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 1262
+        width: 397
+        height: 591
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eca5ad1129193e830800000000000000
+      internalID: 4099280142388058830
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jugglehit3_7
+      rect:
+        serializedVersion: 2
+        x: 606
+        y: 1262
+        width: 230
+        height: 563
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 72f6504fc4b9cd180800000000000000
+      internalID: -9089219193126686937
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jugglehit3_8
+      rect:
+        serializedVersion: 2
+        x: 1107
+        y: 1262
+        width: 230
+        height: 563
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b71481f27355acf50800000000000000
+      internalID: 6902423074400387451
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jugglehit3_9
+      rect:
+        serializedVersion: 2
+        x: 1608
+        y: 1262
+        width: 230
+        height: 563
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 02d04ae9e47cf1ad0800000000000000
+      internalID: -2729243708680303328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jugglehit3_10
+      rect:
+        serializedVersion: 2
+        x: 2003
+        y: 1262
+        width: 322
+        height: 420
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2f60ef84d50505c20800000000000000
+      internalID: 3193140497392469746
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jugglehit3_11
+      rect:
+        serializedVersion: 2
+        x: 2504
+        y: 1262
+        width: 322
+        height: 420
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5509049a5069b8cd0800000000000000
+      internalID: -2554783412544040875
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jugglehit3_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 640
+        width: 321
+        height: 420
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3fc93ed2cb6874c10800000000000000
+      internalID: 2037745499190303987
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jugglehit3_13
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 640
+        width: 322
+        height: 420
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5777435d4082e2950800000000000000
+      internalID: 6426117719526242165
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jugglehit3_14
+      rect:
+        serializedVersion: 2
+        x: 1058
+        y: 640
+        width: 293
+        height: 398
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f2f09bd1e2cb3f200800000000000000
+      internalID: 212720513669730095
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jugglehit3_15
+      rect:
+        serializedVersion: 2
+        x: 1559
+        y: 640
+        width: 293
+        height: 398
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 286e345e4c5964640800000000000000
+      internalID: 5063899503917262466
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jugglehit3_16
+      rect:
+        serializedVersion: 2
+        x: 2060
+        y: 640
+        width: 293
+        height: 398
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e8a6a274c9c5d5f60800000000000000
+      internalID: 8024671937322707598
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jugglehit3_17
+      rect:
+        serializedVersion: 2
+        x: 2575
+        y: 640
+        width: 294
+        height: 388
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b4142c3d06a5de050800000000000000
+      internalID: 5831416464430743883
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jugglehit3_18
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 18
+        width: 294
+        height: 388
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b895d6dda5fd5aea0800000000000000
+      internalID: -5862033758597850741
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jugglehit3_19
+      rect:
+        serializedVersion: 2
+        x: 571
+        y: 18
+        width: 294
+        height: 388
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7794a4960b86bf5f0800000000000000
+      internalID: -721868208372823689
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jugglehit3_20
+      rect:
+        serializedVersion: 2
+        x: 1072
+        y: 18
+        width: 294
+        height: 388
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 60e9147ea72d45300800000000000000
+      internalID: 240048105465159174
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jugglehit3_21
+      rect:
+        serializedVersion: 2
+        x: 1573
+        y: 18
+        width: 294
+        height: 388
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 59d57fec1a8892ab0800000000000000
+      internalID: -5032340880066388587
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      jugglehit3_0: -2873090253137114377
+      jugglehit3_1: -1394306581395327311
+      jugglehit3_10: 3193140497392469746
+      jugglehit3_11: -2554783412544040875
+      jugglehit3_12: 2037745499190303987
+      jugglehit3_13: 6426117719526242165
+      jugglehit3_14: 212720513669730095
+      jugglehit3_15: 5063899503917262466
+      jugglehit3_16: 8024671937322707598
+      jugglehit3_17: 5831416464430743883
+      jugglehit3_18: -5862033758597850741
+      jugglehit3_19: -721868208372823689
+      jugglehit3_2: 4593060928182920664
+      jugglehit3_20: 240048105465159174
+      jugglehit3_21: -5032340880066388587
+      jugglehit3_3: 1868711698542073880
+      jugglehit3_4: 670786258800790556
+      jugglehit3_5: 2286833171662710420
+      jugglehit3_6: 4099280142388058830
+      jugglehit3_7: -9089219193126686937
+      jugglehit3_8: 6902423074400387451
+      jugglehit3_9: -2729243708680303328
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

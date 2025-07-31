@@ -1,0 +1,559 @@
+fileFormatVersion: 2
+guid: 1003f537989a64d178dc91bed09bb97f
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -561270318082815433
+    second: grabhit2_0
+  - first:
+      213: 2134952191240033765
+    second: grabhit2_1
+  - first:
+      213: 8778249502597064737
+    second: grabhit2_2
+  - first:
+      213: -7388403357421920353
+    second: grabhit2_3
+  - first:
+      213: -2478405833846142615
+    second: grabhit2_4
+  - first:
+      213: -8504178214634105150
+    second: grabhit2_5
+  - first:
+      213: -3987071149834536556
+    second: grabhit2_6
+  - first:
+      213: -9049858021253777743
+    second: grabhit2_7
+  - first:
+      213: -503324376520669458
+    second: grabhit2_8
+  - first:
+      213: 5140521774086058199
+    second: grabhit2_9
+  - first:
+      213: 782100618808433690
+    second: grabhit2_10
+  - first:
+      213: -2353163640258985820
+    second: grabhit2_11
+  - first:
+      213: 1657843784852713635
+    second: grabhit2_12
+  - first:
+      213: 5024735972046118994
+    second: grabhit2_13
+  - first:
+      213: 7773099236445752716
+    second: grabhit2_14
+  - first:
+      213: 3293192527927579402
+    second: grabhit2_15
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: iOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: grabhit2_0
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 881
+        width: 323
+        height: 427
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 73a04b39e97f538f0800000000000000
+      internalID: -561270318082815433
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: grabhit2_1
+      rect:
+        serializedVersion: 2
+        x: 655
+        y: 881
+        width: 323
+        height: 427
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5e5dd4bd4bfd0ad10800000000000000
+      internalID: 2134952191240033765
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: grabhit2_2
+      rect:
+        serializedVersion: 2
+        x: 1093
+        y: 881
+        width: 344
+        height: 380
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1282c08d96b92d970800000000000000
+      internalID: 8778249502597064737
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: grabhit2_3
+      rect:
+        serializedVersion: 2
+        x: 1608
+        y: 881
+        width: 344
+        height: 380
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f9f1097ba4e177990800000000000000
+      internalID: -7388403357421920353
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: grabhit2_4
+      rect:
+        serializedVersion: 2
+        x: 2101
+        y: 881
+        width: 399
+        height: 357
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9694858760fea9dd0800000000000000
+      internalID: -2478405833846142615
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: grabhit2_5
+      rect:
+        serializedVersion: 2
+        x: 2616
+        y: 881
+        width: 399
+        height: 357
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2c65e1a88f61bf980800000000000000
+      internalID: -8504178214634105150
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: grabhit2_6
+      rect:
+        serializedVersion: 2
+        x: 148
+        y: 440
+        width: 328
+        height: 376
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 49977e3e9e31ba8c0800000000000000
+      internalID: -3987071149834536556
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: grabhit2_7
+      rect:
+        serializedVersion: 2
+        x: 663
+        y: 440
+        width: 328
+        height: 376
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1b6f27fe312786280800000000000000
+      internalID: -9049858021253777743
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: grabhit2_8
+      rect:
+        serializedVersion: 2
+        x: 1178
+        y: 440
+        width: 312
+        height: 376
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ee6c0b27525d309f0800000000000000
+      internalID: -503324376520669458
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: grabhit2_9
+      rect:
+        serializedVersion: 2
+        x: 1693
+        y: 440
+        width: 312
+        height: 376
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7d07f80615dc65740800000000000000
+      internalID: 5140521774086058199
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: grabhit2_10
+      rect:
+        serializedVersion: 2
+        x: 2208
+        y: 440
+        width: 312
+        height: 376
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a1c90ba7e549ada00800000000000000
+      internalID: 782100618808433690
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: grabhit2_11
+      rect:
+        serializedVersion: 2
+        x: 2723
+        y: 440
+        width: 312
+        height: 376
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4a08ff30322e75fd0800000000000000
+      internalID: -2353163640258985820
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: grabhit2_12
+      rect:
+        serializedVersion: 2
+        x: 148
+        y: 0
+        width: 312
+        height: 375
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3a03c318328d10710800000000000000
+      internalID: 1657843784852713635
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: grabhit2_13
+      rect:
+        serializedVersion: 2
+        x: 663
+        y: 0
+        width: 312
+        height: 375
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 250afef8eb27bb540800000000000000
+      internalID: 5024735972046118994
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: grabhit2_14
+      rect:
+        serializedVersion: 2
+        x: 1178
+        y: 0
+        width: 312
+        height: 375
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c8d853862989fdb60800000000000000
+      internalID: 7773099236445752716
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: grabhit2_15
+      rect:
+        serializedVersion: 2
+        x: 1693
+        y: 0
+        width: 312
+        height: 375
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a031814f725c3bd20800000000000000
+      internalID: 3293192527927579402
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      grabhit2_0: -561270318082815433
+      grabhit2_1: 2134952191240033765
+      grabhit2_10: 782100618808433690
+      grabhit2_11: -2353163640258985820
+      grabhit2_12: 1657843784852713635
+      grabhit2_13: 5024735972046118994
+      grabhit2_14: 7773099236445752716
+      grabhit2_15: 3293192527927579402
+      grabhit2_2: 8778249502597064737
+      grabhit2_3: -7388403357421920353
+      grabhit2_4: -2478405833846142615
+      grabhit2_5: -8504178214634105150
+      grabhit2_6: -3987071149834536556
+      grabhit2_7: -9049858021253777743
+      grabhit2_8: -503324376520669458
+      grabhit2_9: 5140521774086058199
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

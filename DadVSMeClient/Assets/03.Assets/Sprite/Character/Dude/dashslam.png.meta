@@ -1,0 +1,715 @@
+fileFormatVersion: 2
+guid: fb1501af9523d42d4b026a54b99589e2
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 4319904387778316234
+    second: dashslam_0
+  - first:
+      213: -8414767070174197181
+    second: dashslam_1
+  - first:
+      213: -1890159645592305630
+    second: dashslam_2
+  - first:
+      213: -3122385594627578163
+    second: dashslam_3
+  - first:
+      213: -895488908510786119
+    second: dashslam_4
+  - first:
+      213: -6072765823217816004
+    second: dashslam_5
+  - first:
+      213: 909192633448018154
+    second: dashslam_6
+  - first:
+      213: 6177145931481499435
+    second: dashslam_7
+  - first:
+      213: -2797886997074806044
+    second: dashslam_8
+  - first:
+      213: 2232966843343016352
+    second: dashslam_9
+  - first:
+      213: -4106986074947907514
+    second: dashslam_10
+  - first:
+      213: -8054765733028950325
+    second: dashslam_11
+  - first:
+      213: -5185770649160102007
+    second: dashslam_12
+  - first:
+      213: -463061559309535049
+    second: dashslam_13
+  - first:
+      213: 3941514935345905253
+    second: dashslam_14
+  - first:
+      213: 2727656354105009388
+    second: dashslam_15
+  - first:
+      213: 1474629766779962567
+    second: dashslam_16
+  - first:
+      213: -4994374058361289453
+    second: dashslam_17
+  - first:
+      213: -8751050773850596295
+    second: dashslam_18
+  - first:
+      213: 7796909194437218425
+    second: dashslam_19
+  - first:
+      213: -5780977348091234498
+    second: dashslam_20
+  - first:
+      213: 6419223485663146842
+    second: dashslam_21
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: iOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: dashslam_0
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 1736
+        width: 352
+        height: 334
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ac78d21272263fb30800000000000000
+      internalID: 4319904387778316234
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dashslam_1
+      rect:
+        serializedVersion: 2
+        x: 493
+        y: 1736
+        width: 352
+        height: 334
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 34acc9adeedb83b80800000000000000
+      internalID: -8414767070174197181
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dashslam_2
+      rect:
+        serializedVersion: 2
+        x: 967
+        y: 1736
+        width: 352
+        height: 334
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 22041bb11ddc4c5e0800000000000000
+      internalID: -1890159645592305630
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dashslam_3
+      rect:
+        serializedVersion: 2
+        x: 1421
+        y: 1817
+        width: 419
+        height: 335
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dc62d6448de0ba4d0800000000000000
+      internalID: -3122385594627578163
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dashslam_4
+      rect:
+        serializedVersion: 2
+        x: 1895
+        y: 1817
+        width: 419
+        height: 335
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9bd89eb05959293f0800000000000000
+      internalID: -895488908510786119
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dashslam_5
+      rect:
+        serializedVersion: 2
+        x: 2369
+        y: 1808
+        width: 425
+        height: 324
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c3e28fe98a339bba0800000000000000
+      internalID: -6072765823217816004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dashslam_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1270
+        width: 424
+        height: 324
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ae0321d02e91e9c00800000000000000
+      internalID: 909192633448018154
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dashslam_7
+      rect:
+        serializedVersion: 2
+        x: 473
+        y: 1270
+        width: 425
+        height: 324
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b2744bb2f71a9b550800000000000000
+      internalID: 6177145931481499435
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dashslam_8
+      rect:
+        serializedVersion: 2
+        x: 947
+        y: 1270
+        width: 425
+        height: 324
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4eafba99998eb29d0800000000000000
+      internalID: -2797886997074806044
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dashslam_9
+      rect:
+        serializedVersion: 2
+        x: 1421
+        y: 1270
+        width: 425
+        height: 324
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0a19fa463871dfe10800000000000000
+      internalID: 2232966843343016352
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dashslam_10
+      rect:
+        serializedVersion: 2
+        x: 1899
+        y: 1227
+        width: 429
+        height: 355
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6401141bced0107c0800000000000000
+      internalID: -4106986074947907514
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dashslam_11
+      rect:
+        serializedVersion: 2
+        x: 2373
+        y: 1227
+        width: 429
+        height: 355
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bce02d5ed39b73090800000000000000
+      internalID: -8054765733028950325
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dashslam_12
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 537
+        width: 404
+        height: 285
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 98f4a2ae1117808b0800000000000000
+      internalID: -5185770649160102007
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dashslam_13
+      rect:
+        serializedVersion: 2
+        x: 537
+        y: 537
+        width: 404
+        height: 285
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7b8773817ffd299f0800000000000000
+      internalID: -463061559309535049
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dashslam_14
+      rect:
+        serializedVersion: 2
+        x: 1013
+        y: 541
+        width: 366
+        height: 293
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 56e703e53f213b630800000000000000
+      internalID: 3941514935345905253
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dashslam_15
+      rect:
+        serializedVersion: 2
+        x: 1487
+        y: 541
+        width: 366
+        height: 293
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ce424c790059ad520800000000000000
+      internalID: 2727656354105009388
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dashslam_16
+      rect:
+        serializedVersion: 2
+        x: 1997
+        y: 541
+        width: 342
+        height: 263
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7c40320c5ffe67410800000000000000
+      internalID: 1474629766779962567
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dashslam_17
+      rect:
+        serializedVersion: 2
+        x: 2471
+        y: 541
+        width: 342
+        height: 263
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 31503f7514b60bab0800000000000000
+      internalID: -4994374058361289453
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dashslam_18
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 3
+        width: 342
+        height: 263
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 93c5a3dafa50e8680800000000000000
+      internalID: -8751050773850596295
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dashslam_19
+      rect:
+        serializedVersion: 2
+        x: 575
+        y: 3
+        width: 342
+        height: 263
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 97058604a9f243c60800000000000000
+      internalID: 7796909194437218425
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dashslam_20
+      rect:
+        serializedVersion: 2
+        x: 1049
+        y: 3
+        width: 342
+        height: 263
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e3731781bb7d5cfa0800000000000000
+      internalID: -5780977348091234498
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dashslam_21
+      rect:
+        serializedVersion: 2
+        x: 1523
+        y: 3
+        width: 342
+        height: 263
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a53fbccefb9a51950800000000000000
+      internalID: 6419223485663146842
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      dashslam_0: 4319904387778316234
+      dashslam_1: -8414767070174197181
+      dashslam_10: -4106986074947907514
+      dashslam_11: -8054765733028950325
+      dashslam_12: -5185770649160102007
+      dashslam_13: -463061559309535049
+      dashslam_14: 3941514935345905253
+      dashslam_15: 2727656354105009388
+      dashslam_16: 1474629766779962567
+      dashslam_17: -4994374058361289453
+      dashslam_18: -8751050773850596295
+      dashslam_19: 7796909194437218425
+      dashslam_2: -1890159645592305630
+      dashslam_20: -5780977348091234498
+      dashslam_21: 6419223485663146842
+      dashslam_3: -3122385594627578163
+      dashslam_4: -895488908510786119
+      dashslam_5: -6072765823217816004
+      dashslam_6: 909192633448018154
+      dashslam_7: 6177145931481499435
+      dashslam_8: -2797886997074806044
+      dashslam_9: 2232966843343016352
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
