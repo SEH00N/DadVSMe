@@ -47,18 +47,6 @@ TextureImporter:
   - first:
       213: -5639296668642500251
     second: crazy_14
-  - first:
-      213: -291251041817037765
-    second: crazy_15
-  - first:
-      213: -6770384447544497825
-    second: crazy_16
-  - first:
-      213: -7867112623504150196
-    second: crazy_17
-  - first:
-      213: -6790097419577808152
-    second: crazy_18
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -105,7 +93,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 200
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -126,7 +114,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 2048
+    maxTextureSize: 16384
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -184,11 +172,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 1146
-        width: 488
-        height: 573
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        y: 1910
+        width: 814
+        height: 955
+      alignment: 9
+      pivot: {x: 0.45, y: 0.015}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -205,12 +193,12 @@ TextureImporter:
       name: crazy_1
       rect:
         serializedVersion: 2
-        x: 488
-        y: 1146
-        width: 488
-        height: 573
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 814
+        y: 1910
+        width: 814
+        height: 955
+      alignment: 9
+      pivot: {x: 0.45, y: 0.015}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -227,12 +215,12 @@ TextureImporter:
       name: crazy_2
       rect:
         serializedVersion: 2
-        x: 976
-        y: 1146
-        width: 488
-        height: 573
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 1628
+        y: 1910
+        width: 814
+        height: 955
+      alignment: 9
+      pivot: {x: 0.45, y: 0.015}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -249,12 +237,12 @@ TextureImporter:
       name: crazy_3
       rect:
         serializedVersion: 2
-        x: 1464
-        y: 1146
-        width: 488
-        height: 573
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 2442
+        y: 1910
+        width: 814
+        height: 955
+      alignment: 9
+      pivot: {x: 0.45, y: 0.015}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -271,12 +259,12 @@ TextureImporter:
       name: crazy_4
       rect:
         serializedVersion: 2
-        x: 1952
-        y: 1146
-        width: 488
-        height: 573
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 3256
+        y: 1910
+        width: 814
+        height: 955
+      alignment: 9
+      pivot: {x: 0.45, y: 0.015}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -293,12 +281,12 @@ TextureImporter:
       name: crazy_5
       rect:
         serializedVersion: 2
-        x: 2440
-        y: 1146
-        width: 488
-        height: 573
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 4070
+        y: 1910
+        width: 814
+        height: 955
+      alignment: 9
+      pivot: {x: 0.45, y: 0.015}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -316,11 +304,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 573
-        width: 488
-        height: 573
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        y: 955
+        width: 814
+        height: 955
+      alignment: 9
+      pivot: {x: 0.45, y: 0.015}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -337,12 +325,12 @@ TextureImporter:
       name: crazy_7
       rect:
         serializedVersion: 2
-        x: 488
-        y: 573
-        width: 488
-        height: 573
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 814
+        y: 955
+        width: 814
+        height: 955
+      alignment: 9
+      pivot: {x: 0.45, y: 0.015}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -359,12 +347,12 @@ TextureImporter:
       name: crazy_8
       rect:
         serializedVersion: 2
-        x: 976
-        y: 573
-        width: 488
-        height: 573
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 1628
+        y: 955
+        width: 814
+        height: 955
+      alignment: 9
+      pivot: {x: 0.45, y: 0.015}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -381,12 +369,12 @@ TextureImporter:
       name: crazy_9
       rect:
         serializedVersion: 2
-        x: 1464
-        y: 573
-        width: 488
-        height: 573
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 2442
+        y: 955
+        width: 814
+        height: 955
+      alignment: 9
+      pivot: {x: 0.45, y: 0.015}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -403,12 +391,12 @@ TextureImporter:
       name: crazy_10
       rect:
         serializedVersion: 2
-        x: 1952
-        y: 573
-        width: 488
-        height: 573
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 3256
+        y: 955
+        width: 814
+        height: 955
+      alignment: 9
+      pivot: {x: 0.45, y: 0.015}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -425,12 +413,12 @@ TextureImporter:
       name: crazy_11
       rect:
         serializedVersion: 2
-        x: 2440
-        y: 573
-        width: 488
-        height: 573
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 4070
+        y: 955
+        width: 814
+        height: 955
+      alignment: 9
+      pivot: {x: 0.45, y: 0.015}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -449,10 +437,10 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 488
-        height: 573
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        width: 814
+        height: 955
+      alignment: 9
+      pivot: {x: 0.45, y: 0.015}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -465,33 +453,11 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
-    - serializedVersion: 2
-      name: crazy_13
-      rect:
-        serializedVersion: 2
-        x: 2440
-        y: 0
-        width: 488
-        height: 573
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 020c3bcccf700b420800000000000000
-      internalID: 2643621763613966368
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     outline: []
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 5aa21d5f292e34f9db945db0c0edfd07
+    spriteID: 9bde32841b31b460c87ca9e7ff23a102
     internalID: 0
     vertices: []
     indices: 

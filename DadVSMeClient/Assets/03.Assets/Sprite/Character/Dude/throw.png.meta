@@ -84,7 +84,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 200
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -105,7 +105,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 2048
+    maxTextureSize: 16384
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -162,12 +162,12 @@ TextureImporter:
       name: throw_0
       rect:
         serializedVersion: 2
-        x: 5
-        y: 775
-        width: 328
-        height: 389
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 0
+        y: 1294
+        width: 887
+        height: 647
+      alignment: 9
+      pivot: {x: 0.42, y: 0.015}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -184,12 +184,12 @@ TextureImporter:
       name: throw_1
       rect:
         serializedVersion: 2
-        x: 537
-        y: 775
-        width: 328
-        height: 389
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 887
+        y: 1294
+        width: 887
+        height: 647
+      alignment: 9
+      pivot: {x: 0.42, y: 0.015}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -206,12 +206,12 @@ TextureImporter:
       name: throw_2
       rect:
         serializedVersion: 2
-        x: 1069
-        y: 775
-        width: 328
-        height: 389
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1774
+        y: 1294
+        width: 887
+        height: 647
+      alignment: 9
+      pivot: {x: 0.42, y: 0.015}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -228,12 +228,12 @@ TextureImporter:
       name: throw_3
       rect:
         serializedVersion: 2
-        x: 1610
-        y: 775
-        width: 319
-        height: 389
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 2661
+        y: 1294
+        width: 887
+        height: 647
+      alignment: 9
+      pivot: {x: 0.42, y: 0.015}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -250,12 +250,12 @@ TextureImporter:
       name: throw_4
       rect:
         serializedVersion: 2
-        x: 2142
-        y: 775
-        width: 319
-        height: 389
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 3548
+        y: 1294
+        width: 887
+        height: 647
+      alignment: 9
+      pivot: {x: 0.42, y: 0.015}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -272,12 +272,12 @@ TextureImporter:
       name: throw_5
       rect:
         serializedVersion: 2
-        x: 2674
-        y: 775
-        width: 319
-        height: 389
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 4435
+        y: 1294
+        width: 887
+        height: 647
+      alignment: 9
+      pivot: {x: 0.42, y: 0.015}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -294,12 +294,12 @@ TextureImporter:
       name: throw_6
       rect:
         serializedVersion: 2
-        x: 117
-        y: 387
-        width: 352
-        height: 305
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 0
+        y: 647
+        width: 887
+        height: 647
+      alignment: 9
+      pivot: {x: 0.42, y: 0.015}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -316,12 +316,12 @@ TextureImporter:
       name: throw_7
       rect:
         serializedVersion: 2
-        x: 649
-        y: 387
-        width: 338
-        height: 313
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 887
+        y: 647
+        width: 887
+        height: 647
+      alignment: 9
+      pivot: {x: 0.42, y: 0.015}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -338,12 +338,12 @@ TextureImporter:
       name: throw_8
       rect:
         serializedVersion: 2
-        x: 1181
-        y: 387
-        width: 341
-        height: 304
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1774
+        y: 647
+        width: 887
+        height: 647
+      alignment: 9
+      pivot: {x: 0.42, y: 0.015}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -360,12 +360,12 @@ TextureImporter:
       name: throw_9
       rect:
         serializedVersion: 2
-        x: 1713
-        y: 387
-        width: 341
-        height: 304
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 2661
+        y: 647
+        width: 887
+        height: 647
+      alignment: 9
+      pivot: {x: 0.42, y: 0.015}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -382,12 +382,12 @@ TextureImporter:
       name: throw_10
       rect:
         serializedVersion: 2
-        x: 2245
-        y: 387
-        width: 341
-        height: 304
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 3548
+        y: 647
+        width: 887
+        height: 647
+      alignment: 9
+      pivot: {x: 0.42, y: 0.015}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -404,12 +404,12 @@ TextureImporter:
       name: throw_11
       rect:
         serializedVersion: 2
-        x: 2777
-        y: 387
-        width: 341
-        height: 304
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 4435
+        y: 647
+        width: 887
+        height: 647
+      alignment: 9
+      pivot: {x: 0.42, y: 0.015}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -426,7 +426,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 2583c6a61bfba43a9b85d9ddc6412e41
     internalID: 0
     vertices: []
     indices: 
@@ -440,6 +440,12 @@ TextureImporter:
       throw_1: -7297984200238921576
       throw_10: -2724187673998375904
       throw_11: 2346051482582994859
+      throw_12: -739595120
+      throw_13: -2099005652
+      throw_14: 1471618172
+      throw_15: 293052229
+      throw_16: 307741178
+      throw_17: -1782445209
       throw_2: 8755176108708025568
       throw_3: 7475913550696318055
       throw_4: -319419866943039223

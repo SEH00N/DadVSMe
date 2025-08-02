@@ -105,7 +105,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 200
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -126,7 +126,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 2048
+    maxTextureSize: 16384
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -183,12 +183,12 @@ TextureImporter:
       name: stand_0
       rect:
         serializedVersion: 2
-        x: 2
-        y: 1202
-        width: 260
-        height: 400
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 0
+        y: 2007
+        width: 436
+        height: 669
+      alignment: 9
+      pivot: {x: 0.445, y: 0.02}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -205,12 +205,12 @@ TextureImporter:
       name: stand_1
       rect:
         serializedVersion: 2
-        x: 262
-        y: 1202
-        width: 261
-        height: 400
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 436
+        y: 2007
+        width: 436
+        height: 669
+      alignment: 9
+      pivot: {x: 0.445, y: 0.02}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -227,12 +227,12 @@ TextureImporter:
       name: stand_2
       rect:
         serializedVersion: 2
-        x: 523
-        y: 1202
-        width: 260
-        height: 400
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 872
+        y: 2007
+        width: 436
+        height: 669
+      alignment: 9
+      pivot: {x: 0.445, y: 0.02}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -249,12 +249,12 @@ TextureImporter:
       name: stand_3
       rect:
         serializedVersion: 2
-        x: 783
-        y: 1202
-        width: 261
-        height: 400
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1308
+        y: 2007
+        width: 436
+        height: 669
+      alignment: 9
+      pivot: {x: 0.445, y: 0.02}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -271,12 +271,12 @@ TextureImporter:
       name: stand_4
       rect:
         serializedVersion: 2
-        x: 1043
-        y: 1202
-        width: 261
-        height: 400
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1744
+        y: 2007
+        width: 436
+        height: 669
+      alignment: 9
+      pivot: {x: 0.445, y: 0.02}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -293,12 +293,12 @@ TextureImporter:
       name: stand_5
       rect:
         serializedVersion: 2
-        x: 1305
-        y: 1202
-        width: 258
-        height: 400
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 2180
+        y: 2007
+        width: 436
+        height: 669
+      alignment: 9
+      pivot: {x: 0.445, y: 0.02}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -315,12 +315,12 @@ TextureImporter:
       name: stand_6
       rect:
         serializedVersion: 2
-        x: 1
-        y: 801
-        width: 258
-        height: 399
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 0
+        y: 1338
+        width: 436
+        height: 669
+      alignment: 9
+      pivot: {x: 0.445, y: 0.02}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -337,12 +337,12 @@ TextureImporter:
       name: stand_7
       rect:
         serializedVersion: 2
-        x: 262
-        y: 801
-        width: 259
-        height: 397
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 436
+        y: 1338
+        width: 436
+        height: 669
+      alignment: 9
+      pivot: {x: 0.445, y: 0.02}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -359,12 +359,12 @@ TextureImporter:
       name: stand_8
       rect:
         serializedVersion: 2
-        x: 524
-        y: 801
-        width: 258
-        height: 396
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 872
+        y: 1338
+        width: 436
+        height: 669
+      alignment: 9
+      pivot: {x: 0.445, y: 0.02}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -381,12 +381,12 @@ TextureImporter:
       name: stand_9
       rect:
         serializedVersion: 2
-        x: 786
-        y: 801
-        width: 258
-        height: 395
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1308
+        y: 1338
+        width: 436
+        height: 669
+      alignment: 9
+      pivot: {x: 0.445, y: 0.02}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -403,12 +403,12 @@ TextureImporter:
       name: stand_10
       rect:
         serializedVersion: 2
-        x: 1051
-        y: 801
-        width: 255
-        height: 393
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1744
+        y: 1338
+        width: 436
+        height: 669
+      alignment: 9
+      pivot: {x: 0.445, y: 0.02}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -425,12 +425,12 @@ TextureImporter:
       name: stand_11
       rect:
         serializedVersion: 2
-        x: 1312
-        y: 801
-        width: 254
-        height: 392
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 2180
+        y: 1338
+        width: 436
+        height: 669
+      alignment: 9
+      pivot: {x: 0.445, y: 0.02}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -447,12 +447,12 @@ TextureImporter:
       name: stand_12
       rect:
         serializedVersion: 2
-        x: 6
-        y: 400
-        width: 256
-        height: 394
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 0
+        y: 669
+        width: 436
+        height: 669
+      alignment: 9
+      pivot: {x: 0.445, y: 0.02}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -469,12 +469,12 @@ TextureImporter:
       name: stand_13
       rect:
         serializedVersion: 2
-        x: 266
-        y: 400
-        width: 256
-        height: 395
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 436
+        y: 669
+        width: 436
+        height: 669
+      alignment: 9
+      pivot: {x: 0.445, y: 0.02}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -491,12 +491,12 @@ TextureImporter:
       name: stand_14
       rect:
         serializedVersion: 2
-        x: 527
-        y: 400
-        width: 256
-        height: 396
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 872
+        y: 669
+        width: 436
+        height: 669
+      alignment: 9
+      pivot: {x: 0.445, y: 0.02}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -513,12 +513,12 @@ TextureImporter:
       name: stand_15
       rect:
         serializedVersion: 2
-        x: 787
-        y: 400
-        width: 256
-        height: 397
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1308
+        y: 669
+        width: 436
+        height: 669
+      alignment: 9
+      pivot: {x: 0.445, y: 0.02}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -535,12 +535,12 @@ TextureImporter:
       name: stand_16
       rect:
         serializedVersion: 2
-        x: 1048
-        y: 400
-        width: 256
-        height: 399
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1744
+        y: 669
+        width: 436
+        height: 669
+      alignment: 9
+      pivot: {x: 0.445, y: 0.02}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -557,12 +557,12 @@ TextureImporter:
       name: stand_17
       rect:
         serializedVersion: 2
-        x: 1309
-        y: 400
-        width: 256
-        height: 399
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 2180
+        y: 669
+        width: 436
+        height: 669
+      alignment: 9
+      pivot: {x: 0.445, y: 0.02}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -579,12 +579,12 @@ TextureImporter:
       name: stand_18
       rect:
         serializedVersion: 2
-        x: 5
+        x: 0
         y: 0
-        width: 256
-        height: 398
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 436
+        height: 669
+      alignment: 9
+      pivot: {x: 0.445, y: 0.02}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -601,7 +601,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 85e65a99653ca4ad6a4ddda9a85d3d1a
     internalID: 0
     vertices: []
     indices: 
@@ -622,7 +622,12 @@ TextureImporter:
       stand_16: 5124684259577151311
       stand_17: 2006353805198399290
       stand_18: -2758351041374340913
+      stand_19: -1517460490
       stand_2: 2477338608294755939
+      stand_20: 1618234022
+      stand_21: -1283302583
+      stand_22: 1493449822
+      stand_23: 86413982
       stand_3: -1523739029567859866
       stand_4: -1400105817687828294
       stand_5: 5296837313232140662

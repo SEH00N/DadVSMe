@@ -60,7 +60,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 200
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -81,7 +81,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 2048
+    maxTextureSize: 16384
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -138,12 +138,12 @@ TextureImporter:
       name: juggle1_0
       rect:
         serializedVersion: 2
-        x: 105
-        y: 102
-        width: 320
-        height: 363
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 0
+        y: 0
+        width: 715
+        height: 851
+      alignment: 9
+      pivot: {x: 0.58, y: 0.275}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -160,12 +160,12 @@ TextureImporter:
       name: juggle1_1
       rect:
         serializedVersion: 2
-        x: 454
-        y: 287
-        width: 49
-        height: 77
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 715
+        y: 0
+        width: 715
+        height: 851
+      alignment: 9
+      pivot: {x: 0.58, y: 0.275}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -178,55 +178,11 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
-    - serializedVersion: 2
-      name: juggle1_2
-      rect:
-        serializedVersion: 2
-        x: 512
-        y: 351
-        width: 37
-        height: 36
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: fdd65b158e4c44080800000000000000
-      internalID: -9204015236356149793
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: juggle1_3
-      rect:
-        serializedVersion: 2
-        x: 520
-        y: 58
-        width: 312
-        height: 416
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 560d6249aafe9b480800000000000000
-      internalID: -8882805274102542235
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     outline: []
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: a91cd7a0a5aa341a5b8b9c4a99ae59df
     internalID: 0
     vertices: []
     indices: 
@@ -238,8 +194,6 @@ TextureImporter:
     nameFileIdTable:
       juggle1_0: -2293697793106692771
       juggle1_1: -1168471496391953453
-      juggle1_2: -9204015236356149793
-      juggle1_3: -8882805274102542235
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

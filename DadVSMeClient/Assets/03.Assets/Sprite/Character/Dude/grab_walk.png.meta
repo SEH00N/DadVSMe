@@ -1,34 +1,34 @@
 fileFormatVersion: 2
-guid: fcfaa663ce5534e0d86bad95cd6ffccc
+guid: 78532ce11cf634a1191d9d0a987e1409
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -105407439556655896
-    second: grab_leg_walk_0
+      213: 6818840818689135283
+    second: grab_walk_0
   - first:
-      213: -3243613236744868908
-    second: grab_leg_walk_1
+      213: 8542671756033606690
+    second: grab_walk_1
   - first:
-      213: -2081428702883129702
-    second: grab_leg_walk_2
+      213: 2958783515189778845
+    second: grab_walk_2
   - first:
-      213: -6874282442255982212
-    second: grab_leg_walk_3
+      213: -5070166417285637397
+    second: grab_walk_3
   - first:
-      213: -1137536634754201550
-    second: grab_leg_walk_4
+      213: 4739655752870787888
+    second: grab_walk_4
   - first:
-      213: -303857131364860457
-    second: grab_leg_walk_5
+      213: 5031762543205575933
+    second: grab_walk_5
   - first:
-      213: -8213090638298356754
-    second: grab_leg_walk_6
+      213: 4163681627660577490
+    second: grab_walk_6
   - first:
-      213: -4609274219964339463
-    second: grab_leg_walk_7
+      213: 430415199150810990
+    second: grab_walk_7
   - first:
-      213: -4107053621488769298
-    second: grab_leg_walk_8
+      213: 2502549390759645080
+    second: grab_walk_8
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -75,7 +75,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 200
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -96,7 +96,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 2048
+    maxTextureSize: 16384
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -150,199 +150,199 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: grab_leg_walk_0
+      name: grab_walk_0
       rect:
         serializedVersion: 2
-        x: 46
-        y: 113
-        width: 102
-        height: 113
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 0
+        y: 730
+        width: 515
+        height: 730
+      alignment: 9
+      pivot: {x: 0.46, y: 0.015}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 8e4ca800e74898ef0800000000000000
-      internalID: -105407439556655896
+      spriteID: 3b256e9c89361ae50800000000000000
+      internalID: 6818840818689135283
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: grab_leg_walk_1
+      name: grab_walk_1
       rect:
         serializedVersion: 2
-        x: 260
-        y: 113
-        width: 102
-        height: 113
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 515
+        y: 730
+        width: 515
+        height: 730
+      alignment: 9
+      pivot: {x: 0.46, y: 0.015}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 4db211352fe5cf2d0800000000000000
-      internalID: -3243613236744868908
+      spriteID: 224452b73baad8670800000000000000
+      internalID: 8542671756033606690
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: grab_leg_walk_2
+      name: grab_walk_2
       rect:
         serializedVersion: 2
-        x: 459
-        y: 113
-        width: 106
-        height: 113
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1030
+        y: 730
+        width: 515
+        height: 730
+      alignment: 9
+      pivot: {x: 0.46, y: 0.015}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a9659536f974d13e0800000000000000
-      internalID: -2081428702883129702
+      spriteID: d991b264ee5bf0920800000000000000
+      internalID: 2958783515189778845
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: grab_leg_walk_3
+      name: grab_walk_3
       rect:
         serializedVersion: 2
-        x: 641
-        y: 112
-        width: 200
-        height: 114
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1545
+        y: 730
+        width: 515
+        height: 730
+      alignment: 9
+      pivot: {x: 0.46, y: 0.015}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: c71a0af4a84a990a0800000000000000
-      internalID: -6874282442255982212
+      spriteID: bea1391a18623a9b0800000000000000
+      internalID: -5070166417285637397
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: grab_leg_walk_4
+      name: grab_walk_4
       rect:
         serializedVersion: 2
-        x: 855
-        y: 112
-        width: 200
-        height: 114
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 2060
+        y: 730
+        width: 515
+        height: 730
+      alignment: 9
+      pivot: {x: 0.46, y: 0.015}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 2388b762578a630f0800000000000000
-      internalID: -1137536634754201550
+      spriteID: 03bff73abc3a6c140800000000000000
+      internalID: 4739655752870787888
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: grab_leg_walk_5
+      name: grab_walk_5
       rect:
         serializedVersion: 2
-        x: 1069
-        y: 112
-        width: 200
-        height: 114
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 2575
+        y: 730
+        width: 515
+        height: 730
+      alignment: 9
+      pivot: {x: 0.46, y: 0.015}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 7dd37868c8b78cbf0800000000000000
-      internalID: -303857131364860457
+      spriteID: dfc62e5af5964d540800000000000000
+      internalID: 5031762543205575933
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: grab_leg_walk_6
+      name: grab_walk_6
       rect:
         serializedVersion: 2
-        x: 4
+        x: 0
         y: 0
-        width: 211
-        height: 106
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 515
+        height: 730
+      alignment: 9
+      pivot: {x: 0.46, y: 0.015}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: ee3e32c449d350e80800000000000000
-      internalID: -8213090638298356754
+      spriteID: 2da6786516e58c930800000000000000
+      internalID: 4163681627660577490
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: grab_leg_walk_7
+      name: grab_walk_7
       rect:
         serializedVersion: 2
-        x: 218
+        x: 515
         y: 0
-        width: 211
-        height: 106
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 515
+        height: 730
+      alignment: 9
+      pivot: {x: 0.46, y: 0.015}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 9fae8a694819800c0800000000000000
-      internalID: -4609274219964339463
+      spriteID: e67205bd75429f500800000000000000
+      internalID: 430415199150810990
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: grab_leg_walk_8
+      name: grab_walk_8
       rect:
         serializedVersion: 2
-        x: 432
+        x: 1030
         y: 0
-        width: 211
-        height: 106
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 515
+        height: 730
+      alignment: 9
+      pivot: {x: 0.46, y: 0.015}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: ee62ea9cd70d007c0800000000000000
-      internalID: -4107053621488769298
+      spriteID: 89f491d6967dab220800000000000000
+      internalID: 2502549390759645080
       vertices: []
       indices: 
       edges: []
@@ -351,7 +351,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: f0c8ecb2383de4f92a3a0b140f8e28d4
     internalID: 0
     vertices: []
     indices: 
@@ -361,15 +361,18 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      grab_leg_walk_0: -105407439556655896
-      grab_leg_walk_1: -3243613236744868908
-      grab_leg_walk_2: -2081428702883129702
-      grab_leg_walk_3: -6874282442255982212
-      grab_leg_walk_4: -1137536634754201550
-      grab_leg_walk_5: -303857131364860457
-      grab_leg_walk_6: -8213090638298356754
-      grab_leg_walk_7: -4609274219964339463
-      grab_leg_walk_8: -4107053621488769298
+      grab_walk_0: 6818840818689135283
+      grab_walk_1: 8542671756033606690
+      grab_walk_10: 801786384
+      grab_walk_11: -1244145438
+      grab_walk_2: 2958783515189778845
+      grab_walk_3: -5070166417285637397
+      grab_walk_4: 4739655752870787888
+      grab_walk_5: 5031762543205575933
+      grab_walk_6: 4163681627660577490
+      grab_walk_7: 430415199150810990
+      grab_walk_8: 2502549390759645080
+      grab_walk_9: -1454956235
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

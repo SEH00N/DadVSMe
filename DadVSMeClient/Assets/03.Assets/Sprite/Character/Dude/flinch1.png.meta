@@ -66,7 +66,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 200
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -87,7 +87,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 2048
+    maxTextureSize: 16384
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -145,11 +145,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 0
-        width: 282
-        height: 697
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        y: 601
+        width: 508
+        height: 600
+      alignment: 9
+      pivot: {x: 0.575, y: 0.015}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -166,12 +166,12 @@ TextureImporter:
       name: flinch1_1
       rect:
         serializedVersion: 2
-        x: 316
-        y: 0
-        width: 273
-        height: 720
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 508
+        y: 601
+        width: 508
+        height: 600
+      alignment: 9
+      pivot: {x: 0.575, y: 0.015}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -188,12 +188,12 @@ TextureImporter:
       name: flinch1_2
       rect:
         serializedVersion: 2
-        x: 609
-        y: 0
-        width: 271
-        height: 720
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1016
+        y: 601
+        width: 508
+        height: 600
+      alignment: 9
+      pivot: {x: 0.575, y: 0.015}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -210,12 +210,12 @@ TextureImporter:
       name: flinch1_3
       rect:
         serializedVersion: 2
-        x: 925
-        y: 359
-        width: 265
-        height: 361
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1524
+        y: 601
+        width: 508
+        height: 600
+      alignment: 9
+      pivot: {x: 0.575, y: 0.015}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -232,12 +232,12 @@ TextureImporter:
       name: flinch1_4
       rect:
         serializedVersion: 2
-        x: 1230
-        y: 359
-        width: 265
-        height: 361
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 2032
+        y: 601
+        width: 508
+        height: 600
+      alignment: 9
+      pivot: {x: 0.575, y: 0.015}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -254,12 +254,12 @@ TextureImporter:
       name: flinch1_5
       rect:
         serializedVersion: 2
-        x: 1536
-        y: 359
-        width: 259
-        height: 361
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 2540
+        y: 601
+        width: 508
+        height: 600
+      alignment: 9
+      pivot: {x: 0.575, y: 0.015}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -272,11 +272,77 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: flinch1_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1
+        width: 508
+        height: 600
+      alignment: 9
+      pivot: {x: 0.575, y: 0.015}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c85eec68620f4f699c3d14361786990
+      internalID: 843126158
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flinch1_7
+      rect:
+        serializedVersion: 2
+        x: 508
+        y: 1
+        width: 508
+        height: 600
+      alignment: 9
+      pivot: {x: 0.575, y: 0.015}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4124a282f00804fa58591300f0dc45f8
+      internalID: -1660399603
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flinch1_8
+      rect:
+        serializedVersion: 2
+        x: 1016
+        y: 1
+        width: 508
+        height: 600
+      alignment: 9
+      pivot: {x: 0.575, y: 0.015}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: adc0630a4c36e4c7cba6bb408858e9ae
+      internalID: -1680336782
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: fa060569669f14f16bf29cf87ca4471f
     internalID: 0
     vertices: []
     indices: 
@@ -288,10 +354,16 @@ TextureImporter:
     nameFileIdTable:
       flinch1_0: -5114933707959205804
       flinch1_1: 2001175996062272171
+      flinch1_10: 823008818
+      flinch1_11: -989728677
       flinch1_2: 3146098781173817174
       flinch1_3: -1575192364702085681
       flinch1_4: 585812960781463240
       flinch1_5: -6835825725627134357
+      flinch1_6: 843126158
+      flinch1_7: -1660399603
+      flinch1_8: -1680336782
+      flinch1_9: 1769538370
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

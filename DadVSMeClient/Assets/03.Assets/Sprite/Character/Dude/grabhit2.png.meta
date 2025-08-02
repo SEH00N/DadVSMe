@@ -96,7 +96,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 200
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -117,7 +117,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 2048
+    maxTextureSize: 16384
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -174,12 +174,12 @@ TextureImporter:
       name: grabhit2_0
       rect:
         serializedVersion: 2
-        x: 140
-        y: 881
-        width: 323
-        height: 427
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 0
+        y: 1470
+        width: 858
+        height: 735
+      alignment: 9
+      pivot: {x: 0.53, y: 0.015}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -196,12 +196,12 @@ TextureImporter:
       name: grabhit2_1
       rect:
         serializedVersion: 2
-        x: 655
-        y: 881
-        width: 323
-        height: 427
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 858
+        y: 1470
+        width: 858
+        height: 735
+      alignment: 9
+      pivot: {x: 0.53, y: 0.015}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -218,12 +218,12 @@ TextureImporter:
       name: grabhit2_2
       rect:
         serializedVersion: 2
-        x: 1093
-        y: 881
-        width: 344
-        height: 380
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1716
+        y: 1470
+        width: 858
+        height: 735
+      alignment: 9
+      pivot: {x: 0.53, y: 0.015}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -240,12 +240,12 @@ TextureImporter:
       name: grabhit2_3
       rect:
         serializedVersion: 2
-        x: 1608
-        y: 881
-        width: 344
-        height: 380
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 2574
+        y: 1470
+        width: 858
+        height: 735
+      alignment: 9
+      pivot: {x: 0.53, y: 0.015}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -262,12 +262,12 @@ TextureImporter:
       name: grabhit2_4
       rect:
         serializedVersion: 2
-        x: 2101
-        y: 881
-        width: 399
-        height: 357
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 3432
+        y: 1470
+        width: 858
+        height: 735
+      alignment: 9
+      pivot: {x: 0.53, y: 0.015}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -284,12 +284,12 @@ TextureImporter:
       name: grabhit2_5
       rect:
         serializedVersion: 2
-        x: 2616
-        y: 881
-        width: 399
-        height: 357
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 4290
+        y: 1470
+        width: 858
+        height: 735
+      alignment: 9
+      pivot: {x: 0.53, y: 0.015}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -306,12 +306,12 @@ TextureImporter:
       name: grabhit2_6
       rect:
         serializedVersion: 2
-        x: 148
-        y: 440
-        width: 328
-        height: 376
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 0
+        y: 735
+        width: 858
+        height: 735
+      alignment: 9
+      pivot: {x: 0.53, y: 0.015}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -328,12 +328,12 @@ TextureImporter:
       name: grabhit2_7
       rect:
         serializedVersion: 2
-        x: 663
-        y: 440
-        width: 328
-        height: 376
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 858
+        y: 735
+        width: 858
+        height: 735
+      alignment: 9
+      pivot: {x: 0.53, y: 0.015}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -350,12 +350,12 @@ TextureImporter:
       name: grabhit2_8
       rect:
         serializedVersion: 2
-        x: 1178
-        y: 440
-        width: 312
-        height: 376
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1716
+        y: 735
+        width: 858
+        height: 735
+      alignment: 9
+      pivot: {x: 0.53, y: 0.015}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -372,12 +372,12 @@ TextureImporter:
       name: grabhit2_9
       rect:
         serializedVersion: 2
-        x: 1693
-        y: 440
-        width: 312
-        height: 376
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 2574
+        y: 735
+        width: 858
+        height: 735
+      alignment: 9
+      pivot: {x: 0.53, y: 0.015}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -394,12 +394,12 @@ TextureImporter:
       name: grabhit2_10
       rect:
         serializedVersion: 2
-        x: 2208
-        y: 440
-        width: 312
-        height: 376
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 3432
+        y: 735
+        width: 858
+        height: 735
+      alignment: 9
+      pivot: {x: 0.53, y: 0.015}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -416,12 +416,12 @@ TextureImporter:
       name: grabhit2_11
       rect:
         serializedVersion: 2
-        x: 2723
-        y: 440
-        width: 312
-        height: 376
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 4290
+        y: 735
+        width: 858
+        height: 735
+      alignment: 9
+      pivot: {x: 0.53, y: 0.015}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -438,12 +438,12 @@ TextureImporter:
       name: grabhit2_12
       rect:
         serializedVersion: 2
-        x: 148
+        x: 0
         y: 0
-        width: 312
-        height: 375
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 858
+        height: 735
+      alignment: 9
+      pivot: {x: 0.53, y: 0.015}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -460,12 +460,12 @@ TextureImporter:
       name: grabhit2_13
       rect:
         serializedVersion: 2
-        x: 663
+        x: 858
         y: 0
-        width: 312
-        height: 375
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 858
+        height: 735
+      alignment: 9
+      pivot: {x: 0.53, y: 0.015}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -482,12 +482,12 @@ TextureImporter:
       name: grabhit2_14
       rect:
         serializedVersion: 2
-        x: 1178
+        x: 1716
         y: 0
-        width: 312
-        height: 375
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 858
+        height: 735
+      alignment: 9
+      pivot: {x: 0.53, y: 0.015}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -504,12 +504,12 @@ TextureImporter:
       name: grabhit2_15
       rect:
         serializedVersion: 2
-        x: 1693
+        x: 2574
         y: 0
-        width: 312
-        height: 375
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 858
+        height: 735
+      alignment: 9
+      pivot: {x: 0.53, y: 0.015}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -526,7 +526,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 56cb3bbf6cc5d46b9b1209b33c6e0b74
     internalID: 0
     vertices: []
     indices: 
@@ -544,6 +544,8 @@ TextureImporter:
       grabhit2_13: 5024735972046118994
       grabhit2_14: 7773099236445752716
       grabhit2_15: 3293192527927579402
+      grabhit2_16: -383893792
+      grabhit2_17: -1950261438
       grabhit2_2: 8778249502597064737
       grabhit2_3: -7388403357421920353
       grabhit2_4: -2478405833846142615

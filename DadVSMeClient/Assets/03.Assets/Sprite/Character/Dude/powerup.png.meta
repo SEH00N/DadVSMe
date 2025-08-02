@@ -59,6 +59,21 @@ TextureImporter:
   - first:
       213: -1717169126078440189
     second: powerup_18
+  - first:
+      213: -2591009390904106881
+    second: powerup_19
+  - first:
+      213: 2611580580167151688
+    second: powerup_20
+  - first:
+      213: -6693258419856949570
+    second: powerup_21
+  - first:
+      213: 4912925360179939098
+    second: powerup_22
+  - first:
+      213: 4720996065197390043
+    second: powerup_23
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -105,7 +120,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 200
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -126,7 +141,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 2048
+    maxTextureSize: 16384
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -183,12 +198,12 @@ TextureImporter:
       name: powerup_0
       rect:
         serializedVersion: 2
-        x: 265
-        y: 1547
-        width: 341
-        height: 305
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 0
+        y: 1920
+        width: 960
+        height: 960
+      alignment: 9
+      pivot: {x: 0.52, y: 0.03}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -205,12 +220,12 @@ TextureImporter:
       name: powerup_1
       rect:
         serializedVersion: 2
-        x: 921
-        y: 1547
-        width: 342
-        height: 346
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 960
+        y: 1920
+        width: 960
+        height: 960
+      alignment: 9
+      pivot: {x: 0.52, y: 0.03}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -227,12 +242,12 @@ TextureImporter:
       name: powerup_2
       rect:
         serializedVersion: 2
-        x: 1417
-        y: 1559
-        width: 534
-        height: 1503
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1920
+        y: 1920
+        width: 960
+        height: 960
+      alignment: 9
+      pivot: {x: 0.52, y: 0.03}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -249,12 +264,12 @@ TextureImporter:
       name: powerup_3
       rect:
         serializedVersion: 2
-        x: 1991
-        y: 1580
-        width: 561
-        height: 1329
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 2880
+        y: 1920
+        width: 960
+        height: 960
+      alignment: 9
+      pivot: {x: 0.52, y: 0.03}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -271,12 +286,12 @@ TextureImporter:
       name: powerup_4
       rect:
         serializedVersion: 2
-        x: 2723
-        y: 1538
-        width: 432
-        height: 1371
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 3840
+        y: 1920
+        width: 960
+        height: 960
+      alignment: 9
+      pivot: {x: 0.52, y: 0.03}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -293,12 +308,12 @@ TextureImporter:
       name: powerup_5
       rect:
         serializedVersion: 2
-        x: 3409
-        y: 1559
-        width: 421
-        height: 1264
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 4800
+        y: 1920
+        width: 960
+        height: 960
+      alignment: 9
+      pivot: {x: 0.52, y: 0.03}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -315,12 +330,12 @@ TextureImporter:
       name: powerup_6
       rect:
         serializedVersion: 2
-        x: 296
-        y: 946
-        width: 110
-        height: 89
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 0
+        y: 960
+        width: 960
+        height: 960
+      alignment: 9
+      pivot: {x: 0.52, y: 0.03}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -337,12 +352,12 @@ TextureImporter:
       name: powerup_7
       rect:
         serializedVersion: 2
-        x: 135
-        y: 17
-        width: 421
-        height: 861
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 960
+        y: 960
+        width: 960
+        height: 960
+      alignment: 9
+      pivot: {x: 0.52, y: 0.03}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -359,12 +374,12 @@ TextureImporter:
       name: powerup_8
       rect:
         serializedVersion: 2
-        x: 867
-        y: 576
-        width: 224
-        height: 200
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1920
+        y: 960
+        width: 960
+        height: 960
+      alignment: 9
+      pivot: {x: 0.52, y: 0.03}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -381,12 +396,12 @@ TextureImporter:
       name: powerup_9
       rect:
         serializedVersion: 2
-        x: 1494
-        y: 613
-        width: 30
-        height: 105
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 2880
+        y: 960
+        width: 960
+        height: 960
+      alignment: 9
+      pivot: {x: 0.52, y: 0.03}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -403,12 +418,12 @@ TextureImporter:
       name: powerup_10
       rect:
         serializedVersion: 2
-        x: 1542
-        y: 690
-        width: 196
-        height: 41
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 3840
+        y: 960
+        width: 960
+        height: 960
+      alignment: 9
+      pivot: {x: 0.52, y: 0.03}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -425,12 +440,12 @@ TextureImporter:
       name: powerup_11
       rect:
         serializedVersion: 2
-        x: 797
-        y: 14
-        width: 421
-        height: 391
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 4800
+        y: 960
+        width: 960
+        height: 960
+      alignment: 9
+      pivot: {x: 0.52, y: 0.03}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -447,12 +462,12 @@ TextureImporter:
       name: powerup_12
       rect:
         serializedVersion: 2
-        x: 1013
-        y: 402
-        width: 81
-        height: 111
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 0
+        y: 0
+        width: 960
+        height: 960
+      alignment: 9
+      pivot: {x: 0.52, y: 0.03}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -469,12 +484,12 @@ TextureImporter:
       name: powerup_13
       rect:
         serializedVersion: 2
-        x: 1631
-        y: 398
-        width: 115
-        height: 55
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 960
+        y: 0
+        width: 960
+        height: 960
+      alignment: 9
+      pivot: {x: 0.52, y: 0.03}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -491,12 +506,12 @@ TextureImporter:
       name: powerup_14
       rect:
         serializedVersion: 2
-        x: 1420
-        y: 288
-        width: 64
-        height: 73
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1920
+        y: 0
+        width: 960
+        height: 960
+      alignment: 9
+      pivot: {x: 0.52, y: 0.03}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -513,12 +528,12 @@ TextureImporter:
       name: powerup_15
       rect:
         serializedVersion: 2
-        x: 1450
-        y: 47
-        width: 421
-        height: 302
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 2880
+        y: 0
+        width: 960
+        height: 960
+      alignment: 9
+      pivot: {x: 0.52, y: 0.03}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -535,12 +550,12 @@ TextureImporter:
       name: powerup_16
       rect:
         serializedVersion: 2
-        x: 2108
-        y: 35
-        width: 421
-        height: 302
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 3840
+        y: 0
+        width: 960
+        height: 960
+      alignment: 9
+      pivot: {x: 0.52, y: 0.03}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -553,55 +568,11 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
-    - serializedVersion: 2
-      name: powerup_17
-      rect:
-        serializedVersion: 2
-        x: 2765
-        y: 23
-        width: 421
-        height: 302
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: e030b2d73266fc580800000000000000
-      internalID: -8804706443876170994
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: powerup_18
-      rect:
-        serializedVersion: 2
-        x: 3421
-        y: 23
-        width: 421
-        height: 302
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 30d93dc17c36b28e0800000000000000
-      internalID: -1717169126078440189
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     outline: []
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 4187664fe9458416f979257f5b577830
     internalID: 0
     vertices: []
     indices: 
@@ -620,8 +591,6 @@ TextureImporter:
       powerup_14: 29716551471970737
       powerup_15: -2879173936607767380
       powerup_16: -1509155941286696212
-      powerup_17: -8804706443876170994
-      powerup_18: -1717169126078440189
       powerup_2: 5255281988259590125
       powerup_3: 4523232698384855742
       powerup_4: 2271567481674915975

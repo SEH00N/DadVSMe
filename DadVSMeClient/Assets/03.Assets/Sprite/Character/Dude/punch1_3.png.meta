@@ -81,7 +81,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 200
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -102,7 +102,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 2048
+    maxTextureSize: 16384
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -160,11 +160,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 403
-        width: 315
-        height: 405
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        y: 674
+        width: 781
+        height: 673
+      alignment: 9
+      pivot: {x: 0.375, y: 0.025}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -181,12 +181,12 @@ TextureImporter:
       name: punch1_3_1
       rect:
         serializedVersion: 2
-        x: 467
-        y: 403
-        width: 316
-        height: 405
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 781
+        y: 674
+        width: 781
+        height: 673
+      alignment: 9
+      pivot: {x: 0.375, y: 0.025}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -203,12 +203,12 @@ TextureImporter:
       name: punch1_3_2
       rect:
         serializedVersion: 2
-        x: 997
-        y: 403
-        width: 397
-        height: 351
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1562
+        y: 674
+        width: 781
+        height: 673
+      alignment: 9
+      pivot: {x: 0.375, y: 0.025}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -225,12 +225,12 @@ TextureImporter:
       name: punch1_3_3
       rect:
         serializedVersion: 2
-        x: 1465
-        y: 403
-        width: 397
-        height: 351
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 2343
+        y: 674
+        width: 781
+        height: 673
+      alignment: 9
+      pivot: {x: 0.375, y: 0.025}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -247,12 +247,12 @@ TextureImporter:
       name: punch1_3_4
       rect:
         serializedVersion: 2
-        x: 1936
-        y: 403
-        width: 397
-        height: 394
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 3124
+        y: 674
+        width: 781
+        height: 673
+      alignment: 9
+      pivot: {x: 0.375, y: 0.025}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -269,12 +269,12 @@ TextureImporter:
       name: punch1_3_5
       rect:
         serializedVersion: 2
-        x: 2408
-        y: 403
-        width: 232
-        height: 391
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 3905
+        y: 674
+        width: 781
+        height: 673
+      alignment: 9
+      pivot: {x: 0.375, y: 0.025}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -291,12 +291,12 @@ TextureImporter:
       name: punch1_3_6
       rect:
         serializedVersion: 2
-        x: 68
-        y: 0
-        width: 232
-        height: 390
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 0
+        y: 1
+        width: 781
+        height: 673
+      alignment: 9
+      pivot: {x: 0.375, y: 0.025}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -313,12 +313,12 @@ TextureImporter:
       name: punch1_3_7
       rect:
         serializedVersion: 2
-        x: 536
-        y: 0
-        width: 232
-        height: 390
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 781
+        y: 1
+        width: 781
+        height: 673
+      alignment: 9
+      pivot: {x: 0.375, y: 0.025}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -335,12 +335,12 @@ TextureImporter:
       name: punch1_3_8
       rect:
         serializedVersion: 2
-        x: 1004
-        y: 0
-        width: 232
-        height: 390
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1562
+        y: 1
+        width: 781
+        height: 673
+      alignment: 9
+      pivot: {x: 0.375, y: 0.025}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -357,12 +357,12 @@ TextureImporter:
       name: punch1_3_9
       rect:
         serializedVersion: 2
-        x: 1472
-        y: 0
-        width: 232
-        height: 390
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 2343
+        y: 1
+        width: 781
+        height: 673
+      alignment: 9
+      pivot: {x: 0.375, y: 0.025}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -375,33 +375,11 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
-    - serializedVersion: 2
-      name: punch1_3_10
-      rect:
-        serializedVersion: 2
-        x: 1940
-        y: 0
-        width: 216
-        height: 125
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 4f05177da271fea80800000000000000
-      internalID: -8435498104271056652
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     outline: []
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 59316e89997964e3783fa71eb3693667
     internalID: 0
     vertices: []
     indices: 
@@ -414,6 +392,7 @@ TextureImporter:
       punch1_3_0: -8284946474669191906
       punch1_3_1: -1008713282715594662
       punch1_3_10: -8435498104271056652
+      punch1_3_11: -367125183
       punch1_3_2: 1511621417986620796
       punch1_3_3: 6740734980845103804
       punch1_3_4: 4593138182497460960

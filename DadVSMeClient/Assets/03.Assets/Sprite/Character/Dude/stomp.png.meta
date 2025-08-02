@@ -90,7 +90,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 200
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -111,7 +111,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 2048
+    maxTextureSize: 16384
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -168,12 +168,12 @@ TextureImporter:
       name: stomp_0
       rect:
         serializedVersion: 2
-        x: 193
-        y: 937
-        width: 305
-        height: 367
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 0
+        y: 1546
+        width: 924
+        height: 772
+      alignment: 9
+      pivot: {x: 0.585, y: 0.035}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -190,12 +190,12 @@ TextureImporter:
       name: stomp_1
       rect:
         serializedVersion: 2
-        x: 759
-        y: 937
-        width: 305
-        height: 367
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 924
+        y: 1546
+        width: 924
+        height: 772
+      alignment: 9
+      pivot: {x: 0.585, y: 0.035}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -212,12 +212,12 @@ TextureImporter:
       name: stomp_2
       rect:
         serializedVersion: 2
-        x: 1183
-        y: 936
-        width: 317
-        height: 421
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1848
+        y: 1546
+        width: 924
+        height: 772
+      alignment: 9
+      pivot: {x: 0.585, y: 0.035}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -234,12 +234,12 @@ TextureImporter:
       name: stomp_3
       rect:
         serializedVersion: 2
-        x: 1749
-        y: 936
-        width: 317
-        height: 421
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 2772
+        y: 1546
+        width: 924
+        height: 772
+      alignment: 9
+      pivot: {x: 0.585, y: 0.035}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -256,12 +256,12 @@ TextureImporter:
       name: stomp_4
       rect:
         serializedVersion: 2
-        x: 2263
-        y: 944
-        width: 336
-        height: 437
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 3696
+        y: 1546
+        width: 924
+        height: 772
+      alignment: 9
+      pivot: {x: 0.585, y: 0.035}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -278,12 +278,12 @@ TextureImporter:
       name: stomp_5
       rect:
         serializedVersion: 2
-        x: 2837
-        y: 973
-        width: 348
-        height: 423
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 4620
+        y: 1546
+        width: 924
+        height: 772
+      alignment: 9
+      pivot: {x: 0.585, y: 0.035}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -300,12 +300,12 @@ TextureImporter:
       name: stomp_6
       rect:
         serializedVersion: 2
-        x: 7
-        y: 507
-        width: 348
-        height: 423
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 0
+        y: 774
+        width: 924
+        height: 772
+      alignment: 9
+      pivot: {x: 0.585, y: 0.035}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -322,12 +322,12 @@ TextureImporter:
       name: stomp_7
       rect:
         serializedVersion: 2
-        x: 756
-        y: 465
-        width: 364
-        height: 315
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 924
+        y: 774
+        width: 924
+        height: 772
+      alignment: 9
+      pivot: {x: 0.585, y: 0.035}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -344,12 +344,12 @@ TextureImporter:
       name: stomp_8
       rect:
         serializedVersion: 2
-        x: 1322
-        y: 465
-        width: 364
-        height: 315
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1848
+        y: 774
+        width: 924
+        height: 772
+      alignment: 9
+      pivot: {x: 0.585, y: 0.035}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -366,12 +366,12 @@ TextureImporter:
       name: stomp_9
       rect:
         serializedVersion: 2
-        x: 1888
-        y: 465
-        width: 334
-        height: 300
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 2772
+        y: 774
+        width: 924
+        height: 772
+      alignment: 9
+      pivot: {x: 0.585, y: 0.035}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -388,12 +388,12 @@ TextureImporter:
       name: stomp_10
       rect:
         serializedVersion: 2
-        x: 2454
-        y: 465
-        width: 334
-        height: 300
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 3696
+        y: 774
+        width: 924
+        height: 772
+      alignment: 9
+      pivot: {x: 0.585, y: 0.035}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -410,12 +410,12 @@ TextureImporter:
       name: stomp_11
       rect:
         serializedVersion: 2
-        x: 3020
-        y: 465
-        width: 334
-        height: 300
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 4620
+        y: 774
+        width: 924
+        height: 772
+      alignment: 9
+      pivot: {x: 0.585, y: 0.035}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -432,12 +432,12 @@ TextureImporter:
       name: stomp_12
       rect:
         serializedVersion: 2
-        x: 190
-        y: 0
-        width: 334
-        height: 299
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 0
+        y: 2
+        width: 924
+        height: 772
+      alignment: 9
+      pivot: {x: 0.585, y: 0.035}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -454,12 +454,12 @@ TextureImporter:
       name: stomp_13
       rect:
         serializedVersion: 2
-        x: 756
-        y: 0
-        width: 334
-        height: 299
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 924
+        y: 2
+        width: 924
+        height: 772
+      alignment: 9
+      pivot: {x: 0.585, y: 0.035}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -476,7 +476,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 32101be6646844972aaaeef9e3455595
     internalID: 0
     vertices: []
     indices: 
@@ -492,6 +492,10 @@ TextureImporter:
       stomp_11: 4766937238686265636
       stomp_12: -3121405008673157626
       stomp_13: 3142928608009760035
+      stomp_14: 272946254
+      stomp_15: -931671026
+      stomp_16: -374141303
+      stomp_17: -1647678254
       stomp_2: 7975145328682852433
       stomp_3: 794911652284644088
       stomp_4: -7391135777237537340

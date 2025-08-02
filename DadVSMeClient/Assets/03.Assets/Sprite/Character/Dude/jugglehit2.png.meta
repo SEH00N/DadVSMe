@@ -78,7 +78,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 200
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -99,7 +99,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 2048
+    maxTextureSize: 16384
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -157,11 +157,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 497
-        width: 306
-        height: 373
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        y: 831
+        width: 718
+        height: 831
+      alignment: 9
+      pivot: {x: 0.41, y: 0.015}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -178,12 +178,12 @@ TextureImporter:
       name: jugglehit2_1
       rect:
         serializedVersion: 2
-        x: 429
-        y: 497
-        width: 307
-        height: 373
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 718
+        y: 831
+        width: 718
+        height: 831
+      alignment: 9
+      pivot: {x: 0.41, y: 0.015}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -200,12 +200,12 @@ TextureImporter:
       name: jugglehit2_2
       rect:
         serializedVersion: 2
-        x: 929
-        y: 497
-        width: 362
-        height: 499
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1436
+        y: 831
+        width: 718
+        height: 831
+      alignment: 9
+      pivot: {x: 0.41, y: 0.015}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -222,12 +222,12 @@ TextureImporter:
       name: jugglehit2_3
       rect:
         serializedVersion: 2
-        x: 1359
-        y: 497
-        width: 362
-        height: 499
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 2154
+        y: 831
+        width: 718
+        height: 831
+      alignment: 9
+      pivot: {x: 0.41, y: 0.015}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -244,12 +244,12 @@ TextureImporter:
       name: jugglehit2_4
       rect:
         serializedVersion: 2
-        x: 1789
-        y: 497
-        width: 331
-        height: 494
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 2872
+        y: 831
+        width: 718
+        height: 831
+      alignment: 9
+      pivot: {x: 0.41, y: 0.015}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -266,12 +266,12 @@ TextureImporter:
       name: jugglehit2_5
       rect:
         serializedVersion: 2
-        x: 2219
-        y: 497
-        width: 331
-        height: 494
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 3590
+        y: 831
+        width: 718
+        height: 831
+      alignment: 9
+      pivot: {x: 0.41, y: 0.015}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -288,12 +288,12 @@ TextureImporter:
       name: jugglehit2_6
       rect:
         serializedVersion: 2
-        x: 69
+        x: 0
         y: 0
-        width: 331
-        height: 493
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 718
+        height: 831
+      alignment: 9
+      pivot: {x: 0.41, y: 0.015}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -310,12 +310,12 @@ TextureImporter:
       name: jugglehit2_7
       rect:
         serializedVersion: 2
-        x: 499
+        x: 718
         y: 0
-        width: 331
-        height: 493
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 718
+        height: 831
+      alignment: 9
+      pivot: {x: 0.41, y: 0.015}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -332,12 +332,12 @@ TextureImporter:
       name: jugglehit2_8
       rect:
         serializedVersion: 2
-        x: 929
+        x: 1436
         y: 0
-        width: 331
-        height: 493
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 718
+        height: 831
+      alignment: 9
+      pivot: {x: 0.41, y: 0.015}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -354,12 +354,12 @@ TextureImporter:
       name: jugglehit2_9
       rect:
         serializedVersion: 2
-        x: 1359
+        x: 2154
         y: 0
-        width: 331
-        height: 493
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 718
+        height: 831
+      alignment: 9
+      pivot: {x: 0.41, y: 0.015}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -376,7 +376,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 13e8db537e4fb4cac843a42da1320b2a
     internalID: 0
     vertices: []
     indices: 
@@ -388,6 +388,8 @@ TextureImporter:
     nameFileIdTable:
       jugglehit2_0: -2890317314130035807
       jugglehit2_1: -5839473894621908717
+      jugglehit2_10: 1080178010
+      jugglehit2_11: -1780181511
       jugglehit2_2: 4690409584049910977
       jugglehit2_3: -1965320732979576940
       jugglehit2_4: 6889492477813187813

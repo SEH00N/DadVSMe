@@ -71,6 +71,120 @@ TextureImporter:
   - first:
       213: -8916851437485144551
     second: knuckles_22
+  - first:
+      213: 948284932740293916
+    second: knuckles_23
+  - first:
+      213: -4947689087326413060
+    second: knuckles_24
+  - first:
+      213: -3753621515583940809
+    second: knuckles_25
+  - first:
+      213: 1808951106525823434
+    second: knuckles_26
+  - first:
+      213: -3004760332032033019
+    second: knuckles_27
+  - first:
+      213: -7543485503297798455
+    second: knuckles_28
+  - first:
+      213: -3493174044530621697
+    second: knuckles_29
+  - first:
+      213: -6550439877991842625
+    second: knuckles_30
+  - first:
+      213: 3248902246204459145
+    second: knuckles_31
+  - first:
+      213: 825716680529059849
+    second: knuckles_32
+  - first:
+      213: -2292689871882409708
+    second: knuckles_33
+  - first:
+      213: 446017303264608225
+    second: knuckles_34
+  - first:
+      213: -3421649585032084177
+    second: knuckles_35
+  - first:
+      213: 5378427970408658544
+    second: knuckles_36
+  - first:
+      213: 7131351368724872639
+    second: knuckles_37
+  - first:
+      213: 4746136128045142558
+    second: knuckles_38
+  - first:
+      213: 180063340589848762
+    second: knuckles_39
+  - first:
+      213: -5684389559427668632
+    second: knuckles_40
+  - first:
+      213: 8258395960123043110
+    second: knuckles_41
+  - first:
+      213: 4435071511660926372
+    second: knuckles_42
+  - first:
+      213: -2081449603155893906
+    second: knuckles_43
+  - first:
+      213: -5237218552580298761
+    second: knuckles_44
+  - first:
+      213: -2424003697907442307
+    second: knuckles_45
+  - first:
+      213: -930075732737002681
+    second: knuckles_46
+  - first:
+      213: 1489865139356753673
+    second: knuckles_47
+  - first:
+      213: 4127651053749896742
+    second: knuckles_48
+  - first:
+      213: -7629709537761793049
+    second: knuckles_49
+  - first:
+      213: 1907225557654457139
+    second: knuckles_50
+  - first:
+      213: -5018791474769358727
+    second: knuckles_51
+  - first:
+      213: 6110599756247713944
+    second: knuckles_52
+  - first:
+      213: 2281796430226153967
+    second: knuckles_53
+  - first:
+      213: -4605567402211772989
+    second: knuckles_54
+  - first:
+      213: -2436775089622857272
+    second: knuckles_55
+  - first:
+      213: -8301173253929728592
+    second: knuckles_56
+  - first:
+      213: -1566476882957736333
+    second: knuckles_57
+  - first:
+      213: -3720192345544507737
+    second: knuckles_58
+  - first:
+      213: 6498811532327706622
+    second: knuckles_59
+  - first:
+      213: -454868963793349805
+    second: knuckles_60
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -117,7 +231,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 200
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -138,7 +252,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 2048
+    maxTextureSize: 16384
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -195,12 +309,12 @@ TextureImporter:
       name: knuckles_0
       rect:
         serializedVersion: 2
-        x: 14
-        y: 1238
-        width: 260
-        height: 398
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 0
+        y: 6143
+        width: 595
+        height: 682
+      alignment: 9
+      pivot: {x: 0.385, y: 0.06}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -217,12 +331,12 @@ TextureImporter:
       name: knuckles_1
       rect:
         serializedVersion: 2
-        x: 371
-        y: 1238
-        width: 260
-        height: 398
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 595
+        y: 6143
+        width: 595
+        height: 682
+      alignment: 9
+      pivot: {x: 0.385, y: 0.06}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -239,12 +353,12 @@ TextureImporter:
       name: knuckles_2
       rect:
         serializedVersion: 2
-        x: 723
-        y: 1238
-        width: 310
-        height: 387
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1190
+        y: 6143
+        width: 595
+        height: 682
+      alignment: 9
+      pivot: {x: 0.385, y: 0.06}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -261,12 +375,12 @@ TextureImporter:
       name: knuckles_3
       rect:
         serializedVersion: 2
-        x: 1070
-        y: 1238
-        width: 310
-        height: 392
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1785
+        y: 6143
+        width: 595
+        height: 682
+      alignment: 9
+      pivot: {x: 0.385, y: 0.06}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -283,12 +397,12 @@ TextureImporter:
       name: knuckles_4
       rect:
         serializedVersion: 2
-        x: 1427
-        y: 1238
-        width: 310
-        height: 392
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 2380
+        y: 6143
+        width: 595
+        height: 682
+      alignment: 9
+      pivot: {x: 0.385, y: 0.06}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -305,12 +419,12 @@ TextureImporter:
       name: knuckles_5
       rect:
         serializedVersion: 2
-        x: 1807
-        y: 1238
-        width: 249
-        height: 370
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 2975
+        y: 6143
+        width: 595
+        height: 682
+      alignment: 9
+      pivot: {x: 0.385, y: 0.06}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -327,12 +441,12 @@ TextureImporter:
       name: knuckles_6
       rect:
         serializedVersion: 2
-        x: 22
-        y: 829
-        width: 263
-        height: 361
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 0
+        y: 5461
+        width: 595
+        height: 682
+      alignment: 9
+      pivot: {x: 0.385, y: 0.06}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -349,12 +463,12 @@ TextureImporter:
       name: knuckles_7
       rect:
         serializedVersion: 2
-        x: 379
-        y: 829
-        width: 254
-        height: 373
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 595
+        y: 5461
+        width: 595
+        height: 682
+      alignment: 9
+      pivot: {x: 0.385, y: 0.06}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -371,12 +485,12 @@ TextureImporter:
       name: knuckles_8
       rect:
         serializedVersion: 2
-        x: 736
-        y: 817
-        width: 313
-        height: 385
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1190
+        y: 5461
+        width: 595
+        height: 682
+      alignment: 9
+      pivot: {x: 0.385, y: 0.06}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -393,12 +507,12 @@ TextureImporter:
       name: knuckles_9
       rect:
         serializedVersion: 2
-        x: 1093
-        y: 829
-        width: 265
-        height: 373
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1785
+        y: 5461
+        width: 595
+        height: 682
+      alignment: 9
+      pivot: {x: 0.385, y: 0.06}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -415,12 +529,12 @@ TextureImporter:
       name: knuckles_10
       rect:
         serializedVersion: 2
-        x: 1372
-        y: 970
-        width: 26
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 2380
+        y: 5461
+        width: 595
+        height: 682
+      alignment: 9
+      pivot: {x: 0.385, y: 0.06}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -437,12 +551,12 @@ TextureImporter:
       name: knuckles_11
       rect:
         serializedVersion: 2
-        x: 1395
-        y: 961
-        width: 34
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 2975
+        y: 5461
+        width: 595
+        height: 682
+      alignment: 9
+      pivot: {x: 0.385, y: 0.06}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -459,12 +573,12 @@ TextureImporter:
       name: knuckles_12
       rect:
         serializedVersion: 2
-        x: 1450
-        y: 829
-        width: 258
-        height: 370
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 0
+        y: 4779
+        width: 595
+        height: 682
+      alignment: 9
+      pivot: {x: 0.385, y: 0.06}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -481,12 +595,12 @@ TextureImporter:
       name: knuckles_13
       rect:
         serializedVersion: 2
-        x: 1807
-        y: 829
-        width: 256
-        height: 373
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 595
+        y: 4779
+        width: 595
+        height: 682
+      alignment: 9
+      pivot: {x: 0.385, y: 0.06}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -503,12 +617,12 @@ TextureImporter:
       name: knuckles_14
       rect:
         serializedVersion: 2
-        x: 22
-        y: 420
-        width: 258
-        height: 370
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1190
+        y: 4779
+        width: 595
+        height: 682
+      alignment: 9
+      pivot: {x: 0.385, y: 0.06}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -525,12 +639,12 @@ TextureImporter:
       name: knuckles_15
       rect:
         serializedVersion: 2
-        x: 379
-        y: 420
-        width: 256
-        height: 373
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1785
+        y: 4779
+        width: 595
+        height: 682
+      alignment: 9
+      pivot: {x: 0.385, y: 0.06}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -547,12 +661,12 @@ TextureImporter:
       name: knuckles_16
       rect:
         serializedVersion: 2
-        x: 736
-        y: 420
-        width: 258
-        height: 370
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 2380
+        y: 4779
+        width: 595
+        height: 682
+      alignment: 9
+      pivot: {x: 0.385, y: 0.06}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -569,12 +683,12 @@ TextureImporter:
       name: knuckles_17
       rect:
         serializedVersion: 2
-        x: 1093
-        y: 420
-        width: 256
-        height: 373
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 2975
+        y: 4779
+        width: 595
+        height: 682
+      alignment: 9
+      pivot: {x: 0.385, y: 0.06}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -591,12 +705,12 @@ TextureImporter:
       name: knuckles_18
       rect:
         serializedVersion: 2
-        x: 1450
-        y: 420
-        width: 258
-        height: 370
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 0
+        y: 4097
+        width: 595
+        height: 682
+      alignment: 9
+      pivot: {x: 0.385, y: 0.06}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -613,12 +727,12 @@ TextureImporter:
       name: knuckles_19
       rect:
         serializedVersion: 2
-        x: 1807
-        y: 420
-        width: 258
-        height: 370
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 595
+        y: 4097
+        width: 595
+        height: 682
+      alignment: 9
+      pivot: {x: 0.385, y: 0.06}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -635,12 +749,12 @@ TextureImporter:
       name: knuckles_20
       rect:
         serializedVersion: 2
-        x: 22
-        y: 11
-        width: 268
-        height: 355
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1190
+        y: 4097
+        width: 595
+        height: 682
+      alignment: 9
+      pivot: {x: 0.385, y: 0.06}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -657,12 +771,12 @@ TextureImporter:
       name: knuckles_21
       rect:
         serializedVersion: 2
-        x: 379
-        y: 11
-        width: 268
-        height: 355
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1785
+        y: 4097
+        width: 595
+        height: 682
+      alignment: 9
+      pivot: {x: 0.385, y: 0.06}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -679,12 +793,12 @@ TextureImporter:
       name: knuckles_22
       rect:
         serializedVersion: 2
-        x: 728
-        y: 11
-        width: 260
-        height: 399
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 2380
+        y: 4097
+        width: 595
+        height: 682
+      alignment: 9
+      pivot: {x: 0.385, y: 0.06}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -697,11 +811,803 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: knuckles_23
+      rect:
+        serializedVersion: 2
+        x: 2975
+        y: 4097
+        width: 595
+        height: 682
+      alignment: 9
+      pivot: {x: 0.385, y: 0.06}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c1527d14f1cf82d00800000000000000
+      internalID: 948284932740293916
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: knuckles_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3415
+        width: 595
+        height: 682
+      alignment: 9
+      pivot: {x: 0.385, y: 0.06}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cfe15d23df6465bb0800000000000000
+      internalID: -4947689087326413060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: knuckles_25
+      rect:
+        serializedVersion: 2
+        x: 595
+        y: 3415
+        width: 595
+        height: 682
+      alignment: 9
+      pivot: {x: 0.385, y: 0.06}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7371b5e7e1578ebc0800000000000000
+      internalID: -3753621515583940809
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: knuckles_26
+      rect:
+        serializedVersion: 2
+        x: 1190
+        y: 3415
+        width: 595
+        height: 682
+      alignment: 9
+      pivot: {x: 0.385, y: 0.06}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ac18588727faa1910800000000000000
+      internalID: 1808951106525823434
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: knuckles_27
+      rect:
+        serializedVersion: 2
+        x: 1785
+        y: 3415
+        width: 595
+        height: 682
+      alignment: 9
+      pivot: {x: 0.385, y: 0.06}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 50fbb0ed562fc46d0800000000000000
+      internalID: -3004760332032033019
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: knuckles_28
+      rect:
+        serializedVersion: 2
+        x: 2380
+        y: 3415
+        width: 595
+        height: 682
+      alignment: 9
+      pivot: {x: 0.385, y: 0.06}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9ce30afd6e7205790800000000000000
+      internalID: -7543485503297798455
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: knuckles_29
+      rect:
+        serializedVersion: 2
+        x: 2975
+        y: 3415
+        width: 595
+        height: 682
+      alignment: 9
+      pivot: {x: 0.385, y: 0.06}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ff24321d6b0c58fc0800000000000000
+      internalID: -3493174044530621697
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: knuckles_30
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2733
+        width: 595
+        height: 682
+      alignment: 9
+      pivot: {x: 0.385, y: 0.06}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fbc3ebdf2a92815a0800000000000000
+      internalID: -6550439877991842625
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: knuckles_31
+      rect:
+        serializedVersion: 2
+        x: 595
+        y: 2733
+        width: 595
+        height: 682
+      alignment: 9
+      pivot: {x: 0.385, y: 0.06}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9884cf6216b661d20800000000000000
+      internalID: 3248902246204459145
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: knuckles_32
+      rect:
+        serializedVersion: 2
+        x: 1190
+        y: 2733
+        width: 595
+        height: 682
+      alignment: 9
+      pivot: {x: 0.385, y: 0.06}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 900ac0432f8857b00800000000000000
+      internalID: 825716680529059849
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: knuckles_33
+      rect:
+        serializedVersion: 2
+        x: 1785
+        y: 2733
+        width: 595
+        height: 682
+      alignment: 9
+      pivot: {x: 0.385, y: 0.06}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 419205e65babe20e0800000000000000
+      internalID: -2292689871882409708
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: knuckles_34
+      rect:
+        serializedVersion: 2
+        x: 2380
+        y: 2733
+        width: 595
+        height: 682
+      alignment: 9
+      pivot: {x: 0.385, y: 0.06}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1efb3cccf52903600800000000000000
+      internalID: 446017303264608225
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: knuckles_35
+      rect:
+        serializedVersion: 2
+        x: 2975
+        y: 2733
+        width: 595
+        height: 682
+      alignment: 9
+      pivot: {x: 0.385, y: 0.06}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f25cc42c4dbd380d0800000000000000
+      internalID: -3421649585032084177
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: knuckles_36
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2051
+        width: 595
+        height: 682
+      alignment: 9
+      pivot: {x: 0.385, y: 0.06}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 076bb323eb304aa40800000000000000
+      internalID: 5378427970408658544
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: knuckles_37
+      rect:
+        serializedVersion: 2
+        x: 595
+        y: 2051
+        width: 595
+        height: 682
+      alignment: 9
+      pivot: {x: 0.385, y: 0.06}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fbd775d4946a7f260800000000000000
+      internalID: 7131351368724872639
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: knuckles_38
+      rect:
+        serializedVersion: 2
+        x: 1190
+        y: 2051
+        width: 595
+        height: 682
+      alignment: 9
+      pivot: {x: 0.385, y: 0.06}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e1257cf89a9add140800000000000000
+      internalID: 4746136128045142558
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: knuckles_39
+      rect:
+        serializedVersion: 2
+        x: 1785
+        y: 2051
+        width: 595
+        height: 682
+      alignment: 9
+      pivot: {x: 0.385, y: 0.06}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ab89dec77a6bf7200800000000000000
+      internalID: 180063340589848762
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: knuckles_40
+      rect:
+        serializedVersion: 2
+        x: 2380
+        y: 2051
+        width: 595
+        height: 682
+      alignment: 9
+      pivot: {x: 0.385, y: 0.06}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 865ef5910ddfc11b0800000000000000
+      internalID: -5684389559427668632
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: knuckles_41
+      rect:
+        serializedVersion: 2
+        x: 2975
+        y: 2051
+        width: 595
+        height: 682
+      alignment: 9
+      pivot: {x: 0.385, y: 0.06}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 62da7a1fe57bb9270800000000000000
+      internalID: 8258395960123043110
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: knuckles_42
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1369
+        width: 595
+        height: 682
+      alignment: 9
+      pivot: {x: 0.385, y: 0.06}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4a51106ba0a8c8d30800000000000000
+      internalID: 4435071511660926372
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: knuckles_43
+      rect:
+        serializedVersion: 2
+        x: 595
+        y: 1369
+        width: 595
+        height: 682
+      alignment: 9
+      pivot: {x: 0.385, y: 0.06}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e61e30a2d943d13e0800000000000000
+      internalID: -2081449603155893906
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: knuckles_44
+      rect:
+        serializedVersion: 2
+        x: 1190
+        y: 1369
+        width: 595
+        height: 682
+      alignment: 9
+      pivot: {x: 0.385, y: 0.06}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7f7ad527979a157b0800000000000000
+      internalID: -5237218552580298761
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: knuckles_45
+      rect:
+        serializedVersion: 2
+        x: 1785
+        y: 1369
+        width: 595
+        height: 682
+      alignment: 9
+      pivot: {x: 0.385, y: 0.06}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d7d5efbca753c5ed0800000000000000
+      internalID: -2424003697907442307
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: knuckles_46
+      rect:
+        serializedVersion: 2
+        x: 2380
+        y: 1369
+        width: 595
+        height: 682
+      alignment: 9
+      pivot: {x: 0.385, y: 0.06}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 743ffff7c05b713f0800000000000000
+      internalID: -930075732737002681
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: knuckles_47
+      rect:
+        serializedVersion: 2
+        x: 2975
+        y: 1369
+        width: 595
+        height: 682
+      alignment: 9
+      pivot: {x: 0.385, y: 0.06}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 90fd89a53701da410800000000000000
+      internalID: 1489865139356753673
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: knuckles_48
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 687
+        width: 595
+        height: 682
+      alignment: 9
+      pivot: {x: 0.385, y: 0.06}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 626878f93cc584930800000000000000
+      internalID: 4127651053749896742
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: knuckles_49
+      rect:
+        serializedVersion: 2
+        x: 595
+        y: 687
+        width: 595
+        height: 682
+      alignment: 9
+      pivot: {x: 0.385, y: 0.06}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7eb6c4e6993dd1690800000000000000
+      internalID: -7629709537761793049
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: knuckles_50
+      rect:
+        serializedVersion: 2
+        x: 1190
+        y: 687
+        width: 595
+        height: 682
+      alignment: 9
+      pivot: {x: 0.385, y: 0.06}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 33b4a8e2a83d77a10800000000000000
+      internalID: 1907225557654457139
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: knuckles_51
+      rect:
+        serializedVersion: 2
+        x: 1785
+        y: 687
+        width: 595
+        height: 682
+      alignment: 9
+      pivot: {x: 0.385, y: 0.06}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9701d909ebba95ab0800000000000000
+      internalID: -5018791474769358727
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: knuckles_52
+      rect:
+        serializedVersion: 2
+        x: 2380
+        y: 687
+        width: 595
+        height: 682
+      alignment: 9
+      pivot: {x: 0.385, y: 0.06}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 898cbbb5a163dc450800000000000000
+      internalID: 6110599756247713944
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: knuckles_53
+      rect:
+        serializedVersion: 2
+        x: 2975
+        y: 687
+        width: 595
+        height: 682
+      alignment: 9
+      pivot: {x: 0.385, y: 0.06}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fe1626983c19aaf10800000000000000
+      internalID: 2281796430226153967
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: knuckles_54
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 5
+        width: 595
+        height: 682
+      alignment: 9
+      pivot: {x: 0.385, y: 0.06}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3c57c0a59dcb510c0800000000000000
+      internalID: -4605567402211772989
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: knuckles_55
+      rect:
+        serializedVersion: 2
+        x: 595
+        y: 5
+        width: 595
+        height: 682
+      alignment: 9
+      pivot: {x: 0.385, y: 0.06}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8c9428177f5de2ed0800000000000000
+      internalID: -2436775089622857272
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: knuckles_56
+      rect:
+        serializedVersion: 2
+        x: 1190
+        y: 5
+        width: 595
+        height: 682
+      alignment: 9
+      pivot: {x: 0.385, y: 0.06}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0b58b8438ee4ccc80800000000000000
+      internalID: -8301173253929728592
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: knuckles_57
+      rect:
+        serializedVersion: 2
+        x: 1785
+        y: 5
+        width: 595
+        height: 682
+      alignment: 9
+      pivot: {x: 0.385, y: 0.06}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 37661721391c24ae0800000000000000
+      internalID: -1566476882957736333
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: knuckles_58
+      rect:
+        serializedVersion: 2
+        x: 2380
+        y: 5
+        width: 595
+        height: 682
+      alignment: 9
+      pivot: {x: 0.385, y: 0.06}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7ae31bba5c83f5cc0800000000000000
+      internalID: -3720192345544507737
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: ae9de436e4e7d465faaf2d1eee086813
     internalID: 0
     vertices: []
     indices: 
@@ -727,9 +1633,45 @@ TextureImporter:
       knuckles_20: -5853672047940032846
       knuckles_21: 6654867284647745786
       knuckles_22: -8916851437485144551
+      knuckles_23: 948284932740293916
+      knuckles_24: -4947689087326413060
+      knuckles_25: -3753621515583940809
+      knuckles_26: 1808951106525823434
+      knuckles_27: -3004760332032033019
+      knuckles_28: -7543485503297798455
+      knuckles_29: -3493174044530621697
       knuckles_3: 8922857675731370178
+      knuckles_30: -6550439877991842625
+      knuckles_31: 3248902246204459145
+      knuckles_32: 825716680529059849
+      knuckles_33: -2292689871882409708
+      knuckles_34: 446017303264608225
+      knuckles_35: -3421649585032084177
+      knuckles_36: 5378427970408658544
+      knuckles_37: 7131351368724872639
+      knuckles_38: 4746136128045142558
+      knuckles_39: 180063340589848762
       knuckles_4: -2707782068859340895
+      knuckles_40: -5684389559427668632
+      knuckles_41: 8258395960123043110
+      knuckles_42: 4435071511660926372
+      knuckles_43: -2081449603155893906
+      knuckles_44: -5237218552580298761
+      knuckles_45: -2424003697907442307
+      knuckles_46: -930075732737002681
+      knuckles_47: 1489865139356753673
+      knuckles_48: 4127651053749896742
+      knuckles_49: -7629709537761793049
       knuckles_5: -3186231853798984509
+      knuckles_50: 1907225557654457139
+      knuckles_51: -5018791474769358727
+      knuckles_52: 6110599756247713944
+      knuckles_53: 2281796430226153967
+      knuckles_54: -4605567402211772989
+      knuckles_55: -2436775089622857272
+      knuckles_56: -8301173253929728592
+      knuckles_57: -1566476882957736333
+      knuckles_58: -3720192345544507737
       knuckles_6: 2014113425150893787
       knuckles_7: -8467431127760592448
       knuckles_8: 5089241134059529066

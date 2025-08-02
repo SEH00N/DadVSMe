@@ -93,7 +93,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 200
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -114,7 +114,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 2048
+    maxTextureSize: 16384
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -171,12 +171,12 @@ TextureImporter:
       name: throw2_0
       rect:
         serializedVersion: 2
-        x: 29
-        y: 981
-        width: 322
-        height: 390
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 0
+        y: 1640
+        width: 879
+        height: 819
+      alignment: 9
+      pivot: {x: 0.45, y: 0.015}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -193,12 +193,12 @@ TextureImporter:
       name: throw2_1
       rect:
         serializedVersion: 2
-        x: 136
-        y: 490
-        width: 384
-        height: 493
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 879
+        y: 1640
+        width: 879
+        height: 819
+      alignment: 9
+      pivot: {x: 0.45, y: 0.015}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -215,12 +215,12 @@ TextureImporter:
       name: throw2_2
       rect:
         serializedVersion: 2
-        x: 556
-        y: 981
-        width: 322
-        height: 390
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1758
+        y: 1640
+        width: 879
+        height: 819
+      alignment: 9
+      pivot: {x: 0.45, y: 0.015}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -237,12 +237,12 @@ TextureImporter:
       name: throw2_3
       rect:
         serializedVersion: 2
-        x: 663
-        y: 490
-        width: 326
-        height: 493
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 2637
+        y: 1640
+        width: 879
+        height: 819
+      alignment: 9
+      pivot: {x: 0.45, y: 0.015}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -259,12 +259,12 @@ TextureImporter:
       name: throw2_4
       rect:
         serializedVersion: 2
-        x: 1102
-        y: 981
-        width: 303
-        height: 390
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 3516
+        y: 1640
+        width: 879
+        height: 819
+      alignment: 9
+      pivot: {x: 0.45, y: 0.015}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -281,12 +281,12 @@ TextureImporter:
       name: throw2_5
       rect:
         serializedVersion: 2
-        x: 1190
-        y: 490
-        width: 326
-        height: 493
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 4395
+        y: 1640
+        width: 879
+        height: 819
+      alignment: 9
+      pivot: {x: 0.45, y: 0.015}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -303,12 +303,12 @@ TextureImporter:
       name: throw2_6
       rect:
         serializedVersion: 2
-        x: 1629
-        y: 981
-        width: 303
-        height: 390
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 0
+        y: 821
+        width: 879
+        height: 819
+      alignment: 9
+      pivot: {x: 0.45, y: 0.015}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -325,12 +325,12 @@ TextureImporter:
       name: throw2_7
       rect:
         serializedVersion: 2
-        x: 1717
-        y: 490
-        width: 326
-        height: 493
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 879
+        y: 821
+        width: 879
+        height: 819
+      alignment: 9
+      pivot: {x: 0.45, y: 0.015}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -347,12 +347,12 @@ TextureImporter:
       name: throw2_8
       rect:
         serializedVersion: 2
-        x: 2156
-        y: 981
-        width: 303
-        height: 390
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1758
+        y: 821
+        width: 879
+        height: 819
+      alignment: 9
+      pivot: {x: 0.45, y: 0.015}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -369,12 +369,12 @@ TextureImporter:
       name: throw2_9
       rect:
         serializedVersion: 2
-        x: 2244
-        y: 490
-        width: 326
-        height: 493
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 2637
+        y: 821
+        width: 879
+        height: 819
+      alignment: 9
+      pivot: {x: 0.45, y: 0.015}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -391,12 +391,12 @@ TextureImporter:
       name: throw2_10
       rect:
         serializedVersion: 2
-        x: 2771
-        y: 981
-        width: 384
-        height: 492
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 3516
+        y: 821
+        width: 879
+        height: 819
+      alignment: 9
+      pivot: {x: 0.45, y: 0.015}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -413,12 +413,12 @@ TextureImporter:
       name: throw2_11
       rect:
         serializedVersion: 2
-        x: 2771
-        y: 490
-        width: 326
-        height: 493
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 4395
+        y: 821
+        width: 879
+        height: 819
+      alignment: 9
+      pivot: {x: 0.45, y: 0.015}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -435,12 +435,12 @@ TextureImporter:
       name: throw2_12
       rect:
         serializedVersion: 2
-        x: 136
-        y: 0
-        width: 326
-        height: 492
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 0
+        y: 2
+        width: 879
+        height: 819
+      alignment: 9
+      pivot: {x: 0.45, y: 0.015}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -457,12 +457,12 @@ TextureImporter:
       name: throw2_13
       rect:
         serializedVersion: 2
-        x: 653
-        y: 0
-        width: 284
-        height: 401
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 879
+        y: 2
+        width: 879
+        height: 819
+      alignment: 9
+      pivot: {x: 0.45, y: 0.015}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -479,12 +479,12 @@ TextureImporter:
       name: throw2_14
       rect:
         serializedVersion: 2
-        x: 1180
-        y: 0
-        width: 284
-        height: 401
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1758
+        y: 2
+        width: 879
+        height: 819
+      alignment: 9
+      pivot: {x: 0.45, y: 0.015}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -501,7 +501,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: b38f86fae207241b6a5af3a47d8ea169
     internalID: 0
     vertices: []
     indices: 
@@ -518,6 +518,9 @@ TextureImporter:
       throw2_12: 8380476344970926223
       throw2_13: 958440509760681760
       throw2_14: 8388425453589113760
+      throw2_15: 906609181
+      throw2_16: 465382764
+      throw2_17: 1558420171
       throw2_2: 80089819330941285
       throw2_3: -7475792971237209658
       throw2_4: -6048169823331360289

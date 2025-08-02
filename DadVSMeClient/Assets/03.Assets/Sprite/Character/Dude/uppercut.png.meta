@@ -93,7 +93,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 200
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -114,7 +114,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 2048
+    maxTextureSize: 16384
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -171,12 +171,12 @@ TextureImporter:
       name: uppercut_0
       rect:
         serializedVersion: 2
-        x: 30
-        y: 997
-        width: 309
-        height: 381
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 0
+        y: 1666
+        width: 850
+        height: 832
+      alignment: 9
+      pivot: {x: 0.42, y: 0.015}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -193,12 +193,12 @@ TextureImporter:
       name: uppercut_1
       rect:
         serializedVersion: 2
-        x: 544
-        y: 997
-        width: 303
-        height: 381
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 850
+        y: 1666
+        width: 850
+        height: 832
+      alignment: 9
+      pivot: {x: 0.42, y: 0.015}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -215,12 +215,12 @@ TextureImporter:
       name: uppercut_2
       rect:
         serializedVersion: 2
-        x: 1109
-        y: 997
-        width: 380
-        height: 408
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1700
+        y: 1666
+        width: 850
+        height: 832
+      alignment: 9
+      pivot: {x: 0.42, y: 0.015}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -237,12 +237,12 @@ TextureImporter:
       name: uppercut_3
       rect:
         serializedVersion: 2
-        x: 1576
-        y: 997
-        width: 406
-        height: 500
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 2550
+        y: 1666
+        width: 850
+        height: 832
+      alignment: 9
+      pivot: {x: 0.42, y: 0.015}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -259,12 +259,12 @@ TextureImporter:
       name: uppercut_4
       rect:
         serializedVersion: 2
-        x: 2072
-        y: 997
-        width: 286
-        height: 441
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 3400
+        y: 1666
+        width: 850
+        height: 832
+      alignment: 9
+      pivot: {x: 0.42, y: 0.015}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -281,12 +281,12 @@ TextureImporter:
       name: uppercut_5
       rect:
         serializedVersion: 2
-        x: 2596
-        y: 997
-        width: 280
-        height: 447
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 4250
+        y: 1666
+        width: 850
+        height: 832
+      alignment: 9
+      pivot: {x: 0.42, y: 0.015}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -303,12 +303,12 @@ TextureImporter:
       name: uppercut_6
       rect:
         serializedVersion: 2
-        x: 40
-        y: 498
-        width: 280
-        height: 447
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 0
+        y: 834
+        width: 850
+        height: 832
+      alignment: 9
+      pivot: {x: 0.42, y: 0.015}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -325,12 +325,12 @@ TextureImporter:
       name: uppercut_7
       rect:
         serializedVersion: 2
-        x: 550
-        y: 498
-        width: 280
-        height: 447
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 850
+        y: 834
+        width: 850
+        height: 832
+      alignment: 9
+      pivot: {x: 0.42, y: 0.015}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -347,12 +347,12 @@ TextureImporter:
       name: uppercut_8
       rect:
         serializedVersion: 2
-        x: 1060
-        y: 498
-        width: 280
-        height: 447
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1700
+        y: 834
+        width: 850
+        height: 832
+      alignment: 9
+      pivot: {x: 0.42, y: 0.015}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -369,12 +369,12 @@ TextureImporter:
       name: uppercut_9
       rect:
         serializedVersion: 2
-        x: 1570
-        y: 498
-        width: 280
-        height: 447
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 2550
+        y: 834
+        width: 850
+        height: 832
+      alignment: 9
+      pivot: {x: 0.42, y: 0.015}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -391,12 +391,12 @@ TextureImporter:
       name: uppercut_10
       rect:
         serializedVersion: 2
-        x: 2080
-        y: 498
-        width: 280
-        height: 447
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 3400
+        y: 834
+        width: 850
+        height: 832
+      alignment: 9
+      pivot: {x: 0.42, y: 0.015}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -413,12 +413,12 @@ TextureImporter:
       name: uppercut_11
       rect:
         serializedVersion: 2
-        x: 2590
-        y: 498
-        width: 280
-        height: 447
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 4250
+        y: 834
+        width: 850
+        height: 832
+      alignment: 9
+      pivot: {x: 0.42, y: 0.015}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -435,12 +435,12 @@ TextureImporter:
       name: uppercut_12
       rect:
         serializedVersion: 2
-        x: 40
-        y: 0
-        width: 280
-        height: 446
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 0
+        y: 2
+        width: 850
+        height: 832
+      alignment: 9
+      pivot: {x: 0.42, y: 0.015}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -457,12 +457,12 @@ TextureImporter:
       name: uppercut_13
       rect:
         serializedVersion: 2
-        x: 550
-        y: 0
-        width: 280
-        height: 446
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 850
+        y: 2
+        width: 850
+        height: 832
+      alignment: 9
+      pivot: {x: 0.42, y: 0.015}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -479,12 +479,12 @@ TextureImporter:
       name: uppercut_14
       rect:
         serializedVersion: 2
-        x: 1060
-        y: 0
-        width: 280
-        height: 446
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1700
+        y: 2
+        width: 850
+        height: 832
+      alignment: 9
+      pivot: {x: 0.42, y: 0.015}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -501,7 +501,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: adf4a4ec6bcbf49c8a472ed9f0b9aa76
     internalID: 0
     vertices: []
     indices: 
@@ -518,6 +518,9 @@ TextureImporter:
       uppercut_12: 7941619588236057960
       uppercut_13: 2603593888829920765
       uppercut_14: -4027971287403064299
+      uppercut_15: -421459210
+      uppercut_16: -2135191660
+      uppercut_17: -1075816411
       uppercut_2: -384415484906886151
       uppercut_3: -7196614772504596566
       uppercut_4: -5620748930331980793

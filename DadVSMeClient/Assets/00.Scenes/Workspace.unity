@@ -131,7 +131,7 @@ GameObject:
   - component: {fileID: 15314726}
   - component: {fileID: 15314727}
   m_Layer: 0
-  m_Name: '[Tran] One'
+  m_Name: '[Tran] Punch1'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -254,7 +254,7 @@ GameObject:
   - component: {fileID: 39870625}
   - component: {fileID: 39870626}
   m_Layer: 0
-  m_Name: Move (Move)
+  m_Name: Move
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -324,6 +324,37 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2319a9f8134944ef945fe6cd1abc020, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &64099175
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 64099176}
+  m_Layer: 0
+  m_Name: Knuckles
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &64099176
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 64099175}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1036947302}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &92667473
 GameObject:
   m_ObjectHideFlags: 0
@@ -488,7 +519,7 @@ GameObject:
   - component: {fileID: 103797680}
   - component: {fileID: 103797681}
   m_Layer: 0
-  m_Name: '[Tran] HardAttack'
+  m_Name: '[Tran] DashPunch'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -550,7 +581,7 @@ GameObject:
   - component: {fileID: 135710283}
   - component: {fileID: 135710284}
   m_Layer: 0
-  m_Name: Straight (A-A-A)
+  m_Name: Punch1_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -631,7 +662,7 @@ GameObject:
   - component: {fileID: 153847124}
   - component: {fileID: 153847123}
   m_Layer: 0
-  m_Name: Idle (Default)
+  m_Name: Idle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -921,7 +952,7 @@ GameObject:
   - component: {fileID: 212175185}
   - component: {fileID: 212175187}
   m_Layer: 0
-  m_Name: BodySlam (Bump)
+  m_Name: Bump
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -998,7 +1029,7 @@ GameObject:
   - component: {fileID: 249035425}
   - component: {fileID: 249035424}
   m_Layer: 0
-  m_Name: '[Tran] Back-kick'
+  m_Name: '[Tran] JuggleHit1'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1073,7 +1104,7 @@ GameObject:
   - component: {fileID: 264927134}
   - component: {fileID: 264927133}
   m_Layer: 0
-  m_Name: '[Tran] Take-down'
+  m_Name: '[Tran] Takedown'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1208,7 +1239,7 @@ GameObject:
   - component: {fileID: 280328005}
   - component: {fileID: 280328006}
   m_Layer: 0
-  m_Name: '[Tran] Pounce'
+  m_Name: '[Tran] DashSlam'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1329,7 +1360,7 @@ GameObject:
   - component: {fileID: 320023981}
   - component: {fileID: 320023983}
   m_Layer: 0
-  m_Name: Throw-up (MoveUp+S)
+  m_Name: ThrowUp
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1424,7 +1455,7 @@ GameObject:
   - component: {fileID: 330641619}
   - component: {fileID: 330641620}
   m_Layer: 0
-  m_Name: Butt (A-A-A-A) (AttackSuccess)
+  m_Name: Punch1_4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1564,7 +1595,7 @@ GameObject:
   - component: {fileID: 338514465}
   - component: {fileID: 338514466}
   m_Layer: 0
-  m_Name: Cut-down (A-S-A)
+  m_Name: Knife2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1762,7 +1793,7 @@ GameObject:
   - component: {fileID: 392384569}
   - component: {fileID: 392384568}
   m_Layer: 0
-  m_Name: '[Tran] Elbow-and-Butt (Attack1)'
+  m_Name: '[Tran] GrabAttack'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1824,7 +1855,7 @@ GameObject:
   - component: {fileID: 406611751}
   - component: {fileID: 406611752}
   m_Layer: 0
-  m_Name: Toss-up (A-A-A-A-S-S)
+  m_Name: JuggleHit2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1890,6 +1921,37 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a4195b623faff4dec8cb7bbb50ad6d42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &443204374
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 443204375}
+  m_Layer: 0
+  m_Name: Flinch
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &443204375
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 443204374}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1036947302}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &469653301
 GameObject:
   m_ObjectHideFlags: 0
@@ -1903,7 +1965,7 @@ GameObject:
   - component: {fileID: 469653304}
   - component: {fileID: 469653305}
   m_Layer: 0
-  m_Name: '[Tran] Throw-forward (Left)'
+  m_Name: '[Tran] ThrowForward'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2262,7 +2324,7 @@ GameObject:
   - component: {fileID: 514870885}
   - component: {fileID: 514870887}
   m_Layer: 0
-  m_Name: Pounce (A)
+  m_Name: DashSlam
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2560,6 +2622,37 @@ Transform:
   - {fileID: 823141102}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &563111511
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 563111512}
+  m_Layer: 0
+  m_Name: Bounce
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &563111512
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 563111511}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1036947302}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &578497676
 GameObject:
   m_ObjectHideFlags: 0
@@ -2573,7 +2666,7 @@ GameObject:
   - component: {fileID: 578497680}
   - component: {fileID: 578497679}
   m_Layer: 0
-  m_Name: '[Tran] Cut-down'
+  m_Name: '[Tran] Knife2'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2732,7 +2825,7 @@ GameObject:
   - component: {fileID: 603748584}
   - component: {fileID: 603748583}
   m_Layer: 0
-  m_Name: '[Tran] Stab'
+  m_Name: '[Tran] Knife1'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3103,7 +3196,7 @@ GameObject:
   - component: {fileID: 713519588}
   - component: {fileID: 713519589}
   m_Layer: 0
-  m_Name: Take-down (S-S-S) (AttackSuccess)
+  m_Name: Takedown
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3262,7 +3355,7 @@ GameObject:
   - component: {fileID: 727599244}
   - component: {fileID: 727599243}
   m_Layer: 0
-  m_Name: '[Tran] Toss-back'
+  m_Name: '[Tran] JuggleHit3'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3487,7 +3580,7 @@ GameObject:
   - component: {fileID: 776236739}
   - component: {fileID: 776236737}
   m_Layer: 0
-  m_Name: '[Tran] Elbow-and-Butt (Attack2)'
+  m_Name: '[Tran] GrabAttack'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3549,7 +3642,7 @@ GameObject:
   - component: {fileID: 797496305}
   - component: {fileID: 797496306}
   m_Layer: 0
-  m_Name: Uppercut (A+S)
+  m_Name: Uppercut
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3673,7 +3766,7 @@ GameObject:
   - component: {fileID: 825396833}
   - component: {fileID: 825396832}
   m_Layer: 0
-  m_Name: '[Tran] Throw-forward (Right)'
+  m_Name: '[Tran] ThrowForward'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3739,6 +3832,37 @@ MonoBehaviour:
   directionX: 1
   checkVertical: 0
   directionY: 0
+--- !u!1 &881251877
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 881251878}
+  m_Layer: 0
+  m_Name: PowerUp
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &881251878
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 881251877}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1036947302}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &888682728
 GameObject:
   m_ObjectHideFlags: 0
@@ -3752,7 +3876,7 @@ GameObject:
   - component: {fileID: 888682731}
   - component: {fileID: 888682732}
   m_Layer: 0
-  m_Name: Stab (A-S)
+  m_Name: Knife1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3831,7 +3955,7 @@ GameObject:
   - component: {fileID: 915044774}
   - component: {fileID: 915044776}
   m_Layer: 0
-  m_Name: Stomp (A or S) (EnemyFainted)
+  m_Name: Stomp
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3895,6 +4019,37 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a4195b623faff4dec8cb7bbb50ad6d42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &927310541
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 927310542}
+  m_Layer: 0
+  m_Name: StandUp
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &927310542
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 927310541}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1036947302}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1003158492
 GameObject:
   m_ObjectHideFlags: 0
@@ -4079,6 +4234,13 @@ Transform:
   - {fileID: 1703087812}
   - {fileID: 797496303}
   - {fileID: 915044773}
+  - {fileID: 64099176}
+  - {fileID: 881251878}
+  - {fileID: 1135627182}
+  - {fileID: 443204375}
+  - {fileID: 563111512}
+  - {fileID: 927310542}
+  - {fileID: 2003091288}
   m_Father: {fileID: 489773008}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1095730796
@@ -4094,7 +4256,7 @@ GameObject:
   - component: {fileID: 1095730798}
   - component: {fileID: 1095730800}
   m_Layer: 0
-  m_Name: Windmill (S-Mashing)
+  m_Name: Crazy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4357,6 +4519,135 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1133351922}
   m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1135627181
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1135627182}
+  m_Layer: 0
+  m_Name: Hit
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1135627182
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1135627181}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1036947302}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1139412424
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1139412425}
+  - component: {fileID: 1139412427}
+  - component: {fileID: 1139412426}
+  - component: {fileID: 1139412428}
+  m_Layer: 5
+  m_Name: Image
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1139412425
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1139412424}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2007293165}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 1259, y: 1080}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1139412426
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1139412424}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 8757098914875501893, guid: 8f12160d677e6465f92d783292db4690, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1139412427
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1139412424}
+  m_CullTransparentMesh: 1
+--- !u!95 &1139412428
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1139412424}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 2575cd10cadeb4963ba5f717b2d7fa56, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1159470566
 GameObject:
   m_ObjectHideFlags: 0
@@ -4429,7 +4720,7 @@ GameObject:
   - component: {fileID: 1181309119}
   - component: {fileID: 1181309120}
   m_Layer: 0
-  m_Name: '[Tran] Throw-up (Up)'
+  m_Name: '[Tran] ThrowUp'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4629,7 +4920,7 @@ GameObject:
   - component: {fileID: 1274234449}
   - component: {fileID: 1274234448}
   m_Layer: 0
-  m_Name: '[Tran] Take-down'
+  m_Name: '[Tran] Takedown'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4704,7 +4995,7 @@ GameObject:
   - component: {fileID: 1274711954}
   - component: {fileID: 1274711955}
   m_Layer: 0
-  m_Name: Left-hook (S-S)
+  m_Name: Punch2_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4813,7 +5104,7 @@ GameObject:
   - component: {fileID: 1356316163}
   - component: {fileID: 1356316164}
   m_Layer: 0
-  m_Name: '[Tran] BodySlam'
+  m_Name: '[Tran] Bump'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4918,7 +5209,7 @@ GameObject:
   - component: {fileID: 1402475353}
   - component: {fileID: 1402475354}
   m_Layer: 0
-  m_Name: '[Tran] Windmill'
+  m_Name: '[Tran] Crazy'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4965,7 +5256,7 @@ GameObject:
   - component: {fileID: 1409554361}
   - component: {fileID: 1409554360}
   m_Layer: 0
-  m_Name: '[Tran] Left-hook'
+  m_Name: '[Tran] Punch2_2'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5040,7 +5331,7 @@ GameObject:
   - component: {fileID: 1423943141}
   - component: {fileID: 1423943142}
   m_Layer: 0
-  m_Name: Dash (Double Move)
+  m_Name: Dash
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5126,7 +5417,7 @@ GameObject:
   - component: {fileID: 1440341029}
   - component: {fileID: 1440341030}
   m_Layer: 0
-  m_Name: Toss-back(A-A-A-A-S-S-S)
+  m_Name: JuggleHit3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5203,7 +5494,7 @@ GameObject:
   - component: {fileID: 1443226757}
   - component: {fileID: 1443226758}
   m_Layer: 0
-  m_Name: '[Tran] Throw-down (Left)'
+  m_Name: '[Tran] ThrowDown'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5269,6 +5560,81 @@ MonoBehaviour:
   isReverse: 0
   attack1: 1
   attack2: 0
+--- !u!1 &1485304709
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1485304710}
+  - component: {fileID: 1485304712}
+  - component: {fileID: 1485304711}
+  m_Layer: 5
+  m_Name: Background
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1485304710
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1485304709}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2007293165}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1485304711
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1485304709}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1485304712
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1485304709}
+  m_CullTransparentMesh: 1
 --- !u!1 &1515234681
 GameObject:
   m_ObjectHideFlags: 0
@@ -5282,7 +5648,7 @@ GameObject:
   - component: {fileID: 1515234685}
   - component: {fileID: 1515234684}
   m_Layer: 0
-  m_Name: '[Tran] Take-down'
+  m_Name: '[Tran] Takedown'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5388,7 +5754,7 @@ GameObject:
   - component: {fileID: 1552804182}
   - component: {fileID: 1552804181}
   m_Layer: 0
-  m_Name: '[Tran] Butt'
+  m_Name: '[Tran] Punch1_4'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5463,7 +5829,7 @@ GameObject:
   - component: {fileID: 1572051998}
   - component: {fileID: 1572051999}
   m_Layer: 0
-  m_Name: Grab (Bump)
+  m_Name: Grab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5545,7 +5911,7 @@ GameObject:
   - component: {fileID: 1593139405}
   - component: {fileID: 1593139406}
   m_Layer: 0
-  m_Name: '[Tran] One'
+  m_Name: '[Tran] Punch1'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5607,7 +5973,7 @@ GameObject:
   - component: {fileID: 1598557931}
   - component: {fileID: 1598557930}
   m_Layer: 0
-  m_Name: '[Tran] Throw-down (Right)'
+  m_Name: '[Tran] ThrowDown'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5765,7 +6131,7 @@ GameObject:
   - component: {fileID: 1691017136}
   - component: {fileID: 1691017135}
   m_Layer: 0
-  m_Name: '[Tran] Two'
+  m_Name: '[Tran] Punch1_2'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5840,7 +6206,7 @@ GameObject:
   - component: {fileID: 1703087814}
   - component: {fileID: 1703087815}
   m_Layer: 0
-  m_Name: Right-hook (S)
+  m_Name: Punch2_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6070,7 +6436,7 @@ GameObject:
   - component: {fileID: 1719972125}
   - component: {fileID: 1719972124}
   m_Layer: 0
-  m_Name: '[Tran] Straight'
+  m_Name: '[Tran] Punch1_3'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6145,7 +6511,7 @@ GameObject:
   - component: {fileID: 1722541234}
   - component: {fileID: 1722541236}
   m_Layer: 0
-  m_Name: HardAttack (S)
+  m_Name: DashPunch
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6224,7 +6590,7 @@ GameObject:
   - component: {fileID: 1728019361}
   - component: {fileID: 1728019363}
   m_Layer: 0
-  m_Name: Back-kick (A-A-A-A-S)
+  m_Name: JuggleHit1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6333,7 +6699,7 @@ GameObject:
   - component: {fileID: 1757914664}
   - component: {fileID: 1757914663}
   m_Layer: 0
-  m_Name: '[Tran] Elbow-and-Butt (Attack2)'
+  m_Name: '[Tran] GrabAttack'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6394,7 +6760,7 @@ GameObject:
   - component: {fileID: 1769003121}
   - component: {fileID: 1769003122}
   m_Layer: 0
-  m_Name: Take-down (A-S-A-S)
+  m_Name: Takedown
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6459,7 +6825,7 @@ GameObject:
   - component: {fileID: 1791299002}
   - component: {fileID: 1791299003}
   m_Layer: 0
-  m_Name: GrabMove (Move)
+  m_Name: GrabMove
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6547,7 +6913,7 @@ GameObject:
   - component: {fileID: 1795918662}
   - component: {fileID: 1795918661}
   m_Layer: 0
-  m_Name: '[Tran] Toss-up'
+  m_Name: '[Tran] JuggleHit2'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6621,7 +6987,7 @@ GameObject:
   - component: {fileID: 1808365260}
   - component: {fileID: 1808365261}
   m_Layer: 0
-  m_Name: '[Tran] Right-hook'
+  m_Name: '[Tran] Punch2'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6748,8 +7114,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -9095717837082945937, guid: 207ee8102dd4143d288186ef0be518ee, type: 3}
-  m_Color: {r: 0.8396226, g: 0.5505073, b: 0.5505073, a: 1}
+  m_Sprite: {fileID: 2779023822413464520, guid: 424696ed6089d4ed19631422b4c26b77, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -6806,7 +7172,7 @@ GameObject:
   - component: {fileID: 1818776288}
   - component: {fileID: 1818776289}
   m_Layer: 0
-  m_Name: Throw-forward (MoveHorizontal+S)
+  m_Name: ThrowForward
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6901,7 +7267,7 @@ GameObject:
   - component: {fileID: 1851145035}
   - component: {fileID: 1851145036}
   m_Layer: 0
-  m_Name: One (A)
+  m_Name: Punch1_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7040,7 +7406,7 @@ GameObject:
   - component: {fileID: 1900690437}
   - component: {fileID: 1900690438}
   m_Layer: 0
-  m_Name: '[Tran] Right-hook'
+  m_Name: '[Tran] Punch2'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7298,7 +7664,7 @@ GameObject:
   - component: {fileID: 1944622380}
   - component: {fileID: 1944622381}
   m_Layer: 0
-  m_Name: Two (A-A)
+  m_Name: Punch1_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7380,7 +7746,7 @@ GameObject:
   - component: {fileID: 1985301685}
   - component: {fileID: 1985301684}
   m_Layer: 0
-  m_Name: Throw-down (MoveHorizontal+A)
+  m_Name: ThrowDown
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7474,6 +7840,140 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a4195b623faff4dec8cb7bbb50ad6d42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &2003091287
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2003091288}
+  m_Layer: 0
+  m_Name: Frenzied
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2003091288
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2003091287}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1036947302}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2007293161
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2007293165}
+  - component: {fileID: 2007293164}
+  - component: {fileID: 2007293163}
+  - component: {fileID: 2007293162}
+  m_Layer: 5
+  m_Name: Canvas
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!114 &2007293162
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2007293161}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IgnoreReversedGraphics: 1
+  m_BlockingObjects: 0
+  m_BlockingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+--- !u!114 &2007293163
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2007293161}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_UiScaleMode: 1
+  m_ReferencePixelsPerUnit: 100
+  m_ScaleFactor: 1
+  m_ReferenceResolution: {x: 1920, y: 1080}
+  m_ScreenMatchMode: 0
+  m_MatchWidthOrHeight: 0
+  m_PhysicalUnit: 3
+  m_FallbackScreenDPI: 96
+  m_DefaultSpriteDPI: 96
+  m_DynamicPixelsPerUnit: 1
+  m_PresetInfoIsWorld: 0
+--- !u!223 &2007293164
+Canvas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2007293161}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_RenderMode: 0
+  m_Camera: {fileID: 0}
+  m_PlaneDistance: 100
+  m_PixelPerfect: 0
+  m_ReceivesEvents: 1
+  m_OverrideSorting: 0
+  m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
+  m_VertexColorAlwaysGammaSpace: 0
+  m_AdditionalShaderChannelsFlag: 0
+  m_UpdateRectTransformForStandalone: 0
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+  m_TargetDisplay: 0
+--- !u!224 &2007293165
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2007293161}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0, y: 0, z: 0}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1485304710}
+  - {fileID: 1139412425}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0, y: 0}
 --- !u!1 &2035583069
 GameObject:
   m_ObjectHideFlags: 0
@@ -7566,7 +8066,7 @@ GameObject:
   - component: {fileID: 2063167340}
   - component: {fileID: 2063167341}
   m_Layer: 0
-  m_Name: '[Tran] Elbow-and-Butt (Attack1)'
+  m_Name: '[Tran] GrabAttack'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7628,7 +8128,7 @@ GameObject:
   - component: {fileID: 2080492214}
   - component: {fileID: 2080492215}
   m_Layer: 0
-  m_Name: Take-down (A-A-S) (AttackSuccess)
+  m_Name: Takedown
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7707,7 +8207,7 @@ GameObject:
   - component: {fileID: 2114823946}
   - component: {fileID: 2114823944}
   m_Layer: 0
-  m_Name: Elbow-and-Butt (A or S) (4-Limit)
+  m_Name: GrabAttack
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7856,3 +8356,4 @@ SceneRoots:
   - {fileID: 489773008}
   - {fileID: 1380209033}
   - {fileID: 1634831511}
+  - {fileID: 2007293165}

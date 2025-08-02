@@ -99,7 +99,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 200
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -120,7 +120,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 2048
+    maxTextureSize: 16384
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -177,12 +177,12 @@ TextureImporter:
       name: knife1_0
       rect:
         serializedVersion: 2
-        x: 14
-        y: 883
-        width: 306
-        height: 371
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 0
+        y: 1476
+        width: 960
+        height: 738
+      alignment: 9
+      pivot: {x: 0.31, y: 0.09}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -199,12 +199,12 @@ TextureImporter:
       name: knife1_1
       rect:
         serializedVersion: 2
-        x: 677
-        y: 883
-        width: 306
-        height: 371
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 960
+        y: 1476
+        width: 960
+        height: 738
+      alignment: 9
+      pivot: {x: 0.31, y: 0.09}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -221,12 +221,12 @@ TextureImporter:
       name: knife1_2
       rect:
         serializedVersion: 2
-        x: 1343
-        y: 883
-        width: 305
-        height: 383
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1920
+        y: 1476
+        width: 960
+        height: 738
+      alignment: 9
+      pivot: {x: 0.31, y: 0.09}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -243,12 +243,12 @@ TextureImporter:
       name: knife1_3
       rect:
         serializedVersion: 2
-        x: 2006
-        y: 883
-        width: 305
-        height: 383
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 2880
+        y: 1476
+        width: 960
+        height: 738
+      alignment: 9
+      pivot: {x: 0.31, y: 0.09}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -265,12 +265,12 @@ TextureImporter:
       name: knife1_4
       rect:
         serializedVersion: 2
-        x: 2689
-        y: 883
-        width: 281
-        height: 393
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 3840
+        y: 1476
+        width: 960
+        height: 738
+      alignment: 9
+      pivot: {x: 0.31, y: 0.09}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -287,12 +287,12 @@ TextureImporter:
       name: knife1_5
       rect:
         serializedVersion: 2
-        x: 3368
-        y: 883
-        width: 267
-        height: 393
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 4800
+        y: 1476
+        width: 960
+        height: 738
+      alignment: 9
+      pivot: {x: 0.31, y: 0.09}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -309,12 +309,12 @@ TextureImporter:
       name: knife1_6
       rect:
         serializedVersion: 2
-        x: 103
-        y: 441
-        width: 531
-        height: 408
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 0
+        y: 738
+        width: 960
+        height: 738
+      alignment: 9
+      pivot: {x: 0.31, y: 0.09}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -331,12 +331,12 @@ TextureImporter:
       name: knife1_7
       rect:
         serializedVersion: 2
-        x: 766
-        y: 441
-        width: 531
-        height: 408
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 960
+        y: 738
+        width: 960
+        height: 738
+      alignment: 9
+      pivot: {x: 0.31, y: 0.09}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -353,12 +353,12 @@ TextureImporter:
       name: knife1_8
       rect:
         serializedVersion: 2
-        x: 1429
-        y: 441
-        width: 506
-        height: 411
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1920
+        y: 738
+        width: 960
+        height: 738
+      alignment: 9
+      pivot: {x: 0.31, y: 0.09}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -375,12 +375,12 @@ TextureImporter:
       name: knife1_9
       rect:
         serializedVersion: 2
-        x: 2086
-        y: 441
-        width: 503
-        height: 411
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 2880
+        y: 738
+        width: 960
+        height: 738
+      alignment: 9
+      pivot: {x: 0.31, y: 0.09}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -397,12 +397,12 @@ TextureImporter:
       name: knife1_10
       rect:
         serializedVersion: 2
-        x: 2749
-        y: 441
-        width: 503
-        height: 411
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 3840
+        y: 738
+        width: 960
+        height: 738
+      alignment: 9
+      pivot: {x: 0.31, y: 0.09}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -419,12 +419,12 @@ TextureImporter:
       name: knife1_11
       rect:
         serializedVersion: 2
-        x: 3412
-        y: 441
-        width: 503
-        height: 411
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 4800
+        y: 738
+        width: 960
+        height: 738
+      alignment: 9
+      pivot: {x: 0.31, y: 0.09}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -441,12 +441,12 @@ TextureImporter:
       name: knife1_12
       rect:
         serializedVersion: 2
-        x: 97
+        x: 0
         y: 0
-        width: 503
-        height: 410
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 960
+        height: 738
+      alignment: 9
+      pivot: {x: 0.31, y: 0.09}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -463,12 +463,12 @@ TextureImporter:
       name: knife1_13
       rect:
         serializedVersion: 2
-        x: 760
+        x: 960
         y: 0
-        width: 503
-        height: 410
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 960
+        height: 738
+      alignment: 9
+      pivot: {x: 0.31, y: 0.09}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -485,12 +485,12 @@ TextureImporter:
       name: knife1_14
       rect:
         serializedVersion: 2
-        x: 1423
+        x: 1914
         y: 0
-        width: 503
-        height: 410
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 960
+        height: 738
+      alignment: 9
+      pivot: {x: 0.31, y: 0.09}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -507,12 +507,12 @@ TextureImporter:
       name: knife1_15
       rect:
         serializedVersion: 2
-        x: 2028
+        x: 2880
         y: 0
-        width: 304
-        height: 391
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 960
+        height: 738
+      alignment: 9
+      pivot: {x: 0.31, y: 0.09}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -529,12 +529,12 @@ TextureImporter:
       name: knife1_16
       rect:
         serializedVersion: 2
-        x: 2691
+        x: 3840
         y: 0
-        width: 304
-        height: 391
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 960
+        height: 738
+      alignment: 9
+      pivot: {x: 0.31, y: 0.09}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -551,7 +551,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: f03c8c829db5d417fbfb1e74eddc2088
     internalID: 0
     vertices: []
     indices: 

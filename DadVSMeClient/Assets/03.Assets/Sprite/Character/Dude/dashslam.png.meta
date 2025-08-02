@@ -114,7 +114,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 200
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -135,7 +135,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 2048
+    maxTextureSize: 16384
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -192,12 +192,12 @@ TextureImporter:
       name: dashslam_0
       rect:
         serializedVersion: 2
-        x: 19
-        y: 1736
-        width: 352
-        height: 334
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 0
+        y: 2691
+        width: 790
+        height: 897
+      alignment: 9
+      pivot: {x: 0.5, y: 0.015}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -214,12 +214,12 @@ TextureImporter:
       name: dashslam_1
       rect:
         serializedVersion: 2
-        x: 493
-        y: 1736
-        width: 352
-        height: 334
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 790
+        y: 2691
+        width: 790
+        height: 897
+      alignment: 9
+      pivot: {x: 0.5, y: 0.015}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -236,12 +236,12 @@ TextureImporter:
       name: dashslam_2
       rect:
         serializedVersion: 2
-        x: 967
-        y: 1736
-        width: 352
-        height: 334
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1580
+        y: 2691
+        width: 790
+        height: 897
+      alignment: 9
+      pivot: {x: 0.5, y: 0.015}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -258,12 +258,12 @@ TextureImporter:
       name: dashslam_3
       rect:
         serializedVersion: 2
-        x: 1421
-        y: 1817
-        width: 419
-        height: 335
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 2370
+        y: 2691
+        width: 790
+        height: 897
+      alignment: 9
+      pivot: {x: 0.5, y: 0.015}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -280,12 +280,12 @@ TextureImporter:
       name: dashslam_4
       rect:
         serializedVersion: 2
-        x: 1895
-        y: 1817
-        width: 419
-        height: 335
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 3160
+        y: 2691
+        width: 790
+        height: 897
+      alignment: 9
+      pivot: {x: 0.5, y: 0.015}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -302,12 +302,12 @@ TextureImporter:
       name: dashslam_5
       rect:
         serializedVersion: 2
-        x: 2369
-        y: 1808
-        width: 425
-        height: 324
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 3950
+        y: 2691
+        width: 790
+        height: 897
+      alignment: 9
+      pivot: {x: 0.5, y: 0.015}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -325,11 +325,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 1270
-        width: 424
-        height: 324
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        y: 1794
+        width: 790
+        height: 897
+      alignment: 9
+      pivot: {x: 0.5, y: 0.015}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -346,12 +346,12 @@ TextureImporter:
       name: dashslam_7
       rect:
         serializedVersion: 2
-        x: 473
-        y: 1270
-        width: 425
-        height: 324
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 790
+        y: 1794
+        width: 790
+        height: 897
+      alignment: 9
+      pivot: {x: 0.5, y: 0.015}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -368,12 +368,12 @@ TextureImporter:
       name: dashslam_8
       rect:
         serializedVersion: 2
-        x: 947
-        y: 1270
-        width: 425
-        height: 324
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1580
+        y: 1794
+        width: 790
+        height: 897
+      alignment: 9
+      pivot: {x: 0.5, y: 0.015}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -390,12 +390,12 @@ TextureImporter:
       name: dashslam_9
       rect:
         serializedVersion: 2
-        x: 1421
-        y: 1270
-        width: 425
-        height: 324
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 2370
+        y: 1794
+        width: 790
+        height: 897
+      alignment: 9
+      pivot: {x: 0.5, y: 0.015}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -412,12 +412,12 @@ TextureImporter:
       name: dashslam_10
       rect:
         serializedVersion: 2
-        x: 1899
-        y: 1227
-        width: 429
-        height: 355
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 3160
+        y: 1794
+        width: 790
+        height: 897
+      alignment: 9
+      pivot: {x: 0.5, y: 0.015}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -434,12 +434,12 @@ TextureImporter:
       name: dashslam_11
       rect:
         serializedVersion: 2
-        x: 2373
-        y: 1227
-        width: 429
-        height: 355
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 3950
+        y: 1794
+        width: 790
+        height: 897
+      alignment: 9
+      pivot: {x: 0.5, y: 0.015}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -456,12 +456,12 @@ TextureImporter:
       name: dashslam_12
       rect:
         serializedVersion: 2
-        x: 63
-        y: 537
-        width: 404
-        height: 285
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 0
+        y: 897
+        width: 790
+        height: 897
+      alignment: 9
+      pivot: {x: 0.5, y: 0.015}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -478,12 +478,12 @@ TextureImporter:
       name: dashslam_13
       rect:
         serializedVersion: 2
-        x: 537
-        y: 537
-        width: 404
-        height: 285
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 790
+        y: 897
+        width: 790
+        height: 897
+      alignment: 9
+      pivot: {x: 0.5, y: 0.015}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -500,12 +500,12 @@ TextureImporter:
       name: dashslam_14
       rect:
         serializedVersion: 2
-        x: 1013
-        y: 541
-        width: 366
-        height: 293
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1580
+        y: 897
+        width: 790
+        height: 897
+      alignment: 9
+      pivot: {x: 0.5, y: 0.015}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -522,12 +522,12 @@ TextureImporter:
       name: dashslam_15
       rect:
         serializedVersion: 2
-        x: 1487
-        y: 541
-        width: 366
-        height: 293
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 2370
+        y: 897
+        width: 790
+        height: 897
+      alignment: 9
+      pivot: {x: 0.5, y: 0.015}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -544,12 +544,12 @@ TextureImporter:
       name: dashslam_16
       rect:
         serializedVersion: 2
-        x: 1997
-        y: 541
-        width: 342
-        height: 263
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 3160
+        y: 897
+        width: 790
+        height: 897
+      alignment: 9
+      pivot: {x: 0.5, y: 0.015}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -566,12 +566,12 @@ TextureImporter:
       name: dashslam_17
       rect:
         serializedVersion: 2
-        x: 2471
-        y: 541
-        width: 342
-        height: 263
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 3950
+        y: 897
+        width: 790
+        height: 897
+      alignment: 9
+      pivot: {x: 0.5, y: 0.015}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -588,12 +588,12 @@ TextureImporter:
       name: dashslam_18
       rect:
         serializedVersion: 2
-        x: 101
-        y: 3
-        width: 342
-        height: 263
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 0
+        y: 0
+        width: 790
+        height: 897
+      alignment: 9
+      pivot: {x: 0.5, y: 0.015}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -610,12 +610,12 @@ TextureImporter:
       name: dashslam_19
       rect:
         serializedVersion: 2
-        x: 575
-        y: 3
-        width: 342
-        height: 263
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 790
+        y: 0
+        width: 790
+        height: 897
+      alignment: 9
+      pivot: {x: 0.5, y: 0.015}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -632,12 +632,12 @@ TextureImporter:
       name: dashslam_20
       rect:
         serializedVersion: 2
-        x: 1049
-        y: 3
-        width: 342
-        height: 263
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1580
+        y: 0
+        width: 790
+        height: 897
+      alignment: 9
+      pivot: {x: 0.5, y: 0.015}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -654,12 +654,12 @@ TextureImporter:
       name: dashslam_21
       rect:
         serializedVersion: 2
-        x: 1523
-        y: 3
-        width: 342
-        height: 263
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 2370
+        y: 0
+        width: 790
+        height: 897
+      alignment: 9
+      pivot: {x: 0.5, y: 0.015}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -676,7 +676,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 2c762ecdd05884bd0b07e689e164bc98
     internalID: 0
     vertices: []
     indices: 
@@ -701,6 +701,7 @@ TextureImporter:
       dashslam_2: -1890159645592305630
       dashslam_20: -5780977348091234498
       dashslam_21: 6419223485663146842
+      dashslam_22: 1375629461
       dashslam_3: -3122385594627578163
       dashslam_4: -895488908510786119
       dashslam_5: -6072765823217816004

@@ -29,93 +29,6 @@ TextureImporter:
   - first:
       213: 3528905364464389848
     second: frenzied_8
-  - first:
-      213: -7438786935696933795
-    second: frenzied_9
-  - first:
-      213: -8471821945947836957
-    second: frenzied_10
-  - first:
-      213: 4103416998143639800
-    second: frenzied_11
-  - first:
-      213: 6669441049152081791
-    second: frenzied_12
-  - first:
-      213: -8091114233889345599
-    second: frenzied_13
-  - first:
-      213: -59885783154550996
-    second: frenzied_14
-  - first:
-      213: 338225783173820134
-    second: frenzied_15
-  - first:
-      213: 5082380672700461109
-    second: frenzied_16
-  - first:
-      213: 2556412717814395238
-    second: frenzied_17
-  - first:
-      213: 401348147336826283
-    second: frenzied_18
-  - first:
-      213: -7545874502978719421
-    second: frenzied_19
-  - first:
-      213: 8520821593467923990
-    second: frenzied_20
-  - first:
-      213: 3440447995620890234
-    second: frenzied_21
-  - first:
-      213: -3291203948685957410
-    second: frenzied_22
-  - first:
-      213: -3160854922453447277
-    second: frenzied_23
-  - first:
-      213: -421970797622061447
-    second: frenzied_24
-  - first:
-      213: 2134872427364493190
-    second: frenzied_25
-  - first:
-      213: -3258632071737918976
-    second: frenzied_26
-  - first:
-      213: -3568793075969873464
-    second: frenzied_27
-  - first:
-      213: -3305859894429606280
-    second: frenzied_28
-  - first:
-      213: 1946296504382823650
-    second: frenzied_29
-  - first:
-      213: -8590871885679924848
-    second: frenzied_30
-  - first:
-      213: 7010911656605608497
-    second: frenzied_31
-  - first:
-      213: -7997755169691440487
-    second: frenzied_32
-  - first:
-      213: -5074980115967051791
-    second: frenzied_33
-  - first:
-      213: 2282019559014280133
-    second: frenzied_34
-  - first:
-      213: -1342374106490897593
-    second: frenzied_35
-  - first:
-      213: 4014890422647304329
-    second: frenzied_36
-  - first:
-      213: 5350035132585297788
-    second: frenzied_37
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -162,7 +75,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 200
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -183,7 +96,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 2048
+    maxTextureSize: 16384
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -240,12 +153,12 @@ TextureImporter:
       name: frenzied_0
       rect:
         serializedVersion: 2
-        x: 44
-        y: 4883
-        width: 321
-        height: 363
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 0
+        y: 603
+        width: 960
+        height: 603
+      alignment: 9
+      pivot: {x: 0.5, y: 0.015}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -262,12 +175,12 @@ TextureImporter:
       name: frenzied_1
       rect:
         serializedVersion: 2
-        x: 656
-        y: 4883
-        width: 321
-        height: 363
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 960
+        y: 603
+        width: 960
+        height: 603
+      alignment: 9
+      pivot: {x: 0.5, y: 0.015}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -284,12 +197,12 @@ TextureImporter:
       name: frenzied_2
       rect:
         serializedVersion: 2
-        x: 1268
-        y: 4883
-        width: 321
-        height: 363
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1920
+        y: 603
+        width: 960
+        height: 603
+      alignment: 9
+      pivot: {x: 0.5, y: 0.015}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -306,12 +219,12 @@ TextureImporter:
       name: frenzied_3
       rect:
         serializedVersion: 2
-        x: 1880
-        y: 4883
-        width: 321
-        height: 363
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 2880
+        y: 603
+        width: 960
+        height: 603
+      alignment: 9
+      pivot: {x: 0.5, y: 0.015}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -328,12 +241,12 @@ TextureImporter:
       name: frenzied_4
       rect:
         serializedVersion: 2
-        x: 2492
-        y: 4883
-        width: 321
-        height: 363
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 3840
+        y: 603
+        width: 960
+        height: 603
+      alignment: 9
+      pivot: {x: 0.5, y: 0.015}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -350,12 +263,12 @@ TextureImporter:
       name: frenzied_5
       rect:
         serializedVersion: 2
-        x: 3104
-        y: 4883
-        width: 321
-        height: 363
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 4800
+        y: 603
+        width: 960
+        height: 603
+      alignment: 9
+      pivot: {x: 0.5, y: 0.015}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -372,12 +285,12 @@ TextureImporter:
       name: frenzied_6
       rect:
         serializedVersion: 2
-        x: 44
-        y: 4069
-        width: 321
-        height: 363
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 0
+        y: 0
+        width: 960
+        height: 603
+      alignment: 9
+      pivot: {x: 0.5, y: 0.015}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -394,12 +307,12 @@ TextureImporter:
       name: frenzied_7
       rect:
         serializedVersion: 2
-        x: 656
-        y: 4069
-        width: 321
-        height: 363
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 960
+        y: 0
+        width: 960
+        height: 603
+      alignment: 9
+      pivot: {x: 0.5, y: 0.015}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -416,12 +329,12 @@ TextureImporter:
       name: frenzied_8
       rect:
         serializedVersion: 2
-        x: 1268
-        y: 4069
-        width: 321
-        height: 363
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1920
+        y: 0
+        width: 960
+        height: 603
+      alignment: 9
+      pivot: {x: 0.5, y: 0.015}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -434,649 +347,11 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
-    - serializedVersion: 2
-      name: frenzied_9
-      rect:
-        serializedVersion: 2
-        x: 1880
-        y: 4069
-        width: 321
-        height: 363
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: d5cb7f1c1be14c890800000000000000
-      internalID: -7438786935696933795
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: frenzied_10
-      rect:
-        serializedVersion: 2
-        x: 2554
-        y: 4097
-        width: 321
-        height: 363
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 3edab6763da0e6a80800000000000000
-      internalID: -8471821945947836957
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: frenzied_11
-      rect:
-        serializedVersion: 2
-        x: 3228
-        y: 4125
-        width: 321
-        height: 364
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 8f0c6abd40442f830800000000000000
-      internalID: 4103416998143639800
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: frenzied_12
-      rect:
-        serializedVersion: 2
-        x: 231
-        y: 3340
-        width: 320
-        height: 363
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: f7f4e194c4d9e8c50800000000000000
-      internalID: 6669441049152081791
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: frenzied_13
-      rect:
-        serializedVersion: 2
-        x: 905
-        y: 3368
-        width: 320
-        height: 364
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 1cf2beb097696bf80800000000000000
-      internalID: -8091114233889345599
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: frenzied_14
-      rect:
-        serializedVersion: 2
-        x: 1427
-        y: 3362
-        width: 321
-        height: 364
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: c271aff823e3b2ff0800000000000000
-      internalID: -59885783154550996
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: frenzied_15
-      rect:
-        serializedVersion: 2
-        x: 1971
-        y: 3383
-        width: 321
-        height: 364
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 6ee24fbce8e91b400800000000000000
-      internalID: 338225783173820134
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: frenzied_16
-      rect:
-        serializedVersion: 2
-        x: 2515
-        y: 3404
-        width: 321
-        height: 364
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 5303f915b4e388640800000000000000
-      internalID: 5082380672700461109
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: frenzied_17
-      rect:
-        serializedVersion: 2
-        x: 3059
-        y: 3425
-        width: 321
-        height: 364
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 6613e9882d33a7320800000000000000
-      internalID: 2556412717814395238
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: frenzied_18
-      rect:
-        serializedVersion: 2
-        x: 59
-        y: 2620
-        width: 321
-        height: 364
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: badc5497300e19500800000000000000
-      internalID: 401348147336826283
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: frenzied_19
-      rect:
-        serializedVersion: 2
-        x: 744
-        y: 2644
-        width: 321
-        height: 364
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 341b64a8e1ba74790800000000000000
-      internalID: -7545874502978719421
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: frenzied_20
-      rect:
-        serializedVersion: 2
-        x: 1429
-        y: 2668
-        width: 321
-        height: 364
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 61e2221181a004670800000000000000
-      internalID: 8520821593467923990
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: frenzied_21
-      rect:
-        serializedVersion: 2
-        x: 2114
-        y: 2692
-        width: 321
-        height: 364
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: a761037493deebf20800000000000000
-      internalID: 3440447995620890234
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: frenzied_22
-      rect:
-        serializedVersion: 2
-        x: 2663
-        y: 2692
-        width: 321
-        height: 364
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: ed6e53b327b4352d0800000000000000
-      internalID: -3291203948685957410
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: frenzied_23
-      rect:
-        serializedVersion: 2
-        x: 3214
-        y: 2711
-        width: 321
-        height: 364
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 39d0e98e1336224d0800000000000000
-      internalID: -3160854922453447277
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: frenzied_24
-      rect:
-        serializedVersion: 2
-        x: 93
-        y: 1916
-        width: 321
-        height: 364
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 97616269bcbd42af0800000000000000
-      internalID: -421970797622061447
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: frenzied_25
-      rect:
-        serializedVersion: 2
-        x: 644
-        y: 1935
-        width: 321
-        height: 364
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 68726d1692790ad10800000000000000
-      internalID: 2134872427364493190
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: frenzied_26
-      rect:
-        serializedVersion: 2
-        x: 1316
-        y: 1935
-        width: 321
-        height: 364
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 00abd5e456307c2d0800000000000000
-      internalID: -3258632071737918976
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: frenzied_27
-      rect:
-        serializedVersion: 2
-        x: 1988
-        y: 1958
-        width: 320
-        height: 364
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 8c921fd0b99197ec0800000000000000
-      internalID: -3568793075969873464
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: frenzied_28
-      rect:
-        serializedVersion: 2
-        x: 2660
-        y: 1981
-        width: 321
-        height: 364
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 87e1053f0f93f12d0800000000000000
-      internalID: -3305859894429606280
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: frenzied_29
-      rect:
-        serializedVersion: 2
-        x: 3332
-        y: 2004
-        width: 321
-        height: 364
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 2ec925bdb52a20b10800000000000000
-      internalID: 1946296504382823650
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: frenzied_30
-      rect:
-        serializedVersion: 2
-        x: 212
-        y: 1190
-        width: 321
-        height: 364
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 099682f498717c880800000000000000
-      internalID: -8590871885679924848
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: frenzied_31
-      rect:
-        serializedVersion: 2
-        x: 769
-        y: 1204
-        width: 321
-        height: 364
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 13a6f9b9103cb4160800000000000000
-      internalID: 7010911656605608497
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: frenzied_32
-      rect:
-        serializedVersion: 2
-        x: 1326
-        y: 1218
-        width: 321
-        height: 364
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 99a6ffd0c04420190800000000000000
-      internalID: -7997755169691440487
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: frenzied_33
-      rect:
-        serializedVersion: 2
-        x: 1883
-        y: 1232
-        width: 321
-        height: 364
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 1f7fc91197c0299b0800000000000000
-      internalID: -5074980115967051791
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: frenzied_34
-      rect:
-        serializedVersion: 2
-        x: 2555
-        y: 1232
-        width: 321
-        height: 364
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 5cb2a81c2bc5baf10800000000000000
-      internalID: 2282019559014280133
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: frenzied_35
-      rect:
-        serializedVersion: 2
-        x: 3218
-        y: 1243
-        width: 320
-        height: 364
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 74b7de2ccddee5de0800000000000000
-      internalID: -1342374106490897593
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: frenzied_36
-      rect:
-        serializedVersion: 2
-        x: 209
-        y: 440
-        width: 321
-        height: 364
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 980b20e4191c7b730800000000000000
-      internalID: 4014890422647304329
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: frenzied_37
-      rect:
-        serializedVersion: 2
-        x: 872
-        y: 451
-        width: 321
-        height: 364
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: c774b9d7b942f3a40800000000000000
-      internalID: 5350035132585297788
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     outline: []
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: f82596b8c5e8f4d2a928b2a2f327f0d0
     internalID: 0
     vertices: []
     indices: 
@@ -1088,42 +363,13 @@ TextureImporter:
     nameFileIdTable:
       frenzied_0: -4972477275440431570
       frenzied_1: -8343929982737422636
-      frenzied_10: -8471821945947836957
-      frenzied_11: 4103416998143639800
-      frenzied_12: 6669441049152081791
-      frenzied_13: -8091114233889345599
-      frenzied_14: -59885783154550996
-      frenzied_15: 338225783173820134
-      frenzied_16: 5082380672700461109
-      frenzied_17: 2556412717814395238
-      frenzied_18: 401348147336826283
-      frenzied_19: -7545874502978719421
       frenzied_2: 8672507674605432446
-      frenzied_20: 8520821593467923990
-      frenzied_21: 3440447995620890234
-      frenzied_22: -3291203948685957410
-      frenzied_23: -3160854922453447277
-      frenzied_24: -421970797622061447
-      frenzied_25: 2134872427364493190
-      frenzied_26: -3258632071737918976
-      frenzied_27: -3568793075969873464
-      frenzied_28: -3305859894429606280
-      frenzied_29: 1946296504382823650
       frenzied_3: 1316789811139797208
-      frenzied_30: -8590871885679924848
-      frenzied_31: 7010911656605608497
-      frenzied_32: -7997755169691440487
-      frenzied_33: -5074980115967051791
-      frenzied_34: 2282019559014280133
-      frenzied_35: -1342374106490897593
-      frenzied_36: 4014890422647304329
-      frenzied_37: 5350035132585297788
       frenzied_4: -4261341998537013964
       frenzied_5: 5986246079205718875
       frenzied_6: 262986641736270002
       frenzied_7: 5748029228493188118
       frenzied_8: 3528905364464389848
-      frenzied_9: -7438786935696933795
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
