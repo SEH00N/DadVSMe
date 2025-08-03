@@ -7,6 +7,7 @@ namespace DadVSMe.Players
     {
         [SerializeField] FSMBrain fsmBrain = null;
         [SerializeField] PlayerEnemyDetector enemyDetector = null;
+        [SerializeField] PlayerAnimator playerAnimator = null;
 
         // Debug
         private void Start()
@@ -16,9 +17,11 @@ namespace DadVSMe.Players
 
         public void Initialize()
         {
+            playerAnimator.Initialize();
+            enemyDetector.Initialize();
+
             fsmBrain.Initialize();
             fsmBrain.SetAsDefaultState();
-            enemyDetector.Initialize();
         }
 
         #if UNITY_EDITOR
