@@ -8,6 +8,7 @@ namespace DadVSMe.Players
         [SerializeField] FSMBrain fsmBrain = null;
         [SerializeField] PlayerEnemyDetector enemyDetector = null;
         [SerializeField] PlayerAnimator playerAnimator = null;
+        [SerializeField] EntityMovement entityMovement = null;
 
         // Debug
         private void Start()
@@ -22,6 +23,17 @@ namespace DadVSMe.Players
 
             fsmBrain.Initialize();
             fsmBrain.SetAsDefaultState();
+        }
+
+        private void LateUpdate()
+        {
+            if(entityMovement == null)
+                return;
+
+            if(entityMovement.IsActive == false)
+                return;
+
+            playerAnimator.SetRotation(entityMovement.MovementVelocity.x > 0);
         }
 
         #if UNITY_EDITOR

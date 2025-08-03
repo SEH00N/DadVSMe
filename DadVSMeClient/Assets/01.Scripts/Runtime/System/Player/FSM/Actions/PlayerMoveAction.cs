@@ -19,7 +19,7 @@ namespace DadVSMe.Players.FSM
         public override void EnterState()
         {
             base.EnterState();
-            entityMovement.SetMovementVelocity(Vector2.zero);
+            entityMovement.SetActive(true);
         }
 
         public override void UpdateState()
@@ -39,7 +39,7 @@ namespace DadVSMe.Players.FSM
         public override void ExitState()
         {
             base.ExitState();
-            entityMovement.SetMovementVelocity(Vector2.zero);
+            entityMovement.SetActive(false);
         }
     }
 }

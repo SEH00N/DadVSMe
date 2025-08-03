@@ -31,6 +31,15 @@ namespace DadVSMe.Players
             animator.Play(hash);
         }
 
+        public void SetRotation(bool isRight)
+        {
+            float targetAngle = isRight ? 0 : 180;
+            if(transform.eulerAngles.y == targetAngle)
+                return;
+
+            transform.rotation = Quaternion.Euler(0, targetAngle, 0);
+        }
+
         public void AddAnimationEventListener(EPlayerAnimationEventType eventType, Action<PlayerAnimationEventData> action) => animationEventListener.AddEventListener(eventType, action);
         public void RemoveAnimationEventListener(EPlayerAnimationEventType eventType, Action<PlayerAnimationEventData> action) => animationEventListener.RemoveEventListener(eventType, action);
     }
