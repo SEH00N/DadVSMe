@@ -296,7 +296,19 @@ MonoBehaviour:
   autoTransitioning: 1
   onStateEnterEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 489773019}
+        m_TargetAssemblyTypeName: DadVSMe.Players.PlayerAnimator, DadVSMe
+        m_MethodName: PlayAnimation
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Move
+          m_BoolArgument: 0
+        m_CallState: 2
   onStateExitEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -333,6 +345,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 64099176}
+  - component: {fileID: 64099178}
+  - component: {fileID: 64099177}
   m_Layer: 0
   m_Name: Knuckles
   m_TagString: Untagged
@@ -355,6 +369,49 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1036947302}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &64099177
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 64099175}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3515528adf73f471f8009033ff01c22f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  autoTransitioning: 1
+  onStateEnterEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 489773019}
+        m_TargetAssemblyTypeName: DadVSMe.Players.PlayerAnimator, DadVSMe
+        m_MethodName: PlayAnimation
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Knuckles
+          m_BoolArgument: 0
+        m_CallState: 2
+  onStateExitEvent:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &64099178
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 64099175}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72988976fd79843c3ab3a8ff64c3f74f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &92667473
 GameObject:
   m_ObjectHideFlags: 0
@@ -619,7 +676,19 @@ MonoBehaviour:
   autoTransitioning: 1
   onStateEnterEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 489773019}
+        m_TargetAssemblyTypeName: DadVSMe.Players.PlayerAnimator, DadVSMe
+        m_MethodName: PlayAnimation
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Punch1_3
+          m_BoolArgument: 0
+        m_CallState: 2
   onStateExitEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -705,7 +774,19 @@ MonoBehaviour:
   autoTransitioning: 1
   onStateEnterEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 489773019}
+        m_TargetAssemblyTypeName: DadVSMe.Players.PlayerAnimator, DadVSMe
+        m_MethodName: PlayAnimation
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Idle
+          m_BoolArgument: 0
+        m_CallState: 2
   onStateExitEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -1408,7 +1489,19 @@ MonoBehaviour:
   autoTransitioning: 1
   onStateEnterEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 489773019}
+        m_TargetAssemblyTypeName: DadVSMe.Players.PlayerAnimator, DadVSMe
+        m_MethodName: PlayAnimation
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: ThrowUp
+          m_BoolArgument: 0
+        m_CallState: 2
   onStateExitEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -1424,24 +1517,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ed5b33c6d0df4b1a898f62ac300b33a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  onAnimationStartEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  onAnimationEndEvent:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 489773017}
-        m_TargetAssemblyTypeName: H00N.AI.FSM.FSMBrain, H00N.AI.FSM
-        m_MethodName: SetAsDefaultState
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+  animationEventDatas:
+  - eventType: 2
+    event:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 489773017}
+          m_TargetAssemblyTypeName: H00N.AI.FSM.FSMBrain, H00N.AI.FSM
+          m_MethodName: SetAsDefaultState
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &330641616
 GameObject:
   m_ObjectHideFlags: 0
@@ -1493,7 +1585,19 @@ MonoBehaviour:
   autoTransitioning: 1
   onStateEnterEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 489773019}
+        m_TargetAssemblyTypeName: DadVSMe.Players.PlayerAnimator, DadVSMe
+        m_MethodName: PlayAnimation
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Punch1_4
+          m_BoolArgument: 0
+        m_CallState: 2
   onStateExitEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -1633,7 +1737,19 @@ MonoBehaviour:
   autoTransitioning: 1
   onStateEnterEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 489773019}
+        m_TargetAssemblyTypeName: DadVSMe.Players.PlayerAnimator, DadVSMe
+        m_MethodName: PlayAnimation
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Knife2
+          m_BoolArgument: 0
+        m_CallState: 2
   onStateExitEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -1893,7 +2009,19 @@ MonoBehaviour:
   autoTransitioning: 1
   onStateEnterEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 489773019}
+        m_TargetAssemblyTypeName: DadVSMe.Players.PlayerAnimator, DadVSMe
+        m_MethodName: PlayAnimation
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: JuggleHit2
+          m_BoolArgument: 0
+        m_CallState: 2
   onStateExitEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -1930,6 +2058,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 443204375}
+  - component: {fileID: 443204377}
+  - component: {fileID: 443204376}
   m_Layer: 0
   m_Name: Flinch
   m_TagString: Untagged
@@ -1952,6 +2082,49 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1036947302}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &443204376
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 443204374}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3515528adf73f471f8009033ff01c22f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  autoTransitioning: 1
+  onStateEnterEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 489773019}
+        m_TargetAssemblyTypeName: DadVSMe.Players.PlayerAnimator, DadVSMe
+        m_MethodName: PlayAnimation
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Flinch
+          m_BoolArgument: 0
+        m_CallState: 2
+  onStateExitEvent:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &443204377
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 443204374}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72988976fd79843c3ab3a8ff64c3f74f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &469653301
 GameObject:
   m_ObjectHideFlags: 0
@@ -2265,8 +2438,8 @@ MonoBehaviour:
         grabPosition: {fileID: 2135480757}
         grabbedEntity: {fileID: 0}
         enemies: []
-        moveSpeed: 5
-        dashSpeed: 15
+        moveSpeed: 10
+        dashSpeed: 30
         isComboReading: 0
         isComboFailed: 0
         grabAttackCount: 0
@@ -2360,7 +2533,19 @@ MonoBehaviour:
   autoTransitioning: 1
   onStateEnterEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 489773019}
+        m_TargetAssemblyTypeName: DadVSMe.Players.PlayerAnimator, DadVSMe
+        m_MethodName: PlayAnimation
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: DashSlam
+          m_BoolArgument: 0
+        m_CallState: 2
   onStateExitEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -2631,6 +2816,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 563111512}
+  - component: {fileID: 563111514}
+  - component: {fileID: 563111513}
   m_Layer: 0
   m_Name: Bounce
   m_TagString: Untagged
@@ -2653,6 +2840,37 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1036947302}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &563111513
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 563111511}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3515528adf73f471f8009033ff01c22f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  autoTransitioning: 1
+  onStateEnterEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  onStateExitEvent:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &563111514
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 563111511}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72988976fd79843c3ab3a8ff64c3f74f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &578497676
 GameObject:
   m_ObjectHideFlags: 0
@@ -3232,7 +3450,19 @@ MonoBehaviour:
   autoTransitioning: 1
   onStateEnterEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 489773019}
+        m_TargetAssemblyTypeName: DadVSMe.Players.PlayerAnimator, DadVSMe
+        m_MethodName: PlayAnimation
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Takedown
+          m_BoolArgument: 0
+        m_CallState: 2
   onStateExitEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -3678,7 +3908,19 @@ MonoBehaviour:
   autoTransitioning: 1
   onStateEnterEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 489773019}
+        m_TargetAssemblyTypeName: DadVSMe.Players.PlayerAnimator, DadVSMe
+        m_MethodName: PlayAnimation
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Uppercut
+          m_BoolArgument: 0
+        m_CallState: 2
   onStateExitEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -3841,6 +4083,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 881251878}
+  - component: {fileID: 881251880}
+  - component: {fileID: 881251879}
   m_Layer: 0
   m_Name: PowerUp
   m_TagString: Untagged
@@ -3863,6 +4107,49 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1036947302}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &881251879
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 881251877}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3515528adf73f471f8009033ff01c22f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  autoTransitioning: 1
+  onStateEnterEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 489773019}
+        m_TargetAssemblyTypeName: DadVSMe.Players.PlayerAnimator, DadVSMe
+        m_MethodName: PlayAnimation
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: PowerUp
+          m_BoolArgument: 0
+        m_CallState: 2
+  onStateExitEvent:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &881251880
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 881251877}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72988976fd79843c3ab3a8ff64c3f74f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &888682728
 GameObject:
   m_ObjectHideFlags: 0
@@ -3914,7 +4201,19 @@ MonoBehaviour:
   autoTransitioning: 1
   onStateEnterEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 489773019}
+        m_TargetAssemblyTypeName: DadVSMe.Players.PlayerAnimator, DadVSMe
+        m_MethodName: PlayAnimation
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Knife1
+          m_BoolArgument: 0
+        m_CallState: 2
   onStateExitEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -4003,7 +4302,19 @@ MonoBehaviour:
   autoTransitioning: 1
   onStateEnterEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 489773019}
+        m_TargetAssemblyTypeName: DadVSMe.Players.PlayerAnimator, DadVSMe
+        m_MethodName: PlayAnimation
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Stomp
+          m_BoolArgument: 0
+        m_CallState: 2
   onStateExitEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -4028,6 +4339,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 927310542}
+  - component: {fileID: 927310544}
+  - component: {fileID: 927310543}
   m_Layer: 0
   m_Name: StandUp
   m_TagString: Untagged
@@ -4050,6 +4363,49 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1036947302}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &927310543
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 927310541}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3515528adf73f471f8009033ff01c22f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  autoTransitioning: 1
+  onStateEnterEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 489773019}
+        m_TargetAssemblyTypeName: DadVSMe.Players.PlayerAnimator, DadVSMe
+        m_MethodName: PlayAnimation
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: StandUp
+          m_BoolArgument: 0
+        m_CallState: 2
+  onStateExitEvent:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &927310544
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 927310541}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72988976fd79843c3ab3a8ff64c3f74f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1003158492
 GameObject:
   m_ObjectHideFlags: 0
@@ -4292,7 +4648,19 @@ MonoBehaviour:
   autoTransitioning: 1
   onStateEnterEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 489773019}
+        m_TargetAssemblyTypeName: DadVSMe.Players.PlayerAnimator, DadVSMe
+        m_MethodName: PlayAnimation
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: CrazyStart
+          m_BoolArgument: 0
+        m_CallState: 2
   onStateExitEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -4528,6 +4896,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1135627182}
+  - component: {fileID: 1135627184}
+  - component: {fileID: 1135627183}
   m_Layer: 0
   m_Name: Hit
   m_TagString: Untagged
@@ -4550,6 +4920,49 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1036947302}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1135627183
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1135627181}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3515528adf73f471f8009033ff01c22f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  autoTransitioning: 1
+  onStateEnterEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 489773019}
+        m_TargetAssemblyTypeName: DadVSMe.Players.PlayerAnimator, DadVSMe
+        m_MethodName: PlayAnimation
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Hit
+          m_BoolArgument: 0
+        m_CallState: 2
+  onStateExitEvent:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &1135627184
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1135627181}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72988976fd79843c3ab3a8ff64c3f74f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1139412424
 GameObject:
   m_ObjectHideFlags: 0
@@ -5033,7 +5446,19 @@ MonoBehaviour:
   autoTransitioning: 1
   onStateEnterEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 489773019}
+        m_TargetAssemblyTypeName: DadVSMe.Players.PlayerAnimator, DadVSMe
+        m_MethodName: PlayAnimation
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Punch2_2
+          m_BoolArgument: 0
+        m_CallState: 2
   onStateExitEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -5376,7 +5801,19 @@ MonoBehaviour:
   autoTransitioning: 1
   onStateEnterEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 489773019}
+        m_TargetAssemblyTypeName: DadVSMe.Players.PlayerAnimator, DadVSMe
+        m_MethodName: PlayAnimation
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Dash
+          m_BoolArgument: 0
+        m_CallState: 2
   onStateExitEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -5416,6 +5853,7 @@ GameObject:
   - component: {fileID: 1440341028}
   - component: {fileID: 1440341029}
   - component: {fileID: 1440341030}
+  - component: {fileID: 1440341031}
   m_Layer: 0
   m_Name: JuggleHit3
   m_TagString: Untagged
@@ -5453,7 +5891,19 @@ MonoBehaviour:
   autoTransitioning: 1
   onStateEnterEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 489773019}
+        m_TargetAssemblyTypeName: DadVSMe.Players.PlayerAnimator, DadVSMe
+        m_MethodName: PlayAnimation
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: JuggleHit3
+          m_BoolArgument: 0
+        m_CallState: 2
   onStateExitEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -5481,6 +5931,35 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a4195b623faff4dec8cb7bbb50ad6d42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1440341031
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1440341026}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ed5b33c6d0df4b1a898f62ac300b33a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animationEventDatas:
+  - eventType: 2
+    event:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 489773017}
+          m_TargetAssemblyTypeName: H00N.AI.FSM.FSMBrain, H00N.AI.FSM
+          m_MethodName: SetAsDefaultState
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: Knuckles
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &1443226754
 GameObject:
   m_ObjectHideFlags: 0
@@ -5871,7 +6350,19 @@ MonoBehaviour:
   autoTransitioning: 1
   onStateEnterEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 489773019}
+        m_TargetAssemblyTypeName: DadVSMe.Players.PlayerAnimator, DadVSMe
+        m_MethodName: PlayAnimation
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Grab
+          m_BoolArgument: 0
+        m_CallState: 2
   onStateExitEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -6244,7 +6735,19 @@ MonoBehaviour:
   autoTransitioning: 1
   onStateEnterEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 489773019}
+        m_TargetAssemblyTypeName: DadVSMe.Players.PlayerAnimator, DadVSMe
+        m_MethodName: PlayAnimation
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Punch2_1
+          m_BoolArgument: 0
+        m_CallState: 2
   onStateExitEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -6549,7 +7052,19 @@ MonoBehaviour:
   autoTransitioning: 1
   onStateEnterEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 489773019}
+        m_TargetAssemblyTypeName: DadVSMe.Players.PlayerAnimator, DadVSMe
+        m_MethodName: PlayAnimation
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: DashPunch
+          m_BoolArgument: 0
+        m_CallState: 2
   onStateExitEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -6628,7 +7143,19 @@ MonoBehaviour:
   autoTransitioning: 1
   onStateEnterEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 489773019}
+        m_TargetAssemblyTypeName: DadVSMe.Players.PlayerAnimator, DadVSMe
+        m_MethodName: PlayAnimation
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: JuggleHit1
+          m_BoolArgument: 0
+        m_CallState: 2
   onStateExitEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -6759,6 +7286,7 @@ GameObject:
   - component: {fileID: 1769003120}
   - component: {fileID: 1769003121}
   - component: {fileID: 1769003122}
+  - component: {fileID: 1769003123}
   m_Layer: 0
   m_Name: Takedown
   m_TagString: Untagged
@@ -6796,7 +7324,19 @@ MonoBehaviour:
   autoTransitioning: 1
   onStateEnterEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 489773019}
+        m_TargetAssemblyTypeName: DadVSMe.Players.PlayerAnimator, DadVSMe
+        m_MethodName: PlayAnimation
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Takedown
+          m_BoolArgument: 0
+        m_CallState: 2
   onStateExitEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -6812,6 +7352,35 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 72988976fd79843c3ab3a8ff64c3f74f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1769003123
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1769003119}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ed5b33c6d0df4b1a898f62ac300b33a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animationEventDatas:
+  - eventType: 2
+    event:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 489773017}
+          m_TargetAssemblyTypeName: H00N.AI.FSM.FSMBrain, H00N.AI.FSM
+          m_MethodName: SetAsDefaultState
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: Knuckles
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &1791298999
 GameObject:
   m_ObjectHideFlags: 0
@@ -6872,7 +7441,19 @@ MonoBehaviour:
   autoTransitioning: 1
   onStateEnterEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 489773019}
+        m_TargetAssemblyTypeName: DadVSMe.Players.PlayerAnimator, DadVSMe
+        m_MethodName: PlayAnimation
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: GrabMove
+          m_BoolArgument: 0
+        m_CallState: 2
   onStateExitEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -7208,7 +7789,19 @@ MonoBehaviour:
   autoTransitioning: 1
   onStateEnterEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 489773019}
+        m_TargetAssemblyTypeName: DadVSMe.Players.PlayerAnimator, DadVSMe
+        m_MethodName: PlayAnimation
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: ThrowForward
+          m_BoolArgument: 0
+        m_CallState: 2
   onStateExitEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -7236,24 +7829,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ed5b33c6d0df4b1a898f62ac300b33a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  onAnimationStartEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  onAnimationEndEvent:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 489773017}
-        m_TargetAssemblyTypeName: H00N.AI.FSM.FSMBrain, H00N.AI.FSM
-        m_MethodName: SetAsDefaultState
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+  animationEventDatas:
+  - eventType: 2
+    event:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 489773017}
+          m_TargetAssemblyTypeName: H00N.AI.FSM.FSMBrain, H00N.AI.FSM
+          m_MethodName: SetAsDefaultState
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &1851145032
 GameObject:
   m_ObjectHideFlags: 0
@@ -7307,7 +7899,19 @@ MonoBehaviour:
   autoTransitioning: 1
   onStateEnterEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 489773019}
+        m_TargetAssemblyTypeName: DadVSMe.Players.PlayerAnimator, DadVSMe
+        m_MethodName: PlayAnimation
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Punch1_1
+          m_BoolArgument: 0
+        m_CallState: 2
   onStateExitEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -7704,7 +8308,19 @@ MonoBehaviour:
   autoTransitioning: 1
   onStateEnterEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 489773019}
+        m_TargetAssemblyTypeName: DadVSMe.Players.PlayerAnimator, DadVSMe
+        m_MethodName: PlayAnimation
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Punch1_2
+          m_BoolArgument: 0
+        m_CallState: 2
   onStateExitEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -7782,7 +8398,19 @@ MonoBehaviour:
   autoTransitioning: 1
   onStateEnterEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 489773019}
+        m_TargetAssemblyTypeName: DadVSMe.Players.PlayerAnimator, DadVSMe
+        m_MethodName: PlayAnimation
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: ThrowDown
+          m_BoolArgument: 0
+        m_CallState: 2
   onStateExitEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -7810,24 +8438,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ed5b33c6d0df4b1a898f62ac300b33a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  onAnimationStartEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  onAnimationEndEvent:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 489773017}
-        m_TargetAssemblyTypeName: H00N.AI.FSM.FSMBrain, H00N.AI.FSM
-        m_MethodName: SetAsDefaultState
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+  animationEventDatas:
+  - eventType: 2
+    event:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 489773017}
+          m_TargetAssemblyTypeName: H00N.AI.FSM.FSMBrain, H00N.AI.FSM
+          m_MethodName: SetAsDefaultState
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!114 &1985301685
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7849,6 +8476,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2003091288}
+  - component: {fileID: 2003091290}
+  - component: {fileID: 2003091289}
   m_Layer: 0
   m_Name: Frenzied
   m_TagString: Untagged
@@ -7871,6 +8500,49 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1036947302}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2003091289
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2003091287}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3515528adf73f471f8009033ff01c22f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  autoTransitioning: 1
+  onStateEnterEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 489773019}
+        m_TargetAssemblyTypeName: DadVSMe.Players.PlayerAnimator, DadVSMe
+        m_MethodName: PlayAnimation
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Frenzied
+          m_BoolArgument: 0
+        m_CallState: 2
+  onStateExitEvent:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &2003091290
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2003091287}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72988976fd79843c3ab3a8ff64c3f74f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2007293161
 GameObject:
   m_ObjectHideFlags: 0
@@ -8164,7 +8836,19 @@ MonoBehaviour:
   autoTransitioning: 1
   onStateEnterEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 489773019}
+        m_TargetAssemblyTypeName: DadVSMe.Players.PlayerAnimator, DadVSMe
+        m_MethodName: PlayAnimation
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Takedown
+          m_BoolArgument: 0
+        m_CallState: 2
   onStateExitEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -8255,7 +8939,19 @@ MonoBehaviour:
   autoTransitioning: 1
   onStateEnterEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 489773019}
+        m_TargetAssemblyTypeName: DadVSMe.Players.PlayerAnimator, DadVSMe
+        m_MethodName: PlayAnimation
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: GrabAttack1
+          m_BoolArgument: 0
+        m_CallState: 2
   onStateExitEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -8271,24 +8967,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ed5b33c6d0df4b1a898f62ac300b33a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  onAnimationStartEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  onAnimationEndEvent:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 489773017}
-        m_TargetAssemblyTypeName: H00N.AI.FSM.FSMBrain, H00N.AI.FSM
-        m_MethodName: ChangeState
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 1791299001}
-          m_ObjectArgumentAssemblyTypeName: H00N.AI.FSM.FSMState, H00N.AI.FSM
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+  animationEventDatas:
+  - eventType: 2
+    event:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 489773017}
+          m_TargetAssemblyTypeName: H00N.AI.FSM.FSMBrain, H00N.AI.FSM
+          m_MethodName: ChangeState
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 1572051997}
+            m_ObjectArgumentAssemblyTypeName: H00N.AI.FSM.FSMState, H00N.AI.FSM
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!114 &2114823945
 MonoBehaviour:
   m_ObjectHideFlags: 0

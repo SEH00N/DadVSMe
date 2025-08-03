@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using DadVSMe.Players.Animations;
 using H00N.AI.FSM;
 using UnityEngine;
@@ -7,8 +8,15 @@ namespace DadVSMe.Players.FSM
 {
     public class AnimationAction : FSMAction
     {
-        [SerializeField] UnityEvent onAnimationStartEvent = null;
-        [SerializeField] UnityEvent onAnimationEndEvent = null;
+        [System.Serializable]
+        private struct AnimationEventData
+        {
+            public EPlayerAnimationEventType eventType;
+            public UnityEvent @event;
+        }
+
+        [SerializeField] AnimationEventData[] animationEventDatas = null;
+        [SerializeField] Dictionary<EPlayerAnimationEventType, UnityEvent> animationEventDictionary = new Dictionary<EPlayerAnimationEventType, UnityEvent>();
 
         private PlayerAnimator playerAnimator = null;
 
@@ -16,35 +24,33 @@ namespace DadVSMe.Players.FSM
         {
             base.Init(brain, state);
             playerAnimator = brain.GetComponent<PlayerAnimator>();
+
+            foreach(AnimationEventData animationEventData in animationEventDatas)
+                animationEventDictionary[animationEventData.eventType] = animationEventData.@event;
         }
 
         public override void EnterState()
         {
             base.EnterState();
 
-            playerAnimator.RemoveAnimationEventListener(EPlayerAnimationEventType.Start, HandleAnimationStartEvent);
-            playerAnimator.AddAnimationEventListener(EPlayerAnimationEventType.Start, HandleAnimationStartEvent);
-
-            playerAnimator.RemoveAnimationEventListener(EPlayerAnimationEventType.End, HandleAnimationEndEvent);
-            playerAnimator.AddAnimationEventListener(EPlayerAnimationEventType.End, HandleAnimationEndEvent);
+            foreach(EPlayerAnimationEventType eventType in animationEventDictionary.Keys)
+                playerAnimator.AddAnimationEventListener(eventType, HandleAnimationEvent);
         }
 
         public override void ExitState()
         {
             base.ExitState();
 
-            playerAnimator.RemoveAnimationEventListener(EPlayerAnimationEventType.Start, HandleAnimationStartEvent);
-            playerAnimator.RemoveAnimationEventListener(EPlayerAnimationEventType.End, HandleAnimationEndEvent);
+            foreach(EPlayerAnimationEventType eventType in animationEventDictionary.Keys)
+                playerAnimator.RemoveAnimationEventListener(eventType, HandleAnimationEvent);
         }
 
-        private void HandleAnimationStartEvent(PlayerAnimationEventData eventData)
+        private void HandleAnimationEvent(PlayerAnimationEventData eventData)
         {
-            onAnimationStartEvent?.Invoke();
-        }
+            if(animationEventDictionary.TryGetValue(eventData.eventType, out UnityEvent @event) == false)
+                return;
 
-        private void HandleAnimationEndEvent(PlayerAnimationEventData eventData)
-        {
-            onAnimationEndEvent?.Invoke();
+            @event.Invoke();
         }
     }
 }

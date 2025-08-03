@@ -10,7 +10,7 @@ namespace DadVSMe.Players
         [SerializeField] Animator animator = null;
         [SerializeField] PlayerAnimationEventListener animationEventListener = null;
 
-        private const string DEFAULT_ANIMATION_NAME = "idle";
+        private const string DEFAULT_ANIMATION_NAME = "Idle";
         private Dictionary<string, int> animationHashTable = new Dictionary<string, int>();
 
         public void Initialize()
