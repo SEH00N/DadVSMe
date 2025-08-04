@@ -18,15 +18,11 @@ namespace DadVSMe
                 return;
 
             this.isActive = isActive;
-
-            // if(isActive == false)
-            // {
-                if(movementVelocity != Vector2.zero)
-                {
-                    movementVelocity = Vector2.zero;
-                    entityRigidbody.linearVelocity = Vector2.zero;
-                }
-            // }
+            if(movementVelocity != Vector2.zero)
+            {
+                movementVelocity = Vector2.zero;
+                entityRigidbody.linearVelocity = Vector2.zero;
+            }
         }
 
         public Vector2 GetMovementVelocity()
