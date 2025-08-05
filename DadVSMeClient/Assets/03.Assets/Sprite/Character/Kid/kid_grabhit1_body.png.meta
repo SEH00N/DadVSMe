@@ -1,0 +1,533 @@
+fileFormatVersion: 2
+guid: 8c098d7a58da74f7bb780abdf9fb8e94
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -2013961792506054117
+    second: kid_grabhit1_body_0
+  - first:
+      213: 2938654959262116485
+    second: kid_grabhit1_body_1
+  - first:
+      213: -3469945468348028396
+    second: kid_grabhit1_body_2
+  - first:
+      213: -730875475505468981
+    second: kid_grabhit1_body_3
+  - first:
+      213: -6814639325153369076
+    second: kid_grabhit1_body_4
+  - first:
+      213: 5250151284650680811
+    second: kid_grabhit1_body_5
+  - first:
+      213: -5188288980882781123
+    second: kid_grabhit1_body_6
+  - first:
+      213: -808258268931255203
+    second: kid_grabhit1_body_7
+  - first:
+      213: -1419850141356516073
+    second: kid_grabhit1_body_8
+  - first:
+      213: 2839929404662441413
+    second: kid_grabhit1_body_9
+  - first:
+      213: -5471039842486785537
+    second: kid_grabhit1_body_10
+  - first:
+      213: 6434760611024652853
+    second: kid_grabhit1_body_11
+  - first:
+      213: 8940572595012603432
+    second: kid_grabhit1_body_12
+  - first:
+      213: -7354952768504440815
+    second: kid_grabhit1_body_13
+  - first:
+      213: -3606444394885559864
+    second: kid_grabhit1_body_14
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 200
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 16384
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: iOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: kid_grabhit1_body_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1266
+        width: 530
+        height: 633
+      alignment: 9
+      pivot: {x: 0.275, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b1ab77e8b68fc04e0800000000000000
+      internalID: -2013961792506054117
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kid_grabhit1_body_1
+      rect:
+        serializedVersion: 2
+        x: 530
+        y: 1266
+        width: 530
+        height: 633
+      alignment: 9
+      pivot: {x: 0.275, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 58a2244ad1338c820800000000000000
+      internalID: 2938654959262116485
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kid_grabhit1_body_2
+      rect:
+        serializedVersion: 2
+        x: 1060
+        y: 1266
+        width: 530
+        height: 633
+      alignment: 9
+      pivot: {x: 0.275, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 41aa3292bf648dfc0800000000000000
+      internalID: -3469945468348028396
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kid_grabhit1_body_3
+      rect:
+        serializedVersion: 2
+        x: 1590
+        y: 1266
+        width: 530
+        height: 633
+      alignment: 9
+      pivot: {x: 0.275, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bc9a37b90a86bd5f0800000000000000
+      internalID: -730875475505468981
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kid_grabhit1_body_4
+      rect:
+        serializedVersion: 2
+        x: 2120
+        y: 1266
+        width: 530
+        height: 633
+      alignment: 9
+      pivot: {x: 0.275, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c0463d7a3a98d61a0800000000000000
+      internalID: -6814639325153369076
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kid_grabhit1_body_5
+      rect:
+        serializedVersion: 2
+        x: 2650
+        y: 1266
+        width: 530
+        height: 633
+      alignment: 9
+      pivot: {x: 0.275, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: be12aa2e6c84cd840800000000000000
+      internalID: 5250151284650680811
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kid_grabhit1_body_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 633
+        width: 530
+        height: 633
+      alignment: 9
+      pivot: {x: 0.275, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d3c886e19ae7ff7b0800000000000000
+      internalID: -5188288980882781123
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kid_grabhit1_body_7
+      rect:
+        serializedVersion: 2
+        x: 530
+        y: 633
+        width: 530
+        height: 633
+      alignment: 9
+      pivot: {x: 0.275, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d549491036d78c4f0800000000000000
+      internalID: -808258268931255203
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kid_grabhit1_body_8
+      rect:
+        serializedVersion: 2
+        x: 1060
+        y: 633
+        width: 530
+        height: 633
+      alignment: 9
+      pivot: {x: 0.275, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 71d1822b1ddab4ce0800000000000000
+      internalID: -1419850141356516073
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kid_grabhit1_body_9
+      rect:
+        serializedVersion: 2
+        x: 1590
+        y: 633
+        width: 530
+        height: 633
+      alignment: 9
+      pivot: {x: 0.275, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5c567183fb4796720800000000000000
+      internalID: 2839929404662441413
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kid_grabhit1_body_10
+      rect:
+        serializedVersion: 2
+        x: 2120
+        y: 633
+        width: 530
+        height: 633
+      alignment: 9
+      pivot: {x: 0.275, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ff9e0940046f214b0800000000000000
+      internalID: -5471039842486785537
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kid_grabhit1_body_11
+      rect:
+        serializedVersion: 2
+        x: 2650
+        y: 633
+        width: 530
+        height: 633
+      alignment: 9
+      pivot: {x: 0.275, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 53accc2deacdc4950800000000000000
+      internalID: 6434760611024652853
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kid_grabhit1_body_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 530
+        height: 633
+      alignment: 9
+      pivot: {x: 0.275, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 82e815ee76b431c70800000000000000
+      internalID: 8940572595012603432
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kid_grabhit1_body_13
+      rect:
+        serializedVersion: 2
+        x: 530
+        y: 0
+        width: 530
+        height: 633
+      alignment: 9
+      pivot: {x: 0.275, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 118548ddc65fde990800000000000000
+      internalID: -7354952768504440815
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kid_grabhit1_body_14
+      rect:
+        serializedVersion: 2
+        x: 1060
+        y: 0
+        width: 530
+        height: 633
+      alignment: 9
+      pivot: {x: 0.275, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8c9c5ac3ee553fdc0800000000000000
+      internalID: -3606444394885559864
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 7dbf36bc3fdcc48c6b215e980acc3cf7
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      kid_grabhit1_body_0: -2013961792506054117
+      kid_grabhit1_body_1: 2938654959262116485
+      kid_grabhit1_body_10: -5471039842486785537
+      kid_grabhit1_body_11: 6434760611024652853
+      kid_grabhit1_body_12: 8940572595012603432
+      kid_grabhit1_body_13: -7354952768504440815
+      kid_grabhit1_body_14: -3606444394885559864
+      kid_grabhit1_body_2: -3469945468348028396
+      kid_grabhit1_body_3: -730875475505468981
+      kid_grabhit1_body_4: -6814639325153369076
+      kid_grabhit1_body_5: 5250151284650680811
+      kid_grabhit1_body_6: -5188288980882781123
+      kid_grabhit1_body_7: -808258268931255203
+      kid_grabhit1_body_8: -1419850141356516073
+      kid_grabhit1_body_9: 2839929404662441413
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

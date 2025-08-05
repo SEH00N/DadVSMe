@@ -1,0 +1,750 @@
+fileFormatVersion: 2
+guid: 5a7a278415f064bf6b2bdf58ef6a0635
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -7412752142400094798
+    second: james_shoot_0
+  - first:
+      213: 3174179795797622296
+    second: james_shoot_1
+  - first:
+      213: -6889078078924894525
+    second: james_shoot_2
+  - first:
+      213: -8503125856818274340
+    second: james_shoot_3
+  - first:
+      213: 8211017828823185971
+    second: james_shoot_4
+  - first:
+      213: -1020775896826523467
+    second: james_shoot_5
+  - first:
+      213: 6086117068211162491
+    second: james_shoot_6
+  - first:
+      213: -8105504075538146798
+    second: james_shoot_7
+  - first:
+      213: 4746878080285182262
+    second: james_shoot_8
+  - first:
+      213: -4860469780920309619
+    second: james_shoot_9
+  - first:
+      213: 7829376421290321145
+    second: james_shoot_10
+  - first:
+      213: -1104470776291112658
+    second: james_shoot_11
+  - first:
+      213: -3722117183410803232
+    second: james_shoot_12
+  - first:
+      213: -2707776502204458043
+    second: james_shoot_13
+  - first:
+      213: -6083290375309602734
+    second: james_shoot_14
+  - first:
+      213: -1069010255672688206
+    second: james_shoot_15
+  - first:
+      213: -8636092768490285570
+    second: james_shoot_16
+  - first:
+      213: -969110359366187301
+    second: james_shoot_17
+  - first:
+      213: 6714632088632858555
+    second: james_shoot_18
+  - first:
+      213: 7879313985044752997
+    second: james_shoot_19
+  - first:
+      213: 1864281997109265312
+    second: james_shoot_20
+  - first:
+      213: 5809059674249687794
+    second: james_shoot_21
+  - first:
+      213: -8806874824488922220
+    second: james_shoot_22
+  - first:
+      213: 1726994479706226172
+    second: james_shoot_23
+  - first:
+      213: 4309373607483499215
+    second: james_shoot_24
+  - first:
+      213: 6927807521936395080
+    second: james_shoot_25
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 200
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 16384
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: iOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: james_shoot_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1533
+        width: 1055
+        height: 511
+      alignment: 9
+      pivot: {x: 0.175, y: 0.015}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2bdf930733d902990800000000000000
+      internalID: -7412752142400094798
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: james_shoot_1
+      rect:
+        serializedVersion: 2
+        x: 1055
+        y: 1533
+        width: 1055
+        height: 511
+      alignment: 9
+      pivot: {x: 0.175, y: 0.015}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 81e3dbde4b3fc0c20800000000000000
+      internalID: 3174179795797622296
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: james_shoot_2
+      rect:
+        serializedVersion: 2
+        x: 2110
+        y: 1533
+        width: 1055
+        height: 511
+      alignment: 9
+      pivot: {x: 0.175, y: 0.015}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3ce40c3bcf31560a0800000000000000
+      internalID: -6889078078924894525
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: james_shoot_3
+      rect:
+        serializedVersion: 2
+        x: 3165
+        y: 1533
+        width: 1055
+        height: 511
+      alignment: 9
+      pivot: {x: 0.175, y: 0.015}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cdf58efa514def980800000000000000
+      internalID: -8503125856818274340
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: james_shoot_4
+      rect:
+        serializedVersion: 2
+        x: 4220
+        y: 1533
+        width: 1055
+        height: 511
+      alignment: 9
+      pivot: {x: 0.175, y: 0.015}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 33ab763263563f170800000000000000
+      internalID: 8211017828823185971
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: james_shoot_5
+      rect:
+        serializedVersion: 2
+        x: 5275
+        y: 1533
+        width: 1055
+        height: 511
+      alignment: 9
+      pivot: {x: 0.175, y: 0.015}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5b0df5aeab975d1f0800000000000000
+      internalID: -1020775896826523467
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: james_shoot_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1022
+        width: 1055
+        height: 511
+      alignment: 9
+      pivot: {x: 0.175, y: 0.015}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b7d0b285a3b367450800000000000000
+      internalID: 6086117068211162491
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: james_shoot_7
+      rect:
+        serializedVersion: 2
+        x: 1055
+        y: 1022
+        width: 1055
+        height: 511
+      alignment: 9
+      pivot: {x: 0.175, y: 0.015}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 21a5114fcf6738f80800000000000000
+      internalID: -8105504075538146798
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: james_shoot_8
+      rect:
+        serializedVersion: 2
+        x: 2110
+        y: 1022
+        width: 1055
+        height: 511
+      alignment: 9
+      pivot: {x: 0.175, y: 0.015}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6398c77c67c40e140800000000000000
+      internalID: 4746878080285182262
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: james_shoot_9
+      rect:
+        serializedVersion: 2
+        x: 3165
+        y: 1022
+        width: 1055
+        height: 511
+      alignment: 9
+      pivot: {x: 0.175, y: 0.015}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d8869b27c742c8cb0800000000000000
+      internalID: -4860469780920309619
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: james_shoot_10
+      rect:
+        serializedVersion: 2
+        x: 4220
+        y: 1022
+        width: 1055
+        height: 511
+      alignment: 9
+      pivot: {x: 0.175, y: 0.015}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9f424d39f5887ac60800000000000000
+      internalID: 7829376421290321145
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: james_shoot_11
+      rect:
+        serializedVersion: 2
+        x: 5275
+        y: 1022
+        width: 1055
+        height: 511
+      alignment: 9
+      pivot: {x: 0.175, y: 0.015}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e294e524ea12ca0f0800000000000000
+      internalID: -1104470776291112658
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: james_shoot_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 511
+        width: 1055
+        height: 511
+      alignment: 9
+      pivot: {x: 0.175, y: 0.015}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0edeb6e6422685cc0800000000000000
+      internalID: -3722117183410803232
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: james_shoot_13
+      rect:
+        serializedVersion: 2
+        x: 1055
+        y: 511
+        width: 1055
+        height: 511
+      alignment: 9
+      pivot: {x: 0.175, y: 0.015}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5cb14fe1e9b0c6ad0800000000000000
+      internalID: -2707776502204458043
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: james_shoot_14
+      rect:
+        serializedVersion: 2
+        x: 2110
+        y: 511
+        width: 1055
+        height: 511
+      alignment: 9
+      pivot: {x: 0.175, y: 0.015}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2505e1262afc39ba0800000000000000
+      internalID: -6083290375309602734
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: james_shoot_15
+      rect:
+        serializedVersion: 2
+        x: 3165
+        y: 511
+        width: 1055
+        height: 511
+      alignment: 9
+      pivot: {x: 0.175, y: 0.015}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2b1416916dc1a21f0800000000000000
+      internalID: -1069010255672688206
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: james_shoot_16
+      rect:
+        serializedVersion: 2
+        x: 4220
+        y: 511
+        width: 1055
+        height: 511
+      alignment: 9
+      pivot: {x: 0.175, y: 0.015}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ef511de026f662880800000000000000
+      internalID: -8636092768490285570
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: james_shoot_17
+      rect:
+        serializedVersion: 2
+        x: 5275
+        y: 511
+        width: 1055
+        height: 511
+      alignment: 9
+      pivot: {x: 0.175, y: 0.015}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bd6c3d143470d82f0800000000000000
+      internalID: -969110359366187301
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: james_shoot_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 1055
+        height: 511
+      alignment: 9
+      pivot: {x: 0.175, y: 0.015}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bb796681f4a2f2d50800000000000000
+      internalID: 6714632088632858555
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: james_shoot_19
+      rect:
+        serializedVersion: 2
+        x: 1055
+        y: 0
+        width: 1055
+        height: 511
+      alignment: 9
+      pivot: {x: 0.175, y: 0.015}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 56a2c50b252f85d60800000000000000
+      internalID: 7879313985044752997
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: james_shoot_20
+      rect:
+        serializedVersion: 2
+        x: 2110
+        y: 0
+        width: 1055
+        height: 511
+      alignment: 9
+      pivot: {x: 0.175, y: 0.015}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0a38ad659924fd910800000000000000
+      internalID: 1864281997109265312
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: james_shoot_21
+      rect:
+        serializedVersion: 2
+        x: 3165
+        y: 0
+        width: 1055
+        height: 511
+      alignment: 9
+      pivot: {x: 0.175, y: 0.015}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2f2f2bafefced9050800000000000000
+      internalID: 5809059674249687794
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: james_shoot_22
+      rect:
+        serializedVersion: 2
+        x: 4220
+        y: 0
+        width: 1055
+        height: 511
+      alignment: 9
+      pivot: {x: 0.175, y: 0.015}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 493d1090202b7c580800000000000000
+      internalID: -8806874824488922220
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: b2ce2952b5aa045c2940c1afa4634e23
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      james_shoot_0: -7412752142400094798
+      james_shoot_1: 3174179795797622296
+      james_shoot_10: 7829376421290321145
+      james_shoot_11: -1104470776291112658
+      james_shoot_12: -3722117183410803232
+      james_shoot_13: -2707776502204458043
+      james_shoot_14: -6083290375309602734
+      james_shoot_15: -1069010255672688206
+      james_shoot_16: -8636092768490285570
+      james_shoot_17: -969110359366187301
+      james_shoot_18: 6714632088632858555
+      james_shoot_19: 7879313985044752997
+      james_shoot_2: -6889078078924894525
+      james_shoot_20: 1864281997109265312
+      james_shoot_21: 5809059674249687794
+      james_shoot_22: -8806874824488922220
+      james_shoot_3: -8503125856818274340
+      james_shoot_4: 8211017828823185971
+      james_shoot_5: -1020775896826523467
+      james_shoot_6: 6086117068211162491
+      james_shoot_7: -8105504075538146798
+      james_shoot_8: 4746878080285182262
+      james_shoot_9: -4860469780920309619
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

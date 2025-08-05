@@ -1,0 +1,585 @@
+fileFormatVersion: 2
+guid: 34612d50a6f21452fae367f1deb363b3
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 1341365227233315479
+    second: kid_hit2_hand_0
+  - first:
+      213: -2902675531395006437
+    second: kid_hit2_hand_1
+  - first:
+      213: -3671306664238572463
+    second: kid_hit2_hand_2
+  - first:
+      213: 8543803992711615891
+    second: kid_hit2_hand_3
+  - first:
+      213: -8071347612976874734
+    second: kid_hit2_hand_4
+  - first:
+      213: 2567448354482699931
+    second: kid_hit2_hand_5
+  - first:
+      213: 4770389129937260708
+    second: kid_hit2_hand_6
+  - first:
+      213: -6534172869575369361
+    second: kid_hit2_hand_7
+  - first:
+      213: -311830201758830205
+    second: kid_hit2_hand_8
+  - first:
+      213: 3763249558834441597
+    second: kid_hit2_hand_9
+  - first:
+      213: 2920742447457127200
+    second: kid_hit2_hand_10
+  - first:
+      213: 717467686943317462
+    second: kid_hit2_hand_11
+  - first:
+      213: -8005611576276603742
+    second: kid_hit2_hand_12
+  - first:
+      213: -585080344097662577
+    second: kid_hit2_hand_13
+  - first:
+      213: -642767720902861739
+    second: kid_hit2_hand_14
+  - first:
+      213: 8614210370726824124
+    second: kid_hit2_hand_15
+  - first:
+      213: -3310890027936928584
+    second: kid_hit2_hand_16
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 200
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 16384
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: iOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: kid_hit2_hand_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 338
+        width: 182
+        height: 169
+      alignment: 9
+      pivot: {x: 0.26, y: 0.85}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 79a8d4b319c7d9210800000000000000
+      internalID: 1341365227233315479
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kid_hit2_hand_1
+      rect:
+        serializedVersion: 2
+        x: 182
+        y: 338
+        width: 182
+        height: 169
+      alignment: 9
+      pivot: {x: 0.26, y: 0.85}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b108bf4bbff97b7d0800000000000000
+      internalID: -2902675531395006437
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kid_hit2_hand_2
+      rect:
+        serializedVersion: 2
+        x: 364
+        y: 338
+        width: 182
+        height: 169
+      alignment: 9
+      pivot: {x: 0.26, y: 0.85}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 15c19805a06ec0dc0800000000000000
+      internalID: -3671306664238572463
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kid_hit2_hand_3
+      rect:
+        serializedVersion: 2
+        x: 546
+        y: 338
+        width: 182
+        height: 169
+      alignment: 9
+      pivot: {x: 0.26, y: 0.85}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 395d320e670b19670800000000000000
+      internalID: 8543803992711615891
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kid_hit2_hand_4
+      rect:
+        serializedVersion: 2
+        x: 728
+        y: 338
+        width: 182
+        height: 169
+      alignment: 9
+      pivot: {x: 0.26, y: 0.85}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 21bf0dd1c10dcff80800000000000000
+      internalID: -8071347612976874734
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kid_hit2_hand_5
+      rect:
+        serializedVersion: 2
+        x: 910
+        y: 338
+        width: 182
+        height: 169
+      alignment: 9
+      pivot: {x: 0.26, y: 0.85}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b9e3a1ceca861a320800000000000000
+      internalID: 2567448354482699931
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kid_hit2_hand_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 169
+        width: 182
+        height: 169
+      alignment: 9
+      pivot: {x: 0.26, y: 0.85}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4a09b4a93a3d33240800000000000000
+      internalID: 4770389129937260708
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kid_hit2_hand_7
+      rect:
+        serializedVersion: 2
+        x: 182
+        y: 169
+        width: 182
+        height: 169
+      alignment: 9
+      pivot: {x: 0.26, y: 0.85}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f6d17f70564f155a0800000000000000
+      internalID: -6534172869575369361
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kid_hit2_hand_8
+      rect:
+        serializedVersion: 2
+        x: 364
+        y: 169
+        width: 182
+        height: 169
+      alignment: 9
+      pivot: {x: 0.26, y: 0.85}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3813de965182cabf0800000000000000
+      internalID: -311830201758830205
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kid_hit2_hand_9
+      rect:
+        serializedVersion: 2
+        x: 546
+        y: 169
+        width: 182
+        height: 169
+      alignment: 9
+      pivot: {x: 0.26, y: 0.85}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d7de873098fb93430800000000000000
+      internalID: 3763249558834441597
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kid_hit2_hand_10
+      rect:
+        serializedVersion: 2
+        x: 728
+        y: 169
+        width: 182
+        height: 169
+      alignment: 9
+      pivot: {x: 0.26, y: 0.85}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 02b461df7cf888820800000000000000
+      internalID: 2920742447457127200
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kid_hit2_hand_11
+      rect:
+        serializedVersion: 2
+        x: 910
+        y: 169
+        width: 182
+        height: 169
+      alignment: 9
+      pivot: {x: 0.26, y: 0.85}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6ddd31a5f05f4f900800000000000000
+      internalID: 717467686943317462
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kid_hit2_hand_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 182
+        height: 169
+      alignment: 9
+      pivot: {x: 0.26, y: 0.85}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2ac274adfaa56e090800000000000000
+      internalID: -8005611576276603742
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kid_hit2_hand_13
+      rect:
+        serializedVersion: 2
+        x: 182
+        y: 0
+        width: 182
+        height: 169
+      alignment: 9
+      pivot: {x: 0.26, y: 0.85}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f89def4e68061e7f0800000000000000
+      internalID: -585080344097662577
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kid_hit2_hand_14
+      rect:
+        serializedVersion: 2
+        x: 364
+        y: 0
+        width: 182
+        height: 169
+      alignment: 9
+      pivot: {x: 0.26, y: 0.85}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 55c5f72d92e6417f0800000000000000
+      internalID: -642767720902861739
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kid_hit2_hand_15
+      rect:
+        serializedVersion: 2
+        x: 546
+        y: 0
+        width: 182
+        height: 169
+      alignment: 9
+      pivot: {x: 0.26, y: 0.85}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cb888af21b2db8770800000000000000
+      internalID: 8614210370726824124
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kid_hit2_hand_16
+      rect:
+        serializedVersion: 2
+        x: 728
+        y: 0
+        width: 182
+        height: 169
+      alignment: 9
+      pivot: {x: 0.26, y: 0.85}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8bcaf6abf0b5d02d0800000000000000
+      internalID: -3310890027936928584
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 081f0a9b64cb34a69a6f95d41407dc03
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      kid_hit2_hand_0: 1341365227233315479
+      kid_hit2_hand_1: -2902675531395006437
+      kid_hit2_hand_10: 2920742447457127200
+      kid_hit2_hand_11: 717467686943317462
+      kid_hit2_hand_12: -8005611576276603742
+      kid_hit2_hand_13: -585080344097662577
+      kid_hit2_hand_14: -642767720902861739
+      kid_hit2_hand_15: 8614210370726824124
+      kid_hit2_hand_16: -3310890027936928584
+      kid_hit2_hand_2: -3671306664238572463
+      kid_hit2_hand_3: 8543803992711615891
+      kid_hit2_hand_4: -8071347612976874734
+      kid_hit2_hand_5: 2567448354482699931
+      kid_hit2_hand_6: 4770389129937260708
+      kid_hit2_hand_7: -6534172869575369361
+      kid_hit2_hand_8: -311830201758830205
+      kid_hit2_hand_9: 3763249558834441597
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

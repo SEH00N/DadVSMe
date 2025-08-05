@@ -1,0 +1,377 @@
+fileFormatVersion: 2
+guid: be2fb4fc8c50643ea8ee97c4ee617553
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 2314147470218539450
+    second: ninja_spin_0
+  - first:
+      213: 8030516977844817667
+    second: ninja_spin_1
+  - first:
+      213: -1523591608919058179
+    second: ninja_spin_2
+  - first:
+      213: -7799514964655539894
+    second: ninja_spin_3
+  - first:
+      213: -2318046758007071220
+    second: ninja_spin_4
+  - first:
+      213: 1831930089974883837
+    second: ninja_spin_5
+  - first:
+      213: 5413517101893819192
+    second: ninja_spin_6
+  - first:
+      213: -1549692734564377044
+    second: ninja_spin_7
+  - first:
+      213: -8970999920435688576
+    second: ninja_spin_8
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 200
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: iOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: ninja_spin_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 758
+        width: 758
+        height: 758
+      alignment: 9
+      pivot: {x: 0.47, y: 0.495}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ab1be300dd08d1020800000000000000
+      internalID: 2314147470218539450
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ninja_spin_1
+      rect:
+        serializedVersion: 2
+        x: 758
+        y: 758
+        width: 758
+        height: 758
+      alignment: 9
+      pivot: {x: 0.47, y: 0.495}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 30f0f23d4a0227f60800000000000000
+      internalID: 8030516977844817667
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ninja_spin_2
+      rect:
+        serializedVersion: 2
+        x: 1516
+        y: 758
+        width: 758
+        height: 758
+      alignment: 9
+      pivot: {x: 0.47, y: 0.495}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: df81d97018d1bdae0800000000000000
+      internalID: -1523591608919058179
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ninja_spin_3
+      rect:
+        serializedVersion: 2
+        x: 2274
+        y: 758
+        width: 758
+        height: 758
+      alignment: 9
+      pivot: {x: 0.47, y: 0.495}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a49fc57967e82c390800000000000000
+      internalID: -7799514964655539894
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ninja_spin_4
+      rect:
+        serializedVersion: 2
+        x: 3032
+        y: 758
+        width: 758
+        height: 758
+      alignment: 9
+      pivot: {x: 0.47, y: 0.495}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c0e1e3051c4a4dfd0800000000000000
+      internalID: -2318046758007071220
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ninja_spin_5
+      rect:
+        serializedVersion: 2
+        x: 3790
+        y: 758
+        width: 758
+        height: 758
+      alignment: 9
+      pivot: {x: 0.47, y: 0.495}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: df56d4af5b25c6910800000000000000
+      internalID: 1831930089974883837
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ninja_spin_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 758
+        height: 758
+      alignment: 9
+      pivot: {x: 0.47, y: 0.495}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 83b12e34f1da02b40800000000000000
+      internalID: 5413517101893819192
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ninja_spin_7
+      rect:
+        serializedVersion: 2
+        x: 758
+        y: 0
+        width: 758
+        height: 758
+      alignment: 9
+      pivot: {x: 0.47, y: 0.495}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c2e59452ba26e7ae0800000000000000
+      internalID: -1549692734564377044
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ninja_spin_8
+      rect:
+        serializedVersion: 2
+        x: 1516
+        y: 0
+        width: 758
+        height: 758
+      alignment: 9
+      pivot: {x: 0.47, y: 0.495}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 08b8f5e4a1b908380800000000000000
+      internalID: -8970999920435688576
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 357122fce54d94a9fa8e8a6d5972a7ae
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      ninja_spin_0: 2314147470218539450
+      ninja_spin_1: 8030516977844817667
+      ninja_spin_2: -1523591608919058179
+      ninja_spin_3: -7799514964655539894
+      ninja_spin_4: -2318046758007071220
+      ninja_spin_5: 1831930089974883837
+      ninja_spin_6: 5413517101893819192
+      ninja_spin_7: -1549692734564377044
+      ninja_spin_8: -8970999920435688576
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
