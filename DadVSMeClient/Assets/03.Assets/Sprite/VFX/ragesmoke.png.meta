@@ -1,0 +1,676 @@
+fileFormatVersion: 2
+guid: afd5560852c1548838000bb3f0137a61
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -8028637060798740405
+    second: ragesmoke_0
+  - first:
+      213: -1912504826650552381
+    second: ragesmoke_1
+  - first:
+      213: 2423553085407292875
+    second: ragesmoke_2
+  - first:
+      213: -5355844699706913353
+    second: ragesmoke_3
+  - first:
+      213: -1347551219266423689
+    second: ragesmoke_4
+  - first:
+      213: -4635024797562500273
+    second: ragesmoke_5
+  - first:
+      213: -8014109914898475851
+    second: ragesmoke_6
+  - first:
+      213: 7628636190814344020
+    second: ragesmoke_7
+  - first:
+      213: -5648874404335141748
+    second: ragesmoke_8
+  - first:
+      213: -8396387262965045372
+    second: ragesmoke_9
+  - first:
+      213: 4778649977846928962
+    second: ragesmoke_10
+  - first:
+      213: 4470393754525688590
+    second: ragesmoke_11
+  - first:
+      213: 3088511152994395858
+    second: ragesmoke_12
+  - first:
+      213: -5199767862988950319
+    second: ragesmoke_13
+  - first:
+      213: -4817047384322531923
+    second: ragesmoke_14
+  - first:
+      213: 3457130834933045154
+    second: ragesmoke_15
+  - first:
+      213: 8025193844153207520
+    second: ragesmoke_16
+  - first:
+      213: 5561350581616858618
+    second: ragesmoke_17
+  - first:
+      213: -8923251353315424422
+    second: ragesmoke_18
+  - first:
+      213: -8687351447578252272
+    second: ragesmoke_19
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 200
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 16384
+    resizeAlgorithm: 0
+    textureFormat: 52
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 1
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: iOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: ragesmoke_0
+      rect:
+        serializedVersion: 2
+        x: 186
+        y: 380
+        width: 102
+        height: 113
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b480e88712d849090800000000000000
+      internalID: -8028637060798740405
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ragesmoke_1
+      rect:
+        serializedVersion: 2
+        x: 317
+        y: 364
+        width: 141
+        height: 151
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3c716483efa6575e0800000000000000
+      internalID: -1912504826650552381
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ragesmoke_2
+      rect:
+        serializedVersion: 2
+        x: 479
+        y: 477
+        width: 14
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bcde00ec0b032a120800000000000000
+      internalID: 2423553085407292875
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ragesmoke_3
+      rect:
+        serializedVersion: 2
+        x: 497
+        y: 408
+        width: 84
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7bd8fc14f973ca5b0800000000000000
+      internalID: -5355844699706913353
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ragesmoke_4
+      rect:
+        serializedVersion: 2
+        x: 572
+        y: 437
+        width: 41
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 774faf24e498c4de0800000000000000
+      internalID: -1347551219266423689
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ragesmoke_5
+      rect:
+        serializedVersion: 2
+        x: 644
+        y: 411
+        width: 89
+        height: 103
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f4b092801851dafb0800000000000000
+      internalID: -4635024797562500273
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ragesmoke_6
+      rect:
+        serializedVersion: 2
+        x: 797
+        y: 411
+        width: 89
+        height: 103
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5b45a833e7928c090800000000000000
+      internalID: -8014109914898475851
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ragesmoke_7
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 397
+        width: 74
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4539d22823c5ed960800000000000000
+      internalID: 7628636190814344020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ragesmoke_8
+      rect:
+        serializedVersion: 2
+        x: 469
+        y: 453
+        width: 10
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c8cbec488aa2b91b0800000000000000
+      internalID: -5648874404335141748
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ragesmoke_9
+      rect:
+        serializedVersion: 2
+        x: 458
+        y: 418
+        width: 12
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 487aa52354a0a7b80800000000000000
+      internalID: -8396387262965045372
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ragesmoke_10
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 254
+        width: 85
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2469e7326dc215240800000000000000
+      internalID: 4778649977846928962
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ragesmoke_11
+      rect:
+        serializedVersion: 2
+        x: 479
+        y: 353
+        width: 79
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e03e0a04f670a0e30800000000000000
+      internalID: 4470393754525688590
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ragesmoke_12
+      rect:
+        serializedVersion: 2
+        x: 493
+        y: 254
+        width: 85
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2d6201fa7889cda20800000000000000
+      internalID: 3088511152994395858
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ragesmoke_13
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 245
+        width: 85
+        height: 104
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1d43d0c9da6b6d7b0800000000000000
+      internalID: -5199767862988950319
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ragesmoke_14
+      rect:
+        serializedVersion: 2
+        x: 187
+        y: 245
+        width: 85
+        height: 104
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dad1b3ffce8662db0800000000000000
+      internalID: -4817047384322531923
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ragesmoke_15
+      rect:
+        serializedVersion: 2
+        x: 651
+        y: 274
+        width: 76
+        height: 73
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2a7db3e7d223aff20800000000000000
+      internalID: 3457130834933045154
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ragesmoke_16
+      rect:
+        serializedVersion: 2
+        x: 804
+        y: 274
+        width: 76
+        height: 73
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0ea476e28473f5f60800000000000000
+      internalID: 8025193844153207520
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ragesmoke_17
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 118
+        width: 61
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: af55fa083e2ed2d40800000000000000
+      internalID: 5561350581616858618
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ragesmoke_18
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 130
+        width: 23
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a574c1ceb2e3a2480800000000000000
+      internalID: -8923251353315424422
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ragesmoke_19
+      rect:
+        serializedVersion: 2
+        x: 214
+        y: 134
+        width: 35
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 01c6f10d2e3507780800000000000000
+      internalID: -8687351447578252272
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      ragesmoke_0: -8028637060798740405
+      ragesmoke_1: -1912504826650552381
+      ragesmoke_10: 4778649977846928962
+      ragesmoke_11: 4470393754525688590
+      ragesmoke_12: 3088511152994395858
+      ragesmoke_13: -5199767862988950319
+      ragesmoke_14: -4817047384322531923
+      ragesmoke_15: 3457130834933045154
+      ragesmoke_16: 8025193844153207520
+      ragesmoke_17: 5561350581616858618
+      ragesmoke_18: -8923251353315424422
+      ragesmoke_19: -8687351447578252272
+      ragesmoke_2: 2423553085407292875
+      ragesmoke_3: -5355844699706913353
+      ragesmoke_4: -1347551219266423689
+      ragesmoke_5: -4635024797562500273
+      ragesmoke_6: -8014109914898475851
+      ragesmoke_7: 7628636190814344020
+      ragesmoke_8: -5648874404335141748
+      ragesmoke_9: -8396387262965045372
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

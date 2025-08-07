@@ -1,0 +1,780 @@
+fileFormatVersion: 2
+guid: 9c8f19705ab3b42a58f5a28089103399
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 202461544834108202
+    second: bully_move_0
+  - first:
+      213: 1200707617717736212
+    second: bully_move_1
+  - first:
+      213: -122892361054726165
+    second: bully_move_2
+  - first:
+      213: 2907971371330516107
+    second: bully_move_3
+  - first:
+      213: -4573448433233037120
+    second: bully_move_4
+  - first:
+      213: 2317824002455692513
+    second: bully_move_5
+  - first:
+      213: 7036302484417404057
+    second: bully_move_6
+  - first:
+      213: -2169580694540129782
+    second: bully_move_7
+  - first:
+      213: -4222557792577231890
+    second: bully_move_8
+  - first:
+      213: -1543853924772439581
+    second: bully_move_9
+  - first:
+      213: 1680790235495999669
+    second: bully_move_10
+  - first:
+      213: -8280810609017294638
+    second: bully_move_11
+  - first:
+      213: 2894662779690944408
+    second: bully_move_12
+  - first:
+      213: -6496610451229417781
+    second: bully_move_13
+  - first:
+      213: 8752833244525672227
+    second: bully_move_14
+  - first:
+      213: 4322634536932335138
+    second: bully_move_15
+  - first:
+      213: -1431765946818175949
+    second: bully_move_16
+  - first:
+      213: -2267916800735869007
+    second: bully_move_17
+  - first:
+      213: 3885771917124471570
+    second: bully_move_18
+  - first:
+      213: -8883921655750554544
+    second: bully_move_19
+  - first:
+      213: 4001196518402897701
+    second: bully_move_20
+  - first:
+      213: 4485456526626400818
+    second: bully_move_21
+  - first:
+      213: -1650336629892906325
+    second: bully_move_22
+  - first:
+      213: -9217109408324388306
+    second: bully_move_23
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 200
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: iOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 16384
+    resizeAlgorithm: 0
+    textureFormat: 52
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 1
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: bully_move_0
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 1071
+        width: 237
+        height: 351
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a2b838cc3b94fc200800000000000000
+      internalID: 202461544834108202
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bully_move_1
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 1071
+        width: 237
+        height: 355
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 413db297735c9a010800000000000000
+      internalID: 1200707617717736212
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bully_move_2
+      rect:
+        serializedVersion: 2
+        x: 541
+        y: 1101
+        width: 246
+        height: 327
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: be759b97c066b4ef0800000000000000
+      internalID: -122892361054726165
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bully_move_3
+      rect:
+        serializedVersion: 2
+        x: 816
+        y: 1101
+        width: 242
+        height: 321
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b84392d1e803b5820800000000000000
+      internalID: 2907971371330516107
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bully_move_4
+      rect:
+        serializedVersion: 2
+        x: 1105
+        y: 1070
+        width: 251
+        height: 333
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0c8f39291e8d780c0800000000000000
+      internalID: -4573448433233037120
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bully_move_5
+      rect:
+        serializedVersion: 2
+        x: 1375
+        y: 1070
+        width: 251
+        height: 331
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1e4ee3e56a09a2020800000000000000
+      internalID: 2317824002455692513
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bully_move_6
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 713
+        width: 252
+        height: 329
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 99cd5e364d7f5a160800000000000000
+      internalID: 7036302484417404057
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bully_move_7
+      rect:
+        serializedVersion: 2
+        x: 313
+        y: 713
+        width: 218
+        height: 337
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a0ae36e6ad914e1e0800000000000000
+      internalID: -2169580694540129782
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bully_move_8
+      rect:
+        serializedVersion: 2
+        x: 582
+        y: 714
+        width: 217
+        height: 341
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ee360e94f067665c0800000000000000
+      internalID: -4222557792577231890
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bully_move_9
+      rect:
+        serializedVersion: 2
+        x: 849
+        y: 714
+        width: 217
+        height: 344
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3e998dcf801239ae0800000000000000
+      internalID: -1543853924772439581
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bully_move_10
+      rect:
+        serializedVersion: 2
+        x: 1094
+        y: 744
+        width: 240
+        height: 318
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5b82fa060dd535710800000000000000
+      internalID: 1680790235495999669
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bully_move_11
+      rect:
+        serializedVersion: 2
+        x: 1365
+        y: 744
+        width: 256
+        height: 301
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2d0fc3def96a41d80800000000000000
+      internalID: -8280810609017294638
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bully_move_12
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 356
+        width: 251
+        height: 333
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 89706082678eb2820800000000000000
+      internalID: 2894662779690944408
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bully_move_13
+      rect:
+        serializedVersion: 2
+        x: 291
+        y: 356
+        width: 252
+        height: 331
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bce5162173767d5a0800000000000000
+      internalID: -6496610451229417781
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bully_move_14
+      rect:
+        serializedVersion: 2
+        x: 551
+        y: 356
+        width: 237
+        height: 350
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 327be2e167f487970800000000000000
+      internalID: 8752833244525672227
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bully_move_15
+      rect:
+        serializedVersion: 2
+        x: 821
+        y: 356
+        width: 238
+        height: 347
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 22edfa385351dfb30800000000000000
+      internalID: 4322634536932335138
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bully_move_16
+      rect:
+        serializedVersion: 2
+        x: 1090
+        y: 357
+        width: 237
+        height: 351
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 33cd66a0578512ce0800000000000000
+      internalID: -1431765946818175949
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bully_move_17
+      rect:
+        serializedVersion: 2
+        x: 1357
+        y: 357
+        width: 237
+        height: 355
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1b78ff78fadb680e0800000000000000
+      internalID: -2267916800735869007
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bully_move_18
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 30
+        width: 252
+        height: 308
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 21b846e88f80de530800000000000000
+      internalID: 3885771917124471570
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bully_move_19
+      rect:
+        serializedVersion: 2
+        x: 281
+        y: 30
+        width: 256
+        height: 301
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 05c8698b258f5b480800000000000000
+      internalID: -8883921655750554544
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bully_move_20
+      rect:
+        serializedVersion: 2
+        x: 563
+        y: 0
+        width: 251
+        height: 332
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5273fe3c80b178730800000000000000
+      internalID: 4001196518402897701
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bully_move_21
+      rect:
+        serializedVersion: 2
+        x: 846
+        y: 0
+        width: 228
+        height: 340
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 23a260d22fa8f3e30800000000000000
+      internalID: 4485456526626400818
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bully_move_22
+      rect:
+        serializedVersion: 2
+        x: 1127
+        y: 0
+        width: 217
+        height: 338
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ba20b673493d819e0800000000000000
+      internalID: -1650336629892906325
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bully_move_23
+      rect:
+        serializedVersion: 2
+        x: 1397
+        y: 0
+        width: 218
+        height: 336
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e2af9e4d3df361080800000000000000
+      internalID: -9217109408324388306
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      bully_move_0: 202461544834108202
+      bully_move_1: 1200707617717736212
+      bully_move_10: 1680790235495999669
+      bully_move_11: -8280810609017294638
+      bully_move_12: 2894662779690944408
+      bully_move_13: -6496610451229417781
+      bully_move_14: 8752833244525672227
+      bully_move_15: 4322634536932335138
+      bully_move_16: -1431765946818175949
+      bully_move_17: -2267916800735869007
+      bully_move_18: 3885771917124471570
+      bully_move_19: -8883921655750554544
+      bully_move_2: -122892361054726165
+      bully_move_20: 4001196518402897701
+      bully_move_21: 4485456526626400818
+      bully_move_22: -1650336629892906325
+      bully_move_23: -9217109408324388306
+      bully_move_3: 2907971371330516107
+      bully_move_4: -4573448433233037120
+      bully_move_5: 2317824002455692513
+      bully_move_6: 7036302484417404057
+      bully_move_7: -2169580694540129782
+      bully_move_8: -4222557792577231890
+      bully_move_9: -1543853924772439581
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,650 @@
+fileFormatVersion: 2
+guid: 13c5aa357d00245ca8e1dc1079b9be4f
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -2856608625798741692
+    second: sunchips_attack3_animation_0
+  - first:
+      213: 3263302096782820683
+    second: sunchips_attack3_animation_1
+  - first:
+      213: -5413016844540156752
+    second: sunchips_attack3_animation_2
+  - first:
+      213: -4687044634101913948
+    second: sunchips_attack3_animation_3
+  - first:
+      213: -7347902718469247687
+    second: sunchips_attack3_animation_4
+  - first:
+      213: 6863129998844577722
+    second: sunchips_attack3_animation_5
+  - first:
+      213: 5552530943988908252
+    second: sunchips_attack3_animation_6
+  - first:
+      213: 3388141569540591860
+    second: sunchips_attack3_animation_7
+  - first:
+      213: -8399758110216079270
+    second: sunchips_attack3_animation_8
+  - first:
+      213: 5452598689672004210
+    second: sunchips_attack3_animation_9
+  - first:
+      213: 1315424638045151764
+    second: sunchips_attack3_animation_10
+  - first:
+      213: 758582453794469667
+    second: sunchips_attack3_animation_11
+  - first:
+      213: 1579578073690413311
+    second: sunchips_attack3_animation_12
+  - first:
+      213: 1184235611919442028
+    second: sunchips_attack3_animation_13
+  - first:
+      213: 7142306203125719519
+    second: sunchips_attack3_animation_14
+  - first:
+      213: -3373526010614375369
+    second: sunchips_attack3_animation_15
+  - first:
+      213: 1346374722438107524
+    second: sunchips_attack3_animation_16
+  - first:
+      213: -5600784211431560703
+    second: sunchips_attack3_animation_17
+  - first:
+      213: 3522908653983716529
+    second: sunchips_attack3_animation_18
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 200
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: iOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 16384
+    resizeAlgorithm: 0
+    textureFormat: 52
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 1
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: sunchips_attack3_animation_0
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 1085
+        width: 268
+        height: 360
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 44103fcf6994b58d0800000000000000
+      internalID: -2856608625798741692
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sunchips_attack3_animation_1
+      rect:
+        serializedVersion: 2
+        x: 425
+        y: 1085
+        width: 308
+        height: 358
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b450781a7f3994d20800000000000000
+      internalID: 3263302096782820683
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sunchips_attack3_animation_2
+      rect:
+        serializedVersion: 2
+        x: 766
+        y: 1085
+        width: 326
+        height: 361
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0b46af9fbd911e4b0800000000000000
+      internalID: -5413016844540156752
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sunchips_attack3_animation_3
+      rect:
+        serializedVersion: 2
+        x: 1136
+        y: 1085
+        width: 344
+        height: 358
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4a664f10db544feb0800000000000000
+      internalID: -4687044634101913948
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sunchips_attack3_animation_4
+      rect:
+        serializedVersion: 2
+        x: 1515
+        y: 1085
+        width: 344
+        height: 358
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 93d638d8861070a90800000000000000
+      internalID: -7347902718469247687
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sunchips_attack3_animation_5
+      rect:
+        serializedVersion: 2
+        x: 1894
+        y: 1085
+        width: 344
+        height: 358
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ab7457c1f5cbe3f50800000000000000
+      internalID: 6863129998844577722
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sunchips_attack3_animation_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 723
+        width: 343
+        height: 358
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cd0c2d8997d8e0d40800000000000000
+      internalID: 5552530943988908252
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sunchips_attack3_animation_7
+      rect:
+        serializedVersion: 2
+        x: 378
+        y: 723
+        width: 344
+        height: 358
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4f0933d6ec8150f20800000000000000
+      internalID: 3388141569540591860
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sunchips_attack3_animation_8
+      rect:
+        serializedVersion: 2
+        x: 757
+        y: 723
+        width: 344
+        height: 358
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a583d59a0801e6b80800000000000000
+      internalID: -8399758110216079270
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sunchips_attack3_animation_9
+      rect:
+        serializedVersion: 2
+        x: 1136
+        y: 723
+        width: 344
+        height: 358
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 27209a08e958bab40800000000000000
+      internalID: 5452598689672004210
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sunchips_attack3_animation_10
+      rect:
+        serializedVersion: 2
+        x: 1515
+        y: 723
+        width: 379
+        height: 353
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4126a772db3514210800000000000000
+      internalID: 1315424638045151764
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sunchips_attack3_animation_11
+      rect:
+        serializedVersion: 2
+        x: 1894
+        y: 723
+        width: 369
+        height: 358
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 327734bf8b6078a00800000000000000
+      internalID: 758582453794469667
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sunchips_attack3_animation_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 361
+        width: 368
+        height: 358
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ff8105993e9cbe510800000000000000
+      internalID: 1579578073690413311
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sunchips_attack3_animation_13
+      rect:
+        serializedVersion: 2
+        x: 378
+        y: 361
+        width: 369
+        height: 358
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c6063d2c3004f6010800000000000000
+      internalID: 1184235611919442028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sunchips_attack3_animation_14
+      rect:
+        serializedVersion: 2
+        x: 757
+        y: 361
+        width: 369
+        height: 358
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fd1a06276a19e1360800000000000000
+      internalID: 7142306203125719519
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sunchips_attack3_animation_15
+      rect:
+        serializedVersion: 2
+        x: 1136
+        y: 361
+        width: 369
+        height: 358
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 73c1ac097f3de21d0800000000000000
+      internalID: -3373526010614375369
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sunchips_attack3_animation_16
+      rect:
+        serializedVersion: 2
+        x: 1515
+        y: 361
+        width: 369
+        height: 358
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4811d793da84fa210800000000000000
+      internalID: 1346374722438107524
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sunchips_attack3_animation_17
+      rect:
+        serializedVersion: 2
+        x: 1924
+        y: 361
+        width: 245
+        height: 358
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 10a61061f640642b0800000000000000
+      internalID: -5600784211431560703
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sunchips_attack3_animation_18
+      rect:
+        serializedVersion: 2
+        x: 29
+        y: 0
+        width: 245
+        height: 357
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1b459d071c2e3e030800000000000000
+      internalID: 3522908653983716529
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      sunchips_attack3_animation_0: -2856608625798741692
+      sunchips_attack3_animation_1: 3263302096782820683
+      sunchips_attack3_animation_10: 1315424638045151764
+      sunchips_attack3_animation_11: 758582453794469667
+      sunchips_attack3_animation_12: 1579578073690413311
+      sunchips_attack3_animation_13: 1184235611919442028
+      sunchips_attack3_animation_14: 7142306203125719519
+      sunchips_attack3_animation_15: -3373526010614375369
+      sunchips_attack3_animation_16: 1346374722438107524
+      sunchips_attack3_animation_17: -5600784211431560703
+      sunchips_attack3_animation_18: 3522908653983716529
+      sunchips_attack3_animation_2: -5413016844540156752
+      sunchips_attack3_animation_3: -4687044634101913948
+      sunchips_attack3_animation_4: -7347902718469247687
+      sunchips_attack3_animation_5: 6863129998844577722
+      sunchips_attack3_animation_6: 5552530943988908252
+      sunchips_attack3_animation_7: 3388141569540591860
+      sunchips_attack3_animation_8: -8399758110216079270
+      sunchips_attack3_animation_9: 5452598689672004210
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
