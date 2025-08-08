@@ -157,12 +157,12 @@ TextureImporter:
       name: bully_juggle_crazy_0
       rect:
         serializedVersion: 2
-        x: 122
-        y: 82
-        width: 352
-        height: 276
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 0
+        y: 0
+        width: 532
+        height: 454
+      alignment: 9
+      pivot: {x: 0.555, y: 0.425}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -179,12 +179,12 @@ TextureImporter:
       name: bully_juggle_crazy_1
       rect:
         serializedVersion: 2
-        x: 645
-        y: 65
-        width: 358
-        height: 342
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 532
+        y: 0
+        width: 532
+        height: 454
+      alignment: 9
+      pivot: {x: 0.555, y: 0.425}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -201,12 +201,12 @@ TextureImporter:
       name: bully_juggle_crazy_2
       rect:
         serializedVersion: 2
-        x: 1157
-        y: 44
-        width: 390
-        height: 385
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1064
+        y: 0
+        width: 532
+        height: 454
+      alignment: 9
+      pivot: {x: 0.555, y: 0.425}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -223,12 +223,12 @@ TextureImporter:
       name: bully_juggle_crazy_3
       rect:
         serializedVersion: 2
-        x: 1661
-        y: 23
-        width: 440
-        height: 431
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1596
+        y: 0
+        width: 532
+        height: 454
+      alignment: 9
+      pivot: {x: 0.555, y: 0.425}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -245,12 +245,12 @@ TextureImporter:
       name: bully_juggle_crazy_4
       rect:
         serializedVersion: 2
-        x: 2250
-        y: 82
-        width: 349
-        height: 257
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 2128
+        y: 0
+        width: 532
+        height: 454
+      alignment: 9
+      pivot: {x: 0.555, y: 0.425}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -263,33 +263,11 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
-    - serializedVersion: 2
-      name: bully_juggle_crazy_5
-      rect:
-        serializedVersion: 2
-        x: 2302
-        y: 338
-        width: 45
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: cbc3084d2cd2f9a60800000000000000
-      internalID: 7682909804129434812
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     outline: []
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: c78b2f64bf6384645bf4b15b5942c191
     internalID: 0
     vertices: []
     indices: 
@@ -304,7 +282,6 @@ TextureImporter:
       bully_juggle_crazy_2: -8835420766865254185
       bully_juggle_crazy_3: -3600403083391633270
       bully_juggle_crazy_4: -1255467849188669082
-      bully_juggle_crazy_5: 7682909804129434812
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

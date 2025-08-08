@@ -158,11 +158,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 0
-        width: 341
-        height: 1102
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        y: 744
+        width: 354
+        height: 372
+      alignment: 9
+      pivot: {x: 0.725, y: 0.0135}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -179,12 +179,12 @@ TextureImporter:
       name: sunchips_hit1_1
       rect:
         serializedVersion: 2
-        x: 377
-        y: 371
-        width: 332
-        height: 745
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 354
+        y: 744
+        width: 354
+        height: 372
+      alignment: 9
+      pivot: {x: 0.725, y: 0.0135}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -201,12 +201,12 @@ TextureImporter:
       name: sunchips_hit1_2
       rect:
         serializedVersion: 2
-        x: 718
-        y: 371
-        width: 331
-        height: 745
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 708
+        y: 744
+        width: 354
+        height: 372
+      alignment: 9
+      pivot: {x: 0.725, y: 0.0135}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -223,12 +223,12 @@ TextureImporter:
       name: sunchips_hit1_3
       rect:
         serializedVersion: 2
-        x: 1085
-        y: 371
-        width: 318
-        height: 745
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1062
+        y: 744
+        width: 354
+        height: 372
+      alignment: 9
+      pivot: {x: 0.725, y: 0.0135}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -245,12 +245,12 @@ TextureImporter:
       name: sunchips_hit1_4
       rect:
         serializedVersion: 2
-        x: 1439
-        y: 371
-        width: 318
-        height: 745
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1416
+        y: 744
+        width: 354
+        height: 372
+      alignment: 9
+      pivot: {x: 0.725, y: 0.0135}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -267,12 +267,12 @@ TextureImporter:
       name: sunchips_hit1_5
       rect:
         serializedVersion: 2
-        x: 1793
-        y: 371
-        width: 318
-        height: 745
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1770
+        y: 744
+        width: 354
+        height: 372
+      alignment: 9
+      pivot: {x: 0.725, y: 0.0135}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -285,11 +285,165 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: sunchips_hit1_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 372
+        width: 354
+        height: 372
+      alignment: 9
+      pivot: {x: 0.725, y: 0.0135}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7f1e2e178935489a9b3dda328b43551
+      internalID: -295024924
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sunchips_hit1_7
+      rect:
+        serializedVersion: 2
+        x: 354
+        y: 372
+        width: 354
+        height: 372
+      alignment: 9
+      pivot: {x: 0.725, y: 0.0135}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c2121ac207e44b62a611cb2e149d0ff
+      internalID: 1849515449
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sunchips_hit1_8
+      rect:
+        serializedVersion: 2
+        x: 708
+        y: 372
+        width: 354
+        height: 372
+      alignment: 9
+      pivot: {x: 0.725, y: 0.0135}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 95c1dbf87f0af450386532c31e1689d3
+      internalID: -1265483948
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sunchips_hit1_9
+      rect:
+        serializedVersion: 2
+        x: 1062
+        y: 372
+        width: 354
+        height: 372
+      alignment: 9
+      pivot: {x: 0.725, y: 0.0135}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a86e6c962c7747889561e9854f13c51
+      internalID: 1930589830
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sunchips_hit1_10
+      rect:
+        serializedVersion: 2
+        x: 1416
+        y: 372
+        width: 354
+        height: 372
+      alignment: 9
+      pivot: {x: 0.725, y: 0.0135}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef85cab4d0d4f45408de97547dd4b288
+      internalID: -1111941516
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sunchips_hit1_11
+      rect:
+        serializedVersion: 2
+        x: 1770
+        y: 372
+        width: 354
+        height: 372
+      alignment: 9
+      pivot: {x: 0.725, y: 0.0135}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c38207484c4174822897a5a107eadcf4
+      internalID: 1819158482
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sunchips_hit1_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 354
+        height: 372
+      alignment: 9
+      pivot: {x: 0.725, y: 0.0135}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae2160d57661c4489972d5a44ba7a5cb
+      internalID: -1810764980
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: acadee85607af41ecad475718403fce7
     internalID: 0
     vertices: []
     indices: 
@@ -301,10 +455,19 @@ TextureImporter:
     nameFileIdTable:
       sunchips_hit1_0: 2579165011573650555
       sunchips_hit1_1: 1403652302072438863
+      sunchips_hit1_10: -1111941516
+      sunchips_hit1_11: 1819158482
+      sunchips_hit1_12: -1810764980
+      sunchips_hit1_13: 464571978
+      sunchips_hit1_14: 1743507811
       sunchips_hit1_2: -8102654061722744566
       sunchips_hit1_3: -4758797687719212426
       sunchips_hit1_4: -5637547336235794398
       sunchips_hit1_5: -2507856083563943620
+      sunchips_hit1_6: -295024924
+      sunchips_hit1_7: 1849515449
+      sunchips_hit1_8: -1265483948
+      sunchips_hit1_9: 1930589830
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

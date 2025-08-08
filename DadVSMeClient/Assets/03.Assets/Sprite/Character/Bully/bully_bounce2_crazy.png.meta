@@ -157,12 +157,12 @@ TextureImporter:
       name: bully_bounce2_crazy_0
       rect:
         serializedVersion: 2
-        x: 122
-        y: 82
-        width: 352
-        height: 276
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 0
+        y: 0
+        width: 532
+        height: 454
+      alignment: 9
+      pivot: {x: 0.565, y: 0.425}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -179,12 +179,12 @@ TextureImporter:
       name: bully_bounce2_crazy_1
       rect:
         serializedVersion: 2
-        x: 645
-        y: 65
-        width: 358
-        height: 342
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 532
+        y: 0
+        width: 532
+        height: 454
+      alignment: 9
+      pivot: {x: 0.565, y: 0.425}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -201,12 +201,12 @@ TextureImporter:
       name: bully_bounce2_crazy_2
       rect:
         serializedVersion: 2
-        x: 1157
-        y: 44
-        width: 390
-        height: 385
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1064
+        y: 0
+        width: 532
+        height: 454
+      alignment: 9
+      pivot: {x: 0.565, y: 0.425}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -223,12 +223,12 @@ TextureImporter:
       name: bully_bounce2_crazy_3
       rect:
         serializedVersion: 2
-        x: 1661
-        y: 23
-        width: 440
-        height: 431
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1596
+        y: 0
+        width: 532
+        height: 454
+      alignment: 9
+      pivot: {x: 0.565, y: 0.425}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -245,12 +245,12 @@ TextureImporter:
       name: bully_bounce2_crazy_4
       rect:
         serializedVersion: 2
-        x: 2250
-        y: 82
-        width: 349
-        height: 257
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 2128
+        y: 0
+        width: 532
+        height: 454
+      alignment: 9
+      pivot: {x: 0.565, y: 0.425}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -263,33 +263,11 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
-    - serializedVersion: 2
-      name: bully_bounce2_crazy_5
-      rect:
-        serializedVersion: 2
-        x: 2302
-        y: 338
-        width: 45
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 4d42da163f0526ee0800000000000000
-      internalID: -1269363138719046444
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     outline: []
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 8dee03fb2604f4851883138e194729dd
     internalID: 0
     vertices: []
     indices: 
@@ -304,7 +282,6 @@ TextureImporter:
       bully_bounce2_crazy_2: -1856936140039104460
       bully_bounce2_crazy_3: -2305515915248539613
       bully_bounce2_crazy_4: 1009408510418512508
-      bully_bounce2_crazy_5: -1269363138719046444
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

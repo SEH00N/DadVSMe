@@ -199,12 +199,12 @@ TextureImporter:
       name: impact1_0
       rect:
         serializedVersion: 2
-        x: 672
-        y: 180
-        width: 46
-        height: 104
+        x: 0
+        y: 0
+        width: 272
+        height: 284
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -221,12 +221,12 @@ TextureImporter:
       name: impact1_1
       rect:
         serializedVersion: 2
-        x: 980
-        y: 263
-        width: 16
-        height: 19
+        x: 272
+        y: 0
+        width: 272
+        height: 284
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -243,12 +243,12 @@ TextureImporter:
       name: impact1_2
       rect:
         serializedVersion: 2
-        x: 996
-        y: 265
-        width: 9
-        height: 8
+        x: 544
+        y: 0
+        width: 272
+        height: 284
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -265,12 +265,12 @@ TextureImporter:
       name: impact1_3
       rect:
         serializedVersion: 2
-        x: 310
-        y: 33
-        width: 165
-        height: 224
+        x: 816
+        y: 0
+        width: 272
+        height: 284
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -283,363 +283,11 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
-    - serializedVersion: 2
-      name: impact1_4
-      rect:
-        serializedVersion: 2
-        x: 612
-        y: 171
-        width: 27
-        height: 39
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 4810fb3f1add728d0800000000000000
-      internalID: -2871082549776547452
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: impact1_5
-      rect:
-        serializedVersion: 2
-        x: 914
-        y: 196
-        width: 12
-        height: 12
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 993077434e948d190800000000000000
-      internalID: -7937513098758913127
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: impact1_6
-      rect:
-        serializedVersion: 2
-        x: 935
-        y: 200
-        width: 13
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 1538bc426a419a800800000000000000
-      internalID: 624052727181968209
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: impact1_7
-      rect:
-        serializedVersion: 2
-        x: 990
-        y: 191
-        width: 20
-        height: 25
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 8f07c19d94a38a810800000000000000
-      internalID: 1776734141847204088
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: impact1_8
-      rect:
-        serializedVersion: 2
-        x: 543
-        y: 138
-        width: 87
-        height: 55
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 72a47bb5d9f855670800000000000000
-      internalID: 8526879375507278375
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: impact1_9
-      rect:
-        serializedVersion: 2
-        x: 873
-        y: 156
-        width: 16
-        height: 13
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 5dfed3d02bf9b6f10800000000000000
-      internalID: 2264078824758964181
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: impact1_10
-      rect:
-        serializedVersion: 2
-        x: 1001
-        y: 169
-        width: 14
-        height: 15
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 9819f1a35c05f72e0800000000000000
-      internalID: -2125891691081657975
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: impact1_11
-      rect:
-        serializedVersion: 2
-        x: 126
-        y: 106
-        width: 41
-        height: 44
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 72d887ffe2544ea50800000000000000
-      internalID: 6549435826260446503
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: impact1_12
-      rect:
-        serializedVersion: 2
-        x: 727
-        y: 137
-        width: 36
-        height: 19
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 9ce4bada572123d00800000000000000
-      internalID: 950842767962754761
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: impact1_13
-      rect:
-        serializedVersion: 2
-        x: 1012
-        y: 136
-        width: 18
-        height: 12
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 7d5713bb5ddda2670800000000000000
-      internalID: 8514861955535697367
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: impact1_14
-      rect:
-        serializedVersion: 2
-        x: 1040
-        y: 126
-        width: 23
-        height: 15
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: d5b2e3646f491efc0800000000000000
-      internalID: -3467326452637226147
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: impact1_15
-      rect:
-        serializedVersion: 2
-        x: 718
-        y: 100
-        width: 81
-        height: 36
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: c071fb83161433e00800000000000000
-      internalID: 1023233426162915084
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: impact1_16
-      rect:
-        serializedVersion: 2
-        x: 1010
-        y: 119
-        width: 11
-        height: 10
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 80afdcf2c8cd27df0800000000000000
-      internalID: -183842140113208824
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: impact1_17
-      rect:
-        serializedVersion: 2
-        x: 1059
-        y: 119
-        width: 30
-        height: 10
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 076d91927e4d79c00800000000000000
-      internalID: 907427939230537328
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: impact1_18
-      rect:
-        serializedVersion: 2
-        x: 648
-        y: 0
-        width: 35
-        height: 94
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 9fe7e191734a204d0800000000000000
-      internalID: -3169790631163822343
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: impact1_19
-      rect:
-        serializedVersion: 2
-        x: 909
-        y: 33
-        width: 15
-        height: 22
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: cb435e144c9ea0950800000000000000
-      internalID: 6416197648271094972
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     outline: []
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 8a0a0f7e7d5a44faa9e63088fa0da50f
     internalID: 0
     vertices: []
     indices: 
@@ -651,24 +299,9 @@ TextureImporter:
     nameFileIdTable:
       impact1_0: -829537993835310395
       impact1_1: -1031435255787379254
-      impact1_10: -2125891691081657975
-      impact1_11: 6549435826260446503
-      impact1_12: 950842767962754761
-      impact1_13: 8514861955535697367
-      impact1_14: -3467326452637226147
-      impact1_15: 1023233426162915084
-      impact1_16: -183842140113208824
-      impact1_17: 907427939230537328
-      impact1_18: -3169790631163822343
-      impact1_19: 6416197648271094972
       impact1_2: 7122971607061458855
       impact1_3: -4290161194751907967
       impact1_4: -2871082549776547452
-      impact1_5: -7937513098758913127
-      impact1_6: 624052727181968209
-      impact1_7: 1776734141847204088
-      impact1_8: 8526879375507278375
-      impact1_9: 2264078824758964181
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

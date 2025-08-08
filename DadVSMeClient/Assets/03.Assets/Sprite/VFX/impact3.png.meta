@@ -181,12 +181,12 @@ TextureImporter:
       name: impact3_0
       rect:
         serializedVersion: 2
-        x: 1110
-        y: 851
-        width: 88
-        height: 110
+        x: 0
+        y: 556
+        width: 464
+        height: 556
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -203,12 +203,12 @@ TextureImporter:
       name: impact3_1
       rect:
         serializedVersion: 2
-        x: 1141
-        y: 818
-        width: 185
-        height: 212
+        x: 464
+        y: 556
+        width: 464
+        height: 556
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -225,12 +225,12 @@ TextureImporter:
       name: impact3_2
       rect:
         serializedVersion: 2
-        x: 1585
-        y: 876
-        width: 55
-        height: 147
+        x: 928
+        y: 556
+        width: 464
+        height: 556
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -247,12 +247,12 @@ TextureImporter:
       name: impact3_3
       rect:
         serializedVersion: 2
-        x: 1621
-        y: 909
-        width: 100
-        height: 130
+        x: 1392
+        y: 556
+        width: 464
+        height: 556
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -265,231 +265,11 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
-    - serializedVersion: 2
-      name: impact3_4
-      rect:
-        serializedVersion: 2
-        x: 1655
-        y: 906
-        width: 202
-        height: 206
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 31e5124bbcdfa8810800000000000000
-      internalID: 1768504855038615059
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: impact3_5
-      rect:
-        serializedVersion: 2
-        x: 166
-        y: 783
-        width: 61
-        height: 66
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: f7175e629f03a6120800000000000000
-      internalID: 2407790797440512383
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: impact3_6
-      rect:
-        serializedVersion: 2
-        x: 580
-        y: 703
-        width: 159
-        height: 201
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 3e163fe46c49fbb40800000000000000
-      internalID: 5458244852845339107
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: impact3_7
-      rect:
-        serializedVersion: 2
-        x: 980
-        y: 573
-        width: 156
-        height: 279
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 2e8a420c7b928ee10800000000000000
-      internalID: 2227075884914092258
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: impact3_8
-      rect:
-        serializedVersion: 2
-        x: 1391
-        y: 848
-        width: 77
-        height: 33
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 43a645a1b24303d00800000000000000
-      internalID: 950316881105152564
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: impact3_9
-      rect:
-        serializedVersion: 2
-        x: 1678
-        y: 822
-        width: 100
-        height: 28
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: cd1a6982662d8edb0800000000000000
-      internalID: -4762325269734841892
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: impact3_10
-      rect:
-        serializedVersion: 2
-        x: 1446
-        y: 726
-        width: 79
-        height: 62
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 2ef236a36c2a7aef0800000000000000
-      internalID: -96929894698373150
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: impact3_11
-      rect:
-        serializedVersion: 2
-        x: 1520
-        y: 657
-        width: 33
-        height: 70
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: f60851e8788131bb0800000000000000
-      internalID: -4966598993576099729
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: impact3_12
-      rect:
-        serializedVersion: 2
-        x: 1561
-        y: 682
-        width: 20
-        height: 47
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 811d633b9f55b15e0800000000000000
-      internalID: -1937860683710934760
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: impact3_13
-      rect:
-        serializedVersion: 2
-        x: 1489
-        y: 555
-        width: 53
-        height: 127
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: ee2a30108443469c0800000000000000
-      internalID: -3934962690555665682
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     outline: []
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 3c876e14b67c74231a45cc0a014f87b7
     internalID: 0
     vertices: []
     indices: 
@@ -501,18 +281,8 @@ TextureImporter:
     nameFileIdTable:
       impact3_0: -110177686270182269
       impact3_1: 3114540785629187600
-      impact3_10: -96929894698373150
-      impact3_11: -4966598993576099729
-      impact3_12: -1937860683710934760
-      impact3_13: -3934962690555665682
       impact3_2: 9148158986463156102
       impact3_3: 3604938935961929999
-      impact3_4: 1768504855038615059
-      impact3_5: 2407790797440512383
-      impact3_6: 5458244852845339107
-      impact3_7: 2227075884914092258
-      impact3_8: 950316881105152564
-      impact3_9: -4762325269734841892
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

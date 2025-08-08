@@ -157,12 +157,12 @@ TextureImporter:
       name: sunchips_juggle_crazy_0
       rect:
         serializedVersion: 2
-        x: 106
-        y: 91
-        width: 379
-        height: 276
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 0
+        y: 0
+        width: 532
+        height: 454
+      alignment: 9
+      pivot: {x: 0.595, y: 0.41}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -179,12 +179,12 @@ TextureImporter:
       name: sunchips_juggle_crazy_1
       rect:
         serializedVersion: 2
-        x: 638
-        y: 65
-        width: 380
-        height: 342
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 532
+        y: 0
+        width: 532
+        height: 454
+      alignment: 9
+      pivot: {x: 0.595, y: 0.41}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -201,12 +201,12 @@ TextureImporter:
       name: sunchips_juggle_crazy_2
       rect:
         serializedVersion: 2
-        x: 1157
-        y: 44
-        width: 392
-        height: 385
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1064
+        y: 0
+        width: 532
+        height: 454
+      alignment: 9
+      pivot: {x: 0.595, y: 0.41}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -223,12 +223,12 @@ TextureImporter:
       name: sunchips_juggle_crazy_3
       rect:
         serializedVersion: 2
-        x: 1661
-        y: 23
-        width: 440
-        height: 431
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1596
+        y: 0
+        width: 532
+        height: 454
+      alignment: 9
+      pivot: {x: 0.595, y: 0.41}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -245,12 +245,12 @@ TextureImporter:
       name: sunchips_juggle_crazy_4
       rect:
         serializedVersion: 2
-        x: 2234
-        y: 91
-        width: 379
-        height: 276
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 2128
+        y: 0
+        width: 532
+        height: 454
+      alignment: 9
+      pivot: {x: 0.595, y: 0.41}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -263,33 +263,11 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
-    - serializedVersion: 2
-      name: sunchips_juggle_crazy_5
-      rect:
-        serializedVersion: 2
-        x: 2302
-        y: 338
-        width: 45
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: bd8dac14a94c09240800000000000000
-      internalID: 4796549769957398747
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     outline: []
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 2a244dcbf662c43f0b85a8364886b2eb
     internalID: 0
     vertices: []
     indices: 
@@ -304,7 +282,6 @@ TextureImporter:
       sunchips_juggle_crazy_2: 6070579531037489806
       sunchips_juggle_crazy_3: 3977382929575633189
       sunchips_juggle_crazy_4: 6087705307013788484
-      sunchips_juggle_crazy_5: 4796549769957398747
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

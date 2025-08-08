@@ -158,11 +158,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 0
-        width: 248
-        height: 474
+        y: 237
+        width: 247
+        height: 237
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -179,12 +179,12 @@ TextureImporter:
       name: ninja_1
       rect:
         serializedVersion: 2
-        x: 246
-        y: 236
-        width: 249
-        height: 238
+        x: 247
+        y: 237
+        width: 247
+        height: 237
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -201,12 +201,12 @@ TextureImporter:
       name: ninja_2
       rect:
         serializedVersion: 2
-        x: 493
-        y: 236
-        width: 249
-        height: 238
+        x: 494
+        y: 237
+        width: 247
+        height: 237
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -223,12 +223,12 @@ TextureImporter:
       name: ninja_3
       rect:
         serializedVersion: 2
-        x: 740
-        y: 236
-        width: 249
-        height: 238
+        x: 741
+        y: 237
+        width: 247
+        height: 237
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -245,12 +245,12 @@ TextureImporter:
       name: ninja_4
       rect:
         serializedVersion: 2
-        x: 987
-        y: 236
-        width: 249
-        height: 238
+        x: 988
+        y: 237
+        width: 247
+        height: 237
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -267,12 +267,12 @@ TextureImporter:
       name: ninja_5
       rect:
         serializedVersion: 2
-        x: 1234
-        y: 236
-        width: 248
-        height: 238
+        x: 1235
+        y: 237
+        width: 247
+        height: 237
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -285,11 +285,33 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: ninja_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 247
+        height: 237
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1c20706b23624d11ae8eaeefb5a0481
+      internalID: 35691403
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 38a1f9a5b6deb429abe6c7859c03bf18
     internalID: 0
     vertices: []
     indices: 
@@ -305,6 +327,8 @@ TextureImporter:
       ninja_3: 6895404226505592437
       ninja_4: -7284473103597384837
       ninja_5: -9034525157243315170
+      ninja_6: 35691403
+      ninja_7: 146380345
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

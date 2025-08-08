@@ -157,12 +157,12 @@ TextureImporter:
       name: sunchips_bounce2_crazy_0
       rect:
         serializedVersion: 2
-        x: 106
-        y: 91
-        width: 379
-        height: 276
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 0
+        y: 0
+        width: 532
+        height: 454
+      alignment: 9
+      pivot: {x: 0.6, y: 0.42}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -179,12 +179,12 @@ TextureImporter:
       name: sunchips_bounce2_crazy_1
       rect:
         serializedVersion: 2
-        x: 638
-        y: 65
-        width: 380
-        height: 342
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 532
+        y: 0
+        width: 532
+        height: 454
+      alignment: 9
+      pivot: {x: 0.6, y: 0.42}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -201,12 +201,12 @@ TextureImporter:
       name: sunchips_bounce2_crazy_2
       rect:
         serializedVersion: 2
-        x: 1157
-        y: 44
-        width: 392
-        height: 385
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1064
+        y: 0
+        width: 532
+        height: 454
+      alignment: 9
+      pivot: {x: 0.6, y: 0.42}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -223,12 +223,12 @@ TextureImporter:
       name: sunchips_bounce2_crazy_3
       rect:
         serializedVersion: 2
-        x: 1661
-        y: 23
-        width: 440
-        height: 431
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1596
+        y: 0
+        width: 532
+        height: 454
+      alignment: 9
+      pivot: {x: 0.6, y: 0.42}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -245,12 +245,12 @@ TextureImporter:
       name: sunchips_bounce2_crazy_4
       rect:
         serializedVersion: 2
-        x: 2234
-        y: 91
-        width: 379
-        height: 276
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 2128
+        y: 0
+        width: 532
+        height: 454
+      alignment: 9
+      pivot: {x: 0.6, y: 0.42}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -263,33 +263,11 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
-    - serializedVersion: 2
-      name: sunchips_bounce2_crazy_5
-      rect:
-        serializedVersion: 2
-        x: 2302
-        y: 338
-        width: 45
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: d4accca1d668772c0800000000000000
-      internalID: -4433927504963777971
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     outline: []
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: f75e7af7ddcee48d7b2eed777ae47d06
     internalID: 0
     vertices: []
     indices: 
@@ -304,7 +282,6 @@ TextureImporter:
       sunchips_bounce2_crazy_2: -2803967671164689289
       sunchips_bounce2_crazy_3: -336927926596015196
       sunchips_bounce2_crazy_4: 239859262518831641
-      sunchips_bounce2_crazy_5: -4433927504963777971
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

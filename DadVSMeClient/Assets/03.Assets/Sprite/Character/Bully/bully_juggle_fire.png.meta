@@ -166,12 +166,12 @@ TextureImporter:
       name: bully_juggle_fire_0
       rect:
         serializedVersion: 2
-        x: 86
-        y: 161
-        width: 34
-        height: 42
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 0
+        y: 0
+        width: 532
+        height: 454
+      alignment: 9
+      pivot: {x: 0.555, y: 0.425}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -188,12 +188,12 @@ TextureImporter:
       name: bully_juggle_fire_1
       rect:
         serializedVersion: 2
-        x: 123
-        y: 73
-        width: 372
-        height: 286
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 532
+        y: 0
+        width: 532
+        height: 454
+      alignment: 9
+      pivot: {x: 0.555, y: 0.425}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -210,12 +210,12 @@ TextureImporter:
       name: bully_juggle_fire_2
       rect:
         serializedVersion: 2
-        x: 604
-        y: 172
-        width: 26
-        height: 38
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1064
+        y: 0
+        width: 532
+        height: 454
+      alignment: 9
+      pivot: {x: 0.555, y: 0.425}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -232,12 +232,12 @@ TextureImporter:
       name: bully_juggle_fire_3
       rect:
         serializedVersion: 2
-        x: 650
-        y: 81
-        width: 382
-        height: 272
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1596
+        y: 0
+        width: 532
+        height: 454
+      alignment: 9
+      pivot: {x: 0.555, y: 0.425}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -254,12 +254,12 @@ TextureImporter:
       name: bully_juggle_fire_4
       rect:
         serializedVersion: 2
-        x: 1131
-        y: 81
-        width: 437
-        height: 270
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 2128
+        y: 0
+        width: 532
+        height: 454
+      alignment: 9
+      pivot: {x: 0.555, y: 0.425}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -272,99 +272,11 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
-    - serializedVersion: 2
-      name: bully_juggle_fire_5
-      rect:
-        serializedVersion: 2
-        x: 1645
-        y: 81
-        width: 447
-        height: 257
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: d52ae56af00f72f50800000000000000
-      internalID: 6856712907701264989
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: bully_juggle_fire_6
-      rect:
-        serializedVersion: 2
-        x: 2177
-        y: 81
-        width: 453
-        height: 267
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: f3b907220323d8250800000000000000
-      internalID: 5948465865143917375
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: bully_juggle_fire_7
-      rect:
-        serializedVersion: 2
-        x: 74
-        y: 87
-        width: 83
-        height: 57
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: c299106b4fff12200800000000000000
-      internalID: 153685288797968684
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: bully_juggle_fire_8
-      rect:
-        serializedVersion: 2
-        x: 587
-        y: 99
-        width: 54
-        height: 41
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: d639dcd2f8a1e1a00800000000000000
-      internalID: 729049391931691885
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     outline: []
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: e3d34478041e14f34a8b52d096e53edb
     internalID: 0
     vertices: []
     indices: 
@@ -379,10 +291,6 @@ TextureImporter:
       bully_juggle_fire_2: -6685816227066068236
       bully_juggle_fire_3: -1131936899973872376
       bully_juggle_fire_4: -6080778572322797813
-      bully_juggle_fire_5: 6856712907701264989
-      bully_juggle_fire_6: 5948465865143917375
-      bully_juggle_fire_7: 153685288797968684
-      bully_juggle_fire_8: 729049391931691885
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -166,12 +166,12 @@ TextureImporter:
       name: bully_bounce1_fire_0
       rect:
         serializedVersion: 2
-        x: 86
-        y: 161
-        width: 34
-        height: 42
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 0
+        y: 0
+        width: 537
+        height: 449
+      alignment: 9
+      pivot: {x: 0.57, y: 0.435}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -188,12 +188,12 @@ TextureImporter:
       name: bully_bounce1_fire_1
       rect:
         serializedVersion: 2
-        x: 116
-        y: 73
-        width: 379
-        height: 287
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 537
+        y: 0
+        width: 537
+        height: 449
+      alignment: 9
+      pivot: {x: 0.57, y: 0.435}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -210,12 +210,12 @@ TextureImporter:
       name: bully_bounce1_fire_2
       rect:
         serializedVersion: 2
-        x: 609
-        y: 173
-        width: 26
-        height: 38
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1074
+        y: 0
+        width: 537
+        height: 449
+      alignment: 9
+      pivot: {x: 0.57, y: 0.435}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -232,12 +232,12 @@ TextureImporter:
       name: bully_bounce1_fire_3
       rect:
         serializedVersion: 2
-        x: 653
-        y: 83
-        width: 384
-        height: 271
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1611
+        y: 0
+        width: 537
+        height: 449
+      alignment: 9
+      pivot: {x: 0.57, y: 0.435}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -254,12 +254,12 @@ TextureImporter:
       name: bully_bounce1_fire_4
       rect:
         serializedVersion: 2
-        x: 1141
-        y: 83
-        width: 437
-        height: 269
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 2148
+        y: 0
+        width: 537
+        height: 449
+      alignment: 9
+      pivot: {x: 0.57, y: 0.435}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -272,99 +272,11 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
-    - serializedVersion: 2
-      name: bully_bounce1_fire_5
-      rect:
-        serializedVersion: 2
-        x: 1660
-        y: 83
-        width: 447
-        height: 256
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 8d712ce2e5e8aecc0800000000000000
-      internalID: -3680973210259417128
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: bully_bounce1_fire_6
-      rect:
-        serializedVersion: 2
-        x: 2197
-        y: 83
-        width: 453
-        height: 266
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 3a35f46b8c71bb040800000000000000
-      internalID: 4664347989891830691
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: bully_bounce1_fire_7
-      rect:
-        serializedVersion: 2
-        x: 74
-        y: 87
-        width: 83
-        height: 57
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: c636a74460ddbc8e0800000000000000
-      internalID: -1671999817649593492
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: bully_bounce1_fire_8
-      rect:
-        serializedVersion: 2
-        x: 592
-        y: 99
-        width: 54
-        height: 41
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: b9578c7cc0dc855d0800000000000000
-      internalID: -3073481290905258597
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     outline: []
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: a24a18992329348b099fc7c65e2071e6
     internalID: 0
     vertices: []
     indices: 
@@ -379,10 +291,6 @@ TextureImporter:
       bully_bounce1_fire_2: 2613973392528059643
       bully_bounce1_fire_3: -4931707953488543984
       bully_bounce1_fire_4: -1343676310199336787
-      bully_bounce1_fire_5: -3680973210259417128
-      bully_bounce1_fire_6: 4664347989891830691
-      bully_bounce1_fire_7: -1671999817649593492
-      bully_bounce1_fire_8: -3073481290905258597
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
