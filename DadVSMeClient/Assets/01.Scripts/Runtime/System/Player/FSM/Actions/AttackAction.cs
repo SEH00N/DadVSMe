@@ -1,4 +1,4 @@
-using DadVSMe.Players.Animations;
+using DadVSMe.Entities;
 using H00N.AI.FSM;
 
 namespace DadVSMe.Players.FSM
@@ -22,14 +22,14 @@ namespace DadVSMe.Players.FSM
             fsmData.isComboReading = false;
             fsmData.isComboFailed = false;
 
-            playerAnimator.RemoveAnimationEventListener(EPlayerAnimationEventType.Trigger, HandleAnimationTriggerEvent);
-            playerAnimator.AddAnimationEventListener(EPlayerAnimationEventType.Trigger, HandleAnimationTriggerEvent);
+            playerAnimator.RemoveAnimationEventListener(EEntityAnimationEventType.Trigger, HandleAnimationTriggerEvent);
+            playerAnimator.AddAnimationEventListener(EEntityAnimationEventType.Trigger, HandleAnimationTriggerEvent);
 
-            playerAnimator.RemoveAnimationEventListener(EPlayerAnimationEventType.ComboReadingStart, HandleAnimationComboReadingStartEvent);
-            playerAnimator.AddAnimationEventListener(EPlayerAnimationEventType.ComboReadingStart, HandleAnimationComboReadingStartEvent);
+            playerAnimator.RemoveAnimationEventListener(EEntityAnimationEventType.ComboReadingStart, HandleAnimationComboReadingStartEvent);
+            playerAnimator.AddAnimationEventListener(EEntityAnimationEventType.ComboReadingStart, HandleAnimationComboReadingStartEvent);
 
-            playerAnimator.RemoveAnimationEventListener(EPlayerAnimationEventType.ComboReadingEnd, HandleAnimationComboReadingEndEvent);
-            playerAnimator.AddAnimationEventListener(EPlayerAnimationEventType.ComboReadingEnd, HandleAnimationComboReadingEndEvent);
+            playerAnimator.RemoveAnimationEventListener(EEntityAnimationEventType.ComboReadingEnd, HandleAnimationComboReadingEndEvent);
+            playerAnimator.AddAnimationEventListener(EEntityAnimationEventType.ComboReadingEnd, HandleAnimationComboReadingEndEvent);
         }
 
         public override void ExitState()
@@ -39,22 +39,22 @@ namespace DadVSMe.Players.FSM
             fsmData.isComboReading = false;
             fsmData.isComboFailed = false;
 
-            playerAnimator.RemoveAnimationEventListener(EPlayerAnimationEventType.Trigger, HandleAnimationTriggerEvent);
-            playerAnimator.RemoveAnimationEventListener(EPlayerAnimationEventType.ComboReadingStart, HandleAnimationComboReadingStartEvent);
-            playerAnimator.RemoveAnimationEventListener(EPlayerAnimationEventType.ComboReadingEnd, HandleAnimationComboReadingEndEvent);
+            playerAnimator.RemoveAnimationEventListener(EEntityAnimationEventType.Trigger, HandleAnimationTriggerEvent);
+            playerAnimator.RemoveAnimationEventListener(EEntityAnimationEventType.ComboReadingStart, HandleAnimationComboReadingStartEvent);
+            playerAnimator.RemoveAnimationEventListener(EEntityAnimationEventType.ComboReadingEnd, HandleAnimationComboReadingEndEvent);
         }
 
-        private void HandleAnimationTriggerEvent(PlayerAnimationEventData eventData)
+        private void HandleAnimationTriggerEvent(EntityAnimationEventData eventData)
         {
             // Hit Enemy
         }
 
-        private void HandleAnimationComboReadingStartEvent(PlayerAnimationEventData eventData)
+        private void HandleAnimationComboReadingStartEvent(EntityAnimationEventData eventData)
         {
             fsmData.isComboReading = true;
         }
 
-        private void HandleAnimationComboReadingEndEvent(PlayerAnimationEventData eventData)
+        private void HandleAnimationComboReadingEndEvent(EntityAnimationEventData eventData)
         {
             if(fsmData.isComboReading)
                 fsmData.isComboFailed = true;

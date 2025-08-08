@@ -1,4 +1,4 @@
-using DadVSMe.Players.Animations;
+using DadVSMe.Entities;
 using UnityEngine;
 using System;
 using System.Collections.Generic;
@@ -8,7 +8,7 @@ namespace DadVSMe.Players
     public class PlayerAnimator : MonoBehaviour
     {
         [SerializeField] Animator animator = null;
-        [SerializeField] PlayerAnimationEventListener animationEventListener = null;
+        [SerializeField] EntityAnimationEventListener animationEventListener = null;
 
         private const string DEFAULT_ANIMATION_NAME = "Idle";
         private Dictionary<string, int> animationHashTable = new Dictionary<string, int>();
@@ -40,7 +40,7 @@ namespace DadVSMe.Players
             transform.rotation = Quaternion.Euler(0, targetAngle, 0);
         }
 
-        public void AddAnimationEventListener(EPlayerAnimationEventType eventType, Action<PlayerAnimationEventData> action) => animationEventListener.AddEventListener(eventType, action);
-        public void RemoveAnimationEventListener(EPlayerAnimationEventType eventType, Action<PlayerAnimationEventData> action) => animationEventListener.RemoveEventListener(eventType, action);
+        public void AddAnimationEventListener(EEntityAnimationEventType eventType, Action<EntityAnimationEventData> action) => animationEventListener.AddEventListener(eventType, action);
+        public void RemoveAnimationEventListener(EEntityAnimationEventType eventType, Action<EntityAnimationEventData> action) => animationEventListener.RemoveEventListener(eventType, action);
     }
 }

@@ -1,6 +1,6 @@
-namespace DadVSMe.Players.Animations
+namespace DadVSMe.Entities
 {
-    public enum EPlayerAnimationEventType
+    public enum EEntityAnimationEventType
     {
         None,
         Start,

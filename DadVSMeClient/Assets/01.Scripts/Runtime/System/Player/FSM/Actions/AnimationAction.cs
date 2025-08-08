@@ -1,5 +1,5 @@
 using System.Collections.Generic;
-using DadVSMe.Players.Animations;
+using DadVSMe.Entities;
 using H00N.AI.FSM;
 using UnityEngine;
 using UnityEngine.Events;
@@ -11,12 +11,12 @@ namespace DadVSMe.Players.FSM
         [System.Serializable]
         private struct AnimationEventData
         {
-            public EPlayerAnimationEventType eventType;
+            public EEntityAnimationEventType eventType;
             public UnityEvent @event;
         }
 
         [SerializeField] AnimationEventData[] animationEventDatas = null;
-        [SerializeField] Dictionary<EPlayerAnimationEventType, UnityEvent> animationEventDictionary = new Dictionary<EPlayerAnimationEventType, UnityEvent>();
+        [SerializeField] Dictionary<EEntityAnimationEventType, UnityEvent> animationEventDictionary = new Dictionary<EEntityAnimationEventType, UnityEvent>();
 
         private PlayerAnimator playerAnimator = null;
 
@@ -33,7 +33,7 @@ namespace DadVSMe.Players.FSM
         {
             base.EnterState();
 
-            foreach(EPlayerAnimationEventType eventType in animationEventDictionary.Keys)
+            foreach(EEntityAnimationEventType eventType in animationEventDictionary.Keys)
                 playerAnimator.AddAnimationEventListener(eventType, HandleAnimationEvent);
         }
 
@@ -41,11 +41,11 @@ namespace DadVSMe.Players.FSM
         {
             base.ExitState();
 
-            foreach(EPlayerAnimationEventType eventType in animationEventDictionary.Keys)
+            foreach(EEntityAnimationEventType eventType in animationEventDictionary.Keys)
                 playerAnimator.RemoveAnimationEventListener(eventType, HandleAnimationEvent);
         }
 
-        private void HandleAnimationEvent(PlayerAnimationEventData eventData)
+        private void HandleAnimationEvent(EntityAnimationEventData eventData)
         {
             if(animationEventDictionary.TryGetValue(eventData.eventType, out UnityEvent @event) == false)
                 return;

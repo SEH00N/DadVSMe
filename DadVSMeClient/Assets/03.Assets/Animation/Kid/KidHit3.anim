@@ -7345,4 +7345,18 @@ AnimationClip:
     flags: 0
   m_HasGenericRootTransform: 1
   m_HasMotionFloatCurves: 0
-  m_Events: []
+  m_Events:
+  - time: 0
+    functionName: OnAnimationEvent
+    data: 
+    objectReferenceParameter: {fileID: 11400000, guid: b4b19bb7b4048471e847b7aae61158c1, type: 2}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 0.26666668
+    functionName: OnAnimationEvent
+    data: 
+    objectReferenceParameter: {fileID: 11400000, guid: 8935d4c15f4544e8093d3baaccb24fd5, type: 2}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
