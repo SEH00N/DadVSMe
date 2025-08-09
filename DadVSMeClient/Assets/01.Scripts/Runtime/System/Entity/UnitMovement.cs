@@ -2,9 +2,9 @@ using UnityEngine;
 
 namespace DadVSMe
 {
-    public class EntityMovement : MonoBehaviour
+    public class UnitMovement : MonoBehaviour
     {
-        [SerializeField] Rigidbody2D entityRigidbody;
+        [SerializeField] Rigidbody2D unitRigidbody;
 
         private bool isActive = false;
         public bool IsActive => isActive;
@@ -14,14 +14,11 @@ namespace DadVSMe
 
         public void SetActive(bool isActive)
         {
-            if(this.isActive == isActive)
-                return;
-
             this.isActive = isActive;
             if(movementVelocity != Vector2.zero)
             {
                 movementVelocity = Vector2.zero;
-                entityRigidbody.linearVelocity = Vector2.zero;
+                unitRigidbody.linearVelocity = Vector2.zero;
             }
         }
 
@@ -40,7 +37,7 @@ namespace DadVSMe
             if(isActive == false)
                 return;
 
-            entityRigidbody.linearVelocity = movementVelocity;
+            unitRigidbody.linearVelocity = movementVelocity;
         }
     }
 }

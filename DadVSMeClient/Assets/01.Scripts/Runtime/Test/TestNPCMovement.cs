@@ -1,5 +1,5 @@
 using UnityEngine;
-using DadVSMe.NPCs;
+using DadVSMe.Entities;
 
 namespace DadVSMe.Tests
 {

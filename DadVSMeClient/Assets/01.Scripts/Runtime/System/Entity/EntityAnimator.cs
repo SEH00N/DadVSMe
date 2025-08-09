@@ -1,16 +1,17 @@
-using DadVSMe.Entities;
 using UnityEngine;
 using System;
 using System.Collections.Generic;
 
-namespace DadVSMe.Players
+namespace DadVSMe.Entities
 {
-    public class PlayerAnimator : MonoBehaviour
+    public class EntityAnimator : MonoBehaviour
     {
+        [SerializeField] string defaultAnimationName = "Idle";
+
+        [Space(10f)]
         [SerializeField] Animator animator = null;
         [SerializeField] EntityAnimationEventListener animationEventListener = null;
 
-        private const string DEFAULT_ANIMATION_NAME = "Idle";
         private Dictionary<string, int> animationHashTable = new Dictionary<string, int>();
 
         public void Initialize()
@@ -19,7 +20,7 @@ namespace DadVSMe.Players
             PlayDefaultAnimation();
         }
 
-        public void PlayDefaultAnimation() => PlayAnimation(DEFAULT_ANIMATION_NAME);
+        public void PlayDefaultAnimation() => PlayAnimation(defaultAnimationName);
         public void PlayAnimation(string animationName)
         {
             if(animationHashTable.TryGetValue(animationName, out int hash) == false)
@@ -33,11 +34,11 @@ namespace DadVSMe.Players
 
         public void SetRotation(bool isRight)
         {
-            float targetAngle = isRight ? 0 : 180;
-            if(transform.eulerAngles.y == targetAngle)
+            float targetScaleX = isRight ? 1 : -1;
+            if(transform.localScale.x == targetScaleX)
                 return;
 
-            transform.rotation = Quaternion.Euler(0, targetAngle, 0);
+            transform.localScale = new Vector3(targetScaleX, 1, 1);
         }
 
         public void AddAnimationEventListener(EEntityAnimationEventType eventType, Action<EntityAnimationEventData> action) => animationEventListener.AddEventListener(eventType, action);

@@ -1,14 +1,11 @@
-using H00N.AI.FSM;
+using DadVSMe.Entities;
 using UnityEngine;
 
 namespace DadVSMe.Players
 {
-    public class Player : MonoBehaviour
+    public class Player : Unit
     {
-        [SerializeField] FSMBrain fsmBrain = null;
         [SerializeField] PlayerEnemyDetector enemyDetector = null;
-        [SerializeField] PlayerAnimator playerAnimator = null;
-        [SerializeField] EntityMovement entityMovement = null;
 
         // Debug
         private void Start()
@@ -16,24 +13,10 @@ namespace DadVSMe.Players
             Initialize();
         }
 
-        public void Initialize()
+        public override void Initialize()
         {
-            playerAnimator.Initialize();
+            base.Initialize();
             enemyDetector.Initialize();
-
-            fsmBrain.Initialize();
-            fsmBrain.SetAsDefaultState();
-        }
-
-        private void LateUpdate()
-        {
-            if(entityMovement == null)
-                return;
-
-            if(entityMovement.IsActive == false)
-                return;
-
-            playerAnimator.SetRotation(entityMovement.MovementVelocity.x > 0);
         }
 
         #if UNITY_EDITOR

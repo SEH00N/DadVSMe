@@ -29,9 +29,18 @@ namespace DadVSMe.Players.FSM
                 return;
             }
 
+            if(entity.TryGetComponent<IGrabbable>(out IGrabbable grabbable) == false)
+            {
+                brain.SetAsDefaultState();
+                return;
+            }
+
+            grabbable.Grab(fsmData.player);
+
             fsmData.grabbedEntity = entity;
             fsmData.grabbedEntity.transform.SetParent(fsmData.grabPosition);
             fsmData.grabbedEntity.transform.localPosition = Vector3.zero;
+            fsmData.grabbedEntity.transform.localScale = new Vector3(-1, 1, 1);
         }
     }
 }

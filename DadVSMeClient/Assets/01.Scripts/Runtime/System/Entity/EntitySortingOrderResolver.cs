@@ -5,6 +5,8 @@ namespace DadVSMe.Entities
 {
     public class EntitySortingOrderResolver : MonoBehaviour
     {
+        private const int SORTING_ORDER_OFFSET = 1000;
+
         [SerializeField] EntitySortingOrderProvider entitySortingOrderProvider = null;
         private HashSet<EntitySortingOrderProvider> overlappedSortingOrderProviders = null;
 
@@ -67,7 +69,7 @@ namespace DadVSMe.Entities
             foreach(var otherSortingOrderProvider in overlappedSortingOrderProviders)
                 minSortingOrder = Mathf.Min(minSortingOrder, otherSortingOrderProvider.GetSortingOrder());
 
-            int targetSortingOrder = minSortingOrder == int.MaxValue ? 0 : minSortingOrder - 1;
+            int targetSortingOrder = minSortingOrder == int.MaxValue ? 0 : minSortingOrder - SORTING_ORDER_OFFSET;
             entitySortingOrderProvider.SetSortingOrder(targetSortingOrder);
         }
 

@@ -5,14 +5,14 @@ namespace DadVSMe.Players.FSM
 {
     public class AttackAction : FSMAction
     {
-        private PlayerAnimator playerAnimator = null;
+        private EntityAnimator playerAnimator = null;
         private PlayerFSMData fsmData = null;
 
         public override void Init(FSMBrain brain, FSMState state)
         {
             base.Init(brain, state);
             fsmData = brain.GetAIData<PlayerFSMData>();
-            playerAnimator = brain.GetComponent<PlayerAnimator>();
+            playerAnimator = brain.GetComponent<EntityAnimator>();
         }
 
         public override void EnterState()

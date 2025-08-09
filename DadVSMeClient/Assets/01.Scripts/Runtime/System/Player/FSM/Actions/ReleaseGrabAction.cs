@@ -1,3 +1,4 @@
+using DadVSMe.Entities;
 using H00N.AI.FSM;
 
 namespace DadVSMe.Players.FSM
@@ -19,8 +20,12 @@ namespace DadVSMe.Players.FSM
             if(fsmData.grabbedEntity == null)
                 return;
 
-            fsmData.grabbedEntity.transform.SetParent(null);
+            Entity grabbedEntity = fsmData.grabbedEntity;
             fsmData.grabbedEntity = null;
+
+            grabbedEntity.transform.SetParent(null);
+            if(grabbedEntity.TryGetComponent<FSMBrain>(out FSMBrain fsmBrain))
+                fsmBrain.SetAsDefaultState();
         }
     }
 }

@@ -1,19 +1,22 @@
 using UnityEngine;
 using UnityEngine.AI;
 
-namespace DadVSMe.NPCs
+namespace DadVSMe.Entities
 {
-    [RequireComponent(typeof(EntityMovement))]
+    [RequireComponent(typeof(UnitMovement))]
     [RequireComponent(typeof(NavMeshAgent))]
     public class NPCMovement : MonoBehaviour
     {
         private NavMeshAgent navMeshAgent;
-        private EntityMovement entityMovement;
+        private UnitMovement unitMovement;
+
+        private bool isActive = false;
+        public bool IsActive => isActive;
 
         private void Awake()
         {
             navMeshAgent = GetComponent<NavMeshAgent>();
-            entityMovement = GetComponent<EntityMovement>();
+            unitMovement = GetComponent<UnitMovement>();
         }
 
         private void Start()
@@ -24,9 +27,12 @@ namespace DadVSMe.NPCs
 
         private void Update()
         {
+            if(isActive == false)
+                return;
+
             if (navMeshAgent.pathPending || navMeshAgent.hasPath == false || navMeshAgent.remainingDistance <= navMeshAgent.stoppingDistance)
             {
-                entityMovement.SetMovementVelocity(Vector2.zero);
+                unitMovement.SetMovementVelocity(Vector2.zero);
                 return;
             }
 
@@ -37,7 +43,14 @@ namespace DadVSMe.NPCs
             float adjustedSpeed = Mathf.Min(navMeshAgent.speed, distance / Time.fixedDeltaTime);
 
             Vector3 targetVelocity = normalizedDirection * adjustedSpeed;
-            entityMovement.SetMovementVelocity(targetVelocity);
+            unitMovement.SetMovementVelocity(targetVelocity);
+        }
+
+        public void SetActive(bool isActive)
+        {
+            this.isActive = isActive;
+            navMeshAgent.enabled = isActive;
+            unitMovement.SetActive(isActive);
         }
 
         public void SetDestination(Vector2 destination)

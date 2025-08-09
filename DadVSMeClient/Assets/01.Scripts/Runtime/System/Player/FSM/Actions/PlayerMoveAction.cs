@@ -6,20 +6,22 @@ namespace DadVSMe.Players.FSM
 {
     public class PlayerMoveAction : FSMAction
     {
+        [SerializeField] bool isDashing = false;
+
         private PlayerFSMData fsmData = null;
-        private EntityMovement entityMovement = null;
+        private UnitMovement unitMovement = null;
 
         public override void Init(FSMBrain brain, FSMState state)
         {
             base.Init(brain, state);
-            entityMovement = brain.GetComponent<EntityMovement>();
+            unitMovement = brain.GetComponent<UnitMovement>();
             fsmData = brain.GetAIData<PlayerFSMData>();
         }
 
         public override void EnterState()
         {
             base.EnterState();
-            entityMovement.SetActive(true);
+            unitMovement.SetActive(true);
         }
 
         public override void UpdateState()
@@ -30,16 +32,16 @@ namespace DadVSMe.Players.FSM
             Vector2 movementInput = inputReader.MovementInput;
             Vector2 velocity = movementInput * fsmData.moveSpeed;
 
-            if(velocity.x != 0 && inputReader.IsDashed)
+            if(velocity.x != 0 && isDashing)
                 velocity.x = Mathf.Sign(velocity.x) * fsmData.dashSpeed;
 
-            entityMovement.SetMovementVelocity(velocity);
+            unitMovement.SetMovementVelocity(velocity);
         }
 
         public override void ExitState()
         {
             base.ExitState();
-            entityMovement.SetActive(false);
+            unitMovement.SetActive(false);
         }
     }
 }

@@ -18,12 +18,12 @@ namespace DadVSMe.Players.FSM
         [SerializeField] AnimationEventData[] animationEventDatas = null;
         [SerializeField] Dictionary<EEntityAnimationEventType, UnityEvent> animationEventDictionary = new Dictionary<EEntityAnimationEventType, UnityEvent>();
 
-        private PlayerAnimator playerAnimator = null;
+        private EntityAnimator playerAnimator = null;
 
         public override void Init(FSMBrain brain, FSMState state)
         {
             base.Init(brain, state);
-            playerAnimator = brain.GetComponent<PlayerAnimator>();
+            playerAnimator = brain.GetComponent<EntityAnimator>();
 
             foreach(AnimationEventData animationEventData in animationEventDatas)
                 animationEventDictionary[animationEventData.eventType] = animationEventData.@event;

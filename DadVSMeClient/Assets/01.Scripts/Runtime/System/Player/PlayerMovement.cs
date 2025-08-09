@@ -3,16 +3,16 @@ using DadVSMe.Inputs;
 
 namespace DadVSMe.Players
 {
-    [RequireComponent(typeof(EntityMovement))]
+    [RequireComponent(typeof(UnitMovement))]
     public class PlayerMovement : MonoBehaviour
     {
         [SerializeField] float moveSpeed = 5f;
 
-        private EntityMovement entityMovement;
+        private UnitMovement unitMovement;
 
         private void Awake()
         {
-            entityMovement = GetComponent<EntityMovement>();
+            unitMovement = GetComponent<UnitMovement>();
         }
 
         private void Update()
@@ -21,7 +21,7 @@ namespace DadVSMe.Players
             Vector2 movementInput = inputReader.MovementInput;
             if(inputReader.IsDashed)
                 movementInput.x *= 3f;
-            entityMovement.SetMovementVelocity(movementInput * moveSpeed);
+            unitMovement.SetMovementVelocity(movementInput * moveSpeed);
         }
     }
 }

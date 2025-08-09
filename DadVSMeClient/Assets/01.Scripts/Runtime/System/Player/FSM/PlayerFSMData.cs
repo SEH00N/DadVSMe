@@ -8,6 +8,8 @@ namespace DadVSMe.Players.FSM
 {
     public class PlayerFSMData : IAIData
     {
+        public Entity player = null;
+
         public Transform grabPosition = null;
         public Entity grabbedEntity = null;
 
