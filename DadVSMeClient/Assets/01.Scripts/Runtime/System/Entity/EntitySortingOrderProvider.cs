@@ -9,9 +9,9 @@ namespace DadVSMe.Entities
         [SerializeField] List<SpriteRenderer> entitySpriteRenderers = null;
 
         [SerializeField] EntitySortingOrderResolver entitySortingOrderResolver = null;
-        public EntitySortingOrderResolver EntitySortingOrderResolver => entitySortingOrderResolver;
+        public EntitySortingOrderResolver EntitySortingOrderResolver => entitySortingOrderResolver.GetCurrentSortingOrderResolver();
 
-        public event Action<EntitySortingOrderProvider> OnSortingOrderChanged;
+        public event Action<EntitySortingOrderProvider> OnSortingOrderChangedEvent;
         
         private int sortingOrder = 0;
 
@@ -20,11 +20,12 @@ namespace DadVSMe.Entities
             return sortingOrder;
         }
 
+        public void SetSortingOrder(EntitySortingOrderProvider provider) => SetSortingOrder(provider.GetSortingOrder());
         public void SetSortingOrder(int sortingOrder)
         {
             this.sortingOrder = sortingOrder;
             entitySpriteRenderers.ForEach(i => i.sortingOrder = sortingOrder);
-            OnSortingOrderChanged?.Invoke(this);
+            OnSortingOrderChangedEvent?.Invoke(this);
         }
     }
 }

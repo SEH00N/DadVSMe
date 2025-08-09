@@ -9,14 +9,20 @@ namespace DadVSMe.Entities
 
         [SerializeField] EntitySortingOrderProvider entitySortingOrderProvider = null;
         private HashSet<EntitySortingOrderProvider> overlappedSortingOrderProviders = null;
+        
+        private EntitySortingOrderResolver parent = null;
 
         private void Awake()
         {
             overlappedSortingOrderProviders = new HashSet<EntitySortingOrderProvider>();
+            parent = null;
         }
         
         private void OnTriggerEnter2D(Collider2D collider)
         {
+            if(parent != null)
+                return;
+
             if(collider.CompareTag(GameDefine.EntitySortingOrderProviderTag) == false)
                 return;
 
@@ -38,6 +44,9 @@ namespace DadVSMe.Entities
 
         private void OnTriggerExit2D(Collider2D collider)
         {
+            if(parent != null)
+                return;
+
             if(collider.CompareTag(GameDefine.EntitySortingOrderProviderTag) == false)
                 return;
 
@@ -52,6 +61,34 @@ namespace DadVSMe.Entities
 
             RemoveProvider(otherSortingOrderProvider);
             ReorderSortingOrder(otherSortingOrderProvider);
+        }
+
+        public void AddChild(EntitySortingOrderResolver child)
+        {
+            child.parent = this;
+            child.overlappedSortingOrderProviders.Clear();
+            if(overlappedSortingOrderProviders.Contains(child.entitySortingOrderProvider))
+                RemoveProvider(child.entitySortingOrderProvider);
+
+            entitySortingOrderProvider.OnSortingOrderChangedEvent -= child.entitySortingOrderProvider.SetSortingOrder;
+            entitySortingOrderProvider.OnSortingOrderChangedEvent += child.entitySortingOrderProvider.SetSortingOrder;
+
+            ReorderSortingOrder(child.entitySortingOrderProvider);
+        }
+
+        public void RemoveChild(EntitySortingOrderResolver child)
+        {
+            entitySortingOrderProvider.OnSortingOrderChangedEvent -= child.entitySortingOrderProvider.SetSortingOrder;
+            child.entitySortingOrderProvider.SetSortingOrder(0);
+            child.parent = null;
+        }
+
+        public EntitySortingOrderResolver GetCurrentSortingOrderResolver()
+        {
+            if(parent != null)
+                return parent.GetCurrentSortingOrderResolver();
+
+            return this;
         }
 
         private void ReorderSortingOrder(EntitySortingOrderProvider performer)
@@ -75,14 +112,14 @@ namespace DadVSMe.Entities
 
         private void AddProvider(EntitySortingOrderProvider sortingOrderProvider)
         {
-            sortingOrderProvider.OnSortingOrderChanged -= ReorderSortingOrder;
-            sortingOrderProvider.OnSortingOrderChanged += ReorderSortingOrder;
+            sortingOrderProvider.OnSortingOrderChangedEvent -= ReorderSortingOrder;
+            sortingOrderProvider.OnSortingOrderChangedEvent += ReorderSortingOrder;
             overlappedSortingOrderProviders.Add(sortingOrderProvider);
         }
 
         private void RemoveProvider(EntitySortingOrderProvider sortingOrderProvider)
         {
-            sortingOrderProvider.OnSortingOrderChanged -= ReorderSortingOrder;
+            sortingOrderProvider.OnSortingOrderChangedEvent -= ReorderSortingOrder;
             overlappedSortingOrderProviders.Remove(sortingOrderProvider);
         }
     }
