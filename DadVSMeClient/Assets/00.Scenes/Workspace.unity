@@ -874,8 +874,10 @@ GameObject:
   - component: {fileID: 668232989}
   - component: {fileID: 668232991}
   - component: {fileID: 668232986}
+  - component: {fileID: 668232998}
   - component: {fileID: 668232995}
   - component: {fileID: 668232997}
+  - component: {fileID: 668232999}
   - component: {fileID: 668232985}
   - component: {fileID: 668232984}
   - component: {fileID: 668232990}
@@ -1050,8 +1052,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityAnimator: {fileID: 668232997}
+  unitData: {fileID: 11400000, guid: 931765094b25c4da78e741134ebf35b4, type: 2}
   unitMovement: {fileID: 668232989}
   fsmBrain: {fileID: 668232995}
+  unitHealth: {fileID: 668232998}
+  unitAttackEventListener: {fileID: 668232999}
   grabState: {fileID: 1851159777}
 --- !u!114 &668232995
 MonoBehaviour:
@@ -1069,12 +1074,20 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   aiDataContainer:
-    aiDataList: []
+    aiDataList:
+    - wrapType: 2
+      unityObjectReference: {fileID: 0}
+      serializableObjectReference:
+        rid: 218235682233254153
   defaultState: {fileID: 803635653}
   anyState: {fileID: 0}
   references:
     version: 2
-    RefIds: []
+    RefIds:
+    - rid: 218235682233254153
+      type: {class: UnitAttackFeedbackFSMData, ns: DadVSMe.Entities, asm: DadVSMe}
+      data:
+        feedbackValue: 0
 --- !u!114 &668232997
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1090,6 +1103,50 @@ MonoBehaviour:
   defaultAnimationName: KidIdle
   animator: {fileID: 288539953}
   animationEventListener: {fileID: 288539956}
+--- !u!114 &668232998
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 668232983}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a291a51120d374a879997b596c73db3c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onAttackEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 668232999}
+        m_TargetAssemblyTypeName: DadVSMe.Entities.UnitAttackEventListener, DadVSMe
+        m_MethodName: OnAttack
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &668232999
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 668232983}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1bd0c3919e0924b2e8cd573812f1afa9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fsmBrain: {fileID: 668232995}
+  attackFeedbackTable:
+    keys: 00000000
+    values:
+    - {fileID: 966102067}
 --- !u!1 &765364903
 GameObject:
   m_ObjectHideFlags: 0
@@ -1302,6 +1359,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 668232997}
+        m_TargetAssemblyTypeName: DadVSMe.Entities.EntityAnimator, DadVSMe
+        m_MethodName: PlayAnimation
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: KidIdle
+          m_BoolArgument: 0
+        m_CallState: 2
   onStateExitEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -1396,8 +1465,115 @@ Transform:
   m_Children:
   - {fileID: 803635652}
   - {fileID: 1851159776}
+  - {fileID: 966102066}
   m_Father: {fileID: 668232988}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &966102065
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 966102066}
+  - component: {fileID: 966102068}
+  - component: {fileID: 966102067}
+  - component: {fileID: 966102069}
+  m_Layer: 0
+  m_Name: HitTest
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &966102066
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 966102065}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 883493601}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &966102067
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 966102065}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3515528adf73f471f8009033ff01c22f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  autoTransitioning: 0
+  onStateEnterEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 668232997}
+        m_TargetAssemblyTypeName: DadVSMe.Entities.EntityAnimator, DadVSMe
+        m_MethodName: PlayAnimation
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: KidGrabHit1
+          m_BoolArgument: 0
+        m_CallState: 2
+  onStateExitEvent:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &966102068
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 966102065}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72988976fd79843c3ab3a8ff64c3f74f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &966102069
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 966102065}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ed5b33c6d0df4b1a898f62ac300b33a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animationEventDatas:
+  - eventType: 2
+    event:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 668232995}
+          m_TargetAssemblyTypeName: H00N.AI.FSM.FSMBrain, H00N.AI.FSM
+          m_MethodName: ChangeState
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 1851159777}
+            m_ObjectArgumentAssemblyTypeName: H00N.AI.FSM.FSMState, H00N.AI.FSM
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &1115436943
 GameObject:
   m_ObjectHideFlags: 0
@@ -2802,10 +2978,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 5185056622014141598, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
-      propertyPath: isDashing
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 7488116858921959985, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
       propertyPath: m_LocalPosition.x
       value: -7.32

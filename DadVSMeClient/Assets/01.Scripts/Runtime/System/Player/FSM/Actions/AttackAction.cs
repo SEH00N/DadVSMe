@@ -1,10 +1,15 @@
 using DadVSMe.Entities;
 using H00N.AI.FSM;
+using UnityEngine;
 
 namespace DadVSMe.Players.FSM
 {
     public class AttackAction : FSMAction
     {
+        [SerializeField] int damage = 5;
+        [SerializeField] EAttackFeedback attackFeedback = EAttackFeedback.NormalHit1;
+        [SerializeField] float attackFeedbackValue = 1f;
+
         private EntityAnimator playerAnimator = null;
         private PlayerFSMData fsmData = null;
 
@@ -47,6 +52,11 @@ namespace DadVSMe.Players.FSM
         private void HandleAnimationTriggerEvent(EntityAnimationEventData eventData)
         {
             // Hit Enemy
+
+
+            // test
+            Unit enemyUnit = fsmData.grabbedEntity as Unit;
+            enemyUnit.UnitHealth.Attack(damage, attackFeedback, attackFeedbackValue);
         }
 
         private void HandleAnimationComboReadingStartEvent(EntityAnimationEventData eventData)

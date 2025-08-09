@@ -274,6 +274,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2319a9f8134944ef945fe6cd1abc020, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isDashing: 0
 --- !u!1 &353212765625871808
 GameObject:
   m_ObjectHideFlags: 0
@@ -351,6 +352,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a4195b623faff4dec8cb7bbb50ad6d42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damage: 5
+  attackFeedback: 0
+  attackFeedbackValue: 1
 --- !u!1 &362108127135817059
 GameObject:
   m_ObjectHideFlags: 0
@@ -591,6 +595,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2319a9f8134944ef945fe6cd1abc020, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isDashing: 0
 --- !u!1 &569119178259941232
 GameObject:
   m_ObjectHideFlags: 0
@@ -755,6 +760,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a4195b623faff4dec8cb7bbb50ad6d42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damage: 5
+  attackFeedback: 0
+  attackFeedbackValue: 1
 --- !u!1 &1037060872622075594
 GameObject:
   m_ObjectHideFlags: 0
@@ -1185,6 +1193,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a4195b623faff4dec8cb7bbb50ad6d42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damage: 5
+  attackFeedback: 0
+  attackFeedbackValue: 1
 --- !u!1 &1665590273972130149
 GameObject:
   m_ObjectHideFlags: 0
@@ -1456,6 +1467,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a4195b623faff4dec8cb7bbb50ad6d42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damage: 5
+  attackFeedback: 0
+  attackFeedbackValue: 1
 --- !u!1 &2332249100382936959
 GameObject:
   m_ObjectHideFlags: 0
@@ -1680,6 +1694,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a4195b623faff4dec8cb7bbb50ad6d42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damage: 5
+  attackFeedback: 0
+  attackFeedbackValue: 1
 --- !u!114 &2395248389426031783
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1800,6 +1817,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a4195b623faff4dec8cb7bbb50ad6d42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damage: 5
+  attackFeedback: 0
+  attackFeedbackValue: 1
 --- !u!1 &2503088556588646332
 GameObject:
   m_ObjectHideFlags: 0
@@ -1891,6 +1911,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a4195b623faff4dec8cb7bbb50ad6d42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damage: 5
+  attackFeedback: 0
+  attackFeedbackValue: 1
 --- !u!1 &2733669637937215074
 GameObject:
   m_ObjectHideFlags: 0
@@ -2572,6 +2595,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a4195b623faff4dec8cb7bbb50ad6d42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damage: 5
+  attackFeedback: 0
+  attackFeedbackValue: 1
 --- !u!1 &4080407305446476010
 GameObject:
   m_ObjectHideFlags: 0
@@ -3220,6 +3246,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a4195b623faff4dec8cb7bbb50ad6d42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damage: 5
+  attackFeedback: 0
+  attackFeedbackValue: 1
 --- !u!1 &5500857474424150516
 GameObject:
   m_ObjectHideFlags: 0
@@ -3586,6 +3615,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a4195b623faff4dec8cb7bbb50ad6d42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damage: 5
+  attackFeedback: 0
+  attackFeedbackValue: 1
 --- !u!1 &6023341065271263539
 GameObject:
   m_ObjectHideFlags: 0
@@ -4548,6 +4580,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a4195b623faff4dec8cb7bbb50ad6d42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damage: 5
+  attackFeedback: 0
+  attackFeedbackValue: 1
 --- !u!1 &7514139133212167829
 GameObject:
   m_ObjectHideFlags: 0
@@ -4646,6 +4681,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2319a9f8134944ef945fe6cd1abc020, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isDashing: 1
 --- !u!1 &7536763075872803724
 GameObject:
   m_ObjectHideFlags: 0
@@ -4737,6 +4773,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a4195b623faff4dec8cb7bbb50ad6d42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damage: 5
+  attackFeedback: 0
+  attackFeedbackValue: 1
 --- !u!1 &7555105741711015732
 GameObject:
   m_ObjectHideFlags: 0
@@ -5211,6 +5250,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a4195b623faff4dec8cb7bbb50ad6d42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damage: 5
+  attackFeedback: 0
+  attackFeedbackValue: 1
 --- !u!1 &8070469860066932729
 GameObject:
   m_ObjectHideFlags: 0
@@ -5472,6 +5514,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a4195b623faff4dec8cb7bbb50ad6d42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damage: 5
+  attackFeedback: 0
+  attackFeedbackValue: 1
 --- !u!114 &3775436521619690260
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5785,6 +5830,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a4195b623faff4dec8cb7bbb50ad6d42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damage: 5
+  attackFeedback: 0
+  attackFeedbackValue: 1
 --- !u!1 &8436350367143659442
 GameObject:
   m_ObjectHideFlags: 0
@@ -5981,6 +6029,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a4195b623faff4dec8cb7bbb50ad6d42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damage: 5
+  attackFeedback: 0
+  attackFeedbackValue: 1
 --- !u!114 &3593271418240746376
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6284,6 +6335,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a4195b623faff4dec8cb7bbb50ad6d42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damage: 5
+  attackFeedback: 0
+  attackFeedbackValue: 1
 --- !u!1 &8823108435394788813
 GameObject:
   m_ObjectHideFlags: 0
@@ -6498,6 +6552,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a4195b623faff4dec8cb7bbb50ad6d42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damage: 5
+  attackFeedback: 0
+  attackFeedbackValue: 1
 --- !u!1 &8985770963640614873
 GameObject:
   m_ObjectHideFlags: 0
@@ -6591,6 +6648,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a4195b623faff4dec8cb7bbb50ad6d42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damage: 5
+  attackFeedback: 0
+  attackFeedbackValue: 1
 --- !u!1 &8996695108358816546
 GameObject:
   m_ObjectHideFlags: 0
@@ -6603,6 +6663,8 @@ GameObject:
   - component: {fileID: 3255824088884508054}
   - component: {fileID: 279169761548483819}
   - component: {fileID: 1174489111746341445}
+  - component: {fileID: 6165701722836179940}
+  - component: {fileID: 8895890805159774065}
   - component: {fileID: 2841000604668159261}
   - component: {fileID: 1382251147719448698}
   - component: {fileID: 2812028995853360649}
@@ -6674,9 +6736,43 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityAnimator: {fileID: 1382251147719448698}
+  unitData: {fileID: 11400000, guid: c026babc38b11449db114f0431689cc4, type: 2}
   unitMovement: {fileID: 279169761548483819}
   fsmBrain: {fileID: 2841000604668159261}
+  unitHealth: {fileID: 6165701722836179940}
+  unitAttackEventListener: {fileID: 8895890805159774065}
   enemyDetector: {fileID: 2701592565279520363}
+--- !u!114 &6165701722836179940
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8996695108358816546}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a291a51120d374a879997b596c73db3c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onAttackEvent:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &8895890805159774065
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8996695108358816546}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1bd0c3919e0924b2e8cd573812f1afa9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fsmBrain: {fileID: 2841000604668159261}
+  attackFeedbackTable:
+    keys: 
+    values: []
 --- !u!114 &2841000604668159261
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6698,11 +6794,19 @@ MonoBehaviour:
       unityObjectReference: {fileID: 0}
       serializableObjectReference:
         rid: 3777565259024040135
+    - wrapType: 2
+      unityObjectReference: {fileID: 0}
+      serializableObjectReference:
+        rid: 218235682233254152
   defaultState: {fileID: 2653412275106618281}
   anyState: {fileID: 4291217451114625158}
   references:
     version: 2
     RefIds:
+    - rid: 218235682233254152
+      type: {class: UnitAttackFeedbackFSMData, ns: DadVSMe.Entities, asm: DadVSMe}
+      data:
+        feedbackValue: 0
     - rid: 3777565259024040135
       type: {class: PlayerFSMData, ns: DadVSMe.Players.FSM, asm: DadVSMe}
       data:
@@ -6906,6 +7010,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a4195b623faff4dec8cb7bbb50ad6d42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damage: 5
+  attackFeedback: 0
+  attackFeedbackValue: 1
 --- !u!1 &9135340692093757016
 GameObject:
   m_ObjectHideFlags: 0
@@ -7026,3 +7133,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a4195b623faff4dec8cb7bbb50ad6d42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damage: 5
+  attackFeedback: 0
+  attackFeedbackValue: 1
