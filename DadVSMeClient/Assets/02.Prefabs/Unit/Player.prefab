@@ -130,7 +130,7 @@ GameObject:
   - component: {fileID: 5639697409397615060}
   - component: {fileID: 2603191897232787131}
   m_Layer: 0
-  m_Name: '[Tran] Idle'
+  m_Name: '[Tran] ReleaseGrab'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -163,7 +163,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2fbc16cf8c22d4c1e9f8c9f7247cab96, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetState: {fileID: 2653412275106618281}
+  targetState: {fileID: 1773547240932069588}
 --- !u!114 &2603191897232787131
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1716,11 +1716,11 @@ MonoBehaviour:
         m_Calls:
         - m_Target: {fileID: 2841000604668159261}
           m_TargetAssemblyTypeName: H00N.AI.FSM.FSMBrain, H00N.AI.FSM
-          m_MethodName: SetAsDefaultState
-          m_Mode: 1
+          m_MethodName: ChangeState
+          m_Mode: 2
           m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_ObjectArgument: {fileID: 1773547240932069588}
+            m_ObjectArgumentAssemblyTypeName: H00N.AI.FSM.FSMState, H00N.AI.FSM
             m_IntArgument: 0
             m_FloatArgument: 0
             m_StringArgument: 
@@ -1925,6 +1925,7 @@ GameObject:
   - component: {fileID: 2814013100021727554}
   - component: {fileID: 3897684068023970099}
   - component: {fileID: 4518340953437237913}
+  - component: {fileID: 6113472226918677138}
   m_Layer: 7
   m_Name: SortingOrderResolver
   m_TagString: Untagged
@@ -1960,7 +1961,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entitySortingOrderProvider: {fileID: 4682551387214664710}
-  resolverCollider: {fileID: 4518340953437237913}
+  resolverColliders:
+  - {fileID: 4518340953437237913}
+  - {fileID: 6113472226918677138}
 --- !u!61 &4518340953437237913
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2006,6 +2009,52 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   m_Size: {x: 1.5, y: 0.16}
+  m_EdgeRadius: 0
+--- !u!61 &6113472226918677138
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2516509584575433331}
+  m_Enabled: 0
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0.615, y: 0.08}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 2.75, y: 0.16}
   m_EdgeRadius: 0
 --- !u!1 &2733669637937215074
 GameObject:
@@ -2301,11 +2350,11 @@ MonoBehaviour:
         m_Calls:
         - m_Target: {fileID: 2841000604668159261}
           m_TargetAssemblyTypeName: H00N.AI.FSM.FSMBrain, H00N.AI.FSM
-          m_MethodName: SetAsDefaultState
-          m_Mode: 1
+          m_MethodName: ChangeState
+          m_Mode: 2
           m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_ObjectArgument: {fileID: 1773547240932069588}
+            m_ObjectArgumentAssemblyTypeName: H00N.AI.FSM.FSMState, H00N.AI.FSM
             m_IntArgument: 0
             m_FloatArgument: 0
             m_StringArgument: 
@@ -2810,7 +2859,6 @@ GameObject:
   - component: {fileID: 8200477763095200303}
   - component: {fileID: 2653412275106618281}
   - component: {fileID: 8804318868649282253}
-  - component: {fileID: 3278533263194480628}
   - component: {fileID: 7666382588534150075}
   m_Layer: 0
   m_Name: Idle
@@ -2894,18 +2942,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 03daf389146a54413bd1b8778a3c7fb8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &3278533263194480628
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4606057041944649176}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d47a905acfa6141c4ac43c248ee43db6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &7666382588534150075
@@ -4521,6 +4557,72 @@ MonoBehaviour:
   isReverse: 0
   attack1: 0
   attack2: 1
+--- !u!1 &7287359822826361151
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 396407268384319085}
+  - component: {fileID: 1773547240932069588}
+  - component: {fileID: 3401481837806779248}
+  m_Layer: 0
+  m_Name: ReleaseGrab
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &396407268384319085
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7287359822826361151}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3801318511281256181}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1773547240932069588
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7287359822826361151}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3515528adf73f471f8009033ff01c22f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  autoTransitioning: 0
+  onStateEnterEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  onStateExitEvent:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &3401481837806779248
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7287359822826361151}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d47a905acfa6141c4ac43c248ee43db6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  defaultSortingOrderResolverCollider: {fileID: 4518340953437237913}
+  grabbedSortingOrderResolverCollider: {fileID: 6113472226918677138}
 --- !u!1 &7416002883679205623
 GameObject:
   m_ObjectHideFlags: 0
@@ -4963,6 +5065,7 @@ Transform:
   - {fileID: 7503746097445978493}
   - {fileID: 1747835267113631447}
   - {fileID: 2655220289869544485}
+  - {fileID: 396407268384319085}
   - {fileID: 4422274618599008969}
   - {fileID: 6533075867399171571}
   - {fileID: 6504791318778863742}
@@ -5441,6 +5544,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a7f2acb34f034ed6b5c6d89cd4ba254, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  defaultSortingOrderResolverCollider: {fileID: 4518340953437237913}
+  grabbedSortingOrderResolverCollider: {fileID: 6113472226918677138}
 --- !u!1 &8102981207817678311
 GameObject:
   m_ObjectHideFlags: 0
@@ -6022,11 +6127,11 @@ MonoBehaviour:
         m_Calls:
         - m_Target: {fileID: 2841000604668159261}
           m_TargetAssemblyTypeName: H00N.AI.FSM.FSMBrain, H00N.AI.FSM
-          m_MethodName: SetAsDefaultState
-          m_Mode: 1
+          m_MethodName: ChangeState
+          m_Mode: 2
           m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_ObjectArgument: {fileID: 1773547240932069588}
+            m_ObjectArgumentAssemblyTypeName: H00N.AI.FSM.FSMState, H00N.AI.FSM
             m_IntArgument: 0
             m_FloatArgument: 0
             m_StringArgument: 

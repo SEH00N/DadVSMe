@@ -7,6 +7,8 @@ namespace DadVSMe.Players.FSM
 {
     public class GrabAction : FSMAction
     {
+        [SerializeField] Collider2D defaultSortingOrderResolverCollider = null;
+        [SerializeField] Collider2D grabbedSortingOrderResolverCollider = null;
         private PlayerFSMData fsmData = null;
 
         public override void Init(FSMBrain brain, FSMState state)
@@ -41,6 +43,9 @@ namespace DadVSMe.Players.FSM
             fsmData.grabbedEntity.transform.SetParent(fsmData.grabPosition);
             fsmData.grabbedEntity.transform.localPosition = Vector3.zero;
             fsmData.grabbedEntity.transform.localScale = new Vector3(-1, 1, 1);
+
+            defaultSortingOrderResolverCollider.enabled = false;
+            grabbedSortingOrderResolverCollider.enabled = true;
         }
     }
 }

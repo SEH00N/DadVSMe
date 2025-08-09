@@ -5,6 +5,7 @@ namespace DadVSMe.Entities
 {
     public class Unit : Entity
     {
+        [Header("Unit")]
         [SerializeField] protected UnitData unitData = null;
         [SerializeField] protected UnitMovement unitMovement = null;
         [SerializeField] protected FSMBrain fsmBrain = null;

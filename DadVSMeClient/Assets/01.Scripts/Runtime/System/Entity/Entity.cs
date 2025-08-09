@@ -5,6 +5,7 @@ namespace DadVSMe.Entities
 {
     public class Entity : MonoBehaviour
     {
+        [Header("Entity")]
         [SerializeField] bool staticEntity = false;
         [SerializeField] protected EntityAnimator entityAnimator = null;
         [SerializeField] protected EntitySortingOrderResolver sortingOrderResolver = null;
