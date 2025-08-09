@@ -30,6 +30,9 @@ namespace DadVSMe.Entities
             if(unitMovement.IsActive == false)
                 return;
 
+            if(unitMovement.MovementVelocity.x == 0)
+                return;
+
             entityAnimator.SetRotation(unitMovement.MovementVelocity.x > 0);
         }        
     }
