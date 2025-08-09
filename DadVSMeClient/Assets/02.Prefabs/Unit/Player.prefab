@@ -1960,6 +1960,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entitySortingOrderProvider: {fileID: 4682551387214664710}
+  resolverCollider: {fileID: 4518340953437237913}
 --- !u!61 &4518340953437237913
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6814,7 +6815,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fabd73e19ee7941e6824f244185ecb55, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  staticEntity: 0
   entityAnimator: {fileID: 1382251147719448698}
+  sortingOrderResolver: {fileID: 3897684068023970099}
   unitData: {fileID: 11400000, guid: c026babc38b11449db114f0431689cc4, type: 2}
   unitMovement: {fileID: 279169761548483819}
   fsmBrain: {fileID: 2841000604668159261}

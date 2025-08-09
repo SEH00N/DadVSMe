@@ -8,6 +8,7 @@ namespace DadVSMe.Entities
         private const int SORTING_ORDER_OFFSET = 1000;
 
         [SerializeField] EntitySortingOrderProvider entitySortingOrderProvider = null;
+        [SerializeField] Collider2D resolverCollider = null;
         private HashSet<EntitySortingOrderProvider> overlappedSortingOrderProviders = null;
         
         private EntitySortingOrderResolver parent = null;
@@ -65,6 +66,7 @@ namespace DadVSMe.Entities
 
         public void AddChild(EntitySortingOrderResolver child)
         {
+            child.resolverCollider.enabled = false;
             child.parent = this;
             child.overlappedSortingOrderProviders.Clear();
             if(overlappedSortingOrderProviders.Contains(child.entitySortingOrderProvider))
@@ -81,6 +83,7 @@ namespace DadVSMe.Entities
             entitySortingOrderProvider.OnSortingOrderChangedEvent -= child.entitySortingOrderProvider.SetSortingOrder;
             child.entitySortingOrderProvider.SetSortingOrder(0);
             child.parent = null;
+            child.resolverCollider.enabled = true;
         }
 
         public EntitySortingOrderResolver GetCurrentSortingOrderResolver()
