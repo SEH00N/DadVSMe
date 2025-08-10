@@ -15,7 +15,7 @@ namespace DadVSMe
         public void SetActive(bool isActive)
         {
             this.isActive = isActive;
-            if(movementVelocity != Vector2.zero)
+            if (movementVelocity != Vector2.zero)
             {
                 movementVelocity = Vector2.zero;
                 unitRigidbody.linearVelocity = Vector2.zero;
@@ -34,7 +34,7 @@ namespace DadVSMe
 
         private void FixedUpdate()
         {
-            if(isActive == false)
+            if (isActive == false)
                 return;
 
             unitRigidbody.linearVelocity = movementVelocity;

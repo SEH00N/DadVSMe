@@ -19,7 +19,7 @@ namespace DadVSMe
             else
             {
                 skillContainer.Add(skillType, skill);
-                skill.OnRegist(gameObject);
+                skill.OnRegist(this);
             }
         }
 

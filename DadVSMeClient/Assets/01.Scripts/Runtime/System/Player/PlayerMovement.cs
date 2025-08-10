@@ -4,7 +4,7 @@ using DadVSMe.Inputs;
 namespace DadVSMe.Players
 {
     [RequireComponent(typeof(UnitMovement))]
-    public class PlayerMovement : MonoBehaviour
+    public class PlayerMovement : MonoBehaviour, IMovement
     {
         [SerializeField] float moveSpeed = 5f;
 
@@ -19,9 +19,19 @@ namespace DadVSMe.Players
         {
             PlayerInputReader inputReader = InputManager.GetInput<PlayerInputReader>();
             Vector2 movementInput = inputReader.MovementInput;
-            if(inputReader.IsDashed)
+            if (inputReader.IsDashed)
                 movementInput.x *= 3f;
             unitMovement.SetMovementVelocity(movementInput * moveSpeed);
+        }
+
+        public void SetMoveSpeed(float moveSpeed)
+        {
+            this.moveSpeed = moveSpeed;
+        }
+
+        public float GetMoveSpeed()
+        {
+            return this.moveSpeed;
         }
     }
 }

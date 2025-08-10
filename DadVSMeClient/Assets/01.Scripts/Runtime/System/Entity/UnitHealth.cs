@@ -9,6 +9,15 @@ namespace DadVSMe.Entities
         [SerializeField] UnityEvent<EAttackFeedback, float> onAttackEvent = null;
 
         private int maxHP;
+        public int MaxHP
+        {
+            get => maxHP;
+
+            set
+            {
+                maxHP = value;
+            }
+        }
 
         private int currentHP;
         public int CurrentHP => currentHP;
