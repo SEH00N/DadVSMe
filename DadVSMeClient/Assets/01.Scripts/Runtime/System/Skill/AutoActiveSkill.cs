@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace DadVSMe
 {
-    public class AutoActiveSkill : ActiveSkill
+    public class AutoActiveSkill : UnitSkill
     {
         private float cooltime;
         private Coroutine autoActiveCo;

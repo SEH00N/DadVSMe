@@ -9,22 +9,24 @@ namespace DadVSMe.Players.FSM
     {
         [SerializeField] Collider2D defaultSortingOrderResolverCollider = null;
         [SerializeField] Collider2D grabbedSortingOrderResolverCollider = null;
-        private PlayerFSMData fsmData = null;
+        private PlayerFSMData playerFSMData = null;
+        private UnitFSMData unitFSMData = null;
 
         public override void Init(FSMBrain brain, FSMState state)
         {
             base.Init(brain, state);
-            fsmData = brain.GetAIData<PlayerFSMData>();
+            playerFSMData = brain.GetAIData<PlayerFSMData>();
+            unitFSMData = brain.GetAIData<UnitFSMData>();
         }
 
         public override void EnterState()
         {
             base.EnterState();
 
-            if(fsmData.grabbedEntity != null)
+            if(playerFSMData.grabbedEntity != null)
                 return;
 
-            Enemy enemy = fsmData.enemies[0];
+            Unit enemy = unitFSMData.enemies[0];
             if(enemy.TryGetComponent<Entity>(out Entity entity) == false)
             {
                 brain.SetAsDefaultState();
@@ -37,12 +39,12 @@ namespace DadVSMe.Players.FSM
                 return;
             }
 
-            grabbable.Grab(fsmData.player);
+            grabbable.Grab(unitFSMData.unit);
 
-            fsmData.grabbedEntity = entity;
-            fsmData.grabbedEntity.transform.SetParent(fsmData.grabPosition);
-            fsmData.grabbedEntity.transform.localPosition = Vector3.zero;
-            fsmData.grabbedEntity.transform.localScale = new Vector3(-1, 1, 1);
+            playerFSMData.grabbedEntity = entity;
+            playerFSMData.grabbedEntity.transform.SetParent(playerFSMData.grabPosition);
+            playerFSMData.grabbedEntity.transform.localPosition = Vector3.zero;
+            playerFSMData.grabbedEntity.transform.localScale = new Vector3(-1, 1, 1);
 
             defaultSortingOrderResolverCollider.enabled = false;
             grabbedSortingOrderResolverCollider.enabled = true;

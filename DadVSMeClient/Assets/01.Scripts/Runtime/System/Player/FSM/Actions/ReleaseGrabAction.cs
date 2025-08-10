@@ -27,7 +27,7 @@ namespace DadVSMe.Players.FSM
                 fsmData.grabbedEntity = null;
 
                 grabbedEntity.transform.SetParent(null);
-                (grabbedEntity as IGrabbable).Release(fsmData.player);
+                (grabbedEntity as IGrabbable).Release(fsmData.grabbedEntity);
                 if(grabbedEntity.TryGetComponent<FSMBrain>(out FSMBrain grabbedEntityFSMBrain))
                     grabbedEntityFSMBrain.SetAsDefaultState();
             }

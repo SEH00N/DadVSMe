@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace DadVSMe
 {
-    public class StatUpSkill : PassiveSkill
+    public class StatUpSkill : UnitSkill
     {
         protected float StatUpRate = 1f;
 
@@ -24,6 +24,11 @@ namespace DadVSMe
         public float StatUpAmount()
         {
             return /*target value*/ - ((level - 1) * StatUpRate) + level * StatUpRate;
+        }
+
+        public override void Execute()
+        {
+            
         }
     }
 }

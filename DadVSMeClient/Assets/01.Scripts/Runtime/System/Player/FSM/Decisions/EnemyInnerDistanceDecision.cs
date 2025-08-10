@@ -1,4 +1,4 @@
-using DadVSMe.Enemies;
+using DadVSMe.Entities;
 using H00N.AI.FSM;
 using UnityEngine;
 
@@ -9,20 +9,20 @@ namespace DadVSMe.Players.FSM
         [SerializeField] Transform pivot = null;
         [SerializeField] float distance = 3f;
 
-        private PlayerFSMData fsmData = null;
+        private UnitFSMData unitFSMData = null;
 
         public override void Init(FSMBrain brain, FSMState state)
         {
             base.Init(brain, state);
-            fsmData = brain.GetAIData<PlayerFSMData>();
+            unitFSMData = brain.GetAIData<UnitFSMData>();
         }
 
         public override bool MakeDecision()
         {
-            if(fsmData.enemies.Count == 0)
+            if(unitFSMData.enemies.Count == 0)
                 return false;
 
-            Enemy enemy = fsmData.enemies[0];
+            Unit enemy = unitFSMData.enemies[0];
             if(enemy == null)
                 return false;
 
