@@ -23,9 +23,12 @@ namespace DadVSMe.Entities
 
             int forwardDirection = attacker.transform.position.x > transform.position.x ? 1 : -1;
             fsmData.forwardDirection = forwardDirection;
-            fsmData.unit.transform.localScale = new Vector3(fsmData.forwardDirection, 1, 1);
+
+            float currentLossyScaleX = fsmData.unit.transform.lossyScale.x;
+            fsmData.unit.transform.localScale = new Vector3(fsmData.unit.transform.localScale.x * (fsmData.forwardDirection / currentLossyScaleX), 1, 1);
 
             fsmData.feedbackValue = feedbackValue;
+            fsmBrain.SetAsDefaultState();
             fsmBrain.ChangeState(state);
         }
     }

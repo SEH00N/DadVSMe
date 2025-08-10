@@ -24,12 +24,14 @@ namespace DadVSMe.Enemies
 
         void IGrabbable.Grab(Entity performer)
         {
+            staticEntity = true;
             performer.AddChildSortingOrderResolver(sortingOrderResolver);
             fsmBrain.ChangeState(grabState);
         }
 
         void IGrabbable.Release(Entity performer)
         {
+            staticEntity = false;
             performer.RemoveChildSortingOrderResolver(sortingOrderResolver);
         }
     }

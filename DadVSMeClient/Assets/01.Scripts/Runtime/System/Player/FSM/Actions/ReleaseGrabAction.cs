@@ -10,11 +10,13 @@ namespace DadVSMe.Players.FSM
         [SerializeField] Collider2D grabbedSortingOrderResolverCollider = null;
 
         private PlayerFSMData fsmData = null;
+        private UnitFSMData unitFSMData = null;
 
         public override void Init(FSMBrain brain, FSMState state)
         {
             base.Init(brain, state);
             fsmData = brain.GetAIData<PlayerFSMData>();
+            unitFSMData = brain.GetAIData<UnitFSMData>();
         }
 
         public override void EnterState()
@@ -27,7 +29,7 @@ namespace DadVSMe.Players.FSM
                 fsmData.grabbedEntity = null;
 
                 grabbedEntity.transform.SetParent(null);
-                (grabbedEntity as IGrabbable).Release(fsmData.grabbedEntity);
+                (grabbedEntity as IGrabbable).Release(unitFSMData.unit);
                 if(grabbedEntity.TryGetComponent<FSMBrain>(out FSMBrain grabbedEntityFSMBrain))
                     grabbedEntityFSMBrain.SetAsDefaultState();
             }

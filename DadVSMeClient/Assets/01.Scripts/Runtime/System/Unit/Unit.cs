@@ -29,8 +29,10 @@ namespace DadVSMe.Entities
             unitFSMData = fsmBrain.GetAIData<UnitFSMData>();
         }
 
-        private void LateUpdate()
+        protected override void LateUpdate()
         {
+            base.LateUpdate();
+
             if(unitMovement == null)
                 return;
 
