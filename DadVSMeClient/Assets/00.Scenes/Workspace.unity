@@ -1202,6 +1202,7 @@ GameObject:
   - component: {fileID: 668232985}
   - component: {fileID: 668232984}
   - component: {fileID: 668232990}
+  - component: {fileID: 668233000}
   m_Layer: 0
   m_Name: Kid
   m_TagString: Enemy
@@ -1369,6 +1370,7 @@ MonoBehaviour:
   fsmBrain: {fileID: 668232995}
   unitHealth: {fileID: 668232998}
   unitAttackEventListener: {fileID: 668232999}
+  unitSkillComponent: {fileID: 668233000}
   enemyDetector: {fileID: 885303838}
   grabState: {fileID: 1851159777}
 --- !u!114 &668232995
@@ -1476,6 +1478,20 @@ MonoBehaviour:
     - {fileID: 609655097}
     - {fileID: 2126908702}
     - {fileID: 310373189}
+--- !u!114 &668233000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 668232983}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ac7311ac0ae245a39789789efa20658, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefab:
+    key: AttackBlast
 --- !u!1 &765364903
 GameObject:
   m_ObjectHideFlags: 0

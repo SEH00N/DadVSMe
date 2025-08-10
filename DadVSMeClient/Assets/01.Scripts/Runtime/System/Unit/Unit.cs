@@ -11,6 +11,7 @@ namespace DadVSMe.Entities
         [SerializeField] protected FSMBrain fsmBrain = null;
         [SerializeField] protected UnitHealth unitHealth = null;
         [SerializeField] protected UnitAttackEventListener unitAttackEventListener = null;
+        [SerializeField] protected UnitSkillComponent unitSkillComponent;
 
         public UnitHealth UnitHealth => unitHealth; // uniy health is used frequently. allow external access for performance. 
 
@@ -23,6 +24,7 @@ namespace DadVSMe.Entities
             fsmBrain.SetAsDefaultState();
             unitHealth.Initialize(unitData.maxHP);
             unitAttackEventListener.Initialize();
+            unitSkillComponent.Initialize();
 
             unitFSMData = fsmBrain.GetAIData<UnitFSMData>();
         }

@@ -7037,7 +7037,6 @@ GameObject:
   - component: {fileID: 8451211484433483914}
   - component: {fileID: 496568060240948358}
   - component: {fileID: 6550646681929325183}
-  - component: {fileID: 7251239231689807568}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -7100,6 +7099,7 @@ MonoBehaviour:
   fsmBrain: {fileID: 2841000604668159261}
   unitHealth: {fileID: 6165701722836179940}
   unitAttackEventListener: {fileID: 8895890805159774065}
+  unitSkillComponent: {fileID: 6550646681929325183}
   enemyDetector: {fileID: 644674988795700514}
 --- !u!114 &6165701722836179940
 MonoBehaviour:
@@ -7301,20 +7301,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefab:
     key: AttackBlast
---- !u!114 &7251239231689807568
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8996695108358816546}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4ac7311ac0ae245a39789789efa20658, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  prefab:
-    key: 
 --- !u!1 &9019325040001713458
 GameObject:
   m_ObjectHideFlags: 0
