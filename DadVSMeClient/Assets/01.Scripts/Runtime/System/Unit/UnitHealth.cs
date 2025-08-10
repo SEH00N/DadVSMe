@@ -6,7 +6,7 @@ namespace DadVSMe.Entities
 {
     public class UnitHealth : MonoBehaviour
     {
-        [SerializeField] UnityEvent<EAttackFeedback, float> onAttackEvent = null;
+        [SerializeField] UnityEvent<Unit, EAttackFeedback, float> onAttackEvent = null;
 
         private int maxHP;
         public int MaxHP
@@ -28,10 +28,10 @@ namespace DadVSMe.Entities
             currentHP = maxHP;
         }
 
-        public void Attack(int damage, EAttackFeedback feedback, float feedbackValue)
+        public void Attack(Unit attacker, IAttackData attackData)
         {
-            currentHP -= damage;
-            onAttackEvent.Invoke(feedback, feedbackValue);
+            currentHP -= attackData.Damage;
+            onAttackEvent.Invoke(attacker, attackData.AttackFeedback, attackData.AttackFeedbackValue);
         }
 
         public void Heal(int amount)

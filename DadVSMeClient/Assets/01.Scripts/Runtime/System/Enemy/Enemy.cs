@@ -6,6 +6,8 @@ namespace DadVSMe.Enemies
 {
     public class Enemy : Unit, IGrabbable
     {
+        [Header("Enemy")]
+        [SerializeField] EnemyDetector enemyDetector = null;
         [SerializeField] FSMState grabState = null;
 
         // Debug
@@ -17,6 +19,7 @@ namespace DadVSMe.Enemies
         public override void Initialize()
         {
             base.Initialize();
+            enemyDetector.Initialize();
         }
 
         void IGrabbable.Grab(Entity performer)

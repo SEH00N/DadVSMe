@@ -6,7 +6,7 @@ namespace DadVSMe.Players
     public class Player : Unit
     {
         [Header("Player")]
-        [SerializeField] PlayerEnemyDetector enemyDetector = null;
+        [SerializeField] EnemyDetector enemyDetector = null;
 
         // Debug
         private void Start()

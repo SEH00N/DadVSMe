@@ -14,6 +14,8 @@ namespace DadVSMe.Entities
 
         public UnitHealth UnitHealth => unitHealth; // uniy health is used frequently. allow external access for performance. 
 
+        private UnitFSMData unitFSMData = null;
+
         public override void Initialize()
         {
             base.Initialize();
@@ -21,6 +23,8 @@ namespace DadVSMe.Entities
             fsmBrain.SetAsDefaultState();
             unitHealth.Initialize(unitData.maxHP);
             unitAttackEventListener.Initialize();
+
+            unitFSMData = fsmBrain.GetAIData<UnitFSMData>();
         }
 
         private void LateUpdate()
@@ -34,7 +38,9 @@ namespace DadVSMe.Entities
             if(unitMovement.MovementVelocity.x == 0)
                 return;
 
-            entityAnimator.SetRotation(unitMovement.MovementVelocity.x > 0);
-        }        
+            int forwardDirection = unitMovement.MovementVelocity.x > 0 ? 1 : -1;
+            entityAnimator.SetRotation(forwardDirection > 0);
+            unitFSMData.forwardDirection = forwardDirection;
+        }
     }
 }

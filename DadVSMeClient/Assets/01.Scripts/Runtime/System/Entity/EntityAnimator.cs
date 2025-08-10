@@ -29,7 +29,8 @@ namespace DadVSMe.Entities
                 animationHashTable.Add(animationName, hash);
             }
 
-            animator.Play(hash);
+            animator.Play(hash, 0, 0f);
+            animator.Update(0f);
         }
 
         public void SetRotation(bool isRight)

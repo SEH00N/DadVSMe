@@ -1,10 +1,9 @@
 using System.Collections.Generic;
-using DadVSMe.Entities;
 using H00N.AI.FSM;
 using UnityEngine;
 using UnityEngine.Events;
 
-namespace DadVSMe.Players.FSM
+namespace DadVSMe.Entities.FSM
 {
     public class AnimationAction : FSMAction
     {

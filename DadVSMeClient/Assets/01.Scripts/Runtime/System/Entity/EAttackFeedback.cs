@@ -2,11 +2,12 @@ namespace DadVSMe.Entities
 {
     public enum EAttackFeedback
     {
+        None,
         NormalHit1,
         NormalHit2,
         NormalHit3,
-        Thrown1,
-        Thrown2,
-        Juggle
+        Juggle,
+        GrabHit1,
+        GrabHit2,
     }
 }

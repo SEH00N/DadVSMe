@@ -1,22 +1,21 @@
 using System.Collections.Generic;
-using DadVSMe.Enemies;
-using DadVSMe.Players.FSM;
 using H00N.AI.FSM;
 using H00N.Extensions;
 using UnityEngine;
 
-namespace DadVSMe.Players
+namespace DadVSMe.Entities
 {
-    public class PlayerEnemyDetector : MonoBehaviour
+    public class EnemyDetector : MonoBehaviour
     {
+        [SerializeField] string enemyTag = "Enemy";
         [SerializeField] FSMBrain fsmBrain = null;
 
         private HashSet<int> currentEnemyHashes = new HashSet<int>();
-        private PlayerFSMData fsmData = null;
+        private UnitFSMData fsmData = null;
 
         public void Initialize()
         {
-            fsmData = fsmBrain.GetAIData<PlayerFSMData>();
+            fsmData = fsmBrain.GetAIData<UnitFSMData>();
         }
 
         private void Update()
@@ -37,14 +36,17 @@ namespace DadVSMe.Players
 
         private void OnTriggerEnter2D(Collider2D collider)
         {
-            if(collider.CompareTag(GameDefine.EnemyTag) == false)
+            if(collider.CompareTag(enemyTag) == false)
                 return;
 
             int enemyHash = collider.gameObject.GetHashCode();
             if(currentEnemyHashes.Contains(enemyHash))
                 return;
 
-            if(collider.gameObject.TryGetComponent<Enemy>(out Enemy enemy) == false)
+            if(collider.gameObject.TryGetComponent<Unit>(out Unit enemy) == false)
+                return;
+
+            if(fsmData.enemies.Count >= fsmData.enemyMaxCount)
                 return;
 
             currentEnemyHashes.Add(enemyHash);
@@ -53,7 +55,7 @@ namespace DadVSMe.Players
 
         private void OnTriggerExit2D(Collider2D collider)
         {
-            if(collider.CompareTag(GameDefine.EnemyTag) == false)
+            if(collider.CompareTag(enemyTag) == false)
                 return;
 
             int enemyHash = collider.gameObject.GetHashCode();
@@ -61,7 +63,7 @@ namespace DadVSMe.Players
                 return;
 
             currentEnemyHashes.Remove(enemyHash);
-            if(collider.gameObject.TryGetComponent<Enemy>(out Enemy enemy) )
+            if(collider.gameObject.TryGetComponent<Unit>(out Unit enemy) )
                 fsmData.enemies.Remove(enemy);
         }
     }

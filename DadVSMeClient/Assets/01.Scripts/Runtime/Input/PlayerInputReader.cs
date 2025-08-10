@@ -7,7 +7,7 @@ namespace DadVSMe.Inputs
 {
     public class PlayerInputReader : InputReaderBase, IPlayerActions
     {
-        private const float DASH_INPUT_THRESHOLD = 0.5f;
+        private const float DASH_INPUT_THRESHOLD = 0.35f;
 
         private InputActionMap inputActionMap = null;
         public override InputActionMap GetInputActionMap() => inputActionMap;
