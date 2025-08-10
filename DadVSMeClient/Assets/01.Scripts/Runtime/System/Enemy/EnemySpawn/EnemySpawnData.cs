@@ -1,4 +1,8 @@
+using System;
+using System.Collections.Generic;
 using UnityEngine;
+using DadVSMe.Enemies;
+using DadVSMe.Entities;
 
 namespace DadVSMe
 {
@@ -6,6 +10,20 @@ namespace DadVSMe
     // 스폰되는 적의 종류는 맵에 존재하는 적의 종류의 수에 따라 결정된다.
     // 적의 종류에 따라 필드에 존재할 수 있는 최대 수가 다르다.
     // 필드에 존재하는 모든 적의 합은 최대치를 넘을 수 없다.
+
+    [Serializable]
+    public class SpawnPhase
+    {
+        [Header("Spawn Interval (Sec)")]
+        [Min(0.01f)] public float intervalMin = 1.0f;
+        [Min(0.01f)] public float intervalMax = 2.5f;
+
+        [Header("Spawnable Enemy Data")]
+        public List<UnitData> enemiesDataList = new ();
+
+        [Header("Max Enemy Count on Field")]
+        [Min(0)] public int totalEnemyCountOnField = 0;
+    }
 
     [CreateAssetMenu(fileName = "EnemySpawnData", menuName = "CreateSO/Entity/EnemySpawnData")]
     public class EnemySpawnData : ScriptableObject
