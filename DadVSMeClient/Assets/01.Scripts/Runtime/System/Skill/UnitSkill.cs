@@ -4,21 +4,21 @@ namespace DadVSMe
 {
     public abstract class UnitSkill
     {
-        protected GameObject owner;
+        protected UnitSkillComponent ownerComponent;
         protected int level;
 
         public UnitSkill()
         {
-            owner = null;
+            ownerComponent = null;
             level = 1;
         }
 
-        public virtual void OnRegist(GameObject owner)
+        public virtual void OnRegist(UnitSkillComponent ownerComponent)
         {
-            this.owner = owner;
+            this.ownerComponent = ownerComponent;
         }
-        public abstract void OnUnregist();
-        public abstract void OnExecute();
+        public virtual void OnUnregist() { }
+        public abstract void Execute();
 
         public virtual void LevelUp()
         {

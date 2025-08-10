@@ -5,7 +5,7 @@ namespace DadVSMe.Entities
 {
     [RequireComponent(typeof(UnitMovement))]
     [RequireComponent(typeof(NavMeshAgent))]
-    public class NPCMovement : MonoBehaviour
+    public class NPCMovement : MonoBehaviour, IMovement
     {
         private NavMeshAgent navMeshAgent;
         private UnitMovement unitMovement;
@@ -56,6 +56,16 @@ namespace DadVSMe.Entities
         public void SetDestination(Vector2 destination)
         {
             navMeshAgent.SetDestination(destination);
+        }
+
+        public void SetMoveSpeed(float moveSpeed)
+        {
+            navMeshAgent.speed = moveSpeed;
+        }
+
+        public float GetMoveSpeed()
+        {
+            return navMeshAgent.speed;
         }
     }
 }
