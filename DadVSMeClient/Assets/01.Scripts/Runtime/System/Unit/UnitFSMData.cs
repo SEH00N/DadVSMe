@@ -8,7 +8,7 @@ namespace DadVSMe.Entities
         public Unit unit = null;
         public int enemyMaxCount = 5;
         public List<Unit> enemies = new List<Unit>();
-        public float feedbackValue = 0f;
+        public IAttackData attackData = null;
         public int forwardDirection = 1;
         public float attackRange = 3f;
 

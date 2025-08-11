@@ -5,6 +5,5 @@ namespace DadVSMe.Entities
     {
         int Damage { get; }
         EAttackFeedback AttackFeedback { get; }
-        float AttackFeedbackValue { get; }
     }
 }

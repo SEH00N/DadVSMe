@@ -1,0 +1,12 @@
+using UnityEngine;
+
+namespace DadVSMe.Entities
+{
+    public abstract class AttackDataBase : ScriptableObject, IAttackData
+    {
+        [SerializeField] int damage = 0;
+        public int Damage => damage;
+
+        public abstract EAttackFeedback AttackFeedback { get; }
+    }
+}

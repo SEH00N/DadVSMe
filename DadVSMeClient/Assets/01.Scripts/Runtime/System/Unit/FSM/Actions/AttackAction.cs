@@ -5,7 +5,7 @@ namespace DadVSMe.Entities.FSM
 {
     public abstract class AttackActionBase : FSMAction
     {
-        [SerializeField] private AttackData attackData = null;
+        [SerializeField] private AttackDataBase attackData = null;
 
         private EntityAnimator entityAnimator = null;
         private UnitFSMData unitFSMData = null;
