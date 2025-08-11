@@ -1,4 +1,4 @@
-#if UNITY_EDITOR
+﻿#if UNITY_EDITOR
 using System;
 using System.Collections.Generic;
 using UnityEditor;
@@ -9,17 +9,32 @@ namespace DadVSMe
     [CustomEditor(typeof(EnemySpawnData))]
     public class EnemySpawnDataEditor : Editor
     {
-        private SerializedProperty _divedCountProp;
         private SerializedProperty _totalDurationProp;
-        private SerializedProperty _useCustomRangesProp;
         private SerializedProperty _customRangesProp;
         private SerializedProperty _phasesProp;
 
+        // Big button 스타일
+        private static GUIStyle _bigBtn;
+        private static GUIStyle BigBtn
+        {
+            get
+            {
+                if (_bigBtn == null)
+                {
+                    _bigBtn = new GUIStyle(GUI.skin.button)
+                    {
+                        fontSize = 12,
+                        fixedHeight = 28,
+                        alignment = TextAnchor.MiddleCenter
+                    };
+                }
+                return _bigBtn;
+            }
+        }
+
         private void OnEnable()
         {
-            _divedCountProp = serializedObject.FindProperty("divedCount");
             _totalDurationProp = serializedObject.FindProperty("totalDurationSeconds");
-            _useCustomRangesProp = serializedObject.FindProperty("useCustomRanges");
             _customRangesProp = serializedObject.FindProperty("customRanges");
             _phasesProp = serializedObject.FindProperty("enemySawnPhaseList");
         }
@@ -28,164 +43,169 @@ namespace DadVSMe
         {
             serializedObject.Update();
 
-            // Basic controls
-            EditorGUILayout.PropertyField(_divedCountProp);
+            // 총 길이
             EditorGUILayout.PropertyField(_totalDurationProp);
-            EditorGUILayout.PropertyField(_useCustomRangesProp);
-
-            int count = Mathf.Max(1, _divedCountProp.intValue);
             int total = Mathf.Max(1, _totalDurationProp.intValue);
 
-            // Keep sizes in sync
-            SyncListSize(_phasesProp, count);
-            SyncListSize(_customRangesProp, count);
+            // Phase와 Range 크기 동기화(Phase를 기준)
+            SyncSizes(phasesAsDriver: true);
 
-            // Equal-division segments (computed, not stored)
-            var segments = _useCustomRangesProp.boolValue
-                ? ReadCustomSegments(_customRangesProp, total) // editable by user
-                : ComputeRoundedSegments(count, total);        // auto
+            // 헤더 (버튼 없음)
+            EditorGUILayout.LabelField("Phases", EditorStyles.boldLabel);
 
-            // When using custom ranges, show editors for each segment
-            if (_useCustomRangesProp.boolValue)
+            // 요소들
+            for (int i = 0; i < _phasesProp.arraySize; i++)
             {
-                EditorGUILayout.Space(6);
-                EditorGUILayout.LabelField("Custom Time Ranges", EditorStyles.boldLabel);
+                var phaseProp = _phasesProp.GetArrayElementAtIndex(i);
+                var rangeProp = _customRangesProp.GetArrayElementAtIndex(i);
+                var startSec = rangeProp.FindPropertyRelative("startSec");
+                var endSec = rangeProp.FindPropertyRelative("endSec");
 
-                for (int i = 0; i < count; i++)
+                string header = $"[{i + 1}] {Fmt(startSec.intValue)} ~ {Fmt(endSec.intValue)}  ({Mathf.Max(0, endSec.intValue - startSec.intValue)}s)";
+
+                using (new EditorGUILayout.VerticalScope("box"))
                 {
-                    var segProp = _customRangesProp.GetArrayElementAtIndex(i);
-                    var startSec = segProp.FindPropertyRelative("startSec");
-                    var endSec = segProp.FindPropertyRelative("endSec");
+                    // 상단 라벨
+                    EditorGUILayout.LabelField(header, EditorStyles.boldLabel);
 
-                    using (new EditorGUILayout.VerticalScope("box"))
+                    // 범위 편집
+                    DrawRangeEditor(startSec, endSec, total);
+
+                    EditorGUILayout.Space(4);
+
+                    // Phase 속성(라벨 안 잘리게)
+                    DrawPhaseFields(phaseProp);
+
+                    EditorGUILayout.Space(6);
+
+                    // 하단 큰 버튼들: + / -
+                    using (new EditorGUILayout.HorizontalScope())
                     {
-                        EditorGUILayout.LabelField($"[{i + 1}] Range", EditorStyles.boldLabel);
+                        GUILayout.FlexibleSpace();
 
-                        // MinMax slider (seconds)
-                        float s = Mathf.Clamp(startSec.intValue, 0, total);
-                        float e = Mathf.Clamp(endSec.intValue, 0, total);
-                        EditorGUILayout.MinMaxSlider(new GUIContent("Seconds"), ref s, ref e, 0f, total);
-                        startSec.intValue = Mathf.RoundToInt(s);
-                        endSec.intValue = Mathf.RoundToInt(e);
-
-                        // Minutes/Seconds fields for precision
-                        DrawMinSecRow("Start", startSec, total);
-                        DrawMinSecRow("End", endSec, total);
-
-                        // Fix ordering if needed
-                        if (endSec.intValue < startSec.intValue)
-                            endSec.intValue = startSec.intValue;
-
-                        EditorGUILayout.LabelField($"�� {Fmt(startSec.intValue)} ~ {Fmt(endSec.intValue)}  ({Mathf.Max(0, endSec.intValue - startSec.intValue)}s)");
-                    }
-                }
-
-                // Utilities
-                using (new EditorGUILayout.HorizontalScope())
-                {
-                    if (GUILayout.Button("Auto-fill equal divisions"))
-                    {
-                        var eq = ComputeRoundedSegments(count, total);
-                        for (int i = 0; i < count; i++)
+                        if (GUILayout.Button("−  Remove", BigBtn, GUILayout.MinWidth(120)))
                         {
-                            var segProp = _customRangesProp.GetArrayElementAtIndex(i);
-                            segProp.FindPropertyRelative("startSec").intValue = eq[i].start;
-                            segProp.FindPropertyRelative("endSec").intValue = eq[i].end;
+                            RemoveAt(i);
+                            break;
                         }
-                    }
-                    if (GUILayout.Button("Sort & Fix Overlaps"))
-                    {
-                        SortAndFix(_customRangesProp, total);
                     }
                 }
             }
 
-            EditorGUILayout.Space(10);
-            EditorGUILayout.LabelField("Phases", EditorStyles.boldLabel);
-
-            // Draw phases with headers showing the resolved segment labels
-            for (int i = 0; i < count; i++)
+            // 리스트 맨 아래 전역 추가 버튼
+            EditorGUILayout.Space(8);
+            using (new EditorGUILayout.HorizontalScope())
             {
-                var p = _phasesProp.GetArrayElementAtIndex(i);
-                var label = $"[{i + 1}] {Fmt(segments[i].start)} ~ {Fmt(segments[i].end)}  ({Mathf.Max(0, segments[i].end - segments[i].start)}s)";
-
-                using (new EditorGUILayout.VerticalScope("box"))
+                GUILayout.FlexibleSpace();
+                if (GUILayout.Button("+  Add Phase", BigBtn, GUILayout.MinWidth(160)))
                 {
-                    EditorGUILayout.LabelField(label, EditorStyles.boldLabel);
-                    EditorGUILayout.PropertyField(p, includeChildren: true);
+                    AddNewAt(_phasesProp.arraySize, total);
                 }
+            }
+
+            // 유틸
+            EditorGUILayout.Space(8);
+            using (new EditorGUILayout.HorizontalScope())
+            {
+                if (GUILayout.Button("Sort & Fix Overlaps"))
+                    SortAndFixRanges(total);
+                if (GUILayout.Button("Snap Sequential (contiguous)"))
+                    SnapSequential(total);
             }
 
             serializedObject.ApplyModifiedProperties();
         }
 
-        // Helpers
+        // ---------- 그리기 ----------
 
-        private static void SyncListSize(SerializedProperty listProp, int targetSize)
+        private static void DrawRangeEditor(SerializedProperty startSec, SerializedProperty endSec, int total)
         {
-            if (listProp == null) return;
-            while (listProp.arraySize < targetSize) listProp.InsertArrayElementAtIndex(listProp.arraySize);
-            while (listProp.arraySize > targetSize) listProp.DeleteArrayElementAtIndex(listProp.arraySize - 1);
+            float s = Mathf.Clamp(startSec.intValue, 0, total);
+            float e = Mathf.Clamp(endSec.intValue, 0, total);
+
+            EditorGUILayout.MinMaxSlider(new GUIContent("Seconds"), ref s, ref e, 0f, total);
+            startSec.intValue = Mathf.RoundToInt(s);
+            endSec.intValue = Mathf.RoundToInt(e);
+            if (endSec.intValue < startSec.intValue) endSec.intValue = startSec.intValue;
+
+            DrawMinSecRow("Start", startSec, total);
+            DrawMinSecRow("End", endSec, total);
         }
 
-        private static List<(int start, int end)> ReadCustomSegments(SerializedProperty customRangesProp, int total)
+        private static void DrawPhaseFields(SerializedProperty phaseProp)
         {
-            var res = new List<(int, int)>(customRangesProp.arraySize);
-            for (int i = 0; i < customRangesProp.arraySize; i++)
-            {
-                var seg = customRangesProp.GetArrayElementAtIndex(i);
-                int s = Mathf.Clamp(seg.FindPropertyRelative("startSec").intValue, 0, total);
-                int e = Mathf.Clamp(seg.FindPropertyRelative("endSec").intValue, 0, total);
-                if (e < s) e = s;
-                res.Add((s, e));
-            }
-            return res;
+            var spawnIntervalProp = phaseProp.FindPropertyRelative("spawnInterval");
+            var enemiesDataListProp = phaseProp.FindPropertyRelative("enemiesDataList");
+            var totalEnemyCountProp = phaseProp.FindPropertyRelative("totalEnemyCountOnField");
+
+            // 1) 스폰 주기(RandomRange) — 전용 드로워가 처리
+            EditorGUILayout.PropertyField(spawnIntervalProp, new GUIContent("Spawn Interval (Sec)"));
+
+            EditorGUILayout.Space(4);
+
+            // 2) 적 리스트
+            EditorGUILayout.PropertyField(enemiesDataListProp, new GUIContent("Spawnable Enemy Data"), includeChildren: true);
+
+            EditorGUILayout.Space(6);
+
+            // 3) 두 줄 스택형
+            DrawStackedIntField(totalEnemyCountProp, "Max Enemy Count on Field");
         }
 
-        private static List<(int start, int end)> ComputeRoundedSegments(int n, int totalSeconds)
+        // ---------- 리스트 조작 ----------
+
+        private void SyncSizes(bool phasesAsDriver)
         {
-            var result = new List<(int, int)>(n);
-            if (n <= 0) { result.Add((0, totalSeconds)); return result; }
+            int target = phasesAsDriver ? _phasesProp.arraySize : _customRangesProp.arraySize;
 
-            var bounds = new int[n + 1];
-            for (int i = 0; i <= n; i++)
-            {
-                double raw = (double)i * totalSeconds / n;
-                bounds[i] = (int)Math.Round(raw, MidpointRounding.AwayFromZero);
-            }
-            bounds[0] = 0;
-            bounds[n] = totalSeconds;
+            while (_phasesProp.arraySize < target) _phasesProp.InsertArrayElementAtIndex(_phasesProp.arraySize);
+            while (_customRangesProp.arraySize < target) _customRangesProp.InsertArrayElementAtIndex(_customRangesProp.arraySize);
 
-            for (int i = 1; i <= n; i++)
-            {
-                if (bounds[i] <= bounds[i - 1])
-                    bounds[i] = Math.Min(totalSeconds, bounds[i - 1] + 1);
-            }
-            bounds[n] = totalSeconds;
-
-            for (int i = 0; i < n; i++)
-                result.Add((bounds[i], bounds[i + 1]));
-
-            return result;
+            while (_phasesProp.arraySize > target) _phasesProp.DeleteArrayElementAtIndex(_phasesProp.arraySize - 1);
+            while (_customRangesProp.arraySize > target) _customRangesProp.DeleteArrayElementAtIndex(_customRangesProp.arraySize - 1);
         }
 
-        private static void SortAndFix(SerializedProperty customRangesProp, int total)
+        private void AddNewAt(int insertIndex, int total)
         {
-            // Load to list
-            var temp = new List<(int s, int e)>();
-            for (int i = 0; i < customRangesProp.arraySize; i++)
+            insertIndex = Mathf.Clamp(insertIndex, 0, _phasesProp.arraySize);
+            _phasesProp.InsertArrayElementAtIndex(insertIndex);
+            _customRangesProp.InsertArrayElementAtIndex(insertIndex);
+
+            // 기본 범위: 이전 구간의 end부터 시작
+            int start = 0;
+            if (insertIndex > 0)
             {
-                var seg = customRangesProp.GetArrayElementAtIndex(i);
+                var prev = _customRangesProp.GetArrayElementAtIndex(insertIndex - 1);
+                start = Mathf.Clamp(prev.FindPropertyRelative("endSec").intValue, 0, total);
+            }
+            int end = Mathf.Clamp(start + Math.Max(1, total / 4), 0, total);
+
+            var seg = _customRangesProp.GetArrayElementAtIndex(insertIndex);
+            seg.FindPropertyRelative("startSec").intValue = start;
+            seg.FindPropertyRelative("endSec").intValue = end;
+        }
+
+        private void RemoveAt(int index)
+        {
+            if (index < 0 || index >= _phasesProp.arraySize) return;
+            _phasesProp.DeleteArrayElementAtIndex(index);
+            if (index < _customRangesProp.arraySize)
+                _customRangesProp.DeleteArrayElementAtIndex(index);
+        }
+
+        private void SortAndFixRanges(int total)
+        {
+            var temp = new List<(int s, int e)>(_customRangesProp.arraySize);
+            for (int i = 0; i < _customRangesProp.arraySize; i++)
+            {
+                var seg = _customRangesProp.GetArrayElementAtIndex(i);
                 int s = Mathf.Clamp(seg.FindPropertyRelative("startSec").intValue, 0, total);
                 int e = Mathf.Clamp(seg.FindPropertyRelative("endSec").intValue, 0, total);
                 if (e < s) e = s;
                 temp.Add((s, e));
             }
-
-            // Sort by start then end
             temp.Sort((a, b) => a.s != b.s ? a.s.CompareTo(b.s) : a.e.CompareTo(b.e));
 
-            // Make non-overlapping and monotonic increasing
             for (int i = 1; i < temp.Count; i++)
             {
                 if (temp[i].s < temp[i - 1].e)
@@ -193,23 +213,44 @@ namespace DadVSMe
                 temp[i] = (Mathf.Clamp(temp[i].s, 0, total), Mathf.Clamp(temp[i].e, 0, total));
             }
 
-            // Write back
-            for (int i = 0; i < customRangesProp.arraySize; i++)
+            for (int i = 0; i < _customRangesProp.arraySize; i++)
             {
-                var seg = customRangesProp.GetArrayElementAtIndex(i);
+                var seg = _customRangesProp.GetArrayElementAtIndex(i);
                 seg.FindPropertyRelative("startSec").intValue = temp[i].s;
                 seg.FindPropertyRelative("endSec").intValue = temp[i].e;
             }
         }
 
+        private void SnapSequential(int total)
+        {
+            SortAndFixRanges(total);
+            if (_customRangesProp.arraySize == 0) return;
+
+            int cursor = Mathf.Clamp(_customRangesProp.GetArrayElementAtIndex(0).FindPropertyRelative("startSec").intValue, 0, total);
+            for (int i = 0; i < _customRangesProp.arraySize; i++)
+            {
+                var seg = _customRangesProp.GetArrayElementAtIndex(i);
+                int s = Mathf.Clamp(seg.FindPropertyRelative("startSec").intValue, 0, total);
+                int e = Mathf.Clamp(seg.FindPropertyRelative("endSec").intValue, 0, total);
+
+                s = cursor;
+                if (e < s) e = s;
+
+                seg.FindPropertyRelative("startSec").intValue = s;
+                seg.FindPropertyRelative("endSec").intValue = e;
+
+                cursor = e;
+            }
+        }
+
+        // ---------- Misc ----------
+
         private static string Fmt(int sec)
         {
             if (sec < 0) sec = 0;
-
             int h = sec / 3600;
             int m = (sec % 3600) / 60;
             int s = sec % 60;
-
             return h > 0 ? $"{h:D2}:{m:D2}:{s:D2}" : $"{m:D2}:{s:D2}";
         }
 
@@ -225,9 +266,23 @@ namespace DadVSMe
                 m = EditorGUILayout.IntField("Min", m);
                 s = EditorGUILayout.IntField("Sec", s);
             }
-
             sec = Mathf.Clamp(m * 60 + s, 0, total);
             secProp.intValue = sec;
+        }
+
+        private static void DrawStackedIntField(SerializedProperty prop, string label)
+        {
+            // 충분한 높이 예약(라벨H + 필드H + 여백)
+            var style = new GUIStyle(EditorStyles.label) { wordWrap = true };
+            float labelH = style.CalcHeight(new GUIContent(label), EditorGUIUtility.currentViewWidth - 40f);
+            float height = labelH + EditorGUIUtility.singleLineHeight + 6f;
+
+            var rect = EditorGUILayout.GetControlRect(hasLabel: false, height: height);
+            var labelRect = new Rect(rect.x, rect.y, rect.width, labelH);
+            var fieldRect = new Rect(rect.x, rect.y + labelH + 2, rect.width, EditorGUIUtility.singleLineHeight);
+
+            EditorGUI.LabelField(labelRect, label, style);
+            prop.intValue = EditorGUI.IntField(fieldRect, GUIContent.none, prop.intValue);
         }
     }
 }

@@ -14,8 +14,7 @@ namespace DadVSMe
     public class SpawnPhase
     {
         [Header("Spawn Interval (Sec)")]
-        [Min(0.01f)] public float intervalMin = 1.0f;
-        [Min(0.01f)] public float intervalMax = 2.5f;
+        public RandomRangeFloat spawnInterval = new RandomRangeFloat(1.0f, 2.5f);
 
         [Header("Spawnable Enemy Data")]
         public List<UnitData> enemiesDataList;
