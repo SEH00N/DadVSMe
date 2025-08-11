@@ -32,7 +32,7 @@ namespace DadVSMe
             attackBlast.SetInstigator(ownerComponent.gameObject);
             Transform ownerTrm = ownerComponent.transform;
             attackBlast.transform.position = ownerTrm.position + (new Vector3(3f, 0f) * Math.Sign(ownerTrm.localScale.x));
-            attackBlast.Lunch(ownerTrm.right * Math.Sign(ownerTrm.localScale.x));
+            //attackBlast.Lunch(ownerTrm.right * Math.Sign(ownerTrm.localScale.x));
         }
 
         public override void OnUnregist()
