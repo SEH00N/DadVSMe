@@ -216,6 +216,7 @@ GameObject:
   m_Component:
   - component: {fileID: 96158639}
   - component: {fileID: 96158640}
+  - component: {fileID: 96158641}
   m_Layer: 0
   m_Name: '[Tran] Hit1'
   m_TagString: Untagged
@@ -251,6 +252,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetState: {fileID: 966102067}
+--- !u!114 &96158641
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 96158638}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2587cf2a08c644c7b97d7fcab146bffc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isReverse: 0
+  attackFeedback: 1
 --- !u!1 &190505272
 GameObject:
   m_ObjectHideFlags: 0
@@ -535,6 +550,7 @@ GameObject:
   m_Component:
   - component: {fileID: 274529058}
   - component: {fileID: 274529059}
+  - component: {fileID: 274529060}
   m_Layer: 0
   m_Name: '[Tran] Hit3'
   m_TagString: Untagged
@@ -570,6 +586,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetState: {fileID: 322659609}
+--- !u!114 &274529060
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 274529057}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2587cf2a08c644c7b97d7fcab146bffc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isReverse: 0
+  attackFeedback: 3
 --- !u!1 &288539952
 GameObject:
   m_ObjectHideFlags: 0
@@ -918,6 +948,7 @@ GameObject:
   m_Component:
   - component: {fileID: 426990124}
   - component: {fileID: 426990125}
+  - component: {fileID: 426990126}
   m_Layer: 0
   m_Name: '[Tran] GrabHit1'
   m_TagString: Untagged
@@ -953,6 +984,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetState: {fileID: 2126908702}
+--- !u!114 &426990126
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 426990123}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2587cf2a08c644c7b97d7fcab146bffc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isReverse: 0
+  attackFeedback: 5
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -1168,6 +1213,7 @@ GameObject:
   m_Component:
   - component: {fileID: 609483639}
   - component: {fileID: 609483640}
+  - component: {fileID: 609483641}
   m_Layer: 0
   m_Name: '[Tran] Hit2'
   m_TagString: Untagged
@@ -1203,6 +1249,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetState: {fileID: 1533504375}
+--- !u!114 &609483641
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 609483638}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2587cf2a08c644c7b97d7fcab146bffc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isReverse: 0
+  attackFeedback: 2
 --- !u!1 &609655094
 GameObject:
   m_ObjectHideFlags: 0
@@ -3188,6 +3248,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1355111466}
   - component: {fileID: 1355111467}
+  - component: {fileID: 1355111468}
   m_Layer: 0
   m_Name: '[Tran] Juggle'
   m_TagString: Untagged
@@ -3223,6 +3284,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetState: {fileID: 609655097}
+--- !u!114 &1355111468
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1355111465}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2587cf2a08c644c7b97d7fcab146bffc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isReverse: 0
+  attackFeedback: 4
 --- !u!1 &1371810581
 GameObject:
   m_ObjectHideFlags: 0
@@ -3370,6 +3445,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1404569431}
   - component: {fileID: 1404569432}
+  - component: {fileID: 1404569433}
   m_Layer: 0
   m_Name: '[Tran] GrabHit2'
   m_TagString: Untagged
@@ -3405,6 +3481,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetState: {fileID: 310373189}
+--- !u!114 &1404569433
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1404569430}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2587cf2a08c644c7b97d7fcab146bffc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isReverse: 0
+  attackFeedback: 6
 --- !u!1 &1485304709
 GameObject:
   m_ObjectHideFlags: 0
