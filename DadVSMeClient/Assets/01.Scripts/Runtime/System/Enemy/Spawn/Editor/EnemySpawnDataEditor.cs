@@ -190,6 +190,7 @@ namespace DadVSMe.Enemies
         {
             var spawnIntervalProp = phaseProp.FindPropertyRelative("spawnInterval");
             var enemiesDataListProp = phaseProp.FindPropertyRelative("enemiesList");
+            var bossEnemyDataProp = phaseProp.FindPropertyRelative("bossEnemy");
             var totalEnemyCountProp = phaseProp.FindPropertyRelative("totalEnemyCountOnField");
 
             // 1) 스폰 주기(RandomRange) — 전용 드로워가 처리
@@ -200,9 +201,14 @@ namespace DadVSMe.Enemies
             // 2) 적 리스트
             EditorGUILayout.PropertyField(enemiesDataListProp, new GUIContent("Spawnable Enemy Data"), includeChildren: true);
 
+            EditorGUILayout.Space(4);
+
+            // 3) 보스 에너미 정보 (기본 null)
+            EditorGUILayout.PropertyField(bossEnemyDataProp, new GUIContent("Phase Boss Enemy Data"));
+
             EditorGUILayout.Space(6);
 
-            // 3) 두 줄 스택형
+            // 4) 두 줄 스택형
             DrawStackedIntField(totalEnemyCountProp, "Max Enemy Count on Field");
         }
 

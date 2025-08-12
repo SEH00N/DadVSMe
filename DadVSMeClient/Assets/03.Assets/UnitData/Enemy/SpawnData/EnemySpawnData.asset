@@ -16,20 +16,14 @@ MonoBehaviour:
   totalDurationSeconds: 1000
   useCustomRanges: 0
   customRanges:
-  - startSec: 1
-    endSec: 231
-  - startSec: 231
-    endSec: 1000
+  - startSec: 0
+    endSec: 250
   enemySawnPhaseList:
   - spawnInterval:
-      min: 4.79
-      max: 9.3
-    enemiesDataList:
-    - {fileID: 0}
-    - {fileID: 0}
-    totalEnemyCountOnField: 10
-  - spawnInterval:
-      min: 1
-      max: 2.5
-    enemiesDataList: []
-    totalEnemyCountOnField: 20
+      min: 5.23
+      max: 11.47
+    enemiesList:
+    - enemyData: {fileID: 11400000, guid: e304204c02c1a8142b92ec6f258ae0d2, type: 2}
+      maxOnField: 4
+    bossEnemy: {fileID: 0}
+    totalEnemyCountOnField: 5

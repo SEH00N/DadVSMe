@@ -26,6 +26,9 @@ namespace DadVSMe.Enemies
         [Header("Spawnable Enemy Data")]
         public List<EnemyEntry> enemiesList;
 
+        [Header("Boss Enemy Data")]
+        public EnemyDataBase bossEnemy;
+
         [Header("Max Enemy Count on Field")]
         [Min(0)] public int totalEnemyCountOnField = 0;
     }
@@ -37,7 +40,7 @@ namespace DadVSMe.Enemies
         [Min(0)] public int endSec = 0;
     }
 
-    [CreateAssetMenu(fileName = "EnemySpawnData", menuName = "CreateSO/Entity/EnemySpawnData")]
+    [CreateAssetMenu(fileName = "EnemySpawnData", menuName = "CreateSO/Entity/Enemy/SpawnData")]
     public class EnemySpawnData : ScriptableObject
     {
         [Header("Divide count for phases (>=1)")]

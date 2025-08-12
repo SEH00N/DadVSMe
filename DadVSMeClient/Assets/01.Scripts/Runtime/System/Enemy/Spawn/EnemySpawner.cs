@@ -216,7 +216,7 @@ namespace DadVSMe.Enemies
 
         private async UniTask SpawnFromUnitAsync(IEnemyData unitData, CancellationToken token)
         {
-            Debug.Log("Spawn Call");
+            if(unitData == null) return;
 
             if (_enemyPrefab.Initialized == false)
             {
@@ -233,11 +233,25 @@ namespace DadVSMe.Enemies
             Enemy enemy = PoolManager.Spawn<Enemy>(_enemyPrefab);
             enemy.Initialize(unitData);
             enemy.transform.position = GetOffscreenPosition(Camera.main);
+
+            if(_enemyCountDictionary.TryGetValue(unitData, out int count))
+            {
+                ++count;
+                _enemyCountDictionary[unitData] = count;
+            }
+            else
+            {
+                _enemyCountDictionary.Add(unitData, 1);
+            }
+
+            _onFieldEnemyCount++;
+
+            // 디스폰 시 적 수 -1 해줘야 함
         }
 
         private Vector3 GetOffscreenPosition(Camera cam, float margin = 0.1f)
         {
-            int side = UnityEngine.Random.Range(0, 3);
+            int side = UnityEngine.Random.Range(0, 2);
 
             float x = UnityEngine.Random.value;
             float y = UnityEngine.Random.value;
@@ -246,7 +260,6 @@ namespace DadVSMe.Enemies
             {
                 case 0: x = 1f + margin; break; // 오른쪽 밖
                 case 1: y = -margin; break; // 아래 밖
-                case 2: y = 1f + margin; break; // 위 밖
             }
 
             var v = new Vector3(x, y, Mathf.Abs(cam.transform.position.z));
