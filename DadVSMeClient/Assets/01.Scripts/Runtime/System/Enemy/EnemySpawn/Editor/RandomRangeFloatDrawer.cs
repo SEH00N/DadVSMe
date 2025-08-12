@@ -13,7 +13,7 @@ namespace DadVSMe
         const float kColsGap = 12f;
         const float kStackThreshold = 360f;
 
-        // 0.01 ´ÜÀ§ ¹İ¿Ã¸²
+        // 0.01 ë‹¨ìœ„ ë°˜ì˜¬ë¦¼
         static float Round2(float v) => (float)Math.Round(v, 2, MidpointRounding.AwayFromZero);
 
         public override void OnGUI(Rect position, SerializedProperty property, GUIContent label)
@@ -30,15 +30,15 @@ namespace DadVSMe
             float lineH = EditorGUIUtility.singleLineHeight;
             float vsp = EditorGUIUtility.standardVerticalSpacing;
 
-            // ¶óº§
+            // ë¼ë²¨
             var labelRect = new Rect(position.x, position.y, position.width, lineH);
             EditorGUI.LabelField(labelRect, label);
 
-            // ½½¶óÀÌ´õ
+            // ìŠ¬ë¼ì´ë”
             var sliderRect = new Rect(position.x, position.y + lineH + vsp, position.width, lineH);
             EditorGUI.MinMaxSlider(sliderRect, ref min, ref max, kMinLimit, kMaxLimit);
 
-            // ½½¶óÀÌ´õ °ªµµ 0.01 ´ÜÀ§·Î Á¤±ÔÈ­
+            // ìŠ¬ë¼ì´ë” ê°’ë„ 0.01 ë‹¨ìœ„ë¡œ ì •ê·œí™”
             min = Round2(min);
             max = Round2(max);
 
@@ -74,7 +74,7 @@ namespace DadVSMe
             min = Mathf.Clamp(min, kMinLimit, kMaxLimit);
             max = Mathf.Clamp(max, kMinLimit, kMaxLimit);
 
-            // ÃÖÁ¾ÀûÀ¸·Î 0.01 ´ÜÀ§·Î ÀúÀå
+            // ìµœì¢…ì ìœ¼ë¡œ 0.01 ë‹¨ìœ„ë¡œ ì €ì¥
             minProp.floatValue = Round2(min);
             maxProp.floatValue = Round2(max);
 
