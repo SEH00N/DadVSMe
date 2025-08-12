@@ -1,14 +1,16 @@
-﻿#if UNITY_EDITOR
+#if UNITY_EDITOR
 using System;
 using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
 
-namespace DadVSMe
+namespace DadVSMe.Enemies
 {
     [CustomEditor(typeof(EnemySpawnData))]
     public class EnemySpawnDataEditor : Editor
     {
+        const float kNarrowThreshold = 420f; // 이보다 좁으면 스택 레이아웃
+
         private SerializedProperty _totalDurationProp;
         private SerializedProperty _customRangesProp;
         private SerializedProperty _phasesProp;
@@ -123,19 +125,71 @@ namespace DadVSMe
             float s = Mathf.Clamp(startSec.intValue, 0, total);
             float e = Mathf.Clamp(endSec.intValue, 0, total);
 
+            // 슬라이더
             EditorGUILayout.MinMaxSlider(new GUIContent("Seconds"), ref s, ref e, 0f, total);
             startSec.intValue = Mathf.RoundToInt(s);
             endSec.intValue = Mathf.RoundToInt(e);
             if (endSec.intValue < startSec.intValue) endSec.intValue = startSec.intValue;
 
-            DrawMinSecRow("Start", startSec, total);
-            DrawMinSecRow("End", endSec, total);
+            // Start / End 편집 행
+            DrawMinSecRowResponsive("Start", startSec, total);
+            DrawMinSecRowResponsive("End", endSec, total);
+        }
+
+        private static void DrawMinSecRowResponsive(string label, SerializedProperty secProp, int total)
+        {
+            int sec = Mathf.Clamp(secProp.intValue, 0, total);
+            int m = sec / 60;
+            int s = sec % 60;
+
+            bool stacked = EditorGUIUtility.currentViewWidth < kNarrowThreshold;
+
+            if (!stacked)
+            {
+                // 가로 2-칼럼 (m | s)
+                using (new EditorGUILayout.HorizontalScope())
+                {
+                    EditorGUILayout.LabelField(label, GUILayout.Width(48));
+
+                    float oldLW = EditorGUIUtility.labelWidth;
+                    EditorGUIUtility.labelWidth = 22f; // 짧은 라벨로 숫자 필드 넓힘
+
+                    // 칼럼 간격과 최소 폭 보장
+                    using (new EditorGUILayout.HorizontalScope())
+                    {
+                        m = EditorGUILayout.IntField(new GUIContent("m"), m, GUILayout.MinWidth(70));
+                        GUILayout.Space(8);
+                        s = EditorGUILayout.IntField(new GUIContent("s"), s, GUILayout.MinWidth(70));
+                    }
+
+                    EditorGUIUtility.labelWidth = oldLW;
+                }
+            }
+            else
+            {
+                // 세로 스택: 라벨 한 줄 + (m,s) 한 줄
+                EditorGUILayout.LabelField(label);
+                float oldLW = EditorGUIUtility.labelWidth;
+                EditorGUIUtility.labelWidth = 22f;
+
+                using (new EditorGUILayout.HorizontalScope())
+                {
+                    m = EditorGUILayout.IntField(new GUIContent("m"), m, GUILayout.MinWidth(70));
+                    GUILayout.Space(8);
+                    s = EditorGUILayout.IntField(new GUIContent("s"), s, GUILayout.MinWidth(70));
+                }
+
+                EditorGUIUtility.labelWidth = oldLW;
+            }
+
+            sec = Mathf.Clamp(m * 60 + s, 0, total);
+            secProp.intValue = sec;
         }
 
         private static void DrawPhaseFields(SerializedProperty phaseProp)
         {
             var spawnIntervalProp = phaseProp.FindPropertyRelative("spawnInterval");
-            var enemiesDataListProp = phaseProp.FindPropertyRelative("enemiesDataList");
+            var enemiesDataListProp = phaseProp.FindPropertyRelative("enemiesList");
             var totalEnemyCountProp = phaseProp.FindPropertyRelative("totalEnemyCountOnField");
 
             // 1) 스폰 주기(RandomRange) — 전용 드로워가 처리

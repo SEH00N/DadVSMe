@@ -9,7 +9,7 @@ using H00N.Resources.Pools;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
-namespace DadVSMe
+namespace DadVSMe.Enemies
 {
     public class EnemySpawner : MonoBehaviour
     {
@@ -23,9 +23,12 @@ namespace DadVSMe
         private float _startTime;
         private int _onFieldEnemyCount;
 
+        private Dictionary<IEnemyData, int> _enemyCountDictionary;
+
         private void OnEnable()
         {
             _canclelationTokenSource = new CancellationTokenSource();
+            _enemyCountDictionary = new Dictionary<IEnemyData, int>();
 
             _startTime = Time.time;
             RunAsync(_canclelationTokenSource.Token).Forget();
@@ -74,7 +77,7 @@ namespace DadVSMe
 
                 if (canSpawn)
                 {
-                    var unit = PickUnitForPhase(phase);
+                    var unit = PickUnitForPhase(phase, _enemyCountDictionary);
                     await SpawnFromUnitAsync(unit, token);
                 }
 
@@ -121,7 +124,7 @@ namespace DadVSMe
             int sec = Mathf.Max(0, Mathf.FloorToInt(elapsed));
             for (int i = 0; i < usable; i++)
             {
-                // [start, end) ±∏∞£
+                // [start, end) Íµ¨Í∞Ñ
                 if (sec >= segments[i].start && sec < segments[i].end)
                     return (data.enemySawnPhaseList[i], i);
             }
@@ -184,19 +187,34 @@ namespace DadVSMe
             return result;
         }
 
-        private UnitData PickUnitForPhase(SpawnPhase phase)
+        private IEnemyData PickUnitForPhase(SpawnPhase phase, IReadOnlyDictionary<IEnemyData, int> currentCounts)
         {
-            var list = phase.enemiesDataList;
+            var list = phase.enemiesList;
+            if (list == null || list.Count == 0) return null;
 
-            if (list == null || list.Count == 0) 
-                return null;
+            // ÌóàÏö© Î¶¨Ïä§Ìä∏ Íµ¨ÏÑ±
+            List<IEnemyData> allowedunitList = null; // ÌïÑÏöîÌï† ÎïåÎßå Ìï†Îãπ
+            for (int i = 0; i < list.Count; i++)
+            {
+                var e = list[i];
+                int cur = 0;
+                if (currentCounts != null && currentCounts.TryGetValue(e.enemyData, out var v)) cur = v;
 
-            int idx = UnityEngine.Random.Range(0, list.Count);
+                bool ok = (e.maxOnField <= 0) || (cur < e.maxOnField);
+                if (ok)
+                {
+                    (allowedunitList ??= new List<IEnemyData>(list.Count)).Add(e.enemyData);
+                }
+            }
 
-            return list[idx];
+            if (allowedunitList == null || allowedunitList.Count == 0)
+                return null; // Î™®Îëê ÏÉÅÌïú ÎèÑÎã¨
+
+            int pick = UnityEngine.Random.Range(0, allowedunitList.Count);
+            return allowedunitList[pick];
         }
 
-        private async UniTask SpawnFromUnitAsync(UnitData unitData, CancellationToken token)
+        private async UniTask SpawnFromUnitAsync(IEnemyData unitData, CancellationToken token)
         {
             Debug.Log("Spawn Call");
 
@@ -212,9 +230,9 @@ namespace DadVSMe
                 }
             }
 
-            // Enemy enemy = PoolManager.Spawn<Enemy>(_enemyPrefab);
-            // enemy.Initialize(unitData);
-            // enemy.transform.position = GetOffscreenPosition(Camera.main);
+            Enemy enemy = PoolManager.Spawn<Enemy>(_enemyPrefab);
+            enemy.Initialize(unitData);
+            enemy.transform.position = GetOffscreenPosition(Camera.main);
         }
 
         private Vector3 GetOffscreenPosition(Camera cam, float margin = 0.1f)
@@ -226,9 +244,9 @@ namespace DadVSMe
 
             switch (side)
             {
-                case 0: x = 1f + margin; break; // ø¿∏•¬  π€
-                case 1: y = -margin; break; // æ∆∑° π€
-                case 2: y = 1f + margin; break; // ¿ß π€
+                case 0: x = 1f + margin; break; // Ïò§Î•∏Ï™Ω Î∞ñ
+                case 1: y = -margin; break; // ÏïÑÎûò Î∞ñ
+                case 2: y = 1f + margin; break; // ÏúÑ Î∞ñ
             }
 
             var v = new Vector3(x, y, Mathf.Abs(cam.transform.position.z));

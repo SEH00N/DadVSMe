@@ -23,6 +23,11 @@ namespace DadVSMe.Enemies
             enemyDetector.Initialize();
         }
 
+        public void Initialize(IEnemyData data)
+        {
+
+        }
+
         void IGrabbable.Grab(Entity performer)
         {
             staticEntity = true;
