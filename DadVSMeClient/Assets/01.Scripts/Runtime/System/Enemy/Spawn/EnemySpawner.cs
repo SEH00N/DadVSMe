@@ -234,7 +234,12 @@ namespace DadVSMe.Enemies
             enemy.Initialize(unitData);
             enemy.transform.position = GetOffscreenPosition(Camera.main);
 
-            if(_enemyCountDictionary.TryGetValue(unitData, out int count))
+            CountingEnemy(enemy, unitData);
+        }
+
+        private void CountingEnemy(Enemy enemy, IEnemyData unitData)
+        {
+            if (_enemyCountDictionary.TryGetValue(unitData, out int count))
             {
                 ++count;
                 _enemyCountDictionary[unitData] = count;
@@ -244,9 +249,28 @@ namespace DadVSMe.Enemies
                 _enemyCountDictionary.Add(unitData, 1);
             }
 
-            _onFieldEnemyCount++;
+            ++_onFieldEnemyCount;
 
-            // 디스폰 시 적 수 -1 해줘야 함
+            enemy.onDespawned += HandleDecountEnemy;
+        }
+
+        private void HandleDecountEnemy(Enemy enemy)
+        {
+            enemy.onDespawned -= HandleDecountEnemy;
+
+            var enemyData = enemy.DataInfo;
+
+            if (_enemyCountDictionary.TryGetValue(enemyData, out int count))
+            {
+                --count;
+                _enemyCountDictionary[enemyData] = count;
+            }
+            else
+            {
+                Debug.LogError("Not Register Enemy");
+            }
+
+            --_onFieldEnemyCount;
         }
 
         private Vector3 GetOffscreenPosition(Camera cam, float margin = 0.1f)
