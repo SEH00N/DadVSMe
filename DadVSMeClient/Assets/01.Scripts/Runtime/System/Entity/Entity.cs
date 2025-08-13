@@ -1,4 +1,3 @@
-using ShibaInspector.Attributes;
 using UnityEngine;
 
 namespace DadVSMe.Entities

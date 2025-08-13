@@ -12,6 +12,7 @@ namespace DadVSMe.Entities
         [SerializeField] protected UnitHealth unitHealth = null;
         [SerializeField] protected UnitAttackEventListener unitAttackEventListener = null;
         [SerializeField] protected UnitSkillComponent unitSkillComponent;
+        [SerializeField] protected Rigidbody2D unitRigidbody = null;
 
         public UnitHealth UnitHealth => unitHealth; // uniy health is used frequently. allow external access for performance. 
 
@@ -32,19 +33,39 @@ namespace DadVSMe.Entities
         protected override void LateUpdate()
         {
             base.LateUpdate();
+            UpdateForwardDirection();
+            UpdateGroundPositionY();
+        }
 
-            if(unitMovement == null)
+        private void UpdateForwardDirection()
+        {
+            if (unitMovement == null)
                 return;
 
-            if(unitMovement.IsActive == false)
+            if (unitMovement.IsActive == false)
                 return;
 
-            if(unitMovement.MovementVelocity.x == 0)
+            if (unitMovement.MovementVelocity.x == 0)
                 return;
 
             int forwardDirection = unitMovement.MovementVelocity.x > 0 ? 1 : -1;
             entityAnimator.SetRotation(forwardDirection > 0);
             unitFSMData.forwardDirection = forwardDirection;
+        }
+
+        private void UpdateGroundPositionY()
+        {
+            if (staticEntity)
+                return;
+
+            unitFSMData.groundPositionY = transform.position.y;
+        }
+
+        public void SetFloat(bool isFloat)
+        {
+            staticEntity = isFloat;
+            unitRigidbody.gravityScale = isFloat ? 0f : 1f;
+            unitMovement.SetActive(isFloat == false);
         }
     }
 }
