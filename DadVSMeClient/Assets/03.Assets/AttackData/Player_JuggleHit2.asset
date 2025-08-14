@@ -13,4 +13,5 @@ MonoBehaviour:
   m_Name: Player_JuggleHit2
   m_EditorClassIdentifier: 
   damage: 0
-  attackFeedback: 0
+  juggleForce: 12.5
+  juggleDirection: {x: 0.05, y: 1}

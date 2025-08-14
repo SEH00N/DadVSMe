@@ -13,4 +13,5 @@ MonoBehaviour:
   m_Name: Player_DashSlam
   m_EditorClassIdentifier: 
   damage: 0
-  attackFeedback: 0
+  juggleForce: 15
+  juggleDirection: {x: 1, y: 1.75}

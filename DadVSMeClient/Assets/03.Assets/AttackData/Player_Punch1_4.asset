@@ -13,4 +13,5 @@ MonoBehaviour:
   m_Name: Player_Punch1_4
   m_EditorClassIdentifier: 
   damage: 0
-  attackFeedback: 0
+  juggleForce: 12
+  juggleDirection: {x: 0.05, y: 1}

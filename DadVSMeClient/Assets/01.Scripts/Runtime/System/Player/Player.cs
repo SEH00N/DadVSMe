@@ -8,6 +8,8 @@ namespace DadVSMe.Players
         [Header("Player")]
         [SerializeField] EnemyDetector enemyDetector = null;
 
+        protected override RigidbodyType2D DefaultRigidbodyType => RigidbodyType2D.Dynamic;
+
         // Debug
         private void Start()
         {

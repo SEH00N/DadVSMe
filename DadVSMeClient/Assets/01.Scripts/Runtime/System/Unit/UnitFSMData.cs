@@ -10,7 +10,6 @@ namespace DadVSMe.Entities
         public List<Unit> enemies = new List<Unit>();
         public IAttackData attackData = null;
         public int forwardDirection = 1;
-        public float attackRange = 3f;
         public float groundPositionY = 0f;
         public UnitCollisionData collisionData = new UnitCollisionData();
 

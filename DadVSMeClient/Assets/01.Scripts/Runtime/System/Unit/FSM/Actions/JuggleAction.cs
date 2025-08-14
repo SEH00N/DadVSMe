@@ -25,6 +25,7 @@ namespace DadVSMe.Entities
             unitFSMData.unit.SetFloat(true);
 
             Vector2 force = juggleAttackData.JuggleDirection.normalized * juggleAttackData.JuggleForce;
+            force.x *= -Mathf.Sign(unitFSMData.forwardDirection);
             unitRigidbody.linearVelocity = force;
         }
 
@@ -33,7 +34,7 @@ namespace DadVSMe.Entities
             base.UpdateState();
 
             // if the bounce is not due to a collision, the bounce is checked based on the last ground position.
-            if(brain.transform.position.y >= unitFSMData.groundPositionY)
+            if(brain.transform.position.y >= unitFSMData.groundPositionY || unitRigidbody.linearVelocity.y > 0)
                 return;
 
             unitFSMData.collisionData = new UnitCollisionData(unitRigidbody.linearVelocity, Vector2.up, new Vector2(brain.transform.position.x, unitFSMData.groundPositionY));

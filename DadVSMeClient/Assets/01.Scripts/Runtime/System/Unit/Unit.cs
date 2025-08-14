@@ -15,6 +15,8 @@ namespace DadVSMe.Entities
         [SerializeField] protected Rigidbody2D unitRigidbody = null;
 
         public UnitHealth UnitHealth => unitHealth; // uniy health is used frequently. allow external access for performance. 
+        
+        protected virtual RigidbodyType2D DefaultRigidbodyType => RigidbodyType2D.Kinematic;
 
         private UnitFSMData unitFSMData = null;
 
@@ -64,7 +66,8 @@ namespace DadVSMe.Entities
         public void SetFloat(bool isFloat)
         {
             staticEntity = isFloat;
-            unitRigidbody.gravityScale = isFloat ? 0f : 1f;
+            unitRigidbody.bodyType = isFloat ? RigidbodyType2D.Dynamic : DefaultRigidbodyType;
+            unitRigidbody.gravityScale = isFloat ? GameDefine.GRAVITY_SCALE : 0f;
             unitMovement.SetActive(isFloat == false);
         }
     }

@@ -5,6 +5,7 @@ namespace DadVSMe.Entities.FSM
 {
     public class SimpleAttackAction : AttackActionBase
     {
+        [SerializeField] float attackRange = 3f;
         private UnitFSMData unitFSMData = null;
 
         public override void Init(FSMBrain brain, FSMState state)
@@ -21,7 +22,7 @@ namespace DadVSMe.Entities.FSM
                 if(Mathf.Sign(targetDirection) != Mathf.Sign(forwardDirection))
                     return;
 
-                if(Mathf.Abs(targetDirection) > unitFSMData.attackRange)
+                if(Mathf.Abs(targetDirection) > attackRange)
                     return;
 
                 AttackToTarget(enemy);
