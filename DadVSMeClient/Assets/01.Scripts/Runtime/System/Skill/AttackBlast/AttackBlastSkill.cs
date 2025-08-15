@@ -19,7 +19,7 @@ namespace DadVSMe
         public AttackBlastSkill(AddressableAsset<AttackBlast> prefab)
         {
             this.prefab = prefab;
-            spawnOffset = new Vector2(3f, 2f);
+            spawnOffset = new Vector2(2.5f, 0f);
         }
 
         public override void OnRegist(UnitSkillComponent ownerComponent)
@@ -34,8 +34,13 @@ namespace DadVSMe
             AttackBlast attackBlast = PoolManager.Spawn<AttackBlast>(prefab);
             
             attackBlast.SetInstigator(ownerComponent.gameObject.GetComponent<Unit>());
+
             Transform ownerTrm = ownerComponent.transform;
             attackBlast.transform.position = ownerTrm.position + (spawnOffset * Math.Sign(ownerTrm.localScale.x));
+            Vector3 scale = attackBlast.transform.localScale;
+            scale.x *= Math.Sign(ownerTrm.localScale.x);
+            attackBlast.transform.localScale = scale;
+
             attackBlast.Launch(ownerTrm.right * Math.Sign(ownerTrm.localScale.x));
         }
 

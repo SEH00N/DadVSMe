@@ -265,7 +265,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isReverse: 0
-  attackFeedback: 1
+  attackFeedbacks: 
 --- !u!1 &190505272
 GameObject:
   m_ObjectHideFlags: 0
@@ -599,7 +599,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isReverse: 0
-  attackFeedback: 3
+  attackFeedbacks: 
 --- !u!1 &288539952
 GameObject:
   m_ObjectHideFlags: 0
@@ -1206,7 +1206,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isReverse: 0
-  attackFeedback: 5
+  attackFeedbacks: 
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -1471,7 +1471,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isReverse: 0
-  attackFeedback: 2
+  attackFeedbacks: 
 --- !u!1 &609655094
 GameObject:
   m_ObjectHideFlags: 0
@@ -1863,6 +1863,8 @@ MonoBehaviour:
         enemies: []
         forwardDirection: 1
         groundPositionY: 0
+        isFloat: 0
+        isLie: 0
 --- !u!114 &668232997
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3507,7 +3509,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isReverse: 0
-  attackFeedback: 4
+  attackFeedbacks: 
 --- !u!1 &1371810581
 GameObject:
   m_ObjectHideFlags: 0
@@ -3704,7 +3706,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isReverse: 0
-  attackFeedback: 6
+  attackFeedbacks: 
 --- !u!1 &1485304709
 GameObject:
   m_ObjectHideFlags: 0

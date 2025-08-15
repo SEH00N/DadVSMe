@@ -15,7 +15,7 @@ namespace DadVSMe
             skillContainer = new();
 
             await prefab.InitializeAsync();
-            RegistSkill<AttackBlastSkill>(new AttackBlastSkill(prefab));
+            //RegistSkill<AttackBlastSkill>(new AttackBlastSkill(prefab));
         }
 
         public void RegistSkill<T>(T skill) where T : UnitSkill

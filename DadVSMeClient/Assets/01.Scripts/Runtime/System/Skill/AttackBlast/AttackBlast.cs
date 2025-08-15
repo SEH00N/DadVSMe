@@ -16,6 +16,7 @@ namespace DadVSMe
         private PoolReference poolReference;
 
         private Unit instigator;
+        private Vector3 originScale;
 
         [SerializeField] private float moveSpeed;
         [SerializeField] private float lifeTime;
@@ -25,6 +26,13 @@ namespace DadVSMe
         void Awake()
         {
             Initialize(null);
+
+            originScale = transform.localScale;
+        }
+
+        void OnEnable()
+        {
+            transform.localScale = originScale;
         }
 
         public override void Initialize(IEntityData data)
@@ -75,9 +83,9 @@ namespace DadVSMe
                 targetHealth.Attack(instigator, attackData);
             }
 
-            _lifetimeCts?.Cancel();
+            // _lifetimeCts?.Cancel();
 
-            PoolManager.Despawn(poolReference);
+            // PoolManager.Despawn(poolReference);
         }
     }
 }
