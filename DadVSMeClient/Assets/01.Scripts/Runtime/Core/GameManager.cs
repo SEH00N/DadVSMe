@@ -35,6 +35,8 @@ namespace DadVSMe
             managerList.Add(gameObject.GetOrAddComponent<GlobalCoroutineManager>());
             managerList.ForEach(manager => manager.Initialize());
 
+            Application.targetFrameRate = 60;
+
             InputManager.ChangeInput<PlayerInputReader>();
         }
 

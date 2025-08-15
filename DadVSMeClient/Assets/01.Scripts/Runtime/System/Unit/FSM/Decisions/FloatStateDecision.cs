@@ -2,7 +2,7 @@ using H00N.AI.FSM;
 
 namespace DadVSMe.Entities.FSM
 {
-    public class StaticStateDecision : FSMDecision
+    public class FloatStateDecision : FSMDecision
     {
         private UnitFSMData unitFSMData = null;
 
@@ -14,7 +14,7 @@ namespace DadVSMe.Entities.FSM
 
         public override bool MakeDecision()
         {
-            return unitFSMData.unit.StaticEntity;
+            return unitFSMData.isFloat;
         }
     }
 }

@@ -65,6 +65,7 @@ namespace DadVSMe.Entities
 
         public void SetFloat(bool isFloat)
         {
+            unitFSMData.isFloat = isFloat;
             staticEntity = isFloat;
             unitRigidbody.bodyType = isFloat ? RigidbodyType2D.Dynamic : DefaultRigidbodyType;
             unitRigidbody.gravityScale = isFloat ? GameDefine.GRAVITY_SCALE : 0f;

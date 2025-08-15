@@ -213,9 +213,9 @@ Transform:
   m_Children:
   - {fileID: 1589309627729178559}
   - {fileID: 6961806067608511280}
+  - {fileID: 9193952588394744718}
   - {fileID: 1441637237244673809}
   - {fileID: 7724383824382830172}
-  - {fileID: 9193952588394744718}
   - {fileID: 5186848631465026167}
   m_Father: {fileID: 3801318511281256181}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -759,6 +759,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackData: {fileID: 11400000, guid: 5b4c1913007e1435da0e9277d98ec621, type: 2}
+  attackRange: 3
 --- !u!114 &8427985100756766427
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1203,6 +1204,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackData: {fileID: 11400000, guid: 4594087d91bba4b1fbdbaeb9aa5c82af, type: 2}
+  attackRange: 3
 --- !u!114 &934078034710955470
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1723,6 +1725,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackData: {fileID: 11400000, guid: 3ba68045f9992456cb3437d118b707fb, type: 2}
+  attackRange: 3
 --- !u!1 &2430902269092868096
 GameObject:
   m_ObjectHideFlags: 0
@@ -1907,6 +1910,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackData: {fileID: 11400000, guid: 026092285757a4d48845fb82493aba4f, type: 2}
+  attackRange: 3
 --- !u!114 &1799858541551795775
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2545,6 +2549,7 @@ MonoBehaviour:
   isReverse: 0
   pivot: {fileID: 8451734842006371004}
   distance: 0.75
+  includeStaticEnemy: 0
 --- !u!1 &3711209104930429882
 GameObject:
   m_ObjectHideFlags: 0
@@ -2744,6 +2749,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackData: {fileID: 11400000, guid: b768654027aef4411bb3d7dec069a3da, type: 2}
+  attackRange: 3
 --- !u!114 &8321866719720642089
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2899,9 +2905,9 @@ Transform:
   - {fileID: 8602577454901602113}
   - {fileID: 6846219740689893314}
   - {fileID: 1867282688267533254}
+  - {fileID: 1361689412035644804}
   - {fileID: 4419637242376677547}
   - {fileID: 6972973974242913709}
-  - {fileID: 1361689412035644804}
   - {fileID: 7017951082815048107}
   m_Father: {fileID: 3801318511281256181}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3759,6 +3765,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackData: {fileID: 11400000, guid: 0f8b70c95b96d4d0dba79d42507dd9af, type: 2}
+  attackRange: 3
 --- !u!114 &3950174164250126872
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4801,6 +4808,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackData: {fileID: 11400000, guid: da240b88bd13d495f814b309571aaeaa, type: 2}
+  attackRange: 3
 --- !u!1 &7514139133212167829
 GameObject:
   m_ObjectHideFlags: 0
@@ -4835,9 +4843,9 @@ Transform:
   m_Children:
   - {fileID: 3615641488980107384}
   - {fileID: 5113638593710294747}
+  - {fileID: 9121737482675756531}
   - {fileID: 488747566285346943}
   - {fileID: 461614273728789025}
-  - {fileID: 9121737482675756531}
   - {fileID: 2492547928157012777}
   - {fileID: 6971694558443744874}
   - {fileID: 5794083165088824997}
@@ -5005,6 +5013,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackData: {fileID: 11400000, guid: c051b11a1c87c4e36a208aece61e94d1, type: 2}
+  attackRange: 3
 --- !u!1 &7555105741711015732
 GameObject:
   m_ObjectHideFlags: 0
@@ -5176,6 +5185,7 @@ MonoBehaviour:
   isReverse: 0
   pivot: {fileID: 8403904138874411962}
   distance: 0.75
+  includeStaticEnemy: 1
 --- !u!1 &7642052445702148433
 GameObject:
   m_ObjectHideFlags: 0
@@ -5482,6 +5492,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackData: {fileID: 11400000, guid: b0ac4a06328f74051bfa3bd227ff0af7, type: 2}
+  attackRange: 3
 --- !u!114 &633283403940600332
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5812,6 +5823,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackData: {fileID: 11400000, guid: c23da38a1988b41cf99c9f497d73c23b, type: 2}
+  attackRange: 3
 --- !u!1 &8224957268586064021
 GameObject:
   m_ObjectHideFlags: 0
@@ -6086,6 +6098,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackData: {fileID: 11400000, guid: 30b11dd528efc45bcb5c6eb19a838e57, type: 2}
+  attackRange: 3
 --- !u!114 &2824638865181201472
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6325,6 +6338,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackData: {fileID: 11400000, guid: 62480c7f317444987b4814319fa2de24, type: 2}
+  attackRange: 4.5
 --- !u!114 &4111622745176382284
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6545,6 +6559,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackData: {fileID: 11400000, guid: b0ac4a06328f74051bfa3bd227ff0af7, type: 2}
+  attackRange: 3
 --- !u!1 &8817773452266987267
 GameObject:
   m_ObjectHideFlags: 0
@@ -6652,6 +6667,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackData: {fileID: 11400000, guid: 19f78f80973de4f7ebb3794deb7402f6, type: 2}
+  attackRange: 3
 --- !u!1 &8823108435394788813
 GameObject:
   m_ObjectHideFlags: 0
@@ -6775,6 +6791,7 @@ MonoBehaviour:
   isReverse: 0
   pivot: {fileID: 6993041932429442240}
   distance: 0.75
+  includeStaticEnemy: 0
 --- !u!1 &8862820822150054748
 GameObject:
   m_ObjectHideFlags: 0
@@ -6868,6 +6885,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackData: {fileID: 11400000, guid: a4a58c8e69eea46ec9cf8902ba4d7111, type: 2}
+  attackRange: 3
 --- !u!114 &5952728668353690025
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6975,6 +6993,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackData: {fileID: 11400000, guid: 592bd4dc54cfa4d28a4bda73e75c1aa8, type: 2}
+  attackRange: 3
 --- !u!114 &7593858258407932494
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7068,6 +7087,7 @@ MonoBehaviour:
   unitHealth: {fileID: 6165701722836179940}
   unitAttackEventListener: {fileID: 8895890805159774065}
   unitSkillComponent: {fileID: 6550646681929325183}
+  unitRigidbody: {fileID: 0}
   enemyDetector: {fileID: 644674988795700514}
 --- !u!114 &6165701722836179940
 MonoBehaviour:
@@ -7097,9 +7117,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fsmBrain: {fileID: 2841000604668159261}
-  attackFeedbackTable:
-    keys: 
-    values: []
 --- !u!114 &2841000604668159261
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7142,9 +7159,8 @@ MonoBehaviour:
         unit: {fileID: 1174489111746341445}
         enemyMaxCount: 5
         enemies: []
-        feedbackValue: 0
         forwardDirection: 1
-        attackRange: 3
+        groundPositionY: 0
     - rid: 3777565259024040135
       type: {class: PlayerFSMData, ns: DadVSMe.Players.FSM, asm: DadVSMe}
       data:
@@ -7362,6 +7378,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackData: {fileID: 11400000, guid: 3ff730ee720c14673a3e045758da15d0, type: 2}
+  attackRange: 3
 --- !u!114 &8737672042268400247
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7497,6 +7514,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackData: {fileID: 11400000, guid: b0ac4a06328f74051bfa3bd227ff0af7, type: 2}
+  attackRange: 3
 --- !u!114 &1987387299468221437
 MonoBehaviour:
   m_ObjectHideFlags: 0
