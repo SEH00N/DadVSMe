@@ -5,6 +5,8 @@ namespace DadVSMe.Entities.FSM
 {
     public class SimpleAttackAction : AttackActionBase
     {
+        
+        [SerializeField] AttackDataBase attackData = null;
         [SerializeField] float attackRange = 3f;
 
         [Space(10f)]
@@ -46,7 +48,7 @@ namespace DadVSMe.Entities.FSM
                         return;
                 }
 
-                AttackToTarget(enemy);
+                AttackToTarget(enemy, attackData);
             });
         }
     }

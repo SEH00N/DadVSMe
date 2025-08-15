@@ -5,8 +5,6 @@ namespace DadVSMe.Entities.FSM
 {
     public abstract class AttackActionBase : FSMAction
     {
-        [SerializeField] private AttackDataBase attackData = null;
-
         private EntityAnimator entityAnimator = null;
         private UnitFSMData unitFSMData = null;
 
@@ -38,7 +36,7 @@ namespace DadVSMe.Entities.FSM
             OnAttack(eventData);
         }
 
-        protected void AttackToTarget(Unit target)
+        protected void AttackToTarget(Unit target, AttackDataBase attackData)
         {
             target.UnitHealth.Attack(unitFSMData.unit, attackData);
         }

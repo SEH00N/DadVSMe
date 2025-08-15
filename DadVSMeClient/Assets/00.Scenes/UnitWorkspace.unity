@@ -3171,7 +3171,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 607f693dc07e14842b37f8a9aa366817, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  idleTime: 1
+  idleTime: 0.75
   onGoingState: {fileID: 803635653}
 --- !u!1 &1226440416
 GameObject:
@@ -5470,6 +5470,46 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3775436521619690260, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
+      propertyPath: grabAttackDatas.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3775436521619690260, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
+      propertyPath: attackAnimations.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3775436521619690260, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
+      propertyPath: 'attackAnimations.Array.data[0]'
+      value: GrabAttack1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3775436521619690260, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
+      propertyPath: 'attackAnimations.Array.data[1]'
+      value: GrabAttack2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3775436521619690260, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
+      propertyPath: grabAttackDatas.Array.data[0].animationName
+      value: GrabAttack1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3775436521619690260, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
+      propertyPath: grabAttackDatas.Array.data[1].animationName
+      value: GrabAttack2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3775436521619690260, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
+      propertyPath: grabAttackDatas.Array.data[0].simpleAttackData
+      value: 
+      objectReference: {fileID: 11400000, guid: c23da38a1988b41cf99c9f497d73c23b, type: 2}
+    - target: {fileID: 3775436521619690260, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
+      propertyPath: grabAttackDatas.Array.data[1].simpleAttackData
+      value: 
+      objectReference: {fileID: 11400000, guid: c22ee9faf9ed34be6b42aafa62780f79, type: 2}
+    - target: {fileID: 5040547602540670869, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
+      propertyPath: onStateEnterEvent.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5229560510498053603, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.4
+      objectReference: {fileID: 0}
     - target: {fileID: 7488116858921959985, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
       propertyPath: m_LocalPosition.x
       value: -8.25
@@ -5514,7 +5554,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 7584720863612903893, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
