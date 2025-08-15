@@ -17,8 +17,8 @@ namespace DadVSMe.Enemies
         [SerializeField] EnemyDetector enemyDetector = null;
         [SerializeField] FSMState grabState = null;
 
-        private IEnemyData enemyData;
-        public IEnemyData DataInfo => enemyData;
+        private IEntityData enemyData;
+        public IEntityData DataInfo => enemyData;
 
         private void Awake()
         {
@@ -28,18 +28,13 @@ namespace DadVSMe.Enemies
         // Debug
         private void Start()
         {
-            Initialize();
+            Initialize(null);
         }
 
-        public override void Initialize()
+        public override void Initialize(IEntityData data)
         {
-            base.Initialize();
+            base.Initialize(data);
             enemyDetector.Initialize();
-        }
-
-        public void Initialize(IEnemyData data)
-        {
-            enemyData = data;
         }
 
         void IGrabbable.Grab(Entity performer)

@@ -19,12 +19,12 @@ namespace DadVSMe
 
         void Awake()
         {
-            Initialize();
+            Initialize(null);
         }
 
-        public override void Initialize()
+        public override void Initialize(IEntityData data)
         {
-            base.Initialize();
+            base.Initialize(data);
 
             movement = GetComponent<UnitMovement>();
             poolReference = GetComponent<PoolReference>();

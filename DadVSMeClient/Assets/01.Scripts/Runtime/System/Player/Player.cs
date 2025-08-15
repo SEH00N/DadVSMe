@@ -13,12 +13,12 @@ namespace DadVSMe.Players
         // Debug
         private void Start()
         {
-            Initialize();
+            Initialize(null);
         }
 
-        public override void Initialize()
+        public override void Initialize(IEntityData data)
         {
-            base.Initialize();
+            base.Initialize(data);
             enemyDetector.Initialize();
         }
 

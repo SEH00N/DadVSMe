@@ -20,9 +20,9 @@ namespace DadVSMe.Entities
 
         private UnitFSMData unitFSMData = null;
 
-        public override void Initialize()
+        public override void Initialize(IEntityData data)
         {
-            base.Initialize();
+            base.Initialize(data);
             fsmBrain.Initialize();
             fsmBrain.SetAsDefaultState();
             unitHealth.Initialize(unitData.maxHP);

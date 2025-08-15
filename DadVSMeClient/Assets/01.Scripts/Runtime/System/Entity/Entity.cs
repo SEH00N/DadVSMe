@@ -13,11 +13,15 @@ namespace DadVSMe.Entities
 
         private float currentDepth = 0f;
 
-        public virtual void Initialize()
+        private IEntityData dataInfo;
+        public IEntityData DataInfo => dataInfo;
+
+        public virtual void Initialize(IEntityData data)
         {
             if(staticEntity)
                 return;
 
+            dataInfo = data;
             entityAnimator.Initialize();
         }
 

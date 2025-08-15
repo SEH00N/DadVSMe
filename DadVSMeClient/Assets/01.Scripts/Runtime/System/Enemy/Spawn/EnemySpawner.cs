@@ -23,12 +23,12 @@ namespace DadVSMe.Enemies
         private float _startTime;
         private int _onFieldEnemyCount;
 
-        private Dictionary<IEnemyData, int> _enemyCountDictionary;
+        private Dictionary<IEntityData, int> _enemyCountDictionary;
 
         private void OnEnable()
         {
             _canclelationTokenSource = new CancellationTokenSource();
-            _enemyCountDictionary = new Dictionary<IEnemyData, int>();
+            _enemyCountDictionary = new Dictionary<IEntityData, int>();
 
             _startTime = Time.time;
             RunAsync(_canclelationTokenSource.Token).Forget();
@@ -187,13 +187,13 @@ namespace DadVSMe.Enemies
             return result;
         }
 
-        private IEnemyData PickUnitForPhase(SpawnPhase phase, IReadOnlyDictionary<IEnemyData, int> currentCounts)
+        private IEntityData PickUnitForPhase(SpawnPhase phase, IReadOnlyDictionary<IEntityData, int> currentCounts)
         {
             var list = phase.enemiesList;
             if (list == null || list.Count == 0) return null;
 
             // 허용 리스트 구성
-            List<IEnemyData> allowedunitList = null; // 필요할 때만 할당
+            List<IEntityData> allowedunitList = null; // 필요할 때만 할당
             for (int i = 0; i < list.Count; i++)
             {
                 var e = list[i];
@@ -203,7 +203,7 @@ namespace DadVSMe.Enemies
                 bool ok = (e.maxOnField <= 0) || (cur < e.maxOnField);
                 if (ok)
                 {
-                    (allowedunitList ??= new List<IEnemyData>(list.Count)).Add(e.enemyData);
+                    (allowedunitList ??= new List<IEntityData>(list.Count)).Add(e.enemyData);
                 }
             }
 
@@ -214,7 +214,7 @@ namespace DadVSMe.Enemies
             return allowedunitList[pick];
         }
 
-        private async UniTask SpawnFromUnitAsync(IEnemyData unitData, CancellationToken token)
+        private async UniTask SpawnFromUnitAsync(IEntityData unitData, CancellationToken token)
         {
             if(unitData == null) return;
 
@@ -237,7 +237,7 @@ namespace DadVSMe.Enemies
             CountingEnemy(enemy, unitData);
         }
 
-        private void CountingEnemy(Enemy enemy, IEnemyData unitData)
+        private void CountingEnemy(Enemy enemy, IEntityData unitData)
         {
             if (_enemyCountDictionary.TryGetValue(unitData, out int count))
             {
