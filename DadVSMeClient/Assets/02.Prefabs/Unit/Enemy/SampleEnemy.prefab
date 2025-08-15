@@ -1023,7 +1023,6 @@ GameObject:
   - component: {fileID: 4287928714303163582}
   - component: {fileID: 7103110318375981793}
   - component: {fileID: 7656615441468537831}
-  - component: {fileID: 748272970726542522}
   m_Layer: 0
   m_Name: SampleEnemy
   m_TagString: Enemy
@@ -1083,7 +1082,8 @@ MonoBehaviour:
   fsmBrain: {fileID: 937934848906895013}
   unitHealth: {fileID: 860784415877132298}
   unitAttackEventListener: {fileID: 6879381932298219287}
-  unitSkillComponent: {fileID: 748272970726542522}
+  unitSkillComponent: {fileID: 0}
+  unitRigidbody: {fileID: 0}
   enemyDetector: {fileID: 1930033213009724284}
   grabState: {fileID: 6100036941812497167}
 --- !u!114 &1606572535246019115
@@ -1176,9 +1176,10 @@ MonoBehaviour:
         unit: {fileID: 8591467479871254134}
         enemyMaxCount: 5
         enemies: []
-        feedbackValue: 0
         forwardDirection: 1
-        attackRange: 3
+        groundPositionY: 0
+        isFloat: 0
+        isLie: 0
 --- !u!114 &581526202169611223
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1207,15 +1208,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fsmBrain: {fileID: 937934848906895013}
-  attackFeedbackTable:
-    keys: 010000000200000003000000040000000500000006000000
-    values:
-    - {fileID: 85189046596897113}
-    - {fileID: 6304797635302678406}
-    - {fileID: 5902974578216513413}
-    - {fileID: 3827864831070473540}
-    - {fileID: 1816628484226020344}
-    - {fileID: 7206834550208070022}
 --- !u!50 &4287928714303163582
 Rigidbody2D:
   serializedVersion: 5
@@ -1311,20 +1303,6 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
---- !u!114 &748272970726542522
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6687909096209016002}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4ac7311ac0ae245a39789789efa20658, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  prefab:
-    key: AttackBlast
 --- !u!1 &6692296777977673732
 GameObject:
   m_ObjectHideFlags: 0

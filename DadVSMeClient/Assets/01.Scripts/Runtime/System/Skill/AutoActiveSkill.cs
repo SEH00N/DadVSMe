@@ -1,21 +1,25 @@
 using System.Collections;
+using System.Threading;
+using Cysharp.Threading.Tasks;
 using UnityEngine;
 
 namespace DadVSMe
 {
     public class AutoActiveSkill : UnitSkill
     {
-        private float cooltime;
-        private Coroutine autoActiveCo;
-        private WaitForSeconds wfs;
+        protected float cooltime;
+        private CancellationTokenSource _loopCts;
+
+        public AutoActiveSkill(float cooltime)
+        {
+            this.cooltime = cooltime;
+        }
 
         public override void OnRegist(UnitSkillComponent ownerComponent)
         {
             base.OnRegist(ownerComponent);
 
-            wfs = new WaitForSeconds(cooltime);
-
-            autoActiveCo = ownerComponent.StartCoroutine(AutoActiveCo());
+            StartAutoActiveLoop();
         }
 
         public override void Execute()
@@ -27,17 +31,45 @@ namespace DadVSMe
         {
             base.OnUnregist();
 
-            ownerComponent.StopCoroutine(autoActiveCo);
+            StopAutoActiveLoop();
         }
 
-        private IEnumerator AutoActiveCo()
+        public void StartAutoActiveLoop()
+    {
+        // 중복 실행 방지
+        _loopCts?.Cancel();
+        _loopCts?.Dispose();
+        _loopCts = new CancellationTokenSource();
+
+        // 필요하면 파괴 시에도 끊고 싶을 때는 Destroy 토큰과 링크:
+        // _loopCts = CancellationTokenSource.CreateLinkedTokenSource(this.GetCancellationTokenOnDestroy());
+
+        AutoActiveLoop(_loopCts.Token).Forget();
+    }
+
+    public void StopAutoActiveLoop()
+    {
+        _loopCts?.Cancel();
+        _loopCts?.Dispose();
+        _loopCts = null;
+    }
+
+    async UniTask AutoActiveLoop(CancellationToken ct)
+    {
+        float elapsed = 0f;
+
+        while (!ct.IsCancellationRequested)
         {
-            while (true)
+            await UniTask.Yield(PlayerLoopTiming.Update, ct); // Fixed면 FixedUpdate로
+            elapsed += Time.deltaTime;                        // 타임스케일 무시: unscaledDeltaTime
+
+            if (elapsed >= cooltime)
             {
                 Execute();
-
-                yield return wfs;
+                Debug.Log(elapsed);
+                elapsed = 0f;
             }
         }
+    }
     }
 }

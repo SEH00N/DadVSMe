@@ -18,8 +18,10 @@ namespace DadVSMe
         private Unit instigator;
         private Vector3 originScale;
 
-        [SerializeField] private float moveSpeed;
-        [SerializeField] private float lifeTime;
+        [SerializeField]
+        private float moveSpeed;
+        [SerializeField]
+        private float lifeTime;
 
         private CancellationTokenSource _lifetimeCts;
 

@@ -32,7 +32,6 @@ namespace DadVSMe.Entities
         {
             currentHP -= attackData.Damage;
             onAttackEvent.Invoke(attacker, attackData);
-            Debug.Log(attacker);
         }
 
         public void Heal(int amount)
