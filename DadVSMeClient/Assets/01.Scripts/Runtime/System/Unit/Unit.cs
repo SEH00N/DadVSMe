@@ -14,6 +14,7 @@ namespace DadVSMe.Entities
         [SerializeField] protected UnitSkillComponent unitSkillComponent;
         [SerializeField] protected Rigidbody2D unitRigidbody = null;
 
+        public FSMBrain FSMBrain => fsmBrain;
         public UnitHealth UnitHealth => unitHealth; // uniy health is used frequently. allow external access for performance. 
         
         protected virtual RigidbodyType2D DefaultRigidbodyType => RigidbodyType2D.Kinematic;

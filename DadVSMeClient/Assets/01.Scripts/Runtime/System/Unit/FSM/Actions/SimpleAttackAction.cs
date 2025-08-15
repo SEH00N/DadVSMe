@@ -6,6 +6,15 @@ namespace DadVSMe.Entities.FSM
     public class SimpleAttackAction : AttackActionBase
     {
         [SerializeField] float attackRange = 3f;
+
+        [Space(10f)]
+        [SerializeField] bool checkFloat = false;
+        [SerializeField] bool isFloat = false;
+
+        [Space(10f)]
+        [SerializeField] bool checkLie = false;
+        [SerializeField] bool isLie = false;
+
         private UnitFSMData unitFSMData = null;
 
         public override void Init(FSMBrain brain, FSMState state)
@@ -24,6 +33,18 @@ namespace DadVSMe.Entities.FSM
 
                 if(Mathf.Abs(targetDirection) > attackRange)
                     return;
+
+                if(checkFloat)
+                {
+                    if(enemy.FSMBrain.GetAIData<UnitFSMData>().isFloat != isFloat)
+                        return;
+                }
+
+                if(checkLie)
+                {
+                    if(enemy.FSMBrain.GetAIData<UnitFSMData>().isLie != isLie)
+                        return;
+                }
 
                 AttackToTarget(enemy);
             });

@@ -3,7 +3,7 @@ using DadVSMe.Entities;
 
 namespace DadVSMe.Players.FSM
 {
-    public class PlayerAttackAction : FSMAction
+    public class PlayerComboAttackAction : FSMAction
     {
         private PlayerFSMData fsmData = null;
         private EntityAnimator entityAnimator = null;

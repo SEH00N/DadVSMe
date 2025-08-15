@@ -2,13 +2,21 @@ using DadVSMe.Entities;
 using H00N.AI.FSM;
 using UnityEngine;
 
-namespace DadVSMe.Players.FSM
+namespace DadVSMe.Entities.FSM
 {
-    public class EnemyInnerDistanceDecision : FSMDecision
+    public class EnemyStateDecision : FSMDecision
     {
         [SerializeField] Transform pivot = null;
         [SerializeField] float distance = 3f;
         [SerializeField] bool includeStaticEnemy = true;
+
+        [Space(10f)]
+        [SerializeField] bool checkFloat = false;
+        [SerializeField] bool isFloat = false;
+
+        [Space(10f)]
+        [SerializeField] bool checkLie = false;
+        [SerializeField] bool isLie = false;
 
         private UnitFSMData unitFSMData = null;
 
@@ -31,8 +39,18 @@ namespace DadVSMe.Players.FSM
                 if(enemy.StaticEntity && includeStaticEnemy == false)
                     continue;
 
+                bool result = true;
                 float sqrDistance = (pivot.position - enemy.transform.position).sqrMagnitude;
-                return sqrDistance < distance * distance;
+                result &= sqrDistance < distance * distance;
+
+                if(checkFloat)
+                    result &= enemy.FSMBrain.GetAIData<UnitFSMData>().isFloat == isFloat;
+
+                if(checkLie)
+                    result &= enemy.FSMBrain.GetAIData<UnitFSMData>().isLie == isLie;
+
+                if(result)
+                    return true;
             }
 
             return false;

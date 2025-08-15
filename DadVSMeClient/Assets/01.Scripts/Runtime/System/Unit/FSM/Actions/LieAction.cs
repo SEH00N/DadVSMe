@@ -11,11 +11,19 @@ namespace DadVSMe.Entities.FSM
         [SerializeField] float idleTime = 1f;
         [SerializeField] FSMState onGoingState = null;
 
+        private UnitFSMData unitFSMData = null;
         private CancellationTokenSource cancellationTokenSource = null;
+
+        public override void Init(FSMBrain brain, FSMState state)
+        {
+            base.Init(brain, state);
+            unitFSMData = brain.GetAIData<UnitFSMData>();
+        }
 
         public async override void EnterState()
         {
             base.EnterState();
+            unitFSMData.isLie = true;
 
             try {
                 cancellationTokenSource?.Cancel();
@@ -43,6 +51,8 @@ namespace DadVSMe.Entities.FSM
             cancellationTokenSource?.Cancel();
             cancellationTokenSource?.Dispose();
             cancellationTokenSource = null;
+
+            unitFSMData.isLie = false;
         }
     }
 }

@@ -13,6 +13,7 @@ namespace DadVSMe.Entities
         public float groundPositionY = 0f;
         public UnitCollisionData collisionData = new UnitCollisionData();
         public bool isFloat = false;
+        public bool isLie = false;
 
         public IAIData Initialize()
         {
