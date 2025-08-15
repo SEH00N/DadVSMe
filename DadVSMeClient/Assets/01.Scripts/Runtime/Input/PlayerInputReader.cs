@@ -72,6 +72,11 @@ namespace DadVSMe.Inputs
             IsDashed = rightDashDoublePress.Press();
         }
 
+        public void ReleaseDash()
+        {
+            IsDashed = false;
+        }
+
         public bool GetAttack1Down() => (attack1PhaseBuffer == InputActionPhase.Performed) && (attack1PhaseBufferFlag == true);
         public bool GetAttack1Press() => (attack1PhaseBuffer == InputActionPhase.Performed) && (attack1PhaseBufferFlag == false);
         public bool GetAttack1Up() => (attack1PhaseBuffer == InputActionPhase.Canceled) && (attack1PhaseBufferFlag == true);

@@ -286,7 +286,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6971694558443744874}
   - component: {fileID: 6101788564306698854}
-  - component: {fileID: 4419003837752798765}
+  - component: {fileID: 8869622597115168957}
   m_Layer: 8
   m_Name: Bump
   m_TagString: Untagged
@@ -321,14 +321,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3515528adf73f471f8009033ff01c22f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  autoTransitioning: 1
+  autoTransitioning: 0
   onStateEnterEvent:
     m_PersistentCalls:
       m_Calls: []
   onStateExitEvent:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &4419003837752798765
+--- !u!114 &8869622597115168957
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -337,9 +337,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 353212765625871808}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 72988976fd79843c3ab3a8ff64c3f74f, type: 3}
+  m_Script: {fileID: 11500000, guid: 875cb9f4da5414dab8335a700b03d3d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  onGoingState: {fileID: 643837365156672642}
+  attackData: {fileID: 11400000, guid: 9a69363df677243778dee575fb444d48, type: 2}
+  attackRange: 3
 --- !u!1 &362108127135817059
 GameObject:
   m_ObjectHideFlags: 0
@@ -5537,9 +5540,9 @@ MonoBehaviour:
   pivot: {fileID: 8403904138874411962}
   distance: 0.75
   includeStaticEnemy: 1
-  checkFloat: 0
+  checkFloat: 1
   isFloat: 0
-  checkLie: 0
+  checkLie: 1
   isLie: 0
 --- !u!1 &7642052445702148433
 GameObject:
@@ -6036,7 +6039,6 @@ GameObject:
   - component: {fileID: 5012333585453512094}
   - component: {fileID: 3775436521619690260}
   - component: {fileID: 7797500923691049382}
-  - component: {fileID: 7584720863612903893}
   m_Layer: 8
   m_Name: GrabAttack
   m_TagString: Untagged
@@ -6074,19 +6076,7 @@ MonoBehaviour:
   autoTransitioning: 1
   onStateEnterEvent:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1382251147719448698}
-        m_TargetAssemblyTypeName: DadVSMe.Players.PlayerAnimator, DadVSMe
-        m_MethodName: PlayAnimation
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: GrabAttack1
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   onStateExitEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -6114,6 +6104,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee31e16ad64054f8588b8d2cc365310a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  grabAttackDatas:
+  - simpleAttackData: {fileID: 11400000, guid: c23da38a1988b41cf99c9f497d73c23b, type: 2}
+    animationName: GrabAttack1
+  - simpleAttackData: {fileID: 11400000, guid: c22ee9faf9ed34be6b42aafa62780f79, type: 2}
+    animationName: GrabAttack2
 --- !u!114 &7797500923691049382
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6143,24 +6138,6 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
---- !u!114 &7584720863612903893
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8183360509052952123}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cf68e3e2a13fd45b3a11cd1ed7f5c243, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  attackData: {fileID: 11400000, guid: c23da38a1988b41cf99c9f497d73c23b, type: 2}
-  attackRange: 3
-  checkFloat: 0
-  isFloat: 0
-  checkLie: 0
-  isLie: 0
 --- !u!1 &8224957268586064021
 GameObject:
   m_ObjectHideFlags: 0
@@ -7809,7 +7786,7 @@ Transform:
   m_GameObject: {fileID: 9135340692093757016}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.35, y: 2.5, z: -0.1}
+  m_LocalPosition: {x: 1.4, y: 2.5, z: -0.1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
