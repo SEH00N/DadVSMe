@@ -2665,6 +2665,56 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ab5ed9b768dc4f1ba8695f9ab1e8aac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1109435450 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2430902269092868096, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
+  m_PrefabInstance: {fileID: 6750220605565479964}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1109435455
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1109435450}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 63e84c724a9f64dd19a589ac028861ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 13
+  moveStopping: 0
+  attackData: {fileID: 11400000, guid: b7c75bbdc4ae84a42acdfa9fbe76c8a1, type: 2}
+  attackRange: 3
+--- !u!114 &1109435456
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1109435450}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ed5b33c6d0df4b1a898f62ac300b33a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animationEventDatas:
+  - eventType: 2
+    event:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 6750220605565479967}
+          m_TargetAssemblyTypeName: H00N.AI.FSM.FSMBrain, H00N.AI.FSM
+          m_MethodName: SetAsDefaultState
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &1115436943
 GameObject:
   m_ObjectHideFlags: 0
@@ -4621,6 +4671,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 15
+  moveStopping: 1
   attackData: {fileID: 11400000, guid: ae337a4b116814859821a9841953c38f, type: 2}
   attackRange: 3
 --- !u!114 &1881479059
@@ -5633,6 +5684,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 5494536511963740923, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1881479059}
+    - targetCorrespondingSourceObject: {fileID: 2430902269092868096, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1109435455}
+    - targetCorrespondingSourceObject: {fileID: 2430902269092868096, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1109435456}
   m_SourcePrefab: {fileID: 100100000, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
 --- !u!4 &6750220605565479965 stripped
 Transform:

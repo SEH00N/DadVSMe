@@ -6,9 +6,10 @@ using UnityEngine;
 
 namespace DadVSMe.Players.FSM
 {
-    public class DashSlamAction : AttackActionBase
+    public class DashAttackAction : AttackActionBase
     {
         [SerializeField] float speed = 10f;
+        [SerializeField] bool moveStopping = false;
 
         [Space(10f)]
         [SerializeField] AttackDataBase attackData = null;
@@ -77,7 +78,7 @@ namespace DadVSMe.Players.FSM
         protected override void OnAttack(EntityAnimationEventData eventData)
         {
             isAttacking = !isAttacking;
-            if(isAttacking == false)
+            if(isAttacking == false && moveStopping)
                 unitMovement.SetMovementVelocity(Vector2.zero);
         }
     }
