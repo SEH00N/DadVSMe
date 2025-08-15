@@ -17,9 +17,6 @@ namespace DadVSMe.Enemies
         [SerializeField] EnemyDetector enemyDetector = null;
         [SerializeField] FSMState grabState = null;
 
-        private IEntityData enemyData;
-        public IEntityData DataInfo => enemyData;
-
         private bool skipUpdate = false;
 
         private void Awake()
