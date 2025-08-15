@@ -36,6 +36,7 @@ namespace DadVSMe.Entities
         protected override void LateUpdate()
         {
             base.LateUpdate();
+
             UpdateForwardDirection();
             UpdateGroundPositionY();
         }

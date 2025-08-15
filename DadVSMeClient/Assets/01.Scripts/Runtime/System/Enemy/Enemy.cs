@@ -20,6 +20,8 @@ namespace DadVSMe.Enemies
         private IEntityData enemyData;
         public IEntityData DataInfo => enemyData;
 
+        private bool skipUpdate = false;
+
         private void Awake()
         {
             poolReference = GetComponent<PoolReference>();
@@ -37,6 +39,14 @@ namespace DadVSMe.Enemies
             enemyDetector.Initialize();
         }
 
+        protected override void LateUpdate()
+        {
+            if(skipUpdate)
+                return;
+
+            base.LateUpdate();
+        }
+
         void IGrabbable.Grab(Entity performer)
         {
             staticEntity = true;
@@ -47,6 +57,7 @@ namespace DadVSMe.Enemies
         void IGrabbable.Release(Entity performer)
         {
             staticEntity = false;
+            skipUpdate = true;
             performer.RemoveChildSortingOrderResolver(sortingOrderResolver);
         }
 

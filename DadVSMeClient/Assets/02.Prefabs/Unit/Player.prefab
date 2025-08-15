@@ -1261,7 +1261,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 989093648015396453}
-  - component: {fileID: 5620788064425186090}
   - component: {fileID: 2526812934725719640}
   m_Layer: 8
   m_Name: PowerUp
@@ -1285,18 +1284,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 3801318511281256181}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &5620788064425186090
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1665590273972130149}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 72988976fd79843c3ab3a8ff64c3f74f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &2526812934725719640
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1309,7 +1296,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3515528adf73f471f8009033ff01c22f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  autoTransitioning: 1
+  autoTransitioning: 0
   onStateEnterEvent:
     m_PersistentCalls:
       m_Calls:
@@ -1820,8 +1807,8 @@ GameObject:
   m_Component:
   - component: {fileID: 2653531738918106598}
   - component: {fileID: 4910843435020861061}
-  - component: {fileID: 7420898343743165829}
   - component: {fileID: 8182889530979780361}
+  - component: {fileID: 7576988775062164614}
   m_Layer: 8
   m_Name: ThrowDown
   m_TagString: Untagged
@@ -1856,7 +1843,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3515528adf73f471f8009033ff01c22f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  autoTransitioning: 1
+  autoTransitioning: 0
   onStateEnterEvent:
     m_PersistentCalls:
       m_Calls:
@@ -1875,18 +1862,6 @@ MonoBehaviour:
   onStateExitEvent:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &7420898343743165829
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2426297144319815459}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 72988976fd79843c3ab3a8ff64c3f74f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &8182889530979780361
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1896,7 +1871,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2426297144319815459}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cf68e3e2a13fd45b3a11cd1ed7f5c243, type: 3}
+  m_Script: {fileID: 11500000, guid: 45985713611854b6494c521d913e1024, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   attackData: {fileID: 11400000, guid: 3ba68045f9992456cb3437d118b707fb, type: 2}
@@ -1905,6 +1880,37 @@ MonoBehaviour:
   isFloat: 0
   checkLie: 0
   isLie: 0
+  defaultSortingOrderResolverCollider: {fileID: 4518340953437237913}
+  grabbedSortingOrderResolverCollider: {fileID: 6113472226918677138}
+--- !u!114 &7576988775062164614
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2426297144319815459}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ed5b33c6d0df4b1a898f62ac300b33a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animationEventDatas:
+  - eventType: 2
+    event:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 2841000604668159261}
+          m_TargetAssemblyTypeName: H00N.AI.FSM.FSMBrain, H00N.AI.FSM
+          m_MethodName: SetAsDefaultState
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: 
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &2430902269092868096
 GameObject:
   m_ObjectHideFlags: 0
@@ -2506,8 +2512,8 @@ GameObject:
   m_Component:
   - component: {fileID: 5499193728818120335}
   - component: {fileID: 8775904818099651924}
-  - component: {fileID: 3823927183106563920}
-  - component: {fileID: 9173856635824897562}
+  - component: {fileID: 1799030666431474225}
+  - component: {fileID: 4578853846741598147}
   m_Layer: 8
   m_Name: ThrowUp
   m_TagString: Untagged
@@ -2542,7 +2548,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3515528adf73f471f8009033ff01c22f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  autoTransitioning: 1
+  autoTransitioning: 0
   onStateEnterEvent:
     m_PersistentCalls:
       m_Calls:
@@ -2561,7 +2567,7 @@ MonoBehaviour:
   onStateExitEvent:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &3823927183106563920
+--- !u!114 &1799030666431474225
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2570,10 +2576,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 3086331350572943076}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 72988976fd79843c3ab3a8ff64c3f74f, type: 3}
+  m_Script: {fileID: 11500000, guid: 45985713611854b6494c521d913e1024, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &9173856635824897562
+  attackData: {fileID: 11400000, guid: a890338b99f7d46b3b43c5209f317f2a, type: 2}
+  attackRange: 3
+  checkFloat: 0
+  isFloat: 0
+  checkLie: 0
+  isLie: 0
+  defaultSortingOrderResolverCollider: {fileID: 4518340953437237913}
+  grabbedSortingOrderResolverCollider: {fileID: 6113472226918677138}
+--- !u!114 &4578853846741598147
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2592,11 +2606,11 @@ MonoBehaviour:
         m_Calls:
         - m_Target: {fileID: 2841000604668159261}
           m_TargetAssemblyTypeName: H00N.AI.FSM.FSMBrain, H00N.AI.FSM
-          m_MethodName: ChangeState
-          m_Mode: 2
+          m_MethodName: SetAsDefaultState
+          m_Mode: 1
           m_Arguments:
-            m_ObjectArgument: {fileID: 1773547240932069588}
-            m_ObjectArgumentAssemblyTypeName: H00N.AI.FSM.FSMState, H00N.AI.FSM
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: 
             m_IntArgument: 0
             m_FloatArgument: 0
             m_StringArgument: 
@@ -2783,9 +2797,9 @@ MonoBehaviour:
   pivot: {fileID: 8451734842006371004}
   distance: 0.75
   includeStaticEnemy: 0
-  checkFloat: 0
+  checkFloat: 1
   isFloat: 0
-  checkLie: 0
+  checkLie: 1
   isLie: 0
 --- !u!1 &3711209104930429882
 GameObject:
@@ -3075,7 +3089,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8960071860694063783}
-  - component: {fileID: 4329847467427600798}
   - component: {fileID: 8884150199922793445}
   m_Layer: 8
   m_Name: Juggle
@@ -3099,18 +3112,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 3801318511281256181}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &4329847467427600798
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4220035116182085423}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 72988976fd79843c3ab3a8ff64c3f74f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &8884150199922793445
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3123,7 +3124,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3515528adf73f471f8009033ff01c22f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  autoTransitioning: 1
+  autoTransitioning: 0
   onStateEnterEvent:
     m_PersistentCalls:
       m_Calls:
@@ -3454,7 +3455,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7866092559789443664}
-  - component: {fileID: 2317568350900194668}
   - component: {fileID: 8673654016440828494}
   m_Layer: 8
   m_Name: Knuckles
@@ -3478,18 +3478,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 3801318511281256181}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2317568350900194668
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5177854480919458481}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 72988976fd79843c3ab3a8ff64c3f74f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &8673654016440828494
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3502,7 +3490,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3515528adf73f471f8009033ff01c22f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  autoTransitioning: 1
+  autoTransitioning: 0
   onStateEnterEvent:
     m_PersistentCalls:
       m_Calls:
@@ -3955,7 +3943,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3644177460462399078}
-  - component: {fileID: 9219767717194263852}
   - component: {fileID: 5264464853029133885}
   m_Layer: 8
   m_Name: StandUp
@@ -3979,18 +3966,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 3801318511281256181}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &9219767717194263852
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5774556205045451626}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 72988976fd79843c3ab3a8ff64c3f74f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &5264464853029133885
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4003,7 +3978,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3515528adf73f471f8009033ff01c22f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  autoTransitioning: 1
+  autoTransitioning: 0
   onStateEnterEvent:
     m_PersistentCalls:
       m_Calls:
@@ -4460,7 +4435,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1618425067358826014}
-  - component: {fileID: 3635473044703077192}
   - component: {fileID: 4912613773680421111}
   m_Layer: 8
   m_Name: Flinch
@@ -4484,18 +4458,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 3801318511281256181}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &3635473044703077192
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6100329204701635445}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 72988976fd79843c3ab3a8ff64c3f74f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &4912613773680421111
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4508,7 +4470,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3515528adf73f471f8009033ff01c22f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  autoTransitioning: 1
+  autoTransitioning: 0
   onStateEnterEvent:
     m_PersistentCalls:
       m_Calls:
@@ -4952,7 +4914,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5270464979197613114}
-  - component: {fileID: 4955301511840866376}
   - component: {fileID: 7667994150933278078}
   m_Layer: 8
   m_Name: Bounce
@@ -4976,18 +4937,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 3801318511281256181}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &4955301511840866376
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6840288169985064943}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 72988976fd79843c3ab3a8ff64c3f74f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &7667994150933278078
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5000,7 +4949,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3515528adf73f471f8009033ff01c22f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  autoTransitioning: 1
+  autoTransitioning: 0
   onStateEnterEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -5016,7 +4965,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5965105322978743997}
-  - component: {fileID: 7417854898403362432}
   - component: {fileID: 1593382357414641103}
   m_Layer: 8
   m_Name: Frenzied
@@ -5040,18 +4988,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 3801318511281256181}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &7417854898403362432
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6867651733005293845}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 72988976fd79843c3ab3a8ff64c3f74f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1593382357414641103
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5064,7 +5000,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3515528adf73f471f8009033ff01c22f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  autoTransitioning: 1
+  autoTransitioning: 0
   onStateEnterEvent:
     m_PersistentCalls:
       m_Calls:
@@ -6572,7 +6508,6 @@ GameObject:
   m_Component:
   - component: {fileID: 8779786307892725127}
   - component: {fileID: 6020997656581865564}
-  - component: {fileID: 7741074389146981939}
   - component: {fileID: 1232159966641272147}
   - component: {fileID: 2604118612968565064}
   m_Layer: 8
@@ -6609,7 +6544,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3515528adf73f471f8009033ff01c22f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  autoTransitioning: 1
+  autoTransitioning: 0
   onStateEnterEvent:
     m_PersistentCalls:
       m_Calls:
@@ -6628,18 +6563,6 @@ MonoBehaviour:
   onStateExitEvent:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &7741074389146981939
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8426897133562739003}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 72988976fd79843c3ab3a8ff64c3f74f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1232159966641272147
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6697,8 +6620,8 @@ GameObject:
   m_Component:
   - component: {fileID: 6821216350504070855}
   - component: {fileID: 713698575530454923}
-  - component: {fileID: 2857865536271820852}
-  - component: {fileID: 8938043328872561328}
+  - component: {fileID: 7520506005870648475}
+  - component: {fileID: 151007156211777427}
   m_Layer: 8
   m_Name: ThrowForward
   m_TagString: Untagged
@@ -6733,7 +6656,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3515528adf73f471f8009033ff01c22f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  autoTransitioning: 1
+  autoTransitioning: 0
   onStateEnterEvent:
     m_PersistentCalls:
       m_Calls:
@@ -6752,7 +6675,7 @@ MonoBehaviour:
   onStateExitEvent:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &2857865536271820852
+--- !u!114 &7520506005870648475
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -6761,10 +6684,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 8436350367143659442}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 72988976fd79843c3ab3a8ff64c3f74f, type: 3}
+  m_Script: {fileID: 11500000, guid: 45985713611854b6494c521d913e1024, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &8938043328872561328
+  attackData: {fileID: 11400000, guid: 859a747e670e149ccb5bcde762ae3ff9, type: 2}
+  attackRange: 3
+  checkFloat: 0
+  isFloat: 0
+  checkLie: 0
+  isLie: 0
+  defaultSortingOrderResolverCollider: {fileID: 4518340953437237913}
+  grabbedSortingOrderResolverCollider: {fileID: 6113472226918677138}
+--- !u!114 &151007156211777427
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -6783,11 +6714,11 @@ MonoBehaviour:
         m_Calls:
         - m_Target: {fileID: 2841000604668159261}
           m_TargetAssemblyTypeName: H00N.AI.FSM.FSMBrain, H00N.AI.FSM
-          m_MethodName: ChangeState
-          m_Mode: 2
+          m_MethodName: SetAsDefaultState
+          m_Mode: 1
           m_Arguments:
-            m_ObjectArgument: {fileID: 1773547240932069588}
-            m_ObjectArgumentAssemblyTypeName: H00N.AI.FSM.FSMState, H00N.AI.FSM
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: 
             m_IntArgument: 0
             m_FloatArgument: 0
             m_StringArgument: 
@@ -7387,7 +7318,7 @@ MonoBehaviour:
   pivot: {fileID: 6993041932429442240}
   distance: 0.75
   includeStaticEnemy: 0
-  checkFloat: 0
+  checkFloat: 1
   isFloat: 0
   checkLie: 0
   isLie: 0
