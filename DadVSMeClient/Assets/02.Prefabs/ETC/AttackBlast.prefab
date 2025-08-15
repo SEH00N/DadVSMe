@@ -35,7 +35,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.17, y: 0.8102226, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.3, y: 2.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -55,8 +55,9 @@ MonoBehaviour:
   staticEntity: 0
   entityAnimator: {fileID: 7331478016869599188}
   sortingOrderResolver: {fileID: 0}
-  moveSpeed: 90
-  lifeTime: 1.5
+  attackData: {fileID: 11400000, guid: 1470d395c8b554b65990b6b5921ae74f, type: 2}
+  moveSpeed: 50
+  lifeTime: 0.05
 --- !u!114 &6498249429142604679
 MonoBehaviour:
   m_ObjectHideFlags: 0
