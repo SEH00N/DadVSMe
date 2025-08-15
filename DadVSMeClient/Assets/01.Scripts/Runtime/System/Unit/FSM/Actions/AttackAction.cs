@@ -5,8 +5,8 @@ namespace DadVSMe.Entities.FSM
 {
     public abstract class AttackActionBase : FSMAction
     {
-        private EntityAnimator entityAnimator = null;
-        private UnitFSMData unitFSMData = null;
+        protected EntityAnimator entityAnimator = null;
+        protected UnitFSMData unitFSMData = null;
 
         public override void Init(FSMBrain brain, FSMState state)
         {
