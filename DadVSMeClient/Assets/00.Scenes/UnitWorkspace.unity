@@ -2665,6 +2665,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ab5ed9b768dc4f1ba8695f9ab1e8aac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1030267158 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 353212765625871808, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
+  m_PrefabInstance: {fileID: 6750220605565479964}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1030267163
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1030267158}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 875cb9f4da5414dab8335a700b03d3d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onGoingState: {fileID: 1528294037}
+  attackData: {fileID: 11400000, guid: 9a69363df677243778dee575fb444d48, type: 2}
+  attackRange: 3
 --- !u!1 &1115436943
 GameObject:
   m_ObjectHideFlags: 0
@@ -3929,6 +3949,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1485304709}
   m_CullTransparentMesh: 1
+--- !u!114 &1528294037 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 643837365156672642, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
+  m_PrefabInstance: {fileID: 6750220605565479964}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3515528adf73f471f8009033ff01c22f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1533504372
 GameObject:
   m_ObjectHideFlags: 0
@@ -5470,6 +5501,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1754234185660703899, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
+      propertyPath: checkLie
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1754234185660703899, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
+      propertyPath: checkFloat
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3775436521619690260, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
       propertyPath: grabAttackDatas.Array.size
       value: 2
@@ -5509,6 +5548,22 @@ PrefabInstance:
     - target: {fileID: 5229560510498053603, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6101788564306698854, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
+      propertyPath: autoTransitioning
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6101788564306698854, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
+      propertyPath: onStateEnterEvent.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6101788564306698854, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
+      propertyPath: onStateEnterEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6101788564306698854, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
+      propertyPath: onStateEnterEvent.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7488116858921959985, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5556,9 +5611,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 7584720863612903893, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
+    - {fileID: 4419003837752798765, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 353212765625871808, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1030267163}
   m_SourcePrefab: {fileID: 100100000, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
 --- !u!4 &6750220605565479965 stripped
 Transform:
