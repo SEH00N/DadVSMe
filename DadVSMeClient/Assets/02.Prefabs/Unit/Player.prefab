@@ -602,7 +602,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &3462159554438651689
 Transform:
   m_ObjectHideFlags: 0
@@ -5993,7 +5993,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5817266648044708897}
   - component: {fileID: 6672043882283773685}
-  - component: {fileID: 1282736940991370183}
+  - component: {fileID: 1925252011676411918}
   - component: {fileID: 5928225887847949517}
   m_Layer: 8
   m_Name: Takedown
@@ -6029,7 +6029,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3515528adf73f471f8009033ff01c22f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  autoTransitioning: 1
+  autoTransitioning: 0
   onStateEnterEvent:
     m_PersistentCalls:
       m_Calls:
@@ -6048,7 +6048,7 @@ MonoBehaviour:
   onStateExitEvent:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &1282736940991370183
+--- !u!114 &1925252011676411918
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -6057,9 +6057,26 @@ MonoBehaviour:
   m_GameObject: {fileID: 7767005774741626004}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 72988976fd79843c3ab3a8ff64c3f74f, type: 3}
+  m_Script: {fileID: 11500000, guid: 0ed5b33c6d0df4b1a898f62ac300b33a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animationEventDatas:
+  - eventType: 2
+    event:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 2841000604668159261}
+          m_TargetAssemblyTypeName: H00N.AI.FSM.FSMBrain, H00N.AI.FSM
+          m_MethodName: SetAsDefaultState
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: Knuckles
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!114 &5928225887847949517
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8142,7 +8159,6 @@ GameObject:
   m_Component:
   - component: {fileID: 6808899902682831706}
   - component: {fileID: 700214387757436794}
-  - component: {fileID: 3937750287772499523}
   - component: {fileID: 2308804095306331961}
   - component: {fileID: 3456532507328408167}
   m_Layer: 8
@@ -8179,7 +8195,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3515528adf73f471f8009033ff01c22f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  autoTransitioning: 1
+  autoTransitioning: 0
   onStateEnterEvent:
     m_PersistentCalls:
       m_Calls:
@@ -8198,18 +8214,6 @@ MonoBehaviour:
   onStateExitEvent:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &3937750287772499523
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9206362244009254845}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 72988976fd79843c3ab3a8ff64c3f74f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &2308804095306331961
 MonoBehaviour:
   m_ObjectHideFlags: 0
