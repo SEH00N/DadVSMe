@@ -1,10 +1,13 @@
 using H00N.AI.FSM;
+using UnityEngine;
 using DadVSMe.Entities;
 
 namespace DadVSMe.Players.FSM
 {
     public class PlayerComboAttackAction : FSMAction
     {
+        [SerializeField] bool shouldContinue = true;
+
         private PlayerFSMData fsmData = null;
         private EntityAnimator entityAnimator = null;
 
@@ -47,7 +50,7 @@ namespace DadVSMe.Players.FSM
 
         private void HandleAnimationComboReadingEndEvent(EntityAnimationEventData eventData)
         {
-            if(fsmData.isComboReading)
+            if(fsmData.isComboReading && shouldContinue)
                 fsmData.isComboFailed = true;
 
             fsmData.isComboReading = false;

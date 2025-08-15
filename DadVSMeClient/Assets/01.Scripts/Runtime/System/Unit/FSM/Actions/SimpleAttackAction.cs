@@ -17,13 +17,6 @@ namespace DadVSMe.Entities.FSM
         [SerializeField] bool checkLie = false;
         [SerializeField] bool isLie = false;
 
-        private UnitFSMData unitFSMData = null;
-
-        public override void Init(FSMBrain brain, FSMState state)
-        {
-            base.Init(brain, state);
-            unitFSMData = brain.GetAIData<UnitFSMData>();
-        }
 
         protected override void OnAttack(EntityAnimationEventData eventData)
         {

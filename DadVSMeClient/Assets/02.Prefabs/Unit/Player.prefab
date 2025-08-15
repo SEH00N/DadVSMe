@@ -1327,6 +1327,81 @@ MonoBehaviour:
   onStateExitEvent:
     m_PersistentCalls:
       m_Calls: []
+--- !u!1 &1701644835694590194
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7216250934361217751}
+  - component: {fileID: 3236046271620296759}
+  - component: {fileID: 2189626224609432714}
+  - component: {fileID: 6147328638779164229}
+  m_Layer: 8
+  m_Name: '[Tran] Crazy'
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7216250934361217751
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1701644835694590194}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6920203789541229569}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3236046271620296759
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1701644835694590194}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2fbc16cf8c22d4c1e9f8c9f7247cab96, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetState: {fileID: 5512892847475762571}
+--- !u!114 &2189626224609432714
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1701644835694590194}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6983ab3dcf0544024a4400f2d2824e67, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isReverse: 0
+--- !u!114 &6147328638779164229
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1701644835694590194}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48de45c97e52543a8887d37a0c8e8f48, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isReverse: 0
+  attack1: 0
+  attack2: 1
 --- !u!1 &1726177056993050243
 GameObject:
   m_ObjectHideFlags: 0
@@ -1429,13 +1504,15 @@ GameObject:
   m_Component:
   - component: {fileID: 3472504009862907679}
   - component: {fileID: 1471111415096613995}
+  - component: {fileID: 1973565018300929969}
+  - component: {fileID: 7277498937657700730}
   m_Layer: 8
-  m_Name: '[Tran] Crazy'
+  m_Name: '[Tran] CrazyStart'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &3472504009862907679
 Transform:
   m_ObjectHideFlags: 0
@@ -1464,6 +1541,34 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetState: {fileID: 4947745096409618757}
+--- !u!114 &1973565018300929969
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1862023343173536397}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6983ab3dcf0544024a4400f2d2824e67, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isReverse: 0
+--- !u!114 &7277498937657700730
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1862023343173536397}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48de45c97e52543a8887d37a0c8e8f48, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isReverse: 0
+  attack1: 0
+  attack2: 1
 --- !u!1 &2243480463503903260
 GameObject:
   m_ObjectHideFlags: 0
@@ -1475,9 +1580,9 @@ GameObject:
   - component: {fileID: 1152942225161284855}
   - component: {fileID: 7920565069907207548}
   - component: {fileID: 4947745096409618757}
-  - component: {fileID: 7471361359368327139}
+  - component: {fileID: 6858195492880268157}
   m_Layer: 8
-  m_Name: Crazy
+  m_Name: CrazyStart
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1522,7 +1627,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3515528adf73f471f8009033ff01c22f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  autoTransitioning: 1
+  autoTransitioning: 0
   onStateEnterEvent:
     m_PersistentCalls:
       m_Calls:
@@ -1541,7 +1646,7 @@ MonoBehaviour:
   onStateExitEvent:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &7471361359368327139
+--- !u!114 &6858195492880268157
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1550,9 +1655,26 @@ MonoBehaviour:
   m_GameObject: {fileID: 2243480463503903260}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cd136350c41d145ce8e6f0e0ba71e31c, type: 3}
+  m_Script: {fileID: 11500000, guid: 0ed5b33c6d0df4b1a898f62ac300b33a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animationEventDatas:
+  - eventType: 2
+    event:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 2841000604668159261}
+          m_TargetAssemblyTypeName: H00N.AI.FSM.FSMBrain, H00N.AI.FSM
+          m_MethodName: ChangeState
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 5512892847475762571}
+            m_ObjectArgumentAssemblyTypeName: H00N.AI.FSM.FSMState, H00N.AI.FSM
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &2332249100382936959
 GameObject:
   m_ObjectHideFlags: 0
@@ -1794,6 +1916,8 @@ GameObject:
   - component: {fileID: 3284998832467964938}
   - component: {fileID: 4490216173045710388}
   - component: {fileID: 1532949680704696506}
+  - component: {fileID: 1793141939567925352}
+  - component: {fileID: 8900218850363402019}
   m_Layer: 8
   m_Name: DashPunch
   m_TagString: Untagged
@@ -1816,6 +1940,7 @@ Transform:
   m_Children:
   - {fileID: 3472504009862907679}
   - {fileID: 1152942225161284855}
+  - {fileID: 6920203789541229569}
   m_Father: {fileID: 4422274618599008969}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &3284998832467964938
@@ -1873,6 +1998,51 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd136350c41d145ce8e6f0e0ba71e31c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1793141939567925352
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2430902269092868096}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 63e84c724a9f64dd19a589ac028861ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 13
+  moveStopping: 0
+  attackData: {fileID: 11400000, guid: b7c75bbdc4ae84a42acdfa9fbe76c8a1, type: 2}
+  attackRange: 3
+--- !u!114 &8900218850363402019
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2430902269092868096}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ed5b33c6d0df4b1a898f62ac300b33a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animationEventDatas:
+  - eventType: 2
+    event:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 2841000604668159261}
+          m_TargetAssemblyTypeName: H00N.AI.FSM.FSMBrain, H00N.AI.FSM
+          m_MethodName: SetAsDefaultState
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &2503088556588646332
 GameObject:
   m_ObjectHideFlags: 0
@@ -3585,6 +3755,8 @@ GameObject:
   - component: {fileID: 5794083165088824997}
   - component: {fileID: 9126181775138262069}
   - component: {fileID: 6557369884608970105}
+  - component: {fileID: 2832553844948435625}
+  - component: {fileID: 7704626932355508207}
   m_Layer: 8
   m_Name: DashSlam
   m_TagString: Untagged
@@ -3650,6 +3822,51 @@ MonoBehaviour:
   onStateExitEvent:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &2832553844948435625
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5494536511963740923}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 63e84c724a9f64dd19a589ac028861ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 15
+  moveStopping: 1
+  attackData: {fileID: 11400000, guid: ae337a4b116814859821a9841953c38f, type: 2}
+  attackRange: 3
+--- !u!114 &7704626932355508207
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5494536511963740923}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ed5b33c6d0df4b1a898f62ac300b33a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animationEventDatas:
+  - eventType: 2
+    event:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 2841000604668159261}
+          m_TargetAssemblyTypeName: H00N.AI.FSM.FSMBrain, H00N.AI.FSM
+          m_MethodName: SetAsDefaultState
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &5500857474424150516
 GameObject:
   m_ObjectHideFlags: 0
@@ -7258,6 +7475,116 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd136350c41d145ce8e6f0e0ba71e31c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &8919726474767990938
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6920203789541229569}
+  - component: {fileID: 4237386006810151564}
+  - component: {fileID: 5512892847475762571}
+  - component: {fileID: 6435759345011469706}
+  - component: {fileID: 8275758214492924946}
+  m_Layer: 8
+  m_Name: Crazy
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6920203789541229569
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8919726474767990938}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 7216250934361217751}
+  m_Father: {fileID: 8767084580861442534}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4237386006810151564
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8919726474767990938}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72988976fd79843c3ab3a8ff64c3f74f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &5512892847475762571
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8919726474767990938}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3515528adf73f471f8009033ff01c22f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  autoTransitioning: 1
+  onStateEnterEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1382251147719448698}
+        m_TargetAssemblyTypeName: DadVSMe.Players.PlayerAnimator, DadVSMe
+        m_MethodName: PlayAnimation
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Crazy
+          m_BoolArgument: 0
+        m_CallState: 2
+  onStateExitEvent:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &6435759345011469706
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8919726474767990938}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd136350c41d145ce8e6f0e0ba71e31c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &8275758214492924946
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8919726474767990938}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 492ef6f1343434a729e69d9e5a6a4739, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackData: {fileID: 11400000, guid: a030682faf8564b2f93ad17773b176ed, type: 2}
+  attackRange: 3
+  checkFloat: 0
+  isFloat: 0
+  checkLie: 0
+  isLie: 0
+  jumpForce: {x: 5, y: 5}
 --- !u!1 &8985770963640614873
 GameObject:
   m_ObjectHideFlags: 0
@@ -7451,7 +7778,7 @@ MonoBehaviour:
   unitHealth: {fileID: 6165701722836179940}
   unitAttackEventListener: {fileID: 8895890805159774065}
   unitSkillComponent: {fileID: 6550646681929325183}
-  unitRigidbody: {fileID: 0}
+  unitRigidbody: {fileID: 8451211484433483914}
   enemyDetector: {fileID: 644674988795700514}
 --- !u!114 &6165701722836179940
 MonoBehaviour:
