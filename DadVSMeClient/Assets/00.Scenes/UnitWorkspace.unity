@@ -3090,7 +3090,7 @@ GameObject:
   - component: {fileID: 1218715936}
   - component: {fileID: 1218715939}
   - component: {fileID: 1218715938}
-  - component: {fileID: 1218715940}
+  - component: {fileID: 1218715941}
   m_Layer: 0
   m_Name: Lie
   m_TagString: Untagged
@@ -3156,7 +3156,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 72988976fd79843c3ab3a8ff64c3f74f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1218715940
+--- !u!114 &1218715941
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3165,26 +3165,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1218715935}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0ed5b33c6d0df4b1a898f62ac300b33a, type: 3}
+  m_Script: {fileID: 11500000, guid: 607f693dc07e14842b37f8a9aa366817, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animationEventDatas:
-  - eventType: 2
-    event:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 668232995}
-          m_TargetAssemblyTypeName: H00N.AI.FSM.FSMBrain, H00N.AI.FSM
-          m_MethodName: SetAsDefaultState
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
+  idleTime: 1
+  onGoingState: {fileID: 803635653}
 --- !u!1 &1226440416
 GameObject:
   m_ObjectHideFlags: 0
