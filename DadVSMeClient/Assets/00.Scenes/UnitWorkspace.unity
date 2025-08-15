@@ -265,6 +265,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isReverse: 0
+  any: 0
   attackFeedback: 1
 --- !u!1 &190505272
 GameObject:
@@ -599,6 +600,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isReverse: 0
+  any: 0
   attackFeedback: 3
 --- !u!1 &288539952
 GameObject:
@@ -1232,6 +1234,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isReverse: 0
+  any: 0
   attackFeedback: 5
 --- !u!1 &519420028
 GameObject:
@@ -1497,6 +1500,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isReverse: 0
+  any: 0
   attackFeedback: 2
 --- !u!1 &609655094
 GameObject:
@@ -1511,7 +1515,7 @@ GameObject:
   - component: {fileID: 609655097}
   - component: {fileID: 609655099}
   m_Layer: 0
-  m_Name: Juggle
+  m_Name: Juggle(Attack)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2327,6 +2331,7 @@ Transform:
   - {fileID: 322659607}
   - {fileID: 2126908700}
   - {fileID: 310373187}
+  - {fileID: 2135380000}
   - {fileID: 609655095}
   - {fileID: 2088429819}
   - {fileID: 1218715936}
@@ -3606,7 +3611,7 @@ GameObject:
   - component: {fileID: 1355111467}
   - component: {fileID: 1355111468}
   m_Layer: 0
-  m_Name: '[Tran] Juggle'
+  m_Name: '[Tran] Juggle(Attack)'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3653,6 +3658,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isReverse: 0
+  any: 0
   attackFeedback: 4
 --- !u!1 &1371810581
 GameObject:
@@ -3850,6 +3856,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isReverse: 0
+  any: 0
   attackFeedback: 6
 --- !u!1 &1485304709
 GameObject:
@@ -4695,6 +4702,81 @@ MonoBehaviour:
   m_Area: 1
   m_IgnoreFromBuild: 0
   m_AffectedAgents: ffffffff
+--- !u!1 &1914283582
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1914283583}
+  - component: {fileID: 1914283585}
+  - component: {fileID: 1914283584}
+  - component: {fileID: 1914283586}
+  m_Layer: 0
+  m_Name: '[Tran] Juggle(Default)'
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1914283583
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1914283582}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2002372389}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1914283584
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1914283582}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2587cf2a08c644c7b97d7fcab146bffc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isReverse: 0
+  any: 1
+  attackFeedback: 1
+--- !u!114 &1914283585
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1914283582}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2fbc16cf8c22d4c1e9f8c9f7247cab96, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetState: {fileID: 2135380002}
+--- !u!114 &1914283586
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1914283582}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d72afe952ce140f2851736517f409d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isReverse: 0
 --- !u!1 &1997576971
 GameObject:
   m_ObjectHideFlags: 0
@@ -4804,10 +4886,11 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 1914283583}
+  - {fileID: 1355111466}
   - {fileID: 96158639}
   - {fileID: 609483639}
   - {fileID: 274529058}
-  - {fileID: 1355111466}
   - {fileID: 426990124}
   - {fileID: 1404569431}
   m_Father: {fileID: 883493601}
@@ -5276,6 +5359,110 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ab5ed9b768dc4f1ba8695f9ab1e8aac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &2135379999
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2135380000}
+  - component: {fileID: 2135380003}
+  - component: {fileID: 2135380002}
+  - component: {fileID: 2135380004}
+  - component: {fileID: 2135380001}
+  m_Layer: 0
+  m_Name: Juggle(Default)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2135380000
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2135379999}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 883493601}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2135380001
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2135379999}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4561e4b48f58e4bcfa95ad76c7bbc659, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bounceState: {fileID: 2088429821}
+--- !u!114 &2135380002
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2135379999}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3515528adf73f471f8009033ff01c22f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  autoTransitioning: 0
+  onStateEnterEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 668232997}
+        m_TargetAssemblyTypeName: DadVSMe.Entities.EntityAnimator, DadVSMe
+        m_MethodName: PlayAnimation
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: KidJuggle
+          m_BoolArgument: 0
+        m_CallState: 2
+  onStateExitEvent:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &2135380003
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2135379999}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72988976fd79843c3ab3a8ff64c3f74f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &2135380004
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2135379999}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 075b2499742904f0ca11f53186e54076, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackData: {fileID: 11400000, guid: d2a3ba00e1ffc4a6aa429b164ea114cc, type: 2}
 --- !u!1001 &6750220605565479964
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5287,6 +5474,14 @@ PrefabInstance:
     - target: {fileID: 2841000604668159261, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
       propertyPath: managedReferences[218235695116320861].attackRange
       value: 3.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3188598358565364875, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
+      propertyPath: includeStaticEnemy
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3979151437570143756, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
+      propertyPath: includeStaticEnemy
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5188117905570338336, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
       propertyPath: attackRange

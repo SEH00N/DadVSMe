@@ -16,7 +16,6 @@ GameObject:
   - component: {fileID: 1768865716209207245}
   - component: {fileID: 4002306736756950066}
   - component: {fileID: 7331478016869599188}
-  - component: {fileID: 1805002512815926833}
   - component: {fileID: 4266219580518674204}
   - component: {fileID: 8555126650566983865}
   m_Layer: 0
@@ -55,7 +54,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   staticEntity: 0
   entityAnimator: {fileID: 7331478016869599188}
-  sortingOrderResolver: {fileID: 1805002512815926833}
+  sortingOrderResolver: {fileID: 0}
   moveSpeed: 90
   lifeTime: 1.5
 --- !u!114 &6498249429142604679
@@ -226,20 +225,6 @@ MonoBehaviour:
   defaultAnimationName: AttackBlast
   animator: {fileID: 8555126650566983865}
   animationEventListener: {fileID: 4266219580518674204}
---- !u!114 &1805002512815926833
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 879120118293887749}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1b70442c7162940f58d66c88557d4af2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  entitySortingOrderProvider: {fileID: 0}
-  resolverColliders: []
 --- !u!114 &4266219580518674204
 MonoBehaviour:
   m_ObjectHideFlags: 0

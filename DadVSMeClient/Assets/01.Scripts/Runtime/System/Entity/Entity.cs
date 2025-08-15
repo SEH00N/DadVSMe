@@ -16,6 +16,8 @@ namespace DadVSMe.Entities
         private IEntityData dataInfo;
         public IEntityData DataInfo => dataInfo;
 
+        public bool StaticEntity => staticEntity;
+
         public virtual void Initialize(IEntityData data)
         {
             if(staticEntity)

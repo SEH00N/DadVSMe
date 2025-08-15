@@ -8,6 +8,7 @@ namespace DadVSMe.Players.FSM
     {
         [SerializeField] Transform pivot = null;
         [SerializeField] float distance = 3f;
+        [SerializeField] bool includeStaticEnemy = true;
 
         private UnitFSMData unitFSMData = null;
 
@@ -22,12 +23,19 @@ namespace DadVSMe.Players.FSM
             if(unitFSMData.enemies.Count == 0)
                 return false;
 
-            Unit enemy = unitFSMData.enemies[0];
-            if(enemy == null)
-                return false;
+            foreach(Unit enemy in unitFSMData.enemies)
+            {
+                if(enemy == null)
+                    continue;
 
-            float sqrDistance = (pivot.position - enemy.transform.position).sqrMagnitude;
-            return sqrDistance < distance * distance;
+                if(enemy.StaticEntity && includeStaticEnemy == false)
+                    continue;
+
+                float sqrDistance = (pivot.position - enemy.transform.position).sqrMagnitude;
+                return sqrDistance < distance * distance;
+            }
+
+            return false;
         }
 
         #if UNITY_EDITOR
