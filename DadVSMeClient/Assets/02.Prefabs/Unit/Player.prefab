@@ -403,6 +403,9 @@ MonoBehaviour:
   onGoingState: {fileID: 643837365156672642}
   attackData: {fileID: 11400000, guid: 9a69363df677243778dee575fb444d48, type: 2}
   attackRange: 3
+  attackEffect:
+    key: 
+  hitSounds: []
 --- !u!1 &362108127135817059
 GameObject:
   m_ObjectHideFlags: 0
@@ -857,8 +860,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attackEffect:
     key: 
-  attackSound:
+  hitEffect:
     key: 
+  attackSounds: []
+  hitSounds: []
   attackData: {fileID: 11400000, guid: 5b4c1913007e1435da0e9277d98ec621, type: 2}
   attackRange: 3
   checkFloat: 0
@@ -1422,8 +1427,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attackEffect:
     key: 
-  attackSound:
+  hitEffect:
     key: 
+  attackSounds: []
+  hitSounds: []
   attackData: {fileID: 11400000, guid: 4594087d91bba4b1fbdbaeb9aa5c82af, type: 2}
   attackRange: 3
   checkFloat: 0
@@ -2121,8 +2128,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attackEffect:
     key: 
-  attackSound:
+  hitEffect:
     key: 
+  attackSounds: []
+  hitSounds: []
   attackData: {fileID: 11400000, guid: 3ba68045f9992456cb3437d118b707fb, type: 2}
   attackRange: 3
   checkFloat: 0
@@ -2269,8 +2278,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attackEffect:
     key: 
-  attackSound:
+  hitEffect:
     key: 
+  attackSounds: []
+  hitSounds: []
   speed: 13
   moveStopping: 0
   attackData: {fileID: 11400000, guid: b7c75bbdc4ae84a42acdfa9fbe76c8a1, type: 2}
@@ -2398,8 +2409,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attackEffect:
     key: 
-  attackSound:
+  hitEffect:
     key: 
+  attackSounds: []
+  hitSounds: []
   attackData: {fileID: 11400000, guid: 026092285757a4d48845fb82493aba4f, type: 2}
   attackRange: 3
   checkFloat: 0
@@ -2838,8 +2851,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attackEffect:
     key: 
-  attackSound:
+  hitEffect:
     key: 
+  attackSounds: []
+  hitSounds: []
   attackData: {fileID: 11400000, guid: a890338b99f7d46b3b43c5209f317f2a, type: 2}
   attackRange: 3
   checkFloat: 0
@@ -3431,8 +3446,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attackEffect:
     key: 
-  attackSound:
+  hitEffect:
     key: 
+  attackSounds: []
+  hitSounds: []
   attackData: {fileID: 11400000, guid: b768654027aef4411bb3d7dec069a3da, type: 2}
   attackRange: 3
   checkFloat: 0
@@ -3604,10 +3621,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4561e4b48f58e4bcfa95ad76c7bbc659, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hitEffect:
-    key: 
-  hitSound:
-    key: 
   bounceState: {fileID: 7667994150933278078}
 --- !u!1 &4606057041944649176
 GameObject:
@@ -4294,8 +4307,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attackEffect:
     key: 
-  attackSound:
+  hitEffect:
     key: 
+  attackSounds: []
+  hitSounds: []
   speed: 15
   moveStopping: 1
   attackData: {fileID: 11400000, guid: ae337a4b116814859821a9841953c38f, type: 2}
@@ -4670,8 +4685,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attackEffect:
     key: 
-  attackSound:
+  hitEffect:
     key: 
+  attackSounds: []
+  hitSounds: []
   attackData: {fileID: 11400000, guid: 0f8b70c95b96d4d0dba79d42507dd9af, type: 2}
   attackRange: 3
   checkFloat: 0
@@ -5824,8 +5841,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attackEffect:
     key: 
-  attackSound:
+  hitEffect:
     key: 
+  attackSounds: []
+  hitSounds: []
   attackData: {fileID: 11400000, guid: da240b88bd13d495f814b309571aaeaa, type: 2}
   attackRange: 3
   checkFloat: 0
@@ -6051,8 +6070,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attackEffect:
     key: 
-  attackSound:
+  hitEffect:
     key: 
+  attackSounds: []
+  hitSounds: []
   attackData: {fileID: 11400000, guid: c051b11a1c87c4e36a208aece61e94d1, type: 2}
   attackRange: 3
   checkFloat: 0
@@ -6560,8 +6581,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attackEffect:
     key: 
-  attackSound:
+  hitEffect:
     key: 
+  attackSounds: []
+  hitSounds: []
   attackData: {fileID: 11400000, guid: b0ac4a06328f74051bfa3bd227ff0af7, type: 2}
   attackRange: 3
   checkFloat: 0
@@ -6820,8 +6843,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attackEffect:
     key: 
-  attackSound:
+  hitEffect:
     key: 
+  attackSounds: []
+  hitSounds: []
   grabAttackDatas:
   - simpleAttackData: {fileID: 11400000, guid: c23da38a1988b41cf99c9f497d73c23b, type: 2}
     animationName: GrabAttack1
@@ -7118,8 +7143,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attackEffect:
     key: 
-  attackSound:
+  hitEffect:
     key: 
+  attackSounds: []
+  hitSounds: []
   attackData: {fileID: 11400000, guid: 30b11dd528efc45bcb5c6eb19a838e57, type: 2}
   attackRange: 3
   checkFloat: 0
@@ -7234,8 +7261,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attackEffect:
     key: 
-  attackSound:
+  hitEffect:
     key: 
+  attackSounds: []
+  hitSounds: []
   attackData: {fileID: 11400000, guid: 859a747e670e149ccb5bcde762ae3ff9, type: 2}
   attackRange: 3
   checkFloat: 0
@@ -7426,8 +7455,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attackEffect:
     key: 
-  attackSound:
+  hitEffect:
     key: 
+  attackSounds: []
+  hitSounds: []
   attackData: {fileID: 11400000, guid: 62480c7f317444987b4814319fa2de24, type: 2}
   attackRange: 4.5
   checkFloat: 0
@@ -7630,8 +7661,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attackEffect:
     key: 
-  attackSound:
+  hitEffect:
     key: 
+  attackSounds: []
+  hitSounds: []
   attackData: {fileID: 11400000, guid: b0ac4a06328f74051bfa3bd227ff0af7, type: 2}
   attackRange: 3
   checkFloat: 0
@@ -7747,8 +7780,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attackEffect:
     key: 
-  attackSound:
+  hitEffect:
     key: 
+  attackSounds: []
+  hitSounds: []
   attackData: {fileID: 11400000, guid: 19f78f80973de4f7ebb3794deb7402f6, type: 2}
   attackRange: 3
   checkFloat: 0
@@ -7977,8 +8012,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attackEffect:
     key: 
-  attackSound:
+  hitEffect:
     key: 
+  attackSounds: []
+  hitSounds: []
   attackData: {fileID: 11400000, guid: a4a58c8e69eea46ec9cf8902ba4d7111, type: 2}
   attackRange: 3
   checkFloat: 0
@@ -8104,8 +8141,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attackEffect:
     key: 
-  attackSound:
+  hitEffect:
     key: 
+  attackSounds: []
+  hitSounds: []
   attackData: {fileID: 11400000, guid: a030682faf8564b2f93ad17773b176ed, type: 2}
   attackRange: 3
   checkFloat: 0
@@ -8209,8 +8248,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attackEffect:
     key: 
-  attackSound:
+  hitEffect:
     key: 
+  attackSounds: []
+  hitSounds: []
   attackData: {fileID: 11400000, guid: 592bd4dc54cfa4d28a4bda73e75c1aa8, type: 2}
   attackRange: 3
   checkFloat: 0
@@ -8305,6 +8346,7 @@ MonoBehaviour:
   staticEntity: 0
   entityAnimator: {fileID: 1382251147719448698}
   sortingOrderResolver: {fileID: 3897684068023970099}
+  unitDataRef: {fileID: 11400000, guid: c026babc38b11449db114f0431689cc4, type: 2}
   unitData: {fileID: 11400000, guid: c026babc38b11449db114f0431689cc4, type: 2}
   unitMovement: {fileID: 279169761548483819}
   fsmBrain: {fileID: 2841000604668159261}
@@ -8626,8 +8668,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attackEffect:
     key: 
-  attackSound:
+  hitEffect:
     key: 
+  attackSounds: []
+  hitSounds: []
   attackData: {fileID: 11400000, guid: 3ff730ee720c14673a3e045758da15d0, type: 2}
   attackRange: 3
   checkFloat: 0
@@ -8754,10 +8798,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4561e4b48f58e4bcfa95ad76c7bbc659, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hitEffect:
-    key: 
-  hitSound:
-    key: 
   bounceState: {fileID: 7667994150933278078}
 --- !u!1 &9206362244009254845
 GameObject:
@@ -8838,8 +8878,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attackEffect:
     key: 
-  attackSound:
+  hitEffect:
     key: 
+  attackSounds: []
+  hitSounds: []
   attackData: {fileID: 11400000, guid: b0ac4a06328f74051bfa3bd227ff0af7, type: 2}
   attackRange: 3
   checkFloat: 0

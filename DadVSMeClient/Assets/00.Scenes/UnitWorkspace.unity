@@ -1983,6 +1983,7 @@ MonoBehaviour:
   staticEntity: 0
   entityAnimator: {fileID: 668232997}
   sortingOrderResolver: {fileID: 1371810584}
+  unitDataRef: {fileID: 0}
   unitData: {fileID: 11400000, guid: 931765094b25c4da78e741134ebf35b4, type: 2}
   unitMovement: {fileID: 668232989}
   fsmBrain: {fileID: 668232995}
@@ -1990,6 +1991,9 @@ MonoBehaviour:
   unitAttackEventListener: {fileID: 668232999}
   unitSkillComponent: {fileID: 668233000}
   unitRigidbody: {fileID: 668232985}
+  onAttackTargetEvent:
+    m_PersistentCalls:
+      m_Calls: []
   enemyDetector: {fileID: 885303838}
   grabState: {fileID: 1851159777}
 --- !u!114 &668232995
@@ -5953,6 +5957,10 @@ PrefabInstance:
       propertyPath: targetState
       value: 
       objectReference: {fileID: 966102067}
+    - target: {fileID: 1174489111746341445, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
+      propertyPath: unitDataRef
+      value: 
+      objectReference: {fileID: 11400000, guid: c026babc38b11449db114f0431689cc4, type: 2}
     - target: {fileID: 1463274168543775791, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
       propertyPath: hitSounds.Array.size
       value: 4

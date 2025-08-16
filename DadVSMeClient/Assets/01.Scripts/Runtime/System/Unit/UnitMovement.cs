@@ -36,8 +36,7 @@ namespace DadVSMe
         {
             if (isActive == false)
                 return;
-            //Debug.Log(gameObject);
-            //Debug.Log(movementVelocity);
+
             unitRigidbody.linearVelocity = movementVelocity;
         }
     }

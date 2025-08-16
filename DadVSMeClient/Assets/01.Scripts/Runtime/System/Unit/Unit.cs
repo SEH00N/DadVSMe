@@ -7,6 +7,7 @@ namespace DadVSMe.Entities
     public class Unit : Entity
     {
         [Header("Unit")]
+        [SerializeField] protected UnitData unitDataRef = null;
         [SerializeField] protected UnitData unitData = null;
         [SerializeField] protected UnitMovement unitMovement = null;
         [SerializeField] protected FSMBrain fsmBrain = null;
@@ -27,9 +28,10 @@ namespace DadVSMe.Entities
         public override void Initialize(IEntityData data)
         {
             base.Initialize(data);
+            unitData = Instantiate<UnitData>(unitDataRef);
             fsmBrain.Initialize();
             fsmBrain.SetAsDefaultState();
-            unitHealth.Initialize(unitData.maxHP);
+            unitHealth.Initialize((int)unitData.Stat[EUnitStat.MaxHp].FinalValue);
             unitAttackEventListener.Initialize();
             unitSkillComponent?.Initialize();
 
