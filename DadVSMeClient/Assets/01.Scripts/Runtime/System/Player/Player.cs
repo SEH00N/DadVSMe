@@ -81,9 +81,14 @@ namespace DadVSMe.Players
         public async UniTask ActiveAnger()
         {
             IsAnger = true;
+            unitData.Stat[EUnitStat.MoveSpeed].RegistAddModifier(10);
+            unitData.Stat[EUnitStat.AttackPowerMultiplier].RegistAddModifier(0.5f);
+            
 
             await UniTask.Delay(System.TimeSpan.FromSeconds(angerTime));
 
+            unitData.Stat[EUnitStat.MoveSpeed].UnregistAddModifier(10);
+            unitData.Stat[EUnitStat.AttackPowerMultiplier].UnregistAddModifier(0.5f);
             IsAnger = false;
         }
 

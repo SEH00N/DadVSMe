@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using DadVSMe.Entities;
 using H00N.Resources.Addressables;
 using UnityEngine;
 
@@ -10,14 +11,16 @@ namespace DadVSMe
         [SerializeField] AddressableAsset<AttackBlast> attackBlastPrefab = null;
         [SerializeField] AddressableAsset<GuidedOrb> guidedOrbPrefab = null;
         [SerializeField] AddressableAsset<StatikkShivLighting> statikkShivLightingPrefab = null;
+        [SerializeField] AttackDataBase attackData;
         private Dictionary<Type, UnitSkill> skillContainer;
+
 
         public async virtual void Initialize()
         {
             skillContainer = new();
 
             await statikkShivLightingPrefab.InitializeAsync();
-            //RegistSkill<AngerSkill>(new AngerSkill(10f, 3));
+            RegistSkill<AngerKnockbackSkill>(new AngerKnockbackSkill(attackData));
         }
         
         public void RegistSkill<T>(T skill) where T : UnitSkill
