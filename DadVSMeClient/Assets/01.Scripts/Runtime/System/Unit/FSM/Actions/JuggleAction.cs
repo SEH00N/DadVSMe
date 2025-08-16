@@ -27,6 +27,7 @@ namespace DadVSMe.Entities
             Vector2 force = juggleAttackData.JuggleDirection.normalized * juggleAttackData.JuggleForce;
             force.x *= -Mathf.Sign(unitFSMData.forwardDirection);
             unitRigidbody.linearVelocity = force;
+            // unitRigidbody.angularVelocity = 
         }
 
         public override void UpdateState()

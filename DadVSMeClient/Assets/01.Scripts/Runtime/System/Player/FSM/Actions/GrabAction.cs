@@ -41,8 +41,10 @@ namespace DadVSMe.Players.FSM
 
             grabbable.Grab(unitFSMData.unit);
 
+            playerFSMData.grabParent.localPosition = playerFSMData.grabPosition.localPosition;
+
             playerFSMData.grabbedEntity = entity;
-            playerFSMData.grabbedEntity.transform.SetParent(playerFSMData.grabPosition);
+            playerFSMData.grabbedEntity.transform.SetParent(playerFSMData.grabParent);
             playerFSMData.grabbedEntity.transform.localPosition = Vector3.zero;
             playerFSMData.grabbedEntity.transform.localScale = new Vector3(-1, 1, 1);
 

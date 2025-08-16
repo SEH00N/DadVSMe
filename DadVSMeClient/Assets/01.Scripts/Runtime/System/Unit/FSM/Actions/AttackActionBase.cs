@@ -50,13 +50,17 @@ namespace DadVSMe.Entities.FSM
             OnAttack(eventData);
         }
 
-        protected void AttackToTarget(Unit target, AttackDataBase attackData)
+        protected void AttackToTarget(Unit target, AttackDataBase attackData, bool playEffect = true)
         {
             target.UnitHealth.Attack(unitFSMData.unit, attackData);
             brain.GetComponent<Unit>().onAttackTargetEvent?.Invoke(target, attackData);
 
-            hitEffects.ForEach(effect => _ = new PlayEffect(effect, target.transform.position + (Vector3)attackOffset, unitFSMData.forwardDirection));
-            _ = new PlaySound(hitSounds);
+            if(playEffect)
+            {
+                Vector3 offset = new Vector3(attackOffset.x * unitFSMData.forwardDirection, attackOffset.y, 0f);
+                hitEffects.ForEach(effect => _ = new PlayEffect(effect, target.transform.position + offset, unitFSMData.forwardDirection));
+                _ = new PlaySound(hitSounds);
+            }
         }
 
         #if UNITY_EDITOR

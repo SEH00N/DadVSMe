@@ -1,5 +1,36 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &7617044610107357
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8941362101086193142}
+  m_Layer: 8
+  m_Name: GrabPosition
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8941362101086193142
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7617044610107357}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.4, y: 2.5, z: -0.1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7488116858921959985}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &106497795909499551
 GameObject:
   m_ObjectHideFlags: 0
@@ -404,8 +435,12 @@ MonoBehaviour:
   attackData: {fileID: 11400000, guid: 9a69363df677243778dee575fb444d48, type: 2}
   attackRange: 3
   attackEffect:
-    key: 
-  hitSounds: []
+    key: VFX_Impact3
+  hitSounds:
+  - key: sfx_punch_small_0
+  - key: sfx_punch_small_1
+  - key: sfx_punch_small_2
+  - key: sfx_punch_small_3
 --- !u!1 &362108127135817059
 GameObject:
   m_ObjectHideFlags: 0
@@ -572,12 +607,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 465283684271740343}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 7503746097445978493}
+  m_Father: {fileID: 3380836566278275399}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &3879595027783847167
 MonoBehaviour:
@@ -859,9 +894,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackOffset: {x: 0, y: 0}
-  hitEffects: []
-  attackSounds: []
-  hitSounds: []
+  hitEffects:
+  - key: VFX_Impact1
+  attackSounds:
+  - key: sfx_swing_small_0
+  - key: sfx_swing_small_1
+  - key: sfx_swing_small_2
+  - key: sfx_swing_small_3
+  hitSounds:
+  - key: sfx_punch_small_0
+  - key: sfx_punch_small_1
+  - key: sfx_punch_small_2
+  - key: sfx_punch_small_3
   attackData: {fileID: 11400000, guid: 5b4c1913007e1435da0e9277d98ec621, type: 2}
   attackRange: 3
   checkFloat: 0
@@ -1039,6 +1083,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 572136502247820206}
+  - {fileID: 3709012295605818413}
   - {fileID: 2746772251822464694}
   - {fileID: 2730462385201837353}
   - {fileID: 7852330804729804479}
@@ -1150,6 +1195,37 @@ MonoBehaviour:
   isReverse: 0
   attack1: 1
   attack2: 0
+--- !u!1 &1353778506568748285
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8491074068045605444}
+  m_Layer: 8
+  m_Name: Throw2Position
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8491074068045605444
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1353778506568748285}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.53, y: 0.911, z: -0.1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7488116858921959985}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1371967403507676714
 GameObject:
   m_ObjectHideFlags: 0
@@ -1422,10 +1498,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf68e3e2a13fd45b3a11cd1ed7f5c243, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackOffset: {x: 0, y: 0}
-  hitEffects: []
-  attackSounds: []
-  hitSounds: []
+  attackOffset: {x: 0.37, y: 1.28}
+  hitEffects:
+  - key: VFX_Impact1
+  - key: VFX_Blood1
+  attackSounds:
+  - key: sfx_swing_small_0
+  - key: sfx_swing_small_1
+  - key: sfx_swing_small_2
+  - key: sfx_swing_small_3
+  hitSounds:
+  - key: sfx_punch_small_0
+  - key: sfx_punch_small_1
+  - key: sfx_punch_small_2
+  - key: sfx_punch_small_3
   attackData: {fileID: 11400000, guid: 4594087d91bba4b1fbdbaeb9aa5c82af, type: 2}
   attackRange: 3
   checkFloat: 0
@@ -2125,12 +2211,8 @@ MonoBehaviour:
   hitEffects: []
   attackSounds: []
   hitSounds: []
+  throwAttackData: {fileID: 11400000, guid: dc154843a25434c55949ab04d368eaf5, type: 2}
   attackData: {fileID: 11400000, guid: 3ba68045f9992456cb3437d118b707fb, type: 2}
-  attackRange: 3
-  checkFloat: 0
-  isFloat: 0
-  checkLie: 0
-  isLie: 0
   defaultSortingOrderResolverCollider: {fileID: 4518340953437237913}
   grabbedSortingOrderResolverCollider: {fileID: 6113472226918677138}
 --- !u!114 &7576988775062164614
@@ -2398,10 +2480,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf68e3e2a13fd45b3a11cd1ed7f5c243, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackOffset: {x: 0, y: 0}
-  hitEffects: []
-  attackSounds: []
-  hitSounds: []
+  attackOffset: {x: 0.125, y: 1.5}
+  hitEffects:
+  - key: VFX_Impact3
+  - key: VFX_Blood1
+  attackSounds:
+  - key: sfx_swing_small_0
+  - key: sfx_swing_small_1
+  - key: sfx_swing_small_2
+  - key: sfx_swing_small_3
+  hitSounds:
+  - key: sfx_punch_small_0
+  - key: sfx_punch_small_1
+  - key: sfx_punch_small_2
+  - key: sfx_punch_small_3
   attackData: {fileID: 11400000, guid: 026092285757a4d48845fb82493aba4f, type: 2}
   attackRange: 3
   checkFloat: 0
@@ -2842,12 +2934,8 @@ MonoBehaviour:
   hitEffects: []
   attackSounds: []
   hitSounds: []
+  throwAttackData: {fileID: 11400000, guid: aeb7adec60dfc493b98766a11566c0c1, type: 2}
   attackData: {fileID: 11400000, guid: a890338b99f7d46b3b43c5209f317f2a, type: 2}
-  attackRange: 3
-  checkFloat: 0
-  isFloat: 0
-  checkLie: 0
-  isLie: 0
   defaultSortingOrderResolverCollider: {fileID: 4518340953437237913}
   grabbedSortingOrderResolverCollider: {fileID: 6113472226918677138}
 --- !u!114 &4578853846741598147
@@ -3433,8 +3521,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attackOffset: {x: 0, y: 0}
   hitEffects: []
-  attackSounds: []
-  hitSounds: []
+  attackSounds:
+  - key: sfx_swing_small_0
+  - key: sfx_swing_small_1
+  - key: sfx_swing_small_2
+  - key: sfx_swing_small_3
+  hitSounds:
+  - key: sfx_punch_small_0
+  - key: sfx_punch_small_1
+  - key: sfx_punch_small_2
+  - key: sfx_punch_small_3
   attackData: {fileID: 11400000, guid: b768654027aef4411bb3d7dec069a3da, type: 2}
   attackRange: 3
   checkFloat: 0
@@ -3648,7 +3744,6 @@ Transform:
   - {fileID: 3712771129962152297}
   - {fileID: 4419637242376677547}
   - {fileID: 6972973974242913709}
-  - {fileID: 3709012295605818413}
   m_Father: {fileID: 3801318511281256181}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &8200477763095200303
@@ -4667,10 +4762,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf68e3e2a13fd45b3a11cd1ed7f5c243, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackOffset: {x: 0, y: 0}
-  hitEffects: []
-  attackSounds: []
-  hitSounds: []
+  attackOffset: {x: 0.3, y: 1.5}
+  hitEffects:
+  - key: VFX_Impact3
+  attackSounds:
+  - key: sfx_swing_small_0
+  - key: sfx_swing_small_1
+  - key: sfx_swing_small_2
+  - key: sfx_swing_small_3
+  hitSounds:
+  - key: sfx_punch_small_0
+  - key: sfx_punch_small_1
+  - key: sfx_punch_small_2
+  - key: sfx_punch_small_3
   attackData: {fileID: 11400000, guid: 0f8b70c95b96d4d0dba79d42507dd9af, type: 2}
   attackRange: 3
   checkFloat: 0
@@ -5074,7 +5178,7 @@ CircleCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
-  m_Radius: 3
+  m_Radius: 4
 --- !u!1 &6444695803934505215
 GameObject:
   m_ObjectHideFlags: 0
@@ -5821,10 +5925,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf68e3e2a13fd45b3a11cd1ed7f5c243, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackOffset: {x: 0, y: 0}
-  hitEffects: []
-  attackSounds: []
-  hitSounds: []
+  attackOffset: {x: 0, y: 1}
+  hitEffects:
+  - key: VFX_Blood1
+  - key: VFX_Impact1
+  attackSounds:
+  - key: sfx_swing_small_0
+  - key: sfx_swing_small_1
+  - key: sfx_swing_small_2
+  - key: sfx_swing_small_3
+  hitSounds:
+  - key: sfx_punch_small_0
+  - key: sfx_punch_small_1
+  - key: sfx_punch_small_2
+  - key: sfx_punch_small_3
   attackData: {fileID: 11400000, guid: da240b88bd13d495f814b309571aaeaa, type: 2}
   attackRange: 3
   checkFloat: 0
@@ -6048,10 +6162,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf68e3e2a13fd45b3a11cd1ed7f5c243, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackOffset: {x: 0, y: 0}
-  hitEffects: []
-  attackSounds: []
-  hitSounds: []
+  attackOffset: {x: 0.29, y: 1.63}
+  hitEffects:
+  - key: VFX_Impact1
+  - key: VFX_Blood1
+  attackSounds:
+  - key: sfx_swing_hard_0
+  - key: sfx_swing_hard_1
+  hitSounds:
+  - key: sfx_punch_hard_0
+  - key: sfx_punch_hard_1
+  - key: sfx_punch_hard_2
   attackData: {fileID: 11400000, guid: c051b11a1c87c4e36a208aece61e94d1, type: 2}
   attackRange: 3
   checkFloat: 0
@@ -6557,10 +6678,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf68e3e2a13fd45b3a11cd1ed7f5c243, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackOffset: {x: 0, y: 0}
-  hitEffects: []
-  attackSounds: []
-  hitSounds: []
+  attackOffset: {x: 0.28, y: 0.5}
+  hitEffects:
+  - key: VFX_Shockwave
+  - key: VFX_Impact1
+  attackSounds:
+  - key: sfx_swing_small_0
+  - key: sfx_swing_small_1
+  - key: sfx_swing_small_2
+  - key: sfx_swing_small_3
+  hitSounds:
+  - key: sfx_punch_small_0
+  - key: sfx_punch_small_1
+  - key: sfx_punch_small_2
+  - key: sfx_punch_small_3
   attackData: {fileID: 11400000, guid: b0ac4a06328f74051bfa3bd227ff0af7, type: 2}
   attackRange: 3
   checkFloat: 0
@@ -6818,7 +6949,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackOffset: {x: 0, y: 0}
-  hitEffects: []
+  hitEffects:
+  - key: VFX_Impact2
+  - key: VFX_Blood1
   attackSounds: []
   hitSounds: []
   grabAttackDatas:
@@ -7116,9 +7249,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackOffset: {x: 0, y: 0}
-  hitEffects: []
-  attackSounds: []
-  hitSounds: []
+  hitEffects:
+  - key: VFX_Impact1
+  attackSounds:
+  - key: sfx_swing_small_0
+  - key: sfx_swing_small_1
+  - key: sfx_swing_small_2
+  - key: sfx_swing_small_3
+  hitSounds:
+  - key: sfx_punch_small_0
+  - key: sfx_punch_small_1
+  - key: sfx_punch_small_2
+  - key: sfx_punch_small_3
   attackData: {fileID: 11400000, guid: 30b11dd528efc45bcb5c6eb19a838e57, type: 2}
   attackRange: 3
   checkFloat: 0
@@ -7235,12 +7377,8 @@ MonoBehaviour:
   hitEffects: []
   attackSounds: []
   hitSounds: []
+  throwAttackData: {fileID: 11400000, guid: aeb7adec60dfc493b98766a11566c0c1, type: 2}
   attackData: {fileID: 11400000, guid: 859a747e670e149ccb5bcde762ae3ff9, type: 2}
-  attackRange: 3
-  checkFloat: 0
-  isFloat: 0
-  checkLie: 0
-  isLie: 0
   defaultSortingOrderResolverCollider: {fileID: 4518340953437237913}
   grabbedSortingOrderResolverCollider: {fileID: 6113472226918677138}
 --- !u!114 &151007156211777427
@@ -7425,10 +7563,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attackOffset: {x: 0, y: 0}
   hitEffects: []
-  attackSounds: []
-  hitSounds: []
+  attackSounds:
+  - key: sfx_swing_small_0
+  - key: sfx_swing_small_1
+  - key: sfx_swing_small_2
+  - key: sfx_swing_small_3
+  hitSounds:
+  - key: sfx_punch_small_0
+  - key: sfx_punch_small_1
+  - key: sfx_punch_small_2
+  - key: sfx_punch_small_3
   attackData: {fileID: 11400000, guid: 62480c7f317444987b4814319fa2de24, type: 2}
-  attackRange: 4.5
+  attackRange: 3
   checkFloat: 0
   isFloat: 0
   checkLie: 0
@@ -7521,6 +7667,37 @@ MonoBehaviour:
   isReverse: 0
   attack1: 1
   attack2: 0
+--- !u!1 &8613771516100737500
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1768831229667976483}
+  m_Layer: 8
+  m_Name: Throw1Position
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1768831229667976483
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8613771516100737500}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.277, y: 2.551, z: -0.1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7488116858921959985}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &8749779376090423232
 GameObject:
   m_ObjectHideFlags: 0
@@ -7627,10 +7804,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf68e3e2a13fd45b3a11cd1ed7f5c243, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackOffset: {x: 0, y: 0}
-  hitEffects: []
-  attackSounds: []
-  hitSounds: []
+  attackOffset: {x: 0.28, y: 0.5}
+  hitEffects:
+  - key: VFX_Shockwave
+  - key: VFX_Impact1
+  attackSounds:
+  - key: sfx_swing_small_0
+  - key: sfx_swing_small_1
+  - key: sfx_swing_small_2
+  - key: sfx_swing_small_3
+  hitSounds:
+  - key: sfx_punch_small_0
+  - key: sfx_punch_small_1
+  - key: sfx_punch_small_2
+  - key: sfx_punch_small_3
   attackData: {fileID: 11400000, guid: b0ac4a06328f74051bfa3bd227ff0af7, type: 2}
   attackRange: 3
   checkFloat: 0
@@ -7744,10 +7931,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf68e3e2a13fd45b3a11cd1ed7f5c243, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackOffset: {x: 0, y: 0}
-  hitEffects: []
-  attackSounds: []
-  hitSounds: []
+  attackOffset: {x: 0.15, y: 2}
+  hitEffects:
+  - key: VFX_Impact1
+  - key: VFX_Blood1
+  attackSounds:
+  - key: sfx_swing_small_0
+  - key: sfx_swing_small_1
+  - key: sfx_swing_small_2
+  - key: sfx_swing_small_3
+  hitSounds:
+  - key: sfx_punch_small_0
+  - key: sfx_punch_small_1
+  - key: sfx_punch_small_2
+  - key: sfx_punch_small_3
   attackData: {fileID: 11400000, guid: 19f78f80973de4f7ebb3794deb7402f6, type: 2}
   attackRange: 3
   checkFloat: 0
@@ -7974,10 +8171,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf68e3e2a13fd45b3a11cd1ed7f5c243, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackOffset: {x: 0, y: 0}
-  hitEffects: []
-  attackSounds: []
-  hitSounds: []
+  attackOffset: {x: 0, y: 1.57}
+  hitEffects:
+  - key: VFX_Impact1
+  - key: VFX_Blood1
+  attackSounds:
+  - key: sfx_swing_hard_0
+  - key: sfx_swing_hard_1
+  hitSounds:
+  - key: sfx_punch_hard_0
+  - key: sfx_punch_hard_1
+  - key: sfx_punch_hard_2
   attackData: {fileID: 11400000, guid: a4a58c8e69eea46ec9cf8902ba4d7111, type: 2}
   attackRange: 3
   checkFloat: 0
@@ -8206,10 +8410,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf68e3e2a13fd45b3a11cd1ed7f5c243, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackOffset: {x: 0, y: 0}
-  hitEffects: []
-  attackSounds: []
-  hitSounds: []
+  attackOffset: {x: -0.35, y: 1.5}
+  hitEffects:
+  - key: VFX_Impact1
+  - key: VFX_Blood2
+  attackSounds:
+  - key: sfx_swing_small_0
+  - key: sfx_swing_small_1
+  - key: sfx_swing_small_2
+  - key: sfx_swing_small_3
+  hitSounds:
+  - key: sfx_punch_small_0
+  - key: sfx_punch_small_1
+  - key: sfx_punch_small_2
+  - key: sfx_punch_small_3
   attackData: {fileID: 11400000, guid: 592bd4dc54cfa4d28a4bda73e75c1aa8, type: 2}
   attackRange: 3
   checkFloat: 0
@@ -8273,6 +8487,9 @@ Transform:
   - {fileID: 2814013100021727554}
   - {fileID: 3227234305585924124}
   - {fileID: 5229560510498053603}
+  - {fileID: 8941362101086193142}
+  - {fileID: 1768831229667976483}
+  - {fileID: 8491074068045605444}
   - {fileID: 3801318511281256181}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -8304,6 +8521,7 @@ MonoBehaviour:
   staticEntity: 0
   entityAnimator: {fileID: 1382251147719448698}
   sortingOrderResolver: {fileID: 3897684068023970099}
+  unitData: {fileID: 11400000, guid: c026babc38b11449db114f0431689cc4, type: 2}
   unitMovement: {fileID: 279169761548483819}
   fsmBrain: {fileID: 2841000604668159261}
   unitHealth: {fileID: 6165701722836179940}
@@ -8314,9 +8532,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   enemyDetector: {fileID: 644674988795700514}
-  maxAngerGauge: 10
+  maxAngerGauge: 20000000
   angerTime: 3
-  unitDataRef: {fileID: 11400000, guid: c026babc38b11449db114f0431689cc4, type: 2}
 --- !u!114 &6165701722836179940
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8406,7 +8623,10 @@ MonoBehaviour:
     - rid: 3777565259024040135
       type: {class: PlayerFSMData, ns: DadVSMe.Players.FSM, asm: DadVSMe}
       data:
-        grabPosition: {fileID: 5229560510498053603}
+        grabParent: {fileID: 5229560510498053603}
+        grabPosition: {fileID: 8941362101086193142}
+        throw1Position: {fileID: 1768831229667976483}
+        throw2Position: {fileID: 8491074068045605444}
         grabbedEntity: {fileID: 0}
         moveSpeed: 10
         dashSpeed: 30
@@ -8625,8 +8845,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attackOffset: {x: 0, y: 0}
   hitEffects: []
-  attackSounds: []
-  hitSounds: []
+  attackSounds:
+  - key: sfx_swing_small_0
+  - key: sfx_swing_small_1
+  - key: sfx_swing_small_2
+  - key: sfx_swing_small_3
+  hitSounds:
+  - key: sfx_punch_small_0
+  - key: sfx_punch_small_1
+  - key: sfx_punch_small_2
+  - key: sfx_punch_small_3
   attackData: {fileID: 11400000, guid: 3ff730ee720c14673a3e045758da15d0, type: 2}
   attackRange: 3
   checkFloat: 0
@@ -8656,7 +8884,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5229560510498053603}
   m_Layer: 8
-  m_Name: GrabPosition
+  m_Name: GrabParent
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8831,10 +9059,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf68e3e2a13fd45b3a11cd1ed7f5c243, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackOffset: {x: 0, y: 0}
-  hitEffects: []
-  attackSounds: []
-  hitSounds: []
+  attackOffset: {x: 0.28, y: 0.5}
+  hitEffects:
+  - key: VFX_Shockwave
+  - key: VFX_Impact1
+  attackSounds:
+  - key: sfx_swing_small_0
+  - key: sfx_swing_small_1
+  - key: sfx_swing_small_2
+  - key: sfx_swing_small_3
+  hitSounds:
+  - key: sfx_punch_small_0
+  - key: sfx_punch_small_1
+  - key: sfx_punch_small_2
+  - key: sfx_punch_small_3
   attackData: {fileID: 11400000, guid: b0ac4a06328f74051bfa3bd227ff0af7, type: 2}
   attackRange: 3
   checkFloat: 0

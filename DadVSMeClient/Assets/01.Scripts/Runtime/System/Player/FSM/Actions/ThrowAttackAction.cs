@@ -1,4 +1,3 @@
-using DadVSMe.Enemies;
 using DadVSMe.Entities;
 using DadVSMe.Entities.FSM;
 using H00N.AI.FSM;
@@ -6,8 +5,13 @@ using UnityEngine;
 
 namespace DadVSMe.Players.FSM
 {
-    public class ThrowAttackAction : SimpleAttackAction
+    public class ThrowAttackAction : AttackActionBase
     {
+        [Space(10f)]
+        [SerializeField] AttackDataBase throwAttackData = null;
+        [SerializeField] AttackDataBase attackData = null;
+
+        [Space(10f)]
         [SerializeField] Collider2D defaultSortingOrderResolverCollider = null;
         [SerializeField] Collider2D grabbedSortingOrderResolverCollider = null;
 
@@ -19,22 +23,31 @@ namespace DadVSMe.Players.FSM
             fsmData = brain.GetAIData<PlayerFSMData>();
         }
 
+        public override void EnterState()
+        {
+            base.EnterState();
+            fsmData.grabParent.localPosition = throwAttackData.AttackFeedback == EAttackFeedback.Throw1 ? fsmData.throw1Position.localPosition : fsmData.throw2Position.localPosition;
+            AttackToTarget(fsmData.grabbedEntity as Unit, throwAttackData, false);
+        }
+
         protected override void OnAttack(EntityAnimationEventData eventData)
         {
-            if(fsmData.grabbedEntity != null)
-            {
-                Entity grabbedEntity = fsmData.grabbedEntity;
-                fsmData.grabbedEntity = null;
+            fsmData.grabParent.localPosition = fsmData.grabPosition.localPosition;
 
-                grabbedEntity.transform.SetParent(null);
-                (grabbedEntity as IGrabbable).Release(unitFSMData.unit);
-                (grabbedEntity as Unit).FSMBrain.GetAIData<UnitFSMData>().groundPositionY = unitFSMData.groundPositionY;
-            }
+            if(fsmData.grabbedEntity == null)
+                return;
+
+            Entity grabbedEntity = fsmData.grabbedEntity;
+            fsmData.grabbedEntity = null;
+
+            grabbedEntity.transform.SetParent(null);
+            (grabbedEntity as IGrabbable).Release(unitFSMData.unit);
+            (grabbedEntity as Unit).FSMBrain.GetAIData<UnitFSMData>().groundPositionY = unitFSMData.groundPositionY;
 
             defaultSortingOrderResolverCollider.enabled = true;
             grabbedSortingOrderResolverCollider.enabled = false;
 
-            base.OnAttack(eventData);
+            AttackToTarget(grabbedEntity as Unit, attackData);
         }
     }
 }

@@ -9,5 +9,7 @@ namespace DadVSMe.Entities
         Juggle,
         GrabHit1,
         GrabHit2,
+        Throw1,
+        Throw2,
     }
 }

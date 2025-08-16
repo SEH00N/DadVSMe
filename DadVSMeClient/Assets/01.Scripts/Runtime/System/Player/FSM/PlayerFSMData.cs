@@ -6,7 +6,10 @@ namespace DadVSMe.Players.FSM
 {
     public class PlayerFSMData : IAIData
     {
+        public Transform grabParent = null;
         public Transform grabPosition = null;
+        public Transform throw1Position = null;
+        public Transform throw2Position = null;
         public Entity grabbedEntity = null;
 
         public float moveSpeed = 5f;
