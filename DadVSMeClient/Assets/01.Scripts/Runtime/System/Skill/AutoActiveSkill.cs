@@ -1,4 +1,3 @@
-using System.Collections;
 using System.Threading;
 using Cysharp.Threading.Tasks;
 using UnityEngine;
@@ -10,7 +9,7 @@ namespace DadVSMe
         protected float cooltime;
         private CancellationTokenSource _loopCts;
 
-        public AutoActiveSkill(float cooltime)
+        public AutoActiveSkill(float cooltime) : base()
         {
             this.cooltime = cooltime;
         }
@@ -66,7 +65,7 @@ namespace DadVSMe
             if (elapsed >= cooltime)
             {
                 Execute();
-                Debug.Log(elapsed);
+                
                 elapsed = 0f;
             }
         }

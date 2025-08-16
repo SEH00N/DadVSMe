@@ -27,8 +27,8 @@ namespace DadVSMe.Entities
             attackData = unitFSMData.attackData;
             unitFSMData.attackData = null;
 
-            if(attackData.Damage >= 0 && hitSound != null)
-                AudioManager.Instance.PlaySFX(hitSound);
+     //       if(attackData.Damage >= 0 && hitSound != null)
+//                AudioManager.Instance.PlaySFX(hitSound);
         }
     }
 }

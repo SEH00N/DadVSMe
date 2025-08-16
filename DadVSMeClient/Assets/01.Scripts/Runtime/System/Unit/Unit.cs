@@ -1,5 +1,6 @@
 using UnityEngine;
 using H00N.AI.FSM;
+using UnityEngine.Events;
 
 namespace DadVSMe.Entities
 {
@@ -20,6 +21,8 @@ namespace DadVSMe.Entities
         protected virtual RigidbodyType2D DefaultRigidbodyType => RigidbodyType2D.Kinematic;
 
         private UnitFSMData unitFSMData = null;
+
+        public UnityEvent<Unit, IAttackData> onAttackTargetEvent = null;
 
         public override void Initialize(IEntityData data)
         {

@@ -543,6 +543,65 @@ MonoBehaviour:
   isReverse: 0
   attack1: 1
   attack2: 0
+--- !u!1 &465283684271740343
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3709012295605818413}
+  - component: {fileID: 3879595027783847167}
+  - component: {fileID: 1447853770001691782}
+  m_Layer: 8
+  m_Name: '[Tran] PowerUp'
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3709012295605818413
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 465283684271740343}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3380836566278275399}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3879595027783847167
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 465283684271740343}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2fbc16cf8c22d4c1e9f8c9f7247cab96, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetState: {fileID: 2526812934725719640}
+--- !u!114 &1447853770001691782
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 465283684271740343}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ebd3cb58e60c45c2addf30c03b06b5b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isReverse: 0
 --- !u!1 &523383672496343193
 GameObject:
   m_ObjectHideFlags: 0
@@ -796,6 +855,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf68e3e2a13fd45b3a11cd1ed7f5c243, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  attackEffect:
+    key: 
+  attackSound:
+    key: 
   attackData: {fileID: 11400000, guid: 5b4c1913007e1435da0e9277d98ec621, type: 2}
   attackRange: 3
   checkFloat: 0
@@ -973,6 +1036,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 572136502247820206}
+  - {fileID: 3709012295605818413}
   - {fileID: 2746772251822464694}
   - {fileID: 2730462385201837353}
   - {fileID: 7852330804729804479}
@@ -1356,6 +1420,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf68e3e2a13fd45b3a11cd1ed7f5c243, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  attackEffect:
+    key: 
+  attackSound:
+    key: 
   attackData: {fileID: 11400000, guid: 4594087d91bba4b1fbdbaeb9aa5c82af, type: 2}
   attackRange: 3
   checkFloat: 0
@@ -1385,6 +1453,7 @@ GameObject:
   m_Component:
   - component: {fileID: 989093648015396453}
   - component: {fileID: 2526812934725719640}
+  - component: {fileID: 2507292794327059281}
   m_Layer: 8
   m_Name: PowerUp
   m_TagString: Untagged
@@ -1435,9 +1504,62 @@ MonoBehaviour:
           m_StringArgument: PowerUp
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1174489111746341445}
+        m_TargetAssemblyTypeName: DadVSMe.Players.Player, DadVSMe
+        m_MethodName: set_CurrentAngerGauge
+        m_Mode: 4
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1174489111746341445}
+        m_TargetAssemblyTypeName: DadVSMe.Players.Player, DadVSMe
+        m_MethodName: ActiveAngerForEvent
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   onStateExitEvent:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &2507292794327059281
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1665590273972130149}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ed5b33c6d0df4b1a898f62ac300b33a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animationEventDatas:
+  - eventType: 2
+    event:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 2841000604668159261}
+          m_TargetAssemblyTypeName: H00N.AI.FSM.FSMBrain, H00N.AI.FSM
+          m_MethodName: SetAsDefaultState
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &1701644835694590194
 GameObject:
   m_ObjectHideFlags: 0
@@ -1997,6 +2119,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45985713611854b6494c521d913e1024, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  attackEffect:
+    key: 
+  attackSound:
+    key: 
   attackData: {fileID: 11400000, guid: 3ba68045f9992456cb3437d118b707fb, type: 2}
   attackRange: 3
   checkFloat: 0
@@ -2141,6 +2267,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 63e84c724a9f64dd19a589ac028861ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  attackEffect:
+    key: 
+  attackSound:
+    key: 
   speed: 13
   moveStopping: 0
   attackData: {fileID: 11400000, guid: b7c75bbdc4ae84a42acdfa9fbe76c8a1, type: 2}
@@ -2266,6 +2396,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf68e3e2a13fd45b3a11cd1ed7f5c243, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  attackEffect:
+    key: 
+  attackSound:
+    key: 
   attackData: {fileID: 11400000, guid: 026092285757a4d48845fb82493aba4f, type: 2}
   attackRange: 3
   checkFloat: 0
@@ -2702,6 +2836,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45985713611854b6494c521d913e1024, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  attackEffect:
+    key: 
+  attackSound:
+    key: 
   attackData: {fileID: 11400000, guid: a890338b99f7d46b3b43c5209f317f2a, type: 2}
   attackRange: 3
   checkFloat: 0
@@ -3291,6 +3429,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf68e3e2a13fd45b3a11cd1ed7f5c243, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  attackEffect:
+    key: 
+  attackSound:
+    key: 
   attackData: {fileID: 11400000, guid: b768654027aef4411bb3d7dec069a3da, type: 2}
   attackRange: 3
   checkFloat: 0
@@ -3462,6 +3604,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4561e4b48f58e4bcfa95ad76c7bbc659, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hitEffect:
+    key: 
+  hitSound:
+    key: 
   bounceState: {fileID: 7667994150933278078}
 --- !u!1 &4606057041944649176
 GameObject:
@@ -4146,6 +4292,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 63e84c724a9f64dd19a589ac028861ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  attackEffect:
+    key: 
+  attackSound:
+    key: 
   speed: 15
   moveStopping: 1
   attackData: {fileID: 11400000, guid: ae337a4b116814859821a9841953c38f, type: 2}
@@ -4518,6 +4668,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf68e3e2a13fd45b3a11cd1ed7f5c243, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  attackEffect:
+    key: 
+  attackSound:
+    key: 
   attackData: {fileID: 11400000, guid: 0f8b70c95b96d4d0dba79d42507dd9af, type: 2}
   attackRange: 3
   checkFloat: 0
@@ -5668,6 +5822,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf68e3e2a13fd45b3a11cd1ed7f5c243, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  attackEffect:
+    key: 
+  attackSound:
+    key: 
   attackData: {fileID: 11400000, guid: da240b88bd13d495f814b309571aaeaa, type: 2}
   attackRange: 3
   checkFloat: 0
@@ -5891,6 +6049,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf68e3e2a13fd45b3a11cd1ed7f5c243, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  attackEffect:
+    key: 
+  attackSound:
+    key: 
   attackData: {fileID: 11400000, guid: c051b11a1c87c4e36a208aece61e94d1, type: 2}
   attackRange: 3
   checkFloat: 0
@@ -6396,6 +6558,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf68e3e2a13fd45b3a11cd1ed7f5c243, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  attackEffect:
+    key: 
+  attackSound:
+    key: 
   attackData: {fileID: 11400000, guid: b0ac4a06328f74051bfa3bd227ff0af7, type: 2}
   attackRange: 3
   checkFloat: 0
@@ -6652,6 +6818,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee31e16ad64054f8588b8d2cc365310a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  attackEffect:
+    key: 
+  attackSound:
+    key: 
   grabAttackDatas:
   - simpleAttackData: {fileID: 11400000, guid: c23da38a1988b41cf99c9f497d73c23b, type: 2}
     animationName: GrabAttack1
@@ -6946,6 +7116,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf68e3e2a13fd45b3a11cd1ed7f5c243, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  attackEffect:
+    key: 
+  attackSound:
+    key: 
   attackData: {fileID: 11400000, guid: 30b11dd528efc45bcb5c6eb19a838e57, type: 2}
   attackRange: 3
   checkFloat: 0
@@ -7058,6 +7232,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45985713611854b6494c521d913e1024, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  attackEffect:
+    key: 
+  attackSound:
+    key: 
   attackData: {fileID: 11400000, guid: 859a747e670e149ccb5bcde762ae3ff9, type: 2}
   attackRange: 3
   checkFloat: 0
@@ -7246,6 +7424,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf68e3e2a13fd45b3a11cd1ed7f5c243, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  attackEffect:
+    key: 
+  attackSound:
+    key: 
   attackData: {fileID: 11400000, guid: 62480c7f317444987b4814319fa2de24, type: 2}
   attackRange: 4.5
   checkFloat: 0
@@ -7446,6 +7628,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf68e3e2a13fd45b3a11cd1ed7f5c243, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  attackEffect:
+    key: 
+  attackSound:
+    key: 
   attackData: {fileID: 11400000, guid: b0ac4a06328f74051bfa3bd227ff0af7, type: 2}
   attackRange: 3
   checkFloat: 0
@@ -7559,6 +7745,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf68e3e2a13fd45b3a11cd1ed7f5c243, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  attackEffect:
+    key: 
+  attackSound:
+    key: 
   attackData: {fileID: 11400000, guid: 19f78f80973de4f7ebb3794deb7402f6, type: 2}
   attackRange: 3
   checkFloat: 0
@@ -7785,6 +7975,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf68e3e2a13fd45b3a11cd1ed7f5c243, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  attackEffect:
+    key: 
+  attackSound:
+    key: 
   attackData: {fileID: 11400000, guid: a4a58c8e69eea46ec9cf8902ba4d7111, type: 2}
   attackRange: 3
   checkFloat: 0
@@ -7908,6 +8102,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 492ef6f1343434a729e69d9e5a6a4739, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  attackEffect:
+    key: 
+  attackSound:
+    key: 
   attackData: {fileID: 11400000, guid: a030682faf8564b2f93ad17773b176ed, type: 2}
   attackRange: 3
   checkFloat: 0
@@ -8009,6 +8207,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf68e3e2a13fd45b3a11cd1ed7f5c243, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  attackEffect:
+    key: 
+  attackSound:
+    key: 
   attackData: {fileID: 11400000, guid: 592bd4dc54cfa4d28a4bda73e75c1aa8, type: 2}
   attackRange: 3
   checkFloat: 0
@@ -8110,7 +8312,12 @@ MonoBehaviour:
   unitAttackEventListener: {fileID: 8895890805159774065}
   unitSkillComponent: {fileID: 6550646681929325183}
   unitRigidbody: {fileID: 8451211484433483914}
+  onAttackTargetEvent:
+    m_PersistentCalls:
+      m_Calls: []
   enemyDetector: {fileID: 644674988795700514}
+  maxAngerGauge: 10
+  angerTime: 3
 --- !u!114 &6165701722836179940
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8319,8 +8526,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ac7311ac0ae245a39789789efa20658, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefab:
-    key: AttackBlast
+  attackBlastPrefab:
+    key: 
+  guidedOrbPrefab:
+    key: 
+  statikkShivLightingPrefab:
+    key: StatikkShivLighting
 --- !u!1 &9019325040001713458
 GameObject:
   m_ObjectHideFlags: 0
@@ -8413,6 +8624,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf68e3e2a13fd45b3a11cd1ed7f5c243, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  attackEffect:
+    key: 
+  attackSound:
+    key: 
   attackData: {fileID: 11400000, guid: 3ff730ee720c14673a3e045758da15d0, type: 2}
   attackRange: 3
   checkFloat: 0
@@ -8539,6 +8754,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4561e4b48f58e4bcfa95ad76c7bbc659, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hitEffect:
+    key: 
+  hitSound:
+    key: 
   bounceState: {fileID: 7667994150933278078}
 --- !u!1 &9206362244009254845
 GameObject:
@@ -8617,6 +8836,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf68e3e2a13fd45b3a11cd1ed7f5c243, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  attackEffect:
+    key: 
+  attackSound:
+    key: 
   attackData: {fileID: 11400000, guid: b0ac4a06328f74051bfa3bd227ff0af7, type: 2}
   attackRange: 3
   checkFloat: 0

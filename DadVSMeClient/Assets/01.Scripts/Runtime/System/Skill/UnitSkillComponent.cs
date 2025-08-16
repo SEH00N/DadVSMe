@@ -17,7 +17,7 @@ namespace DadVSMe
             skillContainer = new();
 
             await statikkShivLightingPrefab.InitializeAsync();
-            RegistSkill<StatikkShivSkill>(new StatikkShivSkill(statikkShivLightingPrefab));
+            //RegistSkill<AngerSkill>(new AngerSkill(10f, 3));
         }
         
         public void RegistSkill<T>(T skill) where T : UnitSkill

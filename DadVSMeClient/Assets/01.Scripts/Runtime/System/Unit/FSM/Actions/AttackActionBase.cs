@@ -30,7 +30,7 @@ namespace DadVSMe.Entities.FSM
             entityAnimator.RemoveAnimationEventListener(EEntityAnimationEventType.Trigger, HandleAnimationTriggerEvent);
             entityAnimator.AddAnimationEventListener(EEntityAnimationEventType.Trigger, HandleAnimationTriggerEvent);
 
-            AudioManager.Instance.PlaySFX(attackSound);
+//            AudioManager.Instance.PlaySFX(attackSound);
         }
 
         public override void ExitState()
@@ -49,6 +49,7 @@ namespace DadVSMe.Entities.FSM
         protected void AttackToTarget(Unit target, AttackDataBase attackData)
         {
             target.UnitHealth.Attack(unitFSMData.unit, attackData);
+            brain.GetComponent<Unit>().onAttackTargetEvent?.Invoke(target, attackData);
         }
     }
 }

@@ -1,3 +1,5 @@
+using System.Threading.Tasks;
+using Cysharp.Threading.Tasks;
 using DadVSMe.Entities;
 using UnityEngine;
 
@@ -10,6 +12,40 @@ namespace DadVSMe.Players
 
         protected override RigidbodyType2D DefaultRigidbodyType => RigidbodyType2D.Dynamic;
 
+        private bool isAnger;
+        public bool IsAnger
+        {
+            get => isAnger;
+
+            set
+            {
+                isAnger = value;
+            }
+        }
+        [SerializeField]
+        private float maxAngerGauge;
+        public float MaxAngerGauge
+        {
+            get => maxAngerGauge;
+
+            set
+            {
+                maxAngerGauge = value;
+            }
+        }
+        private float currentAngerGauge;
+        public float CurrentAngerGauge
+        {
+            get => currentAngerGauge;
+
+            set
+            {
+                currentAngerGauge = value;
+            }
+        }
+        [SerializeField]
+        private float angerTime;
+
         // Debug
         private void Start()
         {
@@ -20,6 +56,30 @@ namespace DadVSMe.Players
         {
             base.Initialize(data);
             enemyDetector.Initialize();
+
+            onAttackTargetEvent.AddListener(OnAttackTarget);
+        }
+
+        private void OnAttackTarget(Unit target, IAttackData attackData)
+        {
+            if (isAnger)
+                return;
+
+            CurrentAngerGauge = Mathf.Min(CurrentAngerGauge + 5, maxAngerGauge);
+        }
+
+        public async void ActiveAngerForUnityEvent()
+        {
+            await ActiveAnger();
+        }
+
+        public async UniTask ActiveAnger()
+        {
+            IsAnger = true;
+
+            await UniTask.Delay(System.TimeSpan.FromSeconds(angerTime));
+
+            IsAnger = false;
         }
 
         #if UNITY_EDITOR
