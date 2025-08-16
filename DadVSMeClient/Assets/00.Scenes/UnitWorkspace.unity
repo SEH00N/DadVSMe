@@ -1972,8 +1972,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ac7311ac0ae245a39789789efa20658, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefab:
-    key: AttackBlast
+  attackBlastPrefab:
+    key: 
+  guidedOrbPrefab:
+    key: 
+  statikkShivLightingPrefab:
+    key: 
 --- !u!1 &765364903
 GameObject:
   m_ObjectHideFlags: 0
@@ -5478,6 +5482,10 @@ PrefabInstance:
       propertyPath: onStateEnterEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 668232997}
+    - target: {fileID: 6550646681929325183, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
+      propertyPath: statikkShivLightingPrefab.key
+      value: StatikkShivLighting
+      objectReference: {fileID: 0}
     - target: {fileID: 7488116858921959985, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
       propertyPath: m_LocalPosition.x
       value: -8.25

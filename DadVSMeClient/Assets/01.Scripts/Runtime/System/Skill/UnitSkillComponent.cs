@@ -7,16 +7,17 @@ namespace DadVSMe
 {
     public class UnitSkillComponent : MonoBehaviour
     {
-        //[SerializeField] AddressableAsset<AttackBlast> prefab = null;
-        [SerializeField] AddressableAsset<GuidedOrb> aaa = null;
+        [SerializeField] AddressableAsset<AttackBlast> attackBlastPrefab = null;
+        [SerializeField] AddressableAsset<GuidedOrb> guidedOrbPrefab = null;
+        [SerializeField] AddressableAsset<StatikkShivLighting> statikkShivLightingPrefab = null;
         private Dictionary<Type, UnitSkill> skillContainer;
 
         public async virtual void Initialize()
         {
             skillContainer = new();
 
-            await aaa.InitializeAsync();
-            RegistSkill<GuidedOrbSkill>(new GuidedOrbSkill(3f, aaa));
+            await statikkShivLightingPrefab.InitializeAsync();
+            RegistSkill<StatikkShivSkill>(new StatikkShivSkill(statikkShivLightingPrefab));
         }
         
         public void RegistSkill<T>(T skill) where T : UnitSkill

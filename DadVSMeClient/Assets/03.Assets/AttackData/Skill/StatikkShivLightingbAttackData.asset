@@ -9,9 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dea69d41f90c6ea4fa55c27c1d60c145, type: 3}
-  m_Name: AddressableAssetGroupSortSettings
+  m_Script: {fileID: 11500000, guid: 6b891140ae9b8429a90d868b93558bd7, type: 3}
+  m_Name: StatikkShivLightingbAttackData
   m_EditorClassIdentifier: 
-  sortOrder:
-  - 0f03c54036b0a475ab9b70b5206638ed
-  - 9249e757cc3c04767b44cb815a980850
+  damage: 5
+  attackFeedback: 1
