@@ -8,23 +8,14 @@ namespace DadVSMe
 {
     public struct PlayEffect
     {
-        public PlayEffect(AddressableAsset<ParticleSystem> effect, Vector3 position)
+        public PlayEffect(AddressableAsset<PoolableEffect> effect, Vector3 position)
         {
             if(effect == null || string.IsNullOrEmpty(effect.Key) || effect.Initialized == false)
                 return;
 
-            ParticleSystem particle = PoolManager.Spawn<ParticleSystem>(effect);
-            particle.transform.position = position;
-            particle.Play();
-        }
-        
-        public PlayEffect(AddressableAsset<Animator> effect, Vector3 position)
-        {
-            if(effect == null)
-                return;
-
-            Animator animator = PoolManager.Spawn<Animator>(effect);
-            animator.transform.position = position;
+            PoolableEffect poolableEffect = PoolManager.Spawn<PoolableEffect>(effect.Key);
+            poolableEffect.transform.position = position;
+            poolableEffect.Play();
         }
     }
 

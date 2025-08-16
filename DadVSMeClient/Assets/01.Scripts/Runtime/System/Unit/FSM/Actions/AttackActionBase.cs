@@ -8,8 +8,8 @@ namespace DadVSMe.Entities.FSM
 {
     public abstract class AttackActionBase : FSMAction
     {
-        [SerializeField] AddressableAsset<ParticleSystem> attackEffect = new AddressableAsset<ParticleSystem>();
-        [SerializeField] AddressableAsset<ParticleSystem> hitEffect = new AddressableAsset<ParticleSystem>();
+        [SerializeField] AddressableAsset<PoolableEffect> attackEffect = new AddressableAsset<PoolableEffect>();
+        [SerializeField] AddressableAsset<PoolableEffect> hitEffect = new AddressableAsset<PoolableEffect>();
         [SerializeField] List<AddressableAsset<AudioClip>> attackSounds = new List<AddressableAsset<AudioClip>>();
         [SerializeField] List<AddressableAsset<AudioClip>> hitSounds = new List<AddressableAsset<AudioClip>>();
 

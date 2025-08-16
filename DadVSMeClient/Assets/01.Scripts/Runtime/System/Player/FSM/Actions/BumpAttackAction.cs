@@ -16,7 +16,7 @@ namespace DadVSMe.Players.FSM
         [SerializeField] float attackRange = 3f;
 
         [Space(10f)]
-        [SerializeField] AddressableAsset<ParticleSystem> attackEffect = new AddressableAsset<ParticleSystem>();
+        [SerializeField] AddressableAsset<PoolableEffect> attackEffect = new AddressableAsset<PoolableEffect>();
         [SerializeField] List<AddressableAsset<AudioClip>> hitSounds = new List<AddressableAsset<AudioClip>>();
 
         private UnitFSMData unitFSMData = null;
