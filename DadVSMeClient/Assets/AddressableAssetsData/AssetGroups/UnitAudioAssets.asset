@@ -1,0 +1,197 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: UnitAudioAssets
+  m_EditorClassIdentifier: 
+  m_GroupName: UnitAudioAssets
+  m_GUID: d7aa46afbc5354d2f93fcf9b56df0602
+  m_SerializeEntries:
+  - m_GUID: 0a4dc18d007aa4829aaa0696f08b33c7
+    m_Address: sfx_explosion_1
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 1234f7df108a64969a93cedc3e549852
+    m_Address: sfx_knife_spinning
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 1788f6c3ad2c54c2696ef8c8680f710d
+    m_Address: sfx_powerup
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 18a6086b737ca498b97f756e610e4e97
+    m_Address: sfx_reload
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 18d3d26c5b3604e368c1e3855a9f34a1
+    m_Address: sfx_swing_hard_0
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 288abcf3235304e7cb4d427799d7137d
+    m_Address: sfx_ground5
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 2bc8156b24d0d456196f54895fcb57e5
+    m_Address: sfx_punch_small_0
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 307420070d5fe4484b46584e22d29411
+    m_Address: sfx_ground2
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 4284b98e612f14836a0452417ec8edf5
+    m_Address: sfx_corkpop
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 49e19949dc12c46dc9561b6bf7a2fcd0
+    m_Address: sfx_sunchips_die
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 553f39fddd22042d7a5d4d6df3299f49
+    m_Address: sfx_ground0
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 621ce872712444a27811cc5e81c618c9
+    m_Address: sfx_ground1
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 65cc47d9018b24bc991ba8452c1e5b52
+    m_Address: sfx_swing_small_2
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 7858f99cf65484cae8fd9ffda7db0f00
+    m_Address: sfx_swing_small_3
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 7ce73286846dd4c9d8d1ab778bc71f8b
+    m_Address: sfx_atv_engine
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 7fb569a13674041e89e61a7e2384f460
+    m_Address: sfx_punch_small_2
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 874fd35952b834c7c81e257053625705
+    m_Address: sfx_punch_hard_2
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 88cdc924f3ecc404fb1aab00096187ff
+    m_Address: sfx_punch_small_1
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 8ecaffc2af6684c5e8444b2f352aac1a
+    m_Address: sfx_sunchips_grunt
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 978652921b0fe404690e4996c51de7ee
+    m_Address: sfx_swing_hard_1
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 9930f2ef4e2314f428d4fe36c91c103d
+    m_Address: sfx_explosion_0
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a414160baebb84afdbfe252b8c8e7db7
+    m_Address: sfx_punch_hard_0
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b3ecb282598764bbcb6a3bbfaa97d653
+    m_Address: sfx_shoot_magnum
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b687415685d3a4747aca13d71bab5f66
+    m_Address: sfx_punch_hard_1
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e27325450b2884b05b57e9d1e5d48381
+    m_Address: sfx_ground4
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e823b8a982d1e4721b0f473b5de81635
+    m_Address: sfx_swing_small_1
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f332febded7764c93ad2985c9bbee850
+    m_Address: sfx_ground3
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f7f57276c21c34a959788682dd595e13
+    m_Address: sfx_punch_small_3
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ff7b79f7e73594325ae37861bff68841
+    m_Address: sfx_swing_small_0
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: cfd052ceeb2354823b4fa30d195a2e8a, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: 4bbc0827e4598468c8d509a56edddcb8, type: 2}
+    - {fileID: 11400000, guid: 352f525915de245d69c5ee40de68fcce, type: 2}

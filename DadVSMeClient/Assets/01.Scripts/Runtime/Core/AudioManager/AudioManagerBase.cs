@@ -31,34 +31,30 @@ namespace DadVSMe
     {
         public const float AUDIO_MIN_VOLUME = -80f;
 
-        private AudioMixer audioMixer = null;
-        private EAudioChannel baseModeChannelFlag = EAudioChannel.None;
-        private Dictionary<EAudioChannel, ChannelData> channelDictionary = new Dictionary<EAudioChannel, ChannelData>();
-        
-        protected virtual void Awake()
+        private AudioMixer m_audioMixer = null;
+        private EAudioChannel m_baseModeChannelFlag = EAudioChannel.None;
+        private Dictionary<EAudioChannel, ChannelData> m_channelDictionary = new Dictionary<EAudioChannel, ChannelData>();
+
+        protected virtual void Initialize(AudioMixer audioMixer)
         {
-            channelDictionary = new Dictionary<EAudioChannel, ChannelData>();
+            m_audioMixer = audioMixer;
+            m_channelDictionary = new Dictionary<EAudioChannel, ChannelData>();
             foreach (EAudioChannel channel in Enum.GetValues(typeof(EAudioChannel)))
             {
                 if (channel == EAudioChannel.None)
                     continue;
 
                 ChannelData channelData = new ChannelData(channel);
-                channelDictionary.Add(channel, channelData);
+                m_channelDictionary.Add(channel, channelData);
             }
-        }
-
-        protected virtual void Initialize(AudioMixer audioMixer)
-        {
-            this.audioMixer = audioMixer;
         }
 
         public void SetBassMode(EAudioChannel channel, bool isOn)
         {
             if (isOn)
-                baseModeChannelFlag |= channel;
+                m_baseModeChannelFlag |= channel;
             else
-                baseModeChannelFlag &= ~channel;
+                m_baseModeChannelFlag &= ~channel;
 
             foreach(EAudioChannel singleChannel in Enum.GetValues(typeof(EAudioChannel)))
             {
@@ -66,7 +62,7 @@ namespace DadVSMe
                     continue;
 
                 if ((channel & singleChannel) == singleChannel)
-                    SetVolume(singleChannel, channelDictionary[singleChannel].volume);
+                    SetVolume(singleChannel, m_channelDictionary[singleChannel].volume);
             }
         }
 
@@ -78,26 +74,26 @@ namespace DadVSMe
                 return;
             }
 
-            ChannelData channelData = channelDictionary[channel];
+            ChannelData channelData = m_channelDictionary[channel];
             channelData.volume = volume;
 
             if (IsBassMode(channel))
                 volume *= 0.5f;
 
             float resizedVolume = (volume <= 0f) ? AUDIO_MIN_VOLUME : (Mathf.Log10(volume) * 20f);
-            bool result = audioMixer.SetFloat(channelDictionary[channel].channelName, resizedVolume);
+            bool result = m_audioMixer.SetFloat(m_channelDictionary[channel].channelName, resizedVolume);
             if (result == false)
                 Debug.LogWarning("Failed to set volume");
         }
 
         public float GetVolume(EAudioChannel channel)
         {
-            return channelDictionary[channel].volume;
+            return m_channelDictionary[channel].volume;
         }
 
         public bool IsBassMode(EAudioChannel channel) 
         {
-            return (baseModeChannelFlag & channel) == channel;
+            return (m_baseModeChannelFlag & channel) == channel;
         }
     }
 }
