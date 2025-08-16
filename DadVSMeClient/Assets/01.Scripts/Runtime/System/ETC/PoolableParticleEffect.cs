@@ -1,13 +1,12 @@
-using H00N.Resources.Pools;
 using UnityEngine;
 
 namespace DadVSMe
 {
-    public class PoolableParticleEffect : PoolReference
+    public class PoolableParticleEffect : PoolableEffect
     {
         [SerializeField] ParticleSystem particle = null;
 
-        public void Play()
+        public override void Play()
         {
             particle.Play();
         }

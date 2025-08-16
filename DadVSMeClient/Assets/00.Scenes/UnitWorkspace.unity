@@ -1910,7 +1910,7 @@ Transform:
   m_GameObject: {fileID: 668232983}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.56, y: -0.37, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -0.1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1983,7 +1983,6 @@ MonoBehaviour:
   staticEntity: 0
   entityAnimator: {fileID: 668232997}
   sortingOrderResolver: {fileID: 1371810584}
-  unitDataRef: {fileID: 0}
   unitData: {fileID: 11400000, guid: 931765094b25c4da78e741134ebf35b4, type: 2}
   unitMovement: {fileID: 668232989}
   fsmBrain: {fileID: 668232995}
@@ -1991,9 +1990,6 @@ MonoBehaviour:
   unitAttackEventListener: {fileID: 668232999}
   unitSkillComponent: {fileID: 668233000}
   unitRigidbody: {fileID: 668232985}
-  onAttackTargetEvent:
-    m_PersistentCalls:
-      m_Calls: []
   enemyDetector: {fileID: 885303838}
   grabState: {fileID: 1851159777}
 --- !u!114 &668232995
@@ -5957,13 +5953,121 @@ PrefabInstance:
       propertyPath: targetState
       value: 
       objectReference: {fileID: 966102067}
-    - target: {fileID: 1174489111746341445, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
-      propertyPath: unitDataRef
-      value: 
-      objectReference: {fileID: 11400000, guid: c026babc38b11449db114f0431689cc4, type: 2}
+    - target: {fileID: 987321134260378580, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
+      propertyPath: hitEffect.key
+      value: VFX_Blood1
+      objectReference: {fileID: 0}
+    - target: {fileID: 987321134260378580, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
+      propertyPath: attackOffset.x
+      value: 0.29
+      objectReference: {fileID: 0}
+    - target: {fileID: 987321134260378580, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
+      propertyPath: attackOffset.y
+      value: 1.63
+      objectReference: {fileID: 0}
+    - target: {fileID: 987321134260378580, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
+      propertyPath: attackEffect.key
+      value: VFX_Impact1
+      objectReference: {fileID: 0}
+    - target: {fileID: 987321134260378580, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
+      propertyPath: hitSounds.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 987321134260378580, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
+      propertyPath: hitEffects.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 987321134260378580, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
+      propertyPath: attackSounds.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 987321134260378580, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
+      propertyPath: hitSounds.Array.data[0].key
+      value: sfx_punch_hard_0
+      objectReference: {fileID: 0}
+    - target: {fileID: 987321134260378580, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
+      propertyPath: hitSounds.Array.data[1].key
+      value: sfx_punch_hard_1
+      objectReference: {fileID: 0}
+    - target: {fileID: 987321134260378580, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
+      propertyPath: hitSounds.Array.data[2].key
+      value: sfx_punch_hard_2
+      objectReference: {fileID: 0}
+    - target: {fileID: 987321134260378580, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
+      propertyPath: hitEffects.Array.data[0].key
+      value: VFX_Impact1
+      objectReference: {fileID: 0}
+    - target: {fileID: 987321134260378580, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
+      propertyPath: hitEffects.Array.data[1].key
+      value: VFX_Blood1
+      objectReference: {fileID: 0}
+    - target: {fileID: 987321134260378580, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
+      propertyPath: attackSounds.Array.data[0].key
+      value: sfx_swing_hard_0
+      objectReference: {fileID: 0}
+    - target: {fileID: 987321134260378580, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
+      propertyPath: attackSounds.Array.data[1].key
+      value: sfx_swing_hard_1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1232159966641272147, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
+      propertyPath: hitSounds.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1232159966641272147, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
+      propertyPath: hitEffects.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1232159966641272147, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
+      propertyPath: attackSounds.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1232159966641272147, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
+      propertyPath: hitSounds.Array.data[0].key
+      value: sfx_punch_small_0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1232159966641272147, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
+      propertyPath: hitSounds.Array.data[1].key
+      value: sfx_punch_small_1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1232159966641272147, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
+      propertyPath: hitSounds.Array.data[2].key
+      value: sfx_punch_small_2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1232159966641272147, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
+      propertyPath: hitSounds.Array.data[3].key
+      value: sfx_punch_small_3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1232159966641272147, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
+      propertyPath: hitEffects.Array.data[0].key
+      value: VFX_Impact1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1232159966641272147, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
+      propertyPath: attackSounds.Array.data[0].key
+      value: sfx_swing_small_0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1232159966641272147, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
+      propertyPath: attackSounds.Array.data[1].key
+      value: sfx_swing_small_1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1232159966641272147, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
+      propertyPath: attackSounds.Array.data[2].key
+      value: sfx_swing_small_2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1232159966641272147, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
+      propertyPath: attackSounds.Array.data[3].key
+      value: sfx_swing_small_3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1463274168543775791, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
+      propertyPath: attackOffset.y
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1463274168543775791, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
       propertyPath: hitSounds.Array.size
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1463274168543775791, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
+      propertyPath: hitEffects.Array.size
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1463274168543775791, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
       propertyPath: attackSounds.Array.size
@@ -5984,6 +6088,14 @@ PrefabInstance:
     - target: {fileID: 1463274168543775791, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
       propertyPath: hitSounds.Array.data[3].key
       value: sfx_punch_small_3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1463274168543775791, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
+      propertyPath: hitEffects.Array.data[0].key
+      value: VFX_Blood1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1463274168543775791, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
+      propertyPath: hitEffects.Array.data[1].key
+      value: VFX_Impact1
       objectReference: {fileID: 0}
     - target: {fileID: 1463274168543775791, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
       propertyPath: attackSounds.Array.data[0].key
@@ -6002,8 +6114,28 @@ PrefabInstance:
       value: sfx_swing_small_3
       objectReference: {fileID: 0}
     - target: {fileID: 1626959363879877503, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
+      propertyPath: hitEffect.key
+      value: VFX_Blood1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1626959363879877503, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
+      propertyPath: attackOffset.x
+      value: 0.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 1626959363879877503, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
+      propertyPath: attackOffset.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1626959363879877503, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
+      propertyPath: attackEffect.key
+      value: VFX_Impact1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1626959363879877503, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
       propertyPath: hitSounds.Array.size
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1626959363879877503, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
+      propertyPath: hitEffects.Array.size
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1626959363879877503, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
       propertyPath: attackSounds.Array.size
@@ -6024,6 +6156,14 @@ PrefabInstance:
     - target: {fileID: 1626959363879877503, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
       propertyPath: hitSounds.Array.data[3].key
       value: sfx_punch_small_3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1626959363879877503, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
+      propertyPath: hitEffects.Array.data[0].key
+      value: VFX_Impact1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1626959363879877503, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
+      propertyPath: hitEffects.Array.data[1].key
+      value: VFX_Blood1
       objectReference: {fileID: 0}
     - target: {fileID: 1626959363879877503, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
       propertyPath: attackSounds.Array.data[0].key
@@ -6041,9 +6181,81 @@ PrefabInstance:
       propertyPath: attackSounds.Array.data[3].key
       value: sfx_swing_small_3
       objectReference: {fileID: 0}
+    - target: {fileID: 1637500108267551053, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
+      propertyPath: hitEffect.key
+      value: VFX_Blood1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1637500108267551053, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
+      propertyPath: attackOffset.y
+      value: 1.57
+      objectReference: {fileID: 0}
+    - target: {fileID: 1637500108267551053, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
+      propertyPath: attackEffect.key
+      value: VFX_Impact1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1637500108267551053, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
+      propertyPath: hitSounds.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1637500108267551053, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
+      propertyPath: hitEffects.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1637500108267551053, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
+      propertyPath: attackSounds.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1637500108267551053, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
+      propertyPath: hitSounds.Array.data[0].key
+      value: sfx_punch_hard_0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1637500108267551053, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
+      propertyPath: hitSounds.Array.data[1].key
+      value: sfx_punch_hard_1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1637500108267551053, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
+      propertyPath: hitSounds.Array.data[2].key
+      value: sfx_punch_hard_2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1637500108267551053, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
+      propertyPath: hitEffects.Array.data[0].key
+      value: VFX_Impact1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1637500108267551053, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
+      propertyPath: hitEffects.Array.data[1].key
+      value: VFX_Blood1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1637500108267551053, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
+      propertyPath: attackSounds.Array.data[0].key
+      value: sfx_swing_hard_0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1637500108267551053, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
+      propertyPath: attackSounds.Array.data[1].key
+      value: sfx_swing_hard_1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2237173395481143780, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
+      propertyPath: hitEffect.key
+      value: VFX_Blood1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2237173395481143780, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
+      propertyPath: attackOffset.x
+      value: 0.37
+      objectReference: {fileID: 0}
+    - target: {fileID: 2237173395481143780, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
+      propertyPath: attackOffset.y
+      value: 1.28
+      objectReference: {fileID: 0}
+    - target: {fileID: 2237173395481143780, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
+      propertyPath: attackEffect.key
+      value: VFX_Impact1
+      objectReference: {fileID: 0}
     - target: {fileID: 2237173395481143780, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
       propertyPath: hitSounds.Array.size
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2237173395481143780, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
+      propertyPath: hitEffects.Array.size
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2237173395481143780, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
       propertyPath: attackSounds.Array.size
@@ -6064,6 +6276,14 @@ PrefabInstance:
     - target: {fileID: 2237173395481143780, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
       propertyPath: hitSounds.Array.data[3].key
       value: sfx_punch_small_3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2237173395481143780, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
+      propertyPath: hitEffects.Array.data[0].key
+      value: VFX_Impact1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2237173395481143780, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
+      propertyPath: hitEffects.Array.data[1].key
+      value: VFX_Blood1
       objectReference: {fileID: 0}
     - target: {fileID: 2237173395481143780, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
       propertyPath: attackSounds.Array.data[0].key
@@ -6081,9 +6301,113 @@ PrefabInstance:
       propertyPath: attackSounds.Array.data[3].key
       value: sfx_swing_small_3
       objectReference: {fileID: 0}
+    - target: {fileID: 2308804095306331961, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
+      propertyPath: attackOffset.x
+      value: 0.28
+      objectReference: {fileID: 0}
+    - target: {fileID: 2308804095306331961, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
+      propertyPath: attackOffset.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2308804095306331961, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
+      propertyPath: hitSounds.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2308804095306331961, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
+      propertyPath: hitEffects.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2308804095306331961, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
+      propertyPath: attackSounds.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2308804095306331961, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
+      propertyPath: hitSounds.Array.data[0].key
+      value: sfx_punch_small_0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2308804095306331961, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
+      propertyPath: hitSounds.Array.data[1].key
+      value: sfx_punch_small_1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2308804095306331961, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
+      propertyPath: hitSounds.Array.data[2].key
+      value: sfx_punch_small_2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2308804095306331961, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
+      propertyPath: hitSounds.Array.data[3].key
+      value: sfx_punch_small_3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2308804095306331961, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
+      propertyPath: hitEffects.Array.data[0].key
+      value: VFX_Shockwave
+      objectReference: {fileID: 0}
+    - target: {fileID: 2308804095306331961, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
+      propertyPath: hitEffects.Array.data[1].key
+      value: VFX_Impact1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2308804095306331961, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
+      propertyPath: attackSounds.Array.data[0].key
+      value: sfx_swing_small_0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2308804095306331961, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
+      propertyPath: attackSounds.Array.data[1].key
+      value: sfx_swing_small_1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2308804095306331961, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
+      propertyPath: attackSounds.Array.data[2].key
+      value: sfx_swing_small_2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2308804095306331961, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
+      propertyPath: attackSounds.Array.data[3].key
+      value: sfx_swing_small_3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2977751249653612589, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
+      propertyPath: m_Radius
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3775436521619690260, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
+      propertyPath: hitEffect.key
+      value: VFX_Blood1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3775436521619690260, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
+      propertyPath: attackEffect.key
+      value: VFX_Impact2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3775436521619690260, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
+      propertyPath: hitEffects.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3775436521619690260, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
+      propertyPath: hitEffects.Array.data[0].key
+      value: VFX_Impact2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3775436521619690260, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
+      propertyPath: hitEffects.Array.data[1].key
+      value: VFX_Blood1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4904074541681549496, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
+      propertyPath: hitEffect.key
+      value: VFX_Blood1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4904074541681549496, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
+      propertyPath: attackOffset.x
+      value: 0.125
+      objectReference: {fileID: 0}
+    - target: {fileID: 4904074541681549496, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
+      propertyPath: attackOffset.y
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4904074541681549496, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
+      propertyPath: attackEffect.key
+      value: VFX_Impact3
+      objectReference: {fileID: 0}
     - target: {fileID: 4904074541681549496, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
       propertyPath: hitSounds.Array.size
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4904074541681549496, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
+      propertyPath: hitEffects.Array.size
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4904074541681549496, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
       propertyPath: attackSounds.Array.size
@@ -6104,6 +6428,14 @@ PrefabInstance:
     - target: {fileID: 4904074541681549496, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
       propertyPath: hitSounds.Array.data[3].key
       value: sfx_punch_small_3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4904074541681549496, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
+      propertyPath: hitEffects.Array.data[0].key
+      value: VFX_Impact3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4904074541681549496, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
+      propertyPath: hitEffects.Array.data[1].key
+      value: VFX_Blood1
       objectReference: {fileID: 0}
     - target: {fileID: 4904074541681549496, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
       propertyPath: attackSounds.Array.data[0].key
@@ -6122,6 +6454,10 @@ PrefabInstance:
       value: sfx_swing_small_3
       objectReference: {fileID: 0}
     - target: {fileID: 5188117905570338336, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
+      propertyPath: attackRange
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5188117905570338336, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
       propertyPath: hitSounds.Array.size
       value: 4
       objectReference: {fileID: 0}
@@ -6161,9 +6497,69 @@ PrefabInstance:
       propertyPath: attackSounds.Array.data[3].key
       value: sfx_swing_small_3
       objectReference: {fileID: 0}
+    - target: {fileID: 5682875267753677173, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
+      propertyPath: hitSounds.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5682875267753677173, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
+      propertyPath: hitEffects.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5682875267753677173, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
+      propertyPath: attackSounds.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5682875267753677173, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
+      propertyPath: hitSounds.Array.data[0].key
+      value: sfx_punch_small_0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5682875267753677173, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
+      propertyPath: hitSounds.Array.data[1].key
+      value: sfx_punch_small_1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5682875267753677173, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
+      propertyPath: hitSounds.Array.data[2].key
+      value: sfx_punch_small_2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5682875267753677173, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
+      propertyPath: hitSounds.Array.data[3].key
+      value: sfx_punch_small_3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5682875267753677173, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
+      propertyPath: hitEffects.Array.data[0].key
+      value: VFX_Impact1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5682875267753677173, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
+      propertyPath: attackSounds.Array.data[0].key
+      value: sfx_swing_small_0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5682875267753677173, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
+      propertyPath: attackSounds.Array.data[1].key
+      value: sfx_swing_small_1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5682875267753677173, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
+      propertyPath: attackSounds.Array.data[2].key
+      value: sfx_swing_small_2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5682875267753677173, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
+      propertyPath: attackSounds.Array.data[3].key
+      value: sfx_swing_small_3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5928225887847949517, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
+      propertyPath: attackOffset.x
+      value: 0.28
+      objectReference: {fileID: 0}
+    - target: {fileID: 5928225887847949517, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
+      propertyPath: attackOffset.y
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 5928225887847949517, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
       propertyPath: hitSounds.Array.size
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5928225887847949517, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
+      propertyPath: hitEffects.Array.size
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5928225887847949517, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
       propertyPath: attackSounds.Array.size
@@ -6184,6 +6580,14 @@ PrefabInstance:
     - target: {fileID: 5928225887847949517, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
       propertyPath: hitSounds.Array.data[3].key
       value: sfx_punch_small_3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5928225887847949517, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
+      propertyPath: hitEffects.Array.data[0].key
+      value: VFX_Shockwave
+      objectReference: {fileID: 0}
+    - target: {fileID: 5928225887847949517, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
+      propertyPath: hitEffects.Array.data[1].key
+      value: VFX_Impact1
       objectReference: {fileID: 0}
     - target: {fileID: 5928225887847949517, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
       propertyPath: attackSounds.Array.data[0].key
@@ -6210,8 +6614,28 @@ PrefabInstance:
       value: StatikkShivLighting
       objectReference: {fileID: 0}
     - target: {fileID: 7021832394674538665, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
+      propertyPath: hitEffect.key
+      value: VFX_Blood2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7021832394674538665, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
+      propertyPath: attackOffset.x
+      value: -0.35
+      objectReference: {fileID: 0}
+    - target: {fileID: 7021832394674538665, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
+      propertyPath: attackOffset.y
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7021832394674538665, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
+      propertyPath: attackEffect.key
+      value: VFX_Impact1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7021832394674538665, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
       propertyPath: hitSounds.Array.size
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7021832394674538665, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
+      propertyPath: hitEffects.Array.size
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7021832394674538665, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
       propertyPath: attackSounds.Array.size
@@ -6232,6 +6656,14 @@ PrefabInstance:
     - target: {fileID: 7021832394674538665, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
       propertyPath: hitSounds.Array.data[3].key
       value: sfx_punch_small_3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7021832394674538665, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
+      propertyPath: hitEffects.Array.data[0].key
+      value: VFX_Impact1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7021832394674538665, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
+      propertyPath: hitEffects.Array.data[1].key
+      value: VFX_Blood2
       objectReference: {fileID: 0}
     - target: {fileID: 7021832394674538665, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
       propertyPath: attackSounds.Array.data[0].key
@@ -6291,11 +6723,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7488116858921959985, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -8.25
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7488116858921959985, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.37
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7488116858921959985, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
       propertyPath: m_LocalPosition.z
@@ -6330,8 +6762,24 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7537395946798424511, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
+      propertyPath: attackOffset.x
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7537395946798424511, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
+      propertyPath: attackOffset.y
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7537395946798424511, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
+      propertyPath: attackEffect.key
+      value: VFX_Impact3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7537395946798424511, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
       propertyPath: hitSounds.Array.size
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7537395946798424511, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
+      propertyPath: hitEffects.Array.size
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7537395946798424511, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
       propertyPath: attackSounds.Array.size
@@ -6352,6 +6800,10 @@ PrefabInstance:
     - target: {fileID: 7537395946798424511, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
       propertyPath: hitSounds.Array.data[3].key
       value: sfx_punch_small_3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7537395946798424511, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
+      propertyPath: hitEffects.Array.data[0].key
+      value: VFX_Impact3
       objectReference: {fileID: 0}
     - target: {fileID: 7537395946798424511, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
       propertyPath: attackSounds.Array.data[0].key
@@ -6408,14 +6860,50 @@ PrefabInstance:
     - target: {fileID: 8534845375963123760, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
       propertyPath: attackSounds.Array.data[3].key
       value: sfx_swing_small_3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8869622597115168957, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
+      propertyPath: attackEffect.key
+      value: VFX_Impact3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8869622597115168957, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
+      propertyPath: hitSounds.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8869622597115168957, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
+      propertyPath: hitSounds.Array.data[0].key
+      value: sfx_punch_small_0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8869622597115168957, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
+      propertyPath: hitSounds.Array.data[1].key
+      value: sfx_punch_small_1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8869622597115168957, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
+      propertyPath: hitSounds.Array.data[2].key
+      value: sfx_punch_small_2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8869622597115168957, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
+      propertyPath: hitSounds.Array.data[3].key
+      value: sfx_punch_small_3
       objectReference: {fileID: 0}
     - target: {fileID: 8996695108358816546, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 9094768305731557693, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
+      propertyPath: attackOffset.x
+      value: 0.28
+      objectReference: {fileID: 0}
+    - target: {fileID: 9094768305731557693, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
+      propertyPath: attackOffset.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 9094768305731557693, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
       propertyPath: hitSounds.Array.size
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 9094768305731557693, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
+      propertyPath: hitEffects.Array.size
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 9094768305731557693, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
       propertyPath: attackSounds.Array.size
@@ -6436,6 +6924,14 @@ PrefabInstance:
     - target: {fileID: 9094768305731557693, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
       propertyPath: hitSounds.Array.data[3].key
       value: sfx_punch_small_3
+      objectReference: {fileID: 0}
+    - target: {fileID: 9094768305731557693, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
+      propertyPath: hitEffects.Array.data[0].key
+      value: VFX_Shockwave
+      objectReference: {fileID: 0}
+    - target: {fileID: 9094768305731557693, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
+      propertyPath: hitEffects.Array.data[1].key
+      value: VFX_Impact1
       objectReference: {fileID: 0}
     - target: {fileID: 9094768305731557693, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
       propertyPath: attackSounds.Array.data[0].key

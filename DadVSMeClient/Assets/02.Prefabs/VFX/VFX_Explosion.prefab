@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 3397411882031683490}
   - component: {fileID: 8042792395020841959}
   - component: {fileID: 1108081689495492348}
+  - component: {fileID: 3887152026295716617}
   m_Layer: 0
   m_Name: VFX_Explosion
   m_TagString: Untagged
@@ -124,3 +125,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 8042792395020841959}
+  animationEventListener: {fileID: 3887152026295716617}
+--- !u!114 &3887152026295716617
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3375913473423704878}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b1adb445966248b98412033a8511ad9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

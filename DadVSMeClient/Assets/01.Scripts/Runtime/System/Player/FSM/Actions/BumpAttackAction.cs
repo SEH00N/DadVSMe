@@ -53,7 +53,7 @@ namespace DadVSMe.Players.FSM
 
                 enemy.UnitHealth.Attack(unitFSMData.unit, attackData);
 
-                _ = new PlayEffect(attackEffect, enemy.transform.position);
+                _ = new PlayEffect(attackEffect, enemy.transform.position, unitFSMData.forwardDirection);
                 _ = new PlaySound(hitSounds);
             });
 
