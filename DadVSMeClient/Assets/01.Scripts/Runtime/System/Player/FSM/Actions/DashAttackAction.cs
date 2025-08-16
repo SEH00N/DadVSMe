@@ -63,7 +63,7 @@ namespace DadVSMe.Players.FSM
                 if(enemy.FSMBrain.GetAIData<UnitFSMData>().isLie)
                     return;
 
-                enemy.UnitHealth.Attack(unitFSMData.unit, attackData);
+                AttackToTarget(enemy, attackData);
             });
         }
 

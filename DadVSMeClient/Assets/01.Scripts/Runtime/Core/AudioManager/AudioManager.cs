@@ -16,19 +16,16 @@ namespace DadVSMe
 
         private Dictionary<string, float> effectAudioPlayTimeBuffer = null;
 
-        protected override void Awake()
-        {
-            effectAudioPlayTimeBuffer = new Dictionary<string, float>();
-
-            AudioSettings.OnAudioConfigurationChanged -= OnAudioConfigurationChanged;
-            AudioSettings.OnAudioConfigurationChanged += OnAudioConfigurationChanged;
-        }
-
         public void Initialize()
         {
             Instance = this;
+
+            effectAudioPlayTimeBuffer = new Dictionary<string, float>();
             base.Initialize(audioMixer);
             InitializeVolume();
+
+            AudioSettings.OnAudioConfigurationChanged -= OnAudioConfigurationChanged;
+            AudioSettings.OnAudioConfigurationChanged += OnAudioConfigurationChanged;
         }
 
         public void Release()

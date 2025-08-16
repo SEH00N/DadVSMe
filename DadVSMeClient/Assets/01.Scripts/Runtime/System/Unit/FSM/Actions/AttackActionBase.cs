@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using Cysharp.Threading.Tasks;
 using H00N.AI.FSM;
 using H00N.Resources.Addressables;
@@ -7,8 +8,10 @@ namespace DadVSMe.Entities.FSM
 {
     public abstract class AttackActionBase : FSMAction
     {
-        [SerializeField] AddressableAsset<ParticleSystem> attackEffect = null;
-        [SerializeField] AddressableAsset<AudioClip> attackSound = null;
+        [SerializeField] AddressableAsset<ParticleSystem> attackEffect = new AddressableAsset<ParticleSystem>();
+        [SerializeField] AddressableAsset<ParticleSystem> hitEffect = new AddressableAsset<ParticleSystem>();
+        [SerializeField] List<AddressableAsset<AudioClip>> attackSounds = new List<AddressableAsset<AudioClip>>();
+        [SerializeField] List<AddressableAsset<AudioClip>> hitSounds = new List<AddressableAsset<AudioClip>>();
 
         protected EntityAnimator entityAnimator = null;
         protected UnitFSMData unitFSMData = null;
@@ -19,8 +22,14 @@ namespace DadVSMe.Entities.FSM
             entityAnimator = brain.GetComponent<EntityAnimator>();
             unitFSMData = brain.GetAIData<UnitFSMData>();
 
-            attackEffect.InitializeAsync().Forget();
-            attackSound.InitializeAsync().Forget();
+            if(string.IsNullOrEmpty(attackEffect.Key) == false)
+                attackEffect.InitializeAsync().Forget();
+
+            if(string.IsNullOrEmpty(hitEffect.Key) == false)
+                hitEffect.InitializeAsync().Forget();
+
+            attackSounds.ForEach(sound => sound.InitializeAsync().Forget());
+            hitSounds.ForEach(sound => sound.InitializeAsync().Forget());
         }
 
         public override void EnterState()
@@ -30,7 +39,7 @@ namespace DadVSMe.Entities.FSM
             entityAnimator.RemoveAnimationEventListener(EEntityAnimationEventType.Trigger, HandleAnimationTriggerEvent);
             entityAnimator.AddAnimationEventListener(EEntityAnimationEventType.Trigger, HandleAnimationTriggerEvent);
 
-            AudioManager.Instance.PlaySFX(attackSound);
+            _ = new PlaySound(attackSounds);
         }
 
         public override void ExitState()
@@ -49,6 +58,10 @@ namespace DadVSMe.Entities.FSM
         protected void AttackToTarget(Unit target, AttackDataBase attackData)
         {
             target.UnitHealth.Attack(unitFSMData.unit, attackData);
+
+            _ = new PlayEffect(attackEffect, target.transform.position);
+            _ = new PlayEffect(hitEffect, target.transform.position);
+            _ = new PlaySound(hitSounds);
         }
     }
 }
