@@ -15,18 +15,19 @@ namespace DadVSMe.Entities
 
         public void OnAnimationEvent(EntityAnimationEventData eventData)
         {
-            if(eventData == null)
+            
+            if (eventData == null)
                 return;
-
+            
             if(eventData.eventType == EEntityAnimationEventType.None)
                 return;
-
+            
             if(eventListeners == null)
                 return;
-
+            
             if(eventListeners.TryGetValue(eventData.eventType, out Action<EntityAnimationEventData> action) == false)
                 return;
-
+            
             action?.Invoke(eventData);
         }
 

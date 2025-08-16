@@ -28,7 +28,7 @@ namespace DadVSMe.Entities
             fsmBrain.SetAsDefaultState();
             unitHealth.Initialize(unitData.maxHP);
             unitAttackEventListener.Initialize();
-            unitSkillComponent.Initialize();
+            unitSkillComponent?.Initialize();
 
             unitFSMData = fsmBrain.GetAIData<UnitFSMData>();
         }

@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5244360963226182176}
-  - component: {fileID: -125451476413073788}
+  - component: {fileID: -2330429741538639402}
   - component: {fileID: 6498249429142604679}
   - component: {fileID: 8225517424154263618}
   - component: {fileID: 773343934565297832}
@@ -19,7 +19,7 @@ GameObject:
   - component: {fileID: 4266219580518674204}
   - component: {fileID: 8555126650566983865}
   m_Layer: 0
-  m_Name: AttackBlast
+  m_Name: GuidedOrb
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -35,12 +35,12 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 4.5, y: 4.5, z: 1}
+  m_LocalScale: {x: 3, y: 3, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &-125451476413073788
+--- !u!114 &-2330429741538639402
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -49,15 +49,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 879120118293887749}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f31fccb74b5cc40c5b69f92346ec361e, type: 3}
+  m_Script: {fileID: 11500000, guid: 620a5538687dc4ba8a04de1857f52b5a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   staticEntity: 0
   entityAnimator: {fileID: 7331478016869599188}
   sortingOrderResolver: {fileID: 0}
-  attackData: {fileID: 11400000, guid: 1470d395c8b554b65990b6b5921ae74f, type: 2}
-  moveSpeed: 12
-  lifeTime: 0.2
+  attackData: {fileID: 11400000, guid: f0d151216dd084c54829d62ccfbe7b64, type: 2}
+  moveSpeed: 7
 --- !u!114 &6498249429142604679
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -127,8 +126,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -5729246904703773950, guid: 8a0eb1b7e5fc343f9ab08c86efd497ed, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Sprite: {fileID: -8028637060798740405, guid: afd5560852c1548838000bb3f0137a61, type: 3}
+  m_Color: {r: 0.59607846, g: 0.2, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -199,17 +198,17 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0.19334501}
+  m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.33, y: 0.04}
-    oldSize: {x: 0.99, y: 0.455}
+    pivot: {x: 0.56, y: 0.455}
+    oldSize: {x: 0.765, y: 0.885}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 1, y: 0.61331}
+  m_Size: {x: 0.5, y: 0.5}
   m_EdgeRadius: 0
 --- !u!114 &7331478016869599188
 MonoBehaviour:
@@ -223,7 +222,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba86124cac47e4154b394cdd9b315fee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  defaultAnimationName: AttackBlast
+  defaultAnimationName: GuidedOrb
   animator: {fileID: 8555126650566983865}
   animationEventListener: {fileID: 4266219580518674204}
 --- !u!114 &4266219580518674204
@@ -248,7 +247,7 @@ Animator:
   m_GameObject: {fileID: 879120118293887749}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: ee6b89d31584549c2b3234e1403d0498, type: 2}
+  m_Controller: {fileID: 9100000, guid: 8076ca2e10dcf4b6280d391902b5981e, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
