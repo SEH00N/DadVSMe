@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using ShibaInspector.Collections;
 using UnityEngine;
@@ -21,10 +22,21 @@ namespace DadVSMe.Entities
         }
     }
 
-    public class UnitData : ScriptableObject
+    public class UnitData : ScriptableObject, IEntityData
     {
         [SerializeField]
         private UnitStatContainer stat;
         public UnitStatContainer Stat => stat;
+
+        public void Initiallize()
+        {
+            foreach (EUnitStat statType in Enum.GetValues(typeof(EUnitStat)))
+            {
+                if (stat[statType] != null)
+                {  
+                    stat[statType].CalcFinalValue();
+                }
+            }
+        }
     }
 }

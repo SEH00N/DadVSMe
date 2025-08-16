@@ -9,8 +9,17 @@ namespace DadVSMe
         private bool isActive = false;
         public bool IsActive => isActive;
 
+        private float moveSpeed;
+
         private Vector2 movementVelocity = Vector2.zero;
         public Vector2 MovementVelocity => movementVelocity;
+
+        public void Initialize(UnitStat moveSpeedStat)
+        {
+            moveSpeed = moveSpeedStat.FinalValue;
+
+            moveSpeedStat.onStatChanged.AddListener(OnMoveSpeedStatChanged);
+        }
 
         public void SetActive(bool isActive)
         {
@@ -38,6 +47,11 @@ namespace DadVSMe
                 return;
 
             unitRigidbody.linearVelocity = movementVelocity;
+        }
+
+        private void OnMoveSpeedStatChanged(float value)
+        {
+            moveSpeed = value;
         }
     }
 }

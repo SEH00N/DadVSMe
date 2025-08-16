@@ -7,8 +7,6 @@ namespace DadVSMe.Entities
     public class Unit : Entity
     {
         [Header("Unit")]
-        [SerializeField] protected UnitData unitDataRef = null;
-        [SerializeField] protected UnitData unitData = null;
         [SerializeField] protected UnitMovement unitMovement = null;
         [SerializeField] protected FSMBrain fsmBrain = null;
         [SerializeField] protected UnitHealth unitHealth = null;
@@ -20,7 +18,9 @@ namespace DadVSMe.Entities
         public UnitHealth UnitHealth => unitHealth; // uniy health is used frequently. allow external access for performance. 
         
         protected virtual RigidbodyType2D DefaultRigidbodyType => RigidbodyType2D.Kinematic;
-
+        
+        protected UnitData unitData = null;
+        public UnitData UnitData => unitData;
         private UnitFSMData unitFSMData = null;
 
         public UnityEvent<Unit, IAttackData> onAttackTargetEvent = null;
@@ -28,10 +28,11 @@ namespace DadVSMe.Entities
         public override void Initialize(IEntityData data)
         {
             base.Initialize(data);
-            unitData = Instantiate<UnitData>(unitDataRef);
+            unitData = Instantiate<UnitData>(data as UnitData);
+            unitData.Initiallize();
             fsmBrain.Initialize();
             fsmBrain.SetAsDefaultState();
-            unitHealth.Initialize((int)unitData.Stat[EUnitStat.MaxHp].FinalValue);
+            unitHealth.Initialize(unitData.Stat[EUnitStat.MaxHp]);
             unitAttackEventListener.Initialize();
             unitSkillComponent?.Initialize();
 

@@ -46,10 +46,13 @@ namespace DadVSMe.Players
         [SerializeField]
         private float angerTime;
 
+        [SerializeField]
+        private UnitData unitDataRef;
+
         // Debug
         private void Start()
         {
-            Initialize(null);
+            Initialize(unitDataRef);
         }
 
         public override void Initialize(IEntityData data)

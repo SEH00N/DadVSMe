@@ -22,15 +22,18 @@ namespace DadVSMe.Entities
         private int currentHP;
         public int CurrentHP => currentHP;
 
-        public void Initialize(int maxHP)
+        public void Initialize(UnitStat hpStat)
         {
-            this.maxHP = maxHP;
+            this.maxHP = (int)hpStat.FinalValue;
+            
             currentHP = maxHP;
+
+            hpStat.onStatChanged.AddListener(OnHealthStatChanged);
         }
 
         public void Attack(Unit attacker, IAttackData attackData)
         {
-            currentHP -= attackData.Damage;
+            currentHP -= (int)(attackData.Damage * attacker.UnitData.Stat[EUnitStat.AttackPowerMultiplier].FinalValue);
             onAttackEvent.Invoke(attacker, attackData);
         }
 
@@ -38,6 +41,11 @@ namespace DadVSMe.Entities
         {
             currentHP += amount;
             currentHP = Mathf.Min(currentHP, maxHP);
+        }
+
+        private void OnHealthStatChanged(float value)
+        {
+            maxHP = (int)value;
         }
     }
 }

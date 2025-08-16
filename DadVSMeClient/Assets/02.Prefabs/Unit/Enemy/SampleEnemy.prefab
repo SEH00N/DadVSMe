@@ -1077,15 +1077,18 @@ MonoBehaviour:
   staticEntity: 0
   entityAnimator: {fileID: 581526202169611223}
   sortingOrderResolver: {fileID: 8503001877175169813}
-  unitData: {fileID: 11400000, guid: 931765094b25c4da78e741134ebf35b4, type: 2}
   unitMovement: {fileID: 1606572535246019115}
   fsmBrain: {fileID: 937934848906895013}
   unitHealth: {fileID: 860784415877132298}
   unitAttackEventListener: {fileID: 6879381932298219287}
   unitSkillComponent: {fileID: 0}
   unitRigidbody: {fileID: 0}
+  onAttackTargetEvent:
+    m_PersistentCalls:
+      m_Calls: []
   enemyDetector: {fileID: 1930033213009724284}
   grabState: {fileID: 6100036941812497167}
+  unitDataRef: {fileID: 11400000, guid: 931765094b25c4da78e741134ebf35b4, type: 2}
 --- !u!114 &1606572535246019115
 MonoBehaviour:
   m_ObjectHideFlags: 0

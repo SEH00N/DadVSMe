@@ -19,6 +19,9 @@ namespace DadVSMe.Enemies
 
         private bool skipUpdate = false;
 
+        [SerializeField]
+        private UnitData unitDataRef;
+
         private void Awake()
         {
             poolReference = GetComponent<PoolReference>();
@@ -27,7 +30,7 @@ namespace DadVSMe.Enemies
         // Debug
         private void Start()
         {
-            Initialize(null);
+            Initialize(unitDataRef);
         }
 
         public override void Initialize(IEntityData data)

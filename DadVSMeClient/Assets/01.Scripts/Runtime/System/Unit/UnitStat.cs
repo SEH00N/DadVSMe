@@ -23,25 +23,38 @@ namespace DadVSMe
                 CalcFinalValue();
             }
         }
+        [SerializeField]
+        [HideInInspector]
         private float finalValue;
         public float FinalValue => finalValue;
 
         private Dictionary<float, int> addModifiers;
         private Dictionary<float, int> multiplyModifiers;
 
-        [SerializeField]
-        public UnityEvent<int> OnStatChanged;
+        [HideInInspector]
+        public UnityEvent<float> onStatChanged;
 
         public UnitStat()
         {
-            OnStatChanged = null;
+            // this.defaultValue = 0;
+            // this.finalValue = defaultValue;
+            onStatChanged = null;
+            addModifiers = new();
+            multiplyModifiers = new();
+
+            CalcFinalValue();
         }
 
         public UnitStat(float defaultValue)
         {
             this.defaultValue = defaultValue;
             this.finalValue = defaultValue;
-            OnStatChanged = null;
+
+            addModifiers = new();
+            multiplyModifiers = new();
+            onStatChanged = null;
+
+            CalcFinalValue();
         }
 
         public void RegistAddModifier(float value)
@@ -90,10 +103,10 @@ namespace DadVSMe
             }
         }
 
-        private void CalcFinalValue()
+        public void CalcFinalValue()
         {
             float value = defaultValue;
-
+            
             foreach (var addModifier in addModifiers)
             {
                 value += addModifier.Key * addModifier.Value;
@@ -105,6 +118,8 @@ namespace DadVSMe
             }
 
             finalValue = value;
+
+            onStatChanged?.Invoke(finalValue);
         }
     }
 }
