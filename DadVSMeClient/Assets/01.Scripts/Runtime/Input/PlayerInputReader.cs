@@ -1,4 +1,4 @@
-using System.Collections;
+using Cysharp.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using static DadVSMe.Inputs.InputActions;
@@ -108,12 +108,12 @@ namespace DadVSMe.Inputs
             if(attack1PhaseBufferFlag == false && attack2PhaseBufferFlag == false)
                 return;
 
-            GlobalCoroutineManager.Instance.StartCoroutine(EndOfFrameRoutine());
+            EndOfFrameRoutine().Forget();
         }
 
-        private IEnumerator EndOfFrameRoutine()
+        private async UniTask EndOfFrameRoutine()
         {
-            yield return new WaitForEndOfFrame();
+            await UniTask.WaitForEndOfFrame();
 
             attack1PhaseBufferFlag = false;
             attack2PhaseBufferFlag = false;

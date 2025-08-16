@@ -1,4 +1,3 @@
-using System.Collections.Generic;
 using DadVSMe.Inputs;
 using H00N.Extensions;
 using H00N.Resources;
@@ -12,8 +11,6 @@ namespace DadVSMe
     {
         public static GameManager Instance { get; private set; }
 
-        private List<IManager> managerList = null;
-
         private void Awake()
         {
             if(Instance != null)
@@ -23,7 +20,6 @@ namespace DadVSMe
             }
 
             Instance = this;
-            managerList = new List<IManager>();
             Initialize();
         }
 
@@ -32,8 +28,7 @@ namespace DadVSMe
             ResourceManager.Initialize(new AddressableResourceLoader());
             PoolManager.Initialize(transform);
 
-            managerList.Add(gameObject.GetOrAddComponent<GlobalCoroutineManager>());
-            managerList.ForEach(manager => manager.Initialize());
+            gameObject.GetOrAddComponent<AudioManager>().Initialize();
 
             Application.targetFrameRate = 60;
 
@@ -42,10 +37,7 @@ namespace DadVSMe
 
         private void Release()
         {
-            foreach (IManager manager in managerList)
-                manager.Release();
-
-            managerList.Clear();
+            AudioManager.Instance.Release();
 
             PoolManager.Release();
             ResourceManager.Release();

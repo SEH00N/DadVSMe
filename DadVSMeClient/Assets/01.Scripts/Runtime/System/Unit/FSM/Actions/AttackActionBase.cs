@@ -1,10 +1,15 @@
+using Cysharp.Threading.Tasks;
 using H00N.AI.FSM;
+using H00N.Resources.Addressables;
 using UnityEngine;
 
 namespace DadVSMe.Entities.FSM
 {
     public abstract class AttackActionBase : FSMAction
     {
+        [SerializeField] AddressableAsset<ParticleSystem> attackEffect = null;
+        [SerializeField] AddressableAsset<AudioClip> attackSound = null;
+
         protected EntityAnimator entityAnimator = null;
         protected UnitFSMData unitFSMData = null;
 
@@ -13,6 +18,9 @@ namespace DadVSMe.Entities.FSM
             base.Init(brain, state);
             entityAnimator = brain.GetComponent<EntityAnimator>();
             unitFSMData = brain.GetAIData<UnitFSMData>();
+
+            attackEffect.InitializeAsync().Forget();
+            attackSound.InitializeAsync().Forget();
         }
 
         public override void EnterState()
@@ -21,6 +29,8 @@ namespace DadVSMe.Entities.FSM
 
             entityAnimator.RemoveAnimationEventListener(EEntityAnimationEventType.Trigger, HandleAnimationTriggerEvent);
             entityAnimator.AddAnimationEventListener(EEntityAnimationEventType.Trigger, HandleAnimationTriggerEvent);
+
+            AudioManager.Instance.PlaySFX(attackSound);
         }
 
         public override void ExitState()
