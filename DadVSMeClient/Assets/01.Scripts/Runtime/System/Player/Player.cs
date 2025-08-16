@@ -67,8 +67,10 @@ namespace DadVSMe.Players
         {
             if (isAnger)
                 return;
+            AttackDataBase data = attackData as AttackDataBase;
 
-            CurrentAngerGauge = Mathf.Min(CurrentAngerGauge + 5, maxAngerGauge);
+            if(data.IsRangeAttack)
+                CurrentAngerGauge = Mathf.Min(CurrentAngerGauge + 5, maxAngerGauge);
         }
 
         public async void ActiveAngerForUnityEvent()

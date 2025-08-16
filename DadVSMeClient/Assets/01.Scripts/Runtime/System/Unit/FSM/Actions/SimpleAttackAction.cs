@@ -17,27 +17,27 @@ namespace DadVSMe.Entities.FSM
         [SerializeField] bool checkLie = false;
         [SerializeField] bool isLie = false;
 
-
         protected override void OnAttack(EntityAnimationEventData eventData)
         {
             int forwardDirection = unitFSMData.forwardDirection;
-            unitFSMData.enemies.ForEach(enemy => {
+            unitFSMData.enemies.ForEach(enemy =>
+            {
                 float targetDirection = enemy.transform.position.x - transform.position.x;
-                if(Mathf.Sign(targetDirection) != Mathf.Sign(forwardDirection))
+                if (Mathf.Sign(targetDirection) != Mathf.Sign(forwardDirection))
                     return;
 
-                if(Mathf.Abs(targetDirection) > attackRange)
+                if (Mathf.Abs(targetDirection) > attackRange)
                     return;
 
-                if(checkFloat)
+                if (checkFloat)
                 {
-                    if(enemy.FSMBrain.GetAIData<UnitFSMData>().isFloat != isFloat)
+                    if (enemy.FSMBrain.GetAIData<UnitFSMData>().isFloat != isFloat)
                         return;
                 }
 
-                if(checkLie)
+                if (checkLie)
                 {
-                    if(enemy.FSMBrain.GetAIData<UnitFSMData>().isLie != isLie)
+                    if (enemy.FSMBrain.GetAIData<UnitFSMData>().isLie != isLie)
                         return;
                 }
 
