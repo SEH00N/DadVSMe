@@ -8,13 +8,15 @@ namespace DadVSMe
 {
     public struct PlayEffect
     {
-        public PlayEffect(AddressableAsset<PoolableEffect> effect, Vector3 position)
+        public PlayEffect(AddressableAsset<PoolableEffect> effect, Vector3 position, int forwardDirection)
         {
             if(effect == null || string.IsNullOrEmpty(effect.Key) || effect.Initialized == false)
                 return;
 
             PoolableEffect poolableEffect = PoolManager.Spawn<PoolableEffect>(effect.Key);
-            poolableEffect.transform.position = position;
+            position.z += -0.01f;
+            poolableEffect.transform.position = new Vector3(position.x, position.y, position.z);
+            poolableEffect.transform.localScale = new Vector3(poolableEffect.transform.localScale.x * Mathf.Sign(forwardDirection), poolableEffect.transform.localScale.y, poolableEffect.transform.localScale.z);
             poolableEffect.Play();
         }
     }

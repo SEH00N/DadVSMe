@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 2516625176036572850}
   - component: {fileID: 4693147980013278101}
   - component: {fileID: -1762587842555654859}
+  - component: {fileID: -4084742561954513847}
   m_Layer: 0
   m_Name: VFX_Impact1
   m_TagString: Untagged
@@ -29,7 +30,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -124,3 +125,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 4693147980013278101}
+  animationEventListener: {fileID: -4084742561954513847}
+--- !u!114 &-4084742561954513847
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 856556461086683445}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b1adb445966248b98412033a8511ad9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

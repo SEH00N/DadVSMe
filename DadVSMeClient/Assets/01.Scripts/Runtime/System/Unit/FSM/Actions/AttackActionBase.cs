@@ -8,8 +8,8 @@ namespace DadVSMe.Entities.FSM
 {
     public abstract class AttackActionBase : FSMAction
     {
-        [SerializeField] AddressableAsset<PoolableEffect> attackEffect = new AddressableAsset<PoolableEffect>();
-        [SerializeField] AddressableAsset<PoolableEffect> hitEffect = new AddressableAsset<PoolableEffect>();
+        [SerializeField] Vector2 attackOffset = Vector2.zero;
+        [SerializeField] List<AddressableAsset<PoolableEffect>> hitEffects = new List<AddressableAsset<PoolableEffect>>();
         [SerializeField] List<AddressableAsset<AudioClip>> attackSounds = new List<AddressableAsset<AudioClip>>();
         [SerializeField] List<AddressableAsset<AudioClip>> hitSounds = new List<AddressableAsset<AudioClip>>();
 
@@ -22,12 +22,7 @@ namespace DadVSMe.Entities.FSM
             entityAnimator = brain.GetComponent<EntityAnimator>();
             unitFSMData = brain.GetAIData<UnitFSMData>();
 
-            if(string.IsNullOrEmpty(attackEffect.Key) == false)
-                attackEffect.InitializeAsync().Forget();
-
-            if(string.IsNullOrEmpty(hitEffect.Key) == false)
-                hitEffect.InitializeAsync().Forget();
-
+            hitEffects.ForEach(effect => effect.InitializeAsync().Forget());
             attackSounds.ForEach(sound => sound.InitializeAsync().Forget());
             hitSounds.ForEach(sound => sound.InitializeAsync().Forget());
         }
@@ -60,9 +55,19 @@ namespace DadVSMe.Entities.FSM
             target.UnitHealth.Attack(unitFSMData.unit, attackData);
             brain.GetComponent<Unit>().onAttackTargetEvent?.Invoke(target, attackData);
 
-            _ = new PlayEffect(attackEffect, target.transform.position);
-            _ = new PlayEffect(hitEffect, target.transform.position);
+            hitEffects.ForEach(effect => _ = new PlayEffect(effect, target.transform.position + (Vector3)attackOffset, unitFSMData.forwardDirection));
             _ = new PlaySound(hitSounds);
         }
+
+        #if UNITY_EDITOR
+        private void OnDrawGizmos()
+        {
+            if(UnityEditor.Selection.activeObject != gameObject)
+                return;
+
+            Gizmos.color = Color.red;
+            Gizmos.DrawWireSphere(transform.position + (Vector3)attackOffset, 0.25f);
+        }
+        #endif
     }
 }
