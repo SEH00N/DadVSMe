@@ -2119,7 +2119,6 @@ MonoBehaviour:
   staticEntity: 0
   entityAnimator: {fileID: 668232997}
   sortingOrderResolver: {fileID: 1371810584}
-  unitData: {fileID: 11400000, guid: 931765094b25c4da78e741134ebf35b4, type: 2}
   unitMovement: {fileID: 668232989}
   fsmBrain: {fileID: 668232995}
   unitHealth: {fileID: 668232998}
@@ -2131,6 +2130,7 @@ MonoBehaviour:
       m_Calls: []
   enemyDetector: {fileID: 885303838}
   grabState: {fileID: 1851159777}
+  unitDataRef: {fileID: 0}
 --- !u!114 &668232995
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2246,6 +2246,7 @@ MonoBehaviour:
     key: 
   statikkShivLightingPrefab:
     key: 
+  attackData: {fileID: 0}
 --- !u!1 &765364903
 GameObject:
   m_ObjectHideFlags: 0
@@ -6232,26 +6233,6 @@ PrefabInstance:
       propertyPath: targetState
       value: 
       objectReference: {fileID: 966102067}
-    - target: {fileID: 1799030666431474225, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
-      propertyPath: attackSounds.Array.size
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 1799030666431474225, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
-      propertyPath: attackSounds.Array.data[0].key
-      value: sfx_swing_small_0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1799030666431474225, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
-      propertyPath: attackSounds.Array.data[1].key
-      value: sfx_swing_small_1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1799030666431474225, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
-      propertyPath: attackSounds.Array.data[2].key
-      value: sfx_swing_small_2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1799030666431474225, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
-      propertyPath: attackSounds.Array.data[3].key
-      value: sfx_swing_small_3
-      objectReference: {fileID: 0}
     - target: {fileID: 6254633926628623290, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
       propertyPath: onStateEnterEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -6295,90 +6276,6 @@ PrefabInstance:
     - target: {fileID: 7488116858921959985, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7520506005870648475, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
-      propertyPath: attackSounds.Array.size
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 7520506005870648475, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
-      propertyPath: attackSounds.Array.data[0].key
-      value: sfx_swing_small_0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7520506005870648475, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
-      propertyPath: attackSounds.Array.data[1].key
-      value: sfx_swing_small_1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7520506005870648475, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
-      propertyPath: attackSounds.Array.data[2].key
-      value: sfx_swing_small_2
-      objectReference: {fileID: 0}
-    - target: {fileID: 7520506005870648475, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
-      propertyPath: attackSounds.Array.data[3].key
-      value: sfx_swing_small_3
-      objectReference: {fileID: 0}
-    - target: {fileID: 8182889530979780361, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
-      propertyPath: attackOffset.x
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 8182889530979780361, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
-      propertyPath: attackOffset.y
-      value: -2.75
-      objectReference: {fileID: 0}
-    - target: {fileID: 8182889530979780361, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
-      propertyPath: hitSounds.Array.size
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 8182889530979780361, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
-      propertyPath: hitEffects.Array.size
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 8182889530979780361, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
-      propertyPath: attackSounds.Array.size
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 8182889530979780361, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
-      propertyPath: hitSounds.Array.data[0].key
-      value: sfx_punch_small_0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8182889530979780361, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
-      propertyPath: hitSounds.Array.data[1].key
-      value: sfx_punch_small_1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8182889530979780361, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
-      propertyPath: hitSounds.Array.data[2].key
-      value: sfx_punch_small_2
-      objectReference: {fileID: 0}
-    - target: {fileID: 8182889530979780361, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
-      propertyPath: hitSounds.Array.data[3].key
-      value: sfx_punch_small_3
-      objectReference: {fileID: 0}
-    - target: {fileID: 8182889530979780361, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
-      propertyPath: hitEffects.Array.data[0].key
-      value: VFX_Shockwave
-      objectReference: {fileID: 0}
-    - target: {fileID: 8182889530979780361, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
-      propertyPath: hitEffects.Array.data[1].key
-      value: VFX_Impact3
-      objectReference: {fileID: 0}
-    - target: {fileID: 8182889530979780361, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
-      propertyPath: hitEffects.Array.data[2].key
-      value: VFX_Blood1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8182889530979780361, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
-      propertyPath: attackSounds.Array.data[0].key
-      value: sfx_swing_small_0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8182889530979780361, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
-      propertyPath: attackSounds.Array.data[1].key
-      value: sfx_swing_small_1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8182889530979780361, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
-      propertyPath: attackSounds.Array.data[2].key
-      value: sfx_swing_small_2
-      objectReference: {fileID: 0}
-    - target: {fileID: 8182889530979780361, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
-      propertyPath: attackSounds.Array.data[3].key
-      value: sfx_swing_small_3
       objectReference: {fileID: 0}
     - target: {fileID: 8996695108358816546, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
       propertyPath: m_Name

@@ -2207,10 +2207,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45985713611854b6494c521d913e1024, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackOffset: {x: 0, y: 0}
-  hitEffects: []
-  attackSounds: []
-  hitSounds: []
+  attackOffset: {x: 2, y: -2.75}
+  hitEffects:
+  - key: VFX_Shockwave
+  - key: VFX_Impact3
+  - key: VFX_Blood1
+  attackSounds:
+  - key: sfx_swing_small_0
+  - key: sfx_swing_small_1
+  - key: sfx_swing_small_2
+  - key: sfx_swing_small_3
+  hitSounds:
+  - key: sfx_punch_small_0
+  - key: sfx_punch_small_1
+  - key: sfx_punch_small_2
+  - key: sfx_punch_small_3
   throwAttackData: {fileID: 11400000, guid: dc154843a25434c55949ab04d368eaf5, type: 2}
   attackData: {fileID: 11400000, guid: 3ba68045f9992456cb3437d118b707fb, type: 2}
   defaultSortingOrderResolverCollider: {fileID: 4518340953437237913}
@@ -2932,7 +2943,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attackOffset: {x: 0, y: 0}
   hitEffects: []
-  attackSounds: []
+  attackSounds:
+  - key: sfx_swing_small_0
+  - key: sfx_swing_small_1
+  - key: sfx_swing_small_2
+  - key: sfx_swing_small_3
   hitSounds: []
   throwAttackData: {fileID: 11400000, guid: aeb7adec60dfc493b98766a11566c0c1, type: 2}
   attackData: {fileID: 11400000, guid: a890338b99f7d46b3b43c5209f317f2a, type: 2}
@@ -7375,7 +7390,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attackOffset: {x: 0, y: 0}
   hitEffects: []
-  attackSounds: []
+  attackSounds:
+  - key: sfx_swing_small_0
+  - key: sfx_swing_small_1
+  - key: sfx_swing_small_2
+  - key: sfx_swing_small_3
   hitSounds: []
   throwAttackData: {fileID: 11400000, guid: aeb7adec60dfc493b98766a11566c0c1, type: 2}
   attackData: {fileID: 11400000, guid: 859a747e670e149ccb5bcde762ae3ff9, type: 2}
@@ -8521,7 +8540,6 @@ MonoBehaviour:
   staticEntity: 0
   entityAnimator: {fileID: 1382251147719448698}
   sortingOrderResolver: {fileID: 3897684068023970099}
-  unitData: {fileID: 11400000, guid: c026babc38b11449db114f0431689cc4, type: 2}
   unitMovement: {fileID: 279169761548483819}
   fsmBrain: {fileID: 2841000604668159261}
   unitHealth: {fileID: 6165701722836179940}
@@ -8534,6 +8552,7 @@ MonoBehaviour:
   enemyDetector: {fileID: 644674988795700514}
   maxAngerGauge: 20000000
   angerTime: 3
+  unitDataRef: {fileID: 0}
 --- !u!114 &6165701722836179940
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8751,6 +8770,7 @@ MonoBehaviour:
     key: 
   statikkShivLightingPrefab:
     key: StatikkShivLighting
+  attackData: {fileID: 0}
 --- !u!1 &9019325040001713458
 GameObject:
   m_ObjectHideFlags: 0
