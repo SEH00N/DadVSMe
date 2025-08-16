@@ -8,10 +8,12 @@ namespace DadVSMe
     public class AngerKnockbackSkill : UnitSkill
     {
         private AttackDataBase attackData;
+        private float knockbackRange;
 
-        public AngerKnockbackSkill(AttackDataBase attackData) : base()
+        public AngerKnockbackSkill(AttackDataBase attackData, float knockbackRange = 10) : base()
         {
             this.attackData = attackData;
+            this.knockbackRange = knockbackRange;
         }
 
         public override void OnRegist(UnitSkillComponent ownerComponent)
@@ -22,7 +24,7 @@ namespace DadVSMe
 
         public override void Execute()
         {
-            Collider2D[] cols = Physics2D.OverlapCircleAll(ownerComponent.transform.position, 10f);
+            Collider2D[] cols = Physics2D.OverlapCircleAll(ownerComponent.transform.position, knockbackRange);
 
             if (cols.Length == 0)
                 return;
@@ -43,6 +45,13 @@ namespace DadVSMe
         {
             base.OnUnregist();
             ownerComponent.GetComponent<FSMBrain>().OnStateChangedEvent.RemoveListener(OnStatChanged);
+        }
+
+        public override void LevelUp()
+        {
+            base.LevelUp();
+
+            knockbackRange = (knockbackRange - (level - 1)) + level;
         }
 
         private void OnStatChanged(FSMState current, FSMState target)

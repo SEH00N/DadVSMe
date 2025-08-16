@@ -607,12 +607,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 465283684271740343}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 3380836566278275399}
+  m_Father: {fileID: 7503746097445978493}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &3879595027783847167
 MonoBehaviour:
@@ -1083,7 +1083,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 572136502247820206}
-  - {fileID: 3709012295605818413}
   - {fileID: 2746772251822464694}
   - {fileID: 2730462385201837353}
   - {fileID: 7852330804729804479}
@@ -3759,6 +3758,7 @@ Transform:
   - {fileID: 3712771129962152297}
   - {fileID: 4419637242376677547}
   - {fileID: 6972973974242913709}
+  - {fileID: 3709012295605818413}
   m_Father: {fileID: 3801318511281256181}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &8200477763095200303
@@ -8550,9 +8550,9 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   enemyDetector: {fileID: 644674988795700514}
-  maxAngerGauge: 20000000
+  maxAngerGauge: 20
   angerTime: 3
-  unitDataRef: {fileID: 0}
+  unitDataRef: {fileID: 11400000, guid: c026babc38b11449db114f0431689cc4, type: 2}
 --- !u!114 &6165701722836179940
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8770,7 +8770,7 @@ MonoBehaviour:
     key: 
   statikkShivLightingPrefab:
     key: StatikkShivLighting
-  attackData: {fileID: 0}
+  attackData: {fileID: 11400000, guid: b449f9396c65f4698ab47681246422cf, type: 2}
 --- !u!1 &9019325040001713458
 GameObject:
   m_ObjectHideFlags: 0
