@@ -28,15 +28,20 @@ namespace DadVSMe.Entities
         private UnitStatContainer stat;
         public UnitStatContainer Stat => stat;
 
+        [HideInInspector]
+        public EAttackAttribute attackAttribute;
+
         public void Initiallize()
         {
             foreach (EUnitStat statType in Enum.GetValues(typeof(EUnitStat)))
             {
                 if (stat[statType] != null)
-                {  
+                {
                     stat[statType].CalcFinalValue();
                 }
             }
+
+            attackAttribute = EAttackAttribute.Normal;
         }
     }
 }

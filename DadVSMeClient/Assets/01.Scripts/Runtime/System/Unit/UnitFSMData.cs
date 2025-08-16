@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using H00N.AI;
+using UnityEngine;
 
 namespace DadVSMe.Entities
 {
@@ -14,6 +15,7 @@ namespace DadVSMe.Entities
         public UnitCollisionData collisionData = new UnitCollisionData();
         public bool isFloat = false;
         public bool isLie = false;
+        public EAttackAttribute hitAttribute;
 
         public IAIData Initialize()
         {

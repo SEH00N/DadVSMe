@@ -35,7 +35,10 @@ namespace DadVSMe.Entities
             float forceMagnitude = unitFSMData.collisionData.force.magnitude * bounciness;
             unitRigidbody.linearVelocity = forceDirection * forceMagnitude;
 
-            entityAnimator.PlayAnimation(bounceAnimations[currentBounceAnimationIndex]);
+            string animName = unitFSMData.hitAttribute == EAttackAttribute.Normal ?
+                bounceAnimations[currentBounceAnimationIndex] :
+                $"{bounceAnimations[currentBounceAnimationIndex]}_{unitFSMData.hitAttribute}";
+            entityAnimator.PlayAnimation(animName);
             currentBounceAnimationIndex = (currentBounceAnimationIndex + 1) % bounceAnimations.Count;
         }
 

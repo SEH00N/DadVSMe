@@ -11,6 +11,9 @@ namespace DadVSMe.Entities
         [SerializeField] bool isRangeAttack = false;
         public bool IsRangeAttack => isRangeAttack;
 
+        [HideInInspector]
+        public EAttackAttribute attackAttribute;
+
         public abstract EAttackFeedback AttackFeedback { get; }
     }
 }

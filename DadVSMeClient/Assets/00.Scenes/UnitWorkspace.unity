@@ -578,6 +578,7 @@ MonoBehaviour:
         groundPositionY: 0
         isFloat: 0
         isLie: 0
+        hitAttribute: 0
 --- !u!114 &39623367
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -835,6 +836,7 @@ GameObject:
   - component: {fileID: 149321201}
   - component: {fileID: 149321203}
   - component: {fileID: 149321202}
+  - component: {fileID: 149321204}
   m_Layer: 0
   m_Name: Throw1
   m_TagString: Untagged
@@ -872,19 +874,7 @@ MonoBehaviour:
   autoTransitioning: 0
   onStateEnterEvent:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 668232997}
-        m_TargetAssemblyTypeName: DadVSMe.Entities.EntityAnimator, DadVSMe
-        m_MethodName: PlayAnimation
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: KidThrown1
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   onStateExitEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -900,6 +890,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 72988976fd79843c3ab3a8ff64c3f74f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &149321204
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 149321200}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8fab2ffa3d06a42f0b24bdb05e2ef757, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetAnimationName: KidThrown1
 --- !u!1 &190505272
 GameObject:
   m_ObjectHideFlags: 0
@@ -2904,6 +2907,7 @@ GameObject:
   - component: {fileID: 609655095}
   - component: {fileID: 609655098}
   - component: {fileID: 609655097}
+  - component: {fileID: 609655100}
   - component: {fileID: 609655099}
   m_Layer: 0
   m_Name: Juggle(Attack)
@@ -2942,19 +2946,7 @@ MonoBehaviour:
   autoTransitioning: 0
   onStateEnterEvent:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 668232997}
-        m_TargetAssemblyTypeName: DadVSMe.Entities.EntityAnimator, DadVSMe
-        m_MethodName: PlayAnimation
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: KidJuggle
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   onStateExitEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -2983,6 +2975,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bounceState: {fileID: 2088429821}
+--- !u!114 &609655100
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 609655094}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8fab2ffa3d06a42f0b24bdb05e2ef757, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetAnimationName: KidJuggle
 --- !u!1 &619394800
 GameObject:
   m_ObjectHideFlags: 0
@@ -3363,6 +3368,7 @@ MonoBehaviour:
         groundPositionY: 0
         isFloat: 0
         isLie: 0
+        hitAttribute: 0
 --- !u!114 &668232997
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4618,6 +4624,7 @@ GameObject:
   - component: {fileID: 1110821125}
   - component: {fileID: 1110821127}
   - component: {fileID: 1110821126}
+  - component: {fileID: 1110821128}
   m_Layer: 0
   m_Name: Throw2
   m_TagString: Untagged
@@ -4655,19 +4662,7 @@ MonoBehaviour:
   autoTransitioning: 0
   onStateEnterEvent:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 668232997}
-        m_TargetAssemblyTypeName: DadVSMe.Entities.EntityAnimator, DadVSMe
-        m_MethodName: PlayAnimation
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: KidThrown2
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   onStateExitEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -4683,6 +4678,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 72988976fd79843c3ab3a8ff64c3f74f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1110821128
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1110821124}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8fab2ffa3d06a42f0b24bdb05e2ef757, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetAnimationName: KidThrown2
 --- !u!1 &1115436943
 GameObject:
   m_ObjectHideFlags: 0
@@ -8925,6 +8933,7 @@ GameObject:
   - component: {fileID: 2135380000}
   - component: {fileID: 2135380003}
   - component: {fileID: 2135380002}
+  - component: {fileID: 2135380005}
   - component: {fileID: 2135380004}
   - component: {fileID: 2135380001}
   m_Layer: 0
@@ -8977,19 +8986,7 @@ MonoBehaviour:
   autoTransitioning: 0
   onStateEnterEvent:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 668232997}
-        m_TargetAssemblyTypeName: DadVSMe.Entities.EntityAnimator, DadVSMe
-        m_MethodName: PlayAnimation
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: KidJuggle
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   onStateExitEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -9018,6 +9015,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackData: {fileID: 11400000, guid: d2a3ba00e1ffc4a6aa429b164ea114cc, type: 2}
+--- !u!114 &2135380005
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2135379999}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8fab2ffa3d06a42f0b24bdb05e2ef757, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetAnimationName: KidJuggle
 --- !u!1 &2143457426
 GameObject:
   m_ObjectHideFlags: 0

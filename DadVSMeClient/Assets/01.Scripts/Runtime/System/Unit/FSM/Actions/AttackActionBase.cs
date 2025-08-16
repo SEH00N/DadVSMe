@@ -52,8 +52,10 @@ namespace DadVSMe.Entities.FSM
 
         protected void AttackToTarget(Unit target, AttackDataBase attackData, bool playEffect = true)
         {
+            Unit owner = brain.GetComponent<Unit>();
+            attackData.attackAttribute = owner.UnitData.attackAttribute;
             target.UnitHealth.Attack(unitFSMData.unit, attackData);
-            brain.GetComponent<Unit>().onAttackTargetEvent?.Invoke(target, attackData);
+            owner.onAttackTargetEvent?.Invoke(target, attackData);
 
             if(playEffect)
             {
