@@ -30,6 +30,8 @@ namespace DadVSMe.Players.FSM
 
                 grabbedEntity.transform.SetParent(null);
                 (grabbedEntity as IGrabbable).Release(unitFSMData.unit);
+                (grabbedEntity as Unit).FSMBrain.GetAIData<UnitFSMData>().groundPositionY = unitFSMData.groundPositionY;
+                grabbedEntity.transform.position = new Vector3(grabbedEntity.transform.position.x, unitFSMData.groundPositionY, grabbedEntity.transform.position.z);
                 if(grabbedEntity.TryGetComponent<FSMBrain>(out FSMBrain grabbedEntityFSMBrain))
                     grabbedEntityFSMBrain.SetAsDefaultState();
             }
