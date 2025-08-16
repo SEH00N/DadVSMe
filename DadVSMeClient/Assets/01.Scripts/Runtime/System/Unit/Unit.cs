@@ -16,12 +16,14 @@ namespace DadVSMe.Entities
 
         public FSMBrain FSMBrain => fsmBrain;
         public UnitHealth UnitHealth => unitHealth; // uniy health is used frequently. allow external access for performance. 
-        
+
         protected virtual RigidbodyType2D DefaultRigidbodyType => RigidbodyType2D.Kinematic;
-        
+
         protected UnitData unitData = null;
         public UnitData UnitData => unitData;
         private UnitFSMData unitFSMData = null;
+
+        protected EAttackAttribute attackAttribute;
 
         public UnityEvent<Unit, IAttackData> onAttackTargetEvent = null;
 
@@ -35,6 +37,8 @@ namespace DadVSMe.Entities
             unitHealth.Initialize(unitData.Stat[EUnitStat.MaxHp]);
             unitAttackEventListener.Initialize();
             unitSkillComponent?.Initialize();
+
+            attackAttribute = EAttackAttribute.Normal;
 
             unitFSMData = fsmBrain.GetAIData<UnitFSMData>();
         }
@@ -78,6 +82,13 @@ namespace DadVSMe.Entities
             unitRigidbody.bodyType = isFloat ? RigidbodyType2D.Dynamic : DefaultRigidbodyType;
             unitRigidbody.gravityScale = isFloat ? GameDefine.GRAVITY_SCALE : 0f;
             unitMovement.SetActive(isFloat == false);
+        }
+
+        public void SetAttackAttribute(EAttackAttribute attackAttribute)
+        {
+            this.attackAttribute = attackAttribute;
+            if (unitData.attackAttribute != EAttackAttribute.Crazy)
+                unitData.attackAttribute = attackAttribute;
         }
     }
 }

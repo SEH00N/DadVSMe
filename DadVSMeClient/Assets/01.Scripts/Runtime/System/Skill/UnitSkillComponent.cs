@@ -15,12 +15,12 @@ namespace DadVSMe
         private Dictionary<Type, UnitSkill> skillContainer;
 
 
-        public async virtual void Initialize()
+        public virtual void Initialize()
         {
             skillContainer = new();
 
-            await statikkShivLightingPrefab.InitializeAsync();
-            RegistSkill<AngerKnockbackSkill>(new AngerKnockbackSkill(attackData));
+            //await statikkShivLightingPrefab.InitializeAsync();
+            RegistSkill<FirePunchSkill>(new FirePunchSkill());
         }
         
         public void RegistSkill<T>(T skill) where T : UnitSkill

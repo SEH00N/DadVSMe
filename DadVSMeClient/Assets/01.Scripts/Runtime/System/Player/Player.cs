@@ -83,14 +83,13 @@ namespace DadVSMe.Players
             IsAnger = true;
             unitData.Stat[EUnitStat.MoveSpeed].RegistAddModifier(10);
             unitData.Stat[EUnitStat.AttackPowerMultiplier].RegistAddModifier(0.5f);
-            EAttackAttribute originAttackAttribute = unitData.attackAttribute;
-            unitData.attackAttribute = EAttackAttribute.Fire;
+            unitData.attackAttribute = EAttackAttribute.Crazy;
 
             await UniTask.Delay(System.TimeSpan.FromSeconds(angerTime));
 
             unitData.Stat[EUnitStat.MoveSpeed].UnregistAddModifier(10);
             unitData.Stat[EUnitStat.AttackPowerMultiplier].UnregistAddModifier(0.5f);
-            unitData.attackAttribute = originAttackAttribute;
+            unitData.attackAttribute = attackAttribute;
             IsAnger = false;
         }
 
