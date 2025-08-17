@@ -11,8 +11,8 @@ namespace DadVSMe.Entities.FSM
         [Space(10f)]
         [SerializeField] bool checkHorizontalRange = true;
         [SerializeField] float attackHorizontalRange = 3f;
-        [SerializeField] bool checkVerticalRange = false;
-        [SerializeField] float attackVerticalRange = 3f;
+        [SerializeField] bool checkVerticalRange = true;
+        [SerializeField] float attackVerticalRange = 1f;
 
         [Space(10f)]
         [SerializeField] bool checkFloat = false;

@@ -2277,6 +2277,7 @@ GameObject:
   - component: {fileID: 1532949680704696506}
   - component: {fileID: 1793141939567925352}
   - component: {fileID: 8900218850363402019}
+  - component: {fileID: 3320614768345730112}
   m_Layer: 8
   m_Name: DashPunch
   m_TagString: Untagged
@@ -2410,6 +2411,18 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+--- !u!114 &3320614768345730112
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2430902269092868096}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 612d454de9f4e499a93953487b744630, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2503088556588646332
 GameObject:
   m_ObjectHideFlags: 0
@@ -3201,7 +3214,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1025457274477114780}
-  - component: {fileID: 7653879966305576755}
   - component: {fileID: 6254633926628623290}
   - component: {fileID: 6811145054856072779}
   m_Layer: 0
@@ -3226,18 +3238,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 3801318511281256181}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &7653879966305576755
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3500266146838400398}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 72988976fd79843c3ab3a8ff64c3f74f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &6254633926628623290
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3254,7 +3254,7 @@ MonoBehaviour:
   onStateEnterEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1382251147719448698}
         m_TargetAssemblyTypeName: DadVSMe.Entities.EntityAnimator, DadVSMe
         m_MethodName: PlayAnimation
         m_Mode: 5
@@ -4344,6 +4344,7 @@ GameObject:
   - component: {fileID: 6557369884608970105}
   - component: {fileID: 2832553844948435625}
   - component: {fileID: 7704626932355508207}
+  - component: {fileID: 9114270698323145734}
   m_Layer: 8
   m_Name: DashSlam
   m_TagString: Untagged
@@ -4461,6 +4462,18 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+--- !u!114 &9114270698323145734
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5494536511963740923}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 612d454de9f4e499a93953487b744630, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5500857474424150516
 GameObject:
   m_ObjectHideFlags: 0
@@ -4594,7 +4607,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: StandUp
+          m_StringArgument: Standup
           m_BoolArgument: 0
         m_CallState: 2
   onStateExitEvent:

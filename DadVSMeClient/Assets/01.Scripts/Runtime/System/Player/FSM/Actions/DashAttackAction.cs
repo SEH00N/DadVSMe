@@ -1,13 +1,12 @@
 using DadVSMe.Inputs;
-using DadVSMe.Entities;
-using DadVSMe.Entities.FSM;
 using H00N.AI.FSM;
 using UnityEngine;
 
-namespace DadVSMe.Players.FSM
+namespace DadVSMe.Entities.FSM
 {
     public class DashAttackAction : AttackActionBase
     {
+        [Space(10f)]
         [SerializeField] float speed = 10f;
         [SerializeField] bool moveStopping = false;
 
@@ -17,8 +16,8 @@ namespace DadVSMe.Players.FSM
         [Space(10f)]
         [SerializeField] bool checkHorizontalRange = true;
         [SerializeField] float attackHorizontalRange = 3f;
-        [SerializeField] bool checkVerticalRange = false;
-        [SerializeField] float attackVerticalRange = 3f;
+        [SerializeField] bool checkVerticalRange = true;
+        [SerializeField] float attackVerticalRange = 1f;
 
         private UnitMovement unitMovement = null;
 
@@ -33,9 +32,6 @@ namespace DadVSMe.Players.FSM
         public override void EnterState()
         {
             base.EnterState();
-
-            PlayerInputReader inputReader = InputManager.GetInput<PlayerInputReader>();
-            inputReader.ReleaseDash();
 
             unitMovement.SetActive(true);
             unitMovement.SetMovementVelocity(unitFSMData.forwardDirection * speed * Vector2.right);
