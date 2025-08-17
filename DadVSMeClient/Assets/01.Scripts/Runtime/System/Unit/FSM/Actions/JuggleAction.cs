@@ -30,6 +30,7 @@ namespace DadVSMe.Entities
             force.x *= -Mathf.Sign(unitFSMData.forwardDirection);
             unitRigidbody.linearVelocity = force;
             unitRigidbody.angularVelocity = JUGGLE_ANGULAR_VELOCITY;
+            unitRigidbody.constraints &= ~RigidbodyConstraints2D.FreezeRotation;
         }
 
         public override void UpdateState()
@@ -42,6 +43,7 @@ namespace DadVSMe.Entities
 
             brain.transform.rotation = Quaternion.identity;
             unitRigidbody.angularVelocity = 0f;
+            unitRigidbody.constraints |= RigidbodyConstraints2D.FreezeRotation;
             unitFSMData.collisionData = new UnitCollisionData(unitRigidbody.linearVelocity, Vector2.up, new Vector2(brain.transform.position.x, unitFSMData.groundPositionY));
             brain.ChangeState(bounceState);
         }

@@ -1,17 +1,27 @@
 using System.Collections.Generic;
+using Cysharp.Threading.Tasks;
 using H00N.AI.FSM;
+using H00N.Resources.Addressables;
 using UnityEngine;
 
 namespace DadVSMe.Entities
 {
     public class BounceAction : FSMAction
     {
+        private const float HARD_BOUNCE_FORCE_THRESHOLD = 30f;
+
         [SerializeField] FSMState lieState = null;
         [SerializeField] float bounciness = 0.8f;
         [SerializeField] float minVelocity = 0.1f;
 
         [Space(10f)]
         [SerializeField] List<string> bounceAnimations = new List<string>();
+
+        [Space(10f)]
+        [SerializeField] Vector2 bounceEffectOffset = Vector2.zero;
+        [SerializeField] AddressableAsset<PoolableEffect> smallBounceEffect = null;
+        [SerializeField] AddressableAsset<PoolableEffect> hardBounceEffect = null;
+        [SerializeField] List<AddressableAsset<AudioClip>> bounceSounds = new List<AddressableAsset<AudioClip>>();
 
         private UnitFSMData unitFSMData = null;
         private Rigidbody2D unitRigidbody = null;
@@ -25,6 +35,10 @@ namespace DadVSMe.Entities
             unitFSMData = brain.GetAIData<UnitFSMData>();
             unitRigidbody = brain.GetComponent<Rigidbody2D>();
             entityAnimator = brain.GetComponent<EntityAnimator>();
+
+            smallBounceEffect.InitializeAsync().Forget();
+            hardBounceEffect.InitializeAsync().Forget();
+            bounceSounds.ForEach(sound => sound.InitializeAsync().Forget());
         }
 
         public override void EnterState()
@@ -32,14 +46,19 @@ namespace DadVSMe.Entities
             base.EnterState();
 
             Vector2 forceDirection = Vector2.Reflect(unitFSMData.collisionData.force.normalized, unitFSMData.collisionData.normal);
-            float forceMagnitude = unitFSMData.collisionData.force.magnitude * bounciness;
-            unitRigidbody.linearVelocity = forceDirection * forceMagnitude;
+            float collisionForce = unitFSMData.collisionData.force.magnitude;
+            float bounceForce = collisionForce * bounciness;
+            unitRigidbody.linearVelocity = forceDirection * bounceForce;
 
             string animName = unitFSMData.hitAttribute == EAttackAttribute.Normal ?
                 bounceAnimations[currentBounceAnimationIndex] :
                 $"{bounceAnimations[currentBounceAnimationIndex]}_{unitFSMData.hitAttribute}";
             entityAnimator.PlayAnimation(animName);
             currentBounceAnimationIndex = (currentBounceAnimationIndex + 1) % bounceAnimations.Count;
+
+            Vector3 offset = new Vector3(bounceEffectOffset.x * unitFSMData.forwardDirection, bounceEffectOffset.y, 0f);
+            _ = new PlayEffect(collisionForce > HARD_BOUNCE_FORCE_THRESHOLD ? hardBounceEffect : smallBounceEffect, brain.transform.position + offset, -unitFSMData.forwardDirection);
+            _ = new PlaySound(bounceSounds);
         }
 
         public override void UpdateState()
