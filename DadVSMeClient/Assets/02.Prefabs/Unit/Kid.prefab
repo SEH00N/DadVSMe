@@ -1136,8 +1136,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3300998498417108434}
-  - component: {fileID: 2829983170587125330}
   - component: {fileID: 8229906356129168091}
+  - component: {fileID: 3407673096125049287}
   m_Layer: 0
   m_Name: Patrol
   m_TagString: Untagged
@@ -1160,18 +1160,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 7673012708161170671}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2829983170587125330
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3530832104905720730}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 72988976fd79843c3ab3a8ff64c3f74f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &8229906356129168091
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1184,13 +1172,39 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3515528adf73f471f8009033ff01c22f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  autoTransitioning: 1
+  autoTransitioning: 0
   onStateEnterEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 7463771367122635574}
+        m_TargetAssemblyTypeName: DadVSMe.Entities.EntityAnimator, DadVSMe
+        m_MethodName: PlayAnimation
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: KidMove
+          m_BoolArgument: 0
+        m_CallState: 2
   onStateExitEvent:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &3407673096125049287
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3530832104905720730}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6dfde30efe6484740a0c80e84f06524f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  patrolMinRange: 1
+  patrolMaxRange: 10
 --- !u!1 &3650471933563971903
 GameObject:
   m_ObjectHideFlags: 0
@@ -1464,6 +1478,7 @@ Transform:
   m_Children:
   - {fileID: 2534781174088826366}
   - {fileID: 2531510603657082941}
+  - {fileID: 411807911036121102}
   m_Father: {fileID: 7673012708161170671}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &9130949766318774411
@@ -2481,12 +2496,18 @@ MonoBehaviour:
   unitAttackEventListener: {fileID: 7031250399494906082}
   unitSkillComponent: {fileID: 6117938300054333892}
   unitRigidbody: {fileID: 8522405111466415502}
+  unitDataRef: {fileID: 11400000, guid: 931765094b25c4da78e741134ebf35b4, type: 2}
   onAttackTargetEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  onStartAngerEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  onEndAngerEvent:
     m_PersistentCalls:
       m_Calls: []
   enemyDetector: {fileID: 5256345900857985724}
   grabState: {fileID: 1729459063318387908}
-  unitDataRef: {fileID: 11400000, guid: 931765094b25c4da78e741134ebf35b4, type: 2}
 --- !u!114 &6564578028461733982
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2560,17 +2581,15 @@ MonoBehaviour:
       unityObjectReference: {fileID: 0}
       serializableObjectReference:
         rid: 218235695116320862
-    - wrapType: 1
-      unityObjectReference: {fileID: 11400000, guid: 931765094b25c4da78e741134ebf35b4, type: 2}
+    - wrapType: 2
+      unityObjectReference: {fileID: 0}
       serializableObjectReference:
-        rid: -2
+        rid: 218235857955979434
   defaultState: {fileID: 5586429494429702576}
   anyState: {fileID: 2153939508457356641}
   references:
     version: 2
     RefIds:
-    - rid: -2
-      type: {class: , ns: , asm: }
     - rid: 218235695116320862
       type: {class: UnitFSMData, ns: DadVSMe.Entities, asm: DadVSMe}
       data:
@@ -2582,6 +2601,10 @@ MonoBehaviour:
         isFloat: 0
         isLie: 0
         hitAttribute: 0
+    - rid: 218235857955979434
+      type: {class: EnemyFSMData, ns: DadVSMe.Enemies.FSM, asm: DadVSMe}
+      data:
+        player: {fileID: 0}
 --- !u!114 &7463771367122635574
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3143,6 +3166,51 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetAnimationName: KidThrown1
+--- !u!1 &7922856452465562255
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 411807911036121102}
+  - component: {fileID: 980685490909374484}
+  m_Layer: 0
+  m_Name: '[Tran] Patrol'
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &411807911036121102
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7922856452465562255}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4780995000933483044}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &980685490909374484
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7922856452465562255}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2fbc16cf8c22d4c1e9f8c9f7247cab96, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetState: {fileID: 8229906356129168091}
 --- !u!1 &8190248975235071528
 GameObject:
   m_ObjectHideFlags: 0

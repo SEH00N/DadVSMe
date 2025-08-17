@@ -1,5 +1,7 @@
 using System;
+using DadVSMe.Enemies.FSM;
 using DadVSMe.Entities;
+using DadVSMe.Players;
 using H00N.AI.FSM;
 using UnityEngine;
 
@@ -24,6 +26,8 @@ namespace DadVSMe.Enemies
         {
             base.Initialize(data);
             enemyDetector.Initialize();
+
+            fsmBrain.GetAIData<EnemyFSMData>().player = GameObject.FindFirstObjectByType<Player>();
         }
 
         protected override void LateUpdate()

@@ -8716,17 +8716,11 @@ MonoBehaviour:
       unityObjectReference: {fileID: 0}
       serializableObjectReference:
         rid: 218235695116320861
-    - wrapType: 1
-      unityObjectReference: {fileID: 11400000, guid: c026babc38b11449db114f0431689cc4, type: 2}
-      serializableObjectReference:
-        rid: -2
   defaultState: {fileID: 2653412275106618281}
   anyState: {fileID: 4291217451114625158}
   references:
     version: 2
     RefIds:
-    - rid: -2
-      type: {class: , ns: , asm: }
     - rid: 218235695116320861
       type: {class: UnitFSMData, ns: DadVSMe.Entities, asm: DadVSMe}
       data:
