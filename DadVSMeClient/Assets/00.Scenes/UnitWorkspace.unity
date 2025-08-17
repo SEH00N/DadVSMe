@@ -507,7 +507,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!114 &39623364
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -567,7 +567,7 @@ MonoBehaviour:
     version: 2
     RefIds:
     - rid: -2
-      type: {class: '', ns: '', asm: ''}
+      type: {class: , ns: , asm: }
     - rid: 218235695116320862
       type: {class: UnitFSMData, ns: DadVSMe.Entities, asm: DadVSMe}
       data:
@@ -2103,6 +2103,12 @@ MonoBehaviour:
   bounceAnimations:
   - KidBounce1
   - KidBounce2
+  bounceEffectOffset: {x: 0, y: 0}
+  smallBounceEffect:
+    key: 
+  hardBounceEffect:
+    key: 
+  bounceSounds: []
 --- !u!114 &371520262
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3231,7 +3237,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!4 &668232988
 Transform:
   m_ObjectHideFlags: 0
@@ -3357,7 +3363,7 @@ MonoBehaviour:
     version: 2
     RefIds:
     - rid: -2
-      type: {class: '', ns: '', asm: ''}
+      type: {class: , ns: , asm: }
     - rid: 218235695116320862
       type: {class: UnitFSMData, ns: DadVSMe.Entities, asm: DadVSMe}
       data:
@@ -8679,6 +8685,12 @@ MonoBehaviour:
   bounceAnimations:
   - KidBounce1
   - KidBounce2
+  bounceEffectOffset: {x: -1.5, y: -0.25}
+  smallBounceEffect:
+    key: VFX_Dust1
+  hardBounceEffect:
+    key: VFX_Shockwave
+  bounceSounds: []
 --- !u!114 &2088429821
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9155,14 +9167,82 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 987321134260378580, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
+      propertyPath: checkVerticalRange
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 987321134260378580, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
+      propertyPath: attackVerticalRange
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1174489111746341445, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
+      propertyPath: angerTime
+      value: 1000
+      objectReference: {fileID: 0}
     - target: {fileID: 1174489111746341445, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
       propertyPath: maxAngerGauge
       value: 100000
+      objectReference: {fileID: 0}
+    - target: {fileID: 1232159966641272147, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
+      propertyPath: checkVerticalRange
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1232159966641272147, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
+      propertyPath: attackVerticalRange
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1463274168543775791, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
+      propertyPath: checkVerticalRange
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1463274168543775791, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
+      propertyPath: attackVerticalRange
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1626959363879877503, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
+      propertyPath: checkVerticalRange
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1626959363879877503, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
+      propertyPath: attackVerticalRange
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1637500108267551053, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
+      propertyPath: checkVerticalRange
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1637500108267551053, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
+      propertyPath: attackVerticalRange
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2237173395481143780, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
+      propertyPath: checkVerticalRange
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2237173395481143780, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
+      propertyPath: attackVerticalRange
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2308804095306331961, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
+      propertyPath: checkVerticalRange
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2308804095306331961, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
+      propertyPath: attackVerticalRange
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2977751249653612589, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
       propertyPath: m_Radius
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 4904074541681549496, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
+      propertyPath: checkVerticalRange
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4904074541681549496, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
+      propertyPath: attackVerticalRange
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5188117905570338336, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
       propertyPath: isFloat
       value: 1
@@ -9180,6 +9260,14 @@ PrefabInstance:
       value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 5188117905570338336, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
+      propertyPath: checkVerticalRange
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5188117905570338336, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
+      propertyPath: attackVerticalRange
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5188117905570338336, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
       propertyPath: hitEffects.Array.size
       value: 2
       objectReference: {fileID: 0}
@@ -9190,6 +9278,30 @@ PrefabInstance:
     - target: {fileID: 5188117905570338336, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
       propertyPath: hitEffects.Array.data[1].key
       value: VFX_Blood1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5682875267753677173, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
+      propertyPath: checkVerticalRange
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5682875267753677173, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
+      propertyPath: attackVerticalRange
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5928225887847949517, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
+      propertyPath: checkVerticalRange
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5928225887847949517, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
+      propertyPath: attackVerticalRange
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7021832394674538665, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
+      propertyPath: checkVerticalRange
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7021832394674538665, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
+      propertyPath: attackVerticalRange
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7396231261579352599, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
       propertyPath: isFloat
@@ -9208,6 +9320,14 @@ PrefabInstance:
       value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 7396231261579352599, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
+      propertyPath: checkVerticalRange
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7396231261579352599, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
+      propertyPath: attackVerticalRange
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7396231261579352599, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
       propertyPath: hitEffects.Array.size
       value: 2
       objectReference: {fileID: 0}
@@ -9218,10 +9338,6 @@ PrefabInstance:
     - target: {fileID: 7396231261579352599, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
       propertyPath: hitEffects.Array.data[1].key
       value: VFX_Blood1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1174489111746341445, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
-      propertyPath: angerTime
-      value: 1000
       objectReference: {fileID: 0}
     - target: {fileID: 7488116858921959985, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
       propertyPath: m_LocalPosition.x
@@ -9263,6 +9379,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7537395946798424511, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
+      propertyPath: checkVerticalRange
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7537395946798424511, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
+      propertyPath: attackVerticalRange
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8275758214492924946, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
+      propertyPath: isFloat
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8275758214492924946, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
+      propertyPath: checkFloat
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8275758214492924946, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
+      propertyPath: attackVerticalRange
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8534845375963123760, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
       propertyPath: isFloat
       value: 1
@@ -9288,6 +9424,14 @@ PrefabInstance:
       value: 2.24
       objectReference: {fileID: 0}
     - target: {fileID: 8534845375963123760, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
+      propertyPath: checkVerticalRange
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8534845375963123760, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
+      propertyPath: attackVerticalRange
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8534845375963123760, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
       propertyPath: hitEffects.Array.size
       value: 2
       objectReference: {fileID: 0}
@@ -9299,9 +9443,33 @@ PrefabInstance:
       propertyPath: hitEffects.Array.data[1].key
       value: VFX_Blood1
       objectReference: {fileID: 0}
+    - target: {fileID: 8575574146780529413, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
+      propertyPath: bounceEffectOffset.x
+      value: -1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8575574146780529413, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
+      propertyPath: bounceEffectOffset.y
+      value: -0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 8575574146780529413, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
+      propertyPath: hardBounceEffect.key
+      value: VFX_Shockwave
+      objectReference: {fileID: 0}
+    - target: {fileID: 8575574146780529413, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
+      propertyPath: smallBounceEffect.key
+      value: VFX_Dust1
+      objectReference: {fileID: 0}
     - target: {fileID: 8996695108358816546, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 9094768305731557693, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
+      propertyPath: checkVerticalRange
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9094768305731557693, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
+      propertyPath: attackVerticalRange
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

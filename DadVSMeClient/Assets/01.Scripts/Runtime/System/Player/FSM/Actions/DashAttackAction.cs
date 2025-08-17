@@ -13,7 +13,12 @@ namespace DadVSMe.Players.FSM
 
         [Space(10f)]
         [SerializeField] AttackDataBase attackData = null;
-        [SerializeField] float attackRange = 3f;
+        
+        [Space(10f)]
+        [SerializeField] bool checkHorizontalRange = true;
+        [SerializeField] float attackHorizontalRange = 3f;
+        [SerializeField] bool checkVerticalRange = false;
+        [SerializeField] float attackVerticalRange = 3f;
 
         private UnitMovement unitMovement = null;
 
@@ -54,8 +59,17 @@ namespace DadVSMe.Players.FSM
                 if(Mathf.Sign(targetDirection) != Mathf.Sign(forwardDirection))
                     return;
 
-                if(Mathf.Abs(targetDirection) > attackRange)
-                    return;
+                if(checkHorizontalRange)
+                {
+                    if(Mathf.Abs(targetDirection) > attackHorizontalRange)
+                        return;
+                }
+
+                if(checkVerticalRange)
+                {
+                    if(Mathf.Abs(enemy.transform.position.y - transform.position.y) > attackVerticalRange)
+                        return;
+                }
 
                 if(enemy.FSMBrain.GetAIData<UnitFSMData>().isFloat)
                     return;
