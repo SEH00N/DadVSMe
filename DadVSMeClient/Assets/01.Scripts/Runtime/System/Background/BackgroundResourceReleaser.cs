@@ -27,6 +27,7 @@ namespace DadVSMe.Background
                 }
 
                 _themeDataContainer[themeIdx].Add(themeData);
+                _onUsingThemeDataContainer[themeIdx]++;
             }
         }
 
@@ -38,6 +39,8 @@ namespace DadVSMe.Background
                 return;
             }
 
+            Debug.Log(oldThemeIdx);
+
             _onUsingThemeDataContainer[oldThemeIdx]--;
 
             if (_onUsingThemeDataContainer[oldThemeIdx] == 0)
@@ -48,6 +51,8 @@ namespace DadVSMe.Background
 
         private void ReleaseTheme(int oldThemeIdx)
         {
+            Debug.Log($"Released Theme : {oldThemeIdx}");
+
             var list = _themeDataContainer[oldThemeIdx];
 
             foreach(var item in list)
