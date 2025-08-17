@@ -39,6 +39,10 @@ namespace DadVSMe.Entities
             unitHealth.Initialize(unitStatData[EUnitStat.MaxHp]);
             unitAttackEventListener.Initialize();
             unitSkillComponent?.Initialize();
+
+            unitFSMData.isFloat = false;
+            unitFSMData.isLie = false;
+            unitFSMData.isDie = false;
         }
 
         protected override void LateUpdate()

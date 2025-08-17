@@ -49,6 +49,9 @@ namespace DadVSMe.Entities
             if(fsmData.enemies.Count >= fsmData.enemyMaxCount)
                 return;
 
+            if(enemy.FSMBrain.GetAIData<UnitFSMData>().isDie)
+                return;
+
             currentEnemyHashes.Add(enemyHash);
             fsmData.enemies.Add(enemy);
         }

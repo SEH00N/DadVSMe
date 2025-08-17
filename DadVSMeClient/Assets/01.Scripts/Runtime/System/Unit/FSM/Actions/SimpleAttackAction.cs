@@ -55,6 +55,9 @@ namespace DadVSMe.Entities.FSM
                         return;
                 }
 
+                if (enemy.FSMBrain.GetAIData<UnitFSMData>().isDie)
+                    return;
+
                 AttackToTarget(enemy, attackData);
             });
         }

@@ -16,6 +16,7 @@ namespace DadVSMe.Entities
         [HideInInspector] public UnitCollisionData collisionData = new UnitCollisionData();
         [HideInInspector] public bool isFloat = false;
         [HideInInspector] public bool isLie = false;
+        [HideInInspector] public bool isDie = false;
         [HideInInspector] public EAttackAttribute hitAttribute;
         [HideInInspector] public EAttackAttribute attackAttribute;
 

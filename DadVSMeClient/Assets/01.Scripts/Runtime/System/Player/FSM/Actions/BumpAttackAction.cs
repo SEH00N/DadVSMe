@@ -65,6 +65,9 @@ namespace DadVSMe.Players.FSM
                 if(enemy.FSMBrain.GetAIData<UnitFSMData>().isLie)
                     return;
 
+                if(enemy.FSMBrain.GetAIData<UnitFSMData>().isDie)
+                    return;
+
                 enemy.UnitHealth.Attack(unitFSMData.unit, attackData);
 
                 _ = new PlayEffect(attackEffect, enemy.transform.position, unitFSMData.forwardDirection);

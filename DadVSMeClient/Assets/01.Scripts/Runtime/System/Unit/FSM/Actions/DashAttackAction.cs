@@ -73,6 +73,9 @@ namespace DadVSMe.Entities.FSM
                 if(enemy.FSMBrain.GetAIData<UnitFSMData>().isLie)
                     return;
 
+                if(enemy.FSMBrain.GetAIData<UnitFSMData>().isDie)
+                    return;
+
                 AttackToTarget(enemy, attackData);
             });
         }
