@@ -14,10 +14,6 @@ namespace DadVSMe.Enemies
         [SerializeField] FSMState grabState = null;
 
         private bool skipUpdate = false;
-
-        [SerializeField]
-        private UnitData unitDataRef;
-
         // Debug
         private void Start()
         {
