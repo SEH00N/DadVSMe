@@ -2,29 +2,39 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 using H00N.Resources.Addressables;
+using Cysharp.Threading.Tasks;
 
 namespace DadVSMe.Background
 {
     public class BackgroundTrailer : MonoBehaviour
     {
-        public event Action<int> onChangedTheme;
+        public event Action<int> onDespawnedBackground;
 
-        private Queue<BackgroundThemeData> _themeDataQueue;
         private Transform _startTransform;
         private Transform _parentTransform;
+        private Transform _cameraTransform;
         private Collider2D _boundary;
+
+        private Queue<BackgroundThemeData> _themeDataQueue;
+        private BackgroundThemeData _currentThemeData;
+        private int _latestDespawnedThemeIdx;
 
         private Queue<AddressableAsset<BackgroundObject>> _prefabContainer;
         private List<BackgroundObject> _runTimeBackgroundContainer;
 
-        public void Initialize(BackgroundLayerInfo layerInfo, Collider2D boundary)
+        private bool _onRunning;
+        private bool _onSpawnning;
+
+        public void Initialize(BackgroundLayerInfo layerInfo, Transform cameraTrm, Collider2D boundary)
         {
             _themeDataQueue = new Queue<BackgroundThemeData>(layerInfo.themeDataArr);
             _startTransform = layerInfo.startTransform;
             _parentTransform = layerInfo.parentTransform;
+            _cameraTransform = cameraTrm;
             _boundary = boundary;
 
             _runTimeBackgroundContainer = new List<BackgroundObject>();
+            _onRunning = false;
         }
 
         public void Run()
@@ -35,39 +45,59 @@ namespace DadVSMe.Background
                 return;
             }
 
-            _prefabContainer = _themeDataQueue.Dequeue().GetBackgroundQueue();
+            RefillPrefabContainer();
+            _latestDespawnedThemeIdx = _currentThemeData.themeIdx;
 
             SpawnBackground(_prefabContainer.Dequeue(), _startTransform.position);
             var spawnedBG = _runTimeBackgroundContainer[0];
             SpawnBackground(_prefabContainer.Dequeue(), spawnedBG.SocketPosition);
+
+            _onRunning = true;
         }
 
         private async void SpawnBackground(AddressableAsset<BackgroundObject> prefab, Vector2 spawnPosition)
         {
+            _onSpawnning = true;
             await prefab.InitializeAsync();
 
             var bgObject = Instantiate(prefab.Asset, _parentTransform);
-            bgObject.Initialize(spawnPosition);
+            bgObject.Initialize(spawnPosition, _cameraTransform, _currentThemeData.themeIdx);
 
             _runTimeBackgroundContainer.Add(bgObject);
+            _onSpawnning = false;
         }
 
         private void DespawnBackground(BackgroundObject background)
         {
+            _runTimeBackgroundContainer.Remove(background);
             Destroy(background.gameObject);
+
+            Debug.Log(_latestDespawnedThemeIdx);
+
+            if(_latestDespawnedThemeIdx != background.ThemeIdx)
+            {
+                onDespawnedBackground?.Invoke(_latestDespawnedThemeIdx);
+                _latestDespawnedThemeIdx = background.ThemeIdx;
+            }
         }
 
         private void RefillPrefabContainer()
         {
-            var newContainer = _themeDataQueue.Dequeue();
-            _prefabContainer = newContainer.GetBackgroundQueue();
+            if(_themeDataQueue.Count == 0)
+            {
+                Debug.LogError("No more BackgroundData");
+                return;
+            }
 
-            onChangedTheme?.Invoke(newContainer.themeIdx);
+            _currentThemeData = _themeDataQueue.Peek();
+            _prefabContainer = _themeDataQueue.Dequeue().GetBackgroundQueue();
         }
 
         private void FixedUpdate()
         {
-            if (_runTimeBackgroundContainer.Count == 0) return;
+            if (_onRunning == false) return;
+            if (_runTimeBackgroundContainer.Count < 1) return;
+            if (_onSpawnning) return;
 
             var firstBG = _runTimeBackgroundContainer[0];
 
@@ -78,15 +108,16 @@ namespace DadVSMe.Background
 
             var lastIdx = _runTimeBackgroundContainer.Count - 1;
             var penultimateIdx = lastIdx - 1;
-
             var penultimateBG = _runTimeBackgroundContainer[penultimateIdx];
 
-            if(penultimateBG.SocketPosition.x > _boundary.bounds.max.x)
+            if (penultimateBG.SocketPosition.x < _boundary.bounds.max.x)
             {
-                if(_prefabContainer.Count == 0)
+                if (_prefabContainer.Count == 0)
                 {
                     RefillPrefabContainer();
                 }
+
+                if (_prefabContainer.Count == 0) return;
 
                 var lastBG = _runTimeBackgroundContainer[lastIdx];
                 SpawnBackground(_prefabContainer.Dequeue(), lastBG.SocketPosition);

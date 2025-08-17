@@ -9,8 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 0}
-  m_Name: Theme0BackLayer
-  m_EditorClassIdentifier: DadVSMe:DadVSMe.Background:BackgroundThemeData
-  themeIdx: 0
-  _backgroundList: []
+  m_Script: {fileID: 11500000, guid: f30a6eb110fa4fa4e82765391a2e7283, type: 3}
+  m_Name: 1ThemeBackLayerData
+  m_EditorClassIdentifier: 
+  themeIdx: 1
+  _backgroundList:
+  - key: 0ThemeBackLayer_0
+  - key: 0ThemeBackLayer_1
