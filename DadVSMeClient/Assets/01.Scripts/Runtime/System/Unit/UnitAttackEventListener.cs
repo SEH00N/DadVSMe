@@ -22,7 +22,7 @@ namespace DadVSMe.Entities
             float currentLossyScaleX = fsmData.unit.transform.lossyScale.x;
             fsmData.unit.transform.localScale = new Vector3(fsmData.unit.transform.localScale.x * (fsmData.forwardDirection / currentLossyScaleX), 1, 1);
             fsmData.attackData = attackData;
-
+            
             AttackDataBase data = attackData as AttackDataBase;
             if (data)
                 fsmData.hitAttribute = data.attackAttribute;

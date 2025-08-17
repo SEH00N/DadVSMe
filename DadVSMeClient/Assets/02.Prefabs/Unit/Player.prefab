@@ -1550,6 +1550,7 @@ GameObject:
   - component: {fileID: 989093648015396453}
   - component: {fileID: 2526812934725719640}
   - component: {fileID: 2507292794327059281}
+  - component: {fileID: 6968154392130390349}
   m_Layer: 8
   m_Name: PowerUp
   m_TagString: Untagged
@@ -1656,6 +1657,22 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+--- !u!114 &6968154392130390349
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1665590273972130149}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb388b41826534f8c9fe7c2cb8aebb23, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  powerUpParticle:
+    key: Particle_CrazySmoke
+  positionOffset: {x: 0, y: 1.6, z: 0}
+  scale: {x: 1.8, y: 1.8, z: 1.8}
 --- !u!1 &1701644835694590194
 GameObject:
   m_ObjectHideFlags: 0
@@ -8623,13 +8640,17 @@ MonoBehaviour:
   unitAttackEventListener: {fileID: 8895890805159774065}
   unitSkillComponent: {fileID: 6550646681929325183}
   unitRigidbody: {fileID: 8451211484433483914}
+  unitDataRef: {fileID: 11400000, guid: c026babc38b11449db114f0431689cc4, type: 2}
   onAttackTargetEvent:
     m_PersistentCalls:
       m_Calls: []
+  onStartAngerEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  onEndAngerEvent:
+    m_PersistentCalls:
+      m_Calls: []
   enemyDetector: {fileID: 644674988795700514}
-  maxAngerGauge: 100000
-  angerTime: 1000
-  unitDataRef: {fileID: 11400000, guid: c026babc38b11449db114f0431689cc4, type: 2}
 --- !u!114 &6165701722836179940
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8730,6 +8751,8 @@ MonoBehaviour:
         isComboReading: 0
         isComboFailed: 0
         grabAttackCount: 0
+        maxAngerGauge: 20
+        currentAngerGauge: 0
 --- !u!114 &1382251147719448698
 MonoBehaviour:
   m_ObjectHideFlags: 0

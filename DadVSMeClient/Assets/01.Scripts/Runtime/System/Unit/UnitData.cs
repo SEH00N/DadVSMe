@@ -28,6 +28,9 @@ namespace DadVSMe.Entities
         private UnitStatContainer stat;
         public UnitStatContainer Stat => stat;
 
+        public float angerTime;
+        public bool isAnger;
+
         [HideInInspector]
         public EAttackAttribute attackAttribute;
 

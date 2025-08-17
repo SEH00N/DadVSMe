@@ -12,12 +12,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ec83ac5af5f44bebb6516e2765bf680, type: 3}
   m_Name: PlayerUnitData
   m_EditorClassIdentifier: 
-  maxHP: 100
   stat:
     stats:
     - statType: 0
       defaultValue: 100
+      finalValue: 0
+      onStatChanged:
+        m_PersistentCalls:
+          m_Calls: []
     - statType: 1
       defaultValue: 10
+      finalValue: 0
+      onStatChanged:
+        m_PersistentCalls:
+          m_Calls: []
     - statType: 2
       defaultValue: 1
+      finalValue: 0
+      onStatChanged:
+        m_PersistentCalls:
+          m_Calls: []
+  angerTime: 5
+  isAnger: 0
+  attackAttribute: 0

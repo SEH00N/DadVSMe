@@ -20,6 +20,9 @@ namespace DadVSMe.Players.FSM
 
         public int grabAttackCount = 0;
 
+        public float maxAngerGauge;
+        public float currentAngerGauge;
+
         public IAIData Initialize()
         {
             return this;

@@ -6,20 +6,18 @@ namespace DadVSMe.Players.FSM
 {
     public class FullAngerDecision : FSMDecision
     {
-        private Unit owner;
+        private PlayerFSMData fsmData;
 
         public override void Init(FSMBrain brain, FSMState state)
         {
             base.Init(brain, state);
 
-            owner = brain.GetComponent<Unit>();
+            fsmData = brain.GetAIData<PlayerFSMData>();
         }
 
         public override bool MakeDecision()
         {
-            Player player = owner as Player;
-
-            return player.CurrentAngerGauge >= player.MaxAngerGauge;
+            return fsmData.currentAngerGauge >= fsmData.maxAngerGauge;
         }
     }
 }

@@ -1,6 +1,5 @@
-using System.Threading.Tasks;
-using Cysharp.Threading.Tasks;
 using DadVSMe.Entities;
+using DadVSMe.Players.FSM;
 using UnityEngine;
 
 namespace DadVSMe.Players
@@ -11,43 +10,6 @@ namespace DadVSMe.Players
         [SerializeField] EnemyDetector enemyDetector = null;
 
         protected override RigidbodyType2D DefaultRigidbodyType => RigidbodyType2D.Dynamic;
-
-        private bool isAnger;
-        public bool IsAnger
-        {
-            get => isAnger;
-
-            set
-            {
-                isAnger = value;
-            }
-        }
-        [SerializeField]
-        private float maxAngerGauge;
-        public float MaxAngerGauge
-        {
-            get => maxAngerGauge;
-
-            set
-            {
-                maxAngerGauge = value;
-            }
-        }
-        private float currentAngerGauge;
-        public float CurrentAngerGauge
-        {
-            get => currentAngerGauge;
-
-            set
-            {
-                currentAngerGauge = value;
-            }
-        }
-        [SerializeField]
-        private float angerTime;
-
-        [SerializeField]
-        private UnitData unitDataRef;
 
         // Debug
         private void Start()
@@ -61,36 +23,25 @@ namespace DadVSMe.Players
             enemyDetector.Initialize();
 
             onAttackTargetEvent.AddListener(OnAttackTarget);
+
+            onStartAngerEvent.AddListener(OnStartAnger);
         }
 
         private void OnAttackTarget(Unit target, IAttackData attackData)
         {
-            if (isAnger)
+            if (unitData.isAnger)
                 return;
+            
+            PlayerFSMData playerFSMData = fsmBrain.GetAIData<PlayerFSMData>();
             AttackDataBase data = attackData as AttackDataBase;
-
             if(data.IsRangeAttack)
-                CurrentAngerGauge = Mathf.Min(CurrentAngerGauge + 5, maxAngerGauge);
+                playerFSMData.currentAngerGauge = Mathf.Min(playerFSMData.currentAngerGauge + 5, playerFSMData.maxAngerGauge);
         }
 
-        public async void ActiveAngerForUnityEvent()
+        public void OnStartAnger()
         {
-            await ActiveAnger();
-        }
-
-        public async UniTask ActiveAnger()
-        {
-            IsAnger = true;
-            unitData.Stat[EUnitStat.MoveSpeed].RegistAddModifier(10);
-            unitData.Stat[EUnitStat.AttackPowerMultiplier].RegistAddModifier(0.5f);
-            unitData.attackAttribute = EAttackAttribute.Crazy;
-
-            await UniTask.Delay(System.TimeSpan.FromSeconds(angerTime));
-
-            unitData.Stat[EUnitStat.MoveSpeed].UnregistAddModifier(10);
-            unitData.Stat[EUnitStat.AttackPowerMultiplier].UnregistAddModifier(0.5f);
-            unitData.attackAttribute = attackAttribute;
-            IsAnger = false;
+            PlayerFSMData playerFSMData = fsmBrain.GetAIData<PlayerFSMData>();
+            playerFSMData.currentAngerGauge = 0f;
         }
 
         #if UNITY_EDITOR
