@@ -15,19 +15,22 @@ namespace DadVSMe.Enemies
         [SerializeField] EnemyDetector enemyDetector = null;
         [SerializeField] FSMState grabState = null;
 
+        [Header("Debug")]
+        [SerializeField] EnemyDataBase enemyData = null;
+
         private bool skipUpdate = false;
+
         // Debug
         private void Start()
         {
-            Initialize(unitDataRef);
+            Initialize(enemyData);
+            fsmBrain.GetAIData<EnemyFSMData>().player = GameObject.FindFirstObjectByType<Player>(); // TODO: Make GameInstance and Get Player Instance from GameInstane
         }
 
         public override void Initialize(IEntityData data)
         {
             base.Initialize(data);
             enemyDetector.Initialize();
-
-            fsmBrain.GetAIData<EnemyFSMData>().player = GameObject.FindFirstObjectByType<Player>();
         }
 
         protected override void LateUpdate()

@@ -7,5 +7,6 @@ namespace DadVSMe
         MaxHp,
         MoveSpeed,
         AttackPowerMultiplier,
+        DashSpeed,
     }
 }

@@ -10,26 +10,21 @@ namespace DadVSMe.Players.FSM
         [SerializeField] bool isDashing = false;
 
         private UnitStat moveSpeedStat;
-        private PlayerFSMData fsmData = null;
+        private UnitStat dashSpeedStat;
         private UnitMovement unitMovement = null;
 
         public override void Init(FSMBrain brain, FSMState state)
         {
             base.Init(brain, state);
             unitMovement = brain.GetComponent<UnitMovement>();
-            fsmData = brain.GetAIData<PlayerFSMData>();
-            moveSpeedStat = brain.GetComponent<Unit>().UnitData.Stat[EUnitStat.MoveSpeed];
+            moveSpeedStat = brain.GetAIData<UnitStatData>()[EUnitStat.MoveSpeed];
+            dashSpeedStat = brain.GetAIData<UnitStatData>()[EUnitStat.DashSpeed];
         }
 
         public override void EnterState()
         {
             base.EnterState();
             unitMovement.SetActive(true);
-
-            if (isDashing)
-            {
-                moveSpeedStat.RegistMultiplyModifier(2);
-            }
         }
 
         public override void UpdateState()
@@ -39,12 +34,9 @@ namespace DadVSMe.Players.FSM
             PlayerInputReader inputReader = InputManager.GetInput<PlayerInputReader>();
             Vector2 movementInput = inputReader.MovementInput;
             
-            Vector2 velocity = movementInput * moveSpeedStat.FinalValue; /*fsmData.moveSpeed;*/
-
+            Vector2 velocity = movementInput * moveSpeedStat.FinalValue;
             if (velocity.x != 0 && isDashing)
-            {
-                velocity.x = Mathf.Sign(velocity.x) * moveSpeedStat.FinalValue/*fsmData.dashSpeed*/;
-            }
+                velocity.x = Mathf.Sign(velocity.x) * dashSpeedStat.FinalValue;
 
             unitMovement.SetMovementVelocity(velocity);
         }
@@ -53,11 +45,6 @@ namespace DadVSMe.Players.FSM
         {
             base.ExitState();
             unitMovement.SetActive(false);
-
-            if (isDashing)
-            {
-                moveSpeedStat.UnregistMultiplyModifier(2);
-            }
         }
     }
 }

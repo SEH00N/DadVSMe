@@ -6,19 +6,22 @@ namespace DadVSMe.Entities
 {
     public class UnitFSMData : IAIData
     {
-        public Unit unit = null;
         public int enemyMaxCount = 5;
-        public List<Unit> enemies = new List<Unit>();
-        public IAttackData attackData = null;
-        public int forwardDirection = 1;
-        public float groundPositionY = 0f;
-        public UnitCollisionData collisionData = new UnitCollisionData();
-        public bool isFloat = false;
-        public bool isLie = false;
-        public EAttackAttribute hitAttribute;
+
+        [HideInInspector] public Unit unit = null;
+        [HideInInspector] public List<Unit> enemies = new List<Unit>();
+        [HideInInspector] public IAttackData attackData = null;
+        [HideInInspector] public int forwardDirection = 1;
+        [HideInInspector] public float groundPositionY = 0f;
+        [HideInInspector] public UnitCollisionData collisionData = new UnitCollisionData();
+        [HideInInspector] public bool isFloat = false;
+        [HideInInspector] public bool isLie = false;
+        [HideInInspector] public EAttackAttribute hitAttribute;
+        [HideInInspector] public EAttackAttribute attackAttribute;
 
         public IAIData Initialize()
         {
+            attackAttribute = EAttackAttribute.Normal;
             return this;
         }
     }

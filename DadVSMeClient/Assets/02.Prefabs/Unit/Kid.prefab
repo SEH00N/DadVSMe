@@ -2496,7 +2496,6 @@ MonoBehaviour:
   unitAttackEventListener: {fileID: 7031250399494906082}
   unitSkillComponent: {fileID: 6117938300054333892}
   unitRigidbody: {fileID: 8522405111466415502}
-  unitDataRef: {fileID: 11400000, guid: 931765094b25c4da78e741134ebf35b4, type: 2}
   onAttackTargetEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -2508,6 +2507,7 @@ MonoBehaviour:
       m_Calls: []
   enemyDetector: {fileID: 5256345900857985724}
   grabState: {fileID: 1729459063318387908}
+  enemyData: {fileID: 11400000, guid: a15df65156d6b440088a131c5eaeae67, type: 2}
 --- !u!114 &6564578028461733982
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2580,27 +2580,34 @@ MonoBehaviour:
     - wrapType: 2
       unityObjectReference: {fileID: 0}
       serializableObjectReference:
-        rid: 218235695116320862
+        rid: 218235857955979434
     - wrapType: 2
       unityObjectReference: {fileID: 0}
       serializableObjectReference:
-        rid: 218235857955979434
+        rid: 218235695116320862
+    - wrapType: 1
+      unityObjectReference: {fileID: 11400000, guid: 57b7814c0cf284fa39d90bc04907cbba, type: 2}
+      serializableObjectReference:
+        rid: -2
   defaultState: {fileID: 5586429494429702576}
   anyState: {fileID: 2153939508457356641}
   references:
     version: 2
     RefIds:
+    - rid: -2
+      type: {class: , ns: , asm: }
     - rid: 218235695116320862
       type: {class: UnitFSMData, ns: DadVSMe.Entities, asm: DadVSMe}
       data:
-        unit: {fileID: 8371870542813127976}
         enemyMaxCount: 5
+        unit: {fileID: 8371870542813127976}
         enemies: []
         forwardDirection: 1
         groundPositionY: 0
         isFloat: 0
         isLie: 0
         hitAttribute: 0
+        attackAttribute: 0
     - rid: 218235857955979434
       type: {class: EnemyFSMData, ns: DadVSMe.Enemies.FSM, asm: DadVSMe}
       data:

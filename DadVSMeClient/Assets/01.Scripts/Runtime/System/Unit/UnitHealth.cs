@@ -7,44 +7,27 @@ namespace DadVSMe.Entities
     {
         [SerializeField] UnityEvent<Unit, IAttackData> onAttackEvent = null;
 
-        private int maxHP;
-        public int MaxHP
-        {
-            get => maxHP;
-
-            set
-            {
-                maxHP = value;
-            }
-        }
+        private UnitStat hpStat = null;
 
         private int currentHP;
         public int CurrentHP => currentHP;
 
         public void Initialize(UnitStat hpStat)
         {
-            this.maxHP = (int)hpStat.FinalValue;
-            
-            currentHP = maxHP;
-
-            hpStat.onStatChanged.AddListener(OnHealthStatChanged);
+            this.hpStat = hpStat;
+            currentHP = (int)hpStat.FinalValue;
         }
 
         public void Attack(Unit attacker, IAttackData attackData)
         {
-            currentHP -= (int)(attackData.Damage * attacker.UnitData.Stat[EUnitStat.AttackPowerMultiplier].FinalValue);
+            currentHP -= (int)(attackData.Damage * attacker.FSMBrain.GetAIData<UnitStatData>()[EUnitStat.AttackPowerMultiplier].FinalValue);
             onAttackEvent.Invoke(attacker, attackData);
         }
 
         public void Heal(int amount)
         {
             currentHP += amount;
-            currentHP = Mathf.Min(currentHP, maxHP);
-        }
-
-        private void OnHealthStatChanged(float value)
-        {
-            maxHP = (int)value;
+            currentHP = Mathf.Min(currentHP, (int)hpStat.FinalValue);
         }
     }
 }

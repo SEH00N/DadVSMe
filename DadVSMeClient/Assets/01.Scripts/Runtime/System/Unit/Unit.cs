@@ -1,7 +1,6 @@
 using UnityEngine;
 using H00N.AI.FSM;
 using UnityEngine.Events;
-using Cysharp.Threading.Tasks;
 
 namespace DadVSMe.Entities
 {
@@ -20,13 +19,8 @@ namespace DadVSMe.Entities
 
         protected virtual RigidbodyType2D DefaultRigidbodyType => RigidbodyType2D.Kinematic;
 
-        [SerializeField]
-        protected UnitData unitDataRef;
-        protected UnitData unitData = null;
-        public UnitData UnitData => unitData;
-        private UnitFSMData unitFSMData = null;
-
-        protected EAttackAttribute attackAttribute;
+        protected UnitFSMData unitFSMData = null;
+        protected UnitStatData unitStatData = null;
 
         public UnityEvent<Unit, IAttackData> onAttackTargetEvent = null;
         public UnityEvent onStartAngerEvent;
@@ -35,17 +29,15 @@ namespace DadVSMe.Entities
         public override void Initialize(IEntityData data)
         {
             base.Initialize(data);
-            unitData = Instantiate<UnitData>(data as UnitData);
-            unitData.Initiallize();
             fsmBrain.Initialize();
             fsmBrain.SetAsDefaultState();
-            unitHealth.Initialize(unitData.Stat[EUnitStat.MaxHp]);
-            unitAttackEventListener.Initialize();
-            unitSkillComponent?.Initialize();
-
-            attackAttribute = EAttackAttribute.Normal;
 
             unitFSMData = fsmBrain.GetAIData<UnitFSMData>();
+            unitStatData = fsmBrain.GetAIData<UnitStatData>();
+
+            unitHealth.Initialize(unitStatData[EUnitStat.MaxHp]);
+            unitAttackEventListener.Initialize();
+            unitSkillComponent?.Initialize();
         }
 
         protected override void LateUpdate()
@@ -91,31 +83,8 @@ namespace DadVSMe.Entities
 
         public void SetAttackAttribute(EAttackAttribute attackAttribute)
         {
-            this.attackAttribute = attackAttribute;
-            if (unitData.attackAttribute != EAttackAttribute.Crazy)
-                unitData.attackAttribute = attackAttribute;
-        }
-
-         public async void ActiveAngerForUnityEvent()
-        {
-            await ActiveAnger();
-        }
-
-        public async UniTask ActiveAnger()
-        {
-            unitData.isAnger = true;
-            unitData.Stat[EUnitStat.MoveSpeed].RegistAddModifier(10);
-            unitData.Stat[EUnitStat.AttackPowerMultiplier].RegistAddModifier(0.5f);
-            unitData.attackAttribute = EAttackAttribute.Crazy;
-            onStartAngerEvent?.Invoke();
-
-            await UniTask.Delay(System.TimeSpan.FromSeconds(unitData.angerTime));
-
-            unitData.Stat[EUnitStat.MoveSpeed].UnregistAddModifier(10);
-            unitData.Stat[EUnitStat.AttackPowerMultiplier].UnregistAddModifier(0.5f);
-            unitData.attackAttribute = attackAttribute;
-            unitData.isAnger = false;
-            onEndAngerEvent?.Invoke();
+            if (unitFSMData.attackAttribute != EAttackAttribute.Crazy)
+                unitFSMData.attackAttribute = attackAttribute;
         }
     }
 }

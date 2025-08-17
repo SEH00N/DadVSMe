@@ -10,18 +10,18 @@ namespace DadVSMe.Players.FSM
         public Transform grabPosition = null;
         public Transform throw1Position = null;
         public Transform throw2Position = null;
-        public Entity grabbedEntity = null;
 
-        public float moveSpeed = 5f;
-        public float dashSpeed = 10f;
+        [HideInInspector] public Entity grabbedEntity = null;
 
-        public bool isComboReading = false;
-        public bool isComboFailed = false;
+        [HideInInspector] public bool isComboReading = false;
+        [HideInInspector] public bool isComboFailed = false;
 
-        public int grabAttackCount = 0;
+        [HideInInspector] public int grabAttackCount = 0;
 
         public float maxAngerGauge;
-        public float currentAngerGauge;
+        [HideInInspector] public float currentAngerGauge;
+        [HideInInspector] public float angerTime;
+        [HideInInspector] public bool isAnger;
 
         public IAIData Initialize()
         {
