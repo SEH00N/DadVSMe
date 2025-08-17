@@ -40,7 +40,7 @@ namespace DadVSMe.Enemies
         [Min(0)] public int endSec = 0;
     }
 
-    [CreateAssetMenu(fileName = "EnemySpawnData", menuName = "CreateSO/Entity/Enemy/SpawnData")]
+    [CreateAssetMenu(fileName = "EnemySpawnData", menuName = "DadVSMe/Entity/Enemy/SpawnData")]
     public class EnemySpawnData : ScriptableObject
     {
         [Header("Divide count for phases (>=1)")]
