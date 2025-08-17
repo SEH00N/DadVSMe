@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b891140ae9b8429a90d868b93558bd7, type: 3}
   m_Name: Player_Knife1
   m_EditorClassIdentifier: 
-  damage: 0
+  damage: 10
   isRangeAttack: 1
+  attackAttribute: 1
   attackFeedback: 1

@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7501178f7cf3d436cb99bd9ba1e36677, type: 3}
   m_Name: Player_JuggleHit2
   m_EditorClassIdentifier: 
-  damage: 0
+  damage: 10
   isRangeAttack: 1
+  attackAttribute: 1
   juggleForce: 15
   juggleDirection: {x: 0.05, y: 1}

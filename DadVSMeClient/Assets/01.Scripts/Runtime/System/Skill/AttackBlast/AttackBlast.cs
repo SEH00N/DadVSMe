@@ -7,7 +7,7 @@ using UnityEngine;
 
 namespace DadVSMe
 {
-    public class AttackBlast : Entity
+    public class AttackBlast : MonoBehaviour
     {
         [SerializeField]
         private AttackDataBase attackData;
@@ -27,8 +27,7 @@ namespace DadVSMe
 
         void Awake()
         {
-            Initialize(null);
-
+            Initialize();
             originScale = transform.localScale;
         }
 
@@ -37,10 +36,8 @@ namespace DadVSMe
             transform.localScale = originScale;
         }
 
-        public override void Initialize(IEntityData data)
+        public void Initialize()
         {
-            base.Initialize(data);
-
             movement = GetComponent<UnitMovement>();
             poolReference = GetComponent<PoolReference>();
         }

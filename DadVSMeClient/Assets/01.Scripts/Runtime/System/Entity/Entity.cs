@@ -1,8 +1,9 @@
+using H00N.Resources.Pools;
 using UnityEngine;
 
 namespace DadVSMe.Entities
 {
-    public class Entity : MonoBehaviour
+    public class Entity : PoolReference
     {
         private const float Z_ORDER_OFFSET = 1f;
 

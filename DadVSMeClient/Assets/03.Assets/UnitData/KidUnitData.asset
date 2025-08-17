@@ -15,7 +15,7 @@ MonoBehaviour:
   stat:
     stats:
     - statType: 0
-      defaultValue: 100
+      defaultValue: 10
       finalValue: 0
       onStatChanged:
         m_PersistentCalls:
@@ -32,3 +32,4 @@ MonoBehaviour:
       onStatChanged:
         m_PersistentCalls:
           m_Calls: []
+  attackAttribute: 0

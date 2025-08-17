@@ -5,11 +5,12 @@ using UnityEngine.EventSystems;
 
 namespace DadVSMe
 {
-    public class GuidedOrb : Entity
+    public class GuidedOrb : MonoBehaviour
     {
         [SerializeField]
         private AttackDataBase attackData;
 
+        private EntityAnimator entityAnimator;
         private UnitMovement movement;
         private PoolReference poolReference;
 
@@ -21,7 +22,8 @@ namespace DadVSMe
 
         void Awake()
         {
-            Initialize(null);
+            entityAnimator = GetComponent<EntityAnimator>();
+            Initialize();
         }
 
         void Start()
@@ -29,10 +31,8 @@ namespace DadVSMe
             entityAnimator.AddAnimationEventListener(EEntityAnimationEventType.Trigger, Despawn);
         }
 
-        public override void Initialize(IEntityData data)
+        public void Initialize()
         {
-            base.Initialize(data);
-
             movement = GetComponent<UnitMovement>();
             poolReference = GetComponent<PoolReference>();
         }

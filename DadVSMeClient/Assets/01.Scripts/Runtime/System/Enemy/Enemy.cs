@@ -1,16 +1,12 @@
 using System;
 using DadVSMe.Entities;
 using H00N.AI.FSM;
-using H00N.Resources.Pools;
 using UnityEngine;
 
 namespace DadVSMe.Enemies
 {
-    public class Enemy : Unit, IGrabbable, IPoolableBehaviour
+    public class Enemy : Unit, IGrabbable
     {
-        private PoolReference poolReference;
-        public PoolReference PoolReference => poolReference;
-
         public event Action<Enemy> onDespawned;
 
         [Header("Enemy")]
@@ -21,11 +17,6 @@ namespace DadVSMe.Enemies
 
         [SerializeField]
         private UnitData unitDataRef;
-
-        private void Awake()
-        {
-            poolReference = GetComponent<PoolReference>();
-        }
 
         // Debug
         private void Start()
@@ -61,14 +52,10 @@ namespace DadVSMe.Enemies
             performer.RemoveChildSortingOrderResolver(sortingOrderResolver);
         }
 
-        public void OnSpawned()
-        {
-
-        }
-
-        public void OnDespawn()
+        protected override void DespawnInternal()
         {
             onDespawned?.Invoke(this);
+            base.DespawnInternal();
         }
     }
 }

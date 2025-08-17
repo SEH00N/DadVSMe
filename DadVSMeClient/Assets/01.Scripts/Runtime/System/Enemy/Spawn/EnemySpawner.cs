@@ -230,7 +230,7 @@ namespace DadVSMe.Enemies
                 }
             }
 
-            Enemy enemy = PoolManager.Spawn<Enemy>(_enemyPrefab);
+            Enemy enemy = PoolManager.Spawn<Enemy>(resourceName: _enemyPrefab);
             enemy.Initialize(unitData);
             enemy.transform.position = GetOffscreenPosition(Camera.main);
 
