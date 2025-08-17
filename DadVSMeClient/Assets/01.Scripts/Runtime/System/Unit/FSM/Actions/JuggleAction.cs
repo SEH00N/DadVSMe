@@ -5,6 +5,8 @@ namespace DadVSMe.Entities
 {
     public class JuggleAction : HitAction
     {
+        private const float JUGGLE_ANGULAR_VELOCITY = 180f;
+
         [SerializeField] FSMState bounceState = null;
         private Rigidbody2D unitRigidbody = null;
 
@@ -27,7 +29,7 @@ namespace DadVSMe.Entities
             Vector2 force = juggleAttackData.JuggleDirection.normalized * juggleAttackData.JuggleForce;
             force.x *= -Mathf.Sign(unitFSMData.forwardDirection);
             unitRigidbody.linearVelocity = force;
-            unitRigidbody.angularVelocity = 10f;
+            unitRigidbody.angularVelocity = JUGGLE_ANGULAR_VELOCITY;
         }
 
         public override void UpdateState()
@@ -38,6 +40,8 @@ namespace DadVSMe.Entities
             if(brain.transform.position.y >= unitFSMData.groundPositionY || unitRigidbody.linearVelocity.y > 0)
                 return;
 
+            brain.transform.rotation = Quaternion.identity;
+            unitRigidbody.angularVelocity = 0f;
             unitFSMData.collisionData = new UnitCollisionData(unitRigidbody.linearVelocity, Vector2.up, new Vector2(brain.transform.position.x, unitFSMData.groundPositionY));
             brain.ChangeState(bounceState);
         }

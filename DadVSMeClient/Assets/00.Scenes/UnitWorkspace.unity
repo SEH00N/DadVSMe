@@ -507,7 +507,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 4
+  m_Constraints: 0
 --- !u!114 &39623364
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -567,7 +567,7 @@ MonoBehaviour:
     version: 2
     RefIds:
     - rid: -2
-      type: {class: , ns: , asm: }
+      type: {class: '', ns: '', asm: ''}
     - rid: 218235695116320862
       type: {class: UnitFSMData, ns: DadVSMe.Entities, asm: DadVSMe}
       data:
@@ -3231,7 +3231,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 4
+  m_Constraints: 0
 --- !u!4 &668232988
 Transform:
   m_ObjectHideFlags: 0
@@ -3357,7 +3357,7 @@ MonoBehaviour:
     version: 2
     RefIds:
     - rid: -2
-      type: {class: , ns: , asm: }
+      type: {class: '', ns: '', asm: ''}
     - rid: 218235695116320862
       type: {class: UnitFSMData, ns: DadVSMe.Entities, asm: DadVSMe}
       data:
@@ -9156,6 +9156,70 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 1174489111746341445, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
+      propertyPath: maxAngerGauge
+      value: 100000
+      objectReference: {fileID: 0}
+    - target: {fileID: 2977751249653612589, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
+      propertyPath: m_Radius
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5188117905570338336, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
+      propertyPath: isFloat
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5188117905570338336, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
+      propertyPath: checkLie
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5188117905570338336, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
+      propertyPath: checkFloat
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5188117905570338336, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
+      propertyPath: attackRange
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5188117905570338336, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
+      propertyPath: hitEffects.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5188117905570338336, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
+      propertyPath: hitEffects.Array.data[0].key
+      value: VFX_Impact1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5188117905570338336, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
+      propertyPath: hitEffects.Array.data[1].key
+      value: VFX_Blood1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7396231261579352599, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
+      propertyPath: isFloat
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7396231261579352599, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
+      propertyPath: checkLie
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7396231261579352599, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
+      propertyPath: checkFloat
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7396231261579352599, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
+      propertyPath: attackRange
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7396231261579352599, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
+      propertyPath: hitEffects.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7396231261579352599, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
+      propertyPath: hitEffects.Array.data[0].key
+      value: VFX_Impact1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7396231261579352599, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
+      propertyPath: hitEffects.Array.data[1].key
+      value: VFX_Blood1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1174489111746341445, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
       propertyPath: angerTime
       value: 1000
       objectReference: {fileID: 0}
@@ -9198,6 +9262,42 @@ PrefabInstance:
     - target: {fileID: 7488116858921959985, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8534845375963123760, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
+      propertyPath: isFloat
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8534845375963123760, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
+      propertyPath: checkLie
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8534845375963123760, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
+      propertyPath: checkFloat
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8534845375963123760, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
+      propertyPath: attackRange
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8534845375963123760, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
+      propertyPath: attackOffset.x
+      value: 0.33
+      objectReference: {fileID: 0}
+    - target: {fileID: 8534845375963123760, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
+      propertyPath: attackOffset.y
+      value: 2.24
+      objectReference: {fileID: 0}
+    - target: {fileID: 8534845375963123760, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
+      propertyPath: hitEffects.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8534845375963123760, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
+      propertyPath: hitEffects.Array.data[0].key
+      value: VFX_Impact1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8534845375963123760, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
+      propertyPath: hitEffects.Array.data[1].key
+      value: VFX_Blood1
       objectReference: {fileID: 0}
     - target: {fileID: 8996695108358816546, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
       propertyPath: m_Name
