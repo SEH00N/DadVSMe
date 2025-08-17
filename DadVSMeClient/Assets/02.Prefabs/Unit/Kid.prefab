@@ -1011,7 +1011,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7729971f7df8a473ea27f1775325ac8d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isReverse: 0
+  isReverse: 1
   compareState: {fileID: 6857963027408567855}
 --- !u!1 &3419667303824692288
 GameObject:
@@ -1277,6 +1277,7 @@ GameObject:
   - component: {fileID: 4295780405187886873}
   - component: {fileID: 6857963027408567855}
   - component: {fileID: 420057732799498652}
+  - component: {fileID: 3836473983210103886}
   m_Layer: 0
   m_Name: Die
   m_TagString: Untagged
@@ -1352,6 +1353,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 914aa8d3aa3444888a482cc269281683, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &3836473983210103886
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3650471933563971903}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 24cd3228a0a3242aebfae88c651b548b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &4412232713617179446
@@ -2667,6 +2680,7 @@ MonoBehaviour:
         groundPositionY: 0
         isFloat: 0
         isLie: 0
+        isDie: 0
         hitAttribute: 0
         attackAttribute: 0
     - rid: 218235857955979434
