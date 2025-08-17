@@ -58,6 +58,15 @@ namespace DadVSMe.Entities
             navMeshAgent.SetDestination(destination);
         }
 
+        public Vector2 GetValidDestination(Vector2 destination)
+        {
+            NavMeshPath path = new NavMeshPath();
+            if (navMeshAgent.CalculatePath(destination, path) && path.corners.Length > 1)
+                return path.corners[^1];
+
+            return transform.position;
+        }
+        
         public void SetMoveSpeed(float moveSpeed)
         {
             navMeshAgent.speed = moveSpeed;
