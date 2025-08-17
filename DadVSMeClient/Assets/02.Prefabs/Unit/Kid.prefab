@@ -2444,6 +2444,7 @@ GameObject:
   - component: {fileID: 6582178051482799858}
   - component: {fileID: 7463771367122635574}
   - component: {fileID: 7031250399494906082}
+  - component: {fileID: 2441180411158270835}
   - component: {fileID: 8522405111466415502}
   - component: {fileID: 6169808395141815018}
   - component: {fileID: 570379110779555857}
@@ -2507,7 +2508,7 @@ MonoBehaviour:
       m_Calls: []
   enemyDetector: {fileID: 5256345900857985724}
   grabState: {fileID: 1729459063318387908}
-  enemyData: {fileID: 11400000, guid: a15df65156d6b440088a131c5eaeae67, type: 2}
+  enemyData: {fileID: 11400000, guid: 1438f972b6e6a4cfe8d0de008c9e7981, type: 2}
 --- !u!114 &6564578028461733982
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2640,6 +2641,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fsmBrain: {fileID: 6582178051482799858}
+--- !u!114 &2441180411158270835
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6945144695061183823}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4058808f958bf4a378d6954759421ef9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemy: {fileID: 8371870542813127976}
+  bodyRenderers:
+  - {fileID: 7474861927462602097}
+  - {fileID: 7918407333985558540}
+  hatRenderer: {fileID: 1482249583435181552}
+  clothesRenderer: {fileID: 2795491540172167987}
 --- !u!50 &8522405111466415502
 Rigidbody2D:
   serializedVersion: 5

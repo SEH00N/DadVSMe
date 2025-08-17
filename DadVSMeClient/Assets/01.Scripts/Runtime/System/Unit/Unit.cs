@@ -26,9 +26,10 @@ namespace DadVSMe.Entities
         public UnityEvent onStartAngerEvent;
         public UnityEvent onEndAngerEvent;
 
-        public override void Initialize(IEntityData data)
+        protected override void InitializeInternal(IEntityData data)
         {
-            base.Initialize(data);
+            base.InitializeInternal(data);
+
             fsmBrain.Initialize();
             fsmBrain.SetAsDefaultState();
 

@@ -1,3 +1,4 @@
+using System;
 using H00N.Resources.Pools;
 using UnityEngine;
 
@@ -12,6 +13,8 @@ namespace DadVSMe.Entities
         [SerializeField] protected EntityAnimator entityAnimator = null;
         [SerializeField] protected EntitySortingOrderResolver sortingOrderResolver = null;
 
+        public event Action<IEntityData> OnInitializedEvent = null;
+
         private float currentDepth = 0f;
 
         private IEntityData dataInfo;
@@ -19,11 +22,17 @@ namespace DadVSMe.Entities
 
         public bool StaticEntity => staticEntity;
 
-        public virtual void Initialize(IEntityData data)
+        public void Initialize(IEntityData data)
         {
             if(staticEntity)
                 return;
 
+            InitializeInternal(data);
+            OnInitializedEvent?.Invoke(data);
+        }
+
+        protected virtual void InitializeInternal(IEntityData data)
+        {
             dataInfo = data;
             entityAnimator.Initialize();
         }

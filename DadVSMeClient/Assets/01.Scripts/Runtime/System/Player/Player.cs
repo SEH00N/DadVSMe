@@ -20,9 +20,9 @@ namespace DadVSMe.Players
             Initialize(new PlayerEntityData());
         }
 
-        public override void Initialize(IEntityData data)
+        protected override void InitializeInternal(IEntityData data)
         {
-            base.Initialize(data);
+            base.InitializeInternal(data);
             enemyDetector.Initialize();
 
             onAttackTargetEvent.AddListener(OnAttackTarget);

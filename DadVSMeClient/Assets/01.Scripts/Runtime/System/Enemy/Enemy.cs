@@ -27,9 +27,9 @@ namespace DadVSMe.Enemies
             fsmBrain.GetAIData<EnemyFSMData>().player = GameObject.FindFirstObjectByType<Player>(); // TODO: Make GameInstance and Get Player Instance from GameInstane
         }
 
-        public override void Initialize(IEntityData data)
+        protected override void InitializeInternal(IEntityData data)
         {
-            base.Initialize(data);
+            base.InitializeInternal(data);
             enemyDetector.Initialize();
         }
 
