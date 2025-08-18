@@ -7,6 +7,7 @@ namespace DadVSMe.Enemies.FSM
     public class SimpleEnemyFSMData : IAIData
     {
         [HideInInspector] public Animal animal = null;
+        [HideInInspector] public ESimpleEnemyType enemyType = ESimpleEnemyType.Butt;
 
         public IAIData Initialize()
         {

@@ -6,9 +6,6 @@ namespace DadVSMe.Enemies.FSM
 {
     public class EnemyPatrolAction : FSMAction
     {
-        [SerializeField] float patrolMinRange = 10f;
-        [SerializeField] float patrolMaxRange = 30f;
-
         private EnemyFSMData enemyFSMData = null;
         private NPCMovement npcMovement = null;
 
@@ -32,13 +29,13 @@ namespace DadVSMe.Enemies.FSM
             Vector3 direction = currentPosition - targetPosition;
             float distance = direction.magnitude;
 
-            Vector2 validDirection = direction.normalized * Mathf.Max(patrolMinRange - distance, 0);
+            Vector2 validDirection = direction.normalized * Mathf.Max(enemyFSMData.patrolMinRange - distance, 0);
 
             Vector2 randomDirection = Random.insideUnitCircle;
             randomDirection -= Vector3.Dot(randomDirection, validDirection.normalized) * validDirection.normalized;
             randomDirection.Normalize();
 
-            float randomRadius = Mathf.Sqrt(Random.Range(patrolMinRange * patrolMinRange, patrolMaxRange * patrolMaxRange));
+            float randomRadius = Mathf.Sqrt(Random.Range(enemyFSMData.patrolMinRange * enemyFSMData.patrolMinRange, enemyFSMData.patrolMaxRange * enemyFSMData.patrolMaxRange));
             patrolPoint = npcMovement.GetValidDestination(targetPosition + (randomDirection * randomRadius));
 
             npcMovement.SetDestination(patrolPoint);

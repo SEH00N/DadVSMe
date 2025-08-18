@@ -12,6 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae6177c65c6cad34f94deedaf3c4f667, type: 3}
   m_Name: SimpleEnemy_Butt_0
   m_EditorClassIdentifier: 
+  patrolMinRange: 1
+  patrolMaxRange: 5
   enemyType: 0
   animalPrefab:
     key: 
