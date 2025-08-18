@@ -17,8 +17,18 @@ MonoBehaviour:
   attackAttribute: 1
   feedbackDatas:
   - attackAttribute: 0
-    hitEffects: []
-    attackSounds: []
-    hitSounds: []
+    hitEffects:
+    - key: VFX_Impact1
+    - key: VFX_Blood1
+    attackSounds:
+    - key: sfx_swing_small_0
+    - key: sfx_swing_small_1
+    - key: sfx_swing_small_2
+    - key: sfx_swing_small_3
+    hitSounds:
+    - key: sfx_punch_small_0
+    - key: sfx_punch_small_1
+    - key: sfx_punch_small_2
+    - key: sfx_punch_small_3
   juggleForce: 17.5
   juggleDirection: {x: 0.05, y: 1}

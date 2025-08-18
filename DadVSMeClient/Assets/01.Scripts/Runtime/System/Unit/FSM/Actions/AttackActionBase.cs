@@ -45,6 +45,7 @@ namespace DadVSMe.Entities.FSM
             entityAnimator.AddAnimationEventListener(EEntityAnimationEventType.Trigger, HandleAnimationTriggerEvent);
 
             _ = new PlaySound(attackData.GetFeedbackData(EAttackAttribute.Normal).attackSounds);
+            _ = new PlaySound(attackData.GetFeedbackData(unitFSMData.attackAttribute).attackSounds);
         }
 
         public override void ExitState()
@@ -66,12 +67,16 @@ namespace DadVSMe.Entities.FSM
             target.UnitHealth.Attack(unitFSMData.unit, attackData);
             unitFSMData.unit.onAttackTargetEvent?.Invoke(target, attackData);
 
-            if(playEffect)
+            if (playEffect)
             {
                 Vector3 offset = new Vector3(attackOffset.x * unitFSMData.forwardDirection, attackOffset.y, 0f);
                 attackData.GetFeedbackData(EAttackAttribute.Normal).hitEffects.
                     ForEach(effect => _ = new PlayEffect(effect, target.transform.position + offset, unitFSMData.forwardDirection));
                 _ = new PlaySound(attackData.GetFeedbackData(EAttackAttribute.Normal).hitSounds);
+                
+                attackData.GetFeedbackData(attackData.attackAttribute).hitEffects.
+                    ForEach(effect => _ = new PlayEffect(effect, target.transform.position + offset, unitFSMData.forwardDirection));
+                _ = new PlaySound(attackData.GetFeedbackData(attackData.attackAttribute).hitSounds);
             }
         }
 

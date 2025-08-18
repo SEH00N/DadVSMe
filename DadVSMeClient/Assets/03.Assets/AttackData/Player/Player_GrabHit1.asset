@@ -22,4 +22,14 @@ MonoBehaviour:
     - key: VFX_Blood1
     attackSounds: []
     hitSounds: []
+  - attackAttribute: 1
+    hitEffects:
+    - key: VFX_Explosion
+    attackSounds: []
+    hitSounds: []
+  - attackAttribute: 2
+    hitEffects:
+    - key: VFX_Explosion
+    attackSounds: []
+    hitSounds: []
   attackFeedback: 5

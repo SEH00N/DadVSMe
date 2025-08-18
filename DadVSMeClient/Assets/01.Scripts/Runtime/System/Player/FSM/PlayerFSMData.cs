@@ -20,7 +20,7 @@ namespace DadVSMe.Players.FSM
 
         public float maxAngerGauge;
         [HideInInspector] public float currentAngerGauge;
-        [HideInInspector] public float angerTime;
+        public float angerTime;
         [HideInInspector] public bool isAnger;
 
         public IAIData Initialize()

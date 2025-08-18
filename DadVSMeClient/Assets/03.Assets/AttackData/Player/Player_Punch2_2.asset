@@ -17,7 +17,34 @@ MonoBehaviour:
   attackAttribute: 1
   feedbackDatas:
   - attackAttribute: 0
-    hitEffects: []
-    attackSounds: []
-    hitSounds: []
+    hitEffects:
+    - key: VFX_Impact1
+    - key: VFX_Blood1
+    attackSounds:
+    - key: sfx_swing_hard_0
+    - key: sfx_swing_hard_1
+    hitSounds:
+    - key: sfx_punch_hard_0
+    - key: sfx_punch_hard_1
+    - key: sfx_punch_hard_2
+  - attackAttribute: 1
+    hitEffects:
+    - key: VFX_Explosion
+    attackSounds:
+    - key: sfx_swing_hard_0
+    - key: sfx_swing_hard_1
+    hitSounds:
+    - key: sfx_punch_hard_0
+    - key: sfx_punch_hard_1
+    - key: sfx_punch_hard_2
+  - attackAttribute: 2
+    hitEffects:
+    - key: VFX_Explosion
+    attackSounds:
+    - key: sfx_swing_hard_0
+    - key: sfx_swing_hard_1
+    hitSounds:
+    - key: sfx_punch_hard_0
+    - key: sfx_punch_hard_1
+    - key: sfx_punch_hard_2
   attackFeedback: 2
