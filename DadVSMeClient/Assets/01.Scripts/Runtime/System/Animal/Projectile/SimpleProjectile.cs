@@ -26,7 +26,7 @@ namespace DadVSMe.Animals
 
         private void FixedUpdate()
         {
-            transform.Translate(Vector3.forward * (moveSpeed * Time.fixedDeltaTime));
+            transform.Translate(Vector3.up * (moveSpeed * Time.fixedDeltaTime), Space.Self);
         }
 
         private async UniTask DespawnAfterLifeTimeAsync()
