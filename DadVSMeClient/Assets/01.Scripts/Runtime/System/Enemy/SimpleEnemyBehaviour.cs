@@ -28,6 +28,7 @@ namespace DadVSMe.Enemies
             if(data is SimpleEnemyData simpleEnemyData == false)
                 return;
 
+            unit.FSMBrain.GetAIData<SimpleEnemyFSMData>().enemyType = simpleEnemyData.enemyType;
             if(simpleEnemyData.animalPrefab != null)
                 SpawnAnimalAsync(simpleEnemyData.animalPrefab, simpleEnemyData.animalEntityData).Forget();
         }
