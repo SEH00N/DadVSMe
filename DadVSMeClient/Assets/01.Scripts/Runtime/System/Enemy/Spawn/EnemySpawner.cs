@@ -49,7 +49,7 @@ namespace DadVSMe.Enemies
                 return;
             }
 
-            if (_enemyPrefab != null && _enemyPrefab.Initialized == false)
+            if (_enemyPrefab != null)
             {
                 try 
                 { 
@@ -218,16 +218,13 @@ namespace DadVSMe.Enemies
         {
             if(unitData == null) return;
 
-            if (_enemyPrefab.Initialized == false)
+            try 
+            { 
+                await _enemyPrefab.InitializeAsync().AttachExternalCancellation(token); 
+            }
+            catch (OperationCanceledException) 
             {
-                try 
-                { 
-                    await _enemyPrefab.InitializeAsync().AttachExternalCancellation(token); 
-                }
-                catch (OperationCanceledException) 
-                {
-                    return; 
-                }
+                return; 
             }
 
             Enemy enemy = PoolManager.Spawn<Enemy>(resourceName: _enemyPrefab);

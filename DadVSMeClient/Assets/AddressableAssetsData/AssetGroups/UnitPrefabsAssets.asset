@@ -1,0 +1,59 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: UnitPrefabsAssets
+  m_EditorClassIdentifier: 
+  m_GroupName: UnitPrefabsAssets
+  m_GUID: e82ee7701475945aba5f9f42add87b5f
+  m_SerializeEntries:
+  - m_GUID: 2051bdc91f8064bd7b554a55282e6ae0
+    m_Address: Mole
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 6da081ee492d54de6bf6ed6d99f10365
+    m_Address: Flamingo_Projectile
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 76b6c40db4a3b43039a0da715a3ac69d
+    m_Address: Racoon_Projectile
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c2d9d4d7335e7491b9ca86e16b706a9c
+    m_Address: Racoon
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c6f3f97147e7b45cb85e58866c0a25c8
+    m_Address: Flamingo
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e3f2cb39f43a34f03aac2b512ed57f59
+    m_Address: Mole_Projectile
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: cfd052ceeb2354823b4fa30d195a2e8a, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: aa88951b0bdb94287b62488d1a7f18f4, type: 2}
+    - {fileID: 11400000, guid: 6a61836346e13431fb856366d5ee917e, type: 2}

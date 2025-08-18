@@ -10,7 +10,7 @@ namespace DadVSMe
     {
         public PlayEffect(AddressableAsset<PoolableEffect> effect, Vector3 position, int forwardDirection)
         {
-            if(effect == null || string.IsNullOrEmpty(effect.Key) || effect.Initialized == false)
+            if(effect == null || string.IsNullOrEmpty(effect.Key))
                 return;
 
             PoolableEffect poolableEffect = PoolManager.Spawn<PoolableEffect>(effect.Key);
@@ -29,7 +29,7 @@ namespace DadVSMe
                 return;
 
             AddressableAsset<AudioClip> sound = sounds.PickRandom();
-            if(sound == null || string.IsNullOrEmpty(sound.Key) || sound.Initialized == false)
+            if(sound == null || string.IsNullOrEmpty(sound.Key))
                 return;
 
             AudioManager.Instance.PlaySFX(sound);

@@ -10,10 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ae6177c65c6cad34f94deedaf3c4f667, type: 3}
-  m_Name: KidData_Butt
+  m_Name: SimpleEnemy_Shooting_0
   m_EditorClassIdentifier: 
-  enemyType: 0
+  enemyType: 1
+  animalPrefab:
+    key: Flamingo
+  animalEntityData: {fileID: 11400000, guid: 52f06d6e2e5144591a3260f4e3163d82, type: 2}
   hatSprite: {fileID: 5659188192116038605, guid: 6e0cb63023a864f8a9896751a7ad3f25, type: 3}
   clothesSprite: {fileID: 5877746896114180664, guid: 6219640001d114a1d86cbc535b17c0a5, type: 3}
-  useBodyColorOverride: 1
+  useBodyColorOverride: 0
   bodyColorOverride: {r: 1, g: 0.9491426, b: 0, a: 1}

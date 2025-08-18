@@ -50,11 +50,13 @@ namespace DadVSMe.Entities
             transform.position = new Vector3(transform.position.x, transform.position.y, currentDepth);
         }
 
+        public void AddChildSortingOrderResolver(Entity child) => AddChildSortingOrderResolver(child.sortingOrderResolver);
         public void AddChildSortingOrderResolver(EntitySortingOrderResolver child)
         {
             sortingOrderResolver.AddChild(child);
         }
 
+        public void RemoveChildSortingOrderResolver(Entity child) => RemoveChildSortingOrderResolver(child.sortingOrderResolver);
         public void RemoveChildSortingOrderResolver(EntitySortingOrderResolver child)
         {
             sortingOrderResolver.RemoveChild(child);

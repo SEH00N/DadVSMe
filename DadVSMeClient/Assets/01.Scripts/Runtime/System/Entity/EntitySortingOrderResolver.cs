@@ -10,12 +10,14 @@ namespace DadVSMe.Entities
         [SerializeField] EntitySortingOrderProvider entitySortingOrderProvider = null;
         [SerializeField] List<Collider2D> resolverColliders = null;
         private HashSet<EntitySortingOrderProvider> overlappedSortingOrderProviders = null;
+        private HashSet<EntitySortingOrderProvider> childSortingOrderProviders = null;
         
         private EntitySortingOrderResolver parent = null;
 
         private void Awake()
         {
             overlappedSortingOrderProviders = new HashSet<EntitySortingOrderProvider>();
+            childSortingOrderProviders = new HashSet<EntitySortingOrderProvider>();
             parent = null;
         }
         
@@ -39,6 +41,9 @@ namespace DadVSMe.Entities
             if(overlappedSortingOrderProviders.Contains(otherSortingOrderProvider) == true)
                 return;
 
+            if(childSortingOrderProviders.Contains(otherSortingOrderProvider) == true)
+                return;
+
             AddProvider(otherSortingOrderProvider);
             ReorderSortingOrder(otherSortingOrderProvider);
         }
@@ -60,6 +65,9 @@ namespace DadVSMe.Entities
                 return;
             }
 
+            if(childSortingOrderProviders.Contains(otherSortingOrderProvider) == true)
+                return;
+
             RemoveProvider(otherSortingOrderProvider);
             ReorderSortingOrder(otherSortingOrderProvider);
         }
@@ -72,6 +80,8 @@ namespace DadVSMe.Entities
             if(overlappedSortingOrderProviders.Contains(child.entitySortingOrderProvider))
                 RemoveProvider(child.entitySortingOrderProvider);
 
+            childSortingOrderProviders.Add(child.entitySortingOrderProvider);
+
             entitySortingOrderProvider.OnSortingOrderChangedEvent -= child.entitySortingOrderProvider.SetSortingOrder;
             entitySortingOrderProvider.OnSortingOrderChangedEvent += child.entitySortingOrderProvider.SetSortingOrder;
 
@@ -80,6 +90,8 @@ namespace DadVSMe.Entities
 
         public void RemoveChild(EntitySortingOrderResolver child)
         {
+            childSortingOrderProviders.Remove(child.entitySortingOrderProvider);
+
             entitySortingOrderProvider.OnSortingOrderChangedEvent -= child.entitySortingOrderProvider.SetSortingOrder;
             child.entitySortingOrderProvider.SetSortingOrder(0);
             child.parent = null;

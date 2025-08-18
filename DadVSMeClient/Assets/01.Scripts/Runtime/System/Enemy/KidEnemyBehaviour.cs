@@ -8,14 +8,14 @@ namespace DadVSMe.Enemies
     {
         private static readonly Color DefaultBodyColor = new Color(0.9960784f, 0.8f, 0.9960784f, 1);
 
-        [SerializeField] Enemy enemy = null;
+        [SerializeField] Unit unit = null;
         [SerializeField] List<SpriteRenderer> bodyRenderers = null;
         [SerializeField] SpriteRenderer hatRenderer = null;
         [SerializeField] SpriteRenderer clothesRenderer = null;
 
         private void Awake()
         {
-            enemy.OnInitializedEvent += InitializeInternal;
+            unit.OnInitializedEvent += InitializeInternal;
         }
 
         private void InitializeInternal(IEntityData data)

@@ -2580,7 +2580,7 @@ GameObject:
   - component: {fileID: 3897684068023970099}
   - component: {fileID: 4518340953437237913}
   - component: {fileID: 6113472226918677138}
-  m_Layer: 8
+  m_Layer: 7
   m_Name: SortingOrderResolver
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4955,7 +4955,7 @@ GameObject:
   - component: {fileID: 3227234305585924124}
   - component: {fileID: 6501284293599423143}
   - component: {fileID: 4682551387214664710}
-  m_Layer: 8
+  m_Layer: 6
   m_Name: SortingOrderProvider
   m_TagString: EntitySortingOrderProvider
   m_Icon: {fileID: 0}
@@ -8736,6 +8736,7 @@ MonoBehaviour:
         groundPositionY: 0
         isFloat: 0
         isLie: 0
+        isDie: 0
         hitAttribute: 0
         attackAttribute: 0
     - rid: 3777565259024040135

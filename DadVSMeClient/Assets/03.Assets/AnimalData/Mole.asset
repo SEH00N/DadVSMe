@@ -9,11 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dea69d41f90c6ea4fa55c27c1d60c145, type: 3}
-  m_Name: AddressableAssetGroupSortSettings
+  m_Script: {fileID: 11500000, guid: 11efeab92ac2643858b858223dee1819, type: 3}
+  m_Name: Mole
   m_EditorClassIdentifier: 
-  sortOrder:
-  - e82ee7701475945aba5f9f42add87b5f
-  - 97bbcab35973a4ddcb352852bac52dab
-  - d7aa46afbc5354d2f93fcf9b56df0602
-  - 9249e757cc3c04767b44cb815a980850
+  projectilePrefab:
+    key: Mole_Projectile
