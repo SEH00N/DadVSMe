@@ -40,7 +40,7 @@ namespace DadVSMe.Entities.FSM
                     continue;
 
                 bool result = true;
-                float sqrDistance = (pivot.position - enemy.transform.position).sqrMagnitude;
+                float sqrDistance = ((Vector2)pivot.position - (Vector2)enemy.transform.position).sqrMagnitude;
                 result &= sqrDistance < distance * distance;
 
                 if(checkFloat)
