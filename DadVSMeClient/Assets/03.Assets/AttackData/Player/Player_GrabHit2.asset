@@ -15,4 +15,9 @@ MonoBehaviour:
   damage: 10
   isRangeAttack: 0
   attackAttribute: 0
+  feedbackDatas:
+  - attackAttribute: 0
+    hitEffects: []
+    attackSounds: []
+    hitSounds: []
   attackFeedback: 6

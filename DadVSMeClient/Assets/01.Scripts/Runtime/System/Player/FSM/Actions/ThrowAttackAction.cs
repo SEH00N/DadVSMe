@@ -9,7 +9,6 @@ namespace DadVSMe.Players.FSM
     {
         [Space(10f)]
         [SerializeField] AttackDataBase throwAttackData = null;
-        [SerializeField] AttackDataBase attackData = null;
 
         [Space(10f)]
         [SerializeField] Collider2D defaultSortingOrderResolverCollider = null;

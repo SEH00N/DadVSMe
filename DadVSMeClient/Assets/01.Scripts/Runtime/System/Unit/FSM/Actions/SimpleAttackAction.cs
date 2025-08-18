@@ -5,8 +5,6 @@ namespace DadVSMe.Entities.FSM
 {
     public class SimpleAttackAction : AttackActionBase
     {
-        
-        [SerializeField] AttackDataBase attackData = null;
 
         [Space(10f)]
         [SerializeField] bool checkHorizontalRange = true;

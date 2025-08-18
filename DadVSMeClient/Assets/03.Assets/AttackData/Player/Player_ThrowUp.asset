@@ -15,5 +15,10 @@ MonoBehaviour:
   damage: 10
   isRangeAttack: 1
   attackAttribute: 0
+  feedbackDatas:
+  - attackAttribute: 0
+    hitEffects: []
+    attackSounds: []
+    hitSounds: []
   juggleForce: 25
   juggleDirection: {x: 0, y: 1}

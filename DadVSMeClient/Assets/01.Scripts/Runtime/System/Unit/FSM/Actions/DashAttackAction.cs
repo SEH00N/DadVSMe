@@ -9,9 +9,6 @@ namespace DadVSMe.Entities.FSM
         [Space(10f)]
         [SerializeField] float speed = 10f;
         [SerializeField] bool moveStopping = false;
-
-        [Space(10f)]
-        [SerializeField] AttackDataBase attackData = null;
         
         [Space(10f)]
         [SerializeField] bool checkHorizontalRange = true;

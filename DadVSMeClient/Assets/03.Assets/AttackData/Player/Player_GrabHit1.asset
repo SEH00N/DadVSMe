@@ -15,4 +15,11 @@ MonoBehaviour:
   damage: 10
   isRangeAttack: 0
   attackAttribute: 1
+  feedbackDatas:
+  - attackAttribute: 0
+    hitEffects:
+    - key: VFX_Impact2
+    - key: VFX_Blood1
+    attackSounds: []
+    hitSounds: []
   attackFeedback: 5

@@ -1,7 +1,9 @@
+using System;
 using System.Collections.Generic;
 using Cysharp.Threading.Tasks;
 using H00N.AI.FSM;
 using H00N.Resources.Addressables;
+using Mono.Cecil.Cil;
 using UnityEngine;
 
 namespace DadVSMe.Entities.FSM
@@ -13,6 +15,8 @@ namespace DadVSMe.Entities.FSM
         [SerializeField] List<AddressableAsset<AudioClip>> attackSounds = new List<AddressableAsset<AudioClip>>();
         [SerializeField] List<AddressableAsset<AudioClip>> hitSounds = new List<AddressableAsset<AudioClip>>();
 
+        [SerializeField] protected AttackDataBase attackData = null;
+
         protected EntityAnimator entityAnimator = null;
         protected UnitFSMData unitFSMData = null;
 
@@ -21,10 +25,16 @@ namespace DadVSMe.Entities.FSM
             base.Init(brain, state);
             entityAnimator = brain.GetComponent<EntityAnimator>();
             unitFSMData = brain.GetAIData<UnitFSMData>();
+            
+            foreach (EAttackAttribute attackAttribute in Enum.GetValues(typeof(EAttackAttribute)))
+            {
+                if (attackData.GetFeedbackData(attackAttribute) == null)
+                    continue;
 
-            hitEffects.ForEach(effect => effect.InitializeAsync().Forget());
-            attackSounds.ForEach(sound => sound.InitializeAsync().Forget());
-            hitSounds.ForEach(sound => sound.InitializeAsync().Forget());
+                attackData.GetFeedbackData(attackAttribute).hitEffects.ForEach(effect => effect.InitializeAsync().Forget());
+                attackData.GetFeedbackData(attackAttribute).attackSounds.ForEach(sound => sound.InitializeAsync().Forget());
+                attackData.GetFeedbackData(attackAttribute).hitSounds.ForEach(sound => sound.InitializeAsync().Forget());
+            }
         }
 
         public override void EnterState()
@@ -34,7 +44,7 @@ namespace DadVSMe.Entities.FSM
             entityAnimator.RemoveAnimationEventListener(EEntityAnimationEventType.Trigger, HandleAnimationTriggerEvent);
             entityAnimator.AddAnimationEventListener(EEntityAnimationEventType.Trigger, HandleAnimationTriggerEvent);
 
-            _ = new PlaySound(attackSounds);
+            _ = new PlaySound(attackData.GetFeedbackData(EAttackAttribute.Normal).attackSounds);
         }
 
         public override void ExitState()
@@ -59,8 +69,9 @@ namespace DadVSMe.Entities.FSM
             if(playEffect)
             {
                 Vector3 offset = new Vector3(attackOffset.x * unitFSMData.forwardDirection, attackOffset.y, 0f);
-                hitEffects.ForEach(effect => _ = new PlayEffect(effect, target.transform.position + offset, unitFSMData.forwardDirection));
-                _ = new PlaySound(hitSounds);
+                attackData.GetFeedbackData(EAttackAttribute.Normal).hitEffects.
+                    ForEach(effect => _ = new PlayEffect(effect, target.transform.position + offset, unitFSMData.forwardDirection));
+                _ = new PlaySound(attackData.GetFeedbackData(EAttackAttribute.Normal).hitSounds);
             }
         }
 

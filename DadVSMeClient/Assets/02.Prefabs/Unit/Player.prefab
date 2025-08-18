@@ -2247,8 +2247,8 @@ MonoBehaviour:
   - key: sfx_punch_small_1
   - key: sfx_punch_small_2
   - key: sfx_punch_small_3
-  throwAttackData: {fileID: 11400000, guid: dc154843a25434c55949ab04d368eaf5, type: 2}
   attackData: {fileID: 11400000, guid: 3ba68045f9992456cb3437d118b707fb, type: 2}
+  throwAttackData: {fileID: 11400000, guid: dc154843a25434c55949ab04d368eaf5, type: 2}
   defaultSortingOrderResolverCollider: {fileID: 4518340953437237913}
   grabbedSortingOrderResolverCollider: {fileID: 6113472226918677138}
 --- !u!114 &7576988775062164614
@@ -2392,9 +2392,9 @@ MonoBehaviour:
   hitEffects: []
   attackSounds: []
   hitSounds: []
+  attackData: {fileID: 11400000, guid: b7c75bbdc4ae84a42acdfa9fbe76c8a1, type: 2}
   speed: 13
   moveStopping: 0
-  attackData: {fileID: 11400000, guid: b7c75bbdc4ae84a42acdfa9fbe76c8a1, type: 2}
   checkHorizontalRange: 1
   attackHorizontalRange: 3
   checkVerticalRange: 0
@@ -2993,8 +2993,8 @@ MonoBehaviour:
   - key: sfx_swing_small_2
   - key: sfx_swing_small_3
   hitSounds: []
-  throwAttackData: {fileID: 11400000, guid: aeb7adec60dfc493b98766a11566c0c1, type: 2}
   attackData: {fileID: 11400000, guid: a890338b99f7d46b3b43c5209f317f2a, type: 2}
+  throwAttackData: {fileID: 11400000, guid: aeb7adec60dfc493b98766a11566c0c1, type: 2}
   defaultSortingOrderResolverCollider: {fileID: 4518340953437237913}
   grabbedSortingOrderResolverCollider: {fileID: 6113472226918677138}
 --- !u!114 &4578853846741598147
@@ -4443,9 +4443,9 @@ MonoBehaviour:
   hitEffects: []
   attackSounds: []
   hitSounds: []
+  attackData: {fileID: 11400000, guid: ae337a4b116814859821a9841953c38f, type: 2}
   speed: 15
   moveStopping: 1
-  attackData: {fileID: 11400000, guid: ae337a4b116814859821a9841953c38f, type: 2}
   checkHorizontalRange: 1
   attackHorizontalRange: 3
   checkVerticalRange: 0
@@ -7040,6 +7040,7 @@ MonoBehaviour:
   - key: VFX_Blood1
   attackSounds: []
   hitSounds: []
+  attackData: {fileID: 11400000, guid: c23da38a1988b41cf99c9f497d73c23b, type: 2}
   grabAttackDatas:
   - simpleAttackData: {fileID: 11400000, guid: c23da38a1988b41cf99c9f497d73c23b, type: 2}
     animationName: GrabAttack1
@@ -7470,8 +7471,8 @@ MonoBehaviour:
   - key: sfx_swing_small_2
   - key: sfx_swing_small_3
   hitSounds: []
-  throwAttackData: {fileID: 11400000, guid: aeb7adec60dfc493b98766a11566c0c1, type: 2}
   attackData: {fileID: 11400000, guid: 859a747e670e149ccb5bcde762ae3ff9, type: 2}
+  throwAttackData: {fileID: 11400000, guid: aeb7adec60dfc493b98766a11566c0c1, type: 2}
   defaultSortingOrderResolverCollider: {fileID: 4518340953437237913}
   grabbedSortingOrderResolverCollider: {fileID: 6113472226918677138}
 --- !u!114 &151007156211777427
