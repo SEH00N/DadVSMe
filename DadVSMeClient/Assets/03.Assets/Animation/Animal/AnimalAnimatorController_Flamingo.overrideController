@@ -1,0 +1,15 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!221 &22100000
+AnimatorOverrideController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: AnimalAnimatorController_Flamingo
+  m_Controller: {fileID: 9100000, guid: 654e858387c934badb976b441b24cb8f, type: 2}
+  m_Clips:
+  - m_OriginalClip: {fileID: 7400000, guid: bfcf43015b93b400d8726d299ddd544e, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: fb6bde131682b4cc98689b5b07bac141, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 3163c0004739042789e7a7fc720c7d8b, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: bcb7e0274c6b147a193be0a9cd2411ed, type: 2}
