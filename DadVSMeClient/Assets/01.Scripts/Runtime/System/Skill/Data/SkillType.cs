@@ -11,6 +11,7 @@ namespace DadVSMe
         GuidedOrb,
         MaxHPUp,
         MoveSpeedUp,
-
+        Bloodsucking,
+        
     }
 }
