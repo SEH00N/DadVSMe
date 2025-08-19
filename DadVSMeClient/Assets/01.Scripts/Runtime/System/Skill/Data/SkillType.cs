@@ -12,6 +12,7 @@ namespace DadVSMe
         MaxHPUp,
         MoveSpeedUp,
         Bloodsucking,
+        ItemMagnet,
         
     }
 }
