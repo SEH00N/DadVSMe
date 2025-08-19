@@ -485,7 +485,7 @@ PrefabInstance:
     - target: {fileID: 2796991845617505701, guid: fdaac3c135b8043cf9dca074decb249b, type: 3}
       propertyPath: enemyData
       value: 
-      objectReference: {fileID: 11400000, guid: 3088f3dd092fb4446b1e08fa830c4f3a, type: 2}
+      objectReference: {fileID: 11400000, guid: c5eefdc20fe0f4895862ff8e07f72851, type: 2}
     - target: {fileID: 3646841377508265410, guid: fdaac3c135b8043cf9dca074decb249b, type: 3}
       propertyPath: m_Name
       value: ButtEnemy
@@ -5855,7 +5855,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.19, y: 5.85, z: 1}
-  m_LocalScale: {x: 100, y: 15, z: 1}
+  m_LocalScale: {x: 100, y: 100, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 539103526}
@@ -7582,7 +7582,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.19, y: -2.71, z: 0}
-  m_LocalScale: {x: 100, y: 15, z: 1}
+  m_LocalScale: {x: 100, y: 100, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 539103526}
