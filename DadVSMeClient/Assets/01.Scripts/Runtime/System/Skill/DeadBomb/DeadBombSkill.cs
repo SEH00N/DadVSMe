@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using DadVSMe.Entities;
+using DadVSMe.Players.FSM;
 using H00N.AI.FSM;
 using H00N.Resources.Addressables;
 using UnityEngine;
@@ -47,25 +48,29 @@ namespace DadVSMe
 
         private void OnAttackTarget(Unit target, IAttackData data)
         {
+            FSMBrain playerBrain = ownerComponent.GetComponent<FSMBrain>();
+            if (playerBrain.GetAIData<PlayerFSMData>().isAnger == false)
+                return;
+
             if (target.TryGetComponent<UnitHealth>(out UnitHealth targetHealth))
-            {
-                if (targetHealth.CurrentHP <= 0f)
                 {
-                    Vector2 spawnPoint = target.transform.position;
-                    Collider2D[] cols = Physics2D.OverlapCircleAll(spawnPoint, attackRadius);
-
-                    foreach (var col in cols)
+                    if (targetHealth.CurrentHP <= 0f)
                     {
-                        if (col.gameObject == ownerComponent.gameObject)
-                            continue;
+                        Vector2 spawnPoint = target.transform.position;
+                        Collider2D[] cols = Physics2D.OverlapCircleAll(spawnPoint, attackRadius);
 
-                        if (col.gameObject.TryGetComponent<UnitHealth>(out UnitHealth unitHealth))
+                        foreach (var col in cols)
                         {
-                            unitHealth.Attack(ownerComponent.GetComponent<Unit>(), attackData);
+                            if (col.gameObject == ownerComponent.gameObject)
+                                continue;
+
+                            if (col.gameObject.TryGetComponent<UnitHealth>(out UnitHealth unitHealth))
+                            {
+                                unitHealth.Attack(ownerComponent.GetComponent<Unit>(), attackData);
+                            }
                         }
                     }
                 }
-            }
 
             _ = new PlayEffect(bombEffect, ownerComponent.transform.position, 1);
             _ = new PlaySound(bombSound);
