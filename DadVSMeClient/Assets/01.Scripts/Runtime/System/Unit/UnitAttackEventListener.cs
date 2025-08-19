@@ -16,7 +16,7 @@ namespace DadVSMe.Entities
 
         public void OnAttack(Unit attacker, IAttackData attackData)
         {
-            int forwardDirection = attacker.transform.position.x > transform.position.x ? 1 : -1;
+            int forwardDirection = attacker.transform.position.x > fsmData.unit.transform.position.x ? 1 : -1;
             fsmData.forwardDirection = forwardDirection;
 
             float currentLossyScaleX = fsmData.unit.transform.lossyScale.x;
