@@ -1,4 +1,5 @@
 using System;
+using Cysharp.Threading.Tasks;
 using DadVSMe.Entities;
 using DadVSMe.Entities.FSM;
 using DadVSMe.Players.FSM;
@@ -18,6 +19,8 @@ namespace DadVSMe
 
         public AttackBlastSkill(AddressableAsset<AttackBlast> prefab)
         {
+            prefab.InitializeAsync().Forget();
+            
             this.prefab = prefab;
             spawnOffset = new Vector2(2.5f, 0f);
         }

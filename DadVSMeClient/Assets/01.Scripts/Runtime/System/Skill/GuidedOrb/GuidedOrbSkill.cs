@@ -1,4 +1,5 @@
 using System;
+using Cysharp.Threading.Tasks;
 using DadVSMe.Entities;
 using H00N.Resources.Addressables;
 using H00N.Resources.Pools;
@@ -10,14 +11,18 @@ namespace DadVSMe
     {
         private AddressableAsset<GuidedOrb> prefab = null;
 
-        private float orbSpawnRadius = 3f;
+        private float orbSpawnRadius;
         private float originCooltime;
-        private int spawnCount = 1;
+        private int spawnCount;
 
-        public GuidedOrbSkill(float cooltime, AddressableAsset<GuidedOrb> prefab) : base(cooltime)
+        public GuidedOrbSkill(AddressableAsset<GuidedOrb> prefab, float cooltime) : base(cooltime)
         {
+            prefab.InitializeAsync().Forget();
+
             this.prefab = prefab;
             originCooltime = cooltime;
+            orbSpawnRadius = 3f;
+            spawnCount = 2;
         }
 
         public override void Execute()
@@ -59,8 +64,6 @@ namespace DadVSMe
                 guidedOrb.SetTarget(target);
                 guidedOrb.Launch();
             }
-
-            LevelUp();
         }
 
         public override void LevelUp()

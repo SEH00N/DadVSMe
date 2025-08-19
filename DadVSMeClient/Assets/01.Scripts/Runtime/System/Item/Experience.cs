@@ -18,7 +18,7 @@ namespace DadVSMe
 
         public override void Use(Unit user)
         {
-            user.GetComponent<UnitSkillComponent>().GetExperience(this);
+            //user.GetComponent<UnitSkillComponent>().GetExperience(this);
             PoolManager.Despawn(poolReference);
         }
     }

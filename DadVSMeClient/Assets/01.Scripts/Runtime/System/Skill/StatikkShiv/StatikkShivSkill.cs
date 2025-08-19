@@ -24,6 +24,8 @@ namespace DadVSMe
         public StatikkShivSkill(AddressableAsset<StatikkShivLighting> prefab,
             float checkTime = 8f, int targetAttackCount = 3, int maxAttackTargetNum = 5, float damage = 5f) : base()
         {
+            prefab.InitializeAsync().Forget();
+
             this.prefab = prefab;
             this.checkTime = checkTime;
             this.targetAttackCount = targetAttackCount;

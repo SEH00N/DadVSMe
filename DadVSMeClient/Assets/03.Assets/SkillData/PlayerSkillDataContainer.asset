@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b11521fac2e64280826170c0c522f02, type: 3}
+  m_Name: PlayerSkillDataContainer
+  m_EditorClassIdentifier: 
+  datas:
+    keys: 00000000010000000200000003000000040000000500000006000000
+    values:
+    - {fileID: 11400000, guid: 321677823ffa44fe3b2e17d75d4b2439, type: 2}
+    - {fileID: 11400000, guid: ce3f56434f0c8466a92f2609ae906b51, type: 2}
+    - {fileID: 11400000, guid: ba3104a7322df4915bf872a5fda43f57, type: 2}
+    - {fileID: 11400000, guid: 6cd98639ab7524bdfb4c2299540084de, type: 2}
+    - {fileID: 11400000, guid: d6ad750bece9f4b14a9e65f899598dda, type: 2}
+    - {fileID: 11400000, guid: 3ac7a8ccde4e94241b6a3c6ef2656bd3, type: 2}
+    - {fileID: 11400000, guid: 29056185d04ee446b9569493f01c1d9d, type: 2}

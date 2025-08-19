@@ -2327,7 +2327,6 @@ GameObject:
   - component: {fileID: 8522405111466415502}
   - component: {fileID: 6169808395141815018}
   - component: {fileID: 570379110779555857}
-  - component: {fileID: 6117938300054333892}
   m_Layer: 0
   m_Name: Kid
   m_TagString: Enemy
@@ -2374,7 +2373,7 @@ MonoBehaviour:
   fsmBrain: {fileID: 6582178051482799858}
   unitHealth: {fileID: 4688005719821483370}
   unitAttackEventListener: {fileID: 7031250399494906082}
-  unitSkillComponent: {fileID: 6117938300054333892}
+  unitSkillComponent: {fileID: 0}
   unitRigidbody: {fileID: 8522405111466415502}
   onAttackTargetEvent:
     m_PersistentCalls:
@@ -2387,6 +2386,8 @@ MonoBehaviour:
       m_Calls: []
   enemyDetector: {fileID: 5256345900857985724}
   grabState: {fileID: 1729459063318387908}
+  experiencePrefab:
+    key: 
   enemyData: {fileID: 0}
 --- !u!114 &6564578028461733982
 MonoBehaviour:
@@ -2636,25 +2637,6 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
---- !u!114 &6117938300054333892
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6945144695061183823}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4ac7311ac0ae245a39789789efa20658, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  attackBlastPrefab:
-    key: 
-  guidedOrbPrefab:
-    key: 
-  statikkShivLightingPrefab:
-    key: 
-  attackData: {fileID: 0}
 --- !u!1 &7358082092682913809
 GameObject:
   m_ObjectHideFlags: 0

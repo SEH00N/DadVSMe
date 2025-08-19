@@ -8,25 +8,17 @@ namespace DadVSMe
 {
     public class UnitSkillComponent : MonoBehaviour
     {
-        [SerializeField] AddressableAsset<AttackBlast> attackBlastPrefab = null;
-        [SerializeField] AddressableAsset<GuidedOrb> guidedOrbPrefab = null;
-        [SerializeField] AddressableAsset<StatikkShivLighting> statikkShivLightingPrefab = null;
-        [SerializeField] AttackDataBase attackData;
+        [SerializeField] private SkillDataContainer skillDataContainer;
+        public SkillDataContainer SkillDataContainer => skillDataContainer;
+
         private Dictionary<Type, UnitSkill> skillContainer;
-
-        private float currentExperience;
-        public float CurrentExperience => currentExperience;
-
 
         public virtual void Initialize()
         {
             skillContainer = new();
-
-            //await statikkShivLightingPrefab.InitializeAsync();
-            RegistSkill<FirePunchSkill>(new FirePunchSkill());
         }
 
-        public void RegistSkill<T>(T skill) where T : UnitSkill
+        public void RegistSkill(UnitSkill skill)
         {
             Type skillType = skill.GetType();
 
@@ -52,11 +44,6 @@ namespace DadVSMe
             {
 
             }
-        }
-
-        public void GetExperience(Experience exp)
-        {
-            currentExperience += exp.Amount;
         }
     }
 }
