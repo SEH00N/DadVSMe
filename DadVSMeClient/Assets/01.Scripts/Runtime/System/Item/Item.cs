@@ -3,8 +3,8 @@ using UnityEngine;
 
 namespace DadVSMe
 {
-    public abstract class Item : MonoBehaviour
+    public abstract class Item : MonoBehaviour, IInteractable
     {
-        public abstract void Use(Unit user);
+        public abstract void Interact(Entity interactor);
     }
 }

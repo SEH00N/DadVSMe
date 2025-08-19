@@ -23,8 +23,20 @@ namespace DadVSMe.Players.FSM
         public float angerTime;
         [HideInInspector] public bool isAnger;
 
+        public float baseLevelUpXP = 3f;
+        public float levelUpRatio = 1.7f;
+        [HideInInspector] public float levelUpExp;
+        [HideInInspector] public float currentExp;
+        [HideInInspector] public int currentLevel = 1;
+
         public IAIData Initialize()
         {
+            levelUpExp = baseLevelUpXP;
+            currentLevel = 1;
+            currentExp = 0;
+            currentAngerGauge = 0;
+            isAnger = false;
+
             return this;
         }
     }

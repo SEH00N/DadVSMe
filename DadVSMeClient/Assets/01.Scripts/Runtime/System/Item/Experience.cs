@@ -1,4 +1,5 @@
 using DadVSMe.Entities;
+using DadVSMe.Players;
 using H00N.Resources.Pools;
 using UnityEngine;
 
@@ -16,9 +17,12 @@ namespace DadVSMe
             poolReference = GetComponent<PoolReference>();
         }
 
-        public override void Use(Unit user)
+        public override void Interact(Entity interactor)
         {
-            //user.GetComponent<UnitSkillComponent>().GetExperience(this);
+            Player player = interactor as Player;
+            if (player != null)
+                player.GetExp(amount);
+                
             PoolManager.Despawn(poolReference);
         }
     }

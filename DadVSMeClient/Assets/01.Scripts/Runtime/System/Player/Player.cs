@@ -2,6 +2,7 @@ using Cysharp.Threading.Tasks;
 using DadVSMe.Entities;
 using DadVSMe.Players.FSM;
 using UnityEngine;
+using UnityEngine.Events;
 
 namespace DadVSMe.Players
 {
@@ -13,6 +14,8 @@ namespace DadVSMe.Players
         protected override RigidbodyType2D DefaultRigidbodyType => RigidbodyType2D.Dynamic;
 
         private PlayerFSMData playerFSMData = null;
+
+        public UnityEvent<int> onLevelUpEvent;
 
         // Debug
         private void Start()
@@ -68,7 +71,35 @@ namespace DadVSMe.Players
             onEndAngerEvent?.Invoke();
         }
 
-        #if UNITY_EDITOR
+        public void GetExp(int amount)
+        {
+            playerFSMData.currentExp += amount;
+
+            if (playerFSMData.levelUpExp <= playerFSMData.currentExp)
+            {
+                LevelUp();
+            }
+        }
+
+        public void LevelUp()
+        {
+            playerFSMData.currentLevel++;
+            playerFSMData.currentExp -= playerFSMData.levelUpExp;
+            playerFSMData.levelUpExp =
+                Mathf.RoundToInt(playerFSMData.baseLevelUpXP * Mathf.Pow(playerFSMData.levelUpRatio, playerFSMData.currentLevel - 1));
+
+            onLevelUpEvent?.Invoke(playerFSMData.currentLevel);
+        }
+
+        void OnTriggerEnter2D(Collider2D collision)
+        {
+            if (collision.gameObject.TryGetComponent<IInteractable>(out IInteractable interactable))
+            {
+                interactable.Interact(this);
+            }
+        }
+
+#if UNITY_EDITOR
         [ContextMenu("Set FSM State as Default State")]
         private void SetFSMStateAsDefaultState()
         {
