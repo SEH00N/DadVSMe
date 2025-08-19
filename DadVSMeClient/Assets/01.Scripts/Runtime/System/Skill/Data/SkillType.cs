@@ -13,6 +13,7 @@ namespace DadVSMe
         MoveSpeedUp,
         Bloodsucking,
         ItemMagnet,
+        DeadBomb,
         
     }
 }

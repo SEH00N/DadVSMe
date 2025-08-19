@@ -9,10 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 149ea374778fa4ac5bea16a60c77e24f, type: 3}
-  m_Name: ItemMagnetSkillData
+  m_Script: {fileID: 11500000, guid: 7501178f7cf3d436cb99bd9ba1e36677, type: 3}
+  m_Name: DeadBombAttackData
   m_EditorClassIdentifier: 
-  skillType: 8
-  checkRadius: 5
-  levelUpIncreaseRate: 3
-  magnetSpeedMultiplier: 10
+  damage: 5
+  isRangeAttack: 0
+  juggleForce: 15
+  juggleDirection: {x: 1, y: 0.9}
