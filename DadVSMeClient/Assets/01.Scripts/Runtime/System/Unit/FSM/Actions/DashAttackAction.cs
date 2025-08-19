@@ -11,10 +11,7 @@ namespace DadVSMe.Entities.FSM
         [SerializeField] bool moveStopping = false;
         
         [Space(10f)]
-        [SerializeField] bool checkHorizontalRange = true;
-        [SerializeField] float attackHorizontalRange = 3f;
-        [SerializeField] bool checkVerticalRange = true;
-        [SerializeField] float attackVerticalRange = 1f;
+        [SerializeField] UnitStateChecker unitStateChecker = null;
 
         private UnitMovement unitMovement = null;
 
@@ -46,35 +43,7 @@ namespace DadVSMe.Entities.FSM
             if(unitMovement.MovementVelocity.x == 0)
                 return;
 
-            int forwardDirection = unitFSMData.forwardDirection;
-            unitFSMData.enemies.ForEach(enemy => {
-                float targetDirection = enemy.transform.position.x - transform.position.x;
-                if(Mathf.Sign(targetDirection) != Mathf.Sign(forwardDirection))
-                    return;
-
-                if(checkHorizontalRange)
-                {
-                    if(Mathf.Abs(targetDirection) > attackHorizontalRange)
-                        return;
-                }
-
-                if(checkVerticalRange)
-                {
-                    if(Mathf.Abs(enemy.transform.position.y - transform.position.y) > attackVerticalRange)
-                        return;
-                }
-
-                if(enemy.FSMBrain.GetAIData<UnitFSMData>().isFloat)
-                    return;
-
-                if(enemy.FSMBrain.GetAIData<UnitFSMData>().isLie)
-                    return;
-
-                if(enemy.FSMBrain.GetAIData<UnitFSMData>().isDie)
-                    return;
-
-                AttackToTarget(enemy, attackData);
-            });
+            unitStateChecker.Check(unitFSMData.unit, unitFSMData.enemies, enemy => AttackToTarget(enemy, attackData));
         }
 
         public override void ExitState()

@@ -7,16 +7,7 @@ namespace DadVSMe.Entities.FSM
     public class EnemyStateDecision : FSMDecision
     {
         [SerializeField] Transform pivot = null;
-        [SerializeField] float distance = 3f;
-        [SerializeField] bool includeStaticEnemy = true;
-
-        [Space(10f)]
-        [SerializeField] bool checkFloat = false;
-        [SerializeField] bool isFloat = false;
-
-        [Space(10f)]
-        [SerializeField] bool checkLie = false;
-        [SerializeField] bool isLie = false;
+        [SerializeField] UnitStateChecker unitStateChecker = null;
 
         private UnitFSMData unitFSMData = null;
 
@@ -36,21 +27,10 @@ namespace DadVSMe.Entities.FSM
                 if(enemy == null)
                     continue;
 
-                if(enemy.StaticEntity && includeStaticEnemy == false)
+                if(unitStateChecker.Check(unitFSMData.unit, enemy, pivot) == false)
                     continue;
 
-                bool result = true;
-                float sqrDistance = ((Vector2)pivot.position - (Vector2)enemy.transform.position).sqrMagnitude;
-                result &= sqrDistance < distance * distance;
-
-                if(checkFloat)
-                    result &= enemy.FSMBrain.GetAIData<UnitFSMData>().isFloat == isFloat;
-
-                if(checkLie)
-                    result &= enemy.FSMBrain.GetAIData<UnitFSMData>().isLie == isLie;
-
-                if(result)
-                    return true;
+                return true;
             }
 
             return false;
@@ -66,7 +46,7 @@ namespace DadVSMe.Entities.FSM
                 return;
 
             Gizmos.color = Color.red;
-            Gizmos.DrawWireSphere(pivot.position, distance);
+            Gizmos.DrawWireCube(pivot.position, new Vector3(unitStateChecker.attackHorizontalDistance, unitStateChecker.attackVerticalDistance, 0f));
         }
         #endif
     }

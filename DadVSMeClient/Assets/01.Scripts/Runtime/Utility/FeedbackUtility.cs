@@ -39,10 +39,10 @@ namespace DadVSMe
         {
             Vector3 offset = new Vector3(attackOffset.x * forwardDirection, attackOffset.y, 0f);
 
-            attackData.GetFeedbackData(EAttackAttribute.Normal).hitEffects?.ForEach(effect => _ = new PlayEffect(effect, targetPosition + offset, forwardDirection));
+            attackData.GetFeedbackData(EAttackAttribute.Normal)?.hitEffects.ForEach(effect => _ = new PlayEffect(effect, targetPosition + offset, forwardDirection));
             _ = new PlaySound(attackData.GetFeedbackData(EAttackAttribute.Normal)?.hitSounds);
 
-            attackData.GetFeedbackData(attackAttribute).hitEffects?.ForEach(effect => _ = new PlayEffect(effect, targetPosition + offset, forwardDirection));
+            attackData.GetFeedbackData(attackAttribute)?.hitEffects.ForEach(effect => _ = new PlayEffect(effect, targetPosition + offset, forwardDirection));
             _ = new PlaySound(attackData.GetFeedbackData(attackAttribute)?.hitSounds);
         }
     }

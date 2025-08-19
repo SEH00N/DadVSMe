@@ -79,22 +79,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6582178051482799858, guid: 16129bf7803a2466f867a51ceea4c109, type: 3}
-      propertyPath: 'managedReferences[218235887893872959]'
-      value: DadVSMe DadVSMe.Enemies.FSM.ShooterEnemyFSMData
-      objectReference: {fileID: 0}
-    - target: {fileID: 6582178051482799858, guid: 16129bf7803a2466f867a51ceea4c109, type: 3}
-      propertyPath: 'managedReferences[218235887893872961]'
-      value: DadVSMe DadVSMe.Enemies.FSM.ShooterEnemyFSMData
-      objectReference: {fileID: 0}
-    - target: {fileID: 6582178051482799858, guid: 16129bf7803a2466f867a51ceea4c109, type: 3}
-      propertyPath: managedReferences[218235887893872959].animal
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 6582178051482799858, guid: 16129bf7803a2466f867a51ceea4c109, type: 3}
-      propertyPath: managedReferences[218235887893872961].animal
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 6945144695061183823, guid: 16129bf7803a2466f867a51ceea4c109, type: 3}
       propertyPath: m_Name
       value: ShooterEnemy
