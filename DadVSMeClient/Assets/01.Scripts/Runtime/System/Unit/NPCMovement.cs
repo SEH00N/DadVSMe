@@ -10,6 +10,8 @@ namespace DadVSMe.Entities
         private NavMeshAgent navMeshAgent;
         private UnitMovement unitMovement;
 
+        private NavMeshPath cachedPath = null;
+
         private bool isActive = false;
         public bool IsActive => isActive;
 
@@ -17,6 +19,7 @@ namespace DadVSMe.Entities
         {
             navMeshAgent = GetComponent<NavMeshAgent>();
             unitMovement = GetComponent<UnitMovement>();
+            cachedPath = new NavMeshPath();
         }
 
         private void Start()
@@ -30,7 +33,13 @@ namespace DadVSMe.Entities
             if(isActive == false)
                 return;
 
-            if (navMeshAgent.pathPending || navMeshAgent.hasPath == false || navMeshAgent.remainingDistance <= navMeshAgent.stoppingDistance)
+            bool isPathValid = 
+                navMeshAgent.pathPending || 
+                navMeshAgent.pathStatus == NavMeshPathStatus.PathInvalid ||
+                navMeshAgent.hasPath == false || 
+                navMeshAgent.remainingDistance <= navMeshAgent.stoppingDistance;
+
+            if (isPathValid)
             {
                 unitMovement.SetMovementVelocity(Vector2.zero);
                 return;
@@ -60,9 +69,8 @@ namespace DadVSMe.Entities
 
         public Vector2 GetValidDestination(Vector2 destination)
         {
-            NavMeshPath path = new NavMeshPath();
-            if (navMeshAgent.CalculatePath(destination, path) && path.corners.Length > 1)
-                return path.corners[^1];
+            if (navMeshAgent.CalculatePath(destination, cachedPath) && cachedPath.corners.Length > 1)
+                return cachedPath.corners[^1];
 
             return transform.position;
         }
