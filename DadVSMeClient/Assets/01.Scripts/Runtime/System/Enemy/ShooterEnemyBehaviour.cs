@@ -72,6 +72,7 @@ namespace DadVSMe.Enemies
         {
             await animalPrefab.InitializeAsync();
             animal = PoolManager.Spawn<Animal>(animalPrefab.Key);
+            animal.transform.position = animalFollowTarget.position;
             animal.Initialize(animalEntityData);
             animal.SetFollowTarget(animalFollowTarget);
 
