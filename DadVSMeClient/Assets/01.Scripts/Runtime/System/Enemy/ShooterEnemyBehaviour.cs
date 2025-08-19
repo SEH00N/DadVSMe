@@ -40,7 +40,7 @@ namespace DadVSMe.Enemies
             }
 
             shootTimer += Time.deltaTime;
-            if(shootTimer < shooterEnemyData.shootInterval)
+            if(shootTimer < shooterEnemyData.shootCooltime)
                 return;
 
             shootTimer = 0f;

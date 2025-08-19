@@ -8,7 +8,7 @@ namespace DadVSMe.Enemies.FSM
     {
         private const float UPDATE_INTERVAL = 0.1f;
 
-        [SerializeField] float stopDistance = 1f;
+        [SerializeField] float xPadding = 1f;
 
         private EnemyFSMData enemyFSMData = null;
         private NPCMovement npcMovement = null;
@@ -32,16 +32,14 @@ namespace DadVSMe.Enemies.FSM
         {
             base.UpdateState();
 
-            Vector2 direction = (Vector2)(enemyFSMData.player.transform.position - brain.transform.position);
-            if(direction.sqrMagnitude <= stopDistance * stopDistance)
-                return;
-
             updateTimer += Time.deltaTime;
             if(updateTimer < UPDATE_INTERVAL)
                 return;
 
             updateTimer = 0f;
-            npcMovement.SetDestination(enemyFSMData.player.transform.position);
+
+            Vector2 direction = (Vector2)(enemyFSMData.player.transform.position - brain.transform.position);
+            npcMovement.SetDestination(enemyFSMData.player.transform.position + new Vector3(xPadding * -Mathf.Sign(direction.x), 0f, 0f));
         }
 
         public override void ExitState()

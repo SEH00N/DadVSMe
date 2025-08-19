@@ -41,7 +41,10 @@ namespace DadVSMe.Enemies
         protected override void LateUpdate()
         {
             if (skipUpdate)
+            {
+                skipUpdate = false;
                 return;
+            }
 
             base.LateUpdate();
         }
