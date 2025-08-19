@@ -14,6 +14,9 @@ namespace DadVSMe
         [SerializeField] AttackDataBase attackData;
         private Dictionary<Type, UnitSkill> skillContainer;
 
+        private float currentExperience;
+        public float CurrentExperience => currentExperience;
+
 
         public virtual void Initialize()
         {
@@ -22,7 +25,7 @@ namespace DadVSMe
             //await statikkShivLightingPrefab.InitializeAsync();
             RegistSkill<FirePunchSkill>(new FirePunchSkill());
         }
-        
+
         public void RegistSkill<T>(T skill) where T : UnitSkill
         {
             Type skillType = skill.GetType();
@@ -49,6 +52,11 @@ namespace DadVSMe
             {
 
             }
+        }
+
+        public void GetExperience(Experience exp)
+        {
+            currentExperience += exp.Amount;
         }
     }
 }

@@ -1,8 +1,11 @@
 using System;
+using Cysharp.Threading.Tasks;
 using DadVSMe.Enemies.FSM;
 using DadVSMe.Entities;
 using DadVSMe.Players;
 using H00N.AI.FSM;
+using H00N.Resources.Addressables;
+using H00N.Resources.Pools;
 using UnityEngine;
 
 namespace DadVSMe.Enemies
@@ -14,6 +17,7 @@ namespace DadVSMe.Enemies
         [Header("Enemy")]
         [SerializeField] EnemyDetector enemyDetector = null;
         [SerializeField] FSMState grabState = null;
+        [SerializeField] AddressableAsset<Experience> experiencePrefab;
 
         [Header("Debug")]
         [SerializeField] EnemyDataBase enemyData = null;
@@ -31,11 +35,20 @@ namespace DadVSMe.Enemies
         {
             base.InitializeInternal(data);
             enemyDetector.Initialize();
+<<<<<<< Updated upstream
+=======
+
+            EnemyFSMData enemyFSMData = fsmBrain.GetAIData<EnemyFSMData>();
+            enemyFSMData.patrolMinRange = enemyData.patrolMinRange;
+            enemyFSMData.patrolMaxRange = enemyData.patrolMaxRange;
+
+            experiencePrefab.InitializeAsync().Forget();
+>>>>>>> Stashed changes
         }
 
         protected override void LateUpdate()
         {
-            if(skipUpdate)
+            if (skipUpdate)
                 return;
 
             base.LateUpdate();
@@ -59,6 +72,12 @@ namespace DadVSMe.Enemies
         {
             onDespawned?.Invoke(this);
             base.DespawnInternal();
+        }
+
+        public void SpawnExperience()
+        {
+            if(experiencePrefab != null)
+                PoolManager.Spawn(experiencePrefab);
         }
     }
 }

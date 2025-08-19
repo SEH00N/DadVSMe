@@ -30,5 +30,31 @@ MonoBehaviour:
     - key: sfx_punch_small_1
     - key: sfx_punch_small_2
     - key: sfx_punch_small_3
+  - attackAttribute: 1
+    hitEffects:
+    - key: VFX_Explosion
+    attackSounds:
+    - key: sfx_swing_small_0
+    - key: sfx_swing_small_1
+    - key: sfx_swing_small_2
+    - key: sfx_swing_small_3
+    hitSounds:
+    - key: sfx_punch_small_0
+    - key: sfx_punch_small_1
+    - key: sfx_punch_small_2
+    - key: sfx_punch_small_3
+  - attackAttribute: 2
+    hitEffects:
+    - key: VFX_CrazyHit
+    attackSounds:
+    - key: sfx_swing_small_0
+    - key: sfx_swing_small_1
+    - key: sfx_swing_small_2
+    - key: sfx_swing_small_3
+    hitSounds:
+    - key: sfx_punch_small_0
+    - key: sfx_punch_small_1
+    - key: sfx_punch_small_2
+    - key: sfx_punch_small_3
   juggleForce: 17.5
   juggleDirection: {x: -1, y: 1.5}
