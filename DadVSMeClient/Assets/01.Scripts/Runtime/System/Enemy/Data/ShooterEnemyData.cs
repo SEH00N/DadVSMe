@@ -10,5 +10,6 @@ namespace DadVSMe.Enemies
         [Header("Shooter Enemy")]
         public AddressableAsset<Animal> animalPrefab;
         public AnimalEntityData animalEntityData;
+        public float shootInterval = 1f;
     }
 }

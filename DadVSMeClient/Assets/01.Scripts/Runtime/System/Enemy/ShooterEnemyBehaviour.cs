@@ -16,17 +16,45 @@ namespace DadVSMe.Enemies
         [SerializeField] PoolReference poolReference = null;
         public PoolReference PoolReference => poolReference;
 
+        private UnitFSMData unitFSMData = null;
+        private EnemyFSMData enemyFSMData = null;
+        private ShooterEnemyData shooterEnemyData = null;
+
         private Animal animal = null;
+        private float shootTimer = 0f;
 
         private void Awake()
         {
             unit.OnInitializedEvent += InitializeInternal;
         }
 
+        private void Update()
+        {
+            if(animal == null)
+                return;
+            
+            if(unitFSMData.isDie || unitFSMData.isFloat || unitFSMData.isLie)
+            {
+                shootTimer = 0f;
+                return;
+            }
+
+            shootTimer += Time.deltaTime;
+            if(shootTimer < shooterEnemyData.shootInterval)
+                return;
+
+            shootTimer = 0f;
+            animal.Fire(enemyFSMData.player.transform.position);
+        }
+
         private void InitializeInternal(IEntityData data)
         {
             if(data is ShooterEnemyData shooterEnemyData == false)
                 return;
+
+            this.shooterEnemyData = shooterEnemyData;
+            unitFSMData = unit.FSMBrain.GetAIData<UnitFSMData>();
+            enemyFSMData = unit.FSMBrain.GetAIData<EnemyFSMData>();
 
             SpawnAnimalAsync(shooterEnemyData.animalPrefab, shooterEnemyData.animalEntityData).Forget();
         }
@@ -47,7 +75,6 @@ namespace DadVSMe.Enemies
             animal.Initialize(animalEntityData);
             animal.SetFollowTarget(animalFollowTarget);
 
-            unit.FSMBrain.GetAIData<ShooterEnemyFSMData>().animal = animal;
             unit.AddChildSortingOrderResolver(animal);
         }
     }
