@@ -1,4 +1,6 @@
 using System.Collections.Generic;
+using Cysharp.Threading.Tasks;
+using DadVSMe.Entities;
 using H00N.Extensions;
 using H00N.Resources.Addressables;
 using H00N.Resources.Pools;
@@ -6,6 +8,45 @@ using UnityEngine;
 
 namespace DadVSMe
 {
+    public struct InitializeAttackFeedback
+    {
+        public InitializeAttackFeedback(AttackDataBase attackData)
+        {
+            foreach (EAttackAttribute attackAttribute in EnumHelper.GetValues<EAttackAttribute>())
+            {
+                if (attackData.GetFeedbackData(attackAttribute) == null)
+                    continue;
+
+                attackData.GetFeedbackData(attackAttribute)?.hitEffects.ForEach(effect => effect.InitializeAsync().Forget());
+                attackData.GetFeedbackData(attackAttribute)?.attackSounds.ForEach(sound => sound.InitializeAsync().Forget());
+                attackData.GetFeedbackData(attackAttribute)?.hitSounds.ForEach(sound => sound.InitializeAsync().Forget());
+            }
+        }
+    }
+
+    public struct PlayAttackSound
+    {
+        public PlayAttackSound(AttackDataBase attackData, EAttackAttribute attackAttribute)
+        {
+            _ = new PlaySound(attackData.GetFeedbackData(EAttackAttribute.Normal)?.attackSounds);
+            _ = new PlaySound(attackData.GetFeedbackData(attackAttribute)?.attackSounds);
+        }
+    }
+
+    public struct PlayAttackFeedback
+    {
+        public PlayAttackFeedback(AttackDataBase attackData, EAttackAttribute attackAttribute, Vector3 targetPosition, Vector3 attackOffset, int forwardDirection)
+        {
+            Vector3 offset = new Vector3(attackOffset.x * forwardDirection, attackOffset.y, 0f);
+
+            attackData.GetFeedbackData(EAttackAttribute.Normal).hitEffects?.ForEach(effect => _ = new PlayEffect(effect, targetPosition + offset, forwardDirection));
+            _ = new PlaySound(attackData.GetFeedbackData(EAttackAttribute.Normal)?.hitSounds);
+
+            attackData.GetFeedbackData(attackAttribute).hitEffects?.ForEach(effect => _ = new PlayEffect(effect, targetPosition + offset, forwardDirection));
+            _ = new PlaySound(attackData.GetFeedbackData(attackAttribute)?.hitSounds);
+        }
+    }
+
     public struct PlayEffect
     {
         public PlayEffect(AddressableAsset<PoolableEffect> effect, Vector3 position, int forwardDirection)
