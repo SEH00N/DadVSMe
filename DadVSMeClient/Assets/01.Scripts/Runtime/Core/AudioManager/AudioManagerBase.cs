@@ -39,7 +39,7 @@ namespace DadVSMe
         {
             m_audioMixer = audioMixer;
             m_channelDictionary = new Dictionary<EAudioChannel, ChannelData>();
-            foreach (EAudioChannel channel in Enum.GetValues(typeof(EAudioChannel)))
+            foreach (EAudioChannel channel in EnumHelper.GetValues<EAudioChannel>())
             {
                 if (channel == EAudioChannel.None)
                     continue;
@@ -56,7 +56,7 @@ namespace DadVSMe
             else
                 m_baseModeChannelFlag &= ~channel;
 
-            foreach(EAudioChannel singleChannel in Enum.GetValues(typeof(EAudioChannel)))
+            foreach(EAudioChannel singleChannel in EnumHelper.GetValues<EAudioChannel>())
             {
                 if (singleChannel == EAudioChannel.None)
                     continue;

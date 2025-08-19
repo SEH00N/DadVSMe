@@ -26,14 +26,14 @@ namespace DadVSMe.Entities.FSM
             entityAnimator = brain.GetComponent<EntityAnimator>();
             unitFSMData = brain.GetAIData<UnitFSMData>();
             
-            foreach (EAttackAttribute attackAttribute in Enum.GetValues(typeof(EAttackAttribute)))
+            foreach (EAttackAttribute attackAttribute in EnumHelper.GetValues<EAttackAttribute>())
             {
                 if (attackData.GetFeedbackData(attackAttribute) == null)
                     continue;
 
-                attackData.GetFeedbackData(attackAttribute).hitEffects.ForEach(effect => effect.InitializeAsync().Forget());
-                attackData.GetFeedbackData(attackAttribute).attackSounds.ForEach(sound => sound.InitializeAsync().Forget());
-                attackData.GetFeedbackData(attackAttribute).hitSounds.ForEach(sound => sound.InitializeAsync().Forget());
+                attackData.GetFeedbackData(attackAttribute)?.hitEffects.ForEach(effect => effect.InitializeAsync().Forget());
+                attackData.GetFeedbackData(attackAttribute)?.attackSounds.ForEach(sound => sound.InitializeAsync().Forget());
+                attackData.GetFeedbackData(attackAttribute)?.hitSounds.ForEach(sound => sound.InitializeAsync().Forget());
             }
         }
 
@@ -44,8 +44,8 @@ namespace DadVSMe.Entities.FSM
             entityAnimator.RemoveAnimationEventListener(EEntityAnimationEventType.Trigger, HandleAnimationTriggerEvent);
             entityAnimator.AddAnimationEventListener(EEntityAnimationEventType.Trigger, HandleAnimationTriggerEvent);
 
-            _ = new PlaySound(attackData.GetFeedbackData(EAttackAttribute.Normal).attackSounds);
-            _ = new PlaySound(attackData.GetFeedbackData(unitFSMData.attackAttribute).attackSounds);
+            _ = new PlaySound(attackData.GetFeedbackData(EAttackAttribute.Normal)?.attackSounds);
+            _ = new PlaySound(attackData.GetFeedbackData(unitFSMData.attackAttribute)?.attackSounds);
         }
 
         public override void ExitState()
@@ -70,13 +70,13 @@ namespace DadVSMe.Entities.FSM
             if (playEffect)
             {
                 Vector3 offset = new Vector3(attackOffset.x * unitFSMData.forwardDirection, attackOffset.y, 0f);
-                attackData.GetFeedbackData(EAttackAttribute.Normal).hitEffects.
+                attackData.GetFeedbackData(EAttackAttribute.Normal).hitEffects?.
                     ForEach(effect => _ = new PlayEffect(effect, target.transform.position + offset, unitFSMData.forwardDirection));
-                _ = new PlaySound(attackData.GetFeedbackData(EAttackAttribute.Normal).hitSounds);
+                _ = new PlaySound(attackData.GetFeedbackData(EAttackAttribute.Normal)?.hitSounds);
                 
-                attackData.GetFeedbackData(attackData.attackAttribute).hitEffects.
+                attackData.GetFeedbackData(attackData.attackAttribute).hitEffects?.
                     ForEach(effect => _ = new PlayEffect(effect, target.transform.position + offset, unitFSMData.forwardDirection));
-                _ = new PlaySound(attackData.GetFeedbackData(attackData.attackAttribute).hitSounds);
+                _ = new PlaySound(attackData.GetFeedbackData(attackData.attackAttribute)?.hitSounds);
             }
         }
 
