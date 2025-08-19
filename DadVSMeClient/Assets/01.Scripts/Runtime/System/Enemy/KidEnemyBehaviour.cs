@@ -20,15 +20,15 @@ namespace DadVSMe.Enemies
 
         private void InitializeInternal(IEntityData data)
         {
-            if (data is not IKidEnemyData kidEnemyData)
+            if (data is not KidEnemyData kidEnemyData)
                 return;
 
-            Color bodyColor = kidEnemyData.UseBodyColorOverride ? GetColorRatio(DefaultBodyColor, kidEnemyData.BodyColorOverride) : Color.white;
+            Color bodyColor = kidEnemyData.useBodyColorOverride ? GetColorRatio(DefaultBodyColor, kidEnemyData.bodyColorOverride) : Color.white;
             foreach (SpriteRenderer bodyRenderer in bodyRenderers)
                 bodyRenderer.color = bodyColor;
             
-            hatRenderer.sprite = kidEnemyData.HatSprite;
-            clothesRenderer.sprite = kidEnemyData.ClothesSprite;
+            hatRenderer.sprite = kidEnemyData.hatSprite;
+            clothesRenderer.sprite = kidEnemyData.clothesSprite;
         }
 
         private static Color GetColorRatio(Color baseColor, Color targetColor)

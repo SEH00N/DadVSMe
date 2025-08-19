@@ -31,10 +31,6 @@ namespace DadVSMe.Enemies
         {
             base.InitializeInternal(data);
             enemyDetector.Initialize();
-            
-            EnemyFSMData enemyFSMData = fsmBrain.GetAIData<EnemyFSMData>();
-            enemyFSMData.patrolMinRange = enemyData.patrolMinRange;
-            enemyFSMData.patrolMaxRange = enemyData.patrolMaxRange;
         }
 
         protected override void LateUpdate()

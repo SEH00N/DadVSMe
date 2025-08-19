@@ -4,10 +4,9 @@ using DadVSMe.Animals;
 
 namespace DadVSMe.Enemies.FSM
 {
-    public class SimpleEnemyFSMData : IAIData
+    public class ShooterEnemyFSMData : IAIData
     {
         [HideInInspector] public Animal animal = null;
-        [HideInInspector] public ESimpleEnemyType enemyType = ESimpleEnemyType.Butt;
 
         public IAIData Initialize()
         {

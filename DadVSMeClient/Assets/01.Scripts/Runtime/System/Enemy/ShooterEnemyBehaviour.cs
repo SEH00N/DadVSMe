@@ -8,7 +8,7 @@ using UnityEngine;
 
 namespace DadVSMe.Enemies
 {
-    public class SimpleEnemyBehaviour : MonoBehaviour, IPoolableBehaviour
+    public class ShooterEnemyBehaviour : MonoBehaviour, IPoolableBehaviour
     {
         [SerializeField] Unit unit = null;
         [SerializeField] Transform animalFollowTarget = null;
@@ -25,12 +25,10 @@ namespace DadVSMe.Enemies
 
         private void InitializeInternal(IEntityData data)
         {
-            if(data is SimpleEnemyData simpleEnemyData == false)
+            if(data is ShooterEnemyData shooterEnemyData == false)
                 return;
 
-            unit.FSMBrain.GetAIData<SimpleEnemyFSMData>().enemyType = simpleEnemyData.enemyType;
-            if(simpleEnemyData.animalPrefab != null)
-                SpawnAnimalAsync(simpleEnemyData.animalPrefab, simpleEnemyData.animalEntityData).Forget();
+            SpawnAnimalAsync(shooterEnemyData.animalPrefab, shooterEnemyData.animalEntityData).Forget();
         }
 
         public void OnSpawned() { }
@@ -49,7 +47,7 @@ namespace DadVSMe.Enemies
             animal.Initialize(animalEntityData);
             animal.SetFollowTarget(animalFollowTarget);
 
-            unit.FSMBrain.GetAIData<SimpleEnemyFSMData>().animal = animal;
+            unit.FSMBrain.GetAIData<ShooterEnemyFSMData>().animal = animal;
             unit.AddChildSortingOrderResolver(animal);
         }
     }
