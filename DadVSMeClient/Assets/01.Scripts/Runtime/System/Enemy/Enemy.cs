@@ -35,15 +35,12 @@ namespace DadVSMe.Enemies
         {
             base.InitializeInternal(data);
             enemyDetector.Initialize();
-<<<<<<< Updated upstream
-=======
 
             EnemyFSMData enemyFSMData = fsmBrain.GetAIData<EnemyFSMData>();
             enemyFSMData.patrolMinRange = enemyData.patrolMinRange;
             enemyFSMData.patrolMaxRange = enemyData.patrolMaxRange;
 
             experiencePrefab.InitializeAsync().Forget();
->>>>>>> Stashed changes
         }
 
         protected override void LateUpdate()
