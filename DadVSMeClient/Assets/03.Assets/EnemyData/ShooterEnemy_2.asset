@@ -10,13 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 67b57e0590d314a568a99349311458a2, type: 3}
-  m_Name: ShooterEnemy_0
+  m_Name: ShooterEnemy_2
   m_EditorClassIdentifier: 
   hatSprite: {fileID: 5659188192116038605, guid: 6e0cb63023a864f8a9896751a7ad3f25, type: 3}
   clothesSprite: {fileID: 5877746896114180664, guid: 6219640001d114a1d86cbc535b17c0a5, type: 3}
   useBodyColorOverride: 0
   bodyColorOverride: {r: 0, g: 0, b: 0, a: 0}
   animalPrefab:
-    key: Flamingo
-  animalEntityData: {fileID: 11400000, guid: 52f06d6e2e5144591a3260f4e3163d82, type: 2}
-  shootCooltime: 5
+    key: Mole
+  animalEntityData: {fileID: 11400000, guid: 8ce6e1f50d2c7484b861f6916ef9ceab, type: 2}
+  shootCooltime: 3

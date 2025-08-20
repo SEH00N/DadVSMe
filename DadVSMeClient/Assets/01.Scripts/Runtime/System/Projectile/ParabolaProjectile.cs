@@ -1,4 +1,6 @@
+using System.Collections;
 using DadVSMe.Entities;
+using H00N.Resources.Pools;
 using UnityEngine;
 
 namespace DadVSMe
@@ -6,8 +8,16 @@ namespace DadVSMe
     [RequireComponent(typeof(Rigidbody2D))]
     public class ParabolaProjectile : Projectile
     {
+        private const float MIN_TIME_TO_TARGET = 1f;
+
+        [Header("SimpleProjectile")]
+        [SerializeField] string targetTag = "Enemy";
+        [SerializeField] SimpleAttackData attackData = null;
+
+        [Space(10f)]
+        [SerializeField] float lifeTime = 0f;
         [SerializeField] float speed = 1f;
-        [SerializeField] float jumpDistance = 1f;
+        // [SerializeField] float jumpDistance = 1f;
         private Rigidbody2D projectileRigidbody = null;
 
         protected override void Awake()
@@ -26,25 +36,59 @@ namespace DadVSMe
         {
             base.Initialize(owner, targetPosition);
 
-            float gravity = Physics2D.gravity.y * projectileRigidbody.gravityScale;
+            // float gravity = Physics2D.gravity.y * projectileRigidbody.gravityScale;
+
+            // Vector2 startPosition = transform.position;
+            // Vector2 displacement = targetPosition - startPosition;
+
+            // float displacementX = displacement.x;
+
+            // float apexHeight = Mathf.Max(startPosition.y, targetPosition.y) + jumpDistance;
+
+            // float launchVelocityY = Mathf.Sqrt(-2 * gravity * (apexHeight - startPosition.y));
+            // float timeToApex = launchVelocityY / -gravity;
+
+            // float timeFromApexToTarget = Mathf.Sqrt(2 * (targetPosition.y - apexHeight) / gravity);
+            // float totalTime = timeToApex + timeFromApexToTarget;
+            // float launchVelocityX = displacementX / totalTime;
+
+            // projectileRigidbody.linearVelocity = new Vector2(launchVelocityX, launchVelocityY);
+
 
             Vector2 startPosition = transform.position;
             Vector2 displacement = targetPosition - startPosition;
 
             float displacementX = displacement.x;
+            float displacementY = displacement.y;
 
-            // float apexHeight = Mathf.Max(startPosition.y, targetPosition.y) + Mathf.Abs(displacementY) * jumpDistance;
-            float apexHeight = Mathf.Max(startPosition.y, targetPosition.y) + jumpDistance * speed;
+            float timeToTarget = Mathf.Max(MIN_TIME_TO_TARGET, Mathf.Abs(displacementX) / speed);
+            float gravity = Physics2D.gravity.y * projectileRigidbody.gravityScale;
+            float launchVelocityX = displacementX / timeToTarget;
+            float launchVelocityY = (displacementY - 0.5f * gravity * (timeToTarget * timeToTarget)) / timeToTarget;
 
-            float launchVelocityY = Mathf.Sqrt(-2 * gravity * (apexHeight - startPosition.y));
-            float timeToApex = launchVelocityY / -gravity;
+            projectileRigidbody.linearVelocity = new Vector2(launchVelocityX, launchVelocityY);
 
-            float timeFromApexToTarget = Mathf.Sqrt(2 * (targetPosition.y - apexHeight) / gravity);
-            float totalTime = timeToApex + timeFromApexToTarget;
-            float launchVelocityX = displacementX / totalTime;
+            StopAllCoroutines();
+            StartCoroutine(DespawnCoroutine(lifeTime));
+        }
 
-            projectileRigidbody.gravityScale = speed * speed;
-            projectileRigidbody.linearVelocity = new Vector2(launchVelocityX, launchVelocityY) * speed;
+        private void OnTriggerEnter2D(Collider2D other)
+        {
+            if(other.CompareTag(targetTag) == false)
+                return;
+
+            if(other.TryGetComponent<UnitHealth>(out UnitHealth unitHealth) == false)
+                return;
+
+            unitHealth.Attack(owner, attackData);
+            StopAllCoroutines();
+            PoolManager.Despawn(this);
+        }
+
+        private IEnumerator DespawnCoroutine(float lifeTime)
+        {
+            yield return new WaitForSeconds(lifeTime);
+            PoolManager.Despawn(this);
         }
     }
 }

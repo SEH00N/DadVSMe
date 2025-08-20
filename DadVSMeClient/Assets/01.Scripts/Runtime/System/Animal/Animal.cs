@@ -7,6 +7,8 @@ namespace DadVSMe.Animals
 {
     public class Animal : Entity
     {
+        private const float Y_OFFSET = 2f;
+
         [Header("Animal")]
         [SerializeField] Transform firePosition = null;
         [SerializeField] AnimalMovement animalMovement = null;
@@ -44,7 +46,7 @@ namespace DadVSMe.Animals
         private void HandleAnimationTriggerEvent(EntityAnimationEventData eventData)
         {
             Projectile projectile = PoolManager.Spawn<Projectile>(animalEntityData.ProjectilePrefab.Key);
-            projectile.transform.position = firePosition.position;
+            projectile.transform.position = firePosition.position + Vector3.up * Y_OFFSET;
             projectile.Initialize(owner, targetPositionCache);
         }
 

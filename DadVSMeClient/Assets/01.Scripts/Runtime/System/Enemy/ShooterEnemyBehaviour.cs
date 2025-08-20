@@ -2,6 +2,7 @@ using Cysharp.Threading.Tasks;
 using DadVSMe.Animals;
 using DadVSMe.Enemies.FSM;
 using DadVSMe.Entities;
+using H00N.AI.FSM;
 using H00N.Resources.Addressables;
 using H00N.Resources.Pools;
 using UnityEngine;
@@ -12,6 +13,7 @@ namespace DadVSMe.Enemies
     {
         [SerializeField] Unit unit = null;
         [SerializeField] Transform animalFollowTarget = null;
+        [SerializeField] FSMState grabState = null;
 
         [SerializeField] PoolReference poolReference = null;
         public PoolReference PoolReference => poolReference;
@@ -33,7 +35,7 @@ namespace DadVSMe.Enemies
             if(animal == null)
                 return;
             
-            if(unitFSMData.isDie || unitFSMData.isFloat || unitFSMData.isLie)
+            if(unitFSMData.isDie || unitFSMData.isFloat || unitFSMData.isLie || unit.FSMBrain.CurrentState == grabState)
             {
                 shootTimer = 0f;
                 return;
@@ -74,6 +76,7 @@ namespace DadVSMe.Enemies
             animal = PoolManager.Spawn<Animal>(animalPrefab.Key);
             animal.transform.position = animalFollowTarget.position;
             animal.Initialize(animalEntityData);
+            animal.SetOwner(unit);
             animal.SetFollowTarget(animalFollowTarget);
 
             unit.AddChildSortingOrderResolver(animal);
