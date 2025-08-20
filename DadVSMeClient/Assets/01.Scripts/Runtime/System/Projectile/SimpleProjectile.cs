@@ -4,7 +4,7 @@ using Cysharp.Threading.Tasks;
 using H00N.Resources.Pools;
 using UnityEngine;
 
-namespace DadVSMe.Animals
+namespace DadVSMe
 {
     public class SimpleProjectile : Projectile
     {
@@ -13,11 +13,11 @@ namespace DadVSMe.Animals
 
         private CancellationTokenSource cancellationTokenSource = null;
 
-        public override void Initialize(Vector3 targetPosition)
+        public override void Initialize(Vector2 targetPosition)
         {
             base.Initialize(targetPosition);
 
-            Vector2 direction = (targetPosition - transform.position).normalized;
+            Vector2 direction = (targetPosition - (Vector2)transform.position).normalized;
             float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg - 90f;
             transform.rotation = Quaternion.Euler(0f, 0f, angle);
 
