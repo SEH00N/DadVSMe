@@ -1696,6 +1696,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   powerUpParticle:
     key: Particle_CrazySmoke
+  sound:
+    key: sfx_powerup
   positionOffset: {x: 0, y: 1.6, z: 0}
   scale: {x: 1.8, y: 1.8, z: 1.8}
 --- !u!1 &1701644835694590194
@@ -8852,6 +8854,9 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   enemyDetector: {fileID: 644674988795700514}
+  onLevelUpEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &6165701722836179940
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8956,6 +8961,11 @@ MonoBehaviour:
         currentAngerGauge: 0
         angerTime: 20
         isAnger: 0
+        baseLevelUpXP: 3
+        levelUpRatio: 1.7
+        levelUpExp: 0
+        currentExp: 0
+        currentLevel: 1
 --- !u!114 &1382251147719448698
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -1,4 +1,4 @@
-using System;
+using Cysharp.Threading.Tasks;
 using DadVSMe.Entities;
 using H00N.AI.FSM;
 using H00N.Resources.Addressables;
@@ -10,17 +10,19 @@ namespace DadVSMe
     public class PowerUpAction : FSMAction
     {
         [SerializeField] private AddressableAsset<ParticleSystem> powerUpParticle = null;
+        [SerializeField] private AddressableAsset<AudioClip> sound = null;
         [SerializeField] private Vector3 positionOffset;
         [SerializeField] private Vector3 scale = Vector3.one;
         private ParticleSystem particle;
 
         private Unit owner;
 
-        public override async void Init(FSMBrain brain, FSMState state)
+        public override void Init(FSMBrain brain, FSMState state)
         {
             base.Init(brain, state);
 
-            await powerUpParticle.InitializeAsync();
+            powerUpParticle.InitializeAsync().Forget();
+            sound.InitializeAsync().Forget();
             owner = brain.GetComponent<Unit>();
         }
 
@@ -32,6 +34,7 @@ namespace DadVSMe
             particle.transform.SetParent(brain.transform);
             particle.transform.localPosition = positionOffset;
             particle.transform.localScale = scale;
+            _ = new PlaySound(sound);
 
             owner.onEndAngerEvent.AddListener(OnEndAnger);
         }
