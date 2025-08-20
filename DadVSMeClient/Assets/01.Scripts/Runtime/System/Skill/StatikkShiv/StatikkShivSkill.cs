@@ -33,8 +33,9 @@ namespace DadVSMe
             this.checkTime = checkTime;
             this.targetAttackCount = targetAttackCount;
             this.maxAttackTargetNum = maxAttackTargetNum;
-            this.checkRadius = checkRadius; ;
+            this.checkRadius = checkRadius;
             this.levelUpIncreaseRate = levelUpIncreaseRate;
+            this.sound = sound;
             attackCount = 0;
             isChecking = false;
         }
@@ -72,9 +73,12 @@ namespace DadVSMe
                     }
                 }
             }
-
+            Debug.Log(attackTargetCount);
             if (attackTargetCount > 0)
+            {
                 _ = new PlaySound(sound);
+                   
+            }
         }
 
         public override void OnUnregist()

@@ -62,7 +62,7 @@ namespace DadVSMe
                 {
                     Vector2 spawnPoint = target.transform.position;
                     Collider2D[] cols = Physics2D.OverlapCircleAll(spawnPoint, attackRadius);
-
+                    
                     foreach (var col in cols)
                     {
                         if (col.gameObject == ownerComponent.gameObject)
@@ -74,7 +74,7 @@ namespace DadVSMe
                         }
                     }
 
-                    _ = new PlayEffect(bombEffect, ownerComponent.transform.position, 1);
+                    _ = new PlayEffect(bombEffect, target.transform.position, 1);
                     _ = new PlaySound(bombSound);
                 }
             }

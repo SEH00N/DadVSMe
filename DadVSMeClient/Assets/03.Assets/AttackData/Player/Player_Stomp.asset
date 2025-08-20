@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 10
   isRangeAttack: 1
-  attackAttribute: 2
+  attackAttribute: 1
   feedbackDatas:
   - attackAttribute: 0
     hitEffects:
@@ -32,16 +32,9 @@ MonoBehaviour:
   - attackAttribute: 1
     hitEffects:
     - key: VFX_Explosion
-    attackSounds:
-    - key: sfx_swing_small_0
-    - key: sfx_swing_small_1
-    - key: sfx_swing_small_2
-    - key: sfx_swing_small_3
+    attackSounds: []
     hitSounds:
-    - key: sfx_punch_small_0
-    - key: sfx_punch_small_1
-    - key: sfx_punch_small_2
-    - key: sfx_punch_small_3
+    - key: fire_punch
   - attackAttribute: 2
     hitEffects:
     - key: VFX_CrazyHit

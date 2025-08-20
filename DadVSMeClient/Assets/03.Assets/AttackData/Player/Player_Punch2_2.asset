@@ -30,13 +30,9 @@ MonoBehaviour:
   - attackAttribute: 1
     hitEffects:
     - key: VFX_Explosion
-    attackSounds:
-    - key: sfx_swing_hard_0
-    - key: sfx_swing_hard_1
+    attackSounds: []
     hitSounds:
-    - key: sfx_punch_hard_0
-    - key: sfx_punch_hard_1
-    - key: sfx_punch_hard_2
+    - key: fire_punch
   - attackAttribute: 2
     hitEffects:
     - key: VFX_CrazyHit

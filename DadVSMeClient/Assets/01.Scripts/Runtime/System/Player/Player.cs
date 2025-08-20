@@ -1,6 +1,7 @@
 using Cysharp.Threading.Tasks;
 using DadVSMe.Entities;
 using DadVSMe.Players.FSM;
+using H00N.Resources.Addressables;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -10,12 +11,14 @@ namespace DadVSMe.Players
     {
         [Header("Player")]
         [SerializeField] EnemyDetector enemyDetector = null;
+        [SerializeField] AddressableAsset<AudioClip> levelUpSound;
 
         protected override RigidbodyType2D DefaultRigidbodyType => RigidbodyType2D.Dynamic;
 
         private PlayerFSMData playerFSMData = null;
 
         public UnityEvent<int> onLevelUpEvent;
+
 
         // Debug
         private void Start()
@@ -27,6 +30,7 @@ namespace DadVSMe.Players
         {
             base.InitializeInternal(data);
             enemyDetector.Initialize();
+            levelUpSound.InitializeAsync().Forget();
 
             onAttackTargetEvent.AddListener(OnAttackTarget);
             onStartAngerEvent.AddListener(OnStartAnger);
@@ -89,6 +93,8 @@ namespace DadVSMe.Players
                 Mathf.RoundToInt(playerFSMData.baseLevelUpXP * Mathf.Pow(playerFSMData.levelUpRatio, playerFSMData.currentLevel - 1));
 
             onLevelUpEvent?.Invoke(playerFSMData.currentLevel);
+
+            _ = new PlaySound(levelUpSound);
         }
 
         void OnTriggerEnter2D(Collider2D collision)

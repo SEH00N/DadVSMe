@@ -1129,7 +1129,7 @@ GameObject:
   - component: {fileID: 4295780405187886873}
   - component: {fileID: 6857963027408567855}
   - component: {fileID: 420057732799498652}
-  - component: {fileID: 3836473983210103886}
+  - component: {fileID: 7067331514561670907}
   m_Layer: 0
   m_Name: Die
   m_TagString: Untagged
@@ -1207,7 +1207,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 914aa8d3aa3444888a482cc269281683, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &3836473983210103886
+--- !u!114 &7067331514561670907
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1216,9 +1216,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 3650471933563971903}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 24cd3228a0a3242aebfae88c651b548b, type: 3}
+  m_Script: {fileID: 11500000, guid: 3fa8bab116c0041b9a8f5055e7bf672d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  expPrefab:
+    key: Experience
 --- !u!1 &4459460600934880233
 GameObject:
   m_ObjectHideFlags: 0

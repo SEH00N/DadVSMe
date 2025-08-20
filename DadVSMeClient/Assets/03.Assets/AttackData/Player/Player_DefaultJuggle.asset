@@ -24,7 +24,8 @@ MonoBehaviour:
     hitEffects:
     - key: VFX_Explosion
     attackSounds: []
-    hitSounds: []
+    hitSounds:
+    - key: fire_punch
   - attackAttribute: 2
     hitEffects:
     - key: VFX_CrazyHit
