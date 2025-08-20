@@ -10,6 +10,8 @@ namespace DadVSMe.Animals
         [Header("Animal")]
         [SerializeField] Transform firePosition = null;
         [SerializeField] AnimalMovement animalMovement = null;
+
+        private Unit owner = null;
         private AnimalEntityData animalEntityData = null;
         private Vector3 targetPositionCache = Vector3.zero;
 
@@ -21,6 +23,11 @@ namespace DadVSMe.Animals
 
             entityAnimator.AddAnimationEventListener(EEntityAnimationEventType.Trigger, HandleAnimationTriggerEvent);
             entityAnimator.AddAnimationEventListener(EEntityAnimationEventType.End, HandleAnimationEndEvent);
+        }
+
+        public void SetOwner(Unit owner)
+        {
+            this.owner = owner;
         }
 
         public void SetFollowTarget(Transform followTarget)
@@ -38,7 +45,7 @@ namespace DadVSMe.Animals
         {
             Projectile projectile = PoolManager.Spawn<Projectile>(animalEntityData.ProjectilePrefab.Key);
             projectile.transform.position = firePosition.position;
-            projectile.Initialize(targetPositionCache);
+            projectile.Initialize(owner, targetPositionCache);
         }
 
         private void HandleAnimationEndEvent(EntityAnimationEventData eventData)

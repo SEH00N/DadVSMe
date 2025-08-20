@@ -10,7 +10,7 @@ namespace DadVSMe.Entities.FSM
 {
     public abstract class AttackActionBase : FSMAction
     {
-        [SerializeField] Vector2 attackOffset = Vector2.zero;
+        [SerializeField] protected Vector2 attackOffset = Vector2.zero;
         [SerializeField] List<AddressableAsset<PoolableEffect>> hitEffects = new List<AddressableAsset<PoolableEffect>>();
         [SerializeField] List<AddressableAsset<AudioClip>> attackSounds = new List<AddressableAsset<AudioClip>>();
         [SerializeField] List<AddressableAsset<AudioClip>> hitSounds = new List<AddressableAsset<AudioClip>>();

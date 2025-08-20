@@ -1,53 +1,107 @@
-using System;
-using System.Threading;
-using Cysharp.Threading.Tasks;
+using System.Collections;
+using DadVSMe.Entities;
 using H00N.Resources.Pools;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 namespace DadVSMe
 {
+    [RequireComponent(typeof(Rigidbody2D))]
     public class SimpleProjectile : Projectile
     {
+        private enum ESimpleProjectileCollisionType
+        {
+            None,
+            Despawm,
+            Collision
+        }
+
+        private const float BOUNCE_LIFE_TIME = 0.35f;
+        private const float BOUNCE_GRAVITY_SCALE = 3f;
+        private static readonly Vector2 BOUNCE_FORCE_RANDOMNESS = new Vector2(1f, 3f);
+        private static readonly Vector2 BOUNCE_FORCE = new Vector2(4.5f, 5f);
+
+        [Header("SimpleProjectile")]
+        [SerializeField] string targetTag = "Enemy";
+        [SerializeField] SimpleAttackData attackData = null;
+
+        [Space(10f)]
         [SerializeField] float lifeTime = 0f;
-        [SerializeField] float moveSpeed = 0f;
+        [SerializeField] ESimpleProjectileCollisionType collisionType = ESimpleProjectileCollisionType.None;
+        [SerializeField] Vector2 initialVelocity = Vector2.zero;
 
-        private CancellationTokenSource cancellationTokenSource = null;
+        private Rigidbody2D projectileRigidbody = null;
 
-        public override void Initialize(Vector2 targetPosition)
+        private bool isReleasing = false;
+        private float defaultGravityScale = 0f;
+
+        protected override void Awake()
         {
-            base.Initialize(targetPosition);
-
-            Vector2 direction = (targetPosition - (Vector2)transform.position).normalized;
-            float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg - 90f;
-            transform.rotation = Quaternion.Euler(0f, 0f, angle);
-
-            DespawnAfterLifeTimeAsync().Forget();
+            base.Awake();
+            projectileRigidbody = GetComponent<Rigidbody2D>();
+            defaultGravityScale = projectileRigidbody.gravityScale;
         }
 
-        private void FixedUpdate()
+        public override void Initialize(Unit owner, Vector2 targetPosition)
         {
-            transform.Translate(Vector3.up * (moveSpeed * Time.fixedDeltaTime), Space.Self);
+            base.Initialize(owner, targetPosition);
+
+            isReleasing = false;
+
+            float directionX = targetPosition.x - transform.position.x;
+            projectileRigidbody.linearVelocity = new Vector2(directionX * initialVelocity.x, initialVelocity.y);
+            projectileRigidbody.gravityScale = defaultGravityScale;
+
+            StopAllCoroutines();
+            StartCoroutine(DespawnCoroutine(lifeTime));
         }
 
-        private async UniTask DespawnAfterLifeTimeAsync()
+        private void LateUpdate()
         {
-            try {
-                cancellationTokenSource?.Cancel();
-                cancellationTokenSource?.Dispose();
-                cancellationTokenSource = new CancellationTokenSource();
+            float angle = Mathf.Atan2(projectileRigidbody.linearVelocity.y, projectileRigidbody.linearVelocity.x) * Mathf.Rad2Deg;
+            transform.rotation = Quaternion.Euler(0f, 0f, angle - 90f);
+        }
 
-                await UniTask.Delay(TimeSpan.FromSeconds(lifeTime), cancellationToken: cancellationTokenSource.Token);
+        private void OnTriggerEnter2D(Collider2D other)
+        {
+            if(isReleasing)
+                return;
 
-                cancellationTokenSource?.Dispose();
-                cancellationTokenSource = null;
+            if(other.CompareTag(targetTag) == false)
+                return;
 
-                PoolManager.Despawn(this);
+            if(other.TryGetComponent<UnitHealth>(out UnitHealth unitHealth) == false)
+                return;
+
+            unitHealth.Attack(owner, attackData);
+            switch(collisionType)
+            {
+                case ESimpleProjectileCollisionType.Despawm:
+                    StopAllCoroutines();
+                    PoolManager.Despawn(this);
+                    break;
+                case ESimpleProjectileCollisionType.Collision:
+                    CollisionFeedback(other);
+                    break;
             }
-            catch(OperationCanceledException) { }
-            finally {
-                cancellationTokenSource?.Dispose();
-                cancellationTokenSource = null;
-            }
+        }
+
+        private void CollisionFeedback(Collider2D other)
+        {
+            isReleasing = true;
+            Vector2 direction = (other.transform.position - transform.position).normalized;
+            Vector2 bounceForce = new Vector2(BOUNCE_FORCE.x + Random.Range(-BOUNCE_FORCE_RANDOMNESS.x, BOUNCE_FORCE_RANDOMNESS.x), BOUNCE_FORCE.y + Random.Range(-BOUNCE_FORCE_RANDOMNESS.y, BOUNCE_FORCE_RANDOMNESS.y));
+            projectileRigidbody.linearVelocity = new Vector2(-Mathf.Sign(direction.x) * bounceForce.x, bounceForce.y);
+            projectileRigidbody.gravityScale = BOUNCE_GRAVITY_SCALE;
+
+            StopAllCoroutines();
+            StartCoroutine(DespawnCoroutine(BOUNCE_LIFE_TIME));
+        }
+
+        private IEnumerator DespawnCoroutine(float lifeTime)
+        {
+            yield return new WaitForSeconds(lifeTime);
+            PoolManager.Despawn(this);
         }
     }
 }

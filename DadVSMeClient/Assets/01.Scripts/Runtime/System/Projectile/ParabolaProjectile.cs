@@ -1,9 +1,10 @@
+using DadVSMe.Entities;
 using UnityEngine;
 
 namespace DadVSMe
 {
     [RequireComponent(typeof(Rigidbody2D))]
-    public class GravityBaseProjectile : Projectile
+    public class ParabolaProjectile : Projectile
     {
         [SerializeField] float speed = 1f;
         [SerializeField] float jumpDistance = 1f;
@@ -15,17 +16,15 @@ namespace DadVSMe
             projectileRigidbody = GetComponent<Rigidbody2D>();
         }
 
-        private void FixedUpdate()
+        private void LateUpdate()
         {
-            if (projectileRigidbody.linearVelocity.sqrMagnitude <= 0.01f)
-                return;
-
-            UpdateRotation();
+            float angle = Mathf.Atan2(projectileRigidbody.linearVelocity.y, projectileRigidbody.linearVelocity.x) * Mathf.Rad2Deg;
+            transform.rotation = Quaternion.Euler(0f, 0f, angle - 90f);
         }
 
-        public override void Initialize(Vector2 targetPosition)
+        public override void Initialize(Unit owner, Vector2 targetPosition)
         {
-            base.Initialize(targetPosition);
+            base.Initialize(owner, targetPosition);
 
             float gravity = Physics2D.gravity.y * projectileRigidbody.gravityScale;
 
@@ -33,7 +32,6 @@ namespace DadVSMe
             Vector2 displacement = targetPosition - startPosition;
 
             float displacementX = displacement.x;
-            float displacementY = displacement.y;
 
             // float apexHeight = Mathf.Max(startPosition.y, targetPosition.y) + Mathf.Abs(displacementY) * jumpDistance;
             float apexHeight = Mathf.Max(startPosition.y, targetPosition.y) + jumpDistance * speed;
@@ -47,12 +45,6 @@ namespace DadVSMe
 
             projectileRigidbody.gravityScale = speed * speed;
             projectileRigidbody.linearVelocity = new Vector2(launchVelocityX, launchVelocityY) * speed;
-        }
-
-        private void UpdateRotation()
-        {
-            float angle = Mathf.Atan2(projectileRigidbody.linearVelocity.y, projectileRigidbody.linearVelocity.x) * Mathf.Rad2Deg;
-            transform.rotation = Quaternion.Euler(0f, 0f, angle + 90f);
         }
     }
 }

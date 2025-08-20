@@ -46,7 +46,7 @@ namespace DadVSMe.Entities.FSM
                 return;
 
             Gizmos.color = Color.red;
-            Gizmos.DrawWireCube(pivot.position, new Vector3(unitStateChecker.attackHorizontalDistance, unitStateChecker.attackVerticalDistance, 0f));
+            Gizmos.DrawWireCube(pivot.position, new Vector3(unitStateChecker.attackHorizontalDistance * 2f, unitStateChecker.attackVerticalDistance * 2f, 0f));
         }
         #endif
     }
