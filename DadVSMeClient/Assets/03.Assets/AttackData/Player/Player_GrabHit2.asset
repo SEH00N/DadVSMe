@@ -14,14 +14,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 10
   isRangeAttack: 0
-  attackAttribute: 2
+  attackAttribute: 0
   feedbackDatas:
   - attackAttribute: 0
     hitEffects:
     - key: VFX_Impact2
     - key: VFX_Blood1
-    attackSounds: []
-    hitSounds: []
+    attackSounds:
+    - key: sfx_swing_small_0
+    - key: sfx_swing_small_1
+    - key: sfx_swing_small_2
+    - key: sfx_swing_small_3
+    hitSounds:
+    - key: sfx_punch_small_0
+    - key: sfx_punch_small_1
+    - key: sfx_punch_small_2
+    - key: sfx_punch_small_3
   - attackAttribute: 1
     hitEffects:
     - key: VFX_Explosion
