@@ -1,10 +1,10 @@
 using H00N.Resources.Pools;
 using UnityEngine;
 
-namespace DadVSMe.Animals
+namespace DadVSMe
 {
     public abstract class Projectile : PoolReference
     {
-        public virtual void Initialize(Vector3 targetPosition) { }
+        public virtual void Initialize(Vector2 targetPosition) { }
     }
 }

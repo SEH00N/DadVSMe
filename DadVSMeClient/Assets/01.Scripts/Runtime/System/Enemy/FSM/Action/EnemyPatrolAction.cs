@@ -46,7 +46,7 @@ namespace DadVSMe.Enemies.FSM
             base.UpdateState();
 
             Vector2 direction = patrolPoint - (Vector2)brain.transform.position;
-            if(direction.sqrMagnitude >= 0.01f * 0.01f)
+            if(direction.sqrMagnitude >= 0.01f)
                 return;
 
             brain.SetAsDefaultState();
