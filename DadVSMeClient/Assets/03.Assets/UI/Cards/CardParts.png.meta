@@ -1,16 +1,19 @@
 fileFormatVersion: 2
-guid: bd5e8bcc5dc4c4212836006b614c5289
+guid: 7d895ebf5c0e142cc8a980efc7a1fed1
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 7330011989136535240
-    second: cards_parts_0
+      213: 6788679137924602568
+    second: parts2_0
   - first:
-      213: 8459354720396017462
-    second: cards_parts_1
+      213: -8556710215142234746
+    second: parts2_1
   - first:
-      213: 8430190177164844218
-    second: cards_parts_2
+      213: 3035034319412267959
+    second: parts2_2
+  - first:
+      213: 1329279751155350208
+    second: parts2_3
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -119,12 +122,12 @@ TextureImporter:
     buildTarget: WebGL
     maxTextureSize: 2048
     resizeAlgorithm: 0
-    textureFormat: 50
+    textureFormat: -1
     textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
-    overridden: 1
+    overridden: 0
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
@@ -145,67 +148,89 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: cards_parts_0
+      name: CardParts_0
       rect:
         serializedVersion: 2
-        x: 107
-        y: 855
-        width: 339
-        height: 366
+        x: 22
+        y: 863
+        width: 1536
+        height: 480
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 8ce66db611f69b560800000000000000
-      internalID: 7330011989136535240
+      spriteID: 4539b29d8bb694677a3784d27c0ac901
+      internalID: -530781144
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: cards_parts_1
+      name: CardParts_1
       rect:
         serializedVersion: 2
-        x: 578
-        y: 27
-        width: 482
-        height: 1538
+        x: 153
+        y: 352
+        width: 333
+        height: 361
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 63f7a327c4aa56570800000000000000
-      internalID: 8459354720396017462
+      spriteID: 9ef58b785e8dd47ddaa0c5a2b9b4f03d
+      internalID: 2027400610
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: cards_parts_2
+      name: CardParts_2
       rect:
         serializedVersion: 2
-        x: 81
-        y: 46
-        width: 483
-        height: 726
+        x: 562
+        y: 351
+        width: 337
+        height: 364
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: abcd5e21d4d0ef470800000000000000
-      internalID: 8430190177164844218
+      spriteID: 006522f02c9604a2dbe8c46c96da9e5c
+      internalID: 1537894866
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CardParts_3
+      rect:
+        serializedVersion: 2
+        x: 1081
+        y: 32
+        width: 383
+        height: 789
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a89d3fdd9b0924823bc5ee1f8fd444bb
+      internalID: -1624867804
       vertices: []
       indices: 
       edges: []
@@ -214,7 +239,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 1322ae23496a5477db66f4f652f853b9
     internalID: 0
     vertices: []
     indices: 
@@ -224,9 +249,10 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      cards_parts_0: 7330011989136535240
-      cards_parts_1: 8459354720396017462
-      cards_parts_2: 8430190177164844218
+      CardParts_0: -530781144
+      CardParts_1: 2027400610
+      CardParts_2: 1537894866
+      CardParts_3: -1624867804
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
