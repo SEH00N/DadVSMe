@@ -10,17 +10,21 @@ namespace DadVSMe
     public class GuidedOrbSkill : AutoActiveSkill
     {
         private AddressableAsset<GuidedOrb> prefab = null;
+        private AddressableAsset<AudioClip> sound;
 
         private float orbSpawnRadius;
         private float originCooltime;
         private int spawnCount;
         private int levelUpIncreaseRate;
 
-        public GuidedOrbSkill(AddressableAsset<GuidedOrb> prefab, float cooltime, int levelUpIncreaseRate) : base(cooltime)
+        public GuidedOrbSkill(AddressableAsset<GuidedOrb> prefab, float cooltime, int levelUpIncreaseRate,
+            AddressableAsset<AudioClip> sound) : base(cooltime)
         {
             prefab.InitializeAsync().Forget();
+            sound.InitializeAsync().Forget();
 
             this.prefab = prefab;
+            this.sound = sound;
             this.levelUpIncreaseRate = levelUpIncreaseRate;
             originCooltime = cooltime;
             orbSpawnRadius = 3f;
@@ -66,6 +70,8 @@ namespace DadVSMe
                 guidedOrb.SetTarget(target);
                 guidedOrb.Launch();
             }
+
+            _ = new PlaySound(sound);
         }
 
         public override void LevelUp()

@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using Cysharp.Threading.Tasks;
 using DadVSMe.Entities;
 using DadVSMe.Players.FSM;
 using H00N.AI.FSM;
@@ -23,6 +24,9 @@ namespace DadVSMe
             this.bombSound = bombSound;
             this.attackRadius = attackRadius;
             this.levelUpIncreaseRate = levelUpIncreaseRate;
+
+            bombEffect.InitializeAsync().Forget();
+            bombSound.InitializeAsync().Forget();
         }
 
         public override void OnRegist(UnitSkillComponent ownerComponent)
@@ -53,28 +57,27 @@ namespace DadVSMe
                 return;
 
             if (target.TryGetComponent<UnitHealth>(out UnitHealth targetHealth))
+            {
+                if (targetHealth.CurrentHP <= 0f)
                 {
-                    if (targetHealth.CurrentHP <= 0f)
+                    Vector2 spawnPoint = target.transform.position;
+                    Collider2D[] cols = Physics2D.OverlapCircleAll(spawnPoint, attackRadius);
+
+                    foreach (var col in cols)
                     {
-                        Vector2 spawnPoint = target.transform.position;
-                        Collider2D[] cols = Physics2D.OverlapCircleAll(spawnPoint, attackRadius);
+                        if (col.gameObject == ownerComponent.gameObject)
+                            continue;
 
-                        foreach (var col in cols)
+                        if (col.gameObject.TryGetComponent<UnitHealth>(out UnitHealth unitHealth))
                         {
-                            if (col.gameObject == ownerComponent.gameObject)
-                                continue;
-
-                            if (col.gameObject.TryGetComponent<UnitHealth>(out UnitHealth unitHealth))
-                            {
-                                unitHealth.Attack(ownerComponent.GetComponent<Unit>(), attackData);
-                            }
+                            unitHealth.Attack(ownerComponent.GetComponent<Unit>(), attackData);
                         }
                     }
+
+                    _ = new PlayEffect(bombEffect, ownerComponent.transform.position, 1);
+                    _ = new PlaySound(bombSound);
                 }
-
-            _ = new PlayEffect(bombEffect, ownerComponent.transform.position, 1);
-            _ = new PlaySound(bombSound);
-
+            }
         }
 
         public override void LevelUp()

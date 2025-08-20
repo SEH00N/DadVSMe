@@ -7,6 +7,7 @@ namespace DadVSMe
     public class StatikkShivSkillData : SkillData
     {
         public AddressableAsset<StatikkShivLighting> prefab;
+        public AddressableAsset<AudioClip> sound;
         public float checkTime;
         public int targetAttackCount;
         public int maxAttackTargetNum;
@@ -15,7 +16,7 @@ namespace DadVSMe
 
         public override UnitSkill CreateSkill()
         {
-            return new StatikkShivSkill(prefab, checkTime, targetAttackCount, maxAttackTargetNum, checkRadius, levelUpIncreaseRate);
+            return new StatikkShivSkill(prefab, sound, checkTime, targetAttackCount, maxAttackTargetNum, checkRadius, levelUpIncreaseRate);
         }
     }
 }

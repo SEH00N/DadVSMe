@@ -14,6 +14,7 @@ namespace DadVSMe
     public class StatikkShivSkill : UnitSkill
     {
         private AddressableAsset<StatikkShivLighting> prefab;
+        private AddressableAsset<AudioClip> sound;
         private float checkTime;
         private int targetAttackCount;
         private int maxAttackTargetNum;
@@ -22,10 +23,11 @@ namespace DadVSMe
         private float checkRadius;
         private int levelUpIncreaseRate;
 
-        public StatikkShivSkill(AddressableAsset<StatikkShivLighting> prefab,
+        public StatikkShivSkill(AddressableAsset<StatikkShivLighting> prefab, AddressableAsset<AudioClip> sound,
             float checkTime, int targetAttackCount, int maxAttackTargetNum, float checkRadius, int levelUpIncreaseRate) : base()
         {
             prefab.InitializeAsync().Forget();
+            sound.InitializeAsync().Forget();
 
             this.prefab = prefab;
             this.checkTime = checkTime;
@@ -70,6 +72,9 @@ namespace DadVSMe
                     }
                 }
             }
+
+            if (attackTargetCount > 0)
+                _ = new PlaySound(sound);
         }
 
         public override void OnUnregist()

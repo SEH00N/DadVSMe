@@ -7,12 +7,13 @@ namespace DadVSMe
     public class GuidedOrbSkillData : SkillData
     {
         public AddressableAsset<GuidedOrb> prefab = null;
+        public AddressableAsset<AudioClip> sound;
         public float coolTime;
         public int levelUpIncreaseRate;
 
         public override UnitSkill CreateSkill()
         {
-            return new GuidedOrbSkill(prefab, coolTime, levelUpIncreaseRate);
+            return new GuidedOrbSkill(prefab, coolTime, levelUpIncreaseRate, sound);
         }
     }
 }
