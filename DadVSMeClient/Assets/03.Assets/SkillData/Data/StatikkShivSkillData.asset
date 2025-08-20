@@ -15,7 +15,10 @@ MonoBehaviour:
   skillType: 2
   prefab:
     key: StatikkShivLighting
+  sound:
+    key: sfx_explosion_0
   checkTime: 5
   targetAttackCount: 3
   maxAttackTargetNum: 5
-  damage: 5
+  checkRadius: 5
+  levelUpIncreaseRate: 3
