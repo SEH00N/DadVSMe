@@ -24,6 +24,8 @@ namespace DadVSMe.Entities
 
         private void Start()
         {
+            navMeshAgent.isStopped = true;
+            navMeshAgent.updatePosition = false;
             navMeshAgent.updateRotation = false;
             navMeshAgent.updateUpAxis = false;
         }
@@ -45,14 +47,10 @@ namespace DadVSMe.Entities
                 return;
             }
 
-            Vector3 direction = navMeshAgent.steeringTarget - transform.position;
-            float distance = direction.magnitude;
-
-            Vector3 normalizedDirection = direction.normalized;
-            float adjustedSpeed = Mathf.Min(navMeshAgent.speed, distance / Time.fixedDeltaTime);
-
-            Vector3 targetVelocity = normalizedDirection * adjustedSpeed;
+            Vector2 direction = navMeshAgent.steeringTarget - transform.position;
+            Vector2 targetVelocity = direction.normalized * navMeshAgent.speed;
             unitMovement.SetMovementVelocity(targetVelocity);
+            navMeshAgent.nextPosition = transform.position;
         }
 
         public void SetActive(bool isActive)
