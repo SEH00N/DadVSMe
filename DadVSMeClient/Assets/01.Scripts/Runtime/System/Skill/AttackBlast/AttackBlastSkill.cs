@@ -14,14 +14,17 @@ namespace DadVSMe
     public class AttackBlastSkill : UnitSkill
     {
         private AddressableAsset<AttackBlast> prefab = null;
-
+        private float attackBlastLifeTime;
+        private float levelUpIncreaseRate;
         private Vector3 spawnOffset;
 
-        public AttackBlastSkill(AddressableAsset<AttackBlast> prefab)
+        public AttackBlastSkill(AddressableAsset<AttackBlast> prefab, float attackBlastLifeTime, float levelUpIncreaseRate)
         {
             prefab.InitializeAsync().Forget();
-            
+
             this.prefab = prefab;
+            this.attackBlastLifeTime = attackBlastLifeTime;
+            this.levelUpIncreaseRate = levelUpIncreaseRate;
             spawnOffset = new Vector2(2.5f, 0f);
         }
 
@@ -35,7 +38,7 @@ namespace DadVSMe
         public override void Execute()
         {
             AttackBlast attackBlast = PoolManager.Spawn<AttackBlast>(prefab);
-            
+
             attackBlast.SetInstigator(ownerComponent.gameObject.GetComponent<Unit>());
 
             Transform ownerTrm = ownerComponent.transform;
@@ -44,7 +47,7 @@ namespace DadVSMe
             scale.x *= Math.Sign(ownerTrm.localScale.x);
             attackBlast.transform.localScale = scale;
 
-            attackBlast.Launch(ownerTrm.right * Math.Sign(ownerTrm.localScale.x));
+            attackBlast.Launch(ownerTrm.right * Math.Sign(ownerTrm.localScale.x), attackBlastLifeTime);
         }
 
         public override void OnUnregist()
@@ -60,6 +63,13 @@ namespace DadVSMe
             {
                 Execute();
             }
-        }   
+        }
+
+        public override void LevelUp()
+        {
+            base.LevelUp();
+
+            attackBlastLifeTime += levelUpIncreaseRate;
+        }
     }
 }

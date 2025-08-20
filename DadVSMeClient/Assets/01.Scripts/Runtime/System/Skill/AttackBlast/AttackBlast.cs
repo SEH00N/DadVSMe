@@ -20,7 +20,6 @@ namespace DadVSMe
 
         [SerializeField]
         private float moveSpeed;
-        [SerializeField]
         private float lifeTime;
 
         private CancellationTokenSource _lifetimeCts;
@@ -47,8 +46,9 @@ namespace DadVSMe
             this.instigator = instigator;
         }
 
-        public async void Launch(Vector3 direction)
+        public async void Launch(Vector3 direction, float lifeTime)
         {
+            this.lifeTime = lifeTime;
             movement.SetActive(true);
             movement.SetMovementVelocity(direction * moveSpeed);
 

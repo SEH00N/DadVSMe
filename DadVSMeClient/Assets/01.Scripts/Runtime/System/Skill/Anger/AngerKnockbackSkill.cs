@@ -9,11 +9,13 @@ namespace DadVSMe
     {
         private AttackDataBase attackData;
         private float knockbackRange;
+        private float levelUpIncreaseRate;
 
-        public AngerKnockbackSkill(AttackDataBase attackData, float knockbackRange = 10) : base()
+        public AngerKnockbackSkill(AttackDataBase attackData, float knockbackRange, float levelUpIncreaseRate) : base()
         {
             this.attackData = attackData;
             this.knockbackRange = knockbackRange;
+            this.levelUpIncreaseRate = levelUpIncreaseRate;
         }
 
         public override void OnRegist(UnitSkillComponent ownerComponent)
@@ -51,7 +53,7 @@ namespace DadVSMe
         {
             base.LevelUp();
 
-            knockbackRange = (knockbackRange - (level - 1)) + level;
+            knockbackRange = levelUpIncreaseRate;
         }
 
         private void OnStatChanged(FSMState current, FSMState target)

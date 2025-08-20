@@ -8,10 +8,11 @@ namespace DadVSMe
     {
         public AddressableAsset<GuidedOrb> prefab = null;
         public float coolTime;
+        public int levelUpIncreaseRate;
 
         public override UnitSkill CreateSkill()
         {
-            return new GuidedOrbSkill(prefab, coolTime);
+            return new GuidedOrbSkill(prefab, coolTime, levelUpIncreaseRate);
         }
     }
 }

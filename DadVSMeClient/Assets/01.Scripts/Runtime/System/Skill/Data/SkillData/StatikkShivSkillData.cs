@@ -10,11 +10,12 @@ namespace DadVSMe
         public float checkTime;
         public int targetAttackCount;
         public int maxAttackTargetNum;
-        public float damage;
+        public float checkRadius;
+        public int levelUpIncreaseRate;
 
         public override UnitSkill CreateSkill()
         {
-            return new StatikkShivSkill(prefab, checkTime, targetAttackCount, maxAttackTargetNum, damage);
+            return new StatikkShivSkill(prefab, checkTime, targetAttackCount, maxAttackTargetNum, checkRadius, levelUpIncreaseRate);
         }
     }
 }

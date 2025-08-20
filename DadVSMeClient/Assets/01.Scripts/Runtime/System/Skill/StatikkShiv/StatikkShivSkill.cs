@@ -19,10 +19,11 @@ namespace DadVSMe
         private int maxAttackTargetNum;
         private int attackCount;
         private bool isChecking;
-        private float damage;
+        private float checkRadius;
+        private int levelUpIncreaseRate;
 
         public StatikkShivSkill(AddressableAsset<StatikkShivLighting> prefab,
-            float checkTime = 8f, int targetAttackCount = 3, int maxAttackTargetNum = 5, float damage = 5f) : base()
+            float checkTime, int targetAttackCount, int maxAttackTargetNum, float checkRadius, int levelUpIncreaseRate) : base()
         {
             prefab.InitializeAsync().Forget();
 
@@ -30,7 +31,8 @@ namespace DadVSMe
             this.checkTime = checkTime;
             this.targetAttackCount = targetAttackCount;
             this.maxAttackTargetNum = maxAttackTargetNum;
-            this.damage = damage;
+            this.checkRadius = checkRadius; ;
+            this.levelUpIncreaseRate = levelUpIncreaseRate;
             attackCount = 0;
             isChecking = false;
         }
@@ -44,7 +46,7 @@ namespace DadVSMe
 
         public override void Execute()
         {
-            Collider2D[] cols = Physics2D.OverlapCircleAll(ownerComponent.transform.position, 10f);
+            Collider2D[] cols = Physics2D.OverlapCircleAll(ownerComponent.transform.position, checkRadius);
 
             if (cols.Length == 0)
                 return;
@@ -97,13 +99,21 @@ namespace DadVSMe
             }
 
         }
-        async UniTask StartChecking()
+
+        private async UniTask StartChecking()
         {
             isChecking = true;
 
             await UniTask.Delay(System.TimeSpan.FromSeconds(checkTime));
 
             isChecking = false;
+        }
+
+        public override void LevelUp()
+        {
+            base.LevelUp();
+
+            maxAttackTargetNum += levelUpIncreaseRate;
         }
     }
 }

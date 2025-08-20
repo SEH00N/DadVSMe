@@ -14,12 +14,14 @@ namespace DadVSMe
         private float orbSpawnRadius;
         private float originCooltime;
         private int spawnCount;
+        private int levelUpIncreaseRate;
 
-        public GuidedOrbSkill(AddressableAsset<GuidedOrb> prefab, float cooltime) : base(cooltime)
+        public GuidedOrbSkill(AddressableAsset<GuidedOrb> prefab, float cooltime, int levelUpIncreaseRate) : base(cooltime)
         {
             prefab.InitializeAsync().Forget();
 
             this.prefab = prefab;
+            this.levelUpIncreaseRate = levelUpIncreaseRate;
             originCooltime = cooltime;
             orbSpawnRadius = 3f;
             spawnCount = 2;
@@ -70,8 +72,7 @@ namespace DadVSMe
         {
             base.LevelUp();
 
-            spawnCount = level;
-            cooltime = Mathf.Clamp(originCooltime - (level - 1) * 0.3f, 1.5f, originCooltime); 
+            spawnCount += levelUpIncreaseRate;
         }
     }
 }

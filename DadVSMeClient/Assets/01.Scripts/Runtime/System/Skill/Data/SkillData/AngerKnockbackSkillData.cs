@@ -8,10 +8,11 @@ namespace DadVSMe
     {
         public AttackDataBase attackData;
         public float knockbackRange;
+        public float levelUpIncreaseRate;
 
         public override UnitSkill CreateSkill()
         {
-            return new AngerKnockbackSkill(attackData, knockbackRange);
+            return new AngerKnockbackSkill(attackData, knockbackRange, levelUpIncreaseRate);
         }
     }
 }

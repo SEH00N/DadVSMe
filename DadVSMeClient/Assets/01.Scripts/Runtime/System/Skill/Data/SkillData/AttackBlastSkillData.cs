@@ -7,10 +7,12 @@ namespace DadVSMe
     public class AttackBlastSkillData : SkillData
     {
         public AddressableAsset<AttackBlast> prefab;
+        public float attackBlastLifeTime;
+        public float levelUpIncreaseRate;
 
         public override UnitSkill CreateSkill()
         {
-            return new AttackBlastSkill(prefab);
+            return new AttackBlastSkill(prefab, attackBlastLifeTime, levelUpIncreaseRate);
         }
     }
 }
