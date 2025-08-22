@@ -1,7 +1,4 @@
-using System;
 using System.Collections.Generic;
-using DadVSMe.Entities;
-using H00N.Resources.Addressables;
 using UnityEngine;
 
 namespace DadVSMe
@@ -11,39 +8,44 @@ namespace DadVSMe
         [SerializeField] private SkillDataContainer skillDataContainer;
         public SkillDataContainer SkillDataContainer => skillDataContainer;
 
-        private Dictionary<Type, UnitSkill> skillContainer;
+        private Dictionary<SkillType, UnitSkill> skillContainer;
 
         public virtual void Initialize()
         {
             skillContainer = new();
         }
 
-        public void RegistSkill(UnitSkill skill)
+        public void RegistSkill(SkillType skillType)
         {
-            Type skillType = skill.GetType();
-
-            if (skillContainer.ContainsKey(skillType))
+            if (skillContainer.TryGetValue(skillType, out UnitSkill unitSkill))
             {
-                skillContainer[skillType].LevelUp();
+                unitSkill.LevelUp();
             }
             else
             {
-                skillContainer.Add(skillType, skill);
-                skill.OnRegist(this);
+                UnitSkill newSkill = skillDataContainer.CreateSkill(skillType);
+                skillContainer[skillType] = newSkill;
+                newSkill.OnRegist(this);
             }
         }
 
-        public void UnregistSkill(Type skillType)
+        public void UnregistSkill(SkillType skillType)
         {
-            if (skillContainer.ContainsKey(skillType))
+            if (skillContainer.TryGetValue(skillType, out UnitSkill unitSkill))
             {
-                skillContainer[skillType].OnUnregist();
+                unitSkill.OnUnregist();
                 skillContainer.Remove(skillType);
             }
             else
             {
 
             }
+        }
+
+        public UnitSkill GetSkill(SkillType skillType)
+        {
+            skillContainer.TryGetValue(skillType, out UnitSkill unitSkill);
+            return unitSkill;
         }
     }
 }

@@ -8,5 +8,7 @@ namespace DadVSMe
         public static readonly TagHandle EnemyTag = TagHandle.GetExistingTag("Enemy");
 
         public const float GRAVITY_SCALE = 6.5f;
+
+        public const int MAX_SKILL_LEVEL = 5;
     }
 }

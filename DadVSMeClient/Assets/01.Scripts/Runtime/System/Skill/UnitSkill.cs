@@ -6,6 +6,7 @@ namespace DadVSMe
     {
         protected UnitSkillComponent ownerComponent;
         protected int level;
+        public int Level => level;
 
         public UnitSkill()
         {

@@ -1,9 +1,9 @@
 using DadVSMe.Inputs;
-using H00N.Extensions;
 using H00N.Resources;
 using H00N.Resources.Addressables;
 using H00N.Resources.Pools;
 using UnityEngine;
+using Cysharp.Threading.Tasks;
 
 namespace DadVSMe
 {
@@ -20,19 +20,23 @@ namespace DadVSMe
             }
 
             Instance = this;
-            Initialize();
+            DontDestroyOnLoad(gameObject);
         }
 
-        private void Initialize()
+        public UniTask InitializeAsync()
         {
+            // Core Initialize
             ResourceManager.Initialize(new AddressableResourceLoader());
             PoolManager.Initialize(transform);
 
-            gameObject.GetOrAddComponent<AudioManager>().Initialize();
+            // Game Manager Initialize
+            gameObject.GetComponent<AudioManager>().Initialize();
 
+            // Game Initialize
             Application.targetFrameRate = 60;
-
             InputManager.ChangeInput<PlayerInputReader>();
+
+            return UniTask.CompletedTask;
         }
 
         private void Release()

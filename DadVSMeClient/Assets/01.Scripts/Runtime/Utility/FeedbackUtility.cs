@@ -66,20 +66,26 @@ namespace DadVSMe
     {
         public PlaySound(List<AddressableAsset<AudioClip>> sounds)
         {
-            if (sounds == null)
+            if (sounds == null || sounds.Count <= 0)
                 return;
 
             AddressableAsset<AudioClip> sound = sounds.PickRandom();
-            if (sound == null || string.IsNullOrEmpty(sound.Key))
-                return;
-
-            AudioManager.Instance.PlaySFX(sound);
+            PlayInternalAsync(sound);
         }
         
         public PlaySound(AddressableAsset<AudioClip> sound)
         {
+            PlayInternalAsync(sound);
+        }
+
+        private async void PlayInternalAsync(AddressableAsset<AudioClip> sound)
+        {
             if(sound == null || string.IsNullOrEmpty(sound.Key))
                 return;
+
+            // not loaded yet
+            if(sound.Asset == null)
+                await sound.InitializeAsync();
 
             AudioManager.Instance.PlaySFX(sound);
         }

@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using Random = UnityEngine.Random;
 
 namespace DadVSMe
 {
@@ -18,6 +19,12 @@ namespace DadVSMe
             }
 
             return (TEnum[])enumValues;
+        }
+
+        public static TEnum GetRandomValue<TEnum>() where TEnum : Enum
+        {
+            TEnum[] values = GetValues<TEnum>();
+            return values[Random.Range(0, values.Length)];
         }
 
         public static TEnum Parse<TEnum>(string value) where TEnum : Enum
