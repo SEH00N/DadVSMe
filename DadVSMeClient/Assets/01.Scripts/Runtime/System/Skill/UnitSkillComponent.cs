@@ -1,14 +1,17 @@
+using System;
 using System.Collections.Generic;
+using System.Collections;
 using UnityEngine;
 
 namespace DadVSMe
 {
-    public class UnitSkillComponent : MonoBehaviour
+    public class UnitSkillComponent : MonoBehaviour, IEnumerable<SkillType>
     {
         [SerializeField] private SkillDataContainer skillDataContainer;
         public SkillDataContainer SkillDataContainer => skillDataContainer;
 
         private Dictionary<SkillType, UnitSkill> skillContainer;
+        public event Action<SkillType> OnSkillChangedEvent;
 
         public virtual void Initialize()
         {
@@ -27,6 +30,8 @@ namespace DadVSMe
                 skillContainer[skillType] = newSkill;
                 newSkill.OnRegist(this);
             }
+
+            OnSkillChangedEvent?.Invoke(skillType);
         }
 
         public void UnregistSkill(SkillType skillType)
@@ -38,8 +43,9 @@ namespace DadVSMe
             }
             else
             {
-
             }
+
+            OnSkillChangedEvent?.Invoke(skillType);
         }
 
         public UnitSkill GetSkill(SkillType skillType)
@@ -47,5 +53,8 @@ namespace DadVSMe
             skillContainer.TryGetValue(skillType, out UnitSkill unitSkill);
             return unitSkill;
         }
+
+        IEnumerator<SkillType> IEnumerable<SkillType>.GetEnumerator() => skillContainer.Keys.GetEnumerator();
+        IEnumerator IEnumerable.GetEnumerator() => skillContainer.Keys.GetEnumerator();
     }
 }
