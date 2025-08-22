@@ -1,10 +1,13 @@
 fileFormatVersion: 2
-guid: 88207c79b5e304caf9c4840476557df2
+guid: 1911e798010bd476e8a96a7637b41dd2
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -371013985199640245
-    second: QPSSK_0
+      213: 6736692292272177815
+    second: HUDIcon_0
+  - first:
+      213: 540954347926720298
+    second: HUDIcon_1
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,12 +116,12 @@ TextureImporter:
     buildTarget: WebGL
     maxTextureSize: 2048
     resizeAlgorithm: 0
-    textureFormat: -1
+    textureFormat: 50
     textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
-    overridden: 0
+    overridden: 1
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
@@ -139,23 +142,45 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: QPSSK_0
+      name: HUDIcon_0
       rect:
         serializedVersion: 2
-        x: 105
-        y: 421
-        width: 1087
-        height: 182
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 543, y: 91, z: 543, w: 91}
+        x: 14
+        y: 251
+        width: 233
+        height: 250
+      alignment: 9
+      pivot: {x: 0.50342745, y: 0.32749987}
+      border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: b4139750fb4e9daf0800000000000000
-      internalID: -371013985199640245
+      spriteID: 792cef182f98d7d50800000000000000
+      internalID: 6736692292272177815
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HUDIcon_1
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 8
+        width: 201
+        height: 230
+      alignment: 9
+      pivot: {x: 0.33709922, y: 0.048611067}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a2f00e30d1bd18700800000000000000
+      internalID: 540954347926720298
       vertices: []
       indices: 
       edges: []
@@ -164,7 +189,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 897445dc6e2d24abe8181c569535fdce
+    spriteID: ab40d04993d784e388f8d9845d58fc1e
     internalID: 0
     vertices: []
     indices: 
@@ -174,7 +199,8 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      QPSSK_0: -371013985199640245
+      HUDIcon_0: 6736692292272177815
+      HUDIcon_1: 540954347926720298
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

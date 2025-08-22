@@ -49,7 +49,7 @@ namespace DadVSMe.UI.Skills
             }
 
             InputBlock.Block(BLOCK_KEY);
-            await UniTask.Delay(TimeSpan.FromSeconds(TRANSITION_TIME), true);
+            await UniTask.Delay(TimeSpan.FromSeconds(TRANSITION_TIME), true, cancellationToken: destroyCancellationToken);
             InputBlock.Release(BLOCK_KEY);
 
             callback.OnSelectCard(skillData);
