@@ -12,12 +12,9 @@ namespace DadVSMe.UI.Skills
 
         [SerializeField] List<SkillCardElementUI> elementUIList = new List<SkillCardElementUI>();
 
-        private UnitSkillComponent skillComponent = null;
-
         public void Initialize(UnitSkillComponent skillComponent, List<SkillType> skillList, ICallback callback)
         {
             base.Initialize(callback);
-            this.skillComponent = skillComponent;
 
             for(int i = 0; i < elementUIList.Count; ++i)
             {
@@ -41,7 +38,6 @@ namespace DadVSMe.UI.Skills
         protected override void Release()
         {
             base.Release();
-            skillComponent = null;
         }
 
         public void OnSelectCard(SkillData skillData)

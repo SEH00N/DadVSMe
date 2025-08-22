@@ -1,3 +1,4 @@
+using DadVSMe.Localizations;
 using UnityEngine;
 
 namespace DadVSMe
@@ -46,6 +47,21 @@ namespace DadVSMe
             set {
                 sfxVolume = value;
                 PlayerPrefs.SetFloat("SFXVolume", value);
+            }
+        }
+
+        private static ELocaleType localeType = ELocaleType.None;
+        public static ELocaleType LocaleType {
+            get {
+                if(localeType == ELocaleType.None)
+                    localeType = (ELocaleType)PlayerPrefs.GetInt("LocaleType", (int)ELocaleType.English);
+
+                return localeType;
+            }
+
+            set {
+                localeType = value;
+                PlayerPrefs.SetInt("LocaleType", (int)value);
             }
         }
     }
