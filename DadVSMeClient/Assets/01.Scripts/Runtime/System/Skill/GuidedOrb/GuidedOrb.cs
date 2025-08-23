@@ -1,11 +1,12 @@
 using DadVSMe.Entities;
 using H00N.Resources.Pools;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.EventSystems;
 
 namespace DadVSMe
 {
-    public class GuidedOrb : MonoBehaviour
+    public class GuidedOrb : MonoBehaviour, IPoolableBehaviour
     {
         [SerializeField]
         private AttackDataBase attackData;
@@ -19,6 +20,10 @@ namespace DadVSMe
 
         [SerializeField]
         private float moveSpeed;
+        [SerializeField] 
+        private UnityEvent onDespawnEvent;
+
+        public PoolReference PoolReference => poolReference;
 
         void Awake()
         {
@@ -69,6 +74,9 @@ namespace DadVSMe
             if (collision.gameObject.TryGetComponent<UnitHealth>(out UnitHealth targetHealth))
             {
                 targetHealth.Attack(instigator, attackData);
+
+                Vector3 direction = (target.transform.position - transform.position).normalized;
+                _ = new PlayAttackFeedback(attackData, EAttackAttribute.Normal, transform.position, Vector3.zero, (int)Mathf.Sign(direction.x));
             }
 
             movement.SetActive(false);
@@ -77,7 +85,15 @@ namespace DadVSMe
 
         public void Despawn(EntityAnimationEventData animData)
         {
+            onDespawnEvent?.Invoke();
             PoolManager.Despawn(poolReference);
         }
+
+        public void OnSpawned()
+        {
+            transform.localScale = new Vector3(Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
+        }
+
+        public void OnDespawn() { }
     }
 }
