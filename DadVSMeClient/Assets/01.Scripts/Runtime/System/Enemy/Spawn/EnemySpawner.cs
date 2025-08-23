@@ -2,7 +2,6 @@ using System;
 using System.Collections.Generic;
 using System.Threading;
 using Cysharp.Threading.Tasks;
-using DadVSMe.Enemies;
 using DadVSMe.Entities;
 using H00N.Resources.Addressables;
 using H00N.Resources.Pools;
@@ -13,8 +12,13 @@ namespace DadVSMe.Enemies
 {
     public class EnemySpawner : MonoBehaviour
     {
-        [SerializeField] private AddressableAsset<Enemy> _enemyPrefab;
-        [SerializeField] private EnemySpawnData _enemySpawnData;
+        [Header("Spawn Info")]
+        [SerializeField] AddressableAsset<Enemy> _enemyPrefab;
+        [SerializeField] EnemySpawnData _enemySpawnData;
+
+        [Header("Spawn Position Limit")]
+        [SerializeField] Transform _backgroundLimitTrm;
+        [SerializeField] Transform _deadlineTrm;
 
         [Header("Whether to spawn after the time limit")]
         [SerializeField] private bool _stopAfterTimeline = false;
@@ -124,7 +128,6 @@ namespace DadVSMe.Enemies
             int sec = Mathf.Max(0, Mathf.FloorToInt(elapsed));
             for (int i = 0; i < usable; i++)
             {
-                // [start, end) 구간
                 if (sec >= segments[i].start && sec < segments[i].end)
                     return (data.enemySawnPhaseList[i], i);
             }
@@ -192,8 +195,7 @@ namespace DadVSMe.Enemies
             var list = phase.enemiesList;
             if (list == null || list.Count == 0) return null;
 
-            // 허용 리스트 구성
-            List<IEntityData> allowedunitList = null; // 필요할 때만 할당
+            List<IEntityData> allowedunitList = null;
             for (int i = 0; i < list.Count; i++)
             {
                 var e = list[i];
@@ -229,7 +231,7 @@ namespace DadVSMe.Enemies
 
             Enemy enemy = PoolManager.Spawn<Enemy>(resourceName: _enemyPrefab);
             enemy.Initialize(unitData);
-            enemy.transform.position = GetOffscreenPosition(Camera.main);
+            enemy.transform.position = GetSpawnPos(Camera.main, _backgroundLimitTrm, _deadlineTrm);
 
             CountingEnemy(enemy, unitData);
         }
@@ -270,25 +272,19 @@ namespace DadVSMe.Enemies
             --_onFieldEnemyCount;
         }
 
-        private Vector3 GetOffscreenPosition(Camera cam, float margin = 0.1f)
+        private Vector3 GetSpawnPos(Camera cam, Transform yAnchor, Transform xAnchor)
         {
-            int side = UnityEngine.Random.Range(0, 2);
+            float zDist = Mathf.Abs(cam.transform.position.z);
 
-            float x = UnityEngine.Random.value;
-            float y = UnityEngine.Random.value;
+            // 화면 아래(-0.1 뷰포트)에서 임의 X로 샘플
+            Vector3 p = cam.ViewportToWorldPoint(new Vector3(Random.value, -0.1f, zDist));
+            p.z = 0f;
 
-            switch (side)
-            {
-                case 0: x = 1f + margin; break; // 오른쪽 밖
-                case 1: y = -margin; break; // 아래 밖
-            }
+            // 엄격히 아래/왼쪽으로 고정
+            p.y = Mathf.Min(p.y, yAnchor.position.y - 0.0001f);
+            p.x = Mathf.Min(p.x, xAnchor.position.x - 0.0001f);
 
-            var v = new Vector3(x, y, Mathf.Abs(cam.transform.position.z));
-            var world = cam.ViewportToWorldPoint(v);
-
-            world.z = 0f; 
-
-            return world;
+            return p;
         }
     }
 }

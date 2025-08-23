@@ -40,7 +40,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4839532200498888787}
-  - component: {fileID: 8126129470250093861}
   - component: {fileID: 8174504679710913879}
   m_Layer: 0
   m_Name: 0ThemeBackLayer_1
@@ -67,24 +66,6 @@ Transform:
   - {fileID: 924121674447370723}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1818360608 &8126129470250093861
-PositionConstraint:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3877460539708229512}
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Weight: 0.6
-  m_TranslationAtRest: {x: 16.65, y: 1.66, z: 0}
-  m_TranslationOffset: {x: 0, y: 0, z: 0}
-  m_AffectTranslationX: 1
-  m_AffectTranslationY: 0
-  m_AffectTranslationZ: 0
-  m_Active: 0
-  m_IsLocked: 0
-  m_Sources: []
 --- !u!114 &8174504679710913879
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -99,7 +80,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _pivotTransform: {fileID: 8179818568985425427}
   _socketTransform: {fileID: 924121674447370723}
-  _positionConstraint: {fileID: 8126129470250093861}
 --- !u!1 &8105530789395918050
 GameObject:
   m_ObjectHideFlags: 0

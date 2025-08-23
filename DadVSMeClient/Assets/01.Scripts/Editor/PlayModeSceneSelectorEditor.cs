@@ -14,9 +14,11 @@ namespace DadVSMe.Editors
 
         private const string NONE = "None";
         private const string BOOTSTRAP = "Bootstrap";
+        private const string BOOTSTRAP1 = "Bootstrap 1";
         private static readonly string[] SCENES = {
             NONE,
-            BOOTSTRAP
+            BOOTSTRAP,
+            BOOTSTRAP1,
         };
 
         private static bool changingSceneFlag = false;
@@ -47,6 +49,9 @@ namespace DadVSMe.Editors
 
         [MenuItem(MENU_ROOT_NAME + BOOTSTRAP)]
         public static void SelectScene_BOOTSTRAP() => SetPlayModeScene(BOOTSTRAP);
+
+        [MenuItem(MENU_ROOT_NAME + BOOTSTRAP1)]
+        public static void SelectScene_BOOTSTRAP1() => SetPlayModeScene(BOOTSTRAP1);
 
         private static string GetScenePathByName(string sceneName)
         {
