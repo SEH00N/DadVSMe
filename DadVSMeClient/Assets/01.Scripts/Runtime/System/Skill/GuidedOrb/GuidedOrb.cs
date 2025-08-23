@@ -44,11 +44,14 @@ namespace DadVSMe
 
         void Update()
         {
-            if (target)
+            if (target == null)
             {
-                Vector2 moveDirection = (target.transform.position - transform.position).normalized;
-                movement.SetMovementVelocity(moveDirection * moveSpeed);
+                DespawnInternal();
+                return;
             }
+
+            Vector2 moveDirection = (target.transform.position - transform.position).normalized;
+            movement.SetMovementVelocity(moveDirection * moveSpeed);
         }
 
         public void SetInstigator(Unit instigator)
@@ -68,6 +71,12 @@ namespace DadVSMe
 
         void OnTriggerEnter2D(Collider2D collision)
         {
+            if(target == null)
+            {
+                DespawnInternal();
+                return;
+            }
+
             if (collision.gameObject != target.gameObject)
                 return;
 
@@ -85,8 +94,14 @@ namespace DadVSMe
 
         public void Despawn(EntityAnimationEventData animData)
         {
+            DespawnInternal();
+        }
+
+        private void DespawnInternal()
+        {
             onDespawnEvent?.Invoke();
             PoolManager.Despawn(poolReference);
+
         }
 
         public void OnSpawned()

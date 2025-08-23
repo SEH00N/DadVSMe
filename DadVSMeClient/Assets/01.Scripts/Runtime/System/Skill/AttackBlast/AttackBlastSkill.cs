@@ -13,10 +13,11 @@ namespace DadVSMe
 {
     public class AttackBlastSkill : UnitSkill
     {
+        private static readonly Vector2 SpawnOffset = new Vector2(1.5f, 2f);
+
         private AddressableAsset<AttackBlast> prefab = null;
         private float attackBlastLifeTime;
         private float levelUpIncreaseRate;
-        private Vector3 spawnOffset;
 
         public AttackBlastSkill(AddressableAsset<AttackBlast> prefab, float attackBlastLifeTime, float levelUpIncreaseRate)
         {
@@ -25,7 +26,6 @@ namespace DadVSMe
             this.prefab = prefab;
             this.attackBlastLifeTime = attackBlastLifeTime;
             this.levelUpIncreaseRate = levelUpIncreaseRate;
-            spawnOffset = new Vector2(2.5f, 0f);
         }
 
         public override void OnRegist(UnitSkillComponent ownerComponent)
@@ -42,7 +42,7 @@ namespace DadVSMe
             attackBlast.SetInstigator(ownerComponent.gameObject.GetComponent<Unit>());
 
             Transform ownerTrm = ownerComponent.transform;
-            attackBlast.transform.position = ownerTrm.position + (spawnOffset * Math.Sign(ownerTrm.localScale.x));
+            attackBlast.transform.position = ownerTrm.position + new Vector3(SpawnOffset.x * Math.Sign(ownerTrm.localScale.x), SpawnOffset.y, 0f);
             Vector3 scale = attackBlast.transform.localScale;
             scale.x *= Math.Sign(ownerTrm.localScale.x);
             attackBlast.transform.localScale = scale;
