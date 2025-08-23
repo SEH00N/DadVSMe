@@ -1,3 +1,4 @@
+using H00N.Resources.Addressables;
 using UnityEngine;
 
 namespace DadVSMe
@@ -6,10 +7,11 @@ namespace DadVSMe
     public class FirePunchSkillData : SkillData
     {
         public float levelUpIncreaseRate;
-
+        public AddressableAsset<ParticleSystem> particlePrefab;
+    
         public override UnitSkill CreateSkill()
         {
-            return new FirePunchSkill(levelUpIncreaseRate);
+            return new FirePunchSkill(levelUpIncreaseRate, particlePrefab);
         }
     }
 }
