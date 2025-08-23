@@ -5,16 +5,6 @@ namespace DadVSMe
 {
     public static class GameInstance
     {
-        private static Player mainPlayer = null;
-        public static Player MainPlayer {
-            get {
-                if(mainPlayer == null)
-                    mainPlayer = Object.FindFirstObjectByType<Player>();
-
-                return mainPlayer;
-            }
-        }
-
         private static Transform mainPopupFrame = null;
         public static Transform MainPopupFrame {
             get {
@@ -26,6 +16,16 @@ namespace DadVSMe
                 }
 
                 return mainPopupFrame;
+            }
+        }
+
+        private static GameCycle gameCycle = null;
+        public static GameCycle GameCycle {
+            get {
+                if(gameCycle == null)
+                    gameCycle = Object.FindFirstObjectByType<GameCycle>();
+
+                return gameCycle;
             }
         }
     }

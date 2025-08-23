@@ -11,6 +11,7 @@ namespace DadVSMe.UI.HUD
         [SerializeField] RageBarUI rageBarUI = null;
         [SerializeField] EXPBarUI expBarUI = null;
         [SerializeField] SkillInfoUI skillInfoUI = null;
+        [SerializeField] GameProgressUI gameProgressUI = null;
 
         // Debug
         private async void Start()
@@ -21,11 +22,13 @@ namespace DadVSMe.UI.HUD
 
         public void Initialize()
         {
-            Player player = GameInstance.MainPlayer;
+            GameCycle gameCycle = GameInstance.GameCycle;
+            Player player = gameCycle.MainPlayer;
             hpBarUI.Initialize(player);
             rageBarUI.Initialize(player);
             expBarUI.Initialize(player);
             skillInfoUI.Initialize(player.GetComponent<UnitSkillComponent>());
+            gameProgressUI.Initialize(gameCycle.StartLine, gameCycle.EndLine, gameCycle.Deadline.transform, player.transform);
         }
     }
 }

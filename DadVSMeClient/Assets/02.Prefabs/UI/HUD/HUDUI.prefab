@@ -880,6 +880,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8675687027933815988}
+  - component: {fileID: 1417311624674233429}
   m_Layer: 5
   m_Name: ProgressUI
   m_TagString: Untagged
@@ -911,6 +912,20 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 65}
   m_SizeDelta: {x: 934.3, y: 20}
   m_Pivot: {x: 0.5, y: 0}
+--- !u!114 &1417311624674233429
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6317722009462361792}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ff624036763f49e5a97c0dc687a3d77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  deadLineTransform: {fileID: 8560682010639613717}
+  playerTransform: {fileID: 1875487124972457582}
 --- !u!1 &6856508955766156964
 GameObject:
   m_ObjectHideFlags: 0
@@ -1043,6 +1058,7 @@ MonoBehaviour:
   rageBarUI: {fileID: 6971122659648120262}
   expBarUI: {fileID: 8773152287718872343}
   skillInfoUI: {fileID: 5048540689169243323}
+  gameProgressUI: {fileID: 1417311624674233429}
 --- !u!1 &7319160616507338353
 GameObject:
   m_ObjectHideFlags: 0
