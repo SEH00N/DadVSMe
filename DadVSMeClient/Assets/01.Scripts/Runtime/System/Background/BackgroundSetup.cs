@@ -1,5 +1,7 @@
 using UnityEngine;
 using System;
+using System.Threading.Tasks;
+using Cysharp.Threading.Tasks;
 
 namespace DadVSMe.Background
 {
@@ -18,28 +20,27 @@ namespace DadVSMe.Background
 
     public class BackgroundSetup : MonoBehaviour
     {
+        [SerializeField] Transform _cameraTransform;
+        [SerializeField] Collider2D _boundary;
+        [Space(20)]
         [SerializeField] private BackgroundTrailerGroup _backTrailerGroup;
         [SerializeField] private BackgroundTrailerGroup _middleTrailerGroup;
         [SerializeField] private BackgroundTrailerGroup _frontTrailerGroup;
-        [Space(10)]
-        [SerializeField] Transform _cameraTransform;
-        [SerializeField] Collider2D _boundary;
-
-        private BackgroundResourceReleaser _releaser;
 
         private void Start()
         {
-            _releaser = new BackgroundResourceReleaser();
+            var releaser = new BackgroundResourceReleaser();
 
-            _backTrailerGroup.Initialize(_boundary, _cameraTransform, _releaser);
-            //_middleTrailerGroup.Initialize(_boundary, _cameraTransform, _releaser);
-            //_frontTrailerGroup.Initialize(_boundary, _cameraTransform, _releaser);
+            //InitializeBackgroundTrailerGroup(_backTrailerGroup, releaser);
+            //InitializeBackgroundTrailerGroup(_middleTrailerGroup, releaser);
+            InitializeBackgroundTrailerGroup(_frontTrailerGroup, releaser);
+        }
 
-            _backTrailerGroup.trailer.onDespawnedBackground += _releaser.HandleChangedNewLayerTheme;
-            //_middleTrailerGroup.trailer.onChangedTheme += _releaser.HandleChangedNewLayerTheme;
-            //_frontTrailerGroup.trailer.onChangedTheme += _releaser.HandleChangedNewLayerTheme;
-
-            _backTrailerGroup.trailer.Run();
+        private void InitializeBackgroundTrailerGroup(BackgroundTrailerGroup group, BackgroundResourceReleaser releaser)
+        {
+            group.Initialize(_boundary, _cameraTransform, releaser);
+            group.trailer.onDespawnedBackground += releaser.HandleChangedNewLayerTheme;
+            group.trailer.Run().Forget();
         }
     }
 }

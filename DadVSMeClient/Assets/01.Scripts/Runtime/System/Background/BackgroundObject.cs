@@ -3,9 +3,6 @@ using UnityEngine.Animations;
 
 namespace DadVSMe.Background
 {
-    using PositionConstraint = UnityEngine.Animations.PositionConstraint;
-
-    [RequireComponent(typeof(PositionConstraint))]
     public class BackgroundObject : MonoBehaviour
     {
         [SerializeField] Transform _pivotTransform;
@@ -13,7 +10,7 @@ namespace DadVSMe.Background
         [SerializeField] Transform _socketTransform;
         public Vector2 SocketPosition => _socketTransform.position;
 
-        [SerializeField] PositionConstraint _positionConstraint;
+        //[SerializeField] PositionConstraint _positionConstraint;
 
         private int _themeIdx;
         public int ThemeIdx => _themeIdx;
@@ -21,7 +18,6 @@ namespace DadVSMe.Background
         public void Initialize(Vector2 spawnPosition, Transform followTransform, int themeIdx)
         {
             Vector2 delta = spawnPosition - (Vector2)_pivotTransform.position;
-
             transform.position = new Vector3
             (
                  transform.position.x + delta.x,
@@ -29,10 +25,16 @@ namespace DadVSMe.Background
                  transform.position.z
             );
 
-            _positionConstraint.ClearSources();
+            //Debug.Log($"{gameObject.name} {_pivotTransform.position} {_socketTransform.position}");
 
-            var source = new ConstraintSource { sourceTransform = followTransform, weight = 1 };
-            _positionConstraint.AddSource(source);
+            //_positionConstraint.ClearSources();
+
+            //var source = new ConstraintSource { sourceTransform = followTransform, weight = 1 };
+            //_positionConstraint.AddSource(source);
+            //_positionConstraint.translationOffset = ((Vector2)targetPosition - (Vector2)followTransform.position) * (1 / _positionConstraint.weight);
+            //if (gameObject.name.Contains("1"))
+            //    Debug.Break();
+            //_positionConstraint.constraintActive = true;
 
             _themeIdx = themeIdx;
         }

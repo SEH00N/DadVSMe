@@ -2,7 +2,6 @@ using System;
 using System.Collections.Generic;
 using System.Threading;
 using Cysharp.Threading.Tasks;
-using DadVSMe.Enemies;
 using DadVSMe.Entities;
 using H00N.Resources.Addressables;
 using H00N.Resources.Pools;
@@ -13,13 +12,16 @@ namespace DadVSMe.Enemies
 {
     public class EnemySpawner : MonoBehaviour
     {
-        [SerializeField] private AddressableAsset<Enemy> _enemyPrefab;
-        [SerializeField] private EnemySpawnData _enemySpawnData;
+        [Header("Spawn Info")]
+        [SerializeField] EnemySpawnData _enemySpawnData;
+
+        [Header("Spawn Position Limit")]
+        [SerializeField] Transform _backgroundLimitTrm; // y-anchor
+        [SerializeField] Transform _deadlineTrm;        // x-anchor
 
         [Header("Whether to spawn after the time limit")]
         [SerializeField] private bool _stopAfterTimeline = false;
 
-        private CancellationTokenSource _canclelationTokenSource;
         private float _startTime;
         private int _onFieldEnemyCount;
 
@@ -27,21 +29,12 @@ namespace DadVSMe.Enemies
 
         private void OnEnable()
         {
-            _canclelationTokenSource = new CancellationTokenSource();
             _enemyCountDictionary = new Dictionary<IEntityData, int>();
-
             _startTime = Time.time;
-            RunAsync(_canclelationTokenSource.Token).Forget();
+            RunAsync().Forget();
         }
 
-        private void OnDisable()
-        {
-            _canclelationTokenSource?.Cancel();
-            _canclelationTokenSource?.Dispose();
-            _canclelationTokenSource = null;
-        }
-
-        private async UniTaskVoid RunAsync(CancellationToken token)
+        private async UniTaskVoid RunAsync()
         {
             if (_enemySpawnData == null)
             {
@@ -49,19 +42,9 @@ namespace DadVSMe.Enemies
                 return;
             }
 
-            if (_enemyPrefab != null)
-            {
-                try 
-                { 
-                    await _enemyPrefab.InitializeAsync().AttachExternalCancellation(token); 
-                }
-                catch (OperationCanceledException) 
-                { 
-                    return; 
-                }
-            }
+            var token = this.GetCancellationTokenOnDestroy();
 
-            while (token.IsCancellationRequested == false)
+            while (!token.IsCancellationRequested)
             {
                 var (phase, phaseIndex) = GetCurrentPhase();
 
@@ -72,22 +55,21 @@ namespace DadVSMe.Enemies
                 }
 
                 var delaySec = Mathf.Max(0.01f, phase.spawnInterval.Next());
-
                 bool canSpawn = phase.totalEnemyCountOnField <= 0 || _onFieldEnemyCount < phase.totalEnemyCountOnField;
 
                 if (canSpawn)
                 {
-                    var unit = PickUnitForPhase(phase, _enemyCountDictionary);
-                    await SpawnFromUnitAsync(unit, token);
+                    var entry = PickUnitForPhase(phase, _enemyCountDictionary);
+                    await SpawnFromUnitAsync(entry?.prefab, entry?.enemyData, token);
                 }
 
                 try
                 {
                     await UniTask.Delay(TimeSpan.FromSeconds(delaySec), cancellationToken: token);
                 }
-                catch (OperationCanceledException) 
-                { 
-                    break; 
+                catch (OperationCanceledException)
+                {
+                    break;
                 }
             }
         }
@@ -107,24 +89,19 @@ namespace DadVSMe.Enemies
                 : ComputeRoundedSegments(count, total);
 
             int usable = Mathf.Min(segments.Count, data.enemySawnPhaseList.Count);
-
-            if (usable == 0) 
-                return (null, -1);
+            if (usable == 0) return (null, -1);
 
             float elapsed = Time.time - _startTime;
 
             if (elapsed >= total)
             {
-                if (_stopAfterTimeline) 
-                    return (null, -1);
-
+                if (_stopAfterTimeline) return (null, -1);
                 return (data.enemySawnPhaseList[usable - 1], usable - 1);
             }
 
             int sec = Mathf.Max(0, Mathf.FloorToInt(elapsed));
             for (int i = 0; i < usable; i++)
             {
-                // [start, end) 구간
                 if (sec >= segments[i].start && sec < segments[i].end)
                     return (data.enemySawnPhaseList[i], i);
             }
@@ -136,10 +113,10 @@ namespace DadVSMe.Enemies
         {
             var res = new List<(int, int)>(ranges != null ? ranges.Count : 0);
 
-            if (ranges == null || ranges.Count == 0) 
-            { 
-                res.Add((0, total)); 
-                return res; 
+            if (ranges == null || ranges.Count == 0)
+            {
+                res.Add((0, total));
+                return res;
             }
 
             for (int i = 0; i < ranges.Count; i++)
@@ -157,10 +134,10 @@ namespace DadVSMe.Enemies
         {
             var result = new List<(int, int)>(n);
 
-            if (n <= 0) 
-            { 
-                result.Add((0, totalSeconds)); 
-                return result; 
+            if (n <= 0)
+            {
+                result.Add((0, totalSeconds));
+                return result;
             }
 
             var bounds = new int[n + 1];
@@ -187,13 +164,12 @@ namespace DadVSMe.Enemies
             return result;
         }
 
-        private IEntityData PickUnitForPhase(SpawnPhase phase, IReadOnlyDictionary<IEntityData, int> currentCounts)
+        private EnemyEntry PickUnitForPhase(SpawnPhase phase, IReadOnlyDictionary<IEntityData, int> currentCounts)
         {
             var list = phase.enemiesList;
             if (list == null || list.Count == 0) return null;
 
-            // 허용 리스트 구성
-            List<IEntityData> allowedunitList = null; // 필요할 때만 할당
+            List<EnemyEntry> allowedunitList = null;
             for (int i = 0; i < list.Count; i++)
             {
                 var e = list[i];
@@ -203,33 +179,33 @@ namespace DadVSMe.Enemies
                 bool ok = (e.maxOnField <= 0) || (cur < e.maxOnField);
                 if (ok)
                 {
-                    (allowedunitList ??= new List<IEntityData>(list.Count)).Add(e.enemyData);
+                    (allowedunitList ??= new List<EnemyEntry>(list.Count)).Add(e);
                 }
             }
 
             if (allowedunitList == null || allowedunitList.Count == 0)
-                return null; // 모두 상한 도달
+                return null;
 
             int pick = UnityEngine.Random.Range(0, allowedunitList.Count);
             return allowedunitList[pick];
         }
 
-        private async UniTask SpawnFromUnitAsync(IEntityData unitData, CancellationToken token)
+        private async UniTask SpawnFromUnitAsync(AddressableAsset<Enemy> prefab, IEntityData unitData, CancellationToken token)
         {
-            if(unitData == null) return;
+            if (unitData == null || prefab == null) return;
 
-            try 
-            { 
-                await _enemyPrefab.InitializeAsync().AttachExternalCancellation(token); 
-            }
-            catch (OperationCanceledException) 
+            try
             {
-                return; 
+                await prefab.InitializeAsync();
+            }
+            catch (OperationCanceledException)
+            {
+                return;
             }
 
-            Enemy enemy = PoolManager.Spawn<Enemy>(resourceName: _enemyPrefab);
+            Enemy enemy = PoolManager.Spawn<Enemy>(prefab.Key);
             enemy.Initialize(unitData);
-            enemy.transform.position = GetOffscreenPosition(Camera.main);
+            enemy.transform.position = GetSpawnPos(Camera.main, _backgroundLimitTrm, _deadlineTrm);
 
             CountingEnemy(enemy, unitData);
         }
@@ -270,25 +246,19 @@ namespace DadVSMe.Enemies
             --_onFieldEnemyCount;
         }
 
-        private Vector3 GetOffscreenPosition(Camera cam, float margin = 0.1f)
+        private Vector3 GetSpawnPos(Camera cam, Transform yAnchor, Transform xAnchor)
         {
-            int side = UnityEngine.Random.Range(0, 2);
+            float zDist = Mathf.Abs(cam.transform.position.z);
 
-            float x = UnityEngine.Random.value;
-            float y = UnityEngine.Random.value;
+            // 화면 아래(-0.1 뷰포트)에서 임의 X로 샘플
+            Vector3 p = cam.ViewportToWorldPoint(new Vector3(Random.value, -0.1f, zDist));
+            p.z = 0f;
 
-            switch (side)
-            {
-                case 0: x = 1f + margin; break; // 오른쪽 밖
-                case 1: y = -margin; break; // 아래 밖
-            }
+            // y < yAnchor.y, x < xAnchor.x 보장
+            p.y = Mathf.Min(p.y, yAnchor.position.y - 0.0001f);
+            p.x = Mathf.Min(p.x, xAnchor.position.x - 0.0001f);
 
-            var v = new Vector3(x, y, Mathf.Abs(cam.transform.position.z));
-            var world = cam.ViewportToWorldPoint(v);
-
-            world.z = 0f; 
-
-            return world;
+            return p;
         }
     }
 }

@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using Cysharp.Threading.Tasks;
+using DadVSMe.Localizations;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -30,8 +31,8 @@ namespace DadVSMe.UI.Skills
             this.skillData = skillData;
 
             new SetSprite(skillIcon, skillData.skillIcon);
-            nameText.text = skillData.skillName.ToString();
-            descText.text = skillData.skillDesc.ToString();
+            nameText.text = new LocalizedString(skillData.skillName);
+            descText.text = new LocalizedString(skillData.skillDesc);
 
             for(int i = 0; i < levelObjectList.Count; i++)
                 levelObjectList[i].SetActive(i < currentLevel);

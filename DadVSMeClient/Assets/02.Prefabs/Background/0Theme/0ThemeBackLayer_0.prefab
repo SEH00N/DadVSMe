@@ -158,7 +158,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7794704458647468219}
-  - component: {fileID: 4548801392592468278}
   - component: {fileID: 1853053866732055809}
   m_Layer: 0
   m_Name: 0ThemeBackLayer_0
@@ -185,24 +184,6 @@ Transform:
   - {fileID: 7042838080742528529}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1818360608 &4548801392592468278
-PositionConstraint:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7222991730759296624}
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Weight: 0.6
-  m_TranslationAtRest: {x: 16.65, y: 1.66, z: 0}
-  m_TranslationOffset: {x: 0, y: 0, z: 0}
-  m_AffectTranslationX: 1
-  m_AffectTranslationY: 0
-  m_AffectTranslationZ: 0
-  m_Active: 0
-  m_IsLocked: 0
-  m_Sources: []
 --- !u!114 &1853053866732055809
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -217,4 +198,3 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _pivotTransform: {fileID: 3262429672666926089}
   _socketTransform: {fileID: 7042838080742528529}
-  _positionConstraint: {fileID: 4548801392592468278}

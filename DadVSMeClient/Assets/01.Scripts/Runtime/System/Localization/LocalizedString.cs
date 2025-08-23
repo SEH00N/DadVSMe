@@ -9,6 +9,11 @@ namespace DadVSMe.Localizations
 
         public string localizedString;
 
+        public LocalizedString(UnityEngine.Localization.LocalizedString localizedString)
+        {
+            this.localizedString = localizedString.GetLocalizedString();
+        }
+
         public LocalizedString(string key)
         {
             localizedString = key;
