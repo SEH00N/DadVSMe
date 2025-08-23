@@ -1,4 +1,5 @@
 using System;
+using DadVSMe.Core.Cam;
 using DadVSMe.Enemies.FSM;
 using DadVSMe.Entities;
 using DadVSMe.Entities.FSM;
@@ -13,6 +14,8 @@ namespace DadVSMe
         Unit target;
         public Transform targetPosition;
         public Vector3 hitUpOffset;
+        public Color filterColor;
+        public float filterVisibleTime;
 
         public override void Init(FSMBrain brain, FSMState state)
         {
@@ -27,6 +30,14 @@ namespace DadVSMe
 
             target = fsmData.frenzyTarget;
             entityAnimator.AddAnimationEventListener(EEntityAnimationEventType.Trigger, FirstAttack);
+
+            BackgroundFilterCameraHandle handle =
+                CameraManager.CreateCameraHandle<BackgroundFilterCameraHandle, BackgroundFilterCameraHandleParameter>
+                (out BackgroundFilterCameraHandleParameter param);
+
+            param.time = filterVisibleTime;
+            param.color = filterColor;
+            handle.Execute(param);
         }
 
         public override void ExitState()

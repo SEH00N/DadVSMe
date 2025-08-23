@@ -127,6 +127,8 @@ MonoBehaviour:
   attackData: {fileID: 11400000, guid: eb7d31ceaf0194526bd73f5571c67652, type: 2}
   targetPosition: {fileID: 132300051311107662}
   hitUpOffset: {x: 0, y: 0.4, z: 0}
+  filterColor: {r: 0.596, g: 0.029903898, b: 0.029903898, a: 0.5803922}
+  filterVisibleTime: 2
 --- !u!1 &936800214172591095
 GameObject:
   m_ObjectHideFlags: 0
