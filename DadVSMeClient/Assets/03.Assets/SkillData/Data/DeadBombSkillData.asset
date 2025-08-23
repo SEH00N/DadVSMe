@@ -13,10 +13,31 @@ MonoBehaviour:
   m_Name: DeadBombSkillData
   m_EditorClassIdentifier: 
   skillType: 9
+  skillName:
+    m_TableReference:
+      m_TableCollectionName: 
+    m_TableEntryReference:
+      m_KeyId: 0
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  skillDesc:
+    m_TableReference:
+      m_TableCollectionName: 
+    m_TableEntryReference:
+      m_KeyId: 0
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  skillIcon:
+    key: 
   attackData: {fileID: 11400000, guid: 4d77a75604ed84d8d9ad821222b6d9c0, type: 2}
-  bombEffect:
-    key: VFX_DeadBomb
-  bombSound:
-    key: sfx_explosion_0
+  bombRef:
+    key: Bomb
   attackRadius: 5
   levelUpIncreaseRate: 2
+  references:
+    version: 2
+    RefIds: []

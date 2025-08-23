@@ -18,6 +18,7 @@ namespace DadVSMe
             skillContainer = new();
 
             RegistSkill(SkillType.ItemMagnet);
+            RegistSkill(SkillType.DeadBomb);
         }
 
         public void RegistSkill(SkillType skillType)
