@@ -200,6 +200,126 @@ Transform:
   m_Children: []
   m_Father: {fileID: 331703336773932477}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &3189645403441526303
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7557858924265703240}
+  - component: {fileID: 5189222772527457167}
+  - component: {fileID: 5694101276693309854}
+  - component: {fileID: 2172587896148122878}
+  - component: {fileID: 5292536925446921755}
+  m_Layer: 0
+  m_Name: Reload
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7557858924265703240
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3189645403441526303}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3316634518292228339}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5189222772527457167
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3189645403441526303}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72988976fd79843c3ab3a8ff64c3f74f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &5694101276693309854
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3189645403441526303}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3515528adf73f471f8009033ff01c22f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  autoTransitioning: 0
+  onStateEnterEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2589478944185634602}
+        m_TargetAssemblyTypeName: DadVSMe.Entities.EntityAnimator, DadVSMe
+        m_MethodName: PlayAnimation
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: SunchipsReloading
+          m_BoolArgument: 0
+        m_CallState: 2
+  onStateExitEvent:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &2172587896148122878
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3189645403441526303}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ed5b33c6d0df4b1a898f62ac300b33a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animationEventDatas:
+  - eventType: 2
+    event:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 2243797509750852334}
+          m_TargetAssemblyTypeName: H00N.AI.FSM.FSMBrain, H00N.AI.FSM
+          m_MethodName: ChangeState
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 720001878701972908}
+            m_ObjectArgumentAssemblyTypeName: H00N.AI.FSM.FSMState, H00N.AI.FSM
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+--- !u!114 &5292536925446921755
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3189645403441526303}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90c863455c3ba48c4bff2be0a4e25d83, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cooltime: 4
 --- !u!1 &4884188751243120387
 GameObject:
   m_ObjectHideFlags: 0
@@ -575,6 +695,7 @@ GameObject:
   - component: {fileID: 3179823936384215197}
   - component: {fileID: 2044999564066586908}
   - component: {fileID: 7064346748916037356}
+  - component: {fileID: 2823539637470607598}
   m_Layer: 0
   m_Name: '[Tran] Shoot'
   m_TagString: Untagged
@@ -669,6 +790,79 @@ MonoBehaviour:
     lieCompare: 0
     checkDie: 1
     dieCompare: 0
+--- !u!114 &2823539637470607598
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7251928962431866522}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c7311a7e616244d2d8501d3e0e2b6a9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isReverse: 0
+--- !u!1 &7272579269215858960
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8126876806078112925}
+  - component: {fileID: 2910904108578360432}
+  - component: {fileID: 345060468831960035}
+  m_Layer: 0
+  m_Name: '[Tran] Reload'
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8126876806078112925
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7272579269215858960}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 331703336773932477}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2910904108578360432
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7272579269215858960}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2fbc16cf8c22d4c1e9f8c9f7247cab96, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetState: {fileID: 5694101276693309854}
+--- !u!114 &345060468831960035
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7272579269215858960}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d099e4a5262234f62a73f00d07cddb38, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isReverse: 0
+  targetShootCount: 3
 --- !u!1 &7789729089576600963
 GameObject:
   m_ObjectHideFlags: 0
@@ -681,7 +875,7 @@ GameObject:
   - component: {fileID: 6841438471699872714}
   - component: {fileID: 3819814402957642454}
   - component: {fileID: 5184880835730408569}
-  - component: {fileID: 6950370912834186215}
+  - component: {fileID: 79484496068112606}
   m_Layer: 0
   m_Name: Shoot
   m_TagString: Untagged
@@ -704,6 +898,7 @@ Transform:
   m_Children:
   - {fileID: 3263690418883284025}
   - {fileID: 875977578619571919}
+  - {fileID: 8126876806078112925}
   m_Father: {fileID: 3316634518292228339}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &6841438471699872714
@@ -778,7 +973,7 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
---- !u!114 &6950370912834186215
+--- !u!114 &79484496068112606
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -787,7 +982,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 7789729089576600963}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ae4555c8661de4c9ebf82bdc7ffd8644, type: 3}
+  m_Script: {fileID: 11500000, guid: e7449e66e5ad04028b25a9b83cc666bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   attackOffset: {x: 0, y: 2}
@@ -891,6 +1086,34 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: 98265fe78cbfb4e32a4da99fa528945d, type: 2}
+    - target: {fileID: 6582178051482799858, guid: 16129bf7803a2466f867a51ceea4c109, type: 3}
+      propertyPath: aiDataContainer.aiDataList.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6582178051482799858, guid: 16129bf7803a2466f867a51ceea4c109, type: 3}
+      propertyPath: 'managedReferences[2769520786273993006]'
+      value: DadVSMe DadVSMe.Enemies.FSM.SunchipsEnemyFSMData
+      objectReference: {fileID: 0}
+    - target: {fileID: 6582178051482799858, guid: 16129bf7803a2466f867a51ceea4c109, type: 3}
+      propertyPath: aiDataContainer.aiDataList.Array.data[3].wrapType
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6582178051482799858, guid: 16129bf7803a2466f867a51ceea4c109, type: 3}
+      propertyPath: managedReferences[2769520786273993006].shootCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6582178051482799858, guid: 16129bf7803a2466f867a51ceea4c109, type: 3}
+      propertyPath: managedReferences[2769520786273993006].shootCooltime
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6582178051482799858, guid: 16129bf7803a2466f867a51ceea4c109, type: 3}
+      propertyPath: aiDataContainer.aiDataList.Array.data[3].unityObjectReference
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6582178051482799858, guid: 16129bf7803a2466f867a51ceea4c109, type: 3}
+      propertyPath: aiDataContainer.aiDataList.Array.data[3].serializableObjectReference
+      value: 2769520786273993006
+      objectReference: {fileID: 0}
     - target: {fileID: 6628194332557585927, guid: 16129bf7803a2466f867a51ceea4c109, type: 3}
       propertyPath: onStateEnterEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
       value: SunchipsThrown2
@@ -910,6 +1133,10 @@ PrefabInstance:
     - target: {fileID: 7392916026507550262, guid: 16129bf7803a2466f867a51ceea4c109, type: 3}
       propertyPath: onStateEnterEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
       value: SunchipsThrown1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7463771367122635574, guid: 16129bf7803a2466f867a51ceea4c109, type: 3}
+      propertyPath: defaultAnimationName
+      value: SunchipsIdle
       objectReference: {fileID: 0}
     - target: {fileID: 8229906356129168091, guid: 16129bf7803a2466f867a51ceea4c109, type: 3}
       propertyPath: onStateEnterEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
@@ -935,6 +1162,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 7673012708161170671, guid: 16129bf7803a2466f867a51ceea4c109, type: 3}
       insertIndex: -1
       addedObject: {fileID: 331703336773932477}
+    - targetCorrespondingSourceObject: {fileID: 7673012708161170671, guid: 16129bf7803a2466f867a51ceea4c109, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7557858924265703240}
     - targetCorrespondingSourceObject: {fileID: 7645107000064405403, guid: 16129bf7803a2466f867a51ceea4c109, type: 3}
       insertIndex: -1
       addedObject: {fileID: 3561968308009414975}

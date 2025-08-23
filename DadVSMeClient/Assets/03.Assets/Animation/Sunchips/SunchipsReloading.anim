@@ -125,16 +125,16 @@ AnimationClip:
   m_HasMotionFloatCurves: 0
   m_Events:
   - time: 0
-    functionName: 
+    functionName: OnAnimationEvent
     data: 
-    objectReferenceParameter: {fileID: 0}
+    objectReferenceParameter: {fileID: 11400000, guid: 7caf992f7dac847ed8cb0f4f95951f4e, type: 2}
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
   - time: 0.4
-    functionName: 
+    functionName: OnAnimationEvent
     data: 
-    objectReferenceParameter: {fileID: 0}
+    objectReferenceParameter: {fileID: 11400000, guid: e36712369eeec4fd7937a3acdb5656d1, type: 2}
     floatParameter: 0
     intParameter: 0
     messageOptions: 0

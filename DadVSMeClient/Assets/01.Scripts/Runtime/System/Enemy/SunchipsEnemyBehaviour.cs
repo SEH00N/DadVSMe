@@ -22,31 +22,17 @@ namespace DadVSMe
         private EnemyFSMData enemyFSMData = null;
         private SunchipsEnemyData shooterEnemyData = null;
 
-        private Animal animal = null;
-        private float shootTimer = 0f;
+        private SunchipsEnemyFSMData fsmData;
 
         private void Awake()
         {
             unit.OnInitializedEvent += InitializeInternal;
+            fsmData = GetComponent<FSMBrain>().GetAIData<SunchipsEnemyFSMData>();
         }
 
         private void Update()
         {
-            if (animal == null)
-                return;
-
-            if (unitFSMData.isDie || unitFSMData.isFloat || unitFSMData.isLie)
-            {
-                shootTimer = 0f;
-                return;
-            }
-
-            shootTimer += Time.deltaTime;
-            if (shootTimer < shooterEnemyData.shootCooltime)
-                return;
-
-            shootTimer = 0f;
-            animal.Fire(enemyFSMData.player.transform.position);
+            fsmData.shootCooltime = Mathf.Max(fsmData.shootCooltime - Time.deltaTime, 0f);
         }
         
         private void InitializeInternal(IEntityData data)
@@ -57,28 +43,11 @@ namespace DadVSMe
             this.shooterEnemyData = shooterEnemyData;
             unitFSMData = unit.FSMBrain.GetAIData<UnitFSMData>();
             enemyFSMData = unit.FSMBrain.GetAIData<EnemyFSMData>();
-
-            SpawnAnimalAsync(shooterEnemyData.animalPrefab, shooterEnemyData.animalEntityData).Forget();
         }
 
         public void OnSpawned() { }
         public void OnDespawn()
         {
-            if(animal == null)
-                return;
-
-            PoolManager.Despawn(animal);
-        }
-        private async UniTask SpawnAnimalAsync(AddressableAsset<Animal> animalPrefab, AnimalEntityData animalEntityData)
-        {
-            await animalPrefab.InitializeAsync();
-            animal = PoolManager.Spawn<Animal>(animalPrefab.Key);
-            animal.transform.position = animalFollowTarget.position;
-            animal.Initialize(animalEntityData);
-            animal.SetOwner(unit);
-            animal.SetFollowTarget(animalFollowTarget);
-
-            unit.AddChildSortingOrderResolver(animal);
         }
     }
 }

@@ -28,7 +28,7 @@ namespace DadVSMe.Entities
                 hash = Animator.StringToHash(animationName);
                 animationHashTable.Add(animationName, hash);
             }
-
+            Debug.Log(animationName);
             animator.Play(hash, 0, 0f);
             animator.Update(0f);
         }

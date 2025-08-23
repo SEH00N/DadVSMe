@@ -78,10 +78,6 @@ namespace DadVSMe
             }
 
             points[0] = instigator.transform.position;
-            for(int i = 0; i < points.Length; i++)
-                Debug.Log(points[i]);
-            Debug.Log(targets.Count);
-            Debug.Log(points.Length + 1);
             lineRenderer.positionCount = targets.Count + 1;
             for (int i = 0; i <= targets.Count; i++)
             {

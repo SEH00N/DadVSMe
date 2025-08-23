@@ -662,7 +662,7 @@ MonoBehaviour:
   mainPlayer: {fileID: 6750220605565479966}
   startLine: {fileID: 257588201}
   endLine: {fileID: 761787257}
---- !u!1001 &472269984
+--- !u!1001 &469583507
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -672,11 +672,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1173425546269584201, guid: 6654846a6a4404d7f9a59c14a1339995, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -13.025492
+      value: -13.326394
       objectReference: {fileID: 0}
     - target: {fileID: 1173425546269584201, guid: 6654846a6a4404d7f9a59c14a1339995, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -5.2096634
+      value: -8.569744
       objectReference: {fileID: 0}
     - target: {fileID: 1173425546269584201, guid: 6654846a6a4404d7f9a59c14a1339995, type: 3}
       propertyPath: m_LocalPosition.z
@@ -8617,4 +8617,4 @@ SceneRoots:
   - {fileID: 498694813}
   - {fileID: 650517448}
   - {fileID: 436559805}
-  - {fileID: 472269984}
+  - {fileID: 469583507}
