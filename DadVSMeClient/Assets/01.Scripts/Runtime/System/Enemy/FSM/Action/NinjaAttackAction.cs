@@ -65,7 +65,6 @@ namespace DadVSMe.Enemies.FSM
 
             if(Vector2.Distance(position, target.transform.position) < targetThresHold)
             {
-                attackData.attackAttribute = unitFSMData.attackAttribute;
                 target.UnitHealth.Attack(unitFSMData.unit, attackData);
                 unitFSMData.unit.onAttackTargetEvent?.Invoke(target, attackData);
 
