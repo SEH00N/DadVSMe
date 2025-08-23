@@ -1,4 +1,5 @@
 using Cysharp.Threading.Tasks;
+using DadVSMe.Players;
 using DadVSMe.UI.Skills;
 using UnityEngine;
 
@@ -6,6 +7,8 @@ namespace DadVSMe.UI.HUD
 {
     public class HUDUI : MonoBehaviourUI
     {
+        [SerializeField] HPBarUI hpBarUI = null;
+        [SerializeField] RageBarUI rageBarUI = null;
         [SerializeField] SkillInfoUI skillInfoUI = null;
 
         // Debug
@@ -17,7 +20,10 @@ namespace DadVSMe.UI.HUD
 
         public void Initialize()
         {
-            skillInfoUI.Initialize(GameInstance.MainPlayer.GetComponent<UnitSkillComponent>());
+            Player player = GameInstance.MainPlayer;
+            hpBarUI.Initialize(player);
+            rageBarUI.Initialize(player);
+            skillInfoUI.Initialize(player.GetComponent<UnitSkillComponent>());
         }
     }
 }

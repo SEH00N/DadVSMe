@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -6,6 +7,7 @@ namespace DadVSMe.Entities
     public class UnitHealth : MonoBehaviour
     {
         [SerializeField] UnityEvent<Unit, IAttackData> onAttackEvent = null;
+        public event Action OnHPChangedEvent = null;
 
         private UnitStat hpStat = null;
 
@@ -22,12 +24,14 @@ namespace DadVSMe.Entities
         {
             currentHP -= (int)(attackData.Damage * attacker.FSMBrain.GetAIData<UnitStatData>()[EUnitStat.AttackPowerMultiplier].FinalValue);
             onAttackEvent.Invoke(attacker, attackData);
+            OnHPChangedEvent?.Invoke();
         }
 
         public void Heal(int amount)
         {
             currentHP += amount;
             currentHP = Mathf.Min(currentHP, (int)hpStat.FinalValue);
+            OnHPChangedEvent?.Invoke();
         }
     }
 }

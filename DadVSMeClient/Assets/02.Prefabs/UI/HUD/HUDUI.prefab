@@ -344,8 +344,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3132020072599672017}
+  - component: {fileID: 6971122659648120262}
   m_Layer: 5
-  m_Name: RageUI
+  m_Name: RageBarUI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -372,6 +373,19 @@ RectTransform:
   m_AnchoredPosition: {x: 25, y: -95.15}
   m_SizeDelta: {x: 325, y: 30}
   m_Pivot: {x: 0, y: 1}
+--- !u!114 &6971122659648120262
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3747745866479786231}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a680be6b6782443b896707f119168f63, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fillImage: {fileID: 8407656902946650619}
 --- !u!1 &4133396969802074569
 GameObject:
   m_ObjectHideFlags: 0
@@ -726,6 +740,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7263501255596709637}
+  - component: {fileID: 3430424742071011559}
   m_Layer: 5
   m_Name: HPUI
   m_TagString: Untagged
@@ -754,6 +769,19 @@ RectTransform:
   m_AnchoredPosition: {x: 25, y: -25}
   m_SizeDelta: {x: 500, y: 65}
   m_Pivot: {x: 0, y: 1}
+--- !u!114 &3430424742071011559
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6111544465058526489}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87123ec34bb6f448bb5b2a72d3d14702, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fillImage: {fileID: 5878795265447130354}
 --- !u!1 &6194899256894978582
 GameObject:
   m_ObjectHideFlags: 0
@@ -997,6 +1025,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cfe035db831864f409ee777525a19b75, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hpBarUI: {fileID: 3430424742071011559}
+  rageBarUI: {fileID: 6971122659648120262}
   skillInfoUI: {fileID: 5048540689169243323}
 --- !u!1 &7319160616507338353
 GameObject:
