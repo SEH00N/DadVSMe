@@ -2,6 +2,7 @@ using System.Collections;
 using System.Threading;
 using Cysharp.Threading.Tasks;
 using DadVSMe.Entities;
+using H00N.Resources.Addressables;
 using H00N.Resources.Pools;
 using UnityEngine;
 
@@ -11,6 +12,10 @@ namespace DadVSMe
     {
         [SerializeField]
         private AttackDataBase attackData;
+        [SerializeField]
+        private AddressableAsset<PoolableEffect> startEffectPrefab;
+        [SerializeField]
+        private Transform effectSpawnPoint;
 
         private UnitMovement movement;
         private PoolReference poolReference;
@@ -56,6 +61,8 @@ namespace DadVSMe
             _lifetimeCts?.Dispose();
             _lifetimeCts = null;
 
+            PlayStartEffectAsync();
+
             _lifetimeCts = new CancellationTokenSource();
             var token = _lifetimeCts.Token;
 
@@ -68,6 +75,15 @@ namespace DadVSMe
             {
                 PoolManager.Despawn(poolReference);
             }
+        }
+
+        private async void PlayStartEffectAsync()
+        {
+            await startEffectPrefab.InitializeAsync();
+            PoolableEffect effect = PoolManager.Spawn<PoolableEffect>(startEffectPrefab.Key);
+            effect.transform.position = effectSpawnPoint.position;
+            effect.transform.localScale = new Vector3(Mathf.Abs(effect.transform.localScale.x) * Mathf.Sign(transform.localScale.x), effect.transform.localScale.y, effect.transform.localScale.z);
+            effect.Play();
         }
 
         void OnTriggerEnter2D(Collider2D collision)

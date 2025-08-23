@@ -1,11 +1,12 @@
 using DadVSMe.Entities;
 using H00N.Resources.Pools;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.EventSystems;
 
 namespace DadVSMe
 {
-    public class GuidedOrb : MonoBehaviour
+    public class GuidedOrb : MonoBehaviour, IPoolableBehaviour
     {
         [SerializeField]
         private AttackDataBase attackData;
@@ -19,6 +20,10 @@ namespace DadVSMe
 
         [SerializeField]
         private float moveSpeed;
+        [SerializeField] 
+        private UnityEvent onDespawnEvent;
+
+        public PoolReference PoolReference => poolReference;
 
         void Awake()
         {
@@ -39,11 +44,14 @@ namespace DadVSMe
 
         void Update()
         {
-            if (target)
+            if (target == null)
             {
-                Vector2 moveDirection = (target.transform.position - transform.position).normalized;
-                movement.SetMovementVelocity(moveDirection * moveSpeed);
+                DespawnInternal();
+                return;
             }
+
+            Vector2 moveDirection = (target.transform.position - transform.position).normalized;
+            movement.SetMovementVelocity(moveDirection * moveSpeed);
         }
 
         public void SetInstigator(Unit instigator)
@@ -63,12 +71,21 @@ namespace DadVSMe
 
         void OnTriggerEnter2D(Collider2D collision)
         {
+            if(target == null)
+            {
+                DespawnInternal();
+                return;
+            }
+
             if (collision.gameObject != target.gameObject)
                 return;
 
             if (collision.gameObject.TryGetComponent<UnitHealth>(out UnitHealth targetHealth))
             {
                 targetHealth.Attack(instigator, attackData);
+
+                Vector3 direction = (target.transform.position - transform.position).normalized;
+                _ = new PlayAttackFeedback(attackData, EAttackAttribute.Normal, transform.position, Vector3.zero, (int)Mathf.Sign(direction.x));
             }
 
             movement.SetActive(false);
@@ -77,7 +94,21 @@ namespace DadVSMe
 
         public void Despawn(EntityAnimationEventData animData)
         {
-            PoolManager.Despawn(poolReference);
+            DespawnInternal();
         }
+
+        private void DespawnInternal()
+        {
+            onDespawnEvent?.Invoke();
+            PoolManager.Despawn(poolReference);
+
+        }
+
+        public void OnSpawned()
+        {
+            transform.localScale = new Vector3(Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
+        }
+
+        public void OnDespawn() { }
     }
 }
