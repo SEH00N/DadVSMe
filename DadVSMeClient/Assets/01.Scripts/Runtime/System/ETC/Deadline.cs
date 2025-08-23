@@ -6,14 +6,17 @@ namespace DadVSMe
     public class Deadline : MonoBehaviour
     {
         [SerializeField] float _moveSpeed;
-        [SerializeField] Transform _playerBoundary;
+
+        public void Initialize()
+        {
+            
+        }
 
         private void Update()
         {
             var moveValue = transform.right * _moveSpeed * Time.deltaTime;
 
             transform.position += moveValue;
-            _playerBoundary.position += moveValue;
         }
 
         private void OnTriggerEnter2D(Collider2D collision)

@@ -45,6 +45,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8814044553056416611}
+  - component: {fileID: 8773152287718872343}
   m_Layer: 5
   m_Name: ExpUI
   m_TagString: Untagged
@@ -73,6 +74,19 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 22}
   m_Pivot: {x: 0.5, y: 0}
+--- !u!114 &8773152287718872343
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1025017979818367925}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 644e0607b26bd4a0cb9b90e882a2a515, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fillImage: {fileID: 4994132616558387619}
 --- !u!1 &1773581117711120813
 GameObject:
   m_ObjectHideFlags: 0
@@ -344,8 +358,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3132020072599672017}
+  - component: {fileID: 6971122659648120262}
   m_Layer: 5
-  m_Name: RageUI
+  m_Name: RageBarUI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -372,6 +387,19 @@ RectTransform:
   m_AnchoredPosition: {x: 25, y: -95.15}
   m_SizeDelta: {x: 325, y: 30}
   m_Pivot: {x: 0, y: 1}
+--- !u!114 &6971122659648120262
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3747745866479786231}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a680be6b6782443b896707f119168f63, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fillImage: {fileID: 8407656902946650619}
 --- !u!1 &4133396969802074569
 GameObject:
   m_ObjectHideFlags: 0
@@ -726,6 +754,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7263501255596709637}
+  - component: {fileID: 3430424742071011559}
   m_Layer: 5
   m_Name: HPUI
   m_TagString: Untagged
@@ -754,6 +783,19 @@ RectTransform:
   m_AnchoredPosition: {x: 25, y: -25}
   m_SizeDelta: {x: 500, y: 65}
   m_Pivot: {x: 0, y: 1}
+--- !u!114 &3430424742071011559
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6111544465058526489}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87123ec34bb6f448bb5b2a72d3d14702, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fillImage: {fileID: 5878795265447130354}
 --- !u!1 &6194899256894978582
 GameObject:
   m_ObjectHideFlags: 0
@@ -838,6 +880,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8675687027933815988}
+  - component: {fileID: 1417311624674233429}
   m_Layer: 5
   m_Name: ProgressUI
   m_TagString: Untagged
@@ -869,6 +912,20 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 65}
   m_SizeDelta: {x: 934.3, y: 20}
   m_Pivot: {x: 0.5, y: 0}
+--- !u!114 &1417311624674233429
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6317722009462361792}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ff624036763f49e5a97c0dc687a3d77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  deadLineTransform: {fileID: 8560682010639613717}
+  playerTransform: {fileID: 1875487124972457582}
 --- !u!1 &6856508955766156964
 GameObject:
   m_ObjectHideFlags: 0
@@ -997,7 +1054,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cfe035db831864f409ee777525a19b75, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hpBarUI: {fileID: 3430424742071011559}
+  rageBarUI: {fileID: 6971122659648120262}
+  expBarUI: {fileID: 8773152287718872343}
   skillInfoUI: {fileID: 5048540689169243323}
+  gameProgressUI: {fileID: 1417311624674233429}
 --- !u!1 &7319160616507338353
 GameObject:
   m_ObjectHideFlags: 0

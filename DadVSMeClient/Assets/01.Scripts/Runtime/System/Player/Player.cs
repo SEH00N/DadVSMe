@@ -1,3 +1,4 @@
+using System;
 using Cysharp.Threading.Tasks;
 using DadVSMe.Entities;
 using DadVSMe.Players.FSM;
@@ -18,13 +19,8 @@ namespace DadVSMe.Players
         private PlayerFSMData playerFSMData = null;
 
         public UnityEvent<int> onLevelUpEvent;
-
-
-        // Debug
-        private void Start()
-        {
-            Initialize(new PlayerEntityData());
-        }
+        public event Action OnAngerGaugeChangedEvent = null;
+        public event Action OnEXPChangedEvent = null;
 
         protected override void InitializeInternal(IEntityData data)
         {
@@ -45,12 +41,16 @@ namespace DadVSMe.Players
             
             AttackDataBase data = attackData as AttackDataBase;
             if(data.IsRangeAttack)
+            {
                 playerFSMData.currentAngerGauge = Mathf.Min(playerFSMData.currentAngerGauge + 5, playerFSMData.maxAngerGauge);
+                playerFSMData.onAngerGaugeChangedEvent?.Invoke();
+            }
         }
 
         public void OnStartAnger()
         {
             playerFSMData.currentAngerGauge = 0f;
+            playerFSMData.onAngerGaugeChangedEvent?.Invoke();
         }
 
         public async void ActiveAngerForUnityEvent()
@@ -83,6 +83,8 @@ namespace DadVSMe.Players
             {
                 LevelUp();
             }
+
+            OnEXPChangedEvent?.Invoke();
         }
 
         public void LevelUp()
