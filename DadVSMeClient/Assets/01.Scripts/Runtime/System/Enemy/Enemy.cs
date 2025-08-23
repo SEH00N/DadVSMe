@@ -68,11 +68,5 @@ namespace DadVSMe.Enemies
             onDespawned?.Invoke(this);
             base.DespawnInternal();
         }
-
-        public void SpawnExperience()
-        {
-            if(experiencePrefab != null)
-                PoolManager.Spawn(experiencePrefab);
-        }
     }
 }

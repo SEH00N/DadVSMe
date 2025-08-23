@@ -6,5 +6,6 @@ namespace DadVSMe
     public abstract class Item : MonoBehaviour, IInteractable
     {
         public abstract void Interact(Entity interactor);
+        public abstract void MagnetMove(Transform target);
     }
 }

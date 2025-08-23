@@ -16,6 +16,8 @@ namespace DadVSMe
         public virtual void Initialize()
         {
             skillContainer = new();
+
+            RegistSkill(SkillType.ItemMagnet);
         }
 
         public void RegistSkill(SkillType skillType)

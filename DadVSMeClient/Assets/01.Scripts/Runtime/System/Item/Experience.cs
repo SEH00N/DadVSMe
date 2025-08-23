@@ -15,11 +15,15 @@ namespace DadVSMe
         public int Amount => amount;
 
         private PoolReference poolReference;
+        private BezierMover bezierMover;
 
         void Awake()
         {
             poolReference = GetComponent<PoolReference>();
+            bezierMover = GetComponent<BezierMover>();
             sound.InitializeAsync().Forget();
+
+            bezierMover.onArrivedEvent.AddListener(OnArriaved);
         }
 
         public override void Interact(Entity interactor)
@@ -29,7 +33,23 @@ namespace DadVSMe
                 player.GetExp(amount);
 
             _ = new PlaySound(sound);
-            PoolManager.Despawn(poolReference);
+        }
+
+        public override void MagnetMove(Transform target)
+        {
+            if(bezierMover.IsRunning == false)
+                bezierMover.LaunchAsync(target).Forget();
+        }
+
+        private void OnArriaved(Transform target)
+        {
+            if (target.TryGetComponent<Entity>(out Entity entity))
+            {
+                Interact(entity);
+
+                PoolManager.Despawn(poolReference);
+
+            }
         }
     }
 }

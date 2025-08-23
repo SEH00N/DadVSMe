@@ -101,7 +101,7 @@ namespace DadVSMe.Players
         {
             if (collision.gameObject.TryGetComponent<IInteractable>(out IInteractable interactable))
             {
-                interactable.Interact(this);
+                //interactable.Interact(this);
             }
         }
 

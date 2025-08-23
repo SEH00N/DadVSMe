@@ -21,16 +21,15 @@ namespace DadVSMe
 
             Vector2 spawnPoint = ownerComponent.transform.position;
             Collider2D[] cols = Physics2D.OverlapCircleAll(spawnPoint, checkRadius);
-
+            
             if (cols.Length == 0)
                 return;
-
+            
             foreach (var col in cols)
             {
                 if (col.gameObject.TryGetComponent<Item>(out Item item))
                 {
-                    item.transform.position = Vector3.Lerp(
-                        item.transform.position, ownerComponent.transform.position, Time.deltaTime * magnetSpeedMultiplier);
+                    item.MagnetMove(ownerComponent.transform);
                 }
             }
         }
