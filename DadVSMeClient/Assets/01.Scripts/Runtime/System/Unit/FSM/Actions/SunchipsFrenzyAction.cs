@@ -1,0 +1,59 @@
+using System;
+using DadVSMe.Enemies.FSM;
+using DadVSMe.Entities;
+using DadVSMe.Entities.FSM;
+using H00N.AI.FSM;
+using UnityEngine;
+
+namespace DadVSMe
+{
+    public class SunchipsFrenzyAction : AttackActionBase
+    {
+        SunchipsEnemyFSMData fsmData;
+        Unit target;
+        public Transform targetPosition;
+        public Vector3 hitUpOffset;
+
+        public override void Init(FSMBrain brain, FSMState state)
+        {
+            base.Init(brain, state);
+
+            fsmData = brain.GetAIData<SunchipsEnemyFSMData>();
+        }
+
+        public override void EnterState()
+        {
+            base.EnterState();
+
+            target = fsmData.frenzyTarget;
+            entityAnimator.AddAnimationEventListener(EEntityAnimationEventType.Trigger, FirstAttack);
+        }
+
+        public override void ExitState()
+        {
+            base.ExitState();
+
+            entityAnimator.RemoveAnimationEventListener(EEntityAnimationEventType.Trigger, AfterAttack);
+        }
+
+        private void FirstAttack(EntityAnimationEventData data)
+        {
+            target.transform.position = targetPosition.position;
+
+            entityAnimator.RemoveAnimationEventListener(EEntityAnimationEventType.Trigger, FirstAttack);
+            entityAnimator.AddAnimationEventListener(EEntityAnimationEventType.Trigger, AfterAttack);
+        }
+
+        private void AfterAttack(EntityAnimationEventData data)
+        {
+            target.transform.position += hitUpOffset;
+
+            AttackToTarget(fsmData.frenzyTarget, attackData);
+        }
+
+        protected override void OnAttack(EntityAnimationEventData eventData)
+        {
+            
+        }
+    }
+}

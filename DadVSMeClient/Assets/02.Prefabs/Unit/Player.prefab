@@ -2134,6 +2134,7 @@ GameObject:
   - component: {fileID: 2438105663902651749}
   - component: {fileID: 2852503922270150948}
   - component: {fileID: 3542167409933092608}
+  - component: {fileID: 2986653746546966270}
   m_Layer: 8
   m_Name: '[Tran] Grab'
   m_TagString: Untagged
@@ -2182,6 +2183,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isReverse: 1
+--- !u!114 &2986653746546966270
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2337440370387650618}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b5b0941ebf94717bdf801b97e801ce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isReverse: 0
+  grabbableWeight: 100
 --- !u!1 &2426297144319815459
 GameObject:
   m_ObjectHideFlags: 0
@@ -3356,6 +3371,7 @@ GameObject:
   - component: {fileID: 1867282688267533254}
   - component: {fileID: 5841271864119933664}
   - component: {fileID: 3979151437570143756}
+  - component: {fileID: 4606910030402164145}
   m_Layer: 8
   m_Name: '[Tran] Grab'
   m_TagString: Untagged
@@ -3421,6 +3437,20 @@ MonoBehaviour:
     lieCompare: 0
     checkDie: 1
     dieCompare: 0
+--- !u!114 &4606910030402164145
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3565228954010933002}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b5b0941ebf94717bdf801b97e801ce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isReverse: 0
+  grabbableWeight: 100
 --- !u!1 &3711209104930429882
 GameObject:
   m_ObjectHideFlags: 0

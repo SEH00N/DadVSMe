@@ -31,6 +31,7 @@ namespace DadVSMe
         private void Update()
         {
             fsmData.shootCooltime = Mathf.Max(fsmData.shootCooltime - Time.deltaTime, 0f);
+            fsmData.currentFrenzyCooltime = Mathf.Max(fsmData.currentFrenzyCooltime - Time.deltaTime, 0f);
 
             if (unitFSMData.isDie || unitFSMData.isFloat || unitFSMData.isLie)
             {
