@@ -22,6 +22,8 @@ namespace DadVSMe.Players
         public event Action OnAngerGaugeChangedEvent = null;
         public event Action OnEXPChangedEvent = null;
 
+        public float itemFidnRadius;
+
         protected override void InitializeInternal(IEntityData data)
         {
             base.InitializeInternal(data);
@@ -34,13 +36,18 @@ namespace DadVSMe.Players
             playerFSMData = fsmBrain.GetAIData<PlayerFSMData>();
         }
 
+        void Update()
+        {
+            FindItem();
+        }
+
         private void OnAttackTarget(Unit target, IAttackData attackData)
         {
             if (playerFSMData.isAnger)
                 return;
-            
+
             AttackDataBase data = attackData as AttackDataBase;
-            if(data.IsRangeAttack)
+            if (data.IsRangeAttack)
             {
                 playerFSMData.currentAngerGauge = Mathf.Min(playerFSMData.currentAngerGauge + 5, playerFSMData.maxAngerGauge);
                 playerFSMData.onAngerGaugeChangedEvent?.Invoke();
@@ -79,7 +86,7 @@ namespace DadVSMe.Players
         {
             playerFSMData.currentExp += amount;
 
-            if (playerFSMData.levelUpExp <= playerFSMData.currentExp)
+            while (playerFSMData.levelUpExp <= playerFSMData.currentExp)
             {
                 LevelUp();
             }
@@ -97,6 +104,23 @@ namespace DadVSMe.Players
             onLevelUpEvent?.Invoke(playerFSMData.currentLevel);
 
             _ = new PlaySound(levelUpSound);
+        }
+
+        void FindItem()
+        {
+            Vector2 spawnPoint = transform.position;
+            Collider2D[] cols = Physics2D.OverlapCircleAll(spawnPoint, itemFidnRadius);
+            
+            if (cols.Length == 0)
+                return;
+            
+            foreach (var col in cols)
+            {
+                if (col.gameObject.TryGetComponent<Item>(out Item item))
+                {
+                    item.MagnetMove(transform);
+                }
+            }
         }
 
         void OnTriggerEnter2D(Collider2D collision)

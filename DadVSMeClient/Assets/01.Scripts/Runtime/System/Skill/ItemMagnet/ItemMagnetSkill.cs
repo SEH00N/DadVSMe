@@ -1,44 +1,30 @@
+using DadVSMe.Players;
 using UnityEngine;
 
 namespace DadVSMe
 {
-    public class ItemMagnetSkill : AutoActiveSkill
+    public class ItemMagnetSkill : StatUpSkill
     {
-        private float checkRadius;
         private float levelUpIncreaseRate;
-        private float magnetSpeedMultiplier;
+        private Player player;
 
-        public ItemMagnetSkill(float cooltime, float checkRadius, float levelUpIncreaseRate, float magnetSpeedMultiplier) : base(cooltime)
+        public ItemMagnetSkill(float cooltime, float checkRadius, float levelUpIncreaseRate, float magnetSpeedMultiplier) : base()
         {
-            this.checkRadius = checkRadius;
             this.levelUpIncreaseRate = levelUpIncreaseRate;
-            this.magnetSpeedMultiplier = magnetSpeedMultiplier;
+        }
+
+        public override void OnRegist(UnitSkillComponent ownerComponent)
+        {
+            base.OnRegist(ownerComponent);
+
+            player = ownerComponent.GetComponent<Player>();
         }
 
         public override void Execute()
         {
             base.Execute();
 
-            Vector2 spawnPoint = ownerComponent.transform.position;
-            Collider2D[] cols = Physics2D.OverlapCircleAll(spawnPoint, checkRadius);
-            
-            if (cols.Length == 0)
-                return;
-            
-            foreach (var col in cols)
-            {
-                if (col.gameObject.TryGetComponent<Item>(out Item item))
-                {
-                    item.MagnetMove(ownerComponent.transform);
-                }
-            }
-        }
-
-        public override void LevelUp()
-        {
-            base.LevelUp();
-
-            checkRadius += levelUpIncreaseRate;
-        }
+            player.itemFidnRadius += levelUpIncreaseRate;
+        }   
     }
 }
