@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 5568895317013695326}
   - component: {fileID: -3542992900495738087}
   - component: {fileID: 6393661359218601469}
-  - component: {fileID: 1473284034297440227}
-  - component: {fileID: 8799602008174273911}
+  - component: {fileID: 1213284629831737148}
+  - component: {fileID: 576572665886158154}
   m_Layer: 0
   m_Name: StatikkShivLighting
   m_TagString: Untagged
@@ -28,14 +28,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1225069731171214450}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0.38268343, w: 0.92387956}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 5, y: 5, z: 5}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3899130837813944444}
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 45}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &-3542992900495738087
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -49,8 +49,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackData: {fileID: 11400000, guid: 0763bdd92eb894e3fbd618de93edd024, type: 2}
-  lineRenderer: {fileID: 1473284034297440227}
-  lineRendererAnimator: {fileID: 8799602008174273911}
+  lineRenderer: {fileID: 1213284629831737148}
+  lineRendererAnimator: {fileID: 576572665886158154}
   outlineRenderer: {fileID: 2985792611839136284}
   outlineRendererAnimator: {fileID: 7090955143455016375}
 --- !u!114 &6393661359218601469
@@ -65,7 +65,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59731d988eb4d4a4ea734b92a123e5c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!120 &1473284034297440227
+--- !u!120 &1213284629831737148
 LineRenderer:
   serializedVersion: 2
   m_ObjectHideFlags: 0
@@ -110,16 +110,21 @@ LineRenderer:
   m_SortingLayerID: 2045851267
   m_SortingLayer: -1
   m_SortingOrder: 5000
-  m_Positions: []
+  m_Positions:
+  - {x: 0, y: 0, z: 0}
+  - {x: 1, y: 0, z: 0}
+  - {x: 2, y: 0, z: 0}
+  - {x: 3, y: 0, z: 0}
+  - {x: 5, y: 0, z: 0}
   m_Parameters:
     serializedVersion: 3
-    widthMultiplier: 0.9
+    widthMultiplier: 0.7
     widthCurve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 0
+        value: 0.15093994
         inSlope: 0
         outSlope: 0
         tangentMode: 0
@@ -127,8 +132,8 @@ LineRenderer:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 0.14011155
-        value: 0.92901564
+        time: 0.19762845
+        value: 0.66981137
         inSlope: 0
         outSlope: 0
         tangentMode: 0
@@ -136,8 +141,8 @@ LineRenderer:
         inWeight: 0
         outWeight: 0
       - serializedVersion: 3
-        time: 0.29942793
-        value: 0.46604252
+        time: 0.32806325
+        value: 0.40566033
         inSlope: 0
         outSlope: 0
         tangentMode: 0
@@ -145,8 +150,8 @@ LineRenderer:
         inWeight: 0
         outWeight: 0
       - serializedVersion: 3
-        time: 0.46706033
-        value: 0.7253085
+        time: 0.5256916
+        value: 0.8867925
         inSlope: 0
         outSlope: 0
         tangentMode: 0
@@ -154,8 +159,8 @@ LineRenderer:
         inWeight: 0
         outWeight: 0
       - serializedVersion: 3
-        time: 0.6181362
-        value: 0.24999392
+        time: 0.6956522
+        value: 0.21698117
         inSlope: 0
         outSlope: 0
         tangentMode: 0
@@ -163,14 +168,14 @@ LineRenderer:
         inWeight: 0
         outWeight: 0
       - serializedVersion: 3
-        time: 0.83461297
-        value: 0.8643991
-        inSlope: -0.96660763
-        outSlope: -0.96660763
+        time: 0.84189725
+        value: 0.6320755
+        inSlope: 0
+        outSlope: 0
         tangentMode: 0
         weightedMode: 0
-        inWeight: 0.33333334
-        outWeight: 0.33333334
+        inWeight: 0
+        outWeight: 0
       - serializedVersion: 3
         time: 1
         value: 0
@@ -210,7 +215,7 @@ LineRenderer:
       atime6: 0
       atime7: 0
       m_Mode: 0
-      m_ColorSpace: 0
+      m_ColorSpace: -1
       m_NumColorKeys: 2
       m_NumAlphaKeys: 2
     numCornerVertices: 0
@@ -224,7 +229,7 @@ LineRenderer:
   m_UseWorldSpace: 1
   m_Loop: 0
   m_ApplyActiveColorSpace: 1
---- !u!114 &8799602008174273911
+--- !u!114 &576572665886158154
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -236,6 +241,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac6eb654e782646d68a9e5fa222775e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  appearSegmentDuration: 0.15
+  disappearSegmentDuration: 0.15
   useUnscaledTime: 0
   loop: 0
 --- !u!1 &6808154213266865637
@@ -316,10 +323,12 @@ LineRenderer:
   m_SortingLayerID: 2045851267
   m_SortingLayer: -1
   m_SortingOrder: 4900
-  m_Positions: []
+  m_Positions:
+  - {x: 1.7, y: 0, z: 0}
+  - {x: -1.3, y: 0, z: 0}
   m_Parameters:
     serializedVersion: 3
-    widthMultiplier: 2.2
+    widthMultiplier: 1.8
     widthCurve:
       serializedVersion: 2
       m_Curve:
@@ -442,5 +451,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac6eb654e782646d68a9e5fa222775e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  appearSegmentDuration: 0.15
+  disappearSegmentDuration: 0.15
   useUnscaledTime: 0
   loop: 0

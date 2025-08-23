@@ -1,6 +1,5 @@
 using System;
 using System.Collections.Generic;
-using System.Threading.Tasks;
 using Cysharp.Threading.Tasks;
 using DadVSMe.Entities;
 using H00N.Resources.Pools;
@@ -75,13 +74,21 @@ namespace DadVSMe
                     break;
             }
 
+            points[0] = instigator.transform.position;
+            for(int i = 0; i < points.Length; i++)
+                Debug.Log(points[i]);
+            Debug.Log(targets.Count);
+            Debug.Log(points.Length + 1);
             lineRenderer.positionCount = targets.Count + 1;
-            lineRenderer.SetPositions(points);
-            lineRendererAnimator.StartAnimation(.05f, .1f);
+            for (int i = 0; i <= targets.Count; i++)
+            {
+                lineRenderer.SetPosition(i, points[i]);
+            }
+            //ineRendererAnimator.StartAnimationPerSegment(.02f, .1f);
 
-            outlineRenderer.positionCount = targets.Count + 1;
-            outlineRenderer.SetPositions(points);
-            outlineRendererAnimator.StartAnimation(.05f, .1f);
+            // outlineRenderer.positionCount = targets.Count + 1;
+            // outlineRenderer.SetPositions(points);
+            // outlineRendererAnimator.StartAnimationPerSegment(.02f, .03f);
 
             await UniTask.Delay(TimeSpan.FromSeconds(3));
 
