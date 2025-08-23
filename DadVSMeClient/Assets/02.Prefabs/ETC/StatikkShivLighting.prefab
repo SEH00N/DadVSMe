@@ -53,6 +53,8 @@ MonoBehaviour:
   lineRendererAnimator: {fileID: 576572665886158154}
   outlineRenderer: {fileID: 2985792611839136284}
   outlineRendererAnimator: {fileID: 7090955143455016375}
+  appearTime: 0.05
+  disappearTime: 0.1
 --- !u!114 &6393661359218601469
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -110,12 +112,7 @@ LineRenderer:
   m_SortingLayerID: 2045851267
   m_SortingLayer: -1
   m_SortingOrder: 5000
-  m_Positions:
-  - {x: 0, y: 0, z: 0}
-  - {x: 1, y: 0, z: 0}
-  - {x: 2, y: 0, z: 0}
-  - {x: 3, y: 0, z: 0}
-  - {x: 5, y: 0, z: 0}
+  m_Positions: []
   m_Parameters:
     serializedVersion: 3
     widthMultiplier: 0.7

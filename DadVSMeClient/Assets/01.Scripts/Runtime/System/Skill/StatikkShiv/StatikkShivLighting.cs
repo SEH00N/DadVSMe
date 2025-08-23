@@ -18,6 +18,9 @@ namespace DadVSMe
         public LineRenderer outlineRenderer;
         public LineRendererAnimator outlineRendererAnimator;
 
+        public float appearTime;
+        public float disappearTime;
+
         void Awake()
         {
             poolReference = GetComponent<PoolReference>();
@@ -84,7 +87,7 @@ namespace DadVSMe
             {
                 lineRenderer.SetPosition(i, points[i]);
             }
-            //ineRendererAnimator.StartAnimationPerSegment(.02f, .1f);
+            lineRendererAnimator.StartAnimationPerSegment(appearTime, disappearTime);
 
             // outlineRenderer.positionCount = targets.Count + 1;
             // outlineRenderer.SetPositions(points);
