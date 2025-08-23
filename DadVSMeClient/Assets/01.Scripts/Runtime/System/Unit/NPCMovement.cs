@@ -56,7 +56,6 @@ namespace DadVSMe.Entities
         public void SetActive(bool isActive)
         {
             this.isActive = isActive;
-            navMeshAgent.enabled = isActive;
             unitMovement.SetActive(isActive);
         }
 

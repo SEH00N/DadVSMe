@@ -18,12 +18,30 @@ MonoBehaviour:
   customRanges:
   - startSec: 0
     endSec: 250
+  - startSec: 250
+    endSec: 500
   enemySawnPhaseList:
+  - spawnInterval:
+      min: 2
+      max: 3
+    enemiesList:
+    - enemyData: {fileID: 11400000, guid: e34f436056bdf40e5906a5c0c16b3f30, type: 2}
+      prefab:
+        key: ButtEnemy
+      maxOnField: 4
+    - enemyData: {fileID: 11400000, guid: 3119c060d178e4851b3c644bb81afa83, type: 2}
+      prefab:
+        key: James
+      maxOnField: 4
+    bossEnemy: {fileID: 0}
+    totalEnemyCountOnField: 8
   - spawnInterval:
       min: 5.23
       max: 11.47
     enemiesList:
-    - enemyData: {fileID: 11400000, guid: e304204c02c1a8142b92ec6f258ae0d2, type: 2}
+    - enemyData: {fileID: 0}
+      prefab:
+        key: 
       maxOnField: 4
     bossEnemy: {fileID: 0}
     totalEnemyCountOnField: 5

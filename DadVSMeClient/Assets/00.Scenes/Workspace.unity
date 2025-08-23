@@ -1113,8 +1113,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d928c8df5a46cd42bacf5d15d50e7b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _moveSpeed: 5
-  _playerBoundary: {fileID: 1331915158}
+  _moveSpeed: 1
 --- !u!61 &331034321
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2757,7 +2756,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &942659137
 Transform:
   m_ObjectHideFlags: 0
@@ -4578,8 +4577,8 @@ Transform:
   m_GameObject: {fileID: 1705321122}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.19, y: -2.71, z: 0}
-  m_LocalScale: {x: 100, y: 15, z: 1}
+  m_LocalPosition: {x: 0.19, y: -5.4647, z: 0}
+  m_LocalScale: {x: 1000, y: 20.5095, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 539103526}
@@ -5263,8 +5262,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41b403ab3f8b1e74fb68e3200f72e760, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _enemyPrefab:
-    key: SampleEnemy
   _enemySpawnData: {fileID: 11400000, guid: eb5a13aef7759f742b423cea29e5a7b8, type: 2}
   _backgroundLimitTrm: {fileID: 168453324}
   _deadlineTrm: {fileID: 331034319}
@@ -5452,7 +5449,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8996695108358816546, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

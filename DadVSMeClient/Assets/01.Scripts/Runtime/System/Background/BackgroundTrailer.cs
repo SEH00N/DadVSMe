@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using H00N.Resources.Addressables;
 using Cysharp.Threading.Tasks;
-using System.Threading.Tasks;
 
 namespace DadVSMe.Background
 {

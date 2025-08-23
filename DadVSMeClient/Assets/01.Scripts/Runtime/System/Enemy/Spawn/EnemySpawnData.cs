@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 using DadVSMe.Enemies;
+using H00N.Resources.Addressables;
 
 namespace DadVSMe.Enemies
 {
@@ -14,6 +15,7 @@ namespace DadVSMe.Enemies
     public class EnemyEntry
     {
         public EnemyDataBase enemyData;
+        public AddressableAsset<Enemy> prefab;
         [Min(0)] public int maxOnField = 0; // 0 = unlimited
     }
 
