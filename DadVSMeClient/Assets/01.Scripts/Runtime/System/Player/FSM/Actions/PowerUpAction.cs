@@ -12,7 +12,6 @@ namespace DadVSMe
         [SerializeField] private AddressableAsset<ParticleSystem> powerUpParticle = null;
         [SerializeField] private AddressableAsset<AudioClip> sound = null;
         [SerializeField] private Vector3 positionOffset;
-        [SerializeField] private Vector3 scale = Vector3.one;
         private ParticleSystem particle;
 
         private Unit owner;
@@ -33,7 +32,7 @@ namespace DadVSMe
             particle = PoolManager.Spawn<ParticleSystem>(powerUpParticle);
             particle.transform.SetParent(brain.transform);
             particle.transform.localPosition = positionOffset;
-            particle.transform.localScale = scale;
+            particle.transform.localScale = Vector3.one;
             _ = new PlaySound(sound);
 
             owner.onEndAngerEvent.AddListener(OnEndAnger);
