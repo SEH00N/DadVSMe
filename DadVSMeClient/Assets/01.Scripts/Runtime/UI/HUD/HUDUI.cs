@@ -9,6 +9,7 @@ namespace DadVSMe.UI.HUD
     {
         [SerializeField] HPBarUI hpBarUI = null;
         [SerializeField] RageBarUI rageBarUI = null;
+        [SerializeField] EXPBarUI expBarUI = null;
         [SerializeField] SkillInfoUI skillInfoUI = null;
 
         // Debug
@@ -23,6 +24,7 @@ namespace DadVSMe.UI.HUD
             Player player = GameInstance.MainPlayer;
             hpBarUI.Initialize(player);
             rageBarUI.Initialize(player);
+            expBarUI.Initialize(player);
             skillInfoUI.Initialize(player.GetComponent<UnitSkillComponent>());
         }
     }

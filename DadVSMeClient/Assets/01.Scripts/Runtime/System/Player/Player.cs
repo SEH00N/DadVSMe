@@ -1,3 +1,4 @@
+using System;
 using Cysharp.Threading.Tasks;
 using DadVSMe.Entities;
 using DadVSMe.Players.FSM;
@@ -18,7 +19,8 @@ namespace DadVSMe.Players
         private PlayerFSMData playerFSMData = null;
 
         public UnityEvent<int> onLevelUpEvent;
-
+        public event Action OnAngerGaugeChangedEvent = null;
+        public event Action OnEXPChangedEvent = null;
 
         // Debug
         private void Start()
@@ -87,6 +89,8 @@ namespace DadVSMe.Players
             {
                 LevelUp();
             }
+
+            OnEXPChangedEvent?.Invoke();
         }
 
         public void LevelUp()
