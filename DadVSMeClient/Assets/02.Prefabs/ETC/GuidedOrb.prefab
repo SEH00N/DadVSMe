@@ -10,14 +10,11 @@ GameObject:
   m_Component:
   - component: {fileID: 5244360963226182176}
   - component: {fileID: -2330429741538639402}
-  - component: {fileID: 6498249429142604679}
   - component: {fileID: 8225517424154263618}
   - component: {fileID: 773343934565297832}
   - component: {fileID: 1768865716209207245}
-  - component: {fileID: 4002306736756950066}
-  - component: {fileID: 7331478016869599188}
-  - component: {fileID: 4266219580518674204}
   - component: {fileID: 8555126650566983865}
+  - component: {fileID: 2782726319860909460}
   m_Layer: 0
   m_Name: GuidedOrb
   m_TagString: Untagged
@@ -72,19 +69,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &6498249429142604679
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 879120118293887749}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 59305d91e630e4435b577b697b729ca6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  unitRigidbody: {fileID: 1768865716209207245}
 --- !u!114 &8225517424154263618
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -179,79 +163,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!61 &4002306736756950066
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 879120118293887749}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_CompositeOperation: 0
-  m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.525, y: 0.465}
-    oldSize: {x: 0.69, y: 0.735}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Size: {x: 0.5, y: 0.5}
-  m_EdgeRadius: 0
---- !u!114 &7331478016869599188
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 879120118293887749}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ba86124cac47e4154b394cdd9b315fee, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  defaultAnimationName: GuidedOrb
-  animator: {fileID: 8555126650566983865}
-  animationEventListener: {fileID: 4266219580518674204}
---- !u!114 &4266219580518674204
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 879120118293887749}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9b1adb445966248b98412033a8511ad9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!95 &8555126650566983865
 Animator:
   serializedVersion: 7
@@ -274,6 +185,54 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &2782726319860909460
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 879120118293887749}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34b97591bd37343d6ab673fa34cca38e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  delayBeforeHoming: 0.15
+  travelDuration: 0.6
+  speedOverLife:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  controlRadiusMin: 0.6
+  controlRadiusMax: 1.8
+  upwardBias: 0.4
+  updateEndPointContinuously: 1
+  collectDistance: 0.6
+  maxExtraDuration: 0.3
+  drawGizmos: 0
+  onArrivedEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &7371206060073673782
 GameObject:
   m_ObjectHideFlags: 0

@@ -1,3 +1,5 @@
+using System;
+using Cysharp.Threading.Tasks;
 using DadVSMe.Entities;
 using H00N.Resources.Pools;
 using UnityEngine;
@@ -12,8 +14,8 @@ namespace DadVSMe
         private AttackDataBase attackData;
 
         private EntityAnimator entityAnimator;
-        private UnitMovement movement;
         private PoolReference poolReference;
+        private BezierMover bezierMover;
 
         private Unit instigator;
         private Unit target;
@@ -28,18 +30,32 @@ namespace DadVSMe
         void Awake()
         {
             entityAnimator = GetComponent<EntityAnimator>();
-            Initialize();
+            bezierMover = GetComponent<BezierMover>();
+            poolReference = GetComponent<PoolReference>();
         }
 
         void Start()
         {
-            entityAnimator.AddAnimationEventListener(EEntityAnimationEventType.Trigger, Despawn);
+            bezierMover.onArrivedEvent.AddListener(OnArrived);
         }
 
-        public void Initialize()
+        private void OnArrived(Transform target)
         {
-            movement = GetComponent<UnitMovement>();
-            poolReference = GetComponent<PoolReference>();
+            if (target == null)
+            {
+                DespawnInternal();
+                return;
+            }
+
+            if (target.TryGetComponent<UnitHealth>(out UnitHealth targetHealth))
+            {
+                targetHealth.Attack(instigator, attackData);
+
+                Vector3 direction = (target.transform.position - transform.position).normalized;
+                _ = new PlayAttackFeedback(attackData, EAttackAttribute.Normal, transform.position, Vector3.zero, (int)Mathf.Sign(direction.x));
+            }
+
+            DespawnInternal();
         }
 
         void Update()
@@ -49,9 +65,6 @@ namespace DadVSMe
                 DespawnInternal();
                 return;
             }
-
-            Vector2 moveDirection = (target.transform.position - transform.position).normalized;
-            movement.SetMovementVelocity(moveDirection * moveSpeed);
         }
 
         public void SetInstigator(Unit instigator)
@@ -66,30 +79,7 @@ namespace DadVSMe
 
         public void Launch()
         {
-            movement.SetActive(true);
-        }
-
-        void OnTriggerEnter2D(Collider2D collision)
-        {
-            if(target == null)
-            {
-                DespawnInternal();
-                return;
-            }
-
-            if (collision.gameObject != target.gameObject)
-                return;
-
-            if (collision.gameObject.TryGetComponent<UnitHealth>(out UnitHealth targetHealth))
-            {
-                targetHealth.Attack(instigator, attackData);
-
-                Vector3 direction = (target.transform.position - transform.position).normalized;
-                _ = new PlayAttackFeedback(attackData, EAttackAttribute.Normal, transform.position, Vector3.zero, (int)Mathf.Sign(direction.x));
-            }
-
-            movement.SetActive(false);
-            entityAnimator.PlayAnimation("GuidedOrbHit");
+            bezierMover.LaunchAsync(target.transform).Forget();
         }
 
         public void Despawn(EntityAnimationEventData animData)
