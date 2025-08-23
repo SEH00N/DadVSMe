@@ -51,7 +51,7 @@ namespace DadVSMe.Entities.FSM
         {
             OnAttack(eventData);
         }
-
+        
         protected void AttackToTarget(Unit target, AttackDataBase attackData, bool playEffect = true)
         {
             attackData.attackAttribute = unitFSMData.attackAttribute;
