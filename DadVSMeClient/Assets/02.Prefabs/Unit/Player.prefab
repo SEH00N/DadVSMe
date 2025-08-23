@@ -8344,6 +8344,7 @@ GameObject:
   - component: {fileID: 6961806067608511280}
   - component: {fileID: 8659761086460484793}
   - component: {fileID: 3188598358565364875}
+  - component: {fileID: 7506530874696947508}
   m_Layer: 8
   m_Name: '[Tran] Grab'
   m_TagString: Untagged
@@ -8409,6 +8410,20 @@ MonoBehaviour:
     lieCompare: 0
     checkDie: 1
     dieCompare: 0
+--- !u!114 &7506530874696947508
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8855939970602083411}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b5b0941ebf94717bdf801b97e801ce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isReverse: 0
+  grabbableWeight: 100
 --- !u!1 &8862820822150054748
 GameObject:
   m_ObjectHideFlags: 0
@@ -9064,6 +9079,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5175a02657ee944efa2fca1173a2eb90, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerSkillComponent: {fileID: 0}
+  skillSelectPopupUIPrefab:
+    key: 
 --- !u!50 &8451211484433483914
 Rigidbody2D:
   serializedVersion: 5

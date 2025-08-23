@@ -24,6 +24,9 @@ namespace DadVSMe.Enemies
 
         private bool skipUpdate = false;
 
+        [field: SerializeField]
+        public float Weight { get; set; }
+
         // Debug
         private void Start()
         {
