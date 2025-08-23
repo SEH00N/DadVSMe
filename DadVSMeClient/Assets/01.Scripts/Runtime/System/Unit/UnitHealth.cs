@@ -23,7 +23,7 @@ namespace DadVSMe.Entities
         public void Attack(Unit attacker, IAttackData attackData)
         {
             currentHP -= (int)(attackData.Damage * attacker.FSMBrain.GetAIData<UnitStatData>()[EUnitStat.AttackPowerMultiplier].FinalValue);
-            onAttackEvent.Invoke(attacker, attackData);
+            onAttackEvent?.Invoke(attacker, attackData);
             OnHPChangedEvent?.Invoke();
         }
 

@@ -49,36 +49,37 @@ namespace DadVSMe
 
         public override void Execute()
         {
-            Collider2D[] cols = Physics2D.OverlapCircleAll(ownerComponent.transform.position, checkRadius);
+            // Collider2D[] cols = Physics2D.OverlapCircleAll(ownerComponent.transform.position, checkRadius);
 
-            if (cols.Length == 0)
-                return;
+            // if (cols.Length == 0)
+            //     return;
 
-            int attackTargetCount = 0;
-            foreach (var col in cols)
-            {
-                if (col.gameObject == ownerComponent.gameObject)
-                    continue;
+            // int attackTargetCount = 0;
+            // foreach (var col in cols)
+            // {
+            //     if (col.gameObject == ownerComponent.gameObject)
+            //         continue;
 
-                if (col.gameObject.TryGetComponent<Unit>(out Unit unit))
-                {
-                    attackTargetCount++;
+            //     if (col.gameObject.TryGetComponent<Unit>(out Unit unit))
+            //     {
+            //         attackTargetCount++;
 
-                    StatikkShivLighting statikkShivLighting = PoolManager.Spawn<StatikkShivLighting>(prefab);
-                    statikkShivLighting.Active(ownerComponent.GetComponent<Unit>(), unit);
+            //         StatikkShivLighting statikkShivLighting = PoolManager.Spawn<StatikkShivLighting>(prefab);
+            //         statikkShivLighting.Active(ownerComponent.GetComponent<Unit>(), 3, 10);
 
-                    if (attackTargetCount == maxAttackTargetNum)
-                    {
-                        break;
-                    }
-                }
-            }
-            Debug.Log(attackTargetCount);
-            if (attackTargetCount > 0)
-            {
-                _ = new PlaySound(sound);
-                   
-            }
+            //         if (attackTargetCount == maxAttackTargetNum)
+            //         {
+            //             break;
+            //         }
+            //     }
+            // }
+            StatikkShivLighting statikkShivLighting = PoolManager.Spawn<StatikkShivLighting>(prefab);
+            statikkShivLighting.Active(ownerComponent.GetComponent<Unit>(), maxAttackTargetNum, checkRadius);
+            
+            // if (attackTargetCount > 0)
+            // {
+            //     _ = new PlaySound(sound);
+            // }
         }
 
         public override void OnUnregist()
