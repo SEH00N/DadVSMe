@@ -32,7 +32,7 @@ namespace DadVSMe.UI.Skills
 
             new SetSprite(skillIcon, skillData.skillIcon);
             nameText.text = new LocalizedString(skillData.skillName);
-            descText.text = new LocalizedString(skillData.skillDesc);
+            descText.text = currentLevel == 0 ? new LocalizedString(skillData.skillDesc) : new LocalizedString(skillData.skillLevelUpDesc);
 
             for(int i = 0; i < levelObjectList.Count; i++)
                 levelObjectList[i].SetActive(i < currentLevel);
