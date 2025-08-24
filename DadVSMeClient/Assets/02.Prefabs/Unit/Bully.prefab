@@ -166,7 +166,7 @@ MonoBehaviour:
   hitEffects: []
   attackSounds: []
   hitSounds: []
-  attackData: {fileID: 11400000, guid: 5e468ef431f734300b8c05ab07c9fb5b, type: 2}
+  attackData: {fileID: 11400000, guid: a5b8918bd0130433a84c8963528acdf0, type: 2}
   unitStateChecker:
     checkHorizontalDistance: 1
     attackHorizontalDistance: 4
@@ -803,7 +803,7 @@ MonoBehaviour:
   hitEffects: []
   attackSounds: []
   hitSounds: []
-  attackData: {fileID: 11400000, guid: 99ac465c44d85488ab19ee7776d33ee3, type: 2}
+  attackData: {fileID: 11400000, guid: b26b799dd95474ec3999dd5850a00505, type: 2}
   unitStateChecker:
     checkHorizontalDistance: 1
     attackHorizontalDistance: 4
@@ -980,7 +980,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6582178051482799858, guid: 16129bf7803a2466f867a51ceea4c109, type: 3}
       propertyPath: managedReferences[2769520796589621389].Attack1Cooltime
-      value: 2
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 6582178051482799858, guid: 16129bf7803a2466f867a51ceea4c109, type: 3}
       propertyPath: managedReferences[2769520796589621389].Attack2Cooltime
