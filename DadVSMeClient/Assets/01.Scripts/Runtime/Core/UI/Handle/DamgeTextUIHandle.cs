@@ -1,3 +1,4 @@
+using System.Threading.Tasks;
 using Cysharp.Threading.Tasks;
 using DadVSMe.Core.Cam;
 using DadVSMe.Core.UI;
@@ -10,17 +11,23 @@ namespace DadVSMe
 {
     public class DamageTextUIHandlse : UIHandle<DamageTextUIHandleParameter>
     {
-        public override void Execute(DamageTextUIHandleParameter handleParameter)
+        public override async void Execute(DamageTextUIHandleParameter handleParameter)
         {
             AddressableAsset<DamageText> textRef =
                 handleParameter.attackData.GetFeedbackData(handleParameter.attackAttribute).hitText;
 
             if (textRef == null)
                 return;
+            if (string.IsNullOrEmpty(textRef.Key))
+                return;
                 
-            textRef.InitializeAsync().Forget();
+            await textRef.InitializeAsync();
 
             DamageText text = PoolManager.Spawn(textRef).GetComponent<DamageText>();
+
+            if (text == null)
+                return;
+
             text.Setup(CameraManager.UICam);
             text.Play(handleParameter.target, handleParameter.upOffset, (int)handleParameter.damage,
                 handleParameter.isCritical, GetColor(handleParameter.attackAttribute), handleParameter.criticalColor);
