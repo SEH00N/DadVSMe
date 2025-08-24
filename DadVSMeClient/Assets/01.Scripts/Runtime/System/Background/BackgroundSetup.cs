@@ -25,15 +25,15 @@ namespace DadVSMe.Background
         [Space(20)]
         [SerializeField] private BackgroundTrailerGroup _backTrailerGroup;
         [SerializeField] private BackgroundTrailerGroup _middleTrailerGroup;
-        [SerializeField] private BackgroundTrailerGroup _frontTrailerGroup;
+        [SerializeField] private BackgroundTrailerGroup _bottomTrailerGroup;
 
         private void Start()
         {
             var releaser = new BackgroundResourceReleaser();
 
-            //InitializeBackgroundTrailerGroup(_backTrailerGroup, releaser);
-            //InitializeBackgroundTrailerGroup(_middleTrailerGroup, releaser);
-            InitializeBackgroundTrailerGroup(_frontTrailerGroup, releaser);
+            InitializeBackgroundTrailerGroup(_backTrailerGroup, releaser);
+            InitializeBackgroundTrailerGroup(_middleTrailerGroup, releaser);
+            InitializeBackgroundTrailerGroup(_bottomTrailerGroup, releaser);
         }
 
         private void InitializeBackgroundTrailerGroup(BackgroundTrailerGroup group, BackgroundResourceReleaser releaser)

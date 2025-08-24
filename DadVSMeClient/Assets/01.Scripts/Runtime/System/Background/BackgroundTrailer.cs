@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using H00N.Resources.Addressables;
 using Cysharp.Threading.Tasks;
+using H00N.Resources.Pools;
 
 namespace DadVSMe.Background
 {
@@ -23,6 +24,7 @@ namespace DadVSMe.Background
         private List<BackgroundObject> _runTimeBackgroundContainer;
 
         private bool _onRunning;
+        private bool _canSpawning;
 
         public void Initialize(BackgroundLayerInfo layerInfo, Transform cameraTrm, Collider2D boundary)
         {
@@ -57,20 +59,20 @@ namespace DadVSMe.Background
 
         private async UniTask SpawnBackground(AddressableAsset<BackgroundObject> prefab, Vector2 spawnPosition)
         {
+            _canSpawning = false;
             await prefab.InitializeAsync();
 
-            var bgObject = Instantiate(prefab.Asset, _parentTransform);
+            var bgObject = PoolManager.Spawn<BackgroundObject>(prefab, _parentTransform);
             bgObject.Initialize(spawnPosition, _cameraTransform, _currentThemeData.themeIdx);
 
             _runTimeBackgroundContainer.Add(bgObject);
+            _canSpawning = true;
         }
 
         private void DespawnBackground(BackgroundObject background)
         {
             _runTimeBackgroundContainer.Remove(background);
-            Destroy(background.gameObject);
-
-            Debug.Log(_latestDespawnedThemeIdx);
+            PoolManager.Despawn(background);
 
             if(_latestDespawnedThemeIdx != background.ThemeIdx)
             {
@@ -83,13 +85,15 @@ namespace DadVSMe.Background
         {
             if(_themeDataQueue.Count == 0)
             {
-                Debug.LogError("No more BackgroundData");
-                _onRunning = false;
+                Debug.LogWarning("No more BackgroundData");
+                _canSpawning = false;
                 return;
             }
 
             _currentThemeData = _themeDataQueue.Peek();
             _prefabContainer = _themeDataQueue.Dequeue().GetBackgroundQueue();
+
+            _canSpawning = true;
         }
 
         private void Update()
@@ -104,6 +108,8 @@ namespace DadVSMe.Background
                 DespawnBackground(_runTimeBackgroundContainer[0]);
             }
 
+            if (_canSpawning == false) return;
+
             var lastIdx = _runTimeBackgroundContainer.Count - 1;
             var penultimateIdx = lastIdx - 1;
             var penultimateBG = _runTimeBackgroundContainer[penultimateIdx];
@@ -115,7 +121,7 @@ namespace DadVSMe.Background
                     RefillPrefabContainer();
                 }
 
-                if (_onRunning == false) return;
+                if (_canSpawning == false) return;
 
                 var lastBG = _runTimeBackgroundContainer[lastIdx];
                 SpawnBackground(_prefabContainer.Dequeue(), lastBG.SocketPosition).Forget();
