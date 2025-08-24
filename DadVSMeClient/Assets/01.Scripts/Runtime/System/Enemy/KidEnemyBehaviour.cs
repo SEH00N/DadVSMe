@@ -13,6 +13,8 @@ namespace DadVSMe.Enemies
         [SerializeField] SpriteRenderer hatRenderer = null;
         [SerializeField] SpriteRenderer clothesRenderer = null;
 
+        private KidEnemyData kidEnemyData;
+
         private void Awake()
         {
             unit.OnInitializedEvent += InitializeInternal;
@@ -20,13 +22,12 @@ namespace DadVSMe.Enemies
 
         private void InitializeInternal(IEntityData data)
         {
-            if (data is not KidEnemyData kidEnemyData)
+            if (data is KidEnemyData enemyData == false)
                 return;
 
-            Color bodyColor = kidEnemyData.useBodyColorOverride ? GetColorRatio(DefaultBodyColor, kidEnemyData.bodyColorOverride) : Color.white;
-            foreach (SpriteRenderer bodyRenderer in bodyRenderers)
-                bodyRenderer.color = bodyColor;
-            
+            kidEnemyData = enemyData;
+
+            SetAsOverrideBodyColor();
             hatRenderer.sprite = kidEnemyData.hatSprite;
             clothesRenderer.sprite = kidEnemyData.clothesSprite;
         }
@@ -39,6 +40,19 @@ namespace DadVSMe.Enemies
                 baseColor.b != 0 ? targetColor.b / baseColor.b : 1f,
                 baseColor.a != 0 ? targetColor.a / baseColor.a : 1f
             );
+        }
+
+        public void SetAsDefaultBodyColor()
+        {
+            foreach (SpriteRenderer bodyRenderer in bodyRenderers)
+                bodyRenderer.color = Color.white;
+        }
+
+        public void SetAsOverrideBodyColor()
+        {
+            Color bodyColor = kidEnemyData.useBodyColorOverride ? GetColorRatio(DefaultBodyColor, kidEnemyData.bodyColorOverride) : Color.white;
+            foreach (SpriteRenderer bodyRenderer in bodyRenderers)
+                bodyRenderer.color = bodyColor;
         }
     }
 }

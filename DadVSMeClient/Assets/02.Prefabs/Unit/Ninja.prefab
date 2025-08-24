@@ -76,6 +76,8 @@ MonoBehaviour:
     lieCompare: 0
     checkDie: 1
     dieCompare: 0
+    checkWeight: 0
+    weight: 0
 --- !u!1 &824373591782821538
 GameObject:
   m_ObjectHideFlags: 0
@@ -262,6 +264,18 @@ MonoBehaviour:
   onStateEnterEvent:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 8126238411390233293}
+        m_TargetAssemblyTypeName: DadVSMe.Enemies.KidEnemyBehaviour, DadVSMe
+        m_MethodName: SetAsDefaultBodyColor
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 3941290563980243592}
         m_TargetAssemblyTypeName: DadVSMe.Entities.EntityAnimator, DadVSMe
         m_MethodName: PlayAnimation
@@ -276,7 +290,19 @@ MonoBehaviour:
         m_CallState: 2
   onStateExitEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 8126238411390233293}
+        m_TargetAssemblyTypeName: DadVSMe.Enemies.KidEnemyBehaviour, DadVSMe
+        m_MethodName: SetAsOverrideBodyColor
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &3573273119589401693
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -290,8 +316,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackData: {fileID: 11400000, guid: 32968d0552eba4948a7e689eebe516b5, type: 2}
-  kickSpeed: 10
-  targetThresHold: 0.3
+  kickSpeed: 20
+  targetThresHold: 1.95
+  attackOffset: {x: 0, y: 1}
+  ninjaAfterImagePrefab:
+    key: NinjaAttackAfterImage
+  spawnRate: 0.05
+  spawnOffset: {x: 0, y: 1}
 --- !u!1 &1015058058654420167
 GameObject:
   m_ObjectHideFlags: 0
@@ -400,6 +431,8 @@ MonoBehaviour:
     lieCompare: 0
     checkDie: 1
     dieCompare: 0
+    checkWeight: 0
+    weight: 0
 --- !u!114 &7757529933570838623
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -534,6 +567,18 @@ MonoBehaviour:
   onStateEnterEvent:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 8126238411390233293}
+        m_TargetAssemblyTypeName: DadVSMe.Enemies.KidEnemyBehaviour, DadVSMe
+        m_MethodName: SetAsDefaultBodyColor
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 3941290563980243592}
         m_TargetAssemblyTypeName: DadVSMe.Entities.EntityAnimator, DadVSMe
         m_MethodName: PlayAnimation
@@ -548,7 +593,19 @@ MonoBehaviour:
         m_CallState: 2
   onStateExitEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 8126238411390233293}
+        m_TargetAssemblyTypeName: DadVSMe.Enemies.KidEnemyBehaviour, DadVSMe
+        m_MethodName: SetAsOverrideBodyColor
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &4411594113590312789
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -563,7 +620,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ninjaAttackState: {fileID: 231634744185396479}
   animationEventListener: {fileID: 691241200927550976}
-  jumpVelocity: {x: 0, y: 20}
+  jumpupDustFX:
+    key: VFX_Shockwave
+  jumpVelocity: {x: 0, y: 13}
 --- !u!1 &5035127272482592136
 GameObject:
   m_ObjectHideFlags: 0
@@ -640,6 +699,8 @@ MonoBehaviour:
     lieCompare: 0
     checkDie: 1
     dieCompare: 0
+    checkWeight: 0
+    weight: 0
 --- !u!1 &7563746701473395289
 GameObject:
   m_ObjectHideFlags: 0
@@ -834,6 +895,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7673012708161170671, guid: 16129bf7803a2466f867a51ceea4c109, type: 3}
   m_PrefabInstance: {fileID: 5847610075257485758}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &8126238411390233293 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2441180411158270835, guid: 16129bf7803a2466f867a51ceea4c109, type: 3}
+  m_PrefabInstance: {fileID: 5847610075257485758}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3550241872120694001}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4058808f958bf4a378d6954759421ef9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &9000833927426366572 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3300998498417108434, guid: 16129bf7803a2466f867a51ceea4c109, type: 3}
