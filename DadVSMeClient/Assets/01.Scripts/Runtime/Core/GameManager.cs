@@ -55,5 +55,10 @@ namespace DadVSMe
         {
             InputManager.Update();
         }
+
+        private void OnDestroy()
+        {
+            Release();
+        }
     }
 }

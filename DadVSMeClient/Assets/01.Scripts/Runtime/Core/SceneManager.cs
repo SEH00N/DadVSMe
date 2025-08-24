@@ -17,23 +17,29 @@ namespace DadVSMe
             loadedSceneTable = new Dictionary<string, AsyncOperationHandle<SceneInstance>>();
         }
 
-        public static async void Release()
+        public static void Release()
         {
             foreach(var sceneHandle in loadedSceneTable.Values)
             {
-                if (sceneHandle.IsValid())
-                    await Addressables.UnloadSceneAsync(sceneHandle);
+                if (sceneHandle.IsValid() == false)
+                    continue;
 
-                sceneHandle.Release();
+                Addressables.UnloadSceneAsync(sceneHandle);
             }
+
             loadedSceneTable.Clear();
             loadedSceneTable = null;
         }
 
         public static async UniTask<bool> TryLoadSceneAsync(string sceneName, LoadSceneMode loadSceneMode)
         {
-            if(loadedSceneTable.ContainsKey(sceneName))
-                return false;
+            if(loadedSceneTable.TryGetValue(sceneName, out AsyncOperationHandle<SceneInstance> cachedSceneHandle))
+            {
+                if(cachedSceneHandle.IsValid())
+                    return false;
+
+                loadedSceneTable.Remove(sceneName);
+            }
 
             AsyncOperationHandle<SceneInstance> sceneHandle = Addressables.LoadSceneAsync(sceneName, loadSceneMode);
             await sceneHandle;

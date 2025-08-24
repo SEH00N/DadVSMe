@@ -15,9 +15,8 @@ namespace DadVSMe
 
         public override void OnRegist(UnitSkillComponent ownerComponent)
         {
-            base.OnRegist(ownerComponent);
-
             player = ownerComponent.GetComponent<Player>();
+            base.OnRegist(ownerComponent);
         }
 
         public override void Execute()

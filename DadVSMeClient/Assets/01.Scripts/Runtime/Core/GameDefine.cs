@@ -7,6 +7,8 @@ namespace DadVSMe
         public const string INTRO_SCENE_NAME = "IntroScene";
         public const string TITLE_SCENE_NAME = "TitleScene";
         public const string GAME_SCENE_NAME = "GameScene";
+        public const string GAME_OVER_SCENE_NAME = "GameOverScene";
+        public const string GAME_CLEAR_SCENE_NAME = "GameClearScene";
 
         public const string ADDRESSABLES_LABEL_GAME_ASSETS = "game-assets";
 

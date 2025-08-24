@@ -1,8 +1,6 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using DG.Tweening;
 using Cysharp.Threading.Tasks;
-using UnityEngine.AddressableAssets;
 
 namespace DadVSMe.UI
 {
@@ -15,10 +13,11 @@ namespace DadVSMe.UI
             await DOFade.FadeInAsync();
 
             // Load Resources
-            await Addressables.InstantiateAsync(GameDefine.ADDRESSABLES_LABEL_GAME_ASSETS);
+            await new LoadResourceByLabel().LoadAsync(GameDefine.ADDRESSABLES_LABEL_GAME_ASSETS);
 
             // Load game scene
             await SceneManager.TryLoadSceneAsync(GameDefine.GAME_SCENE_NAME, LoadSceneMode.Single);
+            GameInstance.GameCycle.InitializeAsync().Forget();
 
             // FadeOut
             await DOFade.FadeOutAsync();
