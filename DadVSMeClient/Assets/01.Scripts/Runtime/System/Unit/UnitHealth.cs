@@ -1,4 +1,6 @@
 using System;
+using DadVSMe.Core.UI;
+using H00N.AI.FSM;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -25,6 +27,14 @@ namespace DadVSMe.Entities
             currentHP -= (int)(attackData.Damage * attacker.FSMBrain.GetAIData<UnitStatData>()[EUnitStat.AttackPowerMultiplier].FinalValue);
             onAttackEvent?.Invoke(attacker, attackData);
             OnHPChangedEvent?.Invoke();
+
+            var handle =
+                UIManager.CreateUIHandle<DamageTextUIHandlse, DamageTextUIHandleParameter>(out DamageTextUIHandleParameter param);
+            param.target = transform;
+            param.attackAttribute = attacker.GetComponent<FSMBrain>().GetAIData<UnitFSMData>().attackAttribute;
+            param.attackData = attackData as AttackDataBase;
+            param.upOffset = Vector3.up;
+            handle.Execute(param);
         }
 
         public void Heal(int amount)

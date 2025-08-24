@@ -14,22 +14,27 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 10
   isRangeAttack: 1
-  attackAttribute: 0
   feedbackDatas:
   - attackAttribute: 0
     hitEffects: []
     attackSounds: []
     hitSounds: []
+    hitText:
+      key: DamageText
   - attackAttribute: 1
     hitEffects:
     - key: VFX_Explosion
     attackSounds: []
     hitSounds:
     - key: fire_punch
+    hitText:
+      key: DamageText
   - attackAttribute: 2
     hitEffects:
     - key: VFX_CrazyHit
     attackSounds: []
     hitSounds: []
+    hitText:
+      key: DamageText
   juggleForce: 15
   juggleDirection: {x: 1, y: 1.75}

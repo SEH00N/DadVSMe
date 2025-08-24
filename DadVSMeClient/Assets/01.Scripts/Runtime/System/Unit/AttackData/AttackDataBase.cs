@@ -28,5 +28,6 @@ namespace DadVSMe.Entities
         public List<AddressableAsset<PoolableEffect>> hitEffects = new List<AddressableAsset<PoolableEffect>>();
         public List<AddressableAsset<AudioClip>> attackSounds = new List<AddressableAsset<AudioClip>>();
         public List<AddressableAsset<AudioClip>> hitSounds = new List<AddressableAsset<AudioClip>>();
+        public AddressableAsset<DamageText> hitText;
     }
 }

@@ -29,6 +29,20 @@ namespace DadVSMe.Core.Cam
             }
         }
 
+        private static Camera uiCam;
+        public static Camera UICam
+        {
+            get
+            {
+                if (uiCam == null)
+                {
+                    uiCam = GameObject.Find("UICamera (Overlay)").GetComponent<Camera>();
+                }
+
+                return uiCam;
+            }
+        }
+
         public static THandle CreateCameraHandle<THandle, TParam>(out TParam param)
             where TParam : CameraHandleParameter, new()
             where THandle : CameraHandle<TParam>, new()

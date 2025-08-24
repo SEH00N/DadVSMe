@@ -1,10 +1,12 @@
 using System.Collections.Generic;
 using Cysharp.Threading.Tasks;
+using DadVSMe.Core.Cam;
 using DadVSMe.Entities;
 using H00N.Extensions;
 using H00N.Resources.Addressables;
 using H00N.Resources.Pools;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace DadVSMe
 {
@@ -20,6 +22,7 @@ namespace DadVSMe
                 attackData.GetFeedbackData(attackAttribute)?.hitEffects.ForEach(effect => effect.InitializeAsync().Forget());
                 attackData.GetFeedbackData(attackAttribute)?.attackSounds.ForEach(sound => sound.InitializeAsync().Forget());
                 attackData.GetFeedbackData(attackAttribute)?.hitSounds.ForEach(sound => sound.InitializeAsync().Forget());
+                attackData.GetFeedbackData(attackAttribute)?.hitText.InitializeAsync().Forget();
             }
         }
     }
@@ -51,7 +54,7 @@ namespace DadVSMe
     {
         public PlayEffect(AddressableAsset<PoolableEffect> effect, Vector3 position, int forwardDirection)
         {
-            if(effect == null || string.IsNullOrEmpty(effect.Key))
+            if (effect == null || string.IsNullOrEmpty(effect.Key))
                 return;
 
             PoolableEffect poolableEffect = PoolManager.Spawn<PoolableEffect>(effect.Key);

@@ -1,9 +1,11 @@
 using System;
 using System.Collections.Generic;
 using Cysharp.Threading.Tasks;
+using DadVSMe.Core.UI;
 using H00N.AI.FSM;
 using H00N.Resources.Addressables;
 using Mono.Cecil.Cil;
+using TMPro;
 using UnityEngine;
 
 namespace DadVSMe.Entities.FSM
@@ -51,7 +53,7 @@ namespace DadVSMe.Entities.FSM
         {
             OnAttack(eventData);
         }
-        
+
         protected void AttackToTarget(Unit target, AttackDataBase attackData, bool playEffect = true)
         {
             target.UnitHealth.Attack(unitFSMData.unit, attackData);
@@ -59,6 +61,8 @@ namespace DadVSMe.Entities.FSM
 
             if (playEffect)
                 _ = new PlayAttackFeedback(attackData, unitFSMData.attackAttribute, target.transform.position, attackOffset, unitFSMData.forwardDirection);
+            
+
         }
 
         #if UNITY_EDITOR
