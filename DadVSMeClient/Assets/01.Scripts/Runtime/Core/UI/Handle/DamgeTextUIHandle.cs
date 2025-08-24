@@ -14,6 +14,10 @@ namespace DadVSMe
         {
             AddressableAsset<DamageText> textRef =
                 handleParameter.attackData.GetFeedbackData(handleParameter.attackAttribute).hitText;
+
+            if (textRef == null)
+                return;
+                
             textRef.InitializeAsync().Forget();
 
             DamageText text = PoolManager.Spawn(textRef).GetComponent<DamageText>();

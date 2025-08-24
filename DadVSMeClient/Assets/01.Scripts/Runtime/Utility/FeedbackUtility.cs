@@ -22,7 +22,7 @@ namespace DadVSMe
                 attackData.GetFeedbackData(attackAttribute)?.hitEffects.ForEach(effect => effect.InitializeAsync().Forget());
                 attackData.GetFeedbackData(attackAttribute)?.attackSounds.ForEach(sound => sound.InitializeAsync().Forget());
                 attackData.GetFeedbackData(attackAttribute)?.hitSounds.ForEach(sound => sound.InitializeAsync().Forget());
-                attackData.GetFeedbackData(attackAttribute)?.hitText.InitializeAsync().Forget();
+                attackData.GetFeedbackData(attackAttribute)?.hitText?.InitializeAsync().Forget();
             }
         }
     }

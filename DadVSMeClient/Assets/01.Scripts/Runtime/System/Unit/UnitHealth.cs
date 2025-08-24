@@ -8,7 +8,7 @@ namespace DadVSMe.Entities
 {
     public class UnitHealth : MonoBehaviour
     {
-        [SerializeField] UnityEvent<Unit, IAttackData> onAttackEvent = null;
+        public UnityEvent<Unit, IAttackData> onAttackEvent = null;
         public event Action OnHPChangedEvent = null;
 
         private UnitStat hpStat = null;

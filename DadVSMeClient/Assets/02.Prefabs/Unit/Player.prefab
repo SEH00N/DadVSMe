@@ -5692,6 +5692,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyTag: Enemy
   fsmBrain: {fileID: 2841000604668159261}
+  detectCollision: {fileID: 0}
 --- !u!58 &2977751249653612589
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -9177,6 +9178,7 @@ GameObject:
   - component: {fileID: 496568060240948358}
   - component: {fileID: 6550646681929325183}
   - component: {fileID: 4986737996520123102}
+  - component: {fileID: 3263218802335932849}
   m_Layer: 8
   m_Name: Player
   m_TagString: Player
@@ -9236,6 +9238,9 @@ MonoBehaviour:
   staticEntity: 0
   entityAnimator: {fileID: 1382251147719448698}
   sortingOrderResolver: {fileID: 3897684068023970099}
+  onTriggerEnter:
+    m_PersistentCalls:
+      m_Calls: []
   unitMovement: {fileID: 279169761548483819}
   fsmBrain: {fileID: 2841000604668159261}
   unitHealth: {fileID: 6165701722836179940}
@@ -9553,6 +9558,22 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1.8792293, y: 3.1219835}
   m_EdgeRadius: 0
+--- !u!114 &3263218802335932849
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8996695108358816546}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a7d37be4f1604bbca23de35eed3eaf1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: {fileID: 6165701722836179940}
+  brain: {fileID: 2841000604668159261}
+  defaultSortingOrderResolverCollider: {fileID: 4518340953437237913}
+  grabbedSortingOrderResolverCollider: {fileID: 6113472226918677138}
 --- !u!1 &9019325040001713458
 GameObject:
   m_ObjectHideFlags: 0
