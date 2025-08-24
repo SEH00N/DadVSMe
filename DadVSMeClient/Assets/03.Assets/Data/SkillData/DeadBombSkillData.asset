@@ -45,6 +45,8 @@ MonoBehaviour:
   attackData: {fileID: 11400000, guid: 4d77a75604ed84d8d9ad821222b6d9c0, type: 2}
   effectRef:
     key: VFX_DeadBomb
+  soundRef:
+    key: sfx_explosion_0
   attackRadius: 5
   levelUpIncreaseRate: 2
   references:

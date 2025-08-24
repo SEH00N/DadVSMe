@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using Cysharp.Threading.Tasks;
 using DadVSMe.Entities;
+using H00N.AI.FSM;
 using H00N.Resources.Pools;
 using UnityEngine;
 
@@ -60,6 +61,9 @@ namespace DadVSMe
                         targets.Add(health);
 
                         health.Attack(instigator, attackData);
+                        UnitFSMData unitFSMData = instigator.GetComponent<FSMBrain>().GetAIData<UnitFSMData>();
+                        _ = new PlayAttackFeedback(attackData, unitFSMData.attackAttribute, health.transform.position, Vector3.zero, unitFSMData.forwardDirection);
+
                         findTarget = true;
 
                         if (count >= attackNum)

@@ -73,6 +73,8 @@ namespace DadVSMe
                 attackData.SetDamage(attackData.Damage + (int)(data.levelUpIncreaseRate * level));
 
                 health.Attack(target as Unit, attackData);
+                UnitFSMData unitFSMData = ownerComponent.GetComponent<FSMBrain>().GetAIData<UnitFSMData>();
+                _ = new PlayAttackFeedback(attackData, unitFSMData.attackAttribute, health.transform.position, Vector3.zero, unitFSMData.forwardDirection);
             }
         }
     }
