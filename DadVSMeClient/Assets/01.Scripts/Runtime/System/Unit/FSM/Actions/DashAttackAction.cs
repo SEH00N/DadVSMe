@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using DadVSMe.Inputs;
 using H00N.AI.FSM;
 using UnityEngine;
@@ -17,10 +18,13 @@ namespace DadVSMe.Entities.FSM
 
         private bool isAttacking = false;
 
+        private List<Unit> attackedUnits;
+
         public override void Init(FSMBrain brain, FSMState state)
         {
             base.Init(brain, state);
             unitMovement = brain.GetComponent<UnitMovement>();
+            attackedUnits = new();
         }
 
         public override void EnterState()
@@ -52,12 +56,22 @@ namespace DadVSMe.Entities.FSM
             unitMovement.SetActive(false);
 
             isAttacking = false;
+            attackedUnits.Clear();
+        }
+
+        protected override void AttackToTarget(Unit target, AttackDataBase attackData, bool playEffect = true)
+        {
+            if (attackedUnits.Contains(target))
+                return;
+
+            base.AttackToTarget(target, attackData, playEffect);
+            attackedUnits.Add(target);
         }
 
         protected override void OnAttack(EntityAnimationEventData eventData)
         {
             isAttacking = !isAttacking;
-            if(isAttacking == false && moveStopping)
+            if (isAttacking == false && moveStopping)
                 unitMovement.SetMovementVelocity(Vector2.zero);
         }
     }

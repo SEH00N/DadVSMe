@@ -54,7 +54,7 @@ namespace DadVSMe.Entities.FSM
             OnAttack(eventData);
         }
 
-        protected void AttackToTarget(Unit target, AttackDataBase attackData, bool playEffect = true)
+        protected virtual void AttackToTarget(Unit target, AttackDataBase attackData, bool playEffect = true)
         {
             target.UnitHealth.Attack(unitFSMData.unit, attackData);
             unitFSMData.unit.onAttackTargetEvent?.Invoke(target, attackData);
