@@ -9,6 +9,7 @@ namespace DadVSMe.UI
 {
     public class IntroUI : MonoBehaviour
     {
+        private const float VIDEO_WAIT_TIME = -0.75f;
         private const float DELAY_TIME = 1.2f;
 
         [SerializeField] GameObject cutscenePanelObject = null;
@@ -38,7 +39,7 @@ namespace DadVSMe.UI
             videoPlayer.Play();
 
             // Wait for video to finish
-            await UniTask.Delay(TimeSpan.FromSeconds(videoPlayer.length));
+            await UniTask.Delay(TimeSpan.FromSeconds(videoPlayer.length + VIDEO_WAIT_TIME));
 
             // Load Ongoing Scene
             await SceneManager.TryLoadSceneAsync(GameDefine.TITLE_SCENE_NAME, LoadSceneMode.Single);
