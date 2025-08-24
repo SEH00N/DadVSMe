@@ -1,4 +1,5 @@
 using System;
+using System.Threading.Tasks;
 using Cysharp.Threading.Tasks;
 using DadVSMe.Entities;
 using H00N.Resources.Pools;
@@ -49,13 +50,13 @@ namespace DadVSMe
 
             if (target.TryGetComponent<UnitHealth>(out UnitHealth targetHealth))
             {
-                Debug.Log(attackData.Damage);
-                targetHealth.Attack(instigator, attackData);
+                DespawnInternal();
                 Vector3 direction = (target.transform.position - transform.position).normalized;
                 _ = new PlayAttackFeedback(attackData, EAttackAttribute.Normal, transform.position, Vector3.zero, (int)Mathf.Sign(direction.x));
+                targetHealth.Attack(instigator, attackData);
             }
-
-            DespawnInternal();
+            
+            
         }
 
         void Update()
@@ -78,9 +79,11 @@ namespace DadVSMe
             this.target = target;
         }
 
-        public void Launch()
+        public async Task Launch()
         {
             bezierMover.LaunchAsync(target.transform).Forget();
+
+            await UniTask.Delay(System.TimeSpan.FromSeconds(4f));
         }
 
         public void Despawn(EntityAnimationEventData animData)
