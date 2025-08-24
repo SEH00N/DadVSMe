@@ -21,6 +21,7 @@ namespace DadVSMe.Entities
 
         protected UnitFSMData unitFSMData = null;
         protected UnitStatData unitStatData = null;
+        public UnitStatData Stat => unitStatData;
 
         public UnityEvent<Unit, IAttackData> onAttackTargetEvent = null;
         public UnityEvent onStartAngerEvent;

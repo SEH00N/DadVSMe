@@ -34,7 +34,8 @@ namespace DadVSMe.Entities
             param.attackAttribute = attacker.GetComponent<FSMBrain>().GetAIData<UnitFSMData>().attackAttribute;
             param.attackData = attackData as AttackDataBase;
             param.upOffset = Vector3.up;
-//            handle.Execute(param);
+            param.damage = attackData.Damage * attacker.Stat[EUnitStat.AttackPowerMultiplier].FinalValue;
+            handle.Execute(param);
         }
 
         public void Heal(int amount)

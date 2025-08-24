@@ -18,8 +18,23 @@ namespace DadVSMe
 
             DamageText text = PoolManager.Spawn(textRef).GetComponent<DamageText>();
             text.Setup(CameraManager.UICam);
-            text.Play(handleParameter.target, handleParameter.upOffset, handleParameter.attackData.Damage, 
-                handleParameter.isCritical, handleParameter.normalColor, handleParameter.criticalColor);
+            text.Play(handleParameter.target, handleParameter.upOffset, (int)handleParameter.damage,
+                handleParameter.isCritical, GetColor(handleParameter.attackAttribute), handleParameter.criticalColor);
+        }
+
+        Color GetColor(EAttackAttribute attackAttribute)
+        {
+            switch (attackAttribute)
+            {
+                case EAttackAttribute.Normal:
+                    return Color.white;
+                case EAttackAttribute.Crazy:
+                    return Color.blue;
+                case EAttackAttribute.Fire:
+                    return Color.red;
+                default:
+                    return Color.white;
+            }
         }
     }
 
@@ -28,9 +43,9 @@ namespace DadVSMe
         public Transform target;
         public Vector3 upOffset;
         public AttackDataBase attackData;
+        public float damage;
         public EAttackAttribute attackAttribute;
         public bool isCritical = false;
-        public Color normalColor = Color.white;
         public Color criticalColor = Color.red;
 
         public DamageTextUIHandleParameter() { }
