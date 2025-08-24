@@ -24,7 +24,8 @@ namespace DadVSMe.Entities
 
         public void Attack(Unit attacker, IAttackData attackData)
         {
-            currentHP -= (int)(attackData.Damage * attacker.FSMBrain.GetAIData<UnitStatData>()[EUnitStat.AttackPowerMultiplier].FinalValue);
+            Debug.Log((attackData));
+            currentHP -= (int)attackData.Damage;
             onAttackEvent?.Invoke(attacker, attackData);
             OnHPChangedEvent?.Invoke();
 
@@ -32,7 +33,7 @@ namespace DadVSMe.Entities
                 UIManager.CreateUIHandle<DamageTextUIHandlse, DamageTextUIHandleParameter>(out DamageTextUIHandleParameter param);
             param.target = transform;
             param.attackAttribute = attacker.GetComponent<FSMBrain>().GetAIData<UnitFSMData>().attackAttribute;
-            param.attackData = attackData as AttackDataBase;
+            param.attackData = attackData;
             param.upOffset = Vector3.up;
             param.damage = attackData.Damage * attacker.Stat[EUnitStat.AttackPowerMultiplier].FinalValue;
             handle.Execute(param);

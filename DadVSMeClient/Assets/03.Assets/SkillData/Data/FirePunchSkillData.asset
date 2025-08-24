@@ -36,6 +36,10 @@ MonoBehaviour:
   levelUpIncreaseRate: 0.2
   particlePrefab:
     key: Particle_BurnSmoke
+  firePrefab:
+    key: Fire
+  burnTime: 2
+  attackDelay: 1
   references:
     version: 2
     RefIds: []

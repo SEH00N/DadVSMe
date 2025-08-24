@@ -8,10 +8,13 @@ namespace DadVSMe
     {
         public float levelUpIncreaseRate;
         public AddressableAsset<ParticleSystem> particlePrefab;
+        public AddressableAsset<Fire> firePrefab;
+        public float burnTime;
+        public float attackDelay;
     
         public override UnitSkill CreateSkill()
         {
-            return new FirePunchSkill(levelUpIncreaseRate, particlePrefab);
+            return new FirePunchSkill(levelUpIncreaseRate, firePrefab, burnTime, attackDelay);
         }
     }
 }

@@ -29,7 +29,7 @@ namespace DadVSMe
 
     public struct PlayAttackSound
     {
-        public PlayAttackSound(AttackDataBase attackData, EAttackAttribute attackAttribute)
+        public PlayAttackSound(IAttackData attackData, EAttackAttribute attackAttribute)
         {
             _ = new PlaySound(attackData.GetFeedbackData(EAttackAttribute.Normal)?.attackSounds);
             _ = new PlaySound(attackData.GetFeedbackData(attackAttribute)?.attackSounds);
@@ -38,7 +38,7 @@ namespace DadVSMe
 
     public struct PlayAttackFeedback
     {
-        public PlayAttackFeedback(AttackDataBase attackData, EAttackAttribute attackAttribute, Vector3 targetPosition, Vector3 attackOffset, int forwardDirection)
+        public PlayAttackFeedback(IAttackData attackData, EAttackAttribute attackAttribute, Vector3 targetPosition, Vector3 attackOffset, int forwardDirection)
         {
             Vector3 offset = new Vector3(attackOffset.x * forwardDirection, attackOffset.y, 0f);
 

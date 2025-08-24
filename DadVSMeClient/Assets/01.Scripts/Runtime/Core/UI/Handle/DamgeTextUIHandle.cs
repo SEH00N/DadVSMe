@@ -53,7 +53,7 @@ namespace DadVSMe
     {
         public Transform target;
         public Vector3 upOffset;
-        public AttackDataBase attackData;
+        public IAttackData attackData;
         public float damage;
         public EAttackAttribute attackAttribute;
         public bool isCritical = false;

@@ -1,3 +1,4 @@
+using System;
 using Cysharp.Threading.Tasks;
 using DadVSMe.Entities;
 using H00N.Resources.Addressables;
@@ -12,40 +13,48 @@ namespace DadVSMe
 
         private float levelUpIncreaseRate;
         private AddressableAsset<ParticleSystem> particlePrefab;
+        private AddressableAsset<Fire> firePrefab;
+        private float burnTime;
+        private float attackDelay;
 
-        public FirePunchSkill(float levelUpIncreaseRate, AddressableAsset<ParticleSystem> particlePrefab) : base()
+        private Unit owner;
+
+        public FirePunchSkill(float levelUpIncreaseRate, AddressableAsset<Fire> firePrefab, float burnTime, float attackDelay) : base()
         {
             this.levelUpIncreaseRate = levelUpIncreaseRate;
-            this.particlePrefab = particlePrefab;
+            this.firePrefab = firePrefab;
+            this.burnTime = burnTime;
+            this.attackDelay = attackDelay;
+
+            firePrefab.InitializeAsync().Forget();
         }
 
         public override void OnRegist(UnitSkillComponent ownerComponent)
         {
             base.OnRegist(ownerComponent);
 
+            owner = ownerComponent.GetComponent<Unit>();
+            owner.onAttackTargetEvent.AddListener(OnAttackTarget);
             Execute();
-            SpawnEffectAsync();
         }
 
-        private async void SpawnEffectAsync()
+        private void OnAttackTarget(Unit target, IAttackData attackData)
         {
-            await particlePrefab.InitializeAsync();
-
-            ParticleSystem particle = PoolManager.Spawn<ParticleSystem>(particlePrefab.Key, ownerComponent.gameObject.transform);
-            particle.transform.localPosition = SpawnOffset;
-            particle.Play();
+            Fire fire = PoolManager.Spawn(firePrefab).GetComponent<Fire>();
+            fire.Init(ownerComponent.GetComponent<Unit>(), target, attackData, burnTime, attackDelay);
         }
 
         public override void Execute()
         {
-            ownerComponent.GetComponent<Unit>().SetAttackAttribute(EAttackAttribute.Fire);
+            owner.SetAttackAttribute(EAttackAttribute.Fire);
         }
 
         public override void OnUnregist()
         {
             base.OnUnregist();
 
-            ownerComponent.GetComponent<Unit>().SetAttackAttribute(EAttackAttribute.Normal);
+            owner.SetAttackAttribute(EAttackAttribute.Normal);
+            owner.onAttackTargetEvent.RemoveListener(OnAttackTarget);
         }
 
         public override void LevelUp()

@@ -59,7 +59,7 @@ namespace DadVSMe.Entities.FSM
             attackedUnits.Clear();
         }
 
-        protected override void AttackToTarget(Unit target, AttackDataBase attackData, bool playEffect = true)
+        protected override void AttackToTarget(Unit target, IAttackData attackData, bool playEffect = true)
         {
             if (attackedUnits.Contains(target))
                 return;
