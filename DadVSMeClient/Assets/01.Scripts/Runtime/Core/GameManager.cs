@@ -28,6 +28,8 @@ namespace DadVSMe
             // Core Initialize
             ResourceManager.Initialize(new AddressableResourceLoader());
             PoolManager.Initialize(transform);
+            SceneManager.Initialize();
+            InputManager.Initialize();
 
             // Game Manager Initialize
             gameObject.GetComponent<AudioManager>().Initialize();
@@ -43,6 +45,8 @@ namespace DadVSMe
         {
             AudioManager.Instance.Release();
 
+            InputManager.Release();
+            SceneManager.Release();
             PoolManager.Release();
             ResourceManager.Release();
         }
