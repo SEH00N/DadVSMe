@@ -17,14 +17,18 @@ MonoBehaviour:
   useCustomRanges: 0
   customRanges:
   - startSec: 0
-    endSec: 60
+    endSec: 600
   - startSec: 60
     endSec: 120
   enemySawnPhaseList:
   - spawnInterval:
       min: 0.01
-      max: 0.01
-    enemiesList: []
+      max: 4.54
+    enemiesList:
+    - enemyData: {fileID: 11400000, guid: 72ddc6dbc51de43a39c7264f07ddee15, type: 2}
+      prefab:
+        key: SimpleEnemy
+      maxOnField: 10
     bossEnemy: {fileID: 0}
     totalEnemyCountOnField: 6
   - spawnInterval:

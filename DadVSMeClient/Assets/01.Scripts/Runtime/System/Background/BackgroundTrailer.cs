@@ -63,6 +63,7 @@ namespace DadVSMe.Background
             await prefab.InitializeAsync();
 
             var bgObject = PoolManager.Spawn<BackgroundObject>(prefab, _parentTransform);
+            bgObject.transform.localScale = Vector3.one;
             bgObject.Initialize(spawnPosition, _cameraTransform, _currentThemeData.themeIdx);
 
             _runTimeBackgroundContainer.Add(bgObject);
