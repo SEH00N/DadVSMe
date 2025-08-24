@@ -61,7 +61,8 @@ namespace DadVSMe
         {
             if (target.TryGetComponent<AttackActionBase>(out AttackActionBase attack))
             {
-                Execute();
+                if(target.gameObject.name.Contains("Punch1_"))
+                    Execute();
             }
         }
 
