@@ -18,7 +18,7 @@ namespace DadVSMe
         {
             skillContainer = new();
 
-             RegistSkill(SkillType.Bowling);
+             RegistSkill(SkillType.DeadBomb);
         }
 
         public void RegistSkill(SkillType skillType)

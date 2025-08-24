@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using Cysharp.Threading.Tasks;
 using DadVSMe.Entities;
@@ -12,28 +13,29 @@ namespace DadVSMe
     public class DeadBombSkill : UnitSkill
     {
         private AttackDataBase attackData;
-        private AddressableAsset<Bomb> bombRef;
+        private AddressableAsset<PoolableEffect> effectRef;
         private float attackRadius;
         private float levelUpIncreaseRate;
 
         Unit attackTarget;
+        Unit owner;
 
-        public DeadBombSkill(AttackDataBase attackData, AddressableAsset<Bomb> bombRef,
+        public DeadBombSkill(AttackDataBase attackData, AddressableAsset<PoolableEffect> effectRef,
             float attackRadius, float levelUpIncreaseRate)
         {
             this.attackData = attackData;
-            this.bombRef = bombRef;
+            this.effectRef = effectRef;
             this.attackRadius = attackRadius;
             this.levelUpIncreaseRate = levelUpIncreaseRate;
 
-            bombRef.InitializeAsync().Forget();
+            effectRef.InitializeAsync().Forget();
         }
 
         public override void OnRegist(UnitSkillComponent ownerComponent)
         {
             base.OnRegist(ownerComponent);
 
-            Unit owner = ownerComponent.GetComponent<Unit>();
+            owner = ownerComponent.GetComponent<Unit>();
             owner.onAttackTargetEvent.AddListener(OnAttackTarget);
         }
 
@@ -41,35 +43,23 @@ namespace DadVSMe
         {
             Vector2 spawnPoint = attackTarget.transform.position;
             Collider2D[] cols = Physics2D.OverlapCircleAll(spawnPoint, attackRadius);
-            UnitHealth target = null;
-            Debug.Log(cols.Length);
+
             foreach (var col in cols)
             {
                 if (col.gameObject == ownerComponent.gameObject)
                     continue;
+                if (col.gameObject == attackTarget.gameObject)
+                    continue;
 
                 if (col.gameObject.TryGetComponent<UnitHealth>(out UnitHealth unitHealth))
                 {
-                    if (target == null)
-                    {
-                        target = unitHealth;
-                    }
-                    else
-                    {
-                        if (target.CurrentHP < unitHealth.CurrentHP)
-                        {
-                            target = unitHealth;
-                        }
-                    }
+                    unitHealth.Attack(owner, attackData);
                 }
             }
 
-            if (target != null)
-            {
-                Bomb bomb = PoolManager.Spawn(bombRef).GetComponent<Bomb>();
-                bomb.transform.position = attackTarget.transform.position;
-                bomb.JumpToTarget(target.transform, ownerComponent.GetComponent<Unit>());
-            }
+            _ = new PlayEffect(effectRef, spawnPoint, 1);
+
+            attackTarget.OnDespawnEvent -= Execute;
         }
 
         public override void OnUnregist()
@@ -91,7 +81,9 @@ namespace DadVSMe
                 if (targetHealth.CurrentHP <= 0f)
                 {
                     attackTarget = target;
-                    Execute();
+
+                    EntityAnimator animator = target.GetComponent<EntityAnimator>();
+                    attackTarget.OnDespawnEvent += Execute;
                 }
             }
         }

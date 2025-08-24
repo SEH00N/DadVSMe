@@ -15,6 +15,7 @@ namespace DadVSMe.Entities
         [SerializeField] protected EntitySortingOrderResolver sortingOrderResolver = null;
 
         public event Action<IEntityData> OnInitializedEvent = null;
+        public Action OnDespawnEvent = null;
 
         private float currentDepth = 0f;
 

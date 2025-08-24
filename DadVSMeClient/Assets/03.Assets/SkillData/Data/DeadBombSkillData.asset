@@ -34,8 +34,8 @@ MonoBehaviour:
   skillIcon:
     key: SkillIcon_2
   attackData: {fileID: 11400000, guid: 4d77a75604ed84d8d9ad821222b6d9c0, type: 2}
-  bombRef:
-    key: Bomb
+  effectRef:
+    key: VFX_DeadBomb
   attackRadius: 5
   levelUpIncreaseRate: 2
   references:

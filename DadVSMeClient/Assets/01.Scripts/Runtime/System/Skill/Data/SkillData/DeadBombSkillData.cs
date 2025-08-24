@@ -8,13 +8,13 @@ namespace DadVSMe
     public class DeadBombSkillData : SkillData
     {
         public AttackDataBase attackData;
-        public AddressableAsset<Bomb> bombRef;
+        public AddressableAsset<PoolableEffect> effectRef;
         public float attackRadius;
         public float levelUpIncreaseRate;
         
         public override UnitSkill CreateSkill()
         {
-            return new DeadBombSkill(attackData, bombRef, attackRadius, levelUpIncreaseRate);
+            return new DeadBombSkill(attackData, effectRef, attackRadius, levelUpIncreaseRate);
         }
     }
 }
