@@ -448,6 +448,8 @@ MonoBehaviour:
     lieCompare: 0
     checkDie: 1
     dieCompare: 0
+    checkWeight: 0
+    weight: 0
   attackEffect:
     key: VFX_Impact3
   hitSounds:
@@ -939,6 +941,8 @@ MonoBehaviour:
     lieCompare: 0
     checkDie: 1
     dieCompare: 0
+    checkWeight: 0
+    weight: 0
 --- !u!114 &1440748434197841948
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1554,6 +1558,8 @@ MonoBehaviour:
     lieCompare: 0
     checkDie: 1
     dieCompare: 0
+    checkWeight: 0
+    weight: 0
 --- !u!114 &934078034710955470
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2135,8 +2141,8 @@ GameObject:
   m_Component:
   - component: {fileID: 2438105663902651749}
   - component: {fileID: 2852503922270150948}
-  - component: {fileID: 3542167409933092608}
   - component: {fileID: 2986653746546966270}
+  - component: {fileID: 3542167409933092608}
   m_Layer: 8
   m_Name: '[Tran] Grab'
   m_TagString: Untagged
@@ -2172,19 +2178,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetState: {fileID: 5938353735587452425}
---- !u!114 &3542167409933092608
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2337440370387650618}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7d4ed88261c004507a78b784ea9b062b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isReverse: 1
 --- !u!114 &2986653746546966270
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2199,6 +2192,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isReverse: 0
   grabbableWeight: 100
+--- !u!114 &3542167409933092608
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2337440370387650618}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d4ed88261c004507a78b784ea9b062b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isReverse: 1
 --- !u!1 &2426297144319815459
 GameObject:
   m_ObjectHideFlags: 0
@@ -2454,6 +2460,8 @@ MonoBehaviour:
     lieCompare: 0
     checkDie: 1
     dieCompare: 0
+    checkWeight: 0
+    weight: 0
 --- !u!114 &8900218850363402019
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2617,6 +2625,8 @@ MonoBehaviour:
     lieCompare: 0
     checkDie: 1
     dieCompare: 0
+    checkWeight: 0
+    weight: 0
 --- !u!114 &1799858541551795775
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3585,7 +3595,6 @@ GameObject:
   - component: {fileID: 1867282688267533254}
   - component: {fileID: 5841271864119933664}
   - component: {fileID: 3979151437570143756}
-  - component: {fileID: 4606910030402164145}
   m_Layer: 8
   m_Name: '[Tran] Grab'
   m_TagString: Untagged
@@ -3651,20 +3660,8 @@ MonoBehaviour:
     lieCompare: 0
     checkDie: 1
     dieCompare: 0
---- !u!114 &4606910030402164145
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3565228954010933002}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0b5b0941ebf94717bdf801b97e801ce, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isReverse: 0
-  grabbableWeight: 100
+    checkWeight: 1
+    weight: 100
 --- !u!1 &3711209104930429882
 GameObject:
   m_ObjectHideFlags: 0
@@ -3893,6 +3890,8 @@ MonoBehaviour:
     lieCompare: 0
     checkDie: 1
     dieCompare: 0
+    checkWeight: 0
+    weight: 0
 --- !u!114 &8321866719720642089
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4518,6 +4517,8 @@ MonoBehaviour:
     lieCompare: 1
     checkDie: 1
     dieCompare: 0
+    checkWeight: 0
+    weight: 0
 --- !u!1 &5215947761655926215
 GameObject:
   m_ObjectHideFlags: 0
@@ -4765,6 +4766,8 @@ MonoBehaviour:
     lieCompare: 1
     checkDie: 1
     dieCompare: 0
+    checkWeight: 0
+    weight: 0
 --- !u!1 &5494536511963740923
 GameObject:
   m_ObjectHideFlags: 0
@@ -4878,6 +4881,8 @@ MonoBehaviour:
     lieCompare: 0
     checkDie: 1
     dieCompare: 0
+    checkWeight: 0
+    weight: 0
 --- !u!114 &7704626932355508207
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5287,6 +5292,8 @@ MonoBehaviour:
     lieCompare: 0
     checkDie: 1
     dieCompare: 0
+    checkWeight: 0
+    weight: 0
 --- !u!114 &3950174164250126872
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5988,6 +5995,8 @@ MonoBehaviour:
     lieCompare: 1
     checkDie: 1
     dieCompare: 0
+    checkWeight: 0
+    weight: 0
 --- !u!1 &6667815859395359953
 GameObject:
   m_ObjectHideFlags: 0
@@ -6080,6 +6089,8 @@ MonoBehaviour:
     lieCompare: 1
     checkDie: 1
     dieCompare: 0
+    checkWeight: 0
+    weight: 0
 --- !u!1 &6840288169985064943
 GameObject:
   m_ObjectHideFlags: 0
@@ -6529,6 +6540,8 @@ MonoBehaviour:
     lieCompare: 0
     checkDie: 1
     dieCompare: 0
+    checkWeight: 0
+    weight: 0
 --- !u!114 &4779498475959965093
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6773,6 +6786,8 @@ MonoBehaviour:
     lieCompare: 0
     checkDie: 1
     dieCompare: 0
+    checkWeight: 0
+    weight: 0
 --- !u!1 &7555105741711015732
 GameObject:
   m_ObjectHideFlags: 0
@@ -6960,6 +6975,8 @@ MonoBehaviour:
     lieCompare: 0
     checkDie: 1
     dieCompare: 0
+    checkWeight: 0
+    weight: 0
 --- !u!1 &7642052445702148433
 GameObject:
   m_ObjectHideFlags: 0
@@ -7311,6 +7328,8 @@ MonoBehaviour:
     lieCompare: 0
     checkDie: 1
     dieCompare: 0
+    checkWeight: 0
+    weight: 0
 --- !u!1 &8070469860066932729
 GameObject:
   m_ObjectHideFlags: 0
@@ -7891,6 +7910,8 @@ MonoBehaviour:
     lieCompare: 1
     checkDie: 1
     dieCompare: 0
+    checkWeight: 0
+    weight: 0
 --- !u!114 &2604118612968565064
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8219,6 +8240,8 @@ MonoBehaviour:
     lieCompare: 0
     checkDie: 1
     dieCompare: 0
+    checkWeight: 0
+    weight: 0
 --- !u!114 &4111622745176382284
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8474,6 +8497,8 @@ MonoBehaviour:
     lieCompare: 0
     checkDie: 1
     dieCompare: 0
+    checkWeight: 0
+    weight: 0
 --- !u!1 &8817773452266987267
 GameObject:
   m_ObjectHideFlags: 0
@@ -8611,6 +8636,8 @@ MonoBehaviour:
     lieCompare: 0
     checkDie: 1
     dieCompare: 0
+    checkWeight: 0
+    weight: 0
 --- !u!1 &8823108435394788813
 GameObject:
   m_ObjectHideFlags: 0
@@ -8683,7 +8710,6 @@ GameObject:
   - component: {fileID: 6961806067608511280}
   - component: {fileID: 8659761086460484793}
   - component: {fileID: 3188598358565364875}
-  - component: {fileID: 7506530874696947508}
   m_Layer: 8
   m_Name: '[Tran] Grab'
   m_TagString: Untagged
@@ -8749,20 +8775,8 @@ MonoBehaviour:
     lieCompare: 0
     checkDie: 1
     dieCompare: 0
---- !u!114 &7506530874696947508
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8855939970602083411}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0b5b0941ebf94717bdf801b97e801ce, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isReverse: 0
-  grabbableWeight: 100
+    checkWeight: 1
+    weight: 100
 --- !u!1 &8862820822150054748
 GameObject:
   m_ObjectHideFlags: 0
@@ -8882,6 +8896,8 @@ MonoBehaviour:
     lieCompare: 0
     checkDie: 1
     dieCompare: 0
+    checkWeight: 0
+    weight: 0
 --- !u!114 &5952728668353690025
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9019,6 +9035,8 @@ MonoBehaviour:
     lieCompare: 0
     checkDie: 1
     dieCompare: 0
+    checkWeight: 0
+    weight: 0
   jumpForce: {x: 9, y: 9}
 --- !u!1 &8985770963640614873
 GameObject:
@@ -9144,6 +9162,8 @@ MonoBehaviour:
     lieCompare: 0
     checkDie: 1
     dieCompare: 0
+    checkWeight: 0
+    weight: 0
 --- !u!114 &7593858258407932494
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9696,6 +9716,8 @@ MonoBehaviour:
     lieCompare: 0
     checkDie: 1
     dieCompare: 0
+    checkWeight: 0
+    weight: 0
 --- !u!114 &8737672042268400247
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9924,6 +9946,8 @@ MonoBehaviour:
     lieCompare: 0
     checkDie: 1
     dieCompare: 0
+    checkWeight: 0
+    weight: 0
 --- !u!114 &3456532507328408167
 MonoBehaviour:
   m_ObjectHideFlags: 0

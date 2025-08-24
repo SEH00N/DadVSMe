@@ -42,12 +42,17 @@ namespace DadVSMe.Entities
         // [ConditionalField("checkDie", true, true)]
         public bool dieCompare = false;
 
+        [Space(10f)]
+        public bool checkWeight = false;
+        // [ConditionalFields("checkDie", true, true)]
+        public float weight = 0f;
+
         public void Check(Unit unit, List<Unit> targets, Action<Unit> onMatch) => Check(unit, targets, null, onMatch);
         public void Check(Unit unit, List<Unit> targets, Transform pivot, Action<Unit> onMatch)
         {
-            foreach(Unit target in targets)
+            foreach (Unit target in targets)
             {
-                if(Check(unit, target, pivot) == false)
+                if (Check(unit, target, pivot) == false)
                     continue;
 
                 onMatch?.Invoke(target);
@@ -56,7 +61,7 @@ namespace DadVSMe.Entities
 
         public bool Check(Unit unit, Unit target, Transform pivot = null)
         {
-            if(pivot == null)
+            if (pivot == null)
                 pivot = unit.transform;
 
             CheckUnitState checkUnitState = new CheckUnitState(unit, target, pivot)
@@ -66,7 +71,8 @@ namespace DadVSMe.Entities
                     .CheckStatic(checkStatic, staticCompare)
                     .CheckFloat(checkFloat, floatCompare)
                     .CheckLie(checkLie, lieCompare)
-                    .CheckDie(checkDie, dieCompare);
+                    .CheckDie(checkDie, dieCompare)
+                    .CheckWeight(checkWeight, weight);
 
             return checkUnitState.result;
         }

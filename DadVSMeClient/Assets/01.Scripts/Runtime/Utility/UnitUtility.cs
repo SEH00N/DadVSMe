@@ -1,3 +1,5 @@
+using System;
+using DadVSMe.Enemies;
 using DadVSMe.Entities;
 using UnityEngine;
 
@@ -88,6 +90,16 @@ namespace DadVSMe
                 return this;
 
             result = target.FSMBrain.GetAIData<UnitFSMData>().isDie == dieCompare;
+
+            return this;
+        }
+
+        public CheckUnitState CheckWeight(bool check, float weight)
+        {
+            if(check == false || result == false)
+                return this;
+
+            result = target.GetComponent<Enemy>().Weight <= weight;
 
             return this;
         }
