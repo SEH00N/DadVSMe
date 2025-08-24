@@ -17,8 +17,8 @@ namespace DadVSMe
         {
             skillContainer = new();
 
-            RegistSkill(SkillType.ItemMagnet);
-            RegistSkill(SkillType.GuidedOrb);
+            // RegistSkill(SkillType.ItemMagnet);
+            // RegistSkill(SkillType.GuidedOrb);
             // RegistSkill(SkillType.AttackBlast);
             // RegistSkill(SkillType.FirePunch);
         }
