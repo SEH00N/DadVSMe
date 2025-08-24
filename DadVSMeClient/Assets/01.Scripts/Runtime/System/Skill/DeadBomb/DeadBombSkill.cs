@@ -14,21 +14,24 @@ namespace DadVSMe
     {
         private AttackDataBase attackData;
         private AddressableAsset<PoolableEffect> effectRef;
+        private AddressableAsset<AudioClip> soundRef;
         private float attackRadius;
         private float levelUpIncreaseRate;
 
         Unit attackTarget;
         Unit owner;
 
-        public DeadBombSkill(AttackDataBase attackData, AddressableAsset<PoolableEffect> effectRef,
+        public DeadBombSkill(AttackDataBase attackData, AddressableAsset<PoolableEffect> effectRef, AddressableAsset<AudioClip> soundRef,
             float attackRadius, float levelUpIncreaseRate)
         {
             this.attackData = attackData;
             this.effectRef = effectRef;
             this.attackRadius = attackRadius;
             this.levelUpIncreaseRate = levelUpIncreaseRate;
+            this.soundRef = soundRef;
 
             effectRef.InitializeAsync().Forget();
+            soundRef.InitializeAsync().Forget();
         }
 
         public override void OnRegist(UnitSkillComponent ownerComponent)
@@ -58,8 +61,9 @@ namespace DadVSMe
                     unitHealth.Attack(owner, attackData);
                 }
             }
-
+            
             _ = new PlayEffect(effectRef, spawnPoint, 1);
+            _ = new PlaySound(soundRef);
 
             attackTarget.OnDespawnEvent -= Execute;
         }

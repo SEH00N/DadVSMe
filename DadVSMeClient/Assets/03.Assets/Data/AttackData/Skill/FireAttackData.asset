@@ -10,21 +10,30 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6b891140ae9b8429a90d868b93558bd7, type: 3}
-  m_Name: GuidedOrbAttackData
+  m_Name: FireAttackData
   m_EditorClassIdentifier: 
   damage: 5
   isRangeAttack: 0
   feedbackDatas:
   - attackAttribute: 0
-    hitEffects:
-    - key: VFX_Impact1
-    - key: VFX_Blood1
+    hitEffects: []
     attackSounds: []
     hitSounds:
-    - key: sfx_punch_small_0
-    - key: sfx_punch_small_1
-    - key: sfx_punch_small_2
-    - key: sfx_punch_small_3
+    - key: fire_punch
+    hitText:
+      key: DamageText
+  - attackAttribute: 1
+    hitEffects: []
+    attackSounds: []
+    hitSounds:
+    - key: fire_punch
+    hitText:
+      key: DamageText
+  - attackAttribute: 2
+    hitEffects: []
+    attackSounds: []
+    hitSounds:
+    - key: fire_punch
     hitText:
       key: DamageText
   attackFeedback: 1

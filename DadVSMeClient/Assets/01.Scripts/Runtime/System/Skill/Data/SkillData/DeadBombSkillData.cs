@@ -9,12 +9,13 @@ namespace DadVSMe
     {
         public AttackDataBase attackData;
         public AddressableAsset<PoolableEffect> effectRef;
+        public AddressableAsset<AudioClip> soundRef;
         public float attackRadius;
         public float levelUpIncreaseRate;
         
         public override UnitSkill CreateSkill()
         {
-            return new DeadBombSkill(attackData, effectRef, attackRadius, levelUpIncreaseRate);
+            return new DeadBombSkill(attackData, effectRef, soundRef, attackRadius, levelUpIncreaseRate);
         }
     }
 }

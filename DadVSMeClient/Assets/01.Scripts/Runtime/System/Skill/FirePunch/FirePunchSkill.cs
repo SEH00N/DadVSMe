@@ -16,15 +16,17 @@ namespace DadVSMe
         private AddressableAsset<Fire> firePrefab;
         private float burnTime;
         private float attackDelay;
+        private AttackDataBase attackData;
 
         private Unit owner;
 
-        public FirePunchSkill(float levelUpIncreaseRate, AddressableAsset<Fire> firePrefab, float burnTime, float attackDelay) : base()
+        public FirePunchSkill(AttackDataBase attackData, float levelUpIncreaseRate, AddressableAsset<Fire> firePrefab, float burnTime, float attackDelay) : base()
         {
             this.levelUpIncreaseRate = levelUpIncreaseRate;
             this.firePrefab = firePrefab;
             this.burnTime = burnTime;
             this.attackDelay = attackDelay;
+            this.attackData = attackData;
 
             firePrefab.InitializeAsync().Forget();
         }
@@ -41,7 +43,7 @@ namespace DadVSMe
         private void OnAttackTarget(Unit target, IAttackData attackData)
         {
             Fire fire = PoolManager.Spawn(firePrefab).GetComponent<Fire>();
-            fire.Init(ownerComponent.GetComponent<Unit>(), target, attackData, burnTime, attackDelay);
+            fire.Init(ownerComponent.GetComponent<Unit>(), target, this.attackData, burnTime, attackDelay);
         }
 
         public override void Execute()

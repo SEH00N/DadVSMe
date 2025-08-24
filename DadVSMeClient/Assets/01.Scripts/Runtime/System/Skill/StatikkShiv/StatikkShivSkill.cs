@@ -52,39 +52,10 @@ namespace DadVSMe
 
         public override void Execute()
         {
-            // Collider2D[] cols = Physics2D.OverlapCircleAll(ownerComponent.transform.position, checkRadius);
-
-            // if (cols.Length == 0)
-            //     return;
-
-            // int attackTargetCount = 0;
-            // foreach (var col in cols)
-            // {
-            //     if (col.gameObject == ownerComponent.gameObject)
-            //         continue;
-
-            //     if (col.gameObject.TryGetComponent<Unit>(out Unit unit))
-            //     {
-            //         attackTargetCount++;
-
-            //         StatikkShivLighting statikkShivLighting = PoolManager.Spawn<StatikkShivLighting>(prefab);
-            //         statikkShivLighting.Active(ownerComponent.GetComponent<Unit>(), 3, 10);
-
-            //         if (attackTargetCount == maxAttackTargetNum)
-            //         {
-            //             break;
-            //         }
-            //     }
-            // }
             StatikkShivLighting statikkShivLighting = PoolManager.Spawn<StatikkShivLighting>(prefab);
             DynamicAttackData attackData = new DynamicAttackData(this.attackData);
             attackData.SetDamage(attackData.Damage + (int)(levelUpIncreaseRate * level));
             statikkShivLighting.Active(ownerComponent.GetComponent<Unit>(), maxAttackTargetNum, checkRadius, attackData);
-            
-            // if (attackTargetCount > 0)
-            // {
-            //     _ = new PlaySound(sound);
-            // }
         }
 
         public override void OnUnregist()

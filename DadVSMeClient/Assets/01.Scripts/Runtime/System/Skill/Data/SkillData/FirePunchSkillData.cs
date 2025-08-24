@@ -1,3 +1,4 @@
+using DadVSMe.Entities;
 using H00N.Resources.Addressables;
 using UnityEngine;
 
@@ -11,10 +12,11 @@ namespace DadVSMe
         public AddressableAsset<Fire> firePrefab;
         public float burnTime;
         public float attackDelay;
+        public AttackDataBase attackData;
     
         public override UnitSkill CreateSkill()
         {
-            return new FirePunchSkill(levelUpIncreaseRate, firePrefab, burnTime, attackDelay);
+            return new FirePunchSkill(attackData, levelUpIncreaseRate, firePrefab, burnTime, attackDelay);
         }
     }
 }

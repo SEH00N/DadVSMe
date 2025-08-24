@@ -13,4 +13,18 @@ MonoBehaviour:
   m_Name: StatikkShivLightingbAttackData
   m_EditorClassIdentifier: 
   damage: 5
+  isRangeAttack: 0
+  feedbackDatas:
+  - attackAttribute: 0
+    hitEffects:
+    - key: VFX_Impact1
+    - key: VFX_Blood1
+    attackSounds: []
+    hitSounds:
+    - key: sfx_punch_small_0
+    - key: sfx_punch_small_1
+    - key: sfx_punch_small_2
+    - key: sfx_punch_small_3
+    hitText:
+      key: DamageText
   attackFeedback: 1

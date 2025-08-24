@@ -2,6 +2,7 @@ using System.Collections;
 using System.Threading;
 using Cysharp.Threading.Tasks;
 using DadVSMe.Entities;
+using H00N.AI.FSM;
 using H00N.Resources.Addressables;
 using H00N.Resources.Pools;
 using UnityEngine;
@@ -96,6 +97,9 @@ namespace DadVSMe
             if (collision.gameObject.TryGetComponent<UnitHealth>(out UnitHealth targetHealth))
             {
                 targetHealth.Attack(instigator, attackData);
+                UnitFSMData unitFSMData = instigator.GetComponent<FSMBrain>().GetAIData<UnitFSMData>();
+                _ = new PlayAttackFeedback(attackData, unitFSMData.attackAttribute, targetHealth.transform.position, Vector3.zero, unitFSMData.forwardDirection);
+
             }
 
             // _lifetimeCts?.Cancel();
