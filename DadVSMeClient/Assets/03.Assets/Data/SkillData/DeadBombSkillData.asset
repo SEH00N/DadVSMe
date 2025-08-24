@@ -9,15 +9,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bea1d98c6b26d4e9a80e31b82dd0b3e7, type: 3}
-  m_Name: GuidedOrbSkillData
+  m_Script: {fileID: 11500000, guid: b8339435f5f294facafca17c90927eaa, type: 3}
+  m_Name: DeadBombSkillData
   m_EditorClassIdentifier: 
-  skillType: 4
+  skillType: 9
   skillName:
     m_TableReference:
       m_TableCollectionName: GUID:4b8a0843654704550b752a7cb2d1b194
     m_TableEntryReference:
-      m_KeyId: 1379195150336
+      m_KeyId: 1474607177728
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 0
@@ -26,19 +26,27 @@ MonoBehaviour:
     m_TableReference:
       m_TableCollectionName: GUID:4b8a0843654704550b752a7cb2d1b194
     m_TableEntryReference:
-      m_KeyId: 2098560229376
+      m_KeyId: 2161269268480
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  skillLevelUpDesc:
+    m_TableReference:
+      m_TableCollectionName: GUID:4b8a0843654704550b752a7cb2d1b194
+    m_TableEntryReference:
+      m_KeyId: 392597326520320
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 0
     m_LocalVariables: []
   skillIcon:
-    key: SkillIcon_0
-  prefab:
-    key: GuidedOrb
-  sound:
-    key: GuidedOrbSpawn
-  coolTime: 1
-  levelUpIncreaseRate: 1
+    key: SkillIcon_2
+  attackData: {fileID: 11400000, guid: 4d77a75604ed84d8d9ad821222b6d9c0, type: 2}
+  effectRef:
+    key: VFX_DeadBomb
+  attackRadius: 5
+  levelUpIncreaseRate: 2
   references:
     version: 2
     RefIds: []

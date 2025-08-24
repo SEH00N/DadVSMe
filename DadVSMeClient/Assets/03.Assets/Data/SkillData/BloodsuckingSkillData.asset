@@ -9,15 +9,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0575a8e10fced45989ff2ed6d42e7c5d, type: 3}
-  m_Name: StatikkShivSkillData
+  m_Script: {fileID: 11500000, guid: d7c66ab94339440c783945d28a10f857, type: 3}
+  m_Name: BloodsuckingSkillData
   m_EditorClassIdentifier: 
-  skillType: 2
+  skillType: 7
   skillName:
     m_TableReference:
       m_TableCollectionName: GUID:4b8a0843654704550b752a7cb2d1b194
     m_TableEntryReference:
-      m_KeyId: 1412393066496
+      m_KeyId: 1542139666432
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 0
@@ -26,22 +26,24 @@ MonoBehaviour:
     m_TableReference:
       m_TableCollectionName: GUID:4b8a0843654704550b752a7cb2d1b194
     m_TableEntryReference:
-      m_KeyId: 2152943575040
+      m_KeyId: 2195171827712
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  skillLevelUpDesc:
+    m_TableReference:
+      m_TableCollectionName: GUID:4b8a0843654704550b752a7cb2d1b194
+    m_TableEntryReference:
+      m_KeyId: 392624241369088
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 0
     m_LocalVariables: []
   skillIcon:
-    key: SkillIcon_1
-  prefab:
-    key: StatikkShivLighting
-  sound:
-    key: sfx_explosion_0
-  checkTime: 5
-  targetAttackCount: 3
-  maxAttackTargetNum: 5
-  checkRadius: 5
-  levelUpIncreaseRate: 3
+    key: SkillIcon_5
+  healRatio: 0.5
+  healRatioIncreaseRate: 0.1
   references:
     version: 2
     RefIds: []

@@ -9,15 +9,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e8e5effae11794b5980b50c827fa6d2e, type: 3}
-  m_Name: AttackBlastSkillData
+  m_Script: {fileID: 11500000, guid: 08e5000a75b44492daef8f87ab48517d, type: 3}
+  m_Name: BowlingSkillData
   m_EditorClassIdentifier: 
-  skillType: 1
+  skillType: 10
   skillName:
     m_TableReference:
       m_TableCollectionName: GUID:4b8a0843654704550b752a7cb2d1b194
     m_TableEntryReference:
-      m_KeyId: 1653418745856
+      m_KeyId: 1524028661760
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 0
@@ -26,17 +26,24 @@ MonoBehaviour:
     m_TableReference:
       m_TableCollectionName: GUID:4b8a0843654704550b752a7cb2d1b194
     m_TableEntryReference:
-      m_KeyId: 2296246165504
+      m_KeyId: 2184820285440
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  skillLevelUpDesc:
+    m_TableReference:
+      m_TableCollectionName: GUID:4b8a0843654704550b752a7cb2d1b194
+    m_TableEntryReference:
+      m_KeyId: 392616830033920
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 0
     m_LocalVariables: []
   skillIcon:
-    key: SkillIcon_10
-  prefab:
-    key: AttackBlast
-  attackBlastLifeTime: 0.15
-  levelUpIncreaseRate: 0.2
+    key: SkillIcon_4
+  levelUpIncreaseRate: 10
+  bowlingHitAttackData: {fileID: 11400000, guid: 0ba59c8b1a7c44113832ef80ccf84883, type: 2}
   references:
     version: 2
     RefIds: []
