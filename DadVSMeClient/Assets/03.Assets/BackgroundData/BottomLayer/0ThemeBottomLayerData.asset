@@ -10,7 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f30a6eb110fa4fa4e82765391a2e7283, type: 3}
-  m_Name: 0ThemeFrontLayerData
+  m_Name: 0ThemeBottomLayerData
   m_EditorClassIdentifier: 
   themeIdx: 0
-  _backgroundList: []
+  _backgroundList:
+  - key: 0ThemeBottomLayer_0
+  - key: 0ThemeBottomLayer_0
+  - key: 0ThemeBottomLayer_1
+  - key: 0ThemeBottomLayer_1
+  - key: 0ThemeBottomLayer_2
+  - key: 0ThemeBottomLayer_1
+  - key: 0ThemeBottomLayer_3

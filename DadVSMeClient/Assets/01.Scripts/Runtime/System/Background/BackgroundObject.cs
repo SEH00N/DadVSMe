@@ -1,19 +1,25 @@
+using H00N.Resources.Pools;
 using UnityEngine;
-using UnityEngine.Animations;
 
 namespace DadVSMe.Background
 {
-    public class BackgroundObject : MonoBehaviour
+    public class BackgroundObject : MonoBehaviour, IPoolableBehaviour
     {
+        private PoolReference _poolReference;
+        public PoolReference PoolReference => _poolReference;
+
         [SerializeField] Transform _pivotTransform;
 
         [SerializeField] Transform _socketTransform;
         public Vector2 SocketPosition => _socketTransform.position;
 
-        //[SerializeField] PositionConstraint _positionConstraint;
-
         private int _themeIdx;
         public int ThemeIdx => _themeIdx;
+
+        private void Awake()
+        {
+            _poolReference = GetComponent<PoolReference>();
+        }
 
         public void Initialize(Vector2 spawnPosition, Transform followTransform, int themeIdx)
         {
@@ -25,18 +31,15 @@ namespace DadVSMe.Background
                  transform.position.z
             );
 
-            //Debug.Log($"{gameObject.name} {_pivotTransform.position} {_socketTransform.position}");
-
-            //_positionConstraint.ClearSources();
-
-            //var source = new ConstraintSource { sourceTransform = followTransform, weight = 1 };
-            //_positionConstraint.AddSource(source);
-            //_positionConstraint.translationOffset = ((Vector2)targetPosition - (Vector2)followTransform.position) * (1 / _positionConstraint.weight);
-            //if (gameObject.name.Contains("1"))
-            //    Debug.Break();
-            //_positionConstraint.constraintActive = true;
-
             _themeIdx = themeIdx;
+        }
+
+        public void OnSpawned()
+        {
+        }
+
+        public void OnDespawn()
+        {
         }
     }
 }
