@@ -16,15 +16,17 @@ namespace DadVSMe
         private float originCooltime;
         private int spawnCount;
         private int levelUpIncreaseRate;
+        private AttackDataBase attackData;
 
         public GuidedOrbSkill(AddressableAsset<GuidedOrb> prefab, float cooltime, int levelUpIncreaseRate,
-            AddressableAsset<AudioClip> sound) : base(cooltime)
+            AddressableAsset<AudioClip> sound, AttackDataBase attackData) : base(cooltime)
         {
             prefab.InitializeAsync().Forget();
             sound.InitializeAsync().Forget();
 
             this.prefab = prefab;
             this.sound = sound;
+            this.attackData = attackData;
             this.levelUpIncreaseRate = levelUpIncreaseRate;
             originCooltime = cooltime;
             orbSpawnRadius = 3f;
@@ -37,6 +39,10 @@ namespace DadVSMe
 
             float angle = 360f / spawnCount;
             float currentAngle = 0f;
+
+            DynamicAttackData attackData = new DynamicAttackData(this.attackData);
+            attackData.SetDamage(attackData.Damage + (int)(levelUpIncreaseRate * level));
+
             while (currentAngle < 360f)
             {
                 currentAngle += angle;
@@ -66,7 +72,7 @@ namespace DadVSMe
 
                 GuidedOrb guidedOrb = PoolManager.Spawn<GuidedOrb>(prefab);
                 guidedOrb.transform.position = spawnPoint;
-                guidedOrb.SetInstigator(ownerComponent.GetComponent<Unit>());
+                guidedOrb.SetInstigator(ownerComponent.GetComponent<Unit>(), attackData);
                 guidedOrb.SetTarget(target);
                 guidedOrb.Launch();
             }
@@ -78,7 +84,7 @@ namespace DadVSMe
         {
             base.LevelUp();
 
-            spawnCount += levelUpIncreaseRate;
+            spawnCount += 1;
         }
     }
 }

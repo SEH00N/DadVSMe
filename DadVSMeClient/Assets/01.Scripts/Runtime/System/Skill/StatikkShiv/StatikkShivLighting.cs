@@ -9,9 +9,6 @@ namespace DadVSMe
 {
     public class StatikkShivLighting : MonoBehaviour
     {
-        [SerializeField]
-        private AttackDataBase attackData;
-
         private PoolReference poolReference;
         public LineRenderer lineRenderer;
         public LineRendererAnimator lineRendererAnimator;
@@ -28,7 +25,7 @@ namespace DadVSMe
             lineRendererAnimator = GetComponent<LineRendererAnimator>();
         }
 
-        public async void Active(Unit instigator, int attackNum, float attackRadius)
+        public async void Active(Unit instigator, int attackNum, float attackRadius, IAttackData attackData)
         {
             if (instigator == null)
                 return;

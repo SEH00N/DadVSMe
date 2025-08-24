@@ -11,7 +11,7 @@ namespace DadVSMe
     public class GuidedOrb : MonoBehaviour, IPoolableBehaviour
     {
         [SerializeField]
-        private AttackDataBase attackData;
+        private IAttackData attackData;
 
         private EntityAnimator entityAnimator;
         private PoolReference poolReference;
@@ -49,8 +49,8 @@ namespace DadVSMe
 
             if (target.TryGetComponent<UnitHealth>(out UnitHealth targetHealth))
             {
+                Debug.Log(attackData.Damage);
                 targetHealth.Attack(instigator, attackData);
-
                 Vector3 direction = (target.transform.position - transform.position).normalized;
                 _ = new PlayAttackFeedback(attackData, EAttackAttribute.Normal, transform.position, Vector3.zero, (int)Mathf.Sign(direction.x));
             }
@@ -67,9 +67,10 @@ namespace DadVSMe
             }
         }
 
-        public void SetInstigator(Unit instigator)
+        public void SetInstigator(Unit instigator, IAttackData attackData)
         {
             this.instigator = instigator;
+            this.attackData = attackData;
         }
 
         public void SetTarget(Unit target)

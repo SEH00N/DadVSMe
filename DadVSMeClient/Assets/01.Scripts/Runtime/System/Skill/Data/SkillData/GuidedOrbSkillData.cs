@@ -1,3 +1,4 @@
+using DadVSMe.Entities;
 using H00N.Resources.Addressables;
 using UnityEngine;
 
@@ -10,10 +11,11 @@ namespace DadVSMe
         public AddressableAsset<AudioClip> sound;
         public float coolTime;
         public int levelUpIncreaseRate;
+        public AttackDataBase attackData;
 
         public override UnitSkill CreateSkill()
         {
-            return new GuidedOrbSkill(prefab, coolTime, levelUpIncreaseRate, sound);
+            return new GuidedOrbSkill(prefab, coolTime, levelUpIncreaseRate, sound, attackData);
         }
     }
 }

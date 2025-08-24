@@ -24,7 +24,6 @@ namespace DadVSMe.Entities
 
         public void Attack(Unit attacker, IAttackData attackData)
         {
-            Debug.Log((attackData));
             currentHP -= (int)attackData.Damage;
             onAttackEvent?.Invoke(attacker, attackData);
             OnHPChangedEvent?.Invoke();

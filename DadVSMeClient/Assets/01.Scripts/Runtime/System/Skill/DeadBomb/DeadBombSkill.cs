@@ -53,6 +53,8 @@ namespace DadVSMe
 
                 if (col.gameObject.TryGetComponent<UnitHealth>(out UnitHealth unitHealth))
                 {
+                    DynamicAttackData attackData = new DynamicAttackData(this.attackData);
+                    attackData.SetDamage(attackData.Damage + (int)(levelUpIncreaseRate * level));
                     unitHealth.Attack(owner, attackData);
                 }
             }
@@ -86,13 +88,6 @@ namespace DadVSMe
                     attackTarget.OnDespawnEvent += Execute;
                 }
             }
-        }
-
-        public override void LevelUp()
-        {
-            base.LevelUp();
-
-            attackRadius += levelUpIncreaseRate;
         }
     }
 }

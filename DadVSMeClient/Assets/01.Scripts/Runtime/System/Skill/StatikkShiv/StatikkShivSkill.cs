@@ -22,9 +22,11 @@ namespace DadVSMe
         private bool isChecking;
         private float checkRadius;
         private int levelUpIncreaseRate;
+        private AttackDataBase attackData;
 
         public StatikkShivSkill(AddressableAsset<StatikkShivLighting> prefab, AddressableAsset<AudioClip> sound,
-            float checkTime, int targetAttackCount, int maxAttackTargetNum, float checkRadius, int levelUpIncreaseRate) : base()
+            float checkTime, int targetAttackCount, int maxAttackTargetNum,
+            float checkRadius, int levelUpIncreaseRate, AttackDataBase attackData) : base()
         {
             prefab.InitializeAsync().Forget();
             sound.InitializeAsync().Forget();
@@ -36,6 +38,7 @@ namespace DadVSMe
             this.checkRadius = checkRadius;
             this.levelUpIncreaseRate = levelUpIncreaseRate;
             this.sound = sound;
+            this.attackData = attackData;
             attackCount = 0;
             isChecking = false;
         }
@@ -74,7 +77,9 @@ namespace DadVSMe
             //     }
             // }
             StatikkShivLighting statikkShivLighting = PoolManager.Spawn<StatikkShivLighting>(prefab);
-            statikkShivLighting.Active(ownerComponent.GetComponent<Unit>(), maxAttackTargetNum, checkRadius);
+            DynamicAttackData attackData = new DynamicAttackData(this.attackData);
+            attackData.SetDamage(attackData.Damage + (int)(levelUpIncreaseRate * level));
+            statikkShivLighting.Active(ownerComponent.GetComponent<Unit>(), maxAttackTargetNum, checkRadius, attackData);
             
             // if (attackTargetCount > 0)
             // {
@@ -123,7 +128,7 @@ namespace DadVSMe
         {
             base.LevelUp();
 
-            maxAttackTargetNum += levelUpIncreaseRate;
+            maxAttackTargetNum += 1;
         }
     }
 }

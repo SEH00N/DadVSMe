@@ -47,7 +47,8 @@ MonoBehaviour:
   sound:
     key: GuidedOrbSpawn
   coolTime: 1
-  levelUpIncreaseRate: 1
+  levelUpIncreaseRate: 3
+  attackData: {fileID: 11400000, guid: f0d151216dd084c54829d62ccfbe7b64, type: 2}
   references:
     version: 2
     RefIds: []

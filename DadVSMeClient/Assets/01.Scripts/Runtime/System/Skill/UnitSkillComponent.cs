@@ -18,7 +18,7 @@ namespace DadVSMe
         {
             skillContainer = new();
 
-            RegistSkill(SkillType.FirePunch);
+            RegistSkill(SkillType.GuidedOrb);
         }
 
         public void RegistSkill(SkillType skillType)

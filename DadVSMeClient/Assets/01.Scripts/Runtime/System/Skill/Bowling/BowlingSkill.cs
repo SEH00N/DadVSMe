@@ -69,7 +69,10 @@ namespace DadVSMe
 
             if (col.gameObject.TryGetComponent<UnitHealth>(out UnitHealth health))
             {
-                health.Attack(target as Unit, data.bowlingHitAttackData);
+                DynamicAttackData attackData = new DynamicAttackData(data.bowlingHitAttackData);
+                attackData.SetDamage(attackData.Damage + (int)(data.levelUpIncreaseRate * level));
+
+                health.Attack(target as Unit, attackData);
             }
         }
     }

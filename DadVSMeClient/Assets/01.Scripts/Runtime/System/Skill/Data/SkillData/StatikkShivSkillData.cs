@@ -1,3 +1,4 @@
+using DadVSMe.Entities;
 using H00N.Resources.Addressables;
 using UnityEngine;
 
@@ -13,10 +14,12 @@ namespace DadVSMe
         public int maxAttackTargetNum;
         public float checkRadius;
         public int levelUpIncreaseRate;
+        public AttackDataBase attackData;
 
         public override UnitSkill CreateSkill()
         {
-            return new StatikkShivSkill(prefab, sound, checkTime, targetAttackCount, maxAttackTargetNum, checkRadius, levelUpIncreaseRate);
+            return new StatikkShivSkill(prefab, sound, checkTime, targetAttackCount,
+                maxAttackTargetNum, checkRadius, levelUpIncreaseRate, attackData);
         }
     }
 }

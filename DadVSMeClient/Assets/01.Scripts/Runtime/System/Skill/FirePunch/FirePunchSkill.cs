@@ -61,10 +61,7 @@ namespace DadVSMe
         {
             base.LevelUp();
 
-            Unit owner = ownerComponent.GetComponent<Unit>();
-            UnitStatData ownerStatData = owner.FSMBrain.GetAIData<UnitStatData>();
-            UnitStat AttackPowerMultiplierStat = ownerStatData[EUnitStat.AttackPowerMultiplier];
-            AttackPowerMultiplierStat.RegistAddModifier(levelUpIncreaseRate);
+            burnTime += levelUpIncreaseRate;
         }
     }
 }
