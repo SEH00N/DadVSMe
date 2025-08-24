@@ -18,6 +18,7 @@ namespace DadVSMe.Players.FSM
         [HideInInspector] public bool isComboFailed = false;
 
         [HideInInspector] public int grabAttackCount = 0;
+        public Action<Entity> onGrabbedEntityChanged;
 
         public float maxAngerGauge;
         [HideInInspector] public float currentAngerGauge;

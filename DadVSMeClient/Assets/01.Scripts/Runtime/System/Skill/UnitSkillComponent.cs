@@ -11,16 +11,14 @@ namespace DadVSMe
         public SkillDataContainer SkillDataContainer => skillDataContainer;
 
         private Dictionary<SkillType, UnitSkill> skillContainer;
+        public Dictionary<SkillType, UnitSkill> SkillContainer => skillContainer;
         public event Action<SkillType> OnSkillChangedEvent;
 
         public virtual void Initialize()
         {
             skillContainer = new();
 
-            // RegistSkill(SkillType.ItemMagnet);
-            // RegistSkill(SkillType.GuidedOrb);
-            // RegistSkill(SkillType.AttackBlast);
-            // RegistSkill(SkillType.FirePunch);
+             RegistSkill(SkillType.Bowling);
         }
 
         public void RegistSkill(SkillType skillType)

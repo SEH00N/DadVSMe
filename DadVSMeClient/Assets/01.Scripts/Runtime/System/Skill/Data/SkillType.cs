@@ -14,6 +14,7 @@ namespace DadVSMe
         Bloodsucking,
         ItemMagnet,
         DeadBomb,
+        Bowling,
         
     }
 }

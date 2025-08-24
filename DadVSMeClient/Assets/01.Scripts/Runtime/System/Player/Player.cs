@@ -123,8 +123,10 @@ namespace DadVSMe.Players
             }
         }
 
-        void OnTriggerEnter2D(Collider2D collision)
+        protected override void OnTriggerEnter2D(Collider2D collision)
         {
+            base.OnTriggerEnter2D(collision);
+
             if (collision.gameObject.TryGetComponent<IInteractable>(out IInteractable interactable))
             {
                 //interactable.Interact(this);

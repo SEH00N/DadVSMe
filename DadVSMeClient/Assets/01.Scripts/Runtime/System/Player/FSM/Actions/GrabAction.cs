@@ -23,17 +23,17 @@ namespace DadVSMe.Players.FSM
         {
             base.EnterState();
 
-            if(playerFSMData.grabbedEntity != null)
+            if (playerFSMData.grabbedEntity != null)
                 return;
 
             Unit enemy = unitFSMData.enemies[0];
-            if(enemy.TryGetComponent<Entity>(out Entity entity) == false)
+            if (enemy.TryGetComponent<Entity>(out Entity entity) == false)
             {
                 brain.SetAsDefaultState();
                 return;
             }
 
-            if(entity.TryGetComponent<IGrabbable>(out IGrabbable grabbable) == false)
+            if (entity.TryGetComponent<IGrabbable>(out IGrabbable grabbable) == false)
             {
                 brain.SetAsDefaultState();
                 return;
@@ -50,6 +50,8 @@ namespace DadVSMe.Players.FSM
 
             defaultSortingOrderResolverCollider.enabled = false;
             grabbedSortingOrderResolverCollider.enabled = true;
+
+            playerFSMData.onGrabbedEntityChanged?.Invoke(entity);
         }
     }
 }

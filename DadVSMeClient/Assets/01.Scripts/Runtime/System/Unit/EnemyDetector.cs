@@ -12,22 +12,29 @@ namespace DadVSMe.Entities
 
         private HashSet<int> currentEnemyHashes = new HashSet<int>();
         private UnitFSMData fsmData = null;
+        public Collider2D detectCollision;
 
         public void Initialize()
         {
             fsmData = fsmBrain.GetAIData<UnitFSMData>();
         }
 
+        public void SetActive(bool active)
+        {
+            detectCollision.enabled = active;
+        }
+
         private void Update()
         {
-            fsmData.enemies.Sort((a, b) => {
-                if(a == null && b == null)
+            fsmData.enemies.Sort((a, b) =>
+            {
+                if (a == null && b == null)
                     return 0;
 
-                if(a == null)
+                if (a == null)
                     return 1;
 
-                if(b == null)
+                if (b == null)
                     return -1;
 
                 return fsmBrain.transform.DistanceCompare(a.transform, b.transform);

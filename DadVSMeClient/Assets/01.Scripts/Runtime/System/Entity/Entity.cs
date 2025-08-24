@@ -1,6 +1,7 @@
 using System;
 using H00N.Resources.Pools;
 using UnityEngine;
+using UnityEngine.Events;
 
 namespace DadVSMe.Entities
 {
@@ -22,9 +23,11 @@ namespace DadVSMe.Entities
 
         public bool StaticEntity => staticEntity;
 
+        public UnityEvent<Collider2D> onTriggerEnter;
+
         public void Initialize(IEntityData data)
         {
-            if(staticEntity)
+            if (staticEntity)
                 return;
 
             InitializeInternal(data);
@@ -39,11 +42,11 @@ namespace DadVSMe.Entities
 
         protected virtual void LateUpdate()
         {
-            if(staticEntity)
+            if (staticEntity)
                 return;
 
             float targetDepth = transform.position.y * Z_ORDER_OFFSET;
-            if(currentDepth == targetDepth)
+            if (currentDepth == targetDepth)
                 return;
 
             currentDepth = targetDepth;
@@ -60,6 +63,11 @@ namespace DadVSMe.Entities
         public void RemoveChildSortingOrderResolver(EntitySortingOrderResolver child)
         {
             sortingOrderResolver.RemoveChild(child);
+        }
+
+        protected virtual void OnTriggerEnter2D(Collider2D collision)
+        {
+            onTriggerEnter?.Invoke(collision);
         }
     }
 }
