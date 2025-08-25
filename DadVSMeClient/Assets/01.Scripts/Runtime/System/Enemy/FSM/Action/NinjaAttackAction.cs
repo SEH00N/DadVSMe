@@ -48,7 +48,7 @@ namespace DadVSMe.Enemies.FSM
 
             unitMovement.SetActive(true);
 
-            targetPosition = enemyFSMData.player.transform.position;
+            targetPosition = enemyFSMData.Player.transform.position;
             kickDirection = (targetPosition - (Vector2)brain.transform.position).normalized;
 
             currentTime = 0;
@@ -61,7 +61,7 @@ namespace DadVSMe.Enemies.FSM
             unitMovement.SetMovementVelocity(kickDirection * kickSpeed);
 
             var position = brain.transform.position;
-            var target = enemyFSMData.player;
+            var target = enemyFSMData.Player;
 
             if(Vector2.Distance(position, target.transform.position) < targetThresHold)
             {

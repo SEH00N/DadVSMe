@@ -19,20 +19,10 @@ namespace DadVSMe.Enemies
         [SerializeField] FSMState grabState = null;
         [SerializeField] AddressableAsset<Experience> experiencePrefab;
 
-        [Header("Debug")]
-        [SerializeField] EnemyDataBase enemyData = null;
-
-        private bool skipUpdate = false;
-
         [field: SerializeField]
         public float Weight { get; set; }
 
-        // Debug
-        private void Start()
-        {
-            Initialize(enemyData);
-            fsmBrain.GetAIData<EnemyFSMData>().player = GameObject.FindFirstObjectByType<Player>(); // TODO: Make GameInstance and Get Player Instance from GameInstane
-        }
+        private bool skipUpdate = false;
 
         protected override void InitializeInternal(IEntityData data)
         {

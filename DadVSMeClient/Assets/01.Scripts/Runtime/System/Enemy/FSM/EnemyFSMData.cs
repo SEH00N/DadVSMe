@@ -9,7 +9,19 @@ namespace DadVSMe.Enemies.FSM
         public float patrolMinRange = 10f;
         public float patrolMaxRange = 30f;
 
-        [HideInInspector] public Player player = null;
+        private Player player = null;
+        public Player Player
+        {
+            get {
+                if(player == null)
+                {
+                    if(GameInstance.GameCycle != null)
+                        player = GameInstance.GameCycle.MainPlayer;
+                }
+
+                return player;
+            }
+        }
 
         public IAIData Initialize()
         {

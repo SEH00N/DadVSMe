@@ -38,8 +38,8 @@ namespace DadVSMe.Enemies.FSM
 
             updateTimer = 0f;
 
-            Vector2 direction = (Vector2)(enemyFSMData.player.transform.position - brain.transform.position);
-            npcMovement.SetDestination(enemyFSMData.player.transform.position + new Vector3(xPadding * -Mathf.Sign(direction.x), 0f, 0f));
+            Vector2 direction = (Vector2)(enemyFSMData.Player.transform.position - brain.transform.position);
+            npcMovement.SetDestination(enemyFSMData.Player.transform.position + new Vector3(xPadding * -Mathf.Sign(direction.x), 0f, 0f));
         }
 
         public override void ExitState()

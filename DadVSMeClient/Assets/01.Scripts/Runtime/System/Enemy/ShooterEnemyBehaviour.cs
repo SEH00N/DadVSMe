@@ -46,7 +46,7 @@ namespace DadVSMe.Enemies
                 return;
 
             shootTimer = 0f;
-            animal.Fire(enemyFSMData.player.transform.position);
+            animal.Fire(enemyFSMData.Player.transform.position);
         }
 
         private void InitializeInternal(IEntityData data)

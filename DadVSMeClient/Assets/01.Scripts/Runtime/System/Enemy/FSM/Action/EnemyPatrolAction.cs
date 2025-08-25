@@ -23,7 +23,7 @@ namespace DadVSMe.Enemies.FSM
             base.EnterState();
             npcMovement.SetActive(true);
 
-            Vector2 targetPosition = enemyFSMData.player.transform.position;
+            Vector2 targetPosition = enemyFSMData.Player.transform.position;
             Vector2 currentPosition = brain.transform.position;
             
             Vector3 direction = currentPosition - targetPosition;

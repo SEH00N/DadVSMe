@@ -16,7 +16,7 @@ namespace DadVSMe.Enemies.FSM
 
         public override void EnterState()
         {
-            int forwardDirection = enemyFSMData.player.transform.position.x > brain.transform.position.x ? 1 : -1;
+            int forwardDirection = enemyFSMData.Player.transform.position.x > brain.transform.position.x ? 1 : -1;
             unitFSMData.forwardDirection = forwardDirection;
 
             float currentLossyScaleX = brain.transform.lossyScale.x;

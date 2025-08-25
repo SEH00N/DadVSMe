@@ -2,7 +2,7 @@ using Cysharp.Threading.Tasks;
 using DadVSMe.Players;
 using UnityEngine;
 
-namespace DadVSMe
+namespace DadVSMe.GameCycles
 {
     public class GameCycle : MonoBehaviour
     {
