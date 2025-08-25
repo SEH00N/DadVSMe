@@ -40,6 +40,7 @@ namespace DadVSMe.UI.Skills
 
         public async void OnTouchThis()
         {
+            Debug.Log("ASd");
             for(int i = 0; i < levelObjectList.Count; i++)
             {
                 if(levelObjectList[i].activeSelf)

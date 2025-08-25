@@ -20,6 +20,7 @@ namespace DadVSMe.GameCycles
             {
                 public AddressableAsset<Unit> prefab;
                 public AddressableAsset<EnemyDataBase> enemyData;
+                public AddressableAsset<UnitStatData> statData;
                 public Vector2 offset;
             }
 
@@ -43,6 +44,7 @@ namespace DadVSMe.GameCycles
                 {
                     spawnTable.prefab.InitializeAsync().Forget();
                     spawnTable.enemyData.InitializeAsync().Forget();
+                    spawnTable.statData.InitializeAsync().Forget();
                 }
             }
 
@@ -115,6 +117,7 @@ namespace DadVSMe.GameCycles
                 Vector3 spawnPosition = spawnInfo.spawnPoint.position + (Vector3)spawnTable.offset;
                 Unit enemy = PoolManager.Spawn<Unit>(spawnTable.prefab.Key, GameInstance.GameCycle.transform);
                 enemy.transform.position = spawnPosition;
+                enemy.FSMBrain.SetAIData(spawnTable.statData.Asset);
                 enemy.Initialize(spawnTable.enemyData.Asset);
             }
         }

@@ -1,10 +1,11 @@
 using UnityEngine;
 using UnityEditor;
 using UnityEditor.SceneManagement;
-using UnityEngine.SceneManagement;
 
 namespace DadVSMe.Editors
 {
+    using SceneManager = UnityEngine.SceneManagement.SceneManager;
+
     [InitializeOnLoad]
     public class PlayModeSceneSelectorEditor
     {

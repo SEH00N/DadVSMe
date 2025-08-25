@@ -1,0 +1,59 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: UnitStatDataAssets
+  m_EditorClassIdentifier: 
+  m_GroupName: UnitStatDataAssets
+  m_GUID: a2ce7d9a5c8c64cbe8e63f9f19fca782
+  m_SerializeEntries:
+  - m_GUID: 53794ad0aab74463b9ff353ac996848c
+    m_Address: JamesStatData
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 57b7814c0cf284fa39d90bc04907cbba
+    m_Address: KidStatData
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: badb35a2f38624a94b0efc1b643f84d6
+    m_Address: NinjaStatData
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: bb3ba3bb960f447ceb0ff1b358ff6110
+    m_Address: PlayerStatData
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: cf1598307d18f4482be2593124e17d17
+    m_Address: BullyStatData
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: de1ca4e4a164547529de5c7474486866
+    m_Address: SunchipsStatData
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: cfd052ceeb2354823b4fa30d195a2e8a, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: 86d025e76211f4408adb06300a78accf, type: 2}
+    - {fileID: 11400000, guid: 4a3d26caa28e6458aa19381f1421eaef, type: 2}
