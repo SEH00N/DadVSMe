@@ -23,9 +23,6 @@ namespace DadVSMe
             effectAudioPlayTimeBuffer = new Dictionary<string, float>();
             base.Initialize(audioMixer);
             InitializeVolume();
-
-            AudioSettings.OnAudioConfigurationChanged -= OnAudioConfigurationChanged;
-            AudioSettings.OnAudioConfigurationChanged += OnAudioConfigurationChanged;
         }
 
         public void Release()
@@ -43,13 +40,6 @@ namespace DadVSMe
             SetVolume(EAudioChannel.Master, GameSettings.MasterVolume);
             SetVolume(EAudioChannel.BGM, GameSettings.BGMVolume);
             SetVolume(EAudioChannel.SFX, GameSettings.SFXVolume);
-        }
-
-        private void OnAudioConfigurationChanged(bool deviceWasChanged)
-        {
-            InitializeVolume();
-            PauseBGM(true);
-            ResumeBGM(true);
         }
 
         public void PlayBGM(BGMAudioLibrary bgmLibrary, bool immediately = false, bool loadCache = true) 
