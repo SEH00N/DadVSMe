@@ -41,7 +41,7 @@ namespace DadVSMe.Inputs
             return inputReaders[inputReaderType] as TInputReader;
         }
 
-        public static void ChangeInput<TInputReader>() where TInputReader : InputReaderBase, new()
+        public static void EnableInput<TInputReader>() where TInputReader : InputReaderBase, new()
         {
             Type inputReaderType = typeof(TInputReader);
             if (inputReaders.TryGetValue(inputReaderType, out InputReaderBase inputReader) == false)
@@ -60,6 +60,14 @@ namespace DadVSMe.Inputs
             
             currentInputReaderType = inputReaderType;
             inputReader.GetInputActionMap().Enable();
+        }
+
+        public static void DisableInput()
+        {
+            if(currentInputReaderType != null)
+                inputReaders[currentInputReaderType].GetInputActionMap().Disable();
+
+            currentInputReaderType = null;
         }
 
         public static void Update()

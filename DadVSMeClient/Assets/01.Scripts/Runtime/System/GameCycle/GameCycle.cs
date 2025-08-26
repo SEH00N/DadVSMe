@@ -24,6 +24,8 @@ namespace DadVSMe.GameCycles
         [SerializeField] Transform endLine = null;
         public Transform EndLine => endLine;
 
+        public bool IsPaused { get; private set; } = false;
+
         // Debug
         private void Start()
         {
@@ -35,6 +37,16 @@ namespace DadVSMe.GameCycles
             deadline.Initialize();
             MainPlayer.Initialize(new PlayerEntityData());
             return UniTask.CompletedTask;
+        }
+
+        public void Pause()
+        {
+            IsPaused = true;
+        }
+
+        public void Resume()
+        {
+            IsPaused = false;
         }
     }
 }

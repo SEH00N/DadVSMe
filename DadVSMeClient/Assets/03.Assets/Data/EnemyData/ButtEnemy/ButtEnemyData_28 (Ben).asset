@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7dc4ce6e2c58940049de4e3404f0d174, type: 3}
+  m_Name: ButtEnemyData_28 (Ben)
+  m_EditorClassIdentifier: 
+  hatSprite: {fileID: -445838098555000278, guid: 6e0cb63023a864f8a9896751a7ad3f25, type: 3}
+  clothesSprite: {fileID: 8318527393105034495, guid: 6219640001d114a1d86cbc535b17c0a5, type: 3}
+  useBodyColorOverride: 1
+  bodyColorOverride: {r: 0.7490196, g: 0.6117647, b: 0.5372549, a: 1}
+  buttCooltime: 1

@@ -30,13 +30,14 @@ namespace DadVSMe
             PoolManager.Initialize(transform);
             SceneManager.Initialize();
             InputManager.Initialize();
+            TimeManager.Initialize();
 
             // Game Manager Initialize
             gameObject.GetComponent<AudioManager>().Initialize();
 
             // Game Initialize
             Application.targetFrameRate = 60;
-            InputManager.ChangeInput<PlayerInputReader>();
+            InputManager.EnableInput<PlayerInputReader>();
 
             return UniTask.CompletedTask;
         }
@@ -45,6 +46,7 @@ namespace DadVSMe
         {
             AudioManager.Instance.Release();
 
+            TimeManager.Release();
             InputManager.Release();
             SceneManager.Release();
             PoolManager.Release();

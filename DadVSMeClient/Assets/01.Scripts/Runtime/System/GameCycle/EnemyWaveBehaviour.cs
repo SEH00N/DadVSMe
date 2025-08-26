@@ -46,10 +46,9 @@ namespace DadVSMe.GameCycles
             spawnInfoQueue = new List<SpawnInfo>();
         }
 
-        protected override void OnEnable()
+        protected override void PreOnEnable()
         {
-            base.OnEnable();
-
+            base.PreOnEnable();
             spawnInfoQueue.Clear();
             spawnInfoQueue.AddRange(spawnInfoList);
         }

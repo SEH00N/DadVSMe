@@ -14,7 +14,7 @@ namespace DadVSMe
         public override async void Execute(DamageTextUIHandleParameter handleParameter)
         {
             AddressableAsset<DamageText> textRef =
-                handleParameter.attackData.GetFeedbackData(handleParameter.attackAttribute).hitText;
+                handleParameter.attackData.GetFeedbackData(handleParameter.attackAttribute)?.hitText;
 
             if (textRef == null)
                 return;

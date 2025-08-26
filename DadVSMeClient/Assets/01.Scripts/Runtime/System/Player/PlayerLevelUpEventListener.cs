@@ -19,8 +19,11 @@ namespace DadVSMe.Players
             skillSelectPopupUIPrefab.InitializeAsync().Forget();
         }
 
-        public void OnLevelUp(int _)
+        public async void OnLevelUp(int _)
         {
+            if(GameInstance.GameCycle.IsPaused)
+                await UniTask.WaitUntil(() => GameInstance.GameCycle.IsPaused == false);
+
             SkillSelectPopupUI skillSelectPopupUI = PoolManager.Spawn<SkillSelectPopupUI>(skillSelectPopupUIPrefab, GameInstance.MainPopupFrame);
             skillSelectPopupUI.StretchRect();
             skillSelectPopupUI.Initialize(playerSkillComponent, GetAvailableSkillTypes(playerSkillComponent), this);

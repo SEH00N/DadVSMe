@@ -10,9 +10,35 @@ namespace DadVSMe.GameCycles
         private const float UDPATE_INTERVAL = 0.5f;
 
         private CancellationTokenSource cancellationTokenSource = new CancellationTokenSource();
-        protected CancellationToken CancellationToken => cancellationTokenSource?.Token ?? CancellationToken.None;
 
-        protected virtual void OnEnable()
+        protected virtual void PreOnEnable() { }
+        protected virtual void PostOnEnable() { }
+        private void OnEnable()
+        {
+            PreOnEnable();
+
+            StartUpdateLoop();
+            
+            PostOnEnable();
+        }
+
+        protected virtual void PreOnDisable() { }
+        protected virtual void PostOnDisable() { }
+        protected virtual void OnDisable()
+        {
+            PreOnDisable();
+
+            if (cancellationTokenSource != null)
+            {
+                cancellationTokenSource.Cancel();
+                cancellationTokenSource.Dispose();
+                cancellationTokenSource = null;
+            }
+
+            PostOnDisable();
+        }
+
+        private async void StartUpdateLoop()
         {
             if (cancellationTokenSource != null)
             {
@@ -23,38 +49,26 @@ namespace DadVSMe.GameCycles
 
             cancellationTokenSource = CancellationTokenSource.CreateLinkedTokenSource(destroyCancellationToken);
 
-            UpdateLoop();
-        }
+            await UpdateLoop(cancellationTokenSource.Token);
 
-        protected virtual void OnDisable()
-        {
-            if (cancellationTokenSource != null)
-            {
-                cancellationTokenSource.Cancel();
-                cancellationTokenSource.Dispose();
-                cancellationTokenSource = null;
-            }
+            cancellationTokenSource?.Dispose();
+            cancellationTokenSource = null;
         }
 
         protected abstract bool OnUpdate();
-        private async void UpdateLoop()
+        private async UniTask UpdateLoop(CancellationToken cancellationToken)
         {
             try {
-                while (CancellationToken != CancellationToken.None && CancellationToken.IsCancellationRequested == false)
+                while (cancellationToken.IsCancellationRequested == false)
                 {
                     bool isEnd = OnUpdate();
                     if(isEnd)
                         break;
 
-                    await UniTask.Delay(TimeSpan.FromSeconds(UDPATE_INTERVAL), cancellationToken: CancellationToken);
+                    await UniTask.Delay(TimeSpan.FromSeconds(UDPATE_INTERVAL), cancellationToken: cancellationToken);
                 }
             }
             catch (OperationCanceledException) { }
-            finally
-            {
-                cancellationTokenSource?.Dispose();
-                cancellationTokenSource = null;
-            }
         }
     }
 }

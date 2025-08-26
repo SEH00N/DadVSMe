@@ -1,6 +1,7 @@
 using Cysharp.Threading.Tasks;
 using DadVSMe.Enemies;
 using DadVSMe.Entities;
+using DadVSMe.Inputs;
 using H00N.Resources.Addressables;
 using H00N.Resources.Pools;
 using Unity.Cinemachine;
@@ -10,15 +11,17 @@ namespace DadVSMe.GameCycles
 {
     public class BossWaveBehaviour : WaveBehaviour
     {
-        private const float BOSS_SPAWN_ZOOM_TIME = 3f;
-        private const float BOSS_SPAWN_ZOOM_TIME_SCALE = 0.25f;
-        private const float BOSS_SPAWN_BLEND_TIME = 1.2f;
+        private static readonly Vector2 BOSS_DEAD_CAMERA_OFFSET = new Vector2(0f, 1f);
 
-        private const float BOSS_DEAD_ZOOM_TIME = 3f;
-        private const float BOSS_DEAD_ZOOM_TIME_SCALE = 0.25f;
-        private const float BOSS_DEAD_BLEND_TIME = 2.2f;
+        /*private const*/ [SerializeField] float BOSS_SPAWN_ZOOM_TIME = 3f;
+        /*private const*/ [SerializeField] float BOSS_SPAWN_ZOOM_TIME_SCALE = 0.25f;
+        /*private const*/ [SerializeField] float BOSS_SPAWN_BLEND_TIME = 1.2f;
 
-        private const float BOSS_WAVE_BLEND_TIME = 2f;
+        /*private const*/ [SerializeField] float BOSS_DEAD_ZOOM_TIME = 3f;
+        /*private const*/ [SerializeField] float BOSS_DEAD_ZOOM_TIME_SCALE = 0.25f;
+        /*private const*/ [SerializeField] float BOSS_DEAD_BLEND_TIME = 2.2f;
+
+        /*private const*/ [SerializeField] float BOSS_WAVE_BLEND_TIME = 2f;
 
         [Header("Options")]
         [SerializeField] GameObject bossWaveBlockObject = null;
@@ -93,7 +96,7 @@ namespace DadVSMe.GameCycles
             bossUnit.SetHold(true);
 
             // Play Camera Trnasitioning
-            Time.timeScale = BOSS_SPAWN_ZOOM_TIME_SCALE;
+            TimeManager.SetTimeScale(BOSS_SPAWN_ZOOM_TIME_SCALE, true, 0.5f);
             _ = new ChangeCinemachineCamera(bossSpawnCinemachineCamera, BOSS_SPAWN_BLEND_TIME);
 
             await UniTask.WaitForSeconds(BOSS_SPAWN_ZOOM_TIME, ignoreTimeScale: true);
@@ -102,7 +105,7 @@ namespace DadVSMe.GameCycles
             // should be awaiting
 
             // Release Camera
-            Time.timeScale = GameDefine.DEFAULT_TIME_SCALE;
+            TimeManager.SetTimeScale(GameDefine.DEFAULT_TIME_SCALE, true, 0.5f);
             _ = new ChangeCinemachineCamera(bossWaveCinemachineCamera, BOSS_WAVE_BLEND_TIME);
             bossWaveCinemachineCamera.Follow = GameInstance.CameraLookTransform;
 
@@ -124,22 +127,28 @@ namespace DadVSMe.GameCycles
 
         private async void HandleBossDead()
         {
+            GameInstance.GameCycle.Pause();
+
             bossWaveBlockObject.SetActive(false);
 
             // Set Player Hold
-            GameInstance.GameCycle.MainPlayer.SetHold(true);
+            InputManager.DisableInput();
 
             // Play Camera Trnasitioning
-            Time.timeScale = BOSS_DEAD_ZOOM_TIME_SCALE;
-            bossDeadCinemachineCamera.Follow.transform.position = bossUnit.transform.position;
+            TimeManager.SetTimeScale(BOSS_DEAD_ZOOM_TIME_SCALE, true, 0.5f);
+            bossDeadCinemachineCamera.Follow = bossUnit.transform;
             _ = new ChangeCinemachineCamera(bossDeadCinemachineCamera, BOSS_DEAD_BLEND_TIME);
 
             bossUnit = null;
 
             await UniTask.WaitForSeconds(BOSS_DEAD_ZOOM_TIME, ignoreTimeScale: true);
 
-            Time.timeScale = GameDefine.DEFAULT_TIME_SCALE;
+            TimeManager.SetTimeScale(GameDefine.DEFAULT_TIME_SCALE, true, 0.5f);
             await GameInstance.GameCycle.Deadline.PlayBossClearDirecting();
+
+            InputManager.EnableInput<PlayerInputReader>();
+
+            GameInstance.GameCycle.Resume();
         }
 
         #if UNITY_EDITOR

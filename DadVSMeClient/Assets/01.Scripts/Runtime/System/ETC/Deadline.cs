@@ -41,16 +41,17 @@ namespace DadVSMe
 
             // Play Dad Springing Up Animation
 
-            // Temp
-            await UniTask.Delay(TimeSpan.FromSeconds(1.5f));
+            // Release Camera
+            _ = new ChangeCinemachineCamera(GameInstance.GameCycle.MainCinemachineCamera, 0.5f);
+
+            await UniTask.Delay(TimeSpan.FromSeconds(1f), ignoreTimeScale: true);
 
             // Player Juggling
             GameInstance.GameCycle.MainPlayer.UnitHealth.Attack(this, deadlineJuggleAttackData);
 
-            // Release Camera
-            _ = new ChangeCinemachineCamera(GameInstance.GameCycle.MainCinemachineCamera);
-
             // Go! Text
+
+            await UniTask.Delay(TimeSpan.FromSeconds(2f), ignoreTimeScale: true);
         }
     }
 }
