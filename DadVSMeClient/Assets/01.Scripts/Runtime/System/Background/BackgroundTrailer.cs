@@ -51,7 +51,6 @@ namespace DadVSMe.Background
             _latestDespawnedThemeIdx = _currentThemeData.themeIdx;
 
             await SpawnBackground(_prefabContainer.Dequeue(), _startTransform.position);
-            Debug.Log($"{GetInstanceID()} {_prefabContainer.Count}");
             var spawnedBG = _runTimeBackgroundContainer[0];
             await SpawnBackground(_prefabContainer.Dequeue(), spawnedBG.SocketPosition);
 
