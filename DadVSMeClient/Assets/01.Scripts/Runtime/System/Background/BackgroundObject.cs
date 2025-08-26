@@ -28,7 +28,7 @@ namespace DadVSMe.Background
             (
                  transform.position.x + delta.x,
                  transform.position.y + delta.y,
-                 transform.position.z
+                 transform.parent.position.z
             );
 
             _themeIdx = themeIdx;
