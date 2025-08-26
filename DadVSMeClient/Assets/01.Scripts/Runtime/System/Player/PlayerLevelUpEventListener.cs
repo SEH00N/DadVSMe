@@ -19,6 +19,9 @@ namespace DadVSMe.Players
             skillSelectPopupUIPrefab.InitializeAsync().Forget();
         }
 
+        [ContextMenu("Level up")]
+        public void OnLevelUp() => OnLevelUp(0);
+
         public async void OnLevelUp(int _)
         {
             if(GameInstance.GameCycle.IsPaused)

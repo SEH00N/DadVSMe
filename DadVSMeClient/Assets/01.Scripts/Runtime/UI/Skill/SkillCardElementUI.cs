@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using Cysharp.Threading.Tasks;
 using DadVSMe.Localizations;
+using DG.Tweening;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -15,6 +16,14 @@ namespace DadVSMe.UI.Skills
             void OnSelectCard(SkillData skillData);
         }
 
+        // Animation Value
+        private const int APPEAR_DELAY_FRAME = 8;
+        private const float EXAGGERATE_TIME = 0.3f;
+        private const float EXAGGERATE_SCALE_VALUE = 1.1f;
+        private const float EXAGGERATE_MAINTAIN_TIME = 0.1f;
+        private const float EXAGGERATE_EXIT_TIME = 0.4f;
+        private const int EXAGGERATE_ROTATION_VALUE = 10;
+
         private const float TRANSITION_TIME = 0.75f;
         private const string BLOCK_KEY = "SkillCardElementUI";
 
@@ -25,7 +34,7 @@ namespace DadVSMe.UI.Skills
 
         private SkillData skillData = null;
 
-        public void Initialize(SkillData skillData, int currentLevel, ICallback callback)
+        public async UniTask Initialize(SkillData skillData, int currentLevel, ICallback callback, int index)
         {
             base.Initialize(callback);
             this.skillData = skillData;
@@ -36,11 +45,43 @@ namespace DadVSMe.UI.Skills
 
             for(int i = 0; i < levelObjectList.Count; i++)
                 levelObjectList[i].SetActive(i < currentLevel);
+
+            // UI Animation
+            transform.localScale = Vector3.zero;
+            transform.rotation = Quaternion.identity;
+
+            await UniTask.DelayFrame(APPEAR_DELAY_FRAME * index, PlayerLoopTiming.Update);
+            PlayAppearAnimation().Forget();
+        }
+
+        private async UniTask PlayAppearAnimation()
+        {
+            Debug.Log($"{transform.localScale} {transform.rotation}");
+            transform.DOKill();
+
+            _ = transform.DOScale(Vector3.one * EXAGGERATE_SCALE_VALUE, EXAGGERATE_TIME)
+                         .SetUpdate(true);
+            _ = transform.DORotate(new Vector3(0, 0, EXAGGERATE_ROTATION_VALUE), EXAGGERATE_TIME)
+                         .SetUpdate(true);
+
+            await UniTask.Delay(
+                TimeSpan.FromSeconds(EXAGGERATE_TIME + EXAGGERATE_MAINTAIN_TIME),
+                DelayType.UnscaledDeltaTime, PlayerLoopTiming.Update);
+
+            _ = transform.DOScale(Vector3.one, EXAGGERATE_EXIT_TIME)
+                         .SetEase(Ease.OutBack)
+                         .SetUpdate(true);
+            await transform.DORotate(-Vector3.one * EXAGGERATE_SCALE_VALUE / 2, EXAGGERATE_EXIT_TIME / 2)
+                         .SetEase(Ease.OutBack)
+                         .SetUpdate(true);
+
+            _ = transform.DORotate(Vector3.zero, EXAGGERATE_EXIT_TIME / 2)
+                         .SetEase(Ease.OutBack)
+                         .SetUpdate(true);
         }
 
         public async void OnTouchThis()
         {
-            Debug.Log("ASd");
             for(int i = 0; i < levelObjectList.Count; i++)
             {
                 if(levelObjectList[i].activeSelf)

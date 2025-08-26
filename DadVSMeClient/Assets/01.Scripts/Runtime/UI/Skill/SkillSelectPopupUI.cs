@@ -1,3 +1,4 @@
+using Cysharp.Threading.Tasks;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -31,7 +32,7 @@ namespace DadVSMe.UI.Skills
                 SkillType skillType = skillList[i];
                 SkillData skillData = skillComponent.SkillDataContainer.GetSkillData(skillType);
                 UnitSkill unitSkill = skillComponent.GetSkill(skillType);
-                elementUI.Initialize(skillData, unitSkill == null ? 0 : unitSkill.Level, this);
+                elementUI.Initialize(skillData, unitSkill == null ? 0 : unitSkill.Level, this, i).Forget();
             }
         }
 
