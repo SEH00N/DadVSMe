@@ -14,13 +14,6 @@ namespace DadVSMe.UI.HUD
         [SerializeField] SkillInfoUI skillInfoUI = null;
         [SerializeField] GameProgressUI gameProgressUI = null;
 
-        // Debug
-        private async void Start()
-        {
-            await UniTask.Yield(cancellationToken: destroyCancellationToken);
-            Initialize();
-        }
-
         public void Initialize()
         {
             GameCycle gameCycle = GameInstance.GameCycle;

@@ -1,5 +1,6 @@
 using Cysharp.Threading.Tasks;
 using DadVSMe.Players;
+using DadVSMe.UI.HUD;
 using Unity.Cinemachine;
 using UnityEngine;
 
@@ -24,6 +25,9 @@ namespace DadVSMe.GameCycles
         [SerializeField] Transform endLine = null;
         public Transform EndLine => endLine;
 
+        [Space(10f)]
+        [SerializeField] HUDUI hudUI = null;
+
         public bool IsPaused { get; private set; } = false;
 
         // Debug
@@ -36,6 +40,7 @@ namespace DadVSMe.GameCycles
         {
             deadline.Initialize();
             MainPlayer.Initialize(new PlayerEntityData());
+            hudUI.Initialize();
             return UniTask.CompletedTask;
         }
 
