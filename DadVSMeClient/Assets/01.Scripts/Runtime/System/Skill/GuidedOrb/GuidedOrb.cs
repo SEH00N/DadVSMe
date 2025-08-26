@@ -66,6 +66,8 @@ namespace DadVSMe
                 DespawnInternal();
                 return;
             }
+
+            transform.up = (target.transform.position - transform.position).normalized;
         }
 
         public void SetInstigator(Unit instigator, IAttackData attackData)

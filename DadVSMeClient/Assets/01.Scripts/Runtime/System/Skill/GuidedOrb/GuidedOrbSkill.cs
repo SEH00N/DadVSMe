@@ -60,11 +60,15 @@ namespace DadVSMe
                     if (col.gameObject == ownerComponent.gameObject)
                         continue;
 
-                    if (col.gameObject.TryGetComponent<Unit>(out Unit unit))
-                    {
-                        target = unit;
-                        break;
-                    }
+                    if (col.gameObject.TryGetComponent<Unit>(out Unit unit) == false)
+                        continue;
+                    
+                    // Do not targeting grabbed or floated enemy
+                    if(unit.StaticEntity)
+                        continue;
+
+                    target = unit;
+                    break;
                 }
 
                 if (target == null)
