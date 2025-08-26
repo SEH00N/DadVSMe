@@ -27,6 +27,7 @@ namespace DadVSMe.GameCycles
 
         [Space(10f)]
         [SerializeField] HUDUI hudUI = null;
+        public HUDUI HUDUI => hudUI;
 
         public bool IsPaused { get; private set; } = false;
         public bool IsBossClearDirecting { get; private set; } = false;

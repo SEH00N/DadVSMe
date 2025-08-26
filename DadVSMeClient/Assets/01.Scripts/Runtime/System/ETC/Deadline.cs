@@ -85,9 +85,10 @@ namespace DadVSMe
             await UniTask.Delay(TimeSpan.FromSeconds(BOSS_CLEAR_DIRECTING_JUMP_TRIGGER_TIME_FREEZE_DURATION), ignoreTimeScale: true);
             TimeManager.SetTimeScale(GameDefine.DEFAULT_TIME_SCALE, true);
 
-            // Go! Text
-
             await UniTask.Delay(TimeSpan.FromSeconds(BOSS_CLEAR_DIRECTING_FINISHING_DURATION), ignoreTimeScale: true);
+
+            // Go! Text
+            GameInstance.GameCycle.HUDUI.ActiveGoPopupUI();
         }
     }
 }

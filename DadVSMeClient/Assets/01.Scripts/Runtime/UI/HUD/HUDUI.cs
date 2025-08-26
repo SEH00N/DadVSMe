@@ -13,6 +13,7 @@ namespace DadVSMe.UI.HUD
         [SerializeField] EXPBarUI expBarUI = null;
         [SerializeField] SkillInfoUI skillInfoUI = null;
         [SerializeField] GameProgressUI gameProgressUI = null;
+        [SerializeField] AnimationUI goPopupUI = null;
 
         public void Initialize()
         {
@@ -23,6 +24,11 @@ namespace DadVSMe.UI.HUD
             expBarUI.Initialize(player);
             skillInfoUI.Initialize(player.GetComponent<UnitSkillComponent>());
             gameProgressUI.Initialize(gameCycle.StartLine, gameCycle.EndLine, gameCycle.Deadline.transform, player.transform);
+        }
+
+        public void ActiveGoPopupUI()
+        {
+            goPopupUI.gameObject.SetActive(true);
         }
     }
 }
