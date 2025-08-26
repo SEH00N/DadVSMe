@@ -11,17 +11,15 @@ namespace DadVSMe.GameCycles
 {
     public class BossWaveBehaviour : WaveBehaviour
     {
-        private static readonly Vector2 BOSS_DEAD_CAMERA_OFFSET = new Vector2(0f, 1f);
+        private const float BOSS_SPAWN_ZOOM_TIME = 3f;
+        private const float BOSS_SPAWN_ZOOM_TIME_SCALE = 0.2f;
+        private const float BOSS_SPAWN_BLEND_TIME = 1.3f;
 
-        /*private const*/ [SerializeField] float BOSS_SPAWN_ZOOM_TIME = 3f;
-        /*private const*/ [SerializeField] float BOSS_SPAWN_ZOOM_TIME_SCALE = 0.25f;
-        /*private const*/ [SerializeField] float BOSS_SPAWN_BLEND_TIME = 1.2f;
+        private const float BOSS_DEAD_ZOOM_TIME = 2.5f;
+        private const float BOSS_DEAD_ZOOM_TIME_SCALE = 0.25f;
+        private const float BOSS_DEAD_BLEND_TIME = 2.2f;
 
-        /*private const*/ [SerializeField] float BOSS_DEAD_ZOOM_TIME = 3f;
-        /*private const*/ [SerializeField] float BOSS_DEAD_ZOOM_TIME_SCALE = 0.25f;
-        /*private const*/ [SerializeField] float BOSS_DEAD_BLEND_TIME = 2.2f;
-
-        /*private const*/ [SerializeField] float BOSS_WAVE_BLEND_TIME = 2f;
+        private const float BOSS_WAVE_BLEND_TIME = 2f;
 
         [Header("Options")]
         [SerializeField] GameObject bossWaveBlockObject = null;
@@ -128,6 +126,7 @@ namespace DadVSMe.GameCycles
         private async void HandleBossDead()
         {
             GameInstance.GameCycle.Pause();
+            GameInstance.GameCycle.SetBossClearDirecting(true);
 
             bossWaveBlockObject.SetActive(false);
 
@@ -148,6 +147,7 @@ namespace DadVSMe.GameCycles
 
             InputManager.EnableInput<PlayerInputReader>();
 
+            GameInstance.GameCycle.SetBossClearDirecting(false);
             GameInstance.GameCycle.Resume();
         }
 

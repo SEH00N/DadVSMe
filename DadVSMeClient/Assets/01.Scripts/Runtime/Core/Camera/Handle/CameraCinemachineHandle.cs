@@ -15,15 +15,15 @@ namespace DadVSMe.Core.Cam
         private const int ACTIVE_PRIORITY = 1000;
         private const int INACTIVE_PRIORITY = 0;
 
-        private static CinemachineCamera activeedCinemachineCamera = null;
+        private static CinemachineCamera activedCinemachineCamera = null;
 
-        public override void Execute(Parameter handleParameter)
+        public override void ExecuteAsync(Parameter handleParameter)
         {
-            if(activeedCinemachineCamera != null)
-                activeedCinemachineCamera.Priority = INACTIVE_PRIORITY;
+            if(activedCinemachineCamera != null)
+                activedCinemachineCamera.Priority = INACTIVE_PRIORITY;
 
-            activeedCinemachineCamera = handleParameter.cinemachineCamera;
-            activeedCinemachineCamera.Priority = ACTIVE_PRIORITY;
+            activedCinemachineCamera = handleParameter.cinemachineCamera;
+            activedCinemachineCamera.Priority = ACTIVE_PRIORITY;
 
             handleParameter.CinemachineBrain.DefaultBlend.Time = handleParameter.blendTime;
         }

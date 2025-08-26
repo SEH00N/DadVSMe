@@ -5,7 +5,7 @@ namespace DadVSMe.Core.Cam
 {
     public class BackgroundFilterCameraHandle : CameraHandle<BackgroundFilterCameraHandleParameter>
     {
-        public override async void Execute(BackgroundFilterCameraHandleParameter handleParameter)
+        public override async void ExecuteAsync(BackgroundFilterCameraHandleParameter handleParameter)
         {
             SpriteRenderer backgroundFilterRenderer = handleParameter.Cam.GetComponentInChildren<SpriteRenderer>();
             Color temp = backgroundFilterRenderer.color;

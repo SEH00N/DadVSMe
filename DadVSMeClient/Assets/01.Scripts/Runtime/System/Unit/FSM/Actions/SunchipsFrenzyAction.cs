@@ -37,7 +37,7 @@ namespace DadVSMe
 
             param.time = filterVisibleTime;
             param.color = filterColor;
-            handle.Execute(param);
+            handle.ExecuteAsync(param);
         }
 
         public override void ExitState()

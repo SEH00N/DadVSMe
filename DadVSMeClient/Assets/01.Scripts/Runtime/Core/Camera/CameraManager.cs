@@ -5,7 +5,7 @@ namespace DadVSMe.Core.Cam
 {
     public abstract class CameraHandle<T> where T : CameraHandleParameter
     {
-        public abstract void Execute(T handleParameter);
+        public abstract void ExecuteAsync(T handleParameter);
     }
 
     public class CameraHandleParameter

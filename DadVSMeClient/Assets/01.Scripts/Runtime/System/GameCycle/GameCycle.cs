@@ -29,6 +29,7 @@ namespace DadVSMe.GameCycles
         [SerializeField] HUDUI hudUI = null;
 
         public bool IsPaused { get; private set; } = false;
+        public bool IsBossClearDirecting { get; private set; } = false;
 
         // Debug
         private void Start()
@@ -52,6 +53,11 @@ namespace DadVSMe.GameCycles
         public void Resume()
         {
             IsPaused = false;
+        }
+
+        public void SetBossClearDirecting(bool isBossClearDirecting)
+        {
+            IsBossClearDirecting = isBossClearDirecting;
         }
     }
 }
