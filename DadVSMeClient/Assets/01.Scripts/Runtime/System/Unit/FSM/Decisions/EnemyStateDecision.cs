@@ -46,7 +46,21 @@ namespace DadVSMe.Entities.FSM
                 return;
 
             Gizmos.color = Color.red;
-            Gizmos.DrawWireCube(pivot.position, new Vector3(unitStateChecker.attackHorizontalDistance * 2f, unitStateChecker.attackVerticalDistance * 2f, 0f));
+            if(unitStateChecker.checkDirection)
+            {
+                if(unitStateChecker.directionMatch)
+                {
+                    Gizmos.DrawWireCube(pivot.position + Vector3.right * (Mathf.Sign(transform.localScale.x) * unitStateChecker.attackHorizontalDistance * 0.5f), new Vector3(unitStateChecker.attackHorizontalDistance, unitStateChecker.attackVerticalDistance * 2f, 0f));
+                }
+                else
+                {
+                    Gizmos.DrawWireCube(pivot.position - Vector3.right * (Mathf.Sign(transform.localScale.x) * unitStateChecker.attackHorizontalDistance * 0.5f), new Vector3(unitStateChecker.attackHorizontalDistance, unitStateChecker.attackVerticalDistance * 2f, 0f));
+                }
+            }
+            else
+            {
+                Gizmos.DrawWireCube(pivot.position, new Vector3(unitStateChecker.attackHorizontalDistance * 2f, unitStateChecker.attackVerticalDistance * 2f, 0f));
+            }
         }
         #endif
     }

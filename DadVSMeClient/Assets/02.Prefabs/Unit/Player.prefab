@@ -772,6 +772,7 @@ GameObject:
   - component: {fileID: 6201466454180193559}
   - component: {fileID: 5713716665520541407}
   - component: {fileID: 3861165256302696239}
+  - component: {fileID: 1946308479296228806}
   m_Layer: 8
   m_Name: '[Tran] Takedown'
   m_TagString: Untagged
@@ -835,6 +836,37 @@ MonoBehaviour:
   isReverse: 0
   attack1: 0
   attack2: 1
+--- !u!114 &1946308479296228806
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 569119178259941232}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ce3633239f824b578fa956d15c22bee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isReverse: 0
+  pivot: {fileID: 7488116858921959985}
+  unitStateChecker:
+    checkHorizontalDistance: 1
+    attackHorizontalDistance: 3
+    checkVerticalDistance: 1
+    attackVerticalDistance: 1
+    checkDirection: 1
+    directionMatch: 1
+    checkStatic: 0
+    staticCompare: 0
+    checkFloat: 0
+    floatCompare: 0
+    checkLie: 1
+    lieCompare: 0
+    checkDie: 1
+    dieCompare: 0
+    checkWeight: 0
+    weight: 0
 --- !u!1 &650754896821217380
 GameObject:
   m_ObjectHideFlags: 0
@@ -5085,6 +5117,7 @@ GameObject:
   - component: {fileID: 9129313362278819129}
   - component: {fileID: 1945133418526377832}
   - component: {fileID: 2625980165839867990}
+  - component: {fileID: 4590941348967080891}
   m_Layer: 8
   m_Name: '[Tran] Punch1_4'
   m_TagString: Untagged
@@ -5148,6 +5181,37 @@ MonoBehaviour:
   isReverse: 0
   attack1: 1
   attack2: 0
+--- !u!114 &4590941348967080891
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5500857474424150516}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ce3633239f824b578fa956d15c22bee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isReverse: 0
+  pivot: {fileID: 7488116858921959985}
+  unitStateChecker:
+    checkHorizontalDistance: 1
+    attackHorizontalDistance: 3
+    checkVerticalDistance: 1
+    attackVerticalDistance: 1
+    checkDirection: 1
+    directionMatch: 1
+    checkStatic: 0
+    staticCompare: 0
+    checkFloat: 0
+    floatCompare: 0
+    checkLie: 1
+    lieCompare: 0
+    checkDie: 1
+    dieCompare: 0
+    checkWeight: 0
+    weight: 0
 --- !u!1 &5774556205045451626
 GameObject:
   m_ObjectHideFlags: 0
@@ -6405,9 +6469,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc0452edda50d49e99f580984c01f1fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  duration: 0.1
-  amplitude: 8
-  frequency: 7
+  cameraShakeDuration: 0.1
+  cameraShakeAmplitude: 8
+  cameraShakeFrequency: 7
 --- !u!1 &6867651733005293845
 GameObject:
   m_ObjectHideFlags: 0
@@ -7372,6 +7436,7 @@ GameObject:
   - component: {fileID: 5713862757539333010}
   - component: {fileID: 8868562544967859152}
   - component: {fileID: 3729777210572503717}
+  - component: {fileID: 5371602955487678964}
   m_Layer: 8
   m_Name: '[Tran] Takedown'
   m_TagString: Untagged
@@ -7435,6 +7500,37 @@ MonoBehaviour:
   isReverse: 0
   attack1: 0
   attack2: 1
+--- !u!114 &5371602955487678964
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7708758313107798148}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ce3633239f824b578fa956d15c22bee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isReverse: 0
+  pivot: {fileID: 7488116858921959985}
+  unitStateChecker:
+    checkHorizontalDistance: 1
+    attackHorizontalDistance: 3
+    checkVerticalDistance: 1
+    attackVerticalDistance: 1
+    checkDirection: 1
+    directionMatch: 1
+    checkStatic: 0
+    staticCompare: 0
+    checkFloat: 0
+    floatCompare: 0
+    checkLie: 1
+    lieCompare: 0
+    checkDie: 1
+    dieCompare: 0
+    checkWeight: 0
+    weight: 0
 --- !u!1 &7767005774741626004
 GameObject:
   m_ObjectHideFlags: 0
