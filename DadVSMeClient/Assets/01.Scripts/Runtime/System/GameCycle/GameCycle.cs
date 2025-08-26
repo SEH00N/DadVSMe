@@ -1,11 +1,16 @@
 using Cysharp.Threading.Tasks;
 using DadVSMe.Players;
+using Unity.Cinemachine;
 using UnityEngine;
 
 namespace DadVSMe.GameCycles
 {
     public class GameCycle : MonoBehaviour
     {
+        [SerializeField] CinemachineCamera mainCinemachineCamera = null;
+        public CinemachineCamera MainCinemachineCamera => mainCinemachineCamera;
+
+        [Space(10f)]
         [SerializeField] Deadline deadline = null;
         public Deadline Deadline => deadline;
         

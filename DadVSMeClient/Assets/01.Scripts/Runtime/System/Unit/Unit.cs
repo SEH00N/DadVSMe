@@ -13,6 +13,7 @@ namespace DadVSMe.Entities
         [SerializeField] protected UnitAttackEventListener unitAttackEventListener = null;
         [SerializeField] protected UnitSkillComponent unitSkillComponent;
         [SerializeField] protected Rigidbody2D unitRigidbody = null;
+        [SerializeField] protected FSMState holdState = null;
 
         public FSMBrain FSMBrain => fsmBrain;
         public UnitHealth UnitHealth => unitHealth; // uniy health is used frequently. allow external access for performance. 
@@ -91,6 +92,18 @@ namespace DadVSMe.Entities
         {
             if (unitFSMData.attackAttribute != EAttackAttribute.Crazy)
                 unitFSMData.attackAttribute = attackAttribute;
+        }
+
+        public void SetHold(bool isHold)
+        {
+            if(isHold)
+            {
+                fsmBrain.ChangeState(holdState);
+            }
+            else
+            {
+                fsmBrain.SetAsDefaultState();
+            }
         }
     }
 }

@@ -1227,6 +1227,94 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   expPrefab:
     key: Experience
+--- !u!1 &4220115322378323114
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7212670191618233945}
+  - component: {fileID: 1278049900768486228}
+  - component: {fileID: 2654032514642745503}
+  m_Layer: 0
+  m_Name: Hold
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7212670191618233945
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4220115322378323114}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7673012708161170671}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1278049900768486228
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4220115322378323114}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72988976fd79843c3ab3a8ff64c3f74f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &2654032514642745503
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4220115322378323114}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3515528adf73f471f8009033ff01c22f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  autoTransitioning: 1
+  onStateEnterEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 3222536103988418713}
+        m_TargetAssemblyTypeName: DadVSMe.Entities.NPCMovement, DadVSMe
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 7463771367122635574}
+        m_TargetAssemblyTypeName: DadVSMe.Entities.EntityAnimator, DadVSMe
+        m_MethodName: PlayAnimation
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: KidIdle
+          m_BoolArgument: 0
+        m_CallState: 2
+  onStateExitEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &4459460600934880233
 GameObject:
   m_ObjectHideFlags: 0
@@ -2384,6 +2472,7 @@ MonoBehaviour:
   unitAttackEventListener: {fileID: 7031250399494906082}
   unitSkillComponent: {fileID: 0}
   unitRigidbody: {fileID: 8522405111466415502}
+  holdState: {fileID: 2654032514642745503}
   onAttackTargetEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -2397,7 +2486,6 @@ MonoBehaviour:
   grabState: {fileID: 1729459063318387908}
   experiencePrefab:
     key: Experience
-  enemyData: {fileID: 0}
   <Weight>k__BackingField: 0
 --- !u!114 &6564578028461733982
 MonoBehaviour:
@@ -2505,7 +2593,6 @@ MonoBehaviour:
       data:
         patrolMinRange: 5
         patrolMaxRange: 10
-        player: {fileID: 0}
 --- !u!114 &7463771367122635574
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3336,6 +3423,7 @@ Transform:
   m_Children:
   - {fileID: 4496479506496913726}
   - {fileID: 4780995000933483044}
+  - {fileID: 7212670191618233945}
   - {fileID: 3300998498417108434}
   - {fileID: 9101977302793882754}
   - {fileID: 4823745915166199292}

@@ -60,5 +60,19 @@ namespace DadVSMe
                 return fadeImage;
             }
         }
+
+        private static Transform cameraLookTransform = null;
+        public static Transform CameraLookTransform {
+            get {
+                if(cameraLookTransform == null)
+                {
+                    GameObject cameraLookTransformObject = GameObject.Find("CameraLookTransform");
+                    if(cameraLookTransformObject != null)
+                        cameraLookTransform = cameraLookTransformObject.transform;
+                }
+
+                return cameraLookTransform;
+            }
+        }
     }
 }

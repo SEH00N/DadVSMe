@@ -1,6 +1,5 @@
 using System;
 using System.Collections.Generic;
-using System.Threading;
 using Cysharp.Threading.Tasks;
 using DadVSMe.Enemies;
 using DadVSMe.Entities;
@@ -10,7 +9,7 @@ using UnityEngine;
 
 namespace DadVSMe.GameCycles
 {
-    public class EnemySpawner : MonoBehaviour
+    public class EnemyWaveBehaviour : WaveBehaviour
     {
         [Serializable]
         public struct SpawnInfo
@@ -29,12 +28,8 @@ namespace DadVSMe.GameCycles
             public List<SpawnTableData> spawnTable;
         }
 
-        private const float UDPATE_INTERVAL = 0.5f;
-
         [SerializeField] List<SpawnInfo> spawnInfoList = new List<SpawnInfo>();
         private List<SpawnInfo> spawnInfoQueue = null;
-
-        private CancellationTokenSource cancellationTokenSource = new CancellationTokenSource();
 
         private void Awake()
         {
@@ -51,63 +46,31 @@ namespace DadVSMe.GameCycles
             spawnInfoQueue = new List<SpawnInfo>();
         }
 
-        private void OnEnable()
+        protected override void OnEnable()
         {
+            base.OnEnable();
+
             spawnInfoQueue.Clear();
             spawnInfoQueue.AddRange(spawnInfoList);
-
-            if (cancellationTokenSource != null)
-            {
-                cancellationTokenSource.Cancel();
-                cancellationTokenSource.Dispose();
-                cancellationTokenSource = null;
-            }
-
-            cancellationTokenSource = CancellationTokenSource.CreateLinkedTokenSource(destroyCancellationToken);
-            StartCheckConditionLoop();
         }
 
-        private void OnDisable()
+        protected override bool OnUpdate()
         {
-            if (cancellationTokenSource != null)
+            if(GameInstance.GameCycle == null || GameInstance.GameCycle.MainPlayer == null)
+                return false;
+
+            for(int i = spawnInfoQueue.Count - 1; i >= 0; i--)
             {
-                cancellationTokenSource.Cancel();
-                cancellationTokenSource.Dispose();
-                cancellationTokenSource = null;
+                SpawnInfo spawnInfo = spawnInfoQueue[i];
+                Vector2 direction = GameInstance.GameCycle.MainPlayer.transform.position - spawnInfo.spawnPoint.position;
+                if(direction.sqrMagnitude >= spawnInfo.conditionDistance * spawnInfo.conditionDistance)
+                    continue;
+
+                SpawnEnemy(spawnInfo);
+                spawnInfoQueue.RemoveAt(i);
             }
-        }
 
-        private async void StartCheckConditionLoop()
-        {
-            try {
-                while (cancellationTokenSource != null && cancellationTokenSource.IsCancellationRequested == false)
-                {
-                    if(GameInstance.GameCycle == null || GameInstance.GameCycle.MainPlayer == null)
-                        continue;
-
-                    for(int i = spawnInfoQueue.Count - 1; i >= 0; i--)
-                    {
-                        SpawnInfo spawnInfo = spawnInfoQueue[i];
-                        Vector2 direction = GameInstance.GameCycle.MainPlayer.transform.position - spawnInfo.spawnPoint.position;
-                        if(direction.sqrMagnitude >= spawnInfo.conditionDistance * spawnInfo.conditionDistance)
-                            continue;
-
-                        SpawnEnemy(spawnInfo);
-                        spawnInfoQueue.RemoveAt(i);
-                    }
-
-                    if(spawnInfoQueue.Count == 0)
-                        break;
-
-                    await UniTask.Delay(TimeSpan.FromSeconds(UDPATE_INTERVAL), cancellationToken: cancellationTokenSource.Token);
-                }
-            }
-            catch (OperationCanceledException) { }
-            finally
-            {
-                cancellationTokenSource?.Dispose();
-                cancellationTokenSource = null;
-            }
+            return spawnInfoQueue.Count == 0;
         }
 
         private void SpawnEnemy(SpawnInfo spawnInfo)

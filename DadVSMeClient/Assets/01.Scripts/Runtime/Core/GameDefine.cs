@@ -20,5 +20,7 @@ namespace DadVSMe
         public const int MAX_SKILL_LEVEL = 5;
 
         public const float DEFAULT_FADE_DURATION = 0.75f;
+
+        public const float DEFAULT_TIME_SCALE = 1f;
     }
 }
