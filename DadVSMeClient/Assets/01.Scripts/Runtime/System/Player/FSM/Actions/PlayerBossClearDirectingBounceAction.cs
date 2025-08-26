@@ -6,7 +6,7 @@ namespace DadVSMe.Players.FSM
 {
     public class PlayerBossClearDirectingBounceAction : FSMAction
     {
-        private const float HARD_BOUNCE_FORCE_THRESHOLD = 10f;
+        private const float HARD_BOUNCE_FORCE_THRESHOLD = 20f;
 
         [SerializeField] float cameraShakeDuration = 0.1f;
         [SerializeField] float cameraShakeAmplitude = 8f;

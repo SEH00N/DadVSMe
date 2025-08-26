@@ -99,6 +99,9 @@ namespace DadVSMe.GameCycles
 
             await UniTask.WaitForSeconds(BOSS_SPAWN_ZOOM_TIME, ignoreTimeScale: true);
 
+            // Set Deadline Inactive
+            GameInstance.GameCycle.Deadline.SetActive(false);
+
             // Play Boss Profile UI Directing
             // should be awaiting
 

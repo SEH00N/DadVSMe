@@ -45,6 +45,11 @@ namespace DadVSMe
             transform.position += movement;
         }
 
+        public void SetActive(bool isActive)
+        {
+            gameObject.SetActive(isActive);
+        }
+
         public async UniTask PlayBossClearDirecting()
         {
             // Release Camera
@@ -59,6 +64,7 @@ namespace DadVSMe
             transform.position = currentPosition;
 
             // Deadline Springing Up Animation
+            SetActive(true);
             deadlineAnimator.Play(BOSS_CLEAR_DIRECTING_JUMP_ANIMATION_NAME);
 
             await UniTask.Delay(TimeSpan.FromSeconds(BOSS_CLEAR_DIRECTING_JUMP_TRIGGER_DURATION), ignoreTimeScale: true);
