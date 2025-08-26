@@ -30,7 +30,7 @@ namespace DadVSMe
             health.onAttackEvent.AddListener(OnAttackEvent);
         }
 
-        private void OnAttackEvent(Unit attacker, IAttackData attackData)
+        private void OnAttackEvent(IAttacker attacker, IAttackData attackData)
         {
             if (fsmData.grabbedEntity != null)
             {

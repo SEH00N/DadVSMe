@@ -7,6 +7,7 @@ namespace DadVSMe.Core.Cam
         public class Parameter : CameraHandleParameter
         {
             public CinemachineCamera cinemachineCamera;
+            public float blendTime = 1f;
 
             public Parameter() { }
         }
@@ -23,6 +24,8 @@ namespace DadVSMe.Core.Cam
 
             activeedCinemachineCamera = handleParameter.cinemachineCamera;
             activeedCinemachineCamera.Priority = ACTIVE_PRIORITY;
+
+            handleParameter.CinemachineBrain.DefaultBlend.Time = handleParameter.blendTime;
         }
     }
 

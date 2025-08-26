@@ -10,8 +10,15 @@ namespace DadVSMe.GameCycles
 {
     public class BossWaveBehaviour : WaveBehaviour
     {
-        private const float BOSS_ZOOM_TIME = 3f;
-        private const float BOSS_ZOOM_TIME_SCALE = 0.5f;
+        private const float BOSS_SPAWN_ZOOM_TIME = 3f;
+        private const float BOSS_SPAWN_ZOOM_TIME_SCALE = 0.25f;
+        private const float BOSS_SPAWN_BLEND_TIME = 1.2f;
+
+        private const float BOSS_DEAD_ZOOM_TIME = 3f;
+        private const float BOSS_DEAD_ZOOM_TIME_SCALE = 0.25f;
+        private const float BOSS_DEAD_BLEND_TIME = 2.2f;
+
+        private const float BOSS_WAVE_BLEND_TIME = 2f;
 
         [Header("Options")]
         [SerializeField] GameObject bossWaveBlockObject = null;
@@ -25,7 +32,8 @@ namespace DadVSMe.GameCycles
 
         [Header("Directing")]
         [SerializeField] AddressableAsset<BGMAudioLibrary> bgmLibrary = null;
-        [SerializeField] CinemachineCamera bossZoomCinemachineCamera = null;
+        [SerializeField] CinemachineCamera bossSpawnCinemachineCamera = null;
+        [SerializeField] CinemachineCamera bossDeadCinemachineCamera = null;
         [SerializeField] CinemachineCamera bossWaveCinemachineCamera = null;
 
         private Unit bossUnit = null;
@@ -36,6 +44,17 @@ namespace DadVSMe.GameCycles
             enemyData.InitializeAsync().Forget();
             statData.InitializeAsync().Forget();
             bgmLibrary.InitializeAsync().Forget();
+        }
+
+        protected override void OnDisable()
+        {
+            base.OnDisable();
+
+            if(bossUnit != null && bossUnit.UnitHealth != null)
+            {
+                bossUnit.UnitHealth.OnHPChangedEvent -= HandleBossHPChanged;
+                bossUnit = null;
+            }
         }
 
         protected override bool OnUpdate()
@@ -57,6 +76,7 @@ namespace DadVSMe.GameCycles
             bossUnit.transform.position = bossSpawnPoint.position;
             bossUnit.FSMBrain.SetAIData(statData.Asset);
             bossUnit.Initialize(enemyData.Asset);
+            bossUnit.UnitHealth.OnHPChangedEvent += HandleBossHPChanged;
 
             PlayBossDirecting();
         }
@@ -73,17 +93,17 @@ namespace DadVSMe.GameCycles
             bossUnit.SetHold(true);
 
             // Play Camera Trnasitioning
-            Time.timeScale = BOSS_ZOOM_TIME_SCALE;
-            _ = new ChangeCinemachineCamera(bossZoomCinemachineCamera);
+            Time.timeScale = BOSS_SPAWN_ZOOM_TIME_SCALE;
+            _ = new ChangeCinemachineCamera(bossSpawnCinemachineCamera, BOSS_SPAWN_BLEND_TIME);
 
-            await UniTask.WaitForSeconds(BOSS_ZOOM_TIME, ignoreTimeScale: true);
+            await UniTask.WaitForSeconds(BOSS_SPAWN_ZOOM_TIME, ignoreTimeScale: true);
 
             // Play Boss Profile UI Directing
             // should be awaiting
 
             // Release Camera
             Time.timeScale = GameDefine.DEFAULT_TIME_SCALE;
-            _ = new ChangeCinemachineCamera(bossWaveCinemachineCamera);
+            _ = new ChangeCinemachineCamera(bossWaveCinemachineCamera, BOSS_WAVE_BLEND_TIME);
             bossWaveCinemachineCamera.Follow = GameInstance.CameraLookTransform;
 
             // Release Player
@@ -93,17 +113,33 @@ namespace DadVSMe.GameCycles
             bossUnit.SetHold(false);
         }
 
-        private void HandleBossDead()
+        private void HandleBossHPChanged()
+        {
+            if(bossUnit.GetComponent<UnitHealth>().CurrentHP > 0)
+                return;
+
+            bossUnit.UnitHealth.OnHPChangedEvent -= HandleBossHPChanged;
+            HandleBossDead();
+        }
+
+        private async void HandleBossDead()
         {
             bossWaveBlockObject.SetActive(false);
 
-            // Play Dad Springing Up Animation
+            // Set Player Hold
+            GameInstance.GameCycle.MainPlayer.SetHold(true);
 
-            // Player Juggling
+            // Play Camera Trnasitioning
+            Time.timeScale = BOSS_DEAD_ZOOM_TIME_SCALE;
+            bossDeadCinemachineCamera.Follow.transform.position = bossUnit.transform.position;
+            _ = new ChangeCinemachineCamera(bossDeadCinemachineCamera, BOSS_DEAD_BLEND_TIME);
 
-            // Go! Text
+            bossUnit = null;
 
-            _ = new ChangeCinemachineCamera(GameInstance.GameCycle.MainCinemachineCamera);
+            await UniTask.WaitForSeconds(BOSS_DEAD_ZOOM_TIME, ignoreTimeScale: true);
+
+            Time.timeScale = GameDefine.DEFAULT_TIME_SCALE;
+            await GameInstance.GameCycle.Deadline.PlayBossClearDirecting();
         }
 
         #if UNITY_EDITOR

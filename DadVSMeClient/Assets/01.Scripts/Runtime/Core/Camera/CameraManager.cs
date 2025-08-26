@@ -1,3 +1,4 @@
+using Unity.Cinemachine;
 using UnityEngine;
 
 namespace DadVSMe.Core.Cam
@@ -10,6 +11,7 @@ namespace DadVSMe.Core.Cam
     public class CameraHandleParameter
     {
         public Camera Cam { get; internal set; }
+        public CinemachineBrain CinemachineBrain { get; internal set; }
         public CameraHandleParameter() {} 
     }
 
@@ -43,6 +45,18 @@ namespace DadVSMe.Core.Cam
             }
         }
 
+        private static CinemachineBrain cinemachineBrain;
+        public static CinemachineBrain CinemachineBrain
+        {
+            get
+            {
+                if (cinemachineBrain == null)
+                    cinemachineBrain = MainCam.GetComponent<CinemachineBrain>();
+
+                return cinemachineBrain;
+            }
+        }
+
         public static THandle CreateCameraHandle<THandle, TParam>(out TParam param)
             where TParam : CameraHandleParameter, new()
             where THandle : CameraHandle<TParam>, new()
@@ -57,6 +71,7 @@ namespace DadVSMe.Core.Cam
         {
             var p = new TParam();
             p.Cam = MainCam; // 매니저만 주입
+            p.CinemachineBrain = CinemachineBrain;
             return p;
         }
     }

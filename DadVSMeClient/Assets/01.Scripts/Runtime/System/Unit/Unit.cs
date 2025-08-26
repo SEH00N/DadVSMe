@@ -4,7 +4,7 @@ using UnityEngine.Events;
 
 namespace DadVSMe.Entities
 {
-    public class Unit : Entity
+    public class Unit : Entity, IAttacker
     {
         [Header("Unit")]
         [SerializeField] protected UnitMovement unitMovement = null;
@@ -23,6 +23,10 @@ namespace DadVSMe.Entities
         protected UnitFSMData unitFSMData = null;
         protected UnitStatData unitStatData = null;
         public UnitStatData Stat => unitStatData;
+
+        public Transform AttackerTransform => transform;
+        public EAttackAttribute AttackAttribute => unitFSMData.attackAttribute;
+        public float AttackPower => unitStatData[EUnitStat.AttackPowerMultiplier].FinalValue;
 
         public UnityEvent<Unit, IAttackData> onAttackTargetEvent = null;
         public UnityEvent onStartAngerEvent;
