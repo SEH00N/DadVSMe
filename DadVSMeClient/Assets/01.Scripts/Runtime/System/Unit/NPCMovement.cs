@@ -22,8 +22,12 @@ namespace DadVSMe.Entities
             cachedPath = new NavMeshPath();
         }
 
-        private void Start()
+        public void Initialize()
         {
+            navMeshAgent.enabled = false;
+            navMeshAgent.enabled = true;
+            navMeshAgent.Warp(transform.position);
+
             navMeshAgent.isStopped = true;
             navMeshAgent.updatePosition = false;
             navMeshAgent.updateRotation = false;

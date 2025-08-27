@@ -15,6 +15,7 @@ namespace DadVSMe.Enemies
         public event Action<Enemy> onDespawned;
 
         [Header("Enemy")]
+        [SerializeField] NPCMovement npcMovement = null;
         [SerializeField] EnemyDetector enemyDetector = null;
         [SerializeField] FSMState grabState = null;
         [SerializeField] AddressableAsset<Experience> experiencePrefab;
@@ -27,6 +28,7 @@ namespace DadVSMe.Enemies
         protected override void InitializeInternal(IEntityData data)
         {
             base.InitializeInternal(data);
+            npcMovement.Initialize();
             enemyDetector.Initialize();
             experiencePrefab.InitializeAsync().Forget();
         }
