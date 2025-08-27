@@ -31,8 +31,7 @@ namespace DadVSMe.Players
             skillSelectPopupUI.StretchRect();
             skillSelectPopupUI.Initialize(playerSkillComponent, GetAvailableSkillTypes(playerSkillComponent), this);
 
-            // temporary
-            Time.timeScale = 0;
+            TimeManager.SetTimeScale(0, true);
         }
 
         private static List<SkillType> GetAvailableSkillTypes(UnitSkillComponent playerSkillComponent)
@@ -58,7 +57,7 @@ namespace DadVSMe.Players
         public void OnSelectSkill(SkillSelectPopupUI popupUI, SkillData skillData)
         {
             playerSkillComponent.RegistSkill(skillData.skillType);
-            Time.timeScale = 1;
+            TimeManager.SetTimeScale(1, true);
             PoolManager.Despawn(popupUI);
         }
     }
