@@ -46,12 +46,14 @@ namespace DadVSMe.Players
             if (playerFSMData.isAnger)
                 return;
 
-            AttackDataBase data = attackData as AttackDataBase;
-            if (data.IsRageAttack)
-            {
-                playerFSMData.currentAngerGauge = Mathf.Min(playerFSMData.currentAngerGauge + 5, playerFSMData.maxAngerGauge);
-                playerFSMData.onAngerGaugeChangedEvent?.Invoke();
-            }
+            if(attackData is AttackDataBase data == false)
+                return;
+
+            if (data.IsRageAttack == false)
+                return;
+
+            playerFSMData.currentAngerGauge = Mathf.Min(playerFSMData.currentAngerGauge + 5, playerFSMData.maxAngerGauge);
+            playerFSMData.onAngerGaugeChangedEvent?.Invoke();
         }
 
         public void OnStartAnger()
