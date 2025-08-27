@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6892756c76b5e4891adffd86c22ec87a, type: 3}
-  m_Name: KidStatData
+  m_Name: NinjaStatData_Wave1
   m_EditorClassIdentifier: 
   stats:
   - statType: 0
-    defaultValue: 50
+    defaultValue: 200
     finalValue: 0
     onStatChanged:
       m_PersistentCalls:
