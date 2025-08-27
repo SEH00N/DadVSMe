@@ -24,10 +24,7 @@ namespace DadVSMe.Entities
 
         public void Initialize()
         {
-            navMeshAgent.enabled = false;
-            navMeshAgent.enabled = true;
-            navMeshAgent.Warp(transform.position);
-
+            navMeshAgent.Initialize();
             navMeshAgent.isStopped = true;
             navMeshAgent.updatePosition = false;
             navMeshAgent.updateRotation = false;

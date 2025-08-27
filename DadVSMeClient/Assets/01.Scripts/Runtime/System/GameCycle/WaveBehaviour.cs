@@ -24,7 +24,7 @@ namespace DadVSMe.GameCycles
 
         protected virtual void PreOnDisable() { }
         protected virtual void PostOnDisable() { }
-        protected virtual void OnDisable()
+        private void OnDisable()
         {
             PreOnDisable();
 

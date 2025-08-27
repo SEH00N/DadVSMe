@@ -1,11 +1,19 @@
 using UnityEngine;
 using DadVSMe.Entities;
+using Cysharp.Threading.Tasks;
 
 namespace DadVSMe.Tests
 {
     public class TestNPCMovement : MonoBehaviour
     {
         [SerializeField] NPCMovement npcMovement;
+
+        private async void Start()
+        {
+            await UniTask.Delay(1000);
+            npcMovement.Initialize();
+            npcMovement.SetActive(true);
+        }
 
         private void Update()
         {
