@@ -19,8 +19,8 @@ namespace DadVSMe.Players
             skillSelectPopupUIPrefab.InitializeAsync().Forget();
         }
 
-        [ContextMenu("Level up")]
-        public void OnLevelUp() => OnLevelUp(0);
+        [ContextMenu("Levelip")]
+        public void LEVEL() => OnLevelUp(0);
 
         public async void OnLevelUp(int _)
         {
@@ -54,11 +54,13 @@ namespace DadVSMe.Players
             return availableSkillTypes;
         }
 
-        public void OnSelectSkill(SkillSelectPopupUI popupUI, SkillData skillData)
+        public async void OnSelectSkill(SkillSelectPopupUI popupUI, SkillData skillData)
         {
             playerSkillComponent.RegistSkill(skillData.skillType);
+
+            await popupUI.DespawnUIAnimation();
+
             TimeManager.SetTimeScale(1, true);
-            PoolManager.Despawn(popupUI);
         }
     }
 }

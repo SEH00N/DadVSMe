@@ -1,4 +1,5 @@
 using Cysharp.Threading.Tasks;
+using H00N.Resources.Pools;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -44,6 +45,28 @@ namespace DadVSMe.UI.Skills
         public void OnSelectCard(SkillData skillData)
         {
             callback.OnSelectSkill(this, skillData);
+        }
+
+        public async UniTask DespawnUIAnimation()
+        {
+            SkillCardElementUI selected = default;
+            
+            for (int i = 0; i < elementUIList.Count; ++i)
+            {
+                var elementUI = elementUIList[i];
+
+                if(elementUI.IsSelected == true)
+                {
+                    selected = elementUI;
+                    continue;
+                }
+
+                await elementUI.PlayReleasAnimation();
+            }
+
+            await selected.PlayReleasAnimation();
+
+            PoolManager.Despawn(this);
         }
     }
 }

@@ -5,6 +5,7 @@ using DadVSMe.Localizations;
 using DG.Tweening;
 using TMPro;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 namespace DadVSMe.UI.Skills
@@ -24,13 +25,15 @@ namespace DadVSMe.UI.Skills
         private const float EXAGGERATE_EXIT_TIME = 0.4f;
         private const int EXAGGERATE_ROTATION_VALUE = 10;
 
-        private const float TRANSITION_TIME = 0.75f;
         private const string BLOCK_KEY = "SkillCardElementUI";
+
+        public bool IsSelected { get; private set; } = false;
 
         [SerializeField] Image skillIcon = null;
         [SerializeField] TMP_Text nameText = null;
         [SerializeField] TMP_Text descText = null;
         [SerializeField] List<GameObject> levelObjectList = null;
+        [SerializeField] EventTrigger hoverTrigger = null;
 
         private SkillData skillData = null;
 
@@ -47,16 +50,22 @@ namespace DadVSMe.UI.Skills
                 levelObjectList[i].SetActive(i < currentLevel);
 
             // UI Animation
+            IsSelected = false;
+            hoverTrigger.enabled = false;
+
             transform.localScale = Vector3.zero;
             transform.rotation = Quaternion.identity;
 
-            await UniTask.DelayFrame(APPEAR_DELAY_FRAME * index, PlayerLoopTiming.Update);
-            PlayAppearAnimation().Forget();
+            await UniTask.DelayFrame(APPEAR_DELAY_FRAME * index);
+            await PlayAppearAnimation();
+
+            hoverTrigger.enabled = true;
         }
 
         private async UniTask PlayAppearAnimation()
         {
-            Debug.Log($"{transform.localScale} {transform.rotation}");
+            await UniTask.DelayFrame(1);
+
             transform.DOKill();
 
             _ = transform.DOScale(Vector3.one * EXAGGERATE_SCALE_VALUE, EXAGGERATE_TIME)
@@ -64,9 +73,7 @@ namespace DadVSMe.UI.Skills
             _ = transform.DORotate(new Vector3(0, 0, EXAGGERATE_ROTATION_VALUE), EXAGGERATE_TIME)
                          .SetUpdate(true);
 
-            await UniTask.Delay(
-                TimeSpan.FromSeconds(EXAGGERATE_TIME + EXAGGERATE_MAINTAIN_TIME),
-                DelayType.UnscaledDeltaTime, PlayerLoopTiming.Update);
+            await UniTask.Delay(TimeSpan.FromSeconds(EXAGGERATE_TIME + EXAGGERATE_MAINTAIN_TIME), true, cancellationToken: destroyCancellationToken);
 
             _ = transform.DOScale(Vector3.one, EXAGGERATE_EXIT_TIME)
                          .SetEase(Ease.OutBack)
@@ -91,11 +98,32 @@ namespace DadVSMe.UI.Skills
                 break;
             }
 
-            InputBlock.Block(BLOCK_KEY);
-            await UniTask.Delay(TimeSpan.FromSeconds(TRANSITION_TIME), true, cancellationToken: destroyCancellationToken);
-            InputBlock.Release(BLOCK_KEY);
+            IsSelected = true;
 
             callback.OnSelectCard(skillData);
+
+            InputBlock.Block(BLOCK_KEY);
+            await UniTask.Delay(TimeSpan.FromSeconds(EXAGGERATE_TIME * 3), true, cancellationToken: destroyCancellationToken);
+            InputBlock.Release(BLOCK_KEY);
+        }
+
+        public void OnHoverThis()
+        {
+            transform.DOKill();
+            transform.DOScale(Vector2.one * EXAGGERATE_SCALE_VALUE, EXAGGERATE_TIME / 2).SetUpdate(true);
+        }
+
+        public void OutHoverThis()
+        {
+            transform.DOKill();
+            transform.DOScale(Vector2.one, EXAGGERATE_TIME / 2).SetEase(Ease.OutBack).SetUpdate(true);
+        }
+
+        public async UniTask PlayReleasAnimation()
+        {
+            transform.DOKill();
+
+            await transform.DOScale(Vector2.zero, EXAGGERATE_TIME).SetEase(Ease.InBack).SetUpdate(true);
         }
     }
 }
