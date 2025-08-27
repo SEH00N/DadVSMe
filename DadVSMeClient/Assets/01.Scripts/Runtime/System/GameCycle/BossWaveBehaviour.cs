@@ -47,9 +47,15 @@ namespace DadVSMe.GameCycles
             bgmLibrary.InitializeAsync().Forget();
         }
 
-        protected override void OnDisable()
+        protected override void PostOnEnable()
         {
-            base.OnDisable();
+            base.PostOnEnable();
+            bossWaveBlockObject.SetActive(false);
+        }
+
+        protected override void PostOnDisable()
+        {
+            base.PostOnDisable();
 
             if(bossUnit != null && bossUnit.UnitHealth != null)
             {
@@ -115,6 +121,9 @@ namespace DadVSMe.GameCycles
 
             // Release Boss
             bossUnit.SetHold(false);
+
+            // Set Boss Wave Block Object Active
+            bossWaveBlockObject.SetActive(true);
         }
 
         private void HandleBossHPChanged()
