@@ -13,12 +13,15 @@ namespace DadVSMe.Entities.FSM
         
         [Space(10f)]
         [SerializeField] UnitStateChecker unitStateChecker = null;
+        [SerializeField] AttackDataBase attackData = null;
 
         private UnitMovement unitMovement = null;
 
         private bool isAttacking = false;
 
-        private List<Unit> attackedUnits;
+        private HashSet<Unit> attackedUnits;
+
+        protected override IAttackFeedbackDataContainer FeedbackDataContainer => attackData;
 
         public override void Init(FSMBrain brain, FSMState state)
         {

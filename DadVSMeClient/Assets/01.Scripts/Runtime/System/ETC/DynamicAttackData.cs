@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace DadVSMe
 {
-    public class DynamicAttackData : IAttackData
+    public class DynamicAttackData : IAttackData, IAttackFeedbackDataContainer
     {
         private int damage;
         public int Damage => damage;

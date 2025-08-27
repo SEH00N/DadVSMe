@@ -13,24 +13,24 @@ namespace DadVSMe
     {
         public override async void Execute(DamageTextUIHandleParameter handleParameter)
         {
-            AddressableAsset<DamageText> textRef =
-                handleParameter.attackData.GetFeedbackData(handleParameter.attackAttribute)?.hitText;
+            // AddressableAsset<DamageText> textRef =
+            //     handleParameter.attackData.GetFeedbackData(handleParameter.attackAttribute)?.hitText;
 
-            if (textRef == null)
-                return;
-            if (string.IsNullOrEmpty(textRef.Key))
-                return;
+            // if (textRef == null)
+            //     return;
+            // if (string.IsNullOrEmpty(textRef.Key))
+            //     return;
                 
-            await textRef.InitializeAsync();
+            // await textRef.InitializeAsync();
 
-            DamageText text = PoolManager.Spawn(textRef).GetComponent<DamageText>();
+            // DamageText text = PoolManager.Spawn(textRef).GetComponent<DamageText>();
 
-            if (text == null)
-                return;
+            // if (text == null)
+            //     return;
 
-            text.Setup(CameraManager.UICam);
-            text.Play(handleParameter.target, handleParameter.upOffset, (int)handleParameter.damage,
-                handleParameter.isCritical, GetColor(handleParameter.attackAttribute), handleParameter.criticalColor);
+            // text.Setup(CameraManager.UICam);
+            // text.Play(handleParameter.target, handleParameter.upOffset, (int)handleParameter.damage,
+            //     handleParameter.isCritical, GetColor(handleParameter.attackAttribute), handleParameter.criticalColor);
         }
 
         Color GetColor(EAttackAttribute attackAttribute)

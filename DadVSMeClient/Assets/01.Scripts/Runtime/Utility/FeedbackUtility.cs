@@ -1,52 +1,56 @@
 using System.Collections.Generic;
-using Cysharp.Threading.Tasks;
-using DadVSMe.Core.Cam;
 using DadVSMe.Entities;
 using H00N.Extensions;
 using H00N.Resources.Addressables;
 using H00N.Resources.Pools;
 using UnityEngine;
-using UnityEngine.UI;
 
 namespace DadVSMe
 {
     public struct InitializeAttackFeedback
     {
-        public InitializeAttackFeedback(AttackDataBase attackData)
+        public InitializeAttackFeedback(IAttackFeedbackDataContainer feedbackDataContainer)
         {
             foreach (EAttackAttribute attackAttribute in EnumHelper.GetValues<EAttackAttribute>())
             {
-                if (attackData.GetFeedbackData(attackAttribute) == null)
+                if (feedbackDataContainer.GetFeedbackData(attackAttribute) == null)
                     continue;
 
-                attackData.GetFeedbackData(attackAttribute)?.hitEffects.ForEach(effect => effect.InitializeAsync().Forget());
-                attackData.GetFeedbackData(attackAttribute)?.attackSounds.ForEach(sound => sound.InitializeAsync().Forget());
-                attackData.GetFeedbackData(attackAttribute)?.hitSounds.ForEach(sound => sound.InitializeAsync().Forget());
-                attackData.GetFeedbackData(attackAttribute)?.hitText?.InitializeAsync().Forget();
+                feedbackDataContainer.GetFeedbackData(attackAttribute)?.attackEffects.ForEach(effect => _ = effect.InitializeAsync());
+                feedbackDataContainer.GetFeedbackData(attackAttribute)?.hitEffects.ForEach(effect => _ = effect.InitializeAsync());
+                feedbackDataContainer.GetFeedbackData(attackAttribute)?.attackSounds.ForEach(sound => _ = sound.InitializeAsync());
+                feedbackDataContainer.GetFeedbackData(attackAttribute)?.hitSounds.ForEach(sound => _ = sound.InitializeAsync());
+                _ = feedbackDataContainer.GetFeedbackData(attackAttribute)?.hitText?.InitializeAsync();
             }
         }
     }
 
     public struct PlayAttackSound
     {
-        public PlayAttackSound(IAttackData attackData, EAttackAttribute attackAttribute)
+        public PlayAttackSound(IAttackFeedbackDataContainer feedbackDataContainer, EAttackAttribute attackAttribute)
         {
-            _ = new PlaySound(attackData.GetFeedbackData(EAttackAttribute.Normal)?.attackSounds);
-            _ = new PlaySound(attackData.GetFeedbackData(attackAttribute)?.attackSounds);
+            _ = new PlaySound(feedbackDataContainer.GetFeedbackData(EAttackAttribute.Normal)?.attackSounds);
+            _ = new PlaySound(feedbackDataContainer.GetFeedbackData(attackAttribute)?.attackSounds);
         }
     }
 
     public struct PlayAttackFeedback
     {
-        public PlayAttackFeedback(IAttackData attackData, EAttackAttribute attackAttribute, Vector3 targetPosition, Vector3 attackOffset, int forwardDirection)
+        public PlayAttackFeedback(IAttackFeedbackDataContainer feedbackDataContainer, EAttackAttribute attackAttribute, Vector3 targetPosition, Vector3 attackOffset, int forwardDirection)
+        {
+            Vector3 offset = new Vector3(attackOffset.x * forwardDirection, attackOffset.y, 0f);
+            feedbackDataContainer.GetFeedbackData(attackAttribute)?.attackEffects.ForEach(effect => _ = new PlayEffect(effect, targetPosition + offset, forwardDirection));
+        }
+    }
+
+    public struct PlayHitFeedback
+    {
+        public PlayHitFeedback(IAttackFeedbackDataContainer feedbackDataContainer, EAttackAttribute attackAttribute, Vector3 targetPosition, Vector3 attackOffset, int forwardDirection)
         {
             Vector3 offset = new Vector3(attackOffset.x * forwardDirection, attackOffset.y, 0f);
 
-            attackData.GetFeedbackData(EAttackAttribute.Normal)?.hitEffects.ForEach(effect => _ = new PlayEffect(effect, targetPosition + offset, forwardDirection));
-            _ = new PlaySound(attackData.GetFeedbackData(EAttackAttribute.Normal)?.hitSounds);
-
-            attackData.GetFeedbackData(attackAttribute)?.hitEffects.ForEach(effect => _ = new PlayEffect(effect, targetPosition + offset, forwardDirection));
-            _ = new PlaySound(attackData.GetFeedbackData(attackAttribute)?.hitSounds);
+            feedbackDataContainer.GetFeedbackData(attackAttribute)?.hitEffects.ForEach(effect => _ = new PlayEffect(effect, targetPosition + offset, forwardDirection));
+            _ = new PlaySound(feedbackDataContainer.GetFeedbackData(attackAttribute)?.hitSounds);
         }
     }
 

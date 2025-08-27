@@ -7,14 +7,29 @@ namespace DadVSMe.Players.FSM
 {
     public class ThrowAttackAction : AttackActionBase
     {
+        private class ThrowData : IAttackData
+        {
+            private EAttackFeedback attackFeedback;
+            public EAttackFeedback AttackFeedback => attackFeedback;
+            public int Damage => 0;
+
+            public ThrowData(EAttackFeedback attackFeedback)
+            {
+                this.attackFeedback = attackFeedback;
+            }
+        }
+
         [Space(10f)]
-        [SerializeField] AttackDataBase throwAttackData = null;
+        [SerializeField] EAttackFeedback throwPreFeedback;
+        [SerializeField] AttackDataBase attackData = null;
 
         [Space(10f)]
         [SerializeField] Collider2D defaultSortingOrderResolverCollider = null;
         [SerializeField] Collider2D grabbedSortingOrderResolverCollider = null;
 
         private PlayerFSMData fsmData = null;
+
+        protected override IAttackFeedbackDataContainer FeedbackDataContainer => attackData;
 
         public override void Init(FSMBrain brain, FSMState state)
         {
@@ -25,8 +40,8 @@ namespace DadVSMe.Players.FSM
         public override void EnterState()
         {
             base.EnterState();
-            fsmData.grabParent.localPosition = throwAttackData.AttackFeedback == EAttackFeedback.Throw1 ? fsmData.throw1Position.localPosition : fsmData.throw2Position.localPosition;
-            AttackToTarget(fsmData.grabbedEntity as Unit, throwAttackData, false);
+            fsmData.grabParent.localPosition = attackData.AttackFeedback == EAttackFeedback.Throw1 ? fsmData.throw1Position.localPosition : fsmData.throw2Position.localPosition;
+            AttackToTarget(fsmData.grabbedEntity as Unit, new ThrowData(throwPreFeedback), false);
         }
 
         protected override void OnAttack(EntityAnimationEventData eventData)

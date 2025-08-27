@@ -43,7 +43,7 @@ namespace DadVSMe
         private void OnAttackTarget(Unit target, IAttackData attackData)
         {
             Fire fire = PoolManager.Spawn(firePrefab).GetComponent<Fire>();
-            fire.Init(ownerComponent.GetComponent<Unit>(), target, this.attackData, burnTime, attackDelay);
+            fire.Init(ownerComponent.GetComponent<Unit>(), target, this.attackData, this.attackData, burnTime, attackDelay);
         }
 
         public override void Execute()

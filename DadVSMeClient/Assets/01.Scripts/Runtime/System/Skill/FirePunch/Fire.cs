@@ -16,6 +16,7 @@ namespace DadVSMe
         [SerializeField] PoolReference poolReference;
 
         private IAttackData attackData;
+        private IAttackFeedbackDataContainer feedbackDataContainer;
         private Unit target;
         private Unit instigator;
         private float burnTime;
@@ -25,10 +26,11 @@ namespace DadVSMe
         private bool isBurn = false;
         private int burnCount = 0;
         
-        public void Init(Unit instigator, Unit target, IAttackData attackData, float burnTime, float attackDelay)
+        public void Init(Unit instigator, Unit target, IAttackData attackData, IAttackFeedbackDataContainer feedbackDataContainer, float burnTime, float attackDelay)
         {
             this.instigator = instigator;
             this.attackData = attackData;
+            this.feedbackDataContainer = feedbackDataContainer;
             this.burnTime = burnTime;
             this.attackDelay = attackDelay;
             this.target = target;
@@ -72,7 +74,7 @@ namespace DadVSMe
                     burnCount++;
                     targetHealth.Attack(instigator, attackData);
                     UnitFSMData unitFSMData = instigator.GetComponent<FSMBrain>().GetAIData<UnitFSMData>();
-                    _ = new PlayAttackFeedback(attackData, unitFSMData.attackAttribute, targetHealth.transform.position, Vector3.zero, unitFSMData.forwardDirection);
+                    _ = new PlayHitFeedback(feedbackDataContainer, unitFSMData.attackAttribute, targetHealth.transform.position, Vector3.zero, unitFSMData.forwardDirection);
 
                 }
             }

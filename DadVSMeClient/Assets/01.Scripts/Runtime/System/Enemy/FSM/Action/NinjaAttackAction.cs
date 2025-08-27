@@ -68,7 +68,7 @@ namespace DadVSMe.Enemies.FSM
                 target.UnitHealth.Attack(unitFSMData.unit, attackData);
                 unitFSMData.unit.onAttackTargetEvent?.Invoke(target, attackData);
 
-                _ = new PlayAttackFeedback(attackData, unitFSMData.attackAttribute, target.transform.position, attackOffset, unitFSMData.forwardDirection);
+                _ = new PlayHitFeedback(attackData, unitFSMData.attackAttribute, target.transform.position, attackOffset, unitFSMData.forwardDirection);
 
                 brain.SetAsDefaultState();
                 return;

@@ -1,3 +1,4 @@
+using Cysharp.Threading.Tasks;
 using H00N.AI.FSM;
 using H00N.Resources.Addressables;
 using H00N.Resources.Pools;
@@ -7,14 +8,17 @@ namespace DadVSMe.Entities.FSM
 {
     public class ShootAttackAction : AttackActionBase
     {
+        [SerializeField] AttackDataBase attackData = null;
         [SerializeField] Transform firePosition = null;
         [SerializeField] Transform targetPosition = null;
         [SerializeField] AddressableAsset<Projectile> projectilePrefab = null;
 
+        protected override IAttackFeedbackDataContainer FeedbackDataContainer => attackData;
+
         public override void Init(FSMBrain brain, FSMState state)
         {
             base.Init(brain, state);
-            projectilePrefab.InitializeAsync();
+            projectilePrefab.InitializeAsync().Forget();
         }
 
         public override void EnterState()

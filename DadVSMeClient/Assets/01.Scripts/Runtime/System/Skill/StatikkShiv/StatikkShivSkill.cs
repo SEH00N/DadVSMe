@@ -55,7 +55,7 @@ namespace DadVSMe
             StatikkShivLighting statikkShivLighting = PoolManager.Spawn<StatikkShivLighting>(prefab);
             DynamicAttackData attackData = new DynamicAttackData(this.attackData);
             attackData.SetDamage(attackData.Damage + (int)(levelUpIncreaseRate * level));
-            statikkShivLighting.Active(ownerComponent.GetComponent<Unit>(), maxAttackTargetNum, checkRadius, attackData);
+            statikkShivLighting.Active(ownerComponent.GetComponent<Unit>(), maxAttackTargetNum, checkRadius, attackData, attackData);
         }
 
         public override void OnUnregist()

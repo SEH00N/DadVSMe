@@ -98,7 +98,7 @@ namespace DadVSMe
             {
                 targetHealth.Attack(instigator, attackData);
                 UnitFSMData unitFSMData = instigator.GetComponent<FSMBrain>().GetAIData<UnitFSMData>();
-                _ = new PlayAttackFeedback(attackData, unitFSMData.attackAttribute, targetHealth.transform.position, Vector3.zero, unitFSMData.forwardDirection);
+                _ = new PlayHitFeedback(attackData, unitFSMData.attackAttribute, targetHealth.transform.position, Vector3.zero, unitFSMData.forwardDirection);
 
             }
 

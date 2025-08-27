@@ -26,7 +26,7 @@ namespace DadVSMe
             lineRendererAnimator = GetComponent<LineRendererAnimator>();
         }
 
-        public async void Active(Unit instigator, int attackNum, float attackRadius, IAttackData attackData)
+        public async void Active(Unit instigator, int attackNum, float attackRadius, IAttackData attackData, IAttackFeedbackDataContainer feedbackDataContainer)
         {
             if (instigator == null)
                 return;
@@ -62,7 +62,7 @@ namespace DadVSMe
 
                         health.Attack(instigator, attackData);
                         UnitFSMData unitFSMData = instigator.GetComponent<FSMBrain>().GetAIData<UnitFSMData>();
-                        _ = new PlayAttackFeedback(attackData, unitFSMData.attackAttribute, health.transform.position, Vector3.zero, unitFSMData.forwardDirection);
+                        _ = new PlayHitFeedback(feedbackDataContainer, unitFSMData.attackAttribute, health.transform.position, Vector3.zero, unitFSMData.forwardDirection);
 
                         findTarget = true;
 

@@ -26,7 +26,7 @@ namespace DadVSMe
                 return;
 
             unitHealth.Attack(this, deadlineCollisionAttackData);
-            _ = new PlayAttackFeedback(deadlineCollisionAttackData, EAttackAttribute.Normal, GameInstance.GameCycle.MainPlayer.transform.position, Vector3.zero, 1);
+            _ = new PlayHitFeedback(deadlineCollisionAttackData, EAttackAttribute.Normal, GameInstance.GameCycle.MainPlayer.transform.position, Vector3.zero, 1);
             _ = new ShakeCamera(GameInstance.GameCycle.MainCinemachineCamera, CAMERA_SHAKE_DURATION, CAMERA_SHAKE_AMPLITUDE, CAMERA_SHAKE_FREQUENCY);
         }
     }

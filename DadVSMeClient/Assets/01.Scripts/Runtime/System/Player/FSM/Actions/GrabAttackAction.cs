@@ -16,6 +16,7 @@ namespace DadVSMe.Players.FSM
         }
 
         [SerializeField] List<GrabAttackData> grabAttackDatas = new List<GrabAttackData>();
+        protected override IAttackFeedbackDataContainer FeedbackDataContainer => GetGrabAttackData().simpleAttackData;
 
         private PlayerFSMData playerFSMData = null;
 
@@ -24,12 +25,16 @@ namespace DadVSMe.Players.FSM
             base.Init(brain, state);
             playerFSMData = brain.GetAIData<PlayerFSMData>();
             entityAnimator = brain.GetComponent<EntityAnimator>();
+
+            // Initialize Separately
+            foreach (var grabAttackData in grabAttackDatas)
+                _ = new InitializeAttackFeedback(grabAttackData.simpleAttackData);
         }
 
         public override void EnterState()
         {
             base.EnterState();
-            entityAnimator.PlayAnimation(grabAttackDatas[playerFSMData.grabAttackCount % grabAttackDatas.Count].animationName);
+            entityAnimator.PlayAnimation(GetGrabAttackData().animationName);
         }
 
         public override void ExitState()
@@ -43,7 +48,12 @@ namespace DadVSMe.Players.FSM
             if(playerFSMData.grabbedEntity is not Unit grabbedUnit)
                 return;
 
-            AttackToTarget(grabbedUnit, grabAttackDatas[playerFSMData.grabAttackCount % grabAttackDatas.Count].simpleAttackData);
+            AttackToTarget(grabbedUnit, GetGrabAttackData().simpleAttackData);
+        }
+
+        private GrabAttackData GetGrabAttackData()
+        {
+            return grabAttackDatas[playerFSMData?.grabAttackCount ?? 0 % grabAttackDatas.Count];
         }
     }
 }

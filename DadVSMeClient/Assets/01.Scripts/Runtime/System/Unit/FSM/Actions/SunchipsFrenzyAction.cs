@@ -1,4 +1,3 @@
-using System;
 using DadVSMe.Core.Cam;
 using DadVSMe.Enemies.FSM;
 using DadVSMe.Entities;
@@ -10,12 +9,17 @@ namespace DadVSMe
 {
     public class SunchipsFrenzyAction : AttackActionBase
     {
-        SunchipsEnemyFSMData fsmData;
-        Unit target;
-        public Transform targetPosition;
-        public Vector3 hitUpOffset;
-        public Color filterColor;
-        public float filterVisibleTime;
+        [SerializeField] AttackDataBase attackData;
+        [SerializeField] Transform targetPosition;
+        [SerializeField] Vector3 hitUpOffset;
+        [SerializeField] Color filterColor;
+        [SerializeField] float filterVisibleTime;
+
+        private SunchipsEnemyFSMData fsmData;
+        private Unit target;
+
+
+        protected override IAttackFeedbackDataContainer FeedbackDataContainer => attackData;
 
         public override void Init(FSMBrain brain, FSMState state)
         {

@@ -47,7 +47,7 @@ namespace DadVSMe.Players
                 return;
 
             AttackDataBase data = attackData as AttackDataBase;
-            if (data.IsRangeAttack)
+            if (data.IsRageAttack)
             {
                 playerFSMData.currentAngerGauge = Mathf.Min(playerFSMData.currentAngerGauge + 5, playerFSMData.maxAngerGauge);
                 playerFSMData.onAngerGaugeChangedEvent?.Invoke();

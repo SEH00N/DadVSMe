@@ -5,7 +5,5 @@ namespace DadVSMe.Entities
     {
         int Damage { get; }
         EAttackFeedback AttackFeedback { get; }
-
-        public FeedbackData GetFeedbackData(EAttackAttribute attackAttribute); 
     }
 }

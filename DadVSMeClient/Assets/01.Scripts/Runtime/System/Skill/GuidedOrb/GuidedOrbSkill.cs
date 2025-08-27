@@ -76,7 +76,7 @@ namespace DadVSMe
 
                 GuidedOrb guidedOrb = PoolManager.Spawn<GuidedOrb>(prefab);
                 guidedOrb.transform.position = spawnPoint;
-                guidedOrb.SetInstigator(ownerComponent.GetComponent<Unit>(), attackData);
+                guidedOrb.SetInstigator(ownerComponent.GetComponent<Unit>(), attackData, attackData);
                 guidedOrb.SetTarget(target);
                 guidedOrb.Launch();
             }
