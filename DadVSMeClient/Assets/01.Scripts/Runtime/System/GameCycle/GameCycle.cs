@@ -43,6 +43,9 @@ namespace DadVSMe.GameCycles
             deadline.Initialize();
             MainPlayer.Initialize(new PlayerEntityData());
             hudUI.Initialize();
+
+            _ = new ChangeCinemachineCamera(mainCinemachineCamera);
+            
             return UniTask.CompletedTask;
         }
 

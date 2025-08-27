@@ -9411,7 +9411,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  itemFidnRadius: 0
+  itemFidnRadius: 5
 --- !u!114 &6165701722836179940
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9516,7 +9516,7 @@ MonoBehaviour:
         currentAngerGauge: 0
         angerTime: 20
         isAnger: 0
-        baseLevelUpXP: 1
+        baseLevelUpXP: 300
         levelUpRatio: 1.7
         levelUpExp: 0
         currentExp: 0
@@ -9560,9 +9560,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5175a02657ee944efa2fca1173a2eb90, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerSkillComponent: {fileID: 0}
+  playerSkillComponent: {fileID: 6550646681929325183}
   skillSelectPopupUIPrefab:
-    key: 
+    key: SkillSelectPopupUI
 --- !u!50 &8451211484433483914
 Rigidbody2D:
   serializedVersion: 5

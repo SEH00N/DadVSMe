@@ -575,14 +575,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 17960557}
     m_Modifications:
-    - target: {fileID: 1174489111746341445, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
-      propertyPath: itemFidnRadius
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2841000604668159261, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
-      propertyPath: managedReferences[3777565259024040135].baseLevelUpXP
-      value: 300
-      objectReference: {fileID: 0}
     - target: {fileID: 7488116858921959985, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
       propertyPath: m_LocalPosition.x
       value: -6.6
@@ -623,14 +615,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8407812844467455088, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
-      propertyPath: playerSkillComponent
-      value: 
-      objectReference: {fileID: 750934952}
-    - target: {fileID: 8407812844467455088, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
-      propertyPath: skillSelectPopupUIPrefab.key
-      value: SkillSelectPopupUI
-      objectReference: {fileID: 0}
     - target: {fileID: 8996695108358816546, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
       propertyPath: m_Name
       value: Player
@@ -656,17 +640,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7488116858921959985, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
   m_PrefabInstance: {fileID: 750934949}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &750934952 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6550646681929325183, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
-  m_PrefabInstance: {fileID: 750934949}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4ac7311ac0ae245a39789789efa20658, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &815992246
 GameObject:
   m_ObjectHideFlags: 0
@@ -767,7 +740,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Priority:
     Enabled: 1
-    m_Value: 10000
+    m_Value: 10
   OutputChannel: 1
   StandbyUpdate: 2
   m_StreamingVersion: 20241001
@@ -1724,7 +1697,7 @@ Transform:
   m_GameObject: {fileID: 1710579812}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -7.3199997, y: -0.03, z: 0}
+  m_LocalPosition: {x: -0.9300003, y: -0.5700002, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1794,7 +1767,7 @@ PositionConstraint:
   m_Active: 1
   m_IsLocked: 1
   m_Sources:
-  - sourceTransform: {fileID: 0}
+  - sourceTransform: {fileID: 1396640817}
     weight: 1
 --- !u!1 &1788589586
 GameObject:
