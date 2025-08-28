@@ -137,6 +137,15 @@ namespace DadVSMe.Inputs
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Pause"",
+                    ""type"": ""Button"",
+                    ""id"": ""fdfc34c4-0251-4bbc-bffe-86883e3ecf34"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -260,6 +269,17 @@ namespace DadVSMe.Inputs
                     ""action"": ""RightDash"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""05a74e2d-b32e-47c4-bf94-81abc258df7a"",
+                    ""path"": ""<Keyboard>/tab"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": "";Keyboard&Mouse"",
+                    ""action"": ""Pause"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -323,6 +343,7 @@ namespace DadVSMe.Inputs
             m_Player_Attack2 = m_Player.FindAction("Attack2", throwIfNotFound: true);
             m_Player_LeftDash = m_Player.FindAction("LeftDash", throwIfNotFound: true);
             m_Player_RightDash = m_Player.FindAction("RightDash", throwIfNotFound: true);
+            m_Player_Pause = m_Player.FindAction("Pause", throwIfNotFound: true);
         }
 
         ~@InputActions()
@@ -408,6 +429,7 @@ namespace DadVSMe.Inputs
         private readonly InputAction m_Player_Attack2;
         private readonly InputAction m_Player_LeftDash;
         private readonly InputAction m_Player_RightDash;
+        private readonly InputAction m_Player_Pause;
         /// <summary>
         /// Provides access to input actions defined in input action map "Player".
         /// </summary>
@@ -439,6 +461,10 @@ namespace DadVSMe.Inputs
             /// Provides access to the underlying input action "Player/RightDash".
             /// </summary>
             public InputAction @RightDash => m_Wrapper.m_Player_RightDash;
+            /// <summary>
+            /// Provides access to the underlying input action "Player/Pause".
+            /// </summary>
+            public InputAction @Pause => m_Wrapper.m_Player_Pause;
             /// <summary>
             /// Provides access to the underlying input action map instance.
             /// </summary>
@@ -480,6 +506,9 @@ namespace DadVSMe.Inputs
                 @RightDash.started += instance.OnRightDash;
                 @RightDash.performed += instance.OnRightDash;
                 @RightDash.canceled += instance.OnRightDash;
+                @Pause.started += instance.OnPause;
+                @Pause.performed += instance.OnPause;
+                @Pause.canceled += instance.OnPause;
             }
 
             /// <summary>
@@ -506,6 +535,9 @@ namespace DadVSMe.Inputs
                 @RightDash.started -= instance.OnRightDash;
                 @RightDash.performed -= instance.OnRightDash;
                 @RightDash.canceled -= instance.OnRightDash;
+                @Pause.started -= instance.OnPause;
+                @Pause.performed -= instance.OnPause;
+                @Pause.canceled -= instance.OnPause;
             }
 
             /// <summary>
@@ -633,6 +665,13 @@ namespace DadVSMe.Inputs
             /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
             /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
             void OnRightDash(InputAction.CallbackContext context);
+            /// <summary>
+            /// Method invoked when associated input action "Pause" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+            /// </summary>
+            /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+            /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+            /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+            void OnPause(InputAction.CallbackContext context);
         }
     }
 }

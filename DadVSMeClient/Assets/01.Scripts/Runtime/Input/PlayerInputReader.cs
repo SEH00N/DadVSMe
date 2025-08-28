@@ -1,4 +1,5 @@
 using Cysharp.Threading.Tasks;
+using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using static DadVSMe.Inputs.InputActions;
@@ -23,6 +24,8 @@ namespace DadVSMe.Inputs
 
         private bool attack2PhaseBufferFlag = false;
         private InputActionPhase attack2PhaseBuffer = InputActionPhase.Disabled;
+
+        public event Action onPressPause = null;
 
         public override void Initialize(InputActions inputActions)
         {
@@ -101,6 +104,14 @@ namespace DadVSMe.Inputs
 
             attack2PhaseBuffer = context.phase;
             attack2PhaseBufferFlag = true;
+        }
+
+        public void OnPause(InputAction.CallbackContext context)
+        {
+            if(context.performed)
+            {
+                onPressPause?.Invoke();
+            }
         }
 
         public override void Update()

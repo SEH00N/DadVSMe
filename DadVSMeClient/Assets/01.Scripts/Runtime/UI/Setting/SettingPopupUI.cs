@@ -62,12 +62,12 @@ namespace DadVSMe.UI.Setting
 
             _panelTransform.localScale = Vector2.zero;
 
-            await UniTask.DelayFrame(1);
+            // await UniTask.DelayFrame(1);
 
-            _ = _backgroundDimmed.DOFade(DIMMED_VALUE, APPEAR_TIME);
-            _ = _panelTransform.DOScale(Vector2.one, APPEAR_TIME).SetEase(Ease.OutBack);
+            _ = _backgroundDimmed.DOFade(DIMMED_VALUE, APPEAR_TIME).SetUpdate(true);
+            _ = _panelTransform.DOScale(Vector2.one, APPEAR_TIME).SetEase(Ease.OutBack).SetUpdate(true);
 
-            await UniTask.Delay(TimeSpan.FromSeconds(APPEAR_TIME));
+            await UniTask.Delay(TimeSpan.FromSeconds(APPEAR_TIME), true);
         }
 
         public void OnValueChangedMasterValue(float value)
@@ -102,12 +102,12 @@ namespace DadVSMe.UI.Setting
 
             _panelTransform.localScale = Vector2.one;
 
-            await UniTask.DelayFrame(1);
+            // await UniTask.DelayFrame(1);
 
-            _ = _backgroundDimmed.DOFade(0, DISAPPEAR_TIME);
-            _ = _panelTransform.DOScale(Vector2.zero, DISAPPEAR_TIME).SetEase(Ease.InBack);
+            _ = _backgroundDimmed.DOFade(0, DISAPPEAR_TIME).SetUpdate(true);
+            _ = _panelTransform.DOScale(Vector2.zero, DISAPPEAR_TIME).SetEase(Ease.InBack).SetUpdate(true);
 
-            await UniTask.Delay(TimeSpan.FromSeconds(DISAPPEAR_TIME));
+            await UniTask.Delay(TimeSpan.FromSeconds(DISAPPEAR_TIME), true);
         }
     }
 }
