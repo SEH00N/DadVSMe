@@ -1,11 +1,15 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using Cysharp.Threading.Tasks;
+using H00N.Resources.Addressables;
+using DadVSMe.UI.Setting;
+using H00N.Resources.Pools;
 
 namespace DadVSMe.UI
 {
     public class TitleUI : MonoBehaviour
     {
+        [SerializeField] AddressableAsset<SettingPopupUI> settingPopupUIPrefab = null;
 
         public async void OnTouchStartButton()
         {
@@ -21,6 +25,16 @@ namespace DadVSMe.UI
 
             // FadeOut
             await DOFade.FadeOutAsync();
+        }
+         
+        public async void OnTouchSettingButton()
+        {
+            await settingPopupUIPrefab.InitializeAsync();
+
+            var popup = PoolManager.Spawn<SettingPopupUI>(settingPopupUIPrefab, transform);
+            popup.StretchRect();
+
+            popup.Initialize().Forget();
         }
     }
 }
