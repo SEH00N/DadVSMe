@@ -13,10 +13,12 @@ namespace DadVSMe.Players
 
         [SerializeField] UnitSkillComponent playerSkillComponent;
         [SerializeField] AddressableAsset<SkillSelectPopupUI> skillSelectPopupUIPrefab;
+        [SerializeField] AddressableAsset<AudioClip> levelUpSound;
 
         private void Awake()
         {
             skillSelectPopupUIPrefab.InitializeAsync().Forget();
+            levelUpSound.InitializeAsync().Forget();
         }
 
         [ContextMenu("Levelip")]
@@ -27,6 +29,8 @@ namespace DadVSMe.Players
             if(GameInstance.GameCycle.IsPaused)
                 await UniTask.WaitUntil(() => GameInstance.GameCycle.IsPaused == false);
 
+            new PlaySound(levelUpSound);
+            
             SkillSelectPopupUI skillSelectPopupUI = PoolManager.Spawn<SkillSelectPopupUI>(skillSelectPopupUIPrefab, GameInstance.MainPopupFrame);
             skillSelectPopupUI.StretchRect();
             skillSelectPopupUI.Initialize(playerSkillComponent, GetAvailableSkillTypes(playerSkillComponent), this);

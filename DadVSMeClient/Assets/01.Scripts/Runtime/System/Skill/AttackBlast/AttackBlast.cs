@@ -129,6 +129,9 @@ namespace DadVSMe
 
         private async void PlayTimeScaleEffect()
         {
+            // Temp
+            return;
+
             if(Time.timeScale != GameDefine.DEFAULT_TIME_SCALE)
                 return;
 

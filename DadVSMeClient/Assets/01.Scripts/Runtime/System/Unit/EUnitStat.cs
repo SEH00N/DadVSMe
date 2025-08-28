@@ -8,5 +8,6 @@ namespace DadVSMe
         MoveSpeed,
         AttackPowerMultiplier,
         DashSpeed,
+        ItemMagnetRadius,
     }
 }

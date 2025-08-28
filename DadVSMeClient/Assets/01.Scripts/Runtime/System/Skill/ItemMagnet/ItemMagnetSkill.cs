@@ -1,12 +1,12 @@
+using DadVSMe.Entities;
 using DadVSMe.Players;
-using UnityEngine;
 
 namespace DadVSMe
 {
     public class ItemMagnetSkill : StatUpSkill
     {
         private float levelUpIncreaseRate;
-        private Player player;
+        private UnitStatData statData;
 
         public ItemMagnetSkill(float cooltime, float checkRadius, float levelUpIncreaseRate, float magnetSpeedMultiplier) : base()
         {
@@ -15,7 +15,7 @@ namespace DadVSMe
 
         public override void OnRegist(UnitSkillComponent ownerComponent)
         {
-            player = ownerComponent.GetComponent<Player>();
+            statData = ownerComponent.GetComponent<Player>().FSMBrain.GetAIData<UnitStatData>();
             base.OnRegist(ownerComponent);
         }
 
@@ -23,7 +23,7 @@ namespace DadVSMe
         {
             base.Execute();
 
-            player.itemFidnRadius += levelUpIncreaseRate;
+            statData[EUnitStat.ItemMagnetRadius].RegistAddModifier(levelUpIncreaseRate);
         }   
     }
 }

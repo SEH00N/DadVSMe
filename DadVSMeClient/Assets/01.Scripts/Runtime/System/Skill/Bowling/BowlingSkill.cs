@@ -1,4 +1,3 @@
-using System;
 using DadVSMe.Entities;
 using DadVSMe.Players.FSM;
 using H00N.AI.FSM;
@@ -10,8 +9,8 @@ namespace DadVSMe
     {
         private BowlingSkillData data;
         private PlayerFSMData fsmData;
-        Entity target;
-        Collider2D checkCol;
+        private Entity target;
+        private Collider2D checkCol;
 
         public BowlingSkill(BowlingSkillData data)
         {
@@ -53,12 +52,12 @@ namespace DadVSMe
             if (targetState.gameObject.name.Contains("Throw") || targetState.gameObject.name.Contains("Juggle"))
             {
                 checkCol = target.GetComponent<CapsuleCollider2D>();
-                target.onTriggerEnter.AddListener(OnTriggerEnter);
+                target.OnTriggerEnterEvent += OnTriggerEnter;
             }
             else
             {
                 checkCol = null;
-                target.onTriggerEnter.RemoveListener(OnTriggerEnter);
+                target.OnTriggerEnterEvent -= OnTriggerEnter;
             }
         }
 

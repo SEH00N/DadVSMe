@@ -121,9 +121,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackOffset: {x: 0, y: 0}
-  hitEffects: []
-  attackSounds: []
-  hitSounds: []
   attackData: {fileID: 11400000, guid: eb7d31ceaf0194526bd73f5571c67652, type: 2}
   targetPosition: {fileID: 132300051311107662}
   hitUpOffset: {x: 0, y: 0.4, z: 0}
@@ -1524,17 +1521,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackOffset: {x: 0, y: 0}
-  hitEffects:
-  - key: VFX_Blood1
-  - key: VFX_Impact1
-  attackSounds:
-  - key: sfx_swing_hard_0
-  - key: sfx_swing_hard_1
-  hitSounds:
-  - key: sfx_punch_hard_0
-  - key: sfx_punch_hard_1
-  - key: sfx_punch_hard_2
-  attackData: {fileID: 11400000, guid: e12d1d2d3347a42478abef0fe0d60972, type: 2}
   speed: 15
   moveStopping: 1
   unitStateChecker:
@@ -1554,6 +1540,7 @@ MonoBehaviour:
     dieCompare: 0
     checkWeight: 0
     weight: 0
+  attackData: {fileID: 11400000, guid: e12d1d2d3347a42478abef0fe0d60972, type: 2}
 --- !u!114 &3713533780576776285
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1718,9 +1705,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackOffset: {x: 0, y: 2}
-  hitEffects: []
-  attackSounds: []
-  hitSounds: []
   attackData: {fileID: 11400000, guid: 9ad324be19be647fbb4e83ff715c73a8, type: 2}
   firePosition: {fileID: 3263690418883284025}
   targetPosition: {fileID: 875977578619571919}
@@ -1968,7 +1952,8 @@ PrefabInstance:
       propertyPath: <Weight>k__BackingField
       value: 500
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 2441180411158270835, guid: 16129bf7803a2466f867a51ceea4c109, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 7673012708161170671, guid: 16129bf7803a2466f867a51ceea4c109, type: 3}

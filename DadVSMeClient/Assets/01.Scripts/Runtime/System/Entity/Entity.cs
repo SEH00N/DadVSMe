@@ -24,7 +24,7 @@ namespace DadVSMe.Entities
 
         public bool StaticEntity => staticEntity;
 
-        public UnityEvent<Collider2D> onTriggerEnter;
+        public event Action<Collider2D> OnTriggerEnterEvent;
 
         public void Initialize(IEntityData data)
         {
@@ -68,7 +68,7 @@ namespace DadVSMe.Entities
 
         protected virtual void OnTriggerEnter2D(Collider2D collision)
         {
-            onTriggerEnter?.Invoke(collision);
+            OnTriggerEnterEvent?.Invoke(collision);
         }
     }
 }

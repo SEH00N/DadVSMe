@@ -9302,19 +9302,20 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7488116858921959985}
-  - component: {fileID: 279169761548483819}
   - component: {fileID: 1174489111746341445}
+  - component: {fileID: 279169761548483819}
   - component: {fileID: 6165701722836179940}
-  - component: {fileID: 8895890805159774065}
   - component: {fileID: 2841000604668159261}
   - component: {fileID: 1382251147719448698}
   - component: {fileID: 2812028995853360649}
-  - component: {fileID: 8407812844467455088}
-  - component: {fileID: 8451211484433483914}
-  - component: {fileID: 496568060240948358}
   - component: {fileID: 6550646681929325183}
-  - component: {fileID: 4986737996520123102}
   - component: {fileID: 3263218802335932849}
+  - component: {fileID: 2501345309188779545}
+  - component: {fileID: 8407812844467455088}
+  - component: {fileID: 8895890805159774065}
+  - component: {fileID: 496568060240948358}
+  - component: {fileID: 4986737996520123102}
+  - component: {fileID: 8451211484433483914}
   m_Layer: 8
   m_Name: Player
   m_TagString: Player
@@ -9346,19 +9347,6 @@ Transform:
   - {fileID: 3801318511281256181}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &279169761548483819
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8996695108358816546}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 59305d91e630e4435b577b697b729ca6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  unitRigidbody: {fileID: 8451211484433483914}
 --- !u!114 &1174489111746341445
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9394,8 +9382,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   enemyDetector: {fileID: 644674988795700514}
-  levelUpSound:
-    key: play_again_djing
+  itemCollector: {fileID: 2501345309188779545}
   onLevelUpEvent:
     m_PersistentCalls:
       m_Calls:
@@ -9411,7 +9398,19 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  itemFidnRadius: 5
+--- !u!114 &279169761548483819
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8996695108358816546}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59305d91e630e4435b577b697b729ca6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  unitRigidbody: {fileID: 8451211484433483914}
 --- !u!114 &6165701722836179940
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9439,19 +9438,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &8895890805159774065
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8996695108358816546}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1bd0c3919e0924b2e8cd573812f1afa9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  fsmBrain: {fileID: 2841000604668159261}
 --- !u!114 &2841000604668159261
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9548,6 +9534,47 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59731d988eb4d4a4ea734b92a123e5c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &6550646681929325183
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8996695108358816546}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ac7311ac0ae245a39789789efa20658, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  skillDataContainer: {fileID: 11400000, guid: 9982ab3a7b9754d5f958fa5fc2b717de, type: 2}
+--- !u!114 &3263218802335932849
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8996695108358816546}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a7d37be4f1604bbca23de35eed3eaf1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: {fileID: 6165701722836179940}
+  brain: {fileID: 2841000604668159261}
+  defaultSortingOrderResolverCollider: {fileID: 4518340953437237913}
+  grabbedSortingOrderResolverCollider: {fileID: 6113472226918677138}
+--- !u!114 &2501345309188779545
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8996695108358816546}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 427165a1bea7f4882857efda3a3ff7d8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &8407812844467455088
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9563,33 +9590,21 @@ MonoBehaviour:
   playerSkillComponent: {fileID: 6550646681929325183}
   skillSelectPopupUIPrefab:
     key: SkillSelectPopupUI
---- !u!50 &8451211484433483914
-Rigidbody2D:
-  serializedVersion: 5
+  levelUpSound:
+    key: 
+--- !u!114 &8895890805159774065
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8996695108358816546}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDamping: 0
-  m_AngularDamping: 0.05
-  m_GravityScale: 0
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 4
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1bd0c3919e0924b2e8cd573812f1afa9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fsmBrain: {fileID: 2841000604668159261}
 --- !u!61 &496568060240948358
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -9636,19 +9651,6 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1.5, y: 0.16}
   m_EdgeRadius: 0
---- !u!114 &6550646681929325183
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8996695108358816546}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4ac7311ac0ae245a39789789efa20658, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  skillDataContainer: {fileID: 11400000, guid: 9982ab3a7b9754d5f958fa5fc2b717de, type: 2}
 --- !u!61 &4986737996520123102
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -9695,22 +9697,33 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1.8792293, y: 3.1219835}
   m_EdgeRadius: 0
---- !u!114 &3263218802335932849
-MonoBehaviour:
+--- !u!50 &8451211484433483914
+Rigidbody2D:
+  serializedVersion: 5
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8996695108358816546}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6a7d37be4f1604bbca23de35eed3eaf1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  health: {fileID: 6165701722836179940}
-  brain: {fileID: 2841000604668159261}
-  defaultSortingOrderResolverCollider: {fileID: 4518340953437237913}
-  grabbedSortingOrderResolverCollider: {fileID: 6113472226918677138}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4
 --- !u!1 &9019325040001713458
 GameObject:
   m_ObjectHideFlags: 0

@@ -1,11 +1,6 @@
 using System;
-using Cysharp.Threading.Tasks;
-using DadVSMe.Enemies.FSM;
 using DadVSMe.Entities;
-using DadVSMe.Players;
 using H00N.AI.FSM;
-using H00N.Resources.Addressables;
-using H00N.Resources.Pools;
 using UnityEngine;
 
 namespace DadVSMe.Enemies
@@ -18,7 +13,6 @@ namespace DadVSMe.Enemies
         [SerializeField] NPCMovement npcMovement = null;
         [SerializeField] EnemyDetector enemyDetector = null;
         [SerializeField] FSMState grabState = null;
-        [SerializeField] AddressableAsset<Experience> experiencePrefab;
 
         [field: SerializeField]
         public float Weight { get; set; }
@@ -30,7 +24,6 @@ namespace DadVSMe.Enemies
             base.InitializeInternal(data);
             npcMovement.Initialize();
             enemyDetector.Initialize();
-            experiencePrefab.InitializeAsync().Forget();
         }
 
         protected override void LateUpdate()

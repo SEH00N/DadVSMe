@@ -1227,6 +1227,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   expPrefab:
     key: Experience
+  healPackPrefab:
+    key: HealPack
+  healPackProbability: 0.05
 --- !u!1 &4220115322378323114
 GameObject:
   m_ObjectHideFlags: 0
@@ -2463,9 +2466,6 @@ MonoBehaviour:
   staticEntity: 0
   entityAnimator: {fileID: 7463771367122635574}
   sortingOrderResolver: {fileID: 2266096010311683299}
-  onTriggerEnter:
-    m_PersistentCalls:
-      m_Calls: []
   unitMovement: {fileID: 6564578028461733982}
   fsmBrain: {fileID: 6582178051482799858}
   unitHealth: {fileID: 4688005719821483370}
@@ -2485,8 +2485,6 @@ MonoBehaviour:
   npcMovement: {fileID: 3222536103988418713}
   enemyDetector: {fileID: 5256345900857985724}
   grabState: {fileID: 1729459063318387908}
-  experiencePrefab:
-    key: Experience
   <Weight>k__BackingField: 0
 --- !u!114 &6564578028461733982
 MonoBehaviour:

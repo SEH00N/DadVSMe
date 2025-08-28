@@ -2,7 +2,6 @@ using System;
 using Cysharp.Threading.Tasks;
 using DadVSMe.Entities;
 using DadVSMe.Players.FSM;
-using H00N.Resources.Addressables;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -12,7 +11,7 @@ namespace DadVSMe.Players
     {
         [Header("Player")]
         [SerializeField] EnemyDetector enemyDetector = null;
-        [SerializeField] AddressableAsset<AudioClip> levelUpSound;
+        [SerializeField] PlayerItemCollector itemCollector = null;
 
         protected override RigidbodyType2D DefaultRigidbodyType => RigidbodyType2D.Dynamic;
 
@@ -22,8 +21,6 @@ namespace DadVSMe.Players
         public event Action OnAngerGaugeChangedEvent = null;
         public event Action OnEXPChangedEvent = null;
 
-        public float itemFidnRadius;
-
         // private void Start()
         // {
         //     Initialize(new PlayerEntityData());
@@ -32,18 +29,14 @@ namespace DadVSMe.Players
         protected override void InitializeInternal(IEntityData data)
         {
             base.InitializeInternal(data);
+
+            itemCollector.Initialize(this);
             enemyDetector.Initialize();
-            levelUpSound.InitializeAsync().Forget();
 
             onAttackTargetEvent.AddListener(OnAttackTarget);
             onStartAngerEvent.AddListener(OnStartAnger);
 
             playerFSMData = fsmBrain.GetAIData<PlayerFSMData>();
-        }
-
-        void Update()
-        {
-            FindItem();
         }
 
         private void OnAttackTarget(Unit target, IAttackData attackData)
@@ -58,13 +51,13 @@ namespace DadVSMe.Players
                 return;
 
             playerFSMData.currentAngerGauge = Mathf.Min(playerFSMData.currentAngerGauge + 5, playerFSMData.maxAngerGauge);
-            playerFSMData.onAngerGaugeChangedEvent?.Invoke();
+            OnAngerGaugeChangedEvent?.Invoke();
         }
 
         public void OnStartAnger()
         {
             playerFSMData.currentAngerGauge = 0f;
-            playerFSMData.onAngerGaugeChangedEvent?.Invoke();
+            OnAngerGaugeChangedEvent?.Invoke();
         }
 
         public async void ActiveAngerForUnityEvent()
@@ -101,51 +94,13 @@ namespace DadVSMe.Players
             OnEXPChangedEvent?.Invoke();
         }
 
-        public void LevelUp()
+        private void LevelUp()
         {
             playerFSMData.currentLevel++;
             playerFSMData.currentExp -= playerFSMData.levelUpExp;
-            playerFSMData.levelUpExp =
-                Mathf.RoundToInt(playerFSMData.baseLevelUpXP * Mathf.Pow(playerFSMData.levelUpRatio, playerFSMData.currentLevel - 1));
+            playerFSMData.levelUpExp = Mathf.RoundToInt(playerFSMData.baseLevelUpXP * Mathf.Pow(playerFSMData.levelUpRatio, playerFSMData.currentLevel - 1));
 
             onLevelUpEvent?.Invoke(playerFSMData.currentLevel);
-
-            _ = new PlaySound(levelUpSound);
         }
-
-        void FindItem()
-        {
-            Vector2 spawnPoint = transform.position;
-            Collider2D[] cols = Physics2D.OverlapCircleAll(spawnPoint, itemFidnRadius);
-            
-            if (cols.Length == 0)
-                return;
-            
-            foreach (var col in cols)
-            {
-                if (col.gameObject.TryGetComponent<Item>(out Item item))
-                {
-                    item.MagnetMove(transform);
-                }
-            }
-        }
-
-        protected override void OnTriggerEnter2D(Collider2D collision)
-        {
-            base.OnTriggerEnter2D(collision);
-
-            if (collision.gameObject.TryGetComponent<IInteractable>(out IInteractable interactable))
-            {
-                //interactable.Interact(this);
-            }
-        }
-
-#if UNITY_EDITOR
-        [ContextMenu("Set FSM State as Default State")]
-        private void SetFSMStateAsDefaultState()
-        {
-            fsmBrain.SetAsDefaultState();
-        }
-        #endif
     }
 }

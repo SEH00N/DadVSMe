@@ -14,8 +14,7 @@ namespace DadVSMe.UI.HUD
         public void Initialize(Player player)
         {
             playerFSMData = player.FSMBrain.GetAIData<PlayerFSMData>();
-
-            playerFSMData.onAngerGaugeChangedEvent += UpdateUI;
+            player.OnAngerGaugeChangedEvent += UpdateUI;
             UpdateUI();
         }
 

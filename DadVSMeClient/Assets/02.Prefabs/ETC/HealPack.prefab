@@ -10,12 +10,12 @@ GameObject:
   m_Component:
   - component: {fileID: 6070952893914742544}
   - component: {fileID: 1415007170741532367}
-  - component: {fileID: 63284402691811751}
   - component: {fileID: 4294130172725516495}
   - component: {fileID: 5152471184113010942}
   - component: {fileID: 3155138942063947995}
+  - component: {fileID: 3184843814567984785}
   m_Layer: 12
-  m_Name: Experience
+  m_Name: HealPack
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -31,7 +31,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.65, y: 0.65, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -80,7 +80,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -8028637060798740405, guid: afd5560852c1548838000bb3f0137a61, type: 3}
+  m_Sprite: {fileID: -1467010021776339907, guid: f08f4126f47ae48f0ba3a2237f09cadc, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -91,21 +91,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &63284402691811751
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5986469104215612063}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2df165a60bd024a0fbe676fb16021642, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  onCollectedSound:
-    key: sfx_corkpop
-  amount: 300
 --- !u!114 &4294130172725516495
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -217,4 +202,19 @@ CircleCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: -0.0021615475, y: 0.009660482}
-  m_Radius: 0.19665991
+  m_Radius: 0.55
+--- !u!114 &3184843814567984785
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5986469104215612063}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7edf96219c2cc424c97656d0026df768, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onCollectedSound:
+    key: 
+  amount: 10

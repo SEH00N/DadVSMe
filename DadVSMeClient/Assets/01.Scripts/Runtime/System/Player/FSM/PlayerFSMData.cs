@@ -2,6 +2,7 @@ using H00N.AI;
 using UnityEngine;
 using DadVSMe.Entities;
 using System;
+using H00N.AI.FSM;
 
 namespace DadVSMe.Players.FSM
 {
@@ -24,7 +25,6 @@ namespace DadVSMe.Players.FSM
         [HideInInspector] public float currentAngerGauge;
         public float angerTime;
         [HideInInspector] public bool isAnger;
-        public Action onAngerGaugeChangedEvent = null;
 
         public float baseLevelUpXP = 3f;
         public float levelUpRatio = 1.7f;
