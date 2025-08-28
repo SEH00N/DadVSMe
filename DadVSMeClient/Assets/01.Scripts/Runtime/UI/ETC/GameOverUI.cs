@@ -9,14 +9,32 @@ namespace DadVSMe.UI
     {
         public async void OnTouchRetryButton()
         {
+            // FadeIn
+            await DOFade.FadeInAsync();
+
+            // Load Game Scene
             await SceneManager.TryLoadSceneAsync(GameDefine.GAME_SCENE_NAME, LoadSceneMode.Single);
-            GameInstance.GameCycle.InitializeAsync().Forget();
+
+            // Initialize GameCycle
+            await GameInstance.GameCycle.InitializeAsync();
+
+            // FadeOut Immediately
+            _ = DOFade.FadeOutAsync();
         }
 
         public async void OnTouchTitleButton()
         {
+            // FadeIn
+            await DOFade.FadeInAsync();
+
+            // Release Resources
             await new ReleaseResourceByLabel().ReleaseAsync(GameDefine.ADDRESSABLES_LABEL_GAME_ASSETS);
-            _ = SceneManager.TryLoadSceneAsync(GameDefine.TITLE_SCENE_NAME, LoadSceneMode.Single);
+
+            // Load Title Scene
+            await SceneManager.TryLoadSceneAsync(GameDefine.TITLE_SCENE_NAME, LoadSceneMode.Single);
+
+            // FadeOut Immediately
+            _ = DOFade.FadeOutAsync(0f);
         }
     }
 }
