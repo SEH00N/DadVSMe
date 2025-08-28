@@ -14,7 +14,6 @@ namespace DadVSMe
         private IAttackData attackData;
         private IAttackFeedbackDataContainer feedbackDataContainer;
 
-        private EntityAnimator entityAnimator;
         private PoolReference poolReference;
         private BezierMover bezierMover;
 
@@ -30,7 +29,6 @@ namespace DadVSMe
 
         void Awake()
         {
-            entityAnimator = GetComponent<EntityAnimator>();
             bezierMover = GetComponent<BezierMover>();
             poolReference = GetComponent<PoolReference>();
         }
@@ -55,8 +53,6 @@ namespace DadVSMe
                 _ = new PlayHitFeedback(feedbackDataContainer, EAttackAttribute.Normal, transform.position, Vector3.zero, (int)Mathf.Sign(direction.x));
                 targetHealth.Attack(instigator, attackData);
             }
-            
-            
         }
 
         void Update()
@@ -67,7 +63,9 @@ namespace DadVSMe
                 return;
             }
 
-            transform.up = (target.transform.position - transform.position).normalized;
+            // transform.up = (target.transform.position - transform.position).normalized;
+            float angle = Mathf.Atan2(bezierMover.Forward2D.y, bezierMover.Forward2D.x) * Mathf.Rad2Deg - 90f;
+            transform.rotation = Quaternion.Euler(0, 0, angle);
         }
 
         public void SetInstigator(Unit instigator, IAttackData attackData, IAttackFeedbackDataContainer feedbackDataContainer)

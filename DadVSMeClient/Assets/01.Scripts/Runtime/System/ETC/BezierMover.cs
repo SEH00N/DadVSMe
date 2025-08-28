@@ -40,6 +40,9 @@ namespace DadVSMe
         private bool isRunning;
         public bool IsRunning => isRunning;
 
+        public Vector3 Forward { get; private set; }
+        public Vector2 Forward2D { get; private set; }
+
         void Reset()
         {
             rb = GetComponent<Rigidbody>();
@@ -81,32 +84,33 @@ namespace DadVSMe
 
         async UniTask MoveRoutine(CancellationToken ct)
         {
-            p0 = transform.position;
-            p3 = target ? target.position : p0 + Vector3.up * 0.1f;
+            p0 = (Vector2)transform.position;
+            p3 = target ? (Vector2)target.position : p0 + Vector3.up * 0.1f;
 
-            float dist = Vector3.Distance(p0, p3);
+            float dist = Vector2.Distance(p0, p3);
 
-            // 컨트롤 포인트 계산
-            var dir = (p3 - p0).sqrMagnitude > 0.0001f ? (p3 - p0).normalized : Vector3.forward;
-            var right = Vector3.Cross(Vector3.up, dir);
-            if (right.sqrMagnitude < 0.01f) right = Vector3.right;
-            var up = Vector3.Cross(dir, right).normalized;
+            // 2D 방향 벡터 계산
+            var dir = (p3 - p0).sqrMagnitude > 0.0001f ? (p3 - p0).normalized : Vector3.right;
+            // 2D right 벡터 계산 (90도 회전)
+            var right = new Vector3(-dir.y, dir.x, 0);
 
             float r1 = dist * UnityEngine.Random.Range(0.4f, 0.8f);
             float r2 = dist * UnityEngine.Random.Range(0.4f, 0.8f);
             float side = UnityEngine.Random.value < 0.5f ? -1f : 1f;
 
-            p1 = p0
-               + dir * dist * UnityEngine.Random.Range(0.4f, 0.7f)
-               + right * side * r1 * 0.5f
-               + up * (r1 * upwardBias);
+            // 2D 제어점 계산
+            p1 = p0 
+                + dir * dist * UnityEngine.Random.Range(0.4f, 0.7f)    // 진행 방향
+                + right * side * r1 * 0.5f;                           // 좌우 휘어짐
 
             p2 = Vector3.Lerp(p0, p3, UnityEngine.Random.Range(0.45f, 0.8f))
-               + right * -side * r2 * 0.4f
-               + up * (r2 * upwardBias * 0.5f);
+                + right * -side * r2 * 0.4f;                          // 반대 방향 휘어짐
 
             // 물리 끄기(선택)
             if (rb) { rb.isKinematic = true; rb.linearVelocity = Vector3.zero; }
+
+            Forward = dir;
+            Forward2D = dir;
 
             // 짧은 딜레이 + 가벼운 떨림
             float delay = Mathf.Max(0f, delayBeforeHoming);
@@ -118,7 +122,15 @@ namespace DadVSMe
                 {
                     ct.ThrowIfCancellationRequested();
                     float wobble = Mathf.Sin(Time.time * 60f) * 0.005f;
-                    transform.position = basePos + UnityEngine.Random.insideUnitSphere * 0.01f + Vector3.up * wobble;
+                    // Vector3 prevPosition = transform.position;
+                    Vector3 targetPosition = basePos + UnityEngine.Random.insideUnitSphere * 0.01f + Vector3.up * wobble;
+                    transform.position = targetPosition;
+
+                    if(target)
+                    {
+                        Forward = (target.position - transform.position).normalized;
+                        Forward2D = ((Vector2)target.position - (Vector2)transform.position).normalized;
+                    }
                     await UniTask.Yield(PlayerLoopTiming.Update, ct);
                 }
             }
@@ -132,7 +144,8 @@ namespace DadVSMe
 
                 if (target)
                 {
-                    if (updateEndPointContinuously) p3 = target.position;
+                    if (updateEndPointContinuously) 
+                        p3 = (Vector2)target.position;
 
                     if ((transform.position - p3).sqrMagnitude <= collectDistance * collectDistance)
                     {
@@ -144,8 +157,11 @@ namespace DadVSMe
                 float rawT = Mathf.Clamp01((Time.time - start) / duration);
                 float eased = speedOverLife != null ? speedOverLife.Evaluate(rawT) : BezierUtility.EaseInOut(rawT);
 
-                Vector3 pos = BezierUtility.Cubic(p0, p1, p2, p3, eased);
-                transform.position = pos;
+                Vector3 prevPosition = transform.position;
+                Vector3 targetPosition = BezierUtility.Cubic(p0, p1, p2, p3, eased);
+                Forward = (targetPosition - prevPosition).normalized;
+                Forward2D = ((Vector2)targetPosition - (Vector2)prevPosition).normalized;
+                transform.position = targetPosition;
 
                 await UniTask.Yield(PlayerLoopTiming.Update, ct);
             }
@@ -180,6 +196,14 @@ namespace DadVSMe
                 Gizmos.DrawLine(prev, point);
                 prev = point;
             }
+
+            // forward axis
+            Gizmos.color = Color.green;
+            Gizmos.DrawLine(transform.position, transform.position + (Vector3)Forward2D * 2.5f);
+
+            // right axis
+            Gizmos.color = Color.red;
+            Gizmos.DrawLine(transform.position, transform.position + Vector3.Cross(-Vector3.forward, (Vector3)Forward2D) * 2.5f); 
         }
     }
 }
