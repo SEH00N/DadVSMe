@@ -68,7 +68,6 @@ namespace DadVSMe
                 return;
             }
 
-            // transform.up = (target.transform.position - transform.position).normalized;
             float angleInRadian = Mathf.Atan2(bezierMover.Forward2D.y, bezierMover.Forward2D.x);
             float degree = angleInRadian * Mathf.Rad2Deg - 90f;
             transform.rotation = Quaternion.Euler(0, 0, degree);
@@ -89,21 +88,10 @@ namespace DadVSMe
         public async Task Launch()
         {
             bezierMover.LaunchAsync(target.transform).Forget();
-            
-            // staticVisual.SetActive(true);
-            // dynamicVisual.gameObject.SetActive(false);
-
-            // _ = UniTask.Delay(TimeSpan.FromSeconds(bezierMover.delayBeforeHoming)).ContinueWith(() => {
-            //     staticVisual.SetActive(false);
-            //     dynamicVisual.gameObject.SetActive(true);
-            //     dynamicVisual.Clear();
-            //     dynamicVisual.AddPosition(transform.position + (transform.up * -10f));
-            // });
 
             staticVisual.SetActive(false);
             foreach (var dynamicVisual in dynamicVisuals)
                 dynamicVisual.Clear();
-            // dynamicVisual.AddPosition(transform.position + (transform.up * -10f));
 
             await UniTask.Delay(System.TimeSpan.FromSeconds(4f));
         }
