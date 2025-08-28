@@ -21,6 +21,7 @@ namespace DadVSMe
         public float controlRadiusMin = 0.6f;
         public float controlRadiusMax = 1.8f;
         public float upwardBias = 0.4f;
+        public float sideRadius = 1f;
 
         [Header("Behavior")]
         public bool updateEndPointContinuously = true;
@@ -96,15 +97,15 @@ namespace DadVSMe
 
             float r1 = dist * UnityEngine.Random.Range(0.4f, 0.8f);
             float r2 = dist * UnityEngine.Random.Range(0.4f, 0.8f);
-            float side = UnityEngine.Random.value < 0.5f ? -1f : 1f;
+            float side = UnityEngine.Random.value < 0.5f ? -sideRadius : sideRadius;
 
             // 2D 제어점 계산
             p1 = p0 
                 + dir * dist * UnityEngine.Random.Range(0.4f, 0.7f)    // 진행 방향
-                + right * side * r1 * 0.5f;                           // 좌우 휘어짐
+                + right * side * r1;
 
             p2 = Vector3.Lerp(p0, p3, UnityEngine.Random.Range(0.45f, 0.8f))
-                + right * -side * r2 * 0.4f;                          // 반대 방향 휘어짐
+                + right * -side * r2;
 
             // 물리 끄기(선택)
             if (rb) { rb.isKinematic = true; rb.linearVelocity = Vector3.zero; }
