@@ -11,9 +11,9 @@ namespace DadVSMe.Background
         public BackgroundLayerInfo layerInfo;
         public BackgroundTrailer trailer;
 
-        public void Initialize(Collider2D boundary, Transform cameraTrm, BackgroundResourceReleaser releaser)
+        public void Initialize(Collider2D deadLineboundary, Collider2D backgroundLoadBoundary, Transform cameraTrm, BackgroundResourceReleaser releaser)
         {
-            trailer.Initialize(layerInfo, cameraTrm, boundary);
+            trailer.Initialize(layerInfo, cameraTrm, deadLineboundary, backgroundLoadBoundary);
             releaser.HandleRegisterThemeData(layerInfo.themeDataArr);
         }
     }
@@ -21,7 +21,8 @@ namespace DadVSMe.Background
     public class BackgroundSetup : MonoBehaviour
     {
         [SerializeField] Transform _cameraTransform;
-        [SerializeField] Collider2D _boundary;
+        [SerializeField] Collider2D _deadLineBoundary;
+        [SerializeField] Collider2D _backgroundLoadBoundary;
         [Space(20)]
         [SerializeField] private BackgroundTrailerGroup _backTrailerGroup;
         [SerializeField] private BackgroundTrailerGroup _middleTrailerGroup;
@@ -38,7 +39,7 @@ namespace DadVSMe.Background
 
         private void InitializeBackgroundTrailerGroup(BackgroundTrailerGroup group, BackgroundResourceReleaser releaser)
         {
-            group.Initialize(_boundary, _cameraTransform, releaser);
+            group.Initialize(_deadLineBoundary, _backgroundLoadBoundary, _cameraTransform, releaser);
             group.trailer.onDespawnedBackground += releaser.HandleChangedNewLayerTheme;
             group.trailer.Run().Forget();
         }

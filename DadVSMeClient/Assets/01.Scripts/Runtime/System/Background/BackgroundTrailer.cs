@@ -14,7 +14,9 @@ namespace DadVSMe.Background
         private Transform _startTransform;
         private Transform _parentTransform;
         private Transform _cameraTransform;
-        private Collider2D _boundary;
+
+        private Collider2D _deadlineBoundary;
+        private Collider2D _backgroundLoadBoundary;
 
         private Queue<BackgroundThemeData> _themeDataQueue;
         private BackgroundThemeData _currentThemeData;
@@ -26,13 +28,15 @@ namespace DadVSMe.Background
         private bool _onRunning;
         private bool _canSpawning;
 
-        public void Initialize(BackgroundLayerInfo layerInfo, Transform cameraTrm, Collider2D boundary)
+        public void Initialize(BackgroundLayerInfo layerInfo, Transform cameraTrm, Collider2D deadLineBoundary, Collider2D bgLoadBoundary)
         {
             _themeDataQueue = new Queue<BackgroundThemeData>(layerInfo.themeDataArr);
+
             _startTransform = layerInfo.startTransform;
             _parentTransform = layerInfo.parentTransform;
             _cameraTransform = cameraTrm;
-            _boundary = boundary;
+            _deadlineBoundary = deadLineBoundary;
+            _backgroundLoadBoundary = bgLoadBoundary;
 
             _runTimeBackgroundContainer = new List<BackgroundObject>();
 
@@ -104,7 +108,7 @@ namespace DadVSMe.Background
 
             var firstBG = _runTimeBackgroundContainer[0];
 
-            if (firstBG.SocketPosition.x < _boundary.bounds.min.x)
+            if (firstBG.SocketPosition.x < _deadlineBoundary.bounds.min.x)
             {
                 DespawnBackground(_runTimeBackgroundContainer[0]);
             }
@@ -115,7 +119,7 @@ namespace DadVSMe.Background
             var penultimateIdx = lastIdx - 1;
             var penultimateBG = _runTimeBackgroundContainer[penultimateIdx];
 
-            if (penultimateBG.SocketPosition.x < _boundary.bounds.max.x)
+            if (penultimateBG.SocketPosition.x < _backgroundLoadBoundary.bounds.max.x)
             {
                 if (_prefabContainer.Count == 0)
                 {
