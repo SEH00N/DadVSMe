@@ -24,10 +24,10 @@ namespace DadVSMe.Players
 
         public float itemFidnRadius;
 
-        private void Start()
-        {
-            InitializeInternal(new PlayerEntityData());
-        }
+        // private void Start()
+        // {
+        //     Initialize(new PlayerEntityData());
+        // }
 
         protected override void InitializeInternal(IEntityData data)
         {

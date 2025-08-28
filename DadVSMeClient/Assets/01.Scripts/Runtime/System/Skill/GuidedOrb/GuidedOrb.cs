@@ -22,6 +22,10 @@ namespace DadVSMe
 
         [SerializeField]
         private float moveSpeed;
+        [SerializeField]
+        private GameObject staticVisual;
+        [SerializeField]
+        private TrailRenderer dynamicVisual;
         [SerializeField] 
         private UnityEvent onDespawnEvent;
 
@@ -83,6 +87,20 @@ namespace DadVSMe
         public async Task Launch()
         {
             bezierMover.LaunchAsync(target.transform).Forget();
+            
+            staticVisual.SetActive(true);
+            dynamicVisual.gameObject.SetActive(false);
+
+            _ = UniTask.Delay(TimeSpan.FromSeconds(bezierMover.delayBeforeHoming)).ContinueWith(() => {
+                staticVisual.SetActive(false);
+                dynamicVisual.gameObject.SetActive(true);
+                dynamicVisual.Clear();
+                dynamicVisual.AddPosition(transform.position + (transform.up * -10f));
+            });
+
+            // staticVisual.SetActive(false);
+            // dynamicVisual.Clear();
+            // dynamicVisual.AddPosition(transform.position + (transform.up * -10f));
 
             await UniTask.Delay(System.TimeSpan.FromSeconds(4f));
         }
