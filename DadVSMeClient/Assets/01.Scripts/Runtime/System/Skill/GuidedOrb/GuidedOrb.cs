@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 using Cysharp.Threading.Tasks;
 using DadVSMe.Entities;
@@ -25,7 +26,7 @@ namespace DadVSMe
         [SerializeField]
         private GameObject staticVisual;
         [SerializeField]
-        private TrailRenderer dynamicVisual;
+        private List<TrailRenderer> dynamicVisuals;
         [SerializeField] 
         private UnityEvent onDespawnEvent;
 
@@ -100,7 +101,8 @@ namespace DadVSMe
             // });
 
             staticVisual.SetActive(false);
-            dynamicVisual.Clear();
+            foreach (var dynamicVisual in dynamicVisuals)
+                dynamicVisual.Clear();
             // dynamicVisual.AddPosition(transform.position + (transform.up * -10f));
 
             await UniTask.Delay(System.TimeSpan.FromSeconds(4f));
