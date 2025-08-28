@@ -1,7 +1,9 @@
 using System.Collections;
 using System.Threading;
+using System.Threading.Tasks;
 using Cysharp.Threading.Tasks;
 using DadVSMe.Entities;
+using DG.Tweening;
 using H00N.AI.FSM;
 using H00N.Resources.Addressables;
 using H00N.Resources.Pools;
@@ -11,12 +13,16 @@ namespace DadVSMe
 {
     public class AttackBlast : MonoBehaviour
     {
+        private const float ANGLE_RANDOMNESS = 5f;
+
         [SerializeField]
         private AttackDataBase attackData;
         [SerializeField]
         private AddressableAsset<PoolableEffect> startEffectPrefab;
         [SerializeField]
         private Transform effectSpawnPoint;
+        [SerializeField]
+        private SpriteRenderer visualRenderer = null;
 
         private UnitMovement movement;
         private PoolReference poolReference;
@@ -26,8 +32,8 @@ namespace DadVSMe
 
         [SerializeField]
         private float moveSpeed;
-        private float lifeTime;
 
+        private static bool timeScaleEffectAvailable = true;
         private CancellationTokenSource _lifetimeCts;
 
         void Awake()
@@ -54,7 +60,11 @@ namespace DadVSMe
 
         public async void Launch(Vector3 direction, float lifeTime)
         {
-            this.lifeTime = lifeTime;
+            float angle = Random.Range(-ANGLE_RANDOMNESS, ANGLE_RANDOMNESS);
+            Quaternion rotation = Quaternion.Euler(0, 0, angle);
+            direction = (rotation * direction).normalized;
+            transform.rotation = rotation;
+
             movement.SetActive(true);
             movement.SetMovementVelocity(direction * moveSpeed);
 
@@ -62,6 +72,7 @@ namespace DadVSMe
             _lifetimeCts?.Dispose();
             _lifetimeCts = null;
 
+            PlayTween(lifeTime);
             PlayStartEffectAsync();
 
             _lifetimeCts = new CancellationTokenSource();
@@ -76,6 +87,14 @@ namespace DadVSMe
             {
                 PoolManager.Despawn(poolReference);
             }
+        }
+
+        private async void PlayTween(float lifeTime)
+        {
+            visualRenderer.color = new Color(visualRenderer.color.r, visualRenderer.color.g, visualRenderer.color.b, 0);
+            await visualRenderer.DOFade(1, lifeTime * 0.4f).SetEase(Ease.OutSine);
+            await UniTask.Delay(System.TimeSpan.FromSeconds(lifeTime * 0.2f));
+            await visualRenderer.DOFade(0, lifeTime * 0.4f).SetEase(Ease.InSine);
         }
 
         private async void PlayStartEffectAsync()
@@ -96,6 +115,7 @@ namespace DadVSMe
 
             if (collision.gameObject.TryGetComponent<UnitHealth>(out UnitHealth targetHealth))
             {
+                PlayTimeScaleEffect();
                 targetHealth.Attack(instigator, attackData);
                 UnitFSMData unitFSMData = instigator.GetComponent<FSMBrain>().GetAIData<UnitFSMData>();
                 _ = new PlayHitFeedback(attackData, unitFSMData.attackAttribute, targetHealth.transform.position, Vector3.zero, unitFSMData.forwardDirection);
@@ -105,6 +125,24 @@ namespace DadVSMe
             // _lifetimeCts?.Cancel();
 
             // PoolManager.Despawn(poolReference);
+        }
+
+        private async void PlayTimeScaleEffect()
+        {
+            if(Time.timeScale != GameDefine.DEFAULT_TIME_SCALE)
+                return;
+
+            if(!timeScaleEffectAvailable)
+                return;
+
+            timeScaleEffectAvailable = false;
+
+            TimeManager.SetTimeScale(0.3f, true);
+            await UniTask.WaitForSeconds(0.05f);
+            TimeManager.SetTimeScale(GameDefine.DEFAULT_TIME_SCALE, true);
+
+            await UniTask.WaitForSeconds(2f);
+            timeScaleEffectAvailable = true;
         }
     }
 }

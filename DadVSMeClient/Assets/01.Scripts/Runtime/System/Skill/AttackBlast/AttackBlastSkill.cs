@@ -13,6 +13,7 @@ namespace DadVSMe
 {
     public class AttackBlastSkill : UnitSkill
     {
+        private const float SPAWN_RANDOMNESS = 0.5f;
         private static readonly Vector2 SpawnOffset = new Vector2(1.5f, 2f);
 
         private AddressableAsset<AttackBlast> prefab = null;
@@ -42,7 +43,7 @@ namespace DadVSMe
             attackBlast.SetInstigator(ownerComponent.gameObject.GetComponent<Unit>());
 
             Transform ownerTrm = ownerComponent.transform;
-            attackBlast.transform.position = ownerTrm.position + new Vector3(SpawnOffset.x * Math.Sign(ownerTrm.localScale.x), SpawnOffset.y, 0f);
+            attackBlast.transform.position = ownerTrm.position + new Vector3(SpawnOffset.x * Math.Sign(ownerTrm.localScale.x), SpawnOffset.y, 0f) + (Vector3)(UnityEngine.Random.insideUnitCircle * SPAWN_RANDOMNESS);
             Vector3 scale = attackBlast.transform.localScale;
             scale.x *= Math.Sign(ownerTrm.localScale.x);
             attackBlast.transform.localScale = scale;
