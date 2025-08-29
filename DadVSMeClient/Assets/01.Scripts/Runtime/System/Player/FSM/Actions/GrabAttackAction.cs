@@ -53,7 +53,8 @@ namespace DadVSMe.Players.FSM
 
         private GrabAttackData GetGrabAttackData()
         {
-            return grabAttackDatas[playerFSMData?.grabAttackCount ?? 0 % grabAttackDatas.Count];
+            int grabAttackCount = playerFSMData?.grabAttackCount ?? 0;
+            return grabAttackDatas[grabAttackCount % grabAttackDatas.Count];
         }
     }
 }

@@ -77,7 +77,7 @@ namespace DadVSMe.Entities
 
         private void UpdateGroundPositionY()
         {
-            if (staticEntity)
+            if (StaticEntity)
                 return;
 
             unitFSMData.groundPositionY = transform.position.y;

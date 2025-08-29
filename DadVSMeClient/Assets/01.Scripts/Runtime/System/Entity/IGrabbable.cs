@@ -4,7 +4,7 @@ namespace DadVSMe.Entities
     {
         public float Weight { get; set; }
 
-        public void Grab(Entity performer);
-        public void Release(Entity performer);
+        public void Grab(Unit performer);
+        public void Release(Unit performer);
     }
 }

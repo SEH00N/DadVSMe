@@ -17,6 +17,7 @@ namespace DadVSMe.Enemies
         [field: SerializeField]
         public float Weight { get; set; }
 
+        private Unit grabber = null;
         private bool skipUpdate = false;
 
         protected override void InitializeInternal(IEntityData data)
@@ -35,19 +36,24 @@ namespace DadVSMe.Enemies
             }
 
             base.LateUpdate();
+
+            if(grabber != null)
+                unitFSMData.groundPositionY = grabber.FSMBrain.GetAIData<UnitFSMData>().groundPositionY;
         }
 
-        void IGrabbable.Grab(Entity performer)
+        void IGrabbable.Grab(Unit performer)
         {
             staticEntity = true;
+            grabber = performer;
             performer.AddChildSortingOrderResolver(sortingOrderResolver);
             fsmBrain.ChangeState(grabState);
         }
 
-        void IGrabbable.Release(Entity performer)
+        void IGrabbable.Release(Unit performer)
         {
             staticEntity = false;
             skipUpdate = true;
+            grabber = null;
             performer.RemoveChildSortingOrderResolver(sortingOrderResolver);
         }
 

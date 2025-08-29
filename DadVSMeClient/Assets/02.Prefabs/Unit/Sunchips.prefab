@@ -1780,6 +1780,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 226392262685617104, guid: 16129bf7803a2466f867a51ceea4c109, type: 3}
+      propertyPath: defaultOffset
+      value: 3.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 226392262685617104, guid: 16129bf7803a2466f867a51ceea4c109, type: 3}
+      propertyPath: checkGrabState
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 226392262685617104, guid: 16129bf7803a2466f867a51ceea4c109, type: 3}
+      propertyPath: grabStates.Array.size
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 666232421552415867, guid: 16129bf7803a2466f867a51ceea4c109, type: 3}
       propertyPath: onStateEnterEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
       value: SunchipsGrabHit2
@@ -1815,6 +1827,10 @@ PrefabInstance:
     - target: {fileID: 3669621611369175779, guid: 16129bf7803a2466f867a51ceea4c109, type: 3}
       propertyPath: onStateEnterEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
       value: SunchipsHit1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3769853265993178991, guid: 16129bf7803a2466f867a51ceea4c109, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 3.87
       objectReference: {fileID: 0}
     - target: {fileID: 5097683060499093642, guid: 16129bf7803a2466f867a51ceea4c109, type: 3}
       propertyPath: onStateEnterEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument

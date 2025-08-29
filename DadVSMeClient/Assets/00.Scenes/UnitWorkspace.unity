@@ -1119,18 +1119,18 @@ MonoBehaviour:
         key: KidStatData_Wave1
       offset: {x: 1, y: 2}
     - prefab:
-        key: SimpleEnemy
+        key: Bully
       enemyData:
-        key: SimpleEnemyData_0 (Marcus)
+        key: BullyEnemyData
       statData:
-        key: KidStatData_Wave1
+        key: BullyStatData_Wave1
       offset: {x: -1, y: -1}
     - prefab:
-        key: SimpleEnemy
+        key: Sunchips
       enemyData:
-        key: SimpleEnemyData_0 (Marcus)
+        key: SunchipsEnemyData
       statData:
-        key: KidStatData_Wave1
+        key: SunchipsStatData
       offset: {x: 0, y: -2}
 --- !u!1 &378851389
 GameObject:
@@ -2424,9 +2424,6 @@ MonoBehaviour:
   staticEntity: 1
   entityAnimator: {fileID: 0}
   sortingOrderResolver: {fileID: 0}
-  onTriggerEnter:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!50 &823141104
 Rigidbody2D:
   serializedVersion: 5

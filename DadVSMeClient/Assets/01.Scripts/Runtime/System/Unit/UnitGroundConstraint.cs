@@ -22,7 +22,8 @@ namespace DadVSMe.Entities
             if(unitFSMData == null)
                 return;
 
-            transform.position = new Vector3(transform.position.x, unitFSMData.groundPositionY, transform.position.z);
+            Vector3 position = new Vector3(unit.transform.position.x, unitFSMData.groundPositionY, unit.transform.position.z);
+            transform.SetPositionAndRotation(position, Quaternion.identity);
         }
     }
 }
