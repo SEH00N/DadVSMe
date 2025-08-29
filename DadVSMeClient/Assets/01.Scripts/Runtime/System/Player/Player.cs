@@ -13,7 +13,7 @@ namespace DadVSMe.Players
         [SerializeField] EnemyDetector enemyDetector = null;
         [SerializeField] PlayerItemCollector itemCollector = null;
 
-        protected override RigidbodyType2D DefaultRigidbodyType => RigidbodyType2D.Dynamic;
+        // protected override RigidbodyType2D DefaultRigidbodyType => RigidbodyType2D.Dynamic;
 
         private PlayerFSMData playerFSMData = null;
 

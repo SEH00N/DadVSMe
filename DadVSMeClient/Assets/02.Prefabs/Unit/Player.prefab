@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8941362101086193142}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: GrabPosition
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -42,7 +42,7 @@ GameObject:
   - component: {fileID: 5113638593710294747}
   - component: {fileID: 8945287010239880957}
   - component: {fileID: 4580683379857973300}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: '[Tran] Move'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -160,7 +160,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3572616927850331422}
   - component: {fileID: 3275411247086389928}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Shadow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -248,7 +248,7 @@ GameObject:
   - component: {fileID: 3615641488980107384}
   - component: {fileID: 2664706113876748486}
   - component: {fileID: 8983706962381465391}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: '[Tran] Idle'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -307,7 +307,7 @@ GameObject:
   - component: {fileID: 4865576458214142960}
   - component: {fileID: 5639697409397615060}
   - component: {fileID: 2603191897232787131}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: '[Tran] ReleaseGrab'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -369,7 +369,7 @@ GameObject:
   - component: {fileID: 1665061387360297004}
   - component: {fileID: 2231139174317215693}
   - component: {fileID: 4976861418414243993}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Move
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -465,7 +465,7 @@ GameObject:
   - component: {fileID: 6971694558443744874}
   - component: {fileID: 6101788564306698854}
   - component: {fileID: 8869622597115168957}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Bump
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -556,7 +556,7 @@ GameObject:
   - component: {fileID: 5161396336358028877}
   - component: {fileID: 7231903753669581221}
   - component: {fileID: 1125366496892889213}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: '[Tran] ThrowForward'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -634,7 +634,7 @@ GameObject:
   - component: {fileID: 1441637237244673809}
   - component: {fileID: 8988279658469222370}
   - component: {fileID: 2395487581386457410}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: '[Tran] Punch1'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -695,7 +695,7 @@ GameObject:
   - component: {fileID: 3709012295605818413}
   - component: {fileID: 3879595027783847167}
   - component: {fileID: 1447853770001691782}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: '[Tran] PowerUp'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -755,7 +755,7 @@ GameObject:
   - component: {fileID: 1792283151711849733}
   - component: {fileID: 892879873431718005}
   - component: {fileID: 4720339128490993085}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: GrabMove
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -860,7 +860,7 @@ GameObject:
   - component: {fileID: 5713716665520541407}
   - component: {fileID: 3861165256302696239}
   - component: {fileID: 1946308479296228806}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: '[Tran] Takedown'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -966,7 +966,7 @@ GameObject:
   - component: {fileID: 6410238514728464965}
   - component: {fileID: 5682875267753677173}
   - component: {fileID: 1440748434197841948}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Uppercut
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1088,7 +1088,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9052113997565223994}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Pivot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1122,7 +1122,7 @@ GameObject:
   - component: {fileID: 1801794203497726364}
   - component: {fileID: 8687177351772297995}
   - component: {fileID: 5383140104149066316}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: '[Tran] ThrowDown'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1200,7 +1200,7 @@ GameObject:
   - component: {fileID: 3380836566278275399}
   - component: {fileID: 6055515771771424338}
   - component: {fileID: 4291217451114625158}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: AnyState
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1328,7 +1328,7 @@ GameObject:
   - component: {fileID: 2703009621888106071}
   - component: {fileID: 3565354001345291489}
   - component: {fileID: 4696669389607918937}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: '[Tran] Knife2'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1400,7 +1400,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8491074068045605444}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Throw2Position
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1433,7 +1433,7 @@ GameObject:
   - component: {fileID: 1061963606953342412}
   - component: {fileID: 7365794279743973396}
   - component: {fileID: 4915935381979878065}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: '[Tran] GrabAttack'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1494,7 +1494,7 @@ GameObject:
   - component: {fileID: 5516321922513299259}
   - component: {fileID: 4902723240332917220}
   - component: {fileID: 1691734399262663058}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: '[Tran] GrabMove'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1615,7 +1615,7 @@ GameObject:
   - component: {fileID: 3370097135110527298}
   - component: {fileID: 2237173395481143780}
   - component: {fileID: 934078034710955470}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Knife1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1738,7 +1738,7 @@ GameObject:
   - component: {fileID: 2526812934725719640}
   - component: {fileID: 2507292794327059281}
   - component: {fileID: 6968154392130390349}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: PowerUp
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1873,7 +1873,7 @@ GameObject:
   - component: {fileID: 3236046271620296759}
   - component: {fileID: 2189626224609432714}
   - component: {fileID: 6147328638779164229}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: '[Tran] Crazy'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1945,7 +1945,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3896946919032007107}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Pivot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1978,7 +1978,7 @@ GameObject:
   - component: {fileID: 2954249556941635181}
   - component: {fileID: 106614474229896410}
   - component: {fileID: 8978627986673485949}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: '[Tran] GrabAttack'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2040,7 +2040,7 @@ GameObject:
   - component: {fileID: 1471111415096613995}
   - component: {fileID: 1973565018300929969}
   - component: {fileID: 7277498937657700730}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: '[Tran] CrazyStart'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2204,7 +2204,7 @@ GameObject:
   - component: {fileID: 7920565069907207548}
   - component: {fileID: 4947745096409618757}
   - component: {fileID: 6858195492880268157}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: CrazyStart
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2310,7 +2310,7 @@ GameObject:
   - component: {fileID: 1528273208318494428}
   - component: {fileID: 2718661473602976653}
   - component: {fileID: 9190335765454519396}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: '[Tran] Knife1'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2385,7 +2385,7 @@ GameObject:
   - component: {fileID: 2852503922270150948}
   - component: {fileID: 2986653746546966270}
   - component: {fileID: 3542167409933092608}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: '[Tran] Grab'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2459,7 +2459,7 @@ GameObject:
   - component: {fileID: 4910843435020861061}
   - component: {fileID: 8182889530979780361}
   - component: {fileID: 7576988775062164614}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: ThrowDown
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2573,7 +2573,7 @@ GameObject:
   - component: {fileID: 1793141939567925352}
   - component: {fileID: 8900218850363402019}
   - component: {fileID: 3320614768345730112}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: DashPunch
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2741,7 +2741,7 @@ GameObject:
   - component: {fileID: 6169420552381475671}
   - component: {fileID: 4904074541681549496}
   - component: {fileID: 1799858541551795775}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Punch1_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3006,7 +3006,7 @@ GameObject:
   - component: {fileID: 364709310293025866}
   - component: {fileID: 4593753620276383362}
   - component: {fileID: 5396265799380203333}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Visual
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3129,7 +3129,7 @@ GameObject:
   - component: {fileID: 4912519619125067036}
   - component: {fileID: 5283819923738783673}
   - component: {fileID: 7615208865558402793}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: ThrowBowling
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3240,7 +3240,7 @@ GameObject:
   - component: {fileID: 1484047603471615224}
   - component: {fileID: 1431849865872188706}
   - component: {fileID: 3775176717834602633}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: '[Tran] Punch2_2'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3315,7 +3315,7 @@ GameObject:
   - component: {fileID: 8775904818099651924}
   - component: {fileID: 1799030666431474225}
   - component: {fileID: 4578853846741598147}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: ThrowUp
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3425,7 +3425,7 @@ GameObject:
   - component: {fileID: 6846219740689893314}
   - component: {fileID: 4729874669763173947}
   - component: {fileID: 708834034240255651}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: '[Tran] Move'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3484,7 +3484,7 @@ GameObject:
   - component: {fileID: 572136502247820206}
   - component: {fileID: 8325615697492956545}
   - component: {fileID: 3103397833541934164}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: '[Tran] Idle'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3623,7 +3623,7 @@ GameObject:
   - component: {fileID: 6828091783855045323}
   - component: {fileID: 3171211527122363338}
   - component: {fileID: 6337949956833665808}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: '[Tran] ThrowForwardBowling'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3793,7 +3793,7 @@ GameObject:
   - component: {fileID: 1867282688267533254}
   - component: {fileID: 5841271864119933664}
   - component: {fileID: 3979151437570143756}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: '[Tran] Grab'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3872,7 +3872,7 @@ GameObject:
   - component: {fileID: 4981236306536014866}
   - component: {fileID: 1702455739200130439}
   - component: {fileID: 5691402912382368306}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: '[Tran] JuggleHit3'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3944,7 +3944,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8451734842006371004}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Pivot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3979,7 +3979,7 @@ GameObject:
   - component: {fileID: 626778758459848819}
   - component: {fileID: 8534845375963123760}
   - component: {fileID: 8321866719720642089}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: JuggleHit1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4099,7 +4099,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6993041932429442240}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Pivot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4130,7 +4130,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2522594350392880764}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Pivot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4162,7 +4162,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7724093533975967355}
   - component: {fileID: 2062704661624347714}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: GroundPosition
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4210,7 +4210,7 @@ GameObject:
   - component: {fileID: 8884150199922793445}
   - component: {fileID: 2349341847389620232}
   - component: {fileID: 4516241213115526802}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Juggle(Default)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4302,7 +4302,7 @@ GameObject:
   - component: {fileID: 2653412275106618281}
   - component: {fileID: 8804318868649282253}
   - component: {fileID: 7666382588534150075}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Idle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4413,7 +4413,7 @@ GameObject:
   - component: {fileID: 638544907920079381}
   - component: {fileID: 7075596934260501484}
   - component: {fileID: 2038382331918220576}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: '[Tran] JuggleHit1'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4487,7 +4487,7 @@ GameObject:
   - component: {fileID: 8602577454901602113}
   - component: {fileID: 8453145021001584112}
   - component: {fileID: 5177813073556534683}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: '[Tran] Dash'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4546,7 +4546,7 @@ GameObject:
   - component: {fileID: 1589309627729178559}
   - component: {fileID: 668081873296914725}
   - component: {fileID: 8553080035433588615}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: '[Tran] Idle'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4604,7 +4604,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7866092559789443664}
   - component: {fileID: 8673654016440828494}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Knuckles
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4669,7 +4669,7 @@ GameObject:
   - component: {fileID: 5218100503949895980}
   - component: {fileID: 9003694225672317391}
   - component: {fileID: 5208541727727948854}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: '[Tran] Stomp'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4762,7 +4762,7 @@ GameObject:
   - component: {fileID: 4419637242376677547}
   - component: {fileID: 389740705990461060}
   - component: {fileID: 9183463397025984440}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: '[Tran] Punch1'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4825,7 +4825,7 @@ GameObject:
   - component: {fileID: 3697097578381701402}
   - component: {fileID: 2673185515893592103}
   - component: {fileID: 8333826627104524722}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: '[Tran] ThrowForwardBowling'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4918,7 +4918,7 @@ GameObject:
   - component: {fileID: 3705259556589623908}
   - component: {fileID: 2922248589505863655}
   - component: {fileID: 7829642735522147102}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: '[Tran] Stomp'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5014,7 +5014,7 @@ GameObject:
   - component: {fileID: 2832553844948435625}
   - component: {fileID: 7704626932355508207}
   - component: {fileID: 9114270698323145734}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: DashSlam
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5166,7 +5166,7 @@ GameObject:
   - component: {fileID: 1945133418526377832}
   - component: {fileID: 2625980165839867990}
   - component: {fileID: 4590941348967080891}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: '[Tran] Punch1_4'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5271,7 +5271,7 @@ GameObject:
   - component: {fileID: 3644177460462399078}
   - component: {fileID: 5264464853029133885}
   - component: {fileID: 1532588462045236119}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: StandUp
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5365,7 +5365,7 @@ GameObject:
   - component: {fileID: 4997747341382261023}
   - component: {fileID: 518576332899142282}
   - component: {fileID: 5091143031259742390}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: '[Tran] ThrowUp'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5445,7 +5445,7 @@ GameObject:
   - component: {fileID: 8759995860316331647}
   - component: {fileID: 7537395946798424511}
   - component: {fileID: 3950174164250126872}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Punch1_4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5568,7 +5568,7 @@ GameObject:
   - component: {fileID: 5623929162429331693}
   - component: {fileID: 4049242025694748528}
   - component: {fileID: 582086198258873775}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: '[Tran] ThrowForward'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5732,7 +5732,7 @@ GameObject:
   - component: {fileID: 241774688013588950}
   - component: {fileID: 534196012914390889}
   - component: {fileID: 5951876305628596699}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: '[Tran] Takedown'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5807,7 +5807,7 @@ GameObject:
   - component: {fileID: 4912613773680421111}
   - component: {fileID: 1102893514868889192}
   - component: {fileID: 1448780021069922567}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Flinch
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5912,7 +5912,7 @@ GameObject:
   - component: {fileID: 5995672355268309569}
   - component: {fileID: 644674988795700514}
   - component: {fileID: 2977751249653612589}
-  m_Layer: 8
+  m_Layer: 10
   m_Name: EnemyDetector
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5994,7 +5994,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8403904138874411962}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Pivot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6028,7 +6028,7 @@ GameObject:
   - component: {fileID: 3611460244277959802}
   - component: {fileID: 8265610239134059774}
   - component: {fileID: 7704211684324236126}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: '[Tran] Punch1_2'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6102,7 +6102,7 @@ GameObject:
   - component: {fileID: 9121737482675756531}
   - component: {fileID: 590073457712380388}
   - component: {fileID: 4563638890957005304}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: '[Tran] Uppercut'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6164,7 +6164,7 @@ GameObject:
   - component: {fileID: 4863500409552781780}
   - component: {fileID: 6363191944438385753}
   - component: {fileID: 1946401525903276399}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: '[Tran] Stomp'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6258,7 +6258,7 @@ GameObject:
   - component: {fileID: 8408079652818600669}
   - component: {fileID: 8351516369250858955}
   - component: {fileID: 3661892521627839733}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: '[Tran] Stomp'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6351,7 +6351,7 @@ GameObject:
   - component: {fileID: 6759825855323191753}
   - component: {fileID: 3037027986709243573}
   - component: {fileID: 5807568429010325276}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Hold
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6428,7 +6428,7 @@ GameObject:
   - component: {fileID: 7667994150933278078}
   - component: {fileID: 8575574146780529413}
   - component: {fileID: 5144561884178978532}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Bounce
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6518,7 +6518,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5965105322978743997}
   - component: {fileID: 1593382357414641103}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Frenzied
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6582,7 +6582,7 @@ GameObject:
   - component: {fileID: 9142141628349132335}
   - component: {fileID: 3206949959749637462}
   - component: {fileID: 5675829597815650771}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: '[Tran] GrabAttack'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6643,7 +6643,7 @@ GameObject:
   - component: {fileID: 396407268384319085}
   - component: {fileID: 1773547240932069588}
   - component: {fileID: 3401481837806779248}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: ReleaseGrab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6709,7 +6709,7 @@ GameObject:
   - component: {fileID: 9193952588394744718}
   - component: {fileID: 5813171528588111190}
   - component: {fileID: 8062249457086409315}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: '[Tran] Uppercut'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6772,7 +6772,7 @@ GameObject:
   - component: {fileID: 7530683486150909637}
   - component: {fileID: 1463274168543775791}
   - component: {fileID: 4779498475959965093}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Knife2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6895,7 +6895,7 @@ GameObject:
   - component: {fileID: 643837365156672642}
   - component: {fileID: 7370437682853132199}
   - component: {fileID: 5185056622014141598}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Dash
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6995,7 +6995,7 @@ GameObject:
   - component: {fileID: 6830423230043933194}
   - component: {fileID: 8047610374853417405}
   - component: {fileID: 987321134260378580}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Punch2_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7117,7 +7117,7 @@ GameObject:
   - component: {fileID: 488747566285346943}
   - component: {fileID: 5817396121845109903}
   - component: {fileID: 3879614849169295939}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: '[Tran] DashSlam'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7176,7 +7176,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3801318511281256181}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: States
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7230,7 +7230,7 @@ GameObject:
   - component: {fileID: 2492547928157012777}
   - component: {fileID: 6274624298047962058}
   - component: {fileID: 1754234185660703899}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: '[Tran] Bump'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7309,7 +7309,7 @@ GameObject:
   - component: {fileID: 7605740941904883887}
   - component: {fileID: 6754063924916911967}
   - component: {fileID: 7770946461953577151}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: '[Tran] ThrowDown'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7387,7 +7387,7 @@ GameObject:
   - component: {fileID: 7724383824382830172}
   - component: {fileID: 7974062248983652847}
   - component: {fileID: 646612861629187069}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: '[Tran] Punch2'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7450,7 +7450,7 @@ GameObject:
   - component: {fileID: 8868562544967859152}
   - component: {fileID: 3729777210572503717}
   - component: {fileID: 5371602955487678964}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: '[Tran] Takedown'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7556,7 +7556,7 @@ GameObject:
   - component: {fileID: 6672043882283773685}
   - component: {fileID: 1925252011676411918}
   - component: {fileID: 5928225887847949517}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Takedown
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7681,7 +7681,7 @@ GameObject:
   - component: {fileID: 5938353735587452425}
   - component: {fileID: 7899188118159499391}
   - component: {fileID: 8951232964288202468}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Grab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7778,7 +7778,7 @@ GameObject:
   - component: {fileID: 2574187762371516388}
   - component: {fileID: 4364684065698766204}
   - component: {fileID: 3875748349367708988}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: '[Tran] JuggleHit2'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7854,7 +7854,7 @@ GameObject:
   - component: {fileID: 5012333585453512094}
   - component: {fileID: 3775436521619690260}
   - component: {fileID: 7797500923691049382}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: GrabAttack
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7965,7 +7965,7 @@ GameObject:
   - component: {fileID: 1361689412035644804}
   - component: {fileID: 1721046071101731425}
   - component: {fileID: 4740341170527273277}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: '[Tran] Uppercut'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8026,7 +8026,7 @@ GameObject:
   - component: {fileID: 6219416289045631142}
   - component: {fileID: 7310623111472026898}
   - component: {fileID: 2782024436177242857}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: '[Tran] GrabAttack'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8087,7 +8087,7 @@ GameObject:
   - component: {fileID: 6972973974242913709}
   - component: {fileID: 2367952392730850188}
   - component: {fileID: 8833490969840902214}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: '[Tran] Punch2'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8149,7 +8149,7 @@ GameObject:
   - component: {fileID: 6020997656581865564}
   - component: {fileID: 1232159966641272147}
   - component: {fileID: 2604118612968565064}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Stomp
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8274,7 +8274,7 @@ GameObject:
   - component: {fileID: 713698575530454923}
   - component: {fileID: 7520506005870648475}
   - component: {fileID: 151007156211777427}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: ThrowForward
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8382,7 +8382,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5429550518171920899}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Pivot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8418,7 +8418,7 @@ GameObject:
   - component: {fileID: 3593271418240746376}
   - component: {fileID: 5188117905570338336}
   - component: {fileID: 4111622745176382284}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: JuggleHit3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8568,7 +8568,7 @@ GameObject:
   - component: {fileID: 1195831937501253872}
   - component: {fileID: 4266278171580711759}
   - component: {fileID: 7011913068402429633}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: '[Tran] Punch1_3'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8640,7 +8640,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1768831229667976483}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Throw1Position
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8674,7 +8674,7 @@ GameObject:
   - component: {fileID: 4054055783764486166}
   - component: {fileID: 4736601777001245889}
   - component: {fileID: 9094768305731557693}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Takedown
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8800,7 +8800,7 @@ GameObject:
   - component: {fileID: 4047481084394559193}
   - component: {fileID: 7049272550155032297}
   - component: {fileID: 1626959363879877503}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Punch1_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8924,7 +8924,7 @@ GameObject:
   - component: {fileID: 461614273728789025}
   - component: {fileID: 940669171530162905}
   - component: {fileID: 1528082537322278349}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: '[Tran] DashPunch'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8985,7 +8985,7 @@ GameObject:
   - component: {fileID: 6961806067608511280}
   - component: {fileID: 8659761086460484793}
   - component: {fileID: 3188598358565364875}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: '[Tran] Grab'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9065,7 +9065,7 @@ GameObject:
   - component: {fileID: 1155118766088953803}
   - component: {fileID: 1637500108267551053}
   - component: {fileID: 5952728668353690025}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Punch2_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9189,7 +9189,7 @@ GameObject:
   - component: {fileID: 5512892847475762571}
   - component: {fileID: 6435759345011469706}
   - component: {fileID: 8275758214492924946}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Crazy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9313,7 +9313,7 @@ GameObject:
   - component: {fileID: 2370790856344189871}
   - component: {fileID: 7021832394674538665}
   - component: {fileID: 7593858258407932494}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Punch1_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9869,7 +9869,7 @@ GameObject:
   - component: {fileID: 8944419904050293581}
   - component: {fileID: 7396231261579352599}
   - component: {fileID: 8737672042268400247}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: JuggleHit2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9989,7 +9989,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5229560510498053603}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: GrabParent
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10022,7 +10022,7 @@ GameObject:
   - component: {fileID: 3023176478887431983}
   - component: {fileID: 5963611338545104105}
   - component: {fileID: 9138009294443908171}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Juggle(Attack)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10100,7 +10100,7 @@ GameObject:
   - component: {fileID: 700214387757436794}
   - component: {fileID: 2308804095306331961}
   - component: {fileID: 3456532507328408167}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Takedown
   m_TagString: Untagged
   m_Icon: {fileID: 0}

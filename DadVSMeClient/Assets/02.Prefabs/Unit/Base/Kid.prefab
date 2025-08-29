@@ -264,7 +264,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2350834830146878069}
   - component: {fileID: 1398466550844543008}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: GroundPosition
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1747,7 +1747,7 @@ GameObject:
   - component: {fileID: 7721671115993969152}
   - component: {fileID: 5256345900857985724}
   - component: {fileID: 8154783906302772758}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: EnemyDetector
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2648,7 +2648,7 @@ GameObject:
   - component: {fileID: 4458224268004600583}
   - component: {fileID: 6169808395141815018}
   - component: {fileID: 570379110779555857}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Kid
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -2873,7 +2873,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6945144695061183823}
-  m_BodyType: 1
+  m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -3776,7 +3776,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3426325247809867433}
   - component: {fileID: 741737560586360868}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Shadow
   m_TagString: Untagged
   m_Icon: {fileID: 0}

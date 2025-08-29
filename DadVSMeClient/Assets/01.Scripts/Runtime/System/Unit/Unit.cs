@@ -19,7 +19,7 @@ namespace DadVSMe.Entities
         public FSMBrain FSMBrain => fsmBrain;
         public UnitHealth UnitHealth => unitHealth; // uniy health is used frequently. allow external access for performance. 
 
-        protected virtual RigidbodyType2D DefaultRigidbodyType => RigidbodyType2D.Kinematic;
+        // protected virtual RigidbodyType2D DefaultRigidbodyType => RigidbodyType2D.Kinematic;
 
         protected UnitFSMData unitFSMData = null;
         protected UnitStatData unitStatData = null;
@@ -88,7 +88,7 @@ namespace DadVSMe.Entities
         {
             unitFSMData.isFloat = isFloat;
             staticEntity = isFloat;
-            unitRigidbody.bodyType = isFloat ? RigidbodyType2D.Dynamic : DefaultRigidbodyType;
+            // unitRigidbody.bodyType = isFloat ? RigidbodyType2D.Dynamic : DefaultRigidbodyType;
             unitRigidbody.gravityScale = isFloat ? GameDefine.GRAVITY_SCALE : 0f;
             unitMovement.SetActive(isFloat == false);
             unitCollider.enabled = isFloat == false;
