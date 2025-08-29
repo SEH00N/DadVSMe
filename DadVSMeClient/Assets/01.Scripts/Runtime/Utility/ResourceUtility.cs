@@ -10,7 +10,8 @@ namespace DadVSMe
     {
         public async UniTask ReleaseAsync(string label)
         {
-            List<string> resources = await AddressableResourceLoader.ReleaseResourcesByLabelAsync(label);
+            List<string> resources = new List<string>();
+            await AddressableResourceLoader.ReleaseResourcesByLabelAsync(label, resources);
             foreach (string resource in resources)
                 PoolManager.RemovePool(resource);
         }

@@ -35,10 +35,10 @@ namespace DadVSMe.Inputs
         public static TInputReader GetInput<TInputReader>() where TInputReader : InputReaderBase
         {
             Type inputReaderType = typeof(TInputReader);
-            if(inputReaderType != currentInputReaderType)
+            if(inputReaders.TryGetValue(inputReaderType, out InputReaderBase inputReader) == false)
                 return null;
 
-            return inputReaders[inputReaderType] as TInputReader;
+            return inputReader as TInputReader;
         }
 
         public static void EnableInput<TInputReader>() where TInputReader : InputReaderBase, new()

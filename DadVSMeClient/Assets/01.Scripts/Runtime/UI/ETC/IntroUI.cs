@@ -1,5 +1,6 @@
 using System;
 using Cysharp.Threading.Tasks;
+using H00N.Resources;
 using H00N.Resources.Addressables;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -18,30 +19,43 @@ namespace DadVSMe.UI
 
         public async void OnTouchStartButton()
         {
-            // Holding
-            await UniTask.Delay(TimeSpan.FromSeconds(DELAY_TIME));
+            try 
+            {
+                // Holding
+                await UniTask.Delay(TimeSpan.FromSeconds(DELAY_TIME));
 
-            // FadeIn
-            await DOFade.FadeInAsync();
+                // FadeIn
+                await DOFade.FadeInAsync();
 
-            // Load video clip
-            await videoClipAsset.InitializeAsync();
+                // Load video clip
+                await videoClipAsset.InitializeAsync();
 
-            cutscenePanelObject.SetActive(true);
-            videoPlayer.clip = videoClipAsset;
-            videoPlayer.Prepare();
-            await UniTask.WaitUntil(() => videoPlayer.isPrepared);
+                cutscenePanelObject.SetActive(true);
+                videoPlayer.clip = videoClipAsset;
+                videoPlayer.Prepare();
+                await UniTask.WaitUntil(() => videoPlayer.isPrepared);
 
-            // FadeOut
-            await DOFade.FadeOutAsync();
+                // FadeOut
+                await DOFade.FadeOutAsync();
 
-            // Play video
-            videoPlayer.Play();
+                // Play video
+                videoPlayer.Play();
 
-            // Wait for video to finish
-            await UniTask.Delay(TimeSpan.FromSeconds(videoPlayer.length + VIDEO_WAIT_TIME));
+                // Wait for video to finish
+                await UniTask.Delay(TimeSpan.FromSeconds(videoPlayer.length + VIDEO_WAIT_TIME), cancellationToken: destroyCancellationToken);
 
-            // Load Ongoing Scene
+                ResourceManager.ReleaseResource(videoClipAsset);
+
+                // Load Ongoing Scene
+                await SceneManager.TryLoadSceneAsync(GameDefine.TITLE_SCENE_NAME, LoadSceneMode.Single);
+            }
+            catch(OperationCanceledException) { }
+        }
+
+        public async void OnTouchSkipButton()
+        {
+            videoPlayer.time = videoPlayer.length + VIDEO_WAIT_TIME;
+            ResourceManager.ReleaseResource(videoClipAsset);
             await SceneManager.TryLoadSceneAsync(GameDefine.TITLE_SCENE_NAME, LoadSceneMode.Single);
         }
     }

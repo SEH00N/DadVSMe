@@ -61,11 +61,11 @@ namespace DadVSMe.GameCycles
             try {
                 while (cancellationToken.IsCancellationRequested == false)
                 {
+                    await UniTask.Delay(TimeSpan.FromSeconds(UDPATE_INTERVAL), cancellationToken: cancellationToken);
+
                     bool isEnd = OnUpdate();
                     if(isEnd)
                         break;
-
-                    await UniTask.Delay(TimeSpan.FromSeconds(UDPATE_INTERVAL), cancellationToken: cancellationToken);
                 }
             }
             catch (OperationCanceledException) { }

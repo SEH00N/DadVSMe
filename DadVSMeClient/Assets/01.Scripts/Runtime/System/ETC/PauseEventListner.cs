@@ -28,6 +28,9 @@ namespace DadVSMe
             // HandleSetupSpawnPausePopupUI();
 
             PlayerInputReader playerInputReader = InputManager.GetInput<PlayerInputReader>();
+            if(playerInputReader == null)
+                return;
+
             playerInputReader.OnPressPauseEvent -= HandlePauseEvent;
             playerInputReader.OnPressPauseEvent += HandlePauseEvent;
         }
@@ -35,6 +38,9 @@ namespace DadVSMe
         private void OnDestroy()
         {
             PlayerInputReader playerInputReader = InputManager.GetInput<PlayerInputReader>();
+            if(playerInputReader == null)
+                return;
+
             playerInputReader.OnPressPauseEvent -= HandlePauseEvent;
         }
 
