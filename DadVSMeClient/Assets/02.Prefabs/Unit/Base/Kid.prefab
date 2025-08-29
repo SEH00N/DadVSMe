@@ -575,7 +575,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entitySortingOrderProvider: {fileID: 520457586286778734}
-  resolverColliders: []
+  resolverColliders:
+  - {fileID: 3528349980642551610}
 --- !u!61 &3528349980642551610
 BoxCollider2D:
   m_ObjectHideFlags: 0
