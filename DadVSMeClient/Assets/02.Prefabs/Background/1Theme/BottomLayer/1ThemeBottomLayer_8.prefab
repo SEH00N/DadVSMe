@@ -1,5 +1,82 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &407256649500556686
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7324532365291411996}
+  - component: {fileID: 2337462197108037110}
+  m_Layer: 0
+  m_Name: EnemyWaveBehaviour
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7324532365291411996
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 407256649500556686}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -17.024994, y: 1.6750002, z: 0}
+  m_LocalScale: {x: 1.25, y: 1.25, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 8916020990814766014}
+  m_Father: {fileID: 684225731992638376}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2337462197108037110
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 407256649500556686}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3449044d2f928469f903bde1b8bcb986, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnInfoList:
+  - spawnPoint: {fileID: 8916020990814766014}
+    conditionDistance: 10
+    spawnTable:
+    - prefab:
+        key: James
+      enemyData:
+        key: JamesEnemyData
+      statData:
+        key: JamesStatData_Wave3
+      offset: {x: 3.8, y: -1.64}
+    - prefab:
+        key: ShooterEnemy
+      enemyData:
+        key: ShooterEnemyData_8 (Zap)
+      statData:
+        key: KidStatData_Wave4
+      offset: {x: 2.42, y: -0.14}
+    - prefab:
+        key: ButtEnemy
+      enemyData:
+        key: ButtEnemyData_10 (Jose)
+      statData:
+        key: KidStatData_Wave4
+      offset: {x: 1.28, y: 1.47}
+    - prefab:
+        key: SimpleEnemy
+      enemyData:
+        key: SimpleEnemyData_13 (Harry)
+      statData:
+        key: KidStatData_Wave4
+      offset: {x: 0, y: 3.18}
 --- !u!1 &981554245024509612
 GameObject:
   m_ObjectHideFlags: 0
@@ -78,6 +155,37 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!1 &1464707510140488724
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8916020990814766014}
+  m_Layer: 0
+  m_Name: 1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8916020990814766014
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1464707510140488724}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1, y: -0.31, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7324532365291411996}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2950027872277462942
 GameObject:
   m_ObjectHideFlags: 0
@@ -651,6 +759,7 @@ Transform:
   - {fileID: 6924567097783411970}
   - {fileID: 6077768141863014373}
   - {fileID: 7100200600487923712}
+  - {fileID: 7324532365291411996}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2221613245393898088

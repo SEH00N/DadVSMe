@@ -47,6 +47,7 @@ namespace DadVSMe.Enemies
             grabber = performer;
             performer.AddChildSortingOrderResolver(sortingOrderResolver);
             fsmBrain.ChangeState(grabState);
+            unitRigidbody.bodyType = RigidbodyType2D.Kinematic;
         }
 
         void IGrabbable.Release(Unit performer)
@@ -55,6 +56,7 @@ namespace DadVSMe.Enemies
             skipUpdate = true;
             grabber = null;
             performer.RemoveChildSortingOrderResolver(sortingOrderResolver);
+            unitRigidbody.bodyType = RigidbodyType2D.Dynamic;
         }
 
         protected override void DespawnInternal()

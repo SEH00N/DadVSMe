@@ -7,7 +7,7 @@ namespace DadVSMe.GameCycles
     {
         [SerializeField] NavMeshSurface navMeshSurface = null;
 
-        private void OnEnable()
+        private void Start()
         {
             navMeshSurface.BuildNavMeshAsync();
         }
