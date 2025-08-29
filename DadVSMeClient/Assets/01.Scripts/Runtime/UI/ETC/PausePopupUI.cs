@@ -1,5 +1,4 @@
 using Cysharp.Threading.Tasks;
-using DadVSMe.UI;
 using DadVSMe.UI.Setting;
 using DadVSMe.UI.Skills;
 using DG.Tweening;
@@ -10,52 +9,56 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-namespace DadVSMe
+namespace DadVSMe.UI
 {
-    public class PausePopupUI : PoolableBehaviourUI
+    public class PausePopupUI : PoolableBehaviourUI<PausePopupUI.ICallback>
     {
-        [Header("Animation")]
-        [SerializeField] Image _backgroundDimmed;
-        [SerializeField] Transform _panelTransform;
+        public interface ICallback : IUICallback
+        {
+            public void OnRelease();
+            public void OnTouchSettingButton();
+        }
+
+        private const string BLOCK_KEY = "PausePopupUI";
 
         private const float APPEAR_TIME = 0.3f;
         private const float DISAPPEAR_TIME = 0.2f;
         private const float DIMMED_VALUE = 0.5f;
 
-        [SerializeField] AddressableAsset<SkillInfoElementUI> _skillInfoElementPrefab = null;
-        [SerializeField] Transform _contentTransform = null;
+        [Header("Animation")]
+        [SerializeField] Image _backgroundDimmed;
+        [SerializeField] Transform _panelTransform;
+
+        // [SerializeField] AddressableAsset<SkillInfoElementUI> _skillInfoElementPrefab = null;
+        // [SerializeField] Transform _contentTransform = null;
+        [SerializeField] SkillInfoUI _skillInfoUI = null;
         [SerializeField] AddressableAsset<SettingPopupUI> _settingPopupPrefab = null;
 
-        private const string BLOCK_KEY = "PausePopupUI";
-
-        private Action _realseAction;
-
-        public async void Initialize(UnitSkillComponent unitSkillComponent, Action releaseAction)
+        public async void Initialize(UnitSkillComponent unitSkillComponent, ICallback callback)
         {
+            base.Initialize(callback);
+            
             Color color = _backgroundDimmed.color;
             color.a = 0;
             _backgroundDimmed.color = color;
 
             _panelTransform.localScale = new Vector2(0, 1);
 
-            await _skillInfoElementPrefab.InitializeAsync();
+            // await _skillInfoElementPrefab.InitializeAsync();
+            _skillInfoUI.Initialize(unitSkillComponent);
 
-            Time.timeScale = 0f;
+            TimeManager.SetTimeScale(0f, true);
 
-            foreach (SkillType skillType in unitSkillComponent)
-            {
-                SkillData skillData = unitSkillComponent.SkillDataContainer.GetSkillData(skillType);
-                UnitSkill unitSkill = unitSkillComponent.GetSkill(skillType);
+            // foreach (SkillType skillType in unitSkillComponent)
+            // {
+            //     SkillData skillData = unitSkillComponent.SkillDataContainer.GetSkillData(skillType);
+            //     UnitSkill unitSkill = unitSkillComponent.GetSkill(skillType);
 
-                if(unitSkill == null) continue;
+            //     if(unitSkill == null) continue;
 
-                var element = PoolManager.Spawn<SkillInfoElementUI>(_skillInfoElementPrefab, _contentTransform);
-                element.Initialize(skillData, unitSkill.Level);
-            }
-
-            _realseAction = null;
-            _realseAction += releaseAction;
-            _realseAction += HandleRelease;
+            //     var element = PoolManager.Spawn<SkillInfoElementUI>(_skillInfoElementPrefab, _contentTransform);
+            //     element.Initialize(skillData, unitSkill.Level);
+            // }
 
             InputBlock.Block(BLOCK_KEY);
             _ = _backgroundDimmed.DOFade(DIMMED_VALUE, APPEAR_TIME).SetUpdate(true);
@@ -70,14 +73,15 @@ namespace DadVSMe
 
             await new ReleaseResourceByLabel().ReleaseAsync(GameDefine.ADDRESSABLES_LABEL_GAME_ASSETS);
 
-            _realseAction?.Invoke();
+            Release();
 
             await SceneManager.TryLoadSceneAsync(GameDefine.TITLE_SCENE_NAME, LoadSceneMode.Single);
 
             _ = DOFade.FadeOutAsync(0f);
         }
 
-        public async void OnTouchResumeButton()
+        public void OnTouchResumeButton() => OnTouchResumeButtonAsync().Forget();
+        public async UniTask OnTouchResumeButtonAsync()
         {
             Color color = _backgroundDimmed.color;
             color.a = DIMMED_VALUE;
@@ -91,30 +95,22 @@ namespace DadVSMe
             await UniTask.Delay(TimeSpan.FromSeconds(DISAPPEAR_TIME), true);
             InputBlock.Release(BLOCK_KEY);
 
-            _realseAction?.Invoke();
+            Release();
             PoolManager.Despawn(this);
         }
 
-        public async void OnTouchSettingButton()
+        public void OnTouchSettingButton()
         {
-            InputBlock.Block(BLOCK_KEY);
-            await _settingPopupPrefab.InitializeAsync();
-            InputBlock.Release(BLOCK_KEY);
-
-            var popup = PoolManager.Spawn<SettingPopupUI>(_settingPopupPrefab, GameInstance.MainPopupFrame);
-            popup.StretchRect();
-            popup.Initialize().Forget();
+            callback?.OnTouchSettingButton();
         }
 
-        private void HandleRelease()
+        protected override void Release()
         {
-            _contentTransform.DetachChildren();
-            Time.timeScale = 1f;
-        }
+            base.Release();
+            callback?.OnRelease();
 
-        public override void OnDespawn()
-        {
-            base.OnDespawn();
+            // _contentTransform.DetachChildren();
+            TimeManager.SetTimeScale(1f, true);
         }
     }
 }

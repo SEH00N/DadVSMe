@@ -85,7 +85,8 @@ namespace DadVSMe.UI.Setting
             AudioManager.Instance.SetVolume(EAudioChannel.SFX, value);
         }
 
-        public async void OnTouchConfirmButton()
+        public void OnTouchConfirmButton() => OnTouchConfirmButtonAsync().Forget();
+        public async UniTask OnTouchConfirmButtonAsync()
         {
             InputBlock.Block(BLOCK_KEY);
             await PlayDisappearAnimation();

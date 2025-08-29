@@ -93,7 +93,7 @@ namespace DadVSMe
             particle.transform.localPosition = SpawnOffset;
             particle.Play();
 
-            await UniTask.Delay(System.TimeSpan.FromSeconds(burnTime));
+            await UniTask.Delay(System.TimeSpan.FromSeconds(burnTime), cancellationToken: destroyCancellationToken);
 
             PoolManager.Despawn(particle.GetComponent<PoolReference>());
         }

@@ -25,7 +25,7 @@ namespace DadVSMe.Inputs
         private bool attack2PhaseBufferFlag = false;
         private InputActionPhase attack2PhaseBuffer = InputActionPhase.Disabled;
 
-        public event Action onPressPause = null;
+        public event Action OnPressPauseEvent = null;
 
         public override void Initialize(InputActions inputActions)
         {
@@ -110,7 +110,7 @@ namespace DadVSMe.Inputs
         {
             if(context.performed)
             {
-                onPressPause?.Invoke();
+                OnPressPauseEvent?.Invoke();
             }
         }
 

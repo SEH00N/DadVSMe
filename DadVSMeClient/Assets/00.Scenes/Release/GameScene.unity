@@ -717,7 +717,7 @@ GameObject:
   - component: {fileID: 835281009}
   - component: {fileID: 835281008}
   m_Layer: 0
-  m_Name: PauseListner
+  m_Name: PauseEventListner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -737,6 +737,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _pausePopupPrefab:
     key: Assets/02.Prefabs/UI/ETC/PausePopupUI.prefab
+  _settingPopupPrefab:
+    key: SettingPopupUI
 --- !u!4 &835281009
 Transform:
   m_ObjectHideFlags: 0
@@ -3022,12 +3024,12 @@ SceneRoots:
   - {fileID: 1710579813}
   - {fileID: 2108084617}
   - {fileID: 1035969430}
-  - {fileID: 835281009}
   - {fileID: 2007293165}
   - {fileID: 1687263145}
   - {fileID: 2125382406}
   - {fileID: 619394802}
   - {fileID: 2090573444}
   - {fileID: 1027530204}
+  - {fileID: 835281009}
   - {fileID: 17960557}
   - {fileID: 1942992648}
