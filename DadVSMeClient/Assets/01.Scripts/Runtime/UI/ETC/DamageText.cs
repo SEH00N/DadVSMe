@@ -1,6 +1,7 @@
 using System.Threading;
 using Cysharp.Threading.Tasks;
 using H00N.Resources.Pools;
+using ShibaInspector.Collections;
 using TMPro;
 using UnityEngine;
 
@@ -16,6 +17,13 @@ namespace DadVSMe
         [Header("Render (2D)")]
         [SerializeField] private string sortingLayerName = "UI"; // 2D용 소팅 레이어
         [SerializeField] private int sortingOrder = 100;         // 위에 보이도록
+        [SerializeField] int fontSizeMin = 10;
+        [SerializeField] int fontSizeMax = 10;
+        
+        [Header("Colors")]
+        [SerializeField] Color defaultColor = Color.white;
+        [SerializeField] Color criticalColor = Color.red;
+        [SerializeField] SerializableDictionary<EAttackAttribute, Color> attackAttributeColors = new SerializableDictionary<EAttackAttribute, Color>();
 
         [Header("Anim")]
         [Min(0.1f)] public float duration = 0.6f;     // 전체 표시 시간
@@ -62,15 +70,14 @@ namespace DadVSMe
         }
 
         /// <summary>데미지 텍스트 시작</summary>
-        public void Play(Transform follow, Vector3 headOffsetWorld,
-                         int amount, bool critical, Color normal, Color crit,
-                         float critScaleMul = 1.25f)
+        public void Play(Transform follow, Vector3 headOffsetWorld, int amount, bool critical, EAttackAttribute attackAttribute, float critScaleMul = 1.25f)
         {
             _follow = follow;
             _offset = headOffsetWorld;
 
             tmp.SetText(amount.ToString("N0"));
-            tmp.color = critical ? crit : normal;
+            tmp.color = critical ? criticalColor : GetColor(attackAttribute);
+            tmp.fontSize = Random.Range(fontSizeMin, fontSizeMax);
 
             _spawnJitter = new Vector3(
                 Random.Range(-jitterXY.x, jitterXY.x),
@@ -132,6 +139,13 @@ namespace DadVSMe
             var c = tmp.color; c.a = a; tmp.color = c;
         }
 
+        private Color GetColor(EAttackAttribute attackAttribute)
+        {
+            if(attackAttributeColors.TryGetValue(attackAttribute, out Color color))
+                return color;
+
+            return defaultColor;
+        }
         void OnDisable() => Stop();
     }
 }

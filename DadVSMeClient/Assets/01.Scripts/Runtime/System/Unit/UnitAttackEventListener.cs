@@ -25,19 +25,22 @@ namespace DadVSMe.Entities
             fsmData.attackData = attackData;
             fsmData.hitAttribute = attacker.AttackAttribute;
 
-            // SpawnDamageText(attacker, attackData);
+            SpawnDamageText(attacker, attackData, attackData as IAttackFeedbackDataContainer);
         }
 
-        // private void SpawnDamageText(IAttacker attacker, IAttackData attackData)
-        // {
-        //     var handle = UIManager.CreateUIHandle<DamageTextUIHandlse, DamageTextUIHandleParameter>(out DamageTextUIHandleParameter param);
-        //     param.target = transform;
-        //     param.attackAttribute = attacker.AttackAttribute;
-        //     param.attackData = attackData;
-        //     param.upOffset = Vector3.up;
-        //     param.damage = attackData.Damage * attacker.AttackPower;
+        private void SpawnDamageText(IAttacker attacker, IAttackData attackData, IAttackFeedbackDataContainer feedbackData)
+        {
+            if(feedbackData == null)
+                return;
 
-        //     handle.Execute(param);
-        // }
+            var handle = UIManager.CreateUIHandle<DamageTextUIHandlse, DamageTextUIHandleParameter>(out DamageTextUIHandleParameter param);
+            param.target = transform;
+            param.attackAttribute = attacker.AttackAttribute;
+            param.feedbackData = feedbackData;
+            param.upOffset = Vector3.up;
+            param.damage = attackData.Damage * attacker.AttackPower;
+
+            handle.Execute(param);
+        }
     }
 }

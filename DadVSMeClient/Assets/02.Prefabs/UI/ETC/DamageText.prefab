@@ -62,7 +62,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 1388018867989317063, guid: df054680ac047487f906024a3f85b64b, type: 2}
+  - {fileID: 2100000, guid: b8be05a3a93294086954f27c1e6f2e58, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -109,7 +109,7 @@ MonoBehaviour:
 '
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: df054680ac047487f906024a3f85b64b, type: 2}
-  m_sharedMaterial: {fileID: 1388018867989317063, guid: df054680ac047487f906024a3f85b64b, type: 2}
+  m_sharedMaterial: {fileID: 2100000, guid: b8be05a3a93294086954f27c1e6f2e58, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -139,7 +139,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
@@ -197,6 +197,16 @@ MonoBehaviour:
   poolReference: {fileID: 6870414863621808561}
   sortingLayerName: UI
   sortingOrder: 100
+  fontSizeMin: 13
+  fontSizeMax: 15
+  defaultColor: {r: 0.9716981, g: 0.9716981, b: 0.9716981, a: 1}
+  criticalColor: {r: 0.8962264, g: 0, b: 0, a: 1}
+  attackAttributeColors:
+    keys: 020000000100000000000000
+    values:
+    - {r: 0.7388136, g: 0.046991818, b: 0.9056604, a: 1}
+    - {r: 1, g: 0.43300706, b: 0, a: 1}
+    - {r: 0.972549, g: 0.972549, b: 0.972549, a: 1}
   duration: 0.6
   riseWorld: 1
   alphaCurve:

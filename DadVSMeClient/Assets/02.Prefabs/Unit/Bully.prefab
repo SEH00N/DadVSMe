@@ -888,6 +888,22 @@ PrefabInstance:
       propertyPath: onStateEnterEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
       value: BullyHit2
       objectReference: {fileID: 0}
+    - target: {fileID: 1879653877221510959, guid: 16129bf7803a2466f867a51ceea4c109, type: 3}
+      propertyPath: m_Size.x
+      value: 2.152474
+      objectReference: {fileID: 0}
+    - target: {fileID: 1879653877221510959, guid: 16129bf7803a2466f867a51ceea4c109, type: 3}
+      propertyPath: m_Size.y
+      value: 3.1440382
+      objectReference: {fileID: 0}
+    - target: {fileID: 1879653877221510959, guid: 16129bf7803a2466f867a51ceea4c109, type: 3}
+      propertyPath: m_Offset.x
+      value: -0.006355524
+      objectReference: {fileID: 0}
+    - target: {fileID: 1879653877221510959, guid: 16129bf7803a2466f867a51ceea4c109, type: 3}
+      propertyPath: m_Offset.y
+      value: 0.2605734
+      objectReference: {fileID: 0}
     - target: {fileID: 1993994135903740742, guid: 16129bf7803a2466f867a51ceea4c109, type: 3}
       propertyPath: onStateEnterEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
       value: BullyHit3
@@ -911,6 +927,14 @@ PrefabInstance:
     - target: {fileID: 3520902915430673715, guid: 16129bf7803a2466f867a51ceea4c109, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3528349980642551610, guid: 16129bf7803a2466f867a51ceea4c109, type: 3}
+      propertyPath: m_Size.x
+      value: 1.7626538
+      objectReference: {fileID: 0}
+    - target: {fileID: 3528349980642551610, guid: 16129bf7803a2466f867a51ceea4c109, type: 3}
+      propertyPath: m_Offset.x
+      value: -0.012710929
       objectReference: {fileID: 0}
     - target: {fileID: 3669621611369175779, guid: 16129bf7803a2466f867a51ceea4c109, type: 3}
       propertyPath: onStateEnterEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
