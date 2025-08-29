@@ -1,7 +1,6 @@
 using System;
 using H00N.Resources.Pools;
 using UnityEngine;
-using UnityEngine.Events;
 
 namespace DadVSMe.Entities
 {
