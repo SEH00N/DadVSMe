@@ -1,5 +1,6 @@
 using System;
 using H00N.Resources.Pools;
+using ShibaInspector.Attributes;
 using UnityEngine;
 
 namespace DadVSMe.Entities
@@ -25,6 +26,11 @@ namespace DadVSMe.Entities
 
         public event Action<Collider2D> OnTriggerEnterEvent;
 
+        private void Start()
+        {
+            ReorderDepth();
+        }
+
         public void Initialize(IEntityData data)
         {
             if (staticEntity)
@@ -45,6 +51,11 @@ namespace DadVSMe.Entities
             if (staticEntity)
                 return;
 
+            ReorderDepth();
+        }
+
+        private void ReorderDepth()
+        {
             float targetDepth = transform.position.y * Z_ORDER_OFFSET;
             if (currentDepth == targetDepth)
                 return;

@@ -2698,6 +2698,7 @@ MonoBehaviour:
   unitAttackEventListener: {fileID: 7031250399494906082}
   unitSkillComponent: {fileID: 0}
   unitRigidbody: {fileID: 8522405111466415502}
+  unitCollider: {fileID: 6169808395141815018}
   holdState: {fileID: 2654032514642745503}
   onAttackTargetEvent:
     m_PersistentCalls:
@@ -2958,7 +2959,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0

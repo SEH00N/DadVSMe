@@ -13,6 +13,7 @@ namespace DadVSMe.Entities
         private HashSet<EntitySortingOrderProvider> childSortingOrderProviders = null;
         
         private EntitySortingOrderResolver parent = null;
+        private bool active = true;
 
         private void Awake()
         {
@@ -23,6 +24,9 @@ namespace DadVSMe.Entities
         
         private void OnTriggerEnter2D(Collider2D collider)
         {
+            if(active == false)
+                return;
+
             if(parent != null)
                 return;
 
@@ -72,9 +76,15 @@ namespace DadVSMe.Entities
             ReorderSortingOrder(otherSortingOrderProvider);
         }
 
+        public void SetActive(bool active)
+        {
+            this.active = active;
+        }
+
         public void AddChild(EntitySortingOrderResolver child)
         {
-            child.resolverColliders.ForEach(collider => collider.enabled = false);
+            // child.resolverColliders.ForEach(collider => collider.enabled = false);
+            child.SetActive(false);
             child.parent = this;
             child.overlappedSortingOrderProviders.Clear();
             if(overlappedSortingOrderProviders.Contains(child.entitySortingOrderProvider))
@@ -95,7 +105,8 @@ namespace DadVSMe.Entities
             entitySortingOrderProvider.OnSortingOrderChangedEvent -= child.entitySortingOrderProvider.SetSortingOrder;
             child.entitySortingOrderProvider.SetSortingOrder(0);
             child.parent = null;
-            child.resolverColliders.ForEach(collider => collider.enabled = true);
+            // child.resolverColliders.ForEach(collider => collider.enabled = true);
+            child.SetActive(true);
         }
 
         public EntitySortingOrderResolver GetCurrentSortingOrderResolver()

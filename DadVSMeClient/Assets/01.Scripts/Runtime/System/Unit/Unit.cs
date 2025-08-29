@@ -13,6 +13,7 @@ namespace DadVSMe.Entities
         [SerializeField] protected UnitAttackEventListener unitAttackEventListener = null;
         [SerializeField] protected UnitSkillComponent unitSkillComponent;
         [SerializeField] protected Rigidbody2D unitRigidbody = null;
+        [SerializeField] protected Collider2D unitCollider = null;
         [SerializeField] protected FSMState holdState = null;
 
         public FSMBrain FSMBrain => fsmBrain;
@@ -90,6 +91,8 @@ namespace DadVSMe.Entities
             unitRigidbody.bodyType = isFloat ? RigidbodyType2D.Dynamic : DefaultRigidbodyType;
             unitRigidbody.gravityScale = isFloat ? GameDefine.GRAVITY_SCALE : 0f;
             unitMovement.SetActive(isFloat == false);
+            unitCollider.enabled = isFloat == false;
+            sortingOrderResolver.SetActive(isFloat == false);
         }
 
         public void SetAttackAttribute(EAttackAttribute attackAttribute)
