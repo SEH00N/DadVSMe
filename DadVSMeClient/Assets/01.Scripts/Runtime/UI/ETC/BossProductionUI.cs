@@ -25,10 +25,14 @@ namespace DadVSMe
         [SerializeField] Vector2 _profileIntervalPosition;
         [SerializeField] Vector2 _profileEndPosition;
 
+        [Header("Background")]
+        [SerializeField] CanvasGroup _backgroundImageCanvasGroup;
+
         private const float APPEAR_TIME = 0.6f;
         private const float WAIT_TIME = 0.8f;
         private const float INTERVAL_TIME = 0.2f;
         private const float DISAPPEAR_TIME = 0.5f;
+        private const float BACKGROUND_TRANSITION_TIME_RATIO = 0.3f;
 
         public async UniTask Initialize(Sprite bossVisual)
         {
@@ -37,8 +41,11 @@ namespace DadVSMe
             _profileImage.sprite = bossVisual;
             _bannerTransform.anchoredPosition = _bannerStartPosition;
             _profileTransform.anchoredPosition = _profileStartPosition;
+            _backgroundImageCanvasGroup.alpha = 0f;
 
             await UniTask.DelayFrame(3);
+
+            _ = _backgroundImageCanvasGroup.DOFade(1f, APPEAR_TIME * BACKGROUND_TRANSITION_TIME_RATIO).SetEase(Ease.InQuart).SetUpdate(true);
 
             _ = _bannerTransform.DOLocalMove(_bannerNormalPosition, APPEAR_TIME).SetEase(Ease.InQuart).SetUpdate(true);
             await UniTask.Delay(TimeSpan.FromSeconds(INTERVAL_TIME), true);
@@ -49,6 +56,8 @@ namespace DadVSMe
             _ = _profileTransform.DOLocalMove(_profileEndPosition, DISAPPEAR_TIME).SetEase(Ease.InExpo).SetUpdate(true);
             await UniTask.Delay(TimeSpan.FromSeconds(INTERVAL_TIME), true);
             await _bannerTransform.DOLocalMove(_bannerEndPosition, DISAPPEAR_TIME).SetEase(Ease.InExpo).SetUpdate(true);
+
+            await _backgroundImageCanvasGroup.DOFade(0f, APPEAR_TIME * BACKGROUND_TRANSITION_TIME_RATIO).SetEase(Ease.InQuart).SetUpdate(true);
         }
     }
 }

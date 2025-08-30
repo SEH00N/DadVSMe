@@ -11,7 +11,7 @@ namespace DadVSMe.GameCycles
 {
     public class BossWaveBehaviour : WaveBehaviour
     {
-        private const float BOSS_SPAWN_ZOOM_TIME = 3f;
+        private const float BOSS_SPAWN_ZOOM_TIME = 1.25f;
         private const float BOSS_SPAWN_ZOOM_TIME_SCALE = 0.2f;
         private const float BOSS_SPAWN_BLEND_TIME = 1.3f;
 
