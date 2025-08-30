@@ -98,6 +98,11 @@ namespace DadVSMe.Editors
 
         private void SetUpNavMeshSurface(GroundBehaviour groundBehaviour, Bounds bounds)
         {
+            Transform navMeshTransform = groundBehaviour.transform.Find("NavMesh");
+            if(navMeshTransform != null)
+                DestroyImmediate(navMeshTransform.gameObject);
+            
+            return;
             SerializedProperty navMeshSurfaceProperty = serializedObject.FindProperty("navMeshSurface");
 
             NavMeshSurface navMeshSurface = navMeshSurfaceProperty.objectReferenceValue as NavMeshSurface;

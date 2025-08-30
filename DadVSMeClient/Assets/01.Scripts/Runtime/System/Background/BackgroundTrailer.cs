@@ -10,6 +10,7 @@ namespace DadVSMe.Background
     public class BackgroundTrailer : MonoBehaviour
     {
         public event Action<int> onDespawnedBackground;
+        public event Action<int> onSpawnedBackground;
 
         private Transform _startTransform;
         private Transform _parentTransform;
@@ -72,6 +73,7 @@ namespace DadVSMe.Background
 
             _runTimeBackgroundContainer.Add(bgObject);
             _canSpawning = true;
+            onSpawnedBackground?.Invoke(_currentThemeData.themeIdx);
         }
 
         private void DespawnBackground(BackgroundObject background)

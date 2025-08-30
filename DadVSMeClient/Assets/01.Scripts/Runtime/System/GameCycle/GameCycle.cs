@@ -1,6 +1,9 @@
+using System;
 using Cysharp.Threading.Tasks;
+using DadVSMe.Background;
 using DadVSMe.Players;
 using DadVSMe.UI.HUD;
+using NavMeshPlus.Components;
 using Unity.Cinemachine;
 using UnityEngine;
 
@@ -17,6 +20,9 @@ namespace DadVSMe.GameCycles
         
         [SerializeField] Player mainPlayer = null;
         public Player MainPlayer => mainPlayer;
+
+        [SerializeField] BackgroundTrailer backgroundTrailer = null;
+        [SerializeField] NavMeshSurface navMeshSurface = null;
 
         [Space(10f)]
         [SerializeField] Transform startLine = null;
@@ -45,8 +51,15 @@ namespace DadVSMe.GameCycles
             hudUI.Initialize();
 
             _ = new ChangeCinemachineCamera(mainCinemachineCamera);
+
+            backgroundTrailer.onSpawnedBackground += HandleSpawnedBackground;
             
             return UniTask.CompletedTask;
+        }
+
+        private void HandleSpawnedBackground(int currentThemeIndex)
+        {
+            navMeshSurface.BuildNavMeshAsync();
         }
 
         public void Pause()
