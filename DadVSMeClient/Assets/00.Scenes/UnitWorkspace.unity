@@ -741,16 +741,23 @@ MonoBehaviour:
     conditionDistance: 10
     spawnTable:
     - prefab:
-        key: SimpleEnemy
+        key: ShooterEnemy
       enemyData:
-        key: SimpleEnemyData_0 (Marcus)
+        key: ShooterEnemyData_0 (Marcus)
       statData:
         key: KidStatData_Wave1
       offset: {x: -1, y: 1}
     - prefab:
-        key: SimpleEnemy
+        key: ShooterEnemy
       enemyData:
-        key: SimpleEnemyData_0 (Marcus)
+        key: ShooterEnemyData_1 (Knox)
+      statData:
+        key: KidStatData_Wave1
+      offset: {x: 1, y: 2}
+    - prefab:
+        key: ShooterEnemy
+      enemyData:
+        key: ShooterEnemyData_2 (Tommy)
       statData:
         key: KidStatData_Wave1
       offset: {x: 1, y: 2}
@@ -1899,6 +1906,9 @@ MonoBehaviour:
   bossSpawnCinemachineCamera: {fileID: 2009102084}
   bossDeadCinemachineCamera: {fileID: 450724980}
   bossWaveCinemachineCamera: {fileID: 1747781577}
+  productionPrefab:
+    key: 
+  bossProfileVisual: {fileID: 0}
 --- !u!1 &603118000
 GameObject:
   m_ObjectHideFlags: 0
@@ -3435,6 +3445,9 @@ MonoBehaviour:
   bossSpawnCinemachineCamera: {fileID: 1305793398}
   bossDeadCinemachineCamera: {fileID: 349528544}
   bossWaveCinemachineCamera: {fileID: 17224416}
+  productionPrefab:
+    key: 
+  bossProfileVisual: {fileID: 0}
 --- !u!4 &919675876
 Transform:
   m_ObjectHideFlags: 0
@@ -3674,11 +3687,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mainCinemachineCamera: {fileID: 902896934}
+  hudUI: {fileID: 698947855}
   deadline: {fileID: 1933581160}
   mainPlayer: {fileID: 832768499}
   startLine: {fileID: 1518691677}
   endLine: {fileID: 86811763}
-  hudUI: {fileID: 698947855}
+  mainBGMLibrary:
+    key: 
 --- !u!4 &995546407
 Transform:
   m_ObjectHideFlags: 0
@@ -4299,6 +4314,68 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 743381591}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1175831823
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1175831825}
+  - component: {fileID: 1175831824}
+  m_Layer: 0
+  m_Name: EnemyWaveBehaviour (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!114 &1175831824
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1175831823}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3449044d2f928469f903bde1b8bcb986, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnInfoList:
+  - spawnPoint: {fileID: 1175831825}
+    conditionDistance: 10
+    spawnTable:
+    - prefab:
+        key: SimpleEnemy
+      enemyData:
+        key: SimpleEnemyData_0 (Marcus)
+      statData:
+        key: KidStatData_Wave1
+      offset: {x: -1, y: 1}
+    - prefab:
+        key: SimpleEnemy
+      enemyData:
+        key: SimpleEnemyData_0 (Marcus)
+      statData:
+        key: KidStatData_Wave1
+      offset: {x: 1, y: 2}
+--- !u!4 &1175831825
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1175831823}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 4.68, y: -1, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1187394556
@@ -6869,6 +6946,7 @@ SceneRoots:
   - {fileID: 988389085}
   - {fileID: 350924579}
   - {fileID: 255708700}
+  - {fileID: 1175831825}
   - {fileID: 596532757}
   - {fileID: 919675876}
   - {fileID: 562978054}
