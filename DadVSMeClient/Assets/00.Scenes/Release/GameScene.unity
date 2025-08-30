@@ -208,11 +208,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mainCinemachineCamera: {fileID: 902896934}
+  hudUI: {fileID: 8618871050935962016}
   deadline: {fileID: 1396640816}
   mainPlayer: {fileID: 750934950}
   startLine: {fileID: 1170930222}
   endLine: {fileID: 1430188280}
-  hudUI: {fileID: 8618871050935962016}
+  mainBGMLibrary:
+    key: MainBGM
 --- !u!4 &17960557
 Transform:
   m_ObjectHideFlags: 0

@@ -1,9 +1,8 @@
-using System;
+using System.Threading.Tasks;
 using Cysharp.Threading.Tasks;
-using DadVSMe.Background;
 using DadVSMe.Players;
 using DadVSMe.UI.HUD;
-using NavMeshPlus.Components;
+using H00N.Resources.Addressables;
 using Unity.Cinemachine;
 using UnityEngine;
 
@@ -13,6 +12,9 @@ namespace DadVSMe.GameCycles
     {
         [SerializeField] CinemachineCamera mainCinemachineCamera = null;
         public CinemachineCamera MainCinemachineCamera => mainCinemachineCamera;
+        
+        [SerializeField] HUDUI hudUI = null;
+        public HUDUI HUDUI => hudUI;
 
         [Space(10f)]
         [SerializeField] Deadline deadline = null;
@@ -20,9 +22,6 @@ namespace DadVSMe.GameCycles
         
         [SerializeField] Player mainPlayer = null;
         public Player MainPlayer => mainPlayer;
-
-        // [SerializeField] BackgroundTrailer backgroundTrailer = null;
-        // [SerializeField] NavMeshSurface navMeshSurface = null;
 
         [Space(10f)]
         [SerializeField] Transform startLine = null;
@@ -32,8 +31,8 @@ namespace DadVSMe.GameCycles
         public Transform EndLine => endLine;
 
         [Space(10f)]
-        [SerializeField] HUDUI hudUI = null;
-        public HUDUI HUDUI => hudUI;
+        [SerializeField] AddressableAsset<BGMAudioLibrary> mainBGMLibrary = null;
+        public AddressableAsset<BGMAudioLibrary> MainBGMLibrary => mainBGMLibrary;
 
         public bool IsPaused { get; private set; } = false;
         public bool IsBossClearDirecting { get; private set; } = false;
@@ -44,7 +43,7 @@ namespace DadVSMe.GameCycles
             InitializeAsync().Forget();
         }
 
-        public UniTask InitializeAsync()
+        public async UniTask InitializeAsync()
         {
             deadline.Initialize();
             MainPlayer.Initialize(new PlayerEntityData());
@@ -52,15 +51,9 @@ namespace DadVSMe.GameCycles
 
             _ = new ChangeCinemachineCamera(mainCinemachineCamera);
 
-            // backgroundTrailer.onSpawnedBackground += HandleSpawnedBackground;
-            
-            return UniTask.CompletedTask;
+            await mainBGMLibrary.InitializeAsync();
+            AudioManager.Instance.PlayBGM(mainBGMLibrary, loadCache: false);
         }
-
-        // private void HandleSpawnedBackground(int currentThemeIndex)
-        // {
-        //     navMeshSurface.BuildNavMeshAsync();
-        // }
 
         public void Pause()
         {

@@ -148,6 +148,8 @@ namespace DadVSMe.GameCycles
             GameInstance.GameCycle.Pause();
             GameInstance.GameCycle.SetBossClearDirecting(true);
 
+            AudioManager.Instance.PlayBGM(GameInstance.GameCycle.MainBGMLibrary, loadCache: true);
+
             bossWaveBlockObject.SetActive(false);
 
             // Set Player Hold

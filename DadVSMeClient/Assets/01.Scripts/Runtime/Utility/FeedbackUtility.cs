@@ -30,7 +30,8 @@ namespace DadVSMe
         public PlayAttackSound(IAttackFeedbackDataContainer feedbackDataContainer, EAttackAttribute attackAttribute)
         {
             _ = new PlaySound(feedbackDataContainer.GetFeedbackData(EAttackAttribute.Normal)?.attackSounds);
-            _ = new PlaySound(feedbackDataContainer.GetFeedbackData(attackAttribute)?.attackSounds);
+            if(attackAttribute != EAttackAttribute.Normal)
+                _ = new PlaySound(feedbackDataContainer.GetFeedbackData(attackAttribute)?.attackSounds);
         }
     }
 
@@ -39,7 +40,10 @@ namespace DadVSMe
         public PlayAttackFeedback(IAttackFeedbackDataContainer feedbackDataContainer, EAttackAttribute attackAttribute, Vector3 targetPosition, Vector3 attackOffset, int forwardDirection)
         {
             Vector3 offset = new Vector3(attackOffset.x * forwardDirection, attackOffset.y, 0f);
-            feedbackDataContainer.GetFeedbackData(attackAttribute)?.attackEffects.ForEach(effect => _ = new PlayEffect(effect, targetPosition + offset, forwardDirection));
+            
+            feedbackDataContainer.GetFeedbackData(EAttackAttribute.Normal)?.attackEffects.ForEach(effect => _ = new PlayEffect(effect, targetPosition + offset, forwardDirection));
+            if(attackAttribute != EAttackAttribute.Normal)
+                feedbackDataContainer.GetFeedbackData(attackAttribute)?.attackEffects.ForEach(effect => _ = new PlayEffect(effect, targetPosition + offset, forwardDirection));
         }
     }
 
@@ -49,8 +53,14 @@ namespace DadVSMe
         {
             Vector3 offset = new Vector3(attackOffset.x * forwardDirection, attackOffset.y, 0f);
 
-            feedbackDataContainer.GetFeedbackData(attackAttribute)?.hitEffects.ForEach(effect => _ = new PlayEffect(effect, targetPosition + offset, forwardDirection));
-            _ = new PlaySound(feedbackDataContainer.GetFeedbackData(attackAttribute)?.hitSounds);
+            feedbackDataContainer.GetFeedbackData(EAttackAttribute.Normal)?.hitEffects.ForEach(effect => _ = new PlayEffect(effect, targetPosition + offset, forwardDirection));
+            _ = new PlaySound(feedbackDataContainer.GetFeedbackData(EAttackAttribute.Normal)?.hitSounds);
+
+            if(attackAttribute != EAttackAttribute.Normal)
+            {
+                feedbackDataContainer.GetFeedbackData(attackAttribute)?.hitEffects.ForEach(effect => _ = new PlayEffect(effect, targetPosition + offset, forwardDirection));
+                _ = new PlaySound(feedbackDataContainer.GetFeedbackData(attackAttribute)?.hitSounds);
+            }
         }
     }
 
