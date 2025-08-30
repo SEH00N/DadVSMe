@@ -72,10 +72,15 @@ namespace DadVSMe
                 if (currentBurnTime >= attackDelay * burnCount)
                 {
                     burnCount++;
-                    targetHealth.Attack(instigator, attackData);
-                    UnitFSMData unitFSMData = instigator.GetComponent<FSMBrain>().GetAIData<UnitFSMData>();
-                    _ = new PlayHitFeedback(feedbackDataContainer, unitFSMData.attackAttribute, targetHealth.transform.position, Vector3.zero, unitFSMData.forwardDirection);
 
+                    UnitFSMData unitFSMData = instigator.GetComponent<FSMBrain>().GetAIData<UnitFSMData>();
+                    EAttackAttribute attackAttribute = unitFSMData.attackAttribute;
+                    unitFSMData.attackAttribute = EAttackAttribute.Fire;
+                    
+                    targetHealth.Attack(instigator, attackData);
+                    _ = new PlayHitFeedback(feedbackDataContainer, unitFSMData.attackAttribute, targetHealth.transform.position, Vector3.zero, unitFSMData.forwardDirection);
+                    
+                    unitFSMData.attackAttribute = attackAttribute;
                 }
             }
         }

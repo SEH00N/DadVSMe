@@ -9,6 +9,7 @@ namespace DadVSMe.Entities
     public class BounceAction : FSMAction
     {
         private const float HARD_BOUNCE_FORCE_THRESHOLD = 30f;
+        private const float SMALL_BOUNCE_FORCE_THRESHOLD = 5f;
 
         [SerializeField] FSMState lieState = null;
         [SerializeField] float bounciness = 0.8f;
@@ -53,9 +54,12 @@ namespace DadVSMe.Entities
             entityAnimator.PlayAnimation(bounceAnimations[currentBounceAnimationIndex]);
             currentBounceAnimationIndex = (currentBounceAnimationIndex + 1) % bounceAnimations.Count;
 
-            Vector3 offset = new Vector3(bounceEffectOffset.x * unitFSMData.forwardDirection, bounceEffectOffset.y, 0f);
-            _ = new PlayEffect(collisionForce > HARD_BOUNCE_FORCE_THRESHOLD ? hardBounceEffect : smallBounceEffect, brain.transform.position + offset, -unitFSMData.forwardDirection);
-            _ = new PlaySound(bounceSounds);
+            if(collisionForce > SMALL_BOUNCE_FORCE_THRESHOLD)
+            {
+                Vector3 offset = new Vector3(bounceEffectOffset.x * unitFSMData.forwardDirection, bounceEffectOffset.y, 0f);
+                _ = new PlayEffect(collisionForce > HARD_BOUNCE_FORCE_THRESHOLD ? hardBounceEffect : smallBounceEffect, brain.transform.position + offset, -unitFSMData.forwardDirection);
+                _ = new PlaySound(bounceSounds);
+            }
         }
 
         public override void UpdateState()
