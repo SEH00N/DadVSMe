@@ -1,12 +1,9 @@
 using UnityEngine;
 using H00N.Resources.Pools;
-using DadVSMe.UI;
-using System.Collections.Generic;
 using System;
 using UnityEngine.UI;
 using Cysharp.Threading.Tasks;
 using DG.Tweening;
-using System.Threading.Tasks;
 
 namespace DadVSMe.UI.Setting
 {
@@ -16,8 +13,11 @@ namespace DadVSMe.UI.Setting
 
         [Header("Slider")]
         [SerializeField] Slider _masterVolumeSlider;
+        [SerializeField] SlicedFilledImage _masterVolumeSliderFill;
         [SerializeField] Slider _bgmVolumeSlider;
+        [SerializeField] SlicedFilledImage _bgmVolumeSliderFill;
         [SerializeField] Slider _sfxVolumeSlider;
+        [SerializeField] SlicedFilledImage _sfxVolumeSliderFill;
 
         [Header("Animation")]
         [SerializeField] Image _backgroundDimmed;
@@ -30,29 +30,32 @@ namespace DadVSMe.UI.Setting
 
         public async UniTask Initialize()
         {
-            _masterVolumeSlider.value = GetNormalizedVolume(EAudioChannel.Master);
-            _bgmVolumeSlider.value = GetNormalizedVolume(EAudioChannel.BGM);
-            _sfxVolumeSlider.value = GetNormalizedVolume(EAudioChannel.SFX);
+            // _masterVolumeSlider.value = GetNormalizedVolume(EAudioChannel.Master);
+            // _bgmVolumeSlider.value = GetNormalizedVolume(EAudioChannel.BGM);
+            // _sfxVolumeSlider.value = GetNormalizedVolume(EAudioChannel.SFX);
+            _masterVolumeSlider.value = GameSettings.MasterVolume;
+            _bgmVolumeSlider.value = GameSettings.BGMVolume;
+            _sfxVolumeSlider.value = GameSettings.SFXVolume;
 
             InputBlock.Block(BLOCK_KEY);
             await PlayAppearAnimation();
             InputBlock.Release(BLOCK_KEY);
         }
 
-        private float GetNormalizedVolume(EAudioChannel channel)
-        {
-            float dbValue = AudioManager.Instance.GetVolume(channel);
+        // private float GetNormalizedVolume(EAudioChannel channel)
+        // {
+        //     float dbValue = AudioManager.Instance.GetVolume(channel);
 
-            if(dbValue <= AudioManager.AUDIO_MIN_VOLUME)
-                return 0f;
+        //     if(dbValue <= AudioManager.AUDIO_MIN_VOLUME)
+        //         return 0f;
 
-            float linearVolume = Mathf.Pow(10f, dbValue / 20f);
+        //     float linearVolume = Mathf.Pow(10f, dbValue / 20f);
 
-            if (AudioManager.Instance.IsBassMode(channel))
-                linearVolume *= 2f;
+        //     if (AudioManager.Instance.IsBassMode(channel))
+        //         linearVolume *= 2f;
 
-            return Mathf.Clamp01(linearVolume);
-        }
+        //     return Mathf.Clamp01(linearVolume);
+        // }
 
         private async UniTask PlayAppearAnimation()
         {
@@ -72,16 +75,22 @@ namespace DadVSMe.UI.Setting
 
         public void OnValueChangedMasterValue(float value)
         {
+            GameSettings.MasterVolume = value;
+            _masterVolumeSliderFill.fillAmount = value;
             AudioManager.Instance.SetVolume(EAudioChannel.Master, value);
         }
 
         public void OnValueeChangedBGMValue(float value)
         {
+            GameSettings.BGMVolume = value;
+            _bgmVolumeSliderFill.fillAmount = value;
             AudioManager.Instance.SetVolume(EAudioChannel.BGM, value);
         }
 
         public void OnValueChangedSFXValue(float value)
         {
+            GameSettings.SFXVolume = value;
+            _sfxVolumeSliderFill.fillAmount = value;
             AudioManager.Instance.SetVolume(EAudioChannel.SFX, value);
         }
 
