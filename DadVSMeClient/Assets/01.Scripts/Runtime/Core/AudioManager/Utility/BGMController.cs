@@ -139,7 +139,12 @@ namespace DadVSMe
             if (transitioning) // transitioning이 true라면 fade duration 까지만 놓고
                 delayDuration -= bgmTable.fadeOutData.fadeDuration;
 
-            yield return new WaitForSeconds(delayDuration);
+            float time = 0f;
+            while(time < delayDuration)
+            {
+                time += Time.unscaledDeltaTime;
+                yield return null;
+            }
 
             player.DoFadeOut(); // fade out
             // 다음 루틴으로 넘어가서, 다음 BGM을 준비하고 전 fade out과 동시에 fade in

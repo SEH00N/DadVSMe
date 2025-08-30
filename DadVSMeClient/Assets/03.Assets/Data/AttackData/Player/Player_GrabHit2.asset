@@ -16,6 +16,7 @@ MonoBehaviour:
   isRageAttack: 0
   feedbackDatas:
   - attackAttribute: 0
+    attackEffects: []
     hitEffects:
     - key: VFX_Impact2
     - key: VFX_Blood1
@@ -32,14 +33,16 @@ MonoBehaviour:
     hitText:
       key: DamageText
   - attackAttribute: 1
+    attackEffects: []
     hitEffects:
-    - key: VFX_Explosion
+    - key: VFX_FirePunch
     attackSounds: []
     hitSounds:
     - key: fire_punch
     hitText:
       key: DamageText
   - attackAttribute: 2
+    attackEffects: []
     hitEffects:
     - key: VFX_CrazyHit
     attackSounds: []

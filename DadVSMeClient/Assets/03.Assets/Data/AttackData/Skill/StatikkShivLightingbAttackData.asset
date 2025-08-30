@@ -15,7 +15,8 @@ MonoBehaviour:
   damage: 5
   isRageAttack: 0
   feedbackDatas:
-  - attackAttribute: 0
+  - attackAttribute: 3
+    attackEffects: []
     hitEffects:
     - key: VFX_Impact1
     - key: VFX_Blood1

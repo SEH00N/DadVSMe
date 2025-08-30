@@ -16,13 +16,14 @@ MonoBehaviour:
   isRageAttack: 0
   feedbackDatas:
   - attackAttribute: 0
+    attackEffects: []
     hitEffects: []
     attackSounds: []
-    hitSounds:
-    - key: fire_punch
+    hitSounds: []
     hitText:
       key: DamageText
   - attackAttribute: 1
+    attackEffects: []
     hitEffects: []
     attackSounds: []
     hitSounds:
@@ -30,10 +31,11 @@ MonoBehaviour:
     hitText:
       key: DamageText
   - attackAttribute: 2
+    attackEffects: []
     hitEffects: []
     attackSounds: []
     hitSounds:
     - key: fire_punch
     hitText:
       key: DamageText
-  attackFeedback: 1
+  attackFeedback: 9

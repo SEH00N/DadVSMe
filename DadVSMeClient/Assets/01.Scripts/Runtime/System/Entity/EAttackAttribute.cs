@@ -7,6 +7,6 @@ namespace DadVSMe
         Normal,
         Fire,
         Crazy,
-        
+        Lightning
     }
 }

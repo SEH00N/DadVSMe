@@ -16,6 +16,7 @@ MonoBehaviour:
   isRageAttack: 1
   feedbackDatas:
   - attackAttribute: 0
+    attackEffects: []
     hitEffects:
     - key: VFX_Impact3
     attackSounds: []
@@ -27,22 +28,20 @@ MonoBehaviour:
     hitText:
       key: DamageText
   - attackAttribute: 1
+    attackEffects: []
     hitEffects:
-    - key: VFX_Explosion
+    - key: VFX_FirePunch
     attackSounds: []
     hitSounds:
     - key: fire_punch
     hitText:
       key: DamageText
   - attackAttribute: 2
+    attackEffects: []
     hitEffects:
     - key: VFX_CrazyHit
     attackSounds: []
-    hitSounds:
-    - key: sfx_punch_small_0
-    - key: sfx_punch_small_1
-    - key: sfx_punch_small_2
-    - key: sfx_punch_small_3
+    hitSounds: []
     hitText:
       key: DamageText
   juggleForce: 15

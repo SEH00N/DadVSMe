@@ -11,5 +11,6 @@ namespace DadVSMe.Entities
         GrabHit2,
         Throw1,
         Throw2,
+        Fire,
     }
 }

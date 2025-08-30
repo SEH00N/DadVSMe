@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using Cysharp.Threading.Tasks;
+using DadVSMe.Core.Cam;
 using DadVSMe.Entities;
 using H00N.AI.FSM;
 using H00N.Resources.Pools;
@@ -60,10 +61,6 @@ namespace DadVSMe
                         points[count] = health.transform.position;
                         targets.Add(health);
 
-                        health.Attack(instigator, attackData);
-                        UnitFSMData unitFSMData = instigator.GetComponent<FSMBrain>().GetAIData<UnitFSMData>();
-                        _ = new PlayHitFeedback(feedbackDataContainer, unitFSMData.attackAttribute, health.transform.position, Vector3.zero, unitFSMData.forwardDirection);
-
                         findTarget = true;
 
                         if (count >= attackNum)
@@ -77,6 +74,8 @@ namespace DadVSMe
                 if (findTarget == false)
                     break;
             }
+
+            AttackAsync(targets, instigator, attackData, feedbackDataContainer);
 
             points[0] = instigator.transform.position;
             lineRenderer.positionCount = targets.Count + 1;
@@ -93,6 +92,31 @@ namespace DadVSMe
             await UniTask.Delay(TimeSpan.FromSeconds(3));
 
             Despawn();
+        }
+
+        private async void AttackAsync(List<UnitHealth> targets, Unit instigator, IAttackData attackData, IAttackFeedbackDataContainer feedbackDataContainer)
+        {
+            if(targets.Count > 2)
+            {
+                BackgroundFilterCameraHandle handle = CameraManager.CreateCameraHandle<BackgroundFilterCameraHandle, BackgroundFilterCameraHandleParameter>(out BackgroundFilterCameraHandleParameter param);
+                param.time = 0.25f;
+                param.color = Color.black;
+                handle.ExecuteAsync(param);
+            }
+            
+            UnitFSMData unitFSMData = instigator.FSMBrain.GetAIData<UnitFSMData>();
+            EAttackAttribute attackAttribute = unitFSMData.attackAttribute;
+            unitFSMData.attackAttribute = EAttackAttribute.Lightning;
+
+            for(int i = 0; i < targets.Count; i++)
+            {
+                UnitHealth health = targets[i];
+                health.Attack(instigator, attackData);
+                _ = new PlayHitFeedback(feedbackDataContainer, unitFSMData.attackAttribute, health.transform.position, Vector3.zero, unitFSMData.forwardDirection);
+                await UniTask.Delay(TimeSpan.FromSeconds(.1f));
+            }
+
+            unitFSMData.attackAttribute = attackAttribute;
         }
 
         public void Despawn()

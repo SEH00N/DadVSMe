@@ -36,7 +36,14 @@ MonoBehaviour:
   - m_GUID: 4cc5980023a5f4e7bab372c40446c1c9
     m_Address: VFX_DeadBomb
     m_ReadOnly: 0
-    m_SerializedLabels: []
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 56f27f2441b764406a83710a4faadeec
+    m_Address: VFX_FirePunch
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 5748aea6473e74e918a79d99f9a53651
     m_Address: VFX_Heal
