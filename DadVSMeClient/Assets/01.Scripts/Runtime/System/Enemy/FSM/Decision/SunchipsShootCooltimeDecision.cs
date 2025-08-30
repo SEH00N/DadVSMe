@@ -2,22 +2,22 @@ using DadVSMe.Enemies.FSM;
 using H00N.AI.FSM;
 using UnityEngine;
 
-namespace DadVSMe
+namespace DadVSMe.Enemies.FSM
 {
-    public class SunchipsSpinCooltimeDecision : FSMDecision
+    public class SunchipsShootCooltimeDecision : FSMDecision
     {
-        SunchipsEnemyFSMData fsmData;
+        SunchipsEnemyFSMData data;
 
         public override void Init(FSMBrain brain, FSMState state)
         {
             base.Init(brain, state);
 
-            fsmData = brain.GetAIData<SunchipsEnemyFSMData>();
+            data = brain.GetAIData<SunchipsEnemyFSMData>();
         }
 
         public override bool MakeDecision()
         {
-            return fsmData.currentFrenzyCooltime <= 0f;
+            return data.shootCooltime <= 0f;
         }
     }
 }

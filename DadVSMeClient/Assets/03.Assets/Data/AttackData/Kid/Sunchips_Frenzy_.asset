@@ -9,8 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7501178f7cf3d436cb99bd9ba1e36677, type: 3}
-  m_Name: Sunchips_Frenzy
+  m_Script: {fileID: 11500000, guid: 6b891140ae9b8429a90d868b93558bd7, type: 3}
+  m_Name: Sunchips_Frenzy_
   m_EditorClassIdentifier: 
   damage: 10
   isRageAttack: 0
@@ -29,5 +29,4 @@ MonoBehaviour:
     - key: sfx_punch_hard_2
     hitText:
       key: DamageText
-  juggleForce: 0
-  juggleDirection: {x: 0, y: 0}
+  attackFeedback: 10

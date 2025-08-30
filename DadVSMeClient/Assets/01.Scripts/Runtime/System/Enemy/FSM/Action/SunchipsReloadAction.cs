@@ -2,7 +2,7 @@ using DadVSMe.Enemies.FSM;
 using H00N.AI.FSM;
 using UnityEngine;
 
-namespace DadVSMe
+namespace DadVSMe.Enemies.FSM
 {
     public class SunchipsReloadAction : FSMAction
     {

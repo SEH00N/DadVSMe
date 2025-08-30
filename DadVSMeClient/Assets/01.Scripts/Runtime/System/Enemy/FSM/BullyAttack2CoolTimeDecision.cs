@@ -2,9 +2,9 @@ using DadVSMe.Enemies.FSM;
 using H00N.AI.FSM;
 using UnityEngine;
 
-namespace DadVSMe
+namespace DadVSMe.Enemies.FSM
 {
-    public class BullyAttack1CoolTimeDecision : FSMDecision
+    public class BullyAttack2CoolTimeDecision : FSMDecision
     {
         BullyEnemyFSMData fsmData;
 
@@ -17,7 +17,7 @@ namespace DadVSMe
 
         public override bool MakeDecision()
         {
-            return fsmData.currnetAttack1Cooltime <= 0;
+            return fsmData.currnetAttack2Cooltime <= 0;
         }
     }
 }

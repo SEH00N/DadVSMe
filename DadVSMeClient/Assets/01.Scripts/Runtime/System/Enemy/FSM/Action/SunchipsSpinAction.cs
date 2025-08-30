@@ -3,7 +3,7 @@ using DadVSMe.Entities;
 using H00N.AI.FSM;
 using UnityEngine;
 
-namespace DadVSMe
+namespace DadVSMe.Enemies.FSM
 {
     public class SunchipsSpinAction : FSMAction
     {

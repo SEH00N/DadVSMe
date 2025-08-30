@@ -12,5 +12,6 @@ namespace DadVSMe.Entities
         Throw1,
         Throw2,
         Fire,
+        Frenzy
     }
 }

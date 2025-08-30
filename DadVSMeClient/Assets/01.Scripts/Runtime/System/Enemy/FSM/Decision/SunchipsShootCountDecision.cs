@@ -2,9 +2,9 @@ using DadVSMe.Enemies.FSM;
 using H00N.AI.FSM;
 using UnityEngine;
 
-namespace DadVSMe
+namespace DadVSMe.Enemies.FSM
 {
-    public class ShootCountDecision : FSMDecision
+    public class SunchipsShootCountDecision : FSMDecision
     {
         [SerializeField] private int targetShootCount;
 
