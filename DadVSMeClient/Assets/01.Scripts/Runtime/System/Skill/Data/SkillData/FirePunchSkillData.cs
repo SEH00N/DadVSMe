@@ -16,7 +16,7 @@ namespace DadVSMe
     
         public override UnitSkill CreateSkill()
         {
-            return new FirePunchSkill(attackData, levelUpIncreaseRate, firePrefab, burnTime, attackDelay);
+            return new FirePunchSkill(attackData, levelUpIncreaseRate, particlePrefab, firePrefab, burnTime, attackDelay);
         }
     }
 }

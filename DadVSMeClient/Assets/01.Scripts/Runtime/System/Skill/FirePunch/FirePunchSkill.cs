@@ -20,15 +20,17 @@ namespace DadVSMe
 
         private Unit owner;
 
-        public FirePunchSkill(AttackDataBase attackData, float levelUpIncreaseRate, AddressableAsset<Fire> firePrefab, float burnTime, float attackDelay) : base()
+        public FirePunchSkill(AttackDataBase attackData, float levelUpIncreaseRate, AddressableAsset<ParticleSystem> particlePrefab, AddressableAsset<Fire> firePrefab, float burnTime, float attackDelay) : base()
         {
             this.levelUpIncreaseRate = levelUpIncreaseRate;
+            this.particlePrefab = particlePrefab;
             this.firePrefab = firePrefab;
             this.burnTime = burnTime;
             this.attackDelay = attackDelay;
             this.attackData = attackData;
 
             firePrefab.InitializeAsync().Forget();
+            particlePrefab.InitializeAsync().Forget();
         }
 
         public override void OnRegist(UnitSkillComponent ownerComponent)
@@ -38,6 +40,16 @@ namespace DadVSMe
             owner = ownerComponent.GetComponent<Unit>();
             owner.onAttackTargetEvent.AddListener(OnAttackTarget);
             Execute();
+            SpawnEffectAsync();
+        }
+
+        private async void SpawnEffectAsync()
+        {
+            await particlePrefab.InitializeAsync();
+
+            ParticleSystem particle = PoolManager.Spawn<ParticleSystem>(particlePrefab.Key, ownerComponent.gameObject.transform);
+            particle.transform.localPosition = SpawnOffset;
+            particle.Play();
         }
 
         private void OnAttackTarget(Unit target, IAttackData attackData)

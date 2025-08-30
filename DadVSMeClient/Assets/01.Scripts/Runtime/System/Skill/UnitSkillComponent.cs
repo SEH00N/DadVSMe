@@ -21,9 +21,9 @@ namespace DadVSMe
             // RegistSkill(SkillType.ItemMagnet);
             // RegistSkill(SkillType.GuidedOrb);
             // RegistSkill(SkillType.AttackBlast);
-            // RegistSkill(SkillType.FirePunch);
+            RegistSkill(SkillType.FirePunch);
             // RegistSkill(SkillType.StatikkShiv);
-            RegistSkill(SkillType.Bowling);
+            // RegistSkill(SkillType.Bowling);
         }
 
         public void RegistSkill(SkillType skillType)

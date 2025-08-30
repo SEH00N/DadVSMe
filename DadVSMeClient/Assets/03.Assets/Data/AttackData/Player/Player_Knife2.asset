@@ -21,10 +21,7 @@ MonoBehaviour:
     - key: VFX_Blood1
     - key: VFX_Impact1
     attackSounds:
-    - key: sfx_swing_small_0
-    - key: sfx_swing_small_1
-    - key: sfx_swing_small_2
-    - key: sfx_swing_small_3
+    - key: sfx_knife_spinning
     hitSounds:
     - key: sfx_punch_small_0
     - key: sfx_punch_small_1
@@ -34,8 +31,7 @@ MonoBehaviour:
       key: DamageText
   - attackAttribute: 1
     attackEffects: []
-    hitEffects:
-    - key: VFX_FirePunch
+    hitEffects: []
     attackSounds: []
     hitSounds:
     - key: fire_punch
