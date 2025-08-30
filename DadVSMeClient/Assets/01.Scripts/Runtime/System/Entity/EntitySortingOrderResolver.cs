@@ -11,6 +11,8 @@ namespace DadVSMe.Entities
         [SerializeField] List<Collider2D> resolverColliders = null;
         private HashSet<EntitySortingOrderProvider> overlappedSortingOrderProviders = null;
         private HashSet<EntitySortingOrderProvider> childSortingOrderProviders = null;
+
+        private HashSet<EntitySortingOrderProvider> modifiedProviderInFrame = null;
         
         private EntitySortingOrderResolver parent = null;
         private bool active = true;
@@ -19,6 +21,7 @@ namespace DadVSMe.Entities
         {
             overlappedSortingOrderProviders = new HashSet<EntitySortingOrderProvider>();
             childSortingOrderProviders = new HashSet<EntitySortingOrderProvider>();
+            modifiedProviderInFrame = new HashSet<EntitySortingOrderProvider>();
             parent = null;
         }
         
@@ -111,16 +114,25 @@ namespace DadVSMe.Entities
             return this;
         }
 
+        private void LateUpdate()
+        {
+            modifiedProviderInFrame.Clear();
+        }
+
         private void ReorderSortingOrder(EntitySortingOrderProvider performer)
         {
             // if two colliders overlap, cross-references may occur due to Trigger Event call order issues.
             // to prevent infinite loops due to cross-references, reordering sorting order after resolving the cross-reference. 
             EntitySortingOrderResolver otherSortingOrderResolver = performer.EntitySortingOrderResolver;
-            if(otherSortingOrderResolver.overlappedSortingOrderProviders.Contains(entitySortingOrderProvider) == true)
+            if(modifiedProviderInFrame.Contains(performer) || otherSortingOrderResolver.overlappedSortingOrderProviders.Contains(entitySortingOrderProvider))
             {
                 Debug.LogWarning($"[EntitySortingOrderResolver::ReorderSortingOrder] {entitySortingOrderProvider.name} is cross-referenced.");
                 otherSortingOrderResolver.RemoveProvider(entitySortingOrderProvider);
+                RemoveProvider(performer);
+                return;
             }
+
+            modifiedProviderInFrame.Add(performer);
 
             int minSortingOrder = int.MaxValue; // default sorting should be zero.
             foreach(var otherSortingOrderProvider in overlappedSortingOrderProviders)
