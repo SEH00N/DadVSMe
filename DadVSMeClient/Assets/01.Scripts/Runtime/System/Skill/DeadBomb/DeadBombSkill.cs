@@ -47,6 +47,10 @@ namespace DadVSMe
             Vector2 spawnPoint = attackTarget.transform.position;
             Collider2D[] cols = Physics2D.OverlapCircleAll(spawnPoint, attackRadius);
 
+            UnitFSMData unitFSMData = owner.FSMBrain.GetAIData<UnitFSMData>();
+            EAttackAttribute attackAttribute = unitFSMData.attackAttribute;
+            unitFSMData.attackAttribute = EAttackAttribute.Fire;
+
             foreach (var col in cols)
             {
                 if (col.gameObject == ownerComponent.gameObject)
@@ -59,11 +63,14 @@ namespace DadVSMe
                     DynamicAttackData attackData = new DynamicAttackData(this.attackData);
                     attackData.SetDamage(attackData.Damage + (int)(levelUpIncreaseRate * level));
                     unitHealth.Attack(owner, attackData);
+                    _ = new PlayHitFeedback(attackData, unitFSMData.attackAttribute, unitHealth.transform.position, Vector3.zero, unitFSMData.forwardDirection);
                 }
             }
             
             _ = new PlayEffect(effectRef, spawnPoint, 1);
             _ = new PlaySound(soundRef);
+
+            unitFSMData.attackAttribute = attackAttribute;
 
             attackTarget.OnDespawnEvent -= Execute;
         }

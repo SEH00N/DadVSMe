@@ -55,8 +55,15 @@ namespace DadVSMe
             {
                 DespawnInternal();
                 Vector3 direction = (target.transform.position - transform.position).normalized;
-                _ = new PlayHitFeedback(feedbackDataContainer, EAttackAttribute.Normal, transform.position, Vector3.zero, (int)Mathf.Sign(direction.x));
+                
+                UnitFSMData unitFSMData = instigator.FSMBrain.GetAIData<UnitFSMData>();
+                EAttackAttribute attackAttribute = unitFSMData.attackAttribute;
+                unitFSMData.attackAttribute = EAttackAttribute.Crazy;
+                
                 targetHealth.Attack(instigator, attackData);
+                _ = new PlayHitFeedback(feedbackDataContainer, unitFSMData.attackAttribute, transform.position, Vector3.zero, (int)Mathf.Sign(direction.x));
+
+                unitFSMData.attackAttribute = attackAttribute;
             }
         }
 

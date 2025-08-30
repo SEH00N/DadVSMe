@@ -15,22 +15,7 @@ MonoBehaviour:
   damage: 5
   isRageAttack: 0
   feedbackDatas:
-  - attackAttribute: 0
-    attackEffects: []
-    hitEffects: []
-    attackSounds: []
-    hitSounds: []
-    hitText:
-      key: DamageText
   - attackAttribute: 1
-    attackEffects: []
-    hitEffects: []
-    attackSounds: []
-    hitSounds:
-    - key: fire_punch
-    hitText:
-      key: DamageText
-  - attackAttribute: 2
     attackEffects: []
     hitEffects: []
     attackSounds: []

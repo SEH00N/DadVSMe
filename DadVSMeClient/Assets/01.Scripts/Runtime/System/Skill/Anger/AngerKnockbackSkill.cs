@@ -45,7 +45,7 @@ namespace DadVSMe
                 if (col.gameObject.TryGetComponent<UnitHealth>(out UnitHealth targetHealth))
                 {
                     targetHealth.Attack(ownerComponent.GetComponent<Unit>(), attackData);
-                    _ = new PlayHitFeedback(attackData, attackAttribute, targetHealth.transform.position, Vector3.zero, unitFSMData.forwardDirection);
+                    _ = new PlayHitFeedback(attackData, unitFSMData.attackAttribute, targetHealth.transform.position, Vector3.zero, unitFSMData.forwardDirection);
                 }
             }
 
