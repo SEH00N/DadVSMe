@@ -73,7 +73,15 @@ namespace DadVSMe
             if(other.TryGetComponent<UnitHealth>(out UnitHealth unitHealth) == false)
                 return;
 
+            UnitFSMData unitFSMData = owner.FSMBrain.GetAIData<UnitFSMData>();
+            EAttackAttribute attackAttribute = unitFSMData.attackAttribute;
+            unitFSMData.attackAttribute = EAttackAttribute.Normal;
+
             unitHealth.Attack(owner, attackData);
+            _ = new PlayHitFeedback(attackData, unitFSMData.attackAttribute, transform.position, Vector3.zero, unitFSMData.forwardDirection);
+
+            unitFSMData.attackAttribute = attackAttribute;
+
             switch(collisionType)
             {
                 case ESimpleProjectileCollisionType.Despawm:

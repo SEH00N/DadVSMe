@@ -86,7 +86,7 @@ namespace DadVSMe
             EAttackAttribute attackAttribute = unitFSMData.attackAttribute;
             unitFSMData.attackAttribute = EAttackAttribute.Normal;
 
-            _ = new PlayHitFeedback(attackData, unitFSMData.attackAttribute, unitHealth.transform.position, Vector3.zero, unitFSMData.forwardDirection);
+            _ = new PlayHitFeedback(attackData, unitFSMData.attackAttribute, transform.position, Vector3.zero, unitFSMData.forwardDirection);
 
             unitFSMData.attackAttribute = attackAttribute;
 

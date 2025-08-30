@@ -6754,6 +6754,61 @@ Transform:
   - {fileID: 1247472010}
   m_Father: {fileID: 596532757}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2087205902
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2087205904}
+  - component: {fileID: 2087205903}
+  m_Layer: 0
+  m_Name: EnemyWaveBehaviour (3)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!114 &2087205903
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2087205902}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3449044d2f928469f903bde1b8bcb986, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnInfoList:
+  - spawnPoint: {fileID: 2087205904}
+    conditionDistance: 10
+    spawnTable:
+    - prefab:
+        key: James
+      enemyData:
+        key: JamesEnemyData
+      statData:
+        key: JamesStatData_Wave1
+      offset: {x: 0, y: -2}
+--- !u!4 &2087205904
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2087205902}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 4.68, y: -1, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2102441580
 GameObject:
   m_ObjectHideFlags: 0
@@ -6945,6 +7000,7 @@ SceneRoots:
   - {fileID: 410547405}
   - {fileID: 988389085}
   - {fileID: 350924579}
+  - {fileID: 2087205904}
   - {fileID: 255708700}
   - {fileID: 1175831825}
   - {fileID: 596532757}
