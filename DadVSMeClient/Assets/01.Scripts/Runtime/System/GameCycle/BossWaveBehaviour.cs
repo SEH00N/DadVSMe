@@ -37,6 +37,9 @@ namespace DadVSMe.GameCycles
         [SerializeField] CinemachineCamera bossDeadCinemachineCamera = null;
         [SerializeField] CinemachineCamera bossWaveCinemachineCamera = null;
 
+        [SerializeField] AddressableAsset<BossProductionUI> productionPrefab = null;
+        [SerializeField] Sprite bossProfileVisual = null;
+
         private Unit bossUnit = null;
 
         private void Awake()
@@ -45,6 +48,7 @@ namespace DadVSMe.GameCycles
             enemyData.InitializeAsync().Forget();
             statData.InitializeAsync().Forget();
             bgmLibrary.InitializeAsync().Forget();
+            productionPrefab.InitializeAsync().Forget();
         }
 
         protected override void PostOnEnable()
@@ -110,6 +114,10 @@ namespace DadVSMe.GameCycles
 
             // Play Boss Profile UI Directing
             // should be awaiting
+            var production = PoolManager.Spawn<BossProductionUI>(productionPrefab, GameInstance.MainPopupFrame);
+            production.StretchRect();
+            await production.Initialize(bossProfileVisual);
+            PoolManager.Despawn(production);
 
             // Release Camera
             TimeManager.SetTimeScale(GameDefine.DEFAULT_TIME_SCALE, true, 0.5f);
