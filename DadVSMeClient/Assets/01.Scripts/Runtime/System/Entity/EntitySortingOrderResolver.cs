@@ -30,9 +30,6 @@ namespace DadVSMe.Entities
             if(parent != null)
                 return;
 
-            if(collider.CompareTag(GameDefine.EntitySortingOrderProviderTag) == false)
-                return;
-
             if(collider.gameObject.TryGetComponent<EntitySortingOrderProvider>(out EntitySortingOrderProvider otherSortingOrderProvider) == false)
                 return;
 
@@ -55,9 +52,6 @@ namespace DadVSMe.Entities
         private void OnTriggerExit2D(Collider2D collider)
         {
             if(parent != null)
-                return;
-
-            if(collider.CompareTag(GameDefine.EntitySortingOrderProviderTag) == false)
                 return;
 
             if(collider.gameObject.TryGetComponent<EntitySortingOrderProvider>(out EntitySortingOrderProvider otherSortingOrderProvider) == false)
