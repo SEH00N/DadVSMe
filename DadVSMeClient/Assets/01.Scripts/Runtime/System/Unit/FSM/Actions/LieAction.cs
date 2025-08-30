@@ -25,6 +25,12 @@ namespace DadVSMe.Entities.FSM
             base.EnterState();
             unitFSMData.isLie = true;
 
+            if(idleTime <= 0f)
+            {
+                brain.ChangeState(onGoingState);
+                return;
+            }
+
             try {
                 cancellationTokenSource?.Cancel();
                 cancellationTokenSource?.Dispose();

@@ -6492,7 +6492,13 @@ MonoBehaviour:
     key: VFX_Dust1
   hardBounceEffect:
     key: VFX_Shockwave
-  bounceSounds: []
+  bounceSounds:
+  - key: sfx_ground0
+  - key: sfx_ground1
+  - key: sfx_ground2
+  - key: sfx_ground3
+  - key: sfx_ground4
+  - key: sfx_ground5
 --- !u!114 &5144561884178978532
 MonoBehaviour:
   m_ObjectHideFlags: 0

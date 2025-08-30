@@ -952,6 +952,10 @@ PrefabInstance:
       propertyPath: onStateEnterEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_StringArgument
       value: BullyIdle
       objectReference: {fileID: 0}
+    - target: {fileID: 5977181386820171935, guid: 16129bf7803a2466f867a51ceea4c109, type: 3}
+      propertyPath: idleTime
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6036834426620400551, guid: 16129bf7803a2466f867a51ceea4c109, type: 3}
       propertyPath: onStateEnterEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
       value: BullyLie
