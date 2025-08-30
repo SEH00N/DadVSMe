@@ -31,7 +31,7 @@ namespace DadVSMe
         [SerializeField] float _moveSpeed;
 
         Transform IAttacker.AttackerTransform => transform;
-        EAttackAttribute IAttacker.AttackAttribute => EAttackAttribute.Normal;
+        EAttackAttribute IAttacker.AttackAttribute => EAttackAttribute.Crazy;
         float IAttacker.AttackPower => 1f;
 
         public void Initialize()
@@ -76,7 +76,7 @@ namespace DadVSMe
 
             // Player Juggling
             GameInstance.GameCycle.MainPlayer.UnitHealth.Attack(this, deadlineJuggleAttackData);
-            _ = new PlayHitFeedback(deadlineJuggleAttackData, EAttackAttribute.Normal, GameInstance.GameCycle.MainPlayer.transform.position, Vector3.zero, 1);
+            _ = new PlayHitFeedback(deadlineJuggleAttackData, EAttackAttribute.Crazy, GameInstance.GameCycle.MainPlayer.transform.position, Vector3.zero, 1);
             _ = new ShakeCamera(GameInstance.GameCycle.MainCinemachineCamera, BOSS_CLEAR_DIRECTING_CAMERA_SHAKE_DURATION, BOSS_CLEAR_DIRECTING_CAMERA_SHAKE_AMPLITUDE, BOSS_CLEAR_DIRECTING_CAMERA_SHAKE_FREQUENCY);
             
             // Attack Feedback Time Freezing
