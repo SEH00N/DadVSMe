@@ -76,6 +76,8 @@ MonoBehaviour:
     lieCompare: 0
     checkDie: 1
     dieCompare: 0
+    checkWeight: 0
+    weight: 0
 --- !u!1 &1561143014328213578
 GameObject:
   m_ObjectHideFlags: 0
@@ -215,6 +217,8 @@ MonoBehaviour:
     lieCompare: 0
     checkDie: 1
     dieCompare: 0
+    checkWeight: 0
+    weight: 0
 --- !u!114 &4880474353529723785
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -244,6 +248,8 @@ MonoBehaviour:
     lieCompare: 0
     checkDie: 1
     dieCompare: 0
+    checkWeight: 0
+    weight: 0
 --- !u!1 &4913039403058864048
 GameObject:
   m_ObjectHideFlags: 0
@@ -412,6 +418,8 @@ MonoBehaviour:
     lieCompare: 0
     checkDie: 1
     dieCompare: 0
+    checkWeight: 0
+    weight: 0
 --- !u!1 &6137753377158974258
 GameObject:
   m_ObjectHideFlags: 0
@@ -534,9 +542,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackOffset: {x: 0, y: 2}
-  hitEffects: []
-  attackSounds: []
-  hitSounds: []
   attackData: {fileID: 11400000, guid: ac8638d85e723463b94c58aa6d05cc54, type: 2}
   firePosition: {fileID: 9151241407081413815}
   targetPosition: {fileID: 4270671493354672321}
@@ -643,6 +648,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1482249583435181552, guid: 16129bf7803a2466f867a51ceea4c109, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2795491540172167987, guid: 16129bf7803a2466f867a51ceea4c109, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 5877746896114180664, guid: 6219640001d114a1d86cbc535b17c0a5, type: 3}
+    - target: {fileID: 5461451983993707117, guid: 16129bf7803a2466f867a51ceea4c109, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6067423689800822613, guid: 16129bf7803a2466f867a51ceea4c109, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
