@@ -16,6 +16,7 @@ MonoBehaviour:
   isRageAttack: 0
   feedbackDatas:
   - attackAttribute: 0
+    attackEffects: []
     hitEffects:
     - key: VFX_Impact1
     - key: VFX_Blood1
@@ -26,5 +27,7 @@ MonoBehaviour:
     - key: sfx_punch_hard_0
     - key: sfx_punch_hard_1
     - key: sfx_punch_hard_2
+    hitText:
+      key: DamageText
   juggleForce: 20
   juggleDirection: {x: 0, y: 0.9}

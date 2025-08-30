@@ -8,7 +8,7 @@ namespace DadVSMe.Entities.FSM
 {
     public class ShootAttackAction : AttackActionBase
     {
-        [SerializeField] AttackDataBase attackData = null;
+        [SerializeField] ShootAttackData attackData = null;
         [SerializeField] Transform firePosition = null;
         [SerializeField] Transform targetPosition = null;
         [SerializeField] AddressableAsset<Projectile> projectilePrefab = null;
@@ -19,6 +19,7 @@ namespace DadVSMe.Entities.FSM
         {
             base.Init(brain, state);
             projectilePrefab.InitializeAsync().Forget();
+            attackData.shootSound.InitializeAsync().Forget();
         }
 
         public override void EnterState()
@@ -40,6 +41,8 @@ namespace DadVSMe.Entities.FSM
             Projectile projectile = PoolManager.Spawn<Projectile>(projectilePrefab.Key);
             projectile.transform.position = firePosition.position;
             projectile.Initialize(unitFSMData.unit, (Vector2)targetPosition.position);
+
+            _ = new PlaySound(attackData.shootSound);
         }
     }
 }

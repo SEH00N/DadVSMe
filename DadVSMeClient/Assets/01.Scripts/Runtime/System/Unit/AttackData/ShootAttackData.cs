@@ -1,3 +1,4 @@
+using H00N.Resources.Addressables;
 using UnityEngine;
 
 namespace DadVSMe.Entities
@@ -6,5 +7,7 @@ namespace DadVSMe.Entities
     public class ShootAttackData : AttackDataBase
     {
         public override EAttackFeedback AttackFeedback => EAttackFeedback.None;
+
+        public AddressableAsset<AudioClip> shootSound;
     }
 }

@@ -21,6 +21,8 @@ namespace DadVSMe.Entities
                 return;
 
             unit.UnitHealth.Attack(this, collisionAttackData);
+            Vector3 forwardDirection = unit.transform.position - transform.position;
+            _ = new PlayHitFeedback(collisionAttackData, EAttackAttribute.Normal, unit.transform.position, Vector3.zero, (int)Mathf.Sign(forwardDirection.x));
         }
     }
 }

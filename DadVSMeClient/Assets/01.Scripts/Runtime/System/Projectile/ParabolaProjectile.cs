@@ -81,6 +81,15 @@ namespace DadVSMe
                 return;
 
             unitHealth.Attack(owner, attackData);
+
+            UnitFSMData unitFSMData = owner.FSMBrain.GetAIData<UnitFSMData>();
+            EAttackAttribute attackAttribute = unitFSMData.attackAttribute;
+            unitFSMData.attackAttribute = EAttackAttribute.Normal;
+
+            _ = new PlayHitFeedback(attackData, unitFSMData.attackAttribute, unitHealth.transform.position, Vector3.zero, unitFSMData.forwardDirection);
+
+            unitFSMData.attackAttribute = attackAttribute;
+
             StopAllCoroutines();
             PoolManager.Despawn(this);
         }

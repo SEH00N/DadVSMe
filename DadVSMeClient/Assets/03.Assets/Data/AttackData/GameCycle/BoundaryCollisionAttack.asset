@@ -14,6 +14,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 0
   isRageAttack: 0
-  feedbackDatas: []
+  feedbackDatas:
+  - attackAttribute: 0
+    attackEffects: []
+    hitEffects:
+    - key: VFX_Impact1
+    attackSounds: []
+    hitSounds:
+    - key: sfx_punch_small_0
+    - key: sfx_punch_small_1
+    - key: sfx_punch_small_2
+    - key: sfx_punch_small_3
+    hitText:
+      key: 
   juggleForce: 10
   juggleDirection: {x: 1, y: 0}
