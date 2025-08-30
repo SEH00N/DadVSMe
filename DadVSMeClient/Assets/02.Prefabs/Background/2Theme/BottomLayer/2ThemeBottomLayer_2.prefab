@@ -712,7 +712,8 @@ GameObject:
   m_Component:
   - component: {fileID: 7773739294132201337}
   - component: {fileID: 4909240696513381244}
-  m_Layer: 0
+  - component: {fileID: 1227880248074013932}
+  m_Layer: 9
   m_Name: Block_Left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -780,6 +781,19 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &1227880248074013932
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3648092825560181931}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3253e03329d334d23a85ba382c34dbc7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  collisionAttackData: {fileID: 11400000, guid: d93bda65b7aa940269e4ff4fa155bff2, type: 2}
 --- !u!1 &4130076701271883540
 GameObject:
   m_ObjectHideFlags: 0
@@ -1376,7 +1390,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3174193681567439685}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: BossWaveBlock
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1756,7 +1770,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1480864190958550636}
   - component: {fileID: 8916195890812537173}
-  m_Layer: 0
+  - component: {fileID: 866092710569202653}
+  m_Layer: 9
   m_Name: Block_Right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1824,6 +1839,19 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &866092710569202653
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6765275923863451505}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3253e03329d334d23a85ba382c34dbc7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  collisionAttackData: {fileID: 11400000, guid: d93bda65b7aa940269e4ff4fa155bff2, type: 2}
 --- !u!1 &6765625082438876141
 GameObject:
   m_ObjectHideFlags: 0
@@ -2284,7 +2312,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2550760468402281156}
   - component: {fileID: 4133248409191477172}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: BottomCollider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2497,7 +2525,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5741128995233227753}
   - component: {fileID: 4064598996521503515}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: TopCollider
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -6,8 +6,11 @@ namespace DadVSMe.Enemies.FSM
 {
     public class EnemyPatrolAction : FSMAction
     {
+        private const float BOUNDARY_CHECK_DISTANCE = 0.5f;
+
         private EnemyFSMData enemyFSMData = null;
-        private NPCMovement npcMovement = null;
+        private UnitMovement unitMovement = null;
+        private UnitStatData unitStatData = null;
 
         private Vector2 patrolPoint = Vector2.zero;
 
@@ -15,13 +18,14 @@ namespace DadVSMe.Enemies.FSM
         {
             base.Init(brain, state);
             enemyFSMData = brain.GetAIData<EnemyFSMData>();
-            npcMovement = brain.GetComponent<NPCMovement>();
+            unitMovement = brain.GetComponent<UnitMovement>();
+            unitStatData = brain.GetAIData<UnitStatData>();
         }
 
         public override void EnterState()
         {
             base.EnterState();
-            npcMovement.SetActive(true);
+            unitMovement.SetActive(true);
 
             Vector2 targetPosition = enemyFSMData.Player.transform.position;
             Vector2 currentPosition = brain.transform.position;
@@ -36,9 +40,7 @@ namespace DadVSMe.Enemies.FSM
             randomDirection.Normalize();
 
             float randomRadius = Mathf.Sqrt(Random.Range(enemyFSMData.patrolMinRange * enemyFSMData.patrolMinRange, enemyFSMData.patrolMaxRange * enemyFSMData.patrolMaxRange));
-            patrolPoint = npcMovement.GetValidDestination(targetPosition + (randomDirection * randomRadius));
-
-            npcMovement.SetDestination(patrolPoint);
+            patrolPoint = targetPosition + (randomDirection * randomRadius);
         }
 
         public override void UpdateState()
@@ -46,6 +48,14 @@ namespace DadVSMe.Enemies.FSM
             base.UpdateState();
 
             Vector2 direction = patrolPoint - (Vector2)brain.transform.position;
+            if(Physics2D.Raycast(brain.transform.position, direction.normalized, BOUNDARY_CHECK_DISTANCE, GameDefine.BOUNDARY_LAYER_MASK))
+            {
+                brain.SetAsDefaultState();
+                return;
+            }
+
+            unitMovement.SetMovementVelocity(direction.normalized * unitStatData[EUnitStat.MoveSpeed].FinalValue);
+
             if(direction.sqrMagnitude >= 0.01f)
                 return;
 
@@ -55,7 +65,7 @@ namespace DadVSMe.Enemies.FSM
         public override void ExitState()
         {
             base.ExitState();
-            npcMovement.SetActive(false);
+            unitMovement.SetActive(false);
         }
     }
 }

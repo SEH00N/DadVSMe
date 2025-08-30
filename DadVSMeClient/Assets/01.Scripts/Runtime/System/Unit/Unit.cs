@@ -91,7 +91,7 @@ namespace DadVSMe.Entities
             // unitRigidbody.bodyType = isFloat ? RigidbodyType2D.Dynamic : DefaultRigidbodyType;
             unitRigidbody.gravityScale = isFloat ? GameDefine.GRAVITY_SCALE : 0f;
             unitMovement.SetActive(isFloat == false);
-            unitCollider.isTrigger = isFloat == false;
+            unitCollider.isTrigger = isFloat;
             sortingOrderResolver.SetActive(isFloat == false);
         }
 

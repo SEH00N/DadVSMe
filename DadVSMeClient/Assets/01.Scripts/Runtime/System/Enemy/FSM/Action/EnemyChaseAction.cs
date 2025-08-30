@@ -11,7 +11,8 @@ namespace DadVSMe.Enemies.FSM
         [SerializeField] float xPadding = 1f;
 
         private EnemyFSMData enemyFSMData = null;
-        private NPCMovement npcMovement = null;
+        private UnitMovement unitMovement = null;
+        private UnitStatData unitStatData = null;
 
         private float updateTimer = 0f;
 
@@ -19,13 +20,14 @@ namespace DadVSMe.Enemies.FSM
         {
             base.Init(brain, state);
             enemyFSMData = brain.GetAIData<EnemyFSMData>();
-            npcMovement = brain.GetComponent<NPCMovement>();
+            unitMovement = brain.GetComponent<UnitMovement>();
+            unitStatData = brain.GetAIData<UnitStatData>();
         }
 
         public override void EnterState()
         {
             base.EnterState();
-            npcMovement.SetActive(true);
+            unitMovement.SetActive(true);
         }
 
         public override void UpdateState()
@@ -39,13 +41,15 @@ namespace DadVSMe.Enemies.FSM
             updateTimer = 0f;
 
             Vector2 direction = (Vector2)(enemyFSMData.Player.transform.position - brain.transform.position);
-            npcMovement.SetDestination(enemyFSMData.Player.transform.position + new Vector3(xPadding * -Mathf.Sign(direction.x), 0f, 0f));
+            Vector3 destination = enemyFSMData.Player.transform.position + new Vector3(xPadding * -Mathf.Sign(direction.x), 0f, 0f);
+            
+            unitMovement.SetMovementVelocity(destination.normalized * unitStatData[EUnitStat.MoveSpeed].FinalValue);
         }
 
         public override void ExitState()
         {
             base.ExitState();
-            npcMovement.SetActive(false);
+            unitMovement.SetActive(false);
         }
     }
 }

@@ -1006,7 +1006,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3696424982551485090}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: BossWaveBlock
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1040,7 +1040,8 @@ GameObject:
   m_Component:
   - component: {fileID: 733035824654114297}
   - component: {fileID: 8421488424237102165}
-  m_Layer: 0
+  - component: {fileID: 3856891289970119484}
+  m_Layer: 9
   m_Name: Block_Right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1108,6 +1109,19 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &3856891289970119484
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3640277848357612487}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3253e03329d334d23a85ba382c34dbc7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  collisionAttackData: {fileID: 11400000, guid: d93bda65b7aa940269e4ff4fa155bff2, type: 2}
 --- !u!1 &3738266804797514983
 GameObject:
   m_ObjectHideFlags: 0
@@ -2168,7 +2182,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1993510234039577582}
   - component: {fileID: 6619679100069159774}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: BottomCollider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2333,7 +2347,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8154615502975366960}
   - component: {fileID: 2300630478039860418}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: TopCollider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2585,7 +2599,8 @@ GameObject:
   m_Component:
   - component: {fileID: 5881956613780971964}
   - component: {fileID: 3821171079241648740}
-  m_Layer: 0
+  - component: {fileID: 5667282616166811095}
+  m_Layer: 9
   m_Name: Block_Left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2653,6 +2668,19 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &5667282616166811095
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8300801617742671280}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3253e03329d334d23a85ba382c34dbc7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  collisionAttackData: {fileID: 11400000, guid: d93bda65b7aa940269e4ff4fa155bff2, type: 2}
 --- !u!1 &8695263202756361947
 GameObject:
   m_ObjectHideFlags: 0

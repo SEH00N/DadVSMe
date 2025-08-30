@@ -21,8 +21,8 @@ namespace DadVSMe.GameCycles
         [SerializeField] Player mainPlayer = null;
         public Player MainPlayer => mainPlayer;
 
-        [SerializeField] BackgroundTrailer backgroundTrailer = null;
-        [SerializeField] NavMeshSurface navMeshSurface = null;
+        // [SerializeField] BackgroundTrailer backgroundTrailer = null;
+        // [SerializeField] NavMeshSurface navMeshSurface = null;
 
         [Space(10f)]
         [SerializeField] Transform startLine = null;
@@ -52,15 +52,15 @@ namespace DadVSMe.GameCycles
 
             _ = new ChangeCinemachineCamera(mainCinemachineCamera);
 
-            backgroundTrailer.onSpawnedBackground += HandleSpawnedBackground;
+            // backgroundTrailer.onSpawnedBackground += HandleSpawnedBackground;
             
             return UniTask.CompletedTask;
         }
 
-        private void HandleSpawnedBackground(int currentThemeIndex)
-        {
-            navMeshSurface.BuildNavMeshAsync();
-        }
+        // private void HandleSpawnedBackground(int currentThemeIndex)
+        // {
+        //     navMeshSurface.BuildNavMeshAsync();
+        // }
 
         public void Pause()
         {

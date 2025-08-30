@@ -36,13 +36,13 @@ namespace DadVSMe.Entities
             if(isActive == false)
                 return;
 
-            bool isPathValid = 
+            bool isPathInvalid = 
                 navMeshAgent.pathPending || 
                 navMeshAgent.pathStatus == NavMeshPathStatus.PathInvalid ||
                 navMeshAgent.hasPath == false || 
                 navMeshAgent.remainingDistance <= navMeshAgent.stoppingDistance;
 
-            if (isPathValid)
+            if (isPathInvalid)
             {
                 unitMovement.SetMovementVelocity(Vector2.zero);
                 return;
