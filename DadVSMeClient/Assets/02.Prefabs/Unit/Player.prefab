@@ -4211,6 +4211,7 @@ GameObject:
   - component: {fileID: 8884150199922793445}
   - component: {fileID: 2349341847389620232}
   - component: {fileID: 4516241213115526802}
+  - component: {fileID: 5122326733792442954}
   m_Layer: 0
   m_Name: Juggle(Default)
   m_TagString: Untagged
@@ -4290,6 +4291,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bounceState: {fileID: 7667994150933278078}
+--- !u!114 &5122326733792442954
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4220035116182085423}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d47a905acfa6141c4ac43c248ee43db6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  defaultSortingOrderResolverCollider: {fileID: 4518340953437237913}
+  grabbedSortingOrderResolverCollider: {fileID: 6113472226918677138}
 --- !u!1 &4437865639108191556
 GameObject:
   m_ObjectHideFlags: 0
@@ -5868,6 +5883,7 @@ GameObject:
   - component: {fileID: 4912613773680421111}
   - component: {fileID: 1102893514868889192}
   - component: {fileID: 1448780021069922567}
+  - component: {fileID: 5754322804467214465}
   m_Layer: 0
   m_Name: Flinch
   m_TagString: Untagged
@@ -5962,6 +5978,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ab5ed9b768dc4f1ba8695f9ab1e8aac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &5754322804467214465
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6100329204701635445}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d47a905acfa6141c4ac43c248ee43db6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  defaultSortingOrderResolverCollider: {fileID: 4518340953437237913}
+  grabbedSortingOrderResolverCollider: {fileID: 6113472226918677138}
 --- !u!1 &6344452088988129554
 GameObject:
   m_ObjectHideFlags: 0
@@ -6412,6 +6442,7 @@ GameObject:
   - component: {fileID: 6759825855323191753}
   - component: {fileID: 3037027986709243573}
   - component: {fileID: 5807568429010325276}
+  - component: {fileID: 8296841207782999290}
   m_Layer: 0
   m_Name: Hold
   m_TagString: Untagged
@@ -6477,6 +6508,20 @@ MonoBehaviour:
   onStateExitEvent:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &8296841207782999290
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6805716005683152168}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d47a905acfa6141c4ac43c248ee43db6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  defaultSortingOrderResolverCollider: {fileID: 4518340953437237913}
+  grabbedSortingOrderResolverCollider: {fileID: 6113472226918677138}
 --- !u!1 &6840288169985064943
 GameObject:
   m_ObjectHideFlags: 0
@@ -6747,7 +6792,19 @@ MonoBehaviour:
   autoTransitioning: 0
   onStateEnterEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2841000604668159261}
+        m_TargetAssemblyTypeName: H00N.AI.FSM.FSMBrain, H00N.AI.FSM
+        m_MethodName: SetAsDefaultState
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   onStateExitEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -7749,6 +7806,7 @@ GameObject:
   - component: {fileID: 8226217137458777975}
   - component: {fileID: 5370351997882260451}
   - component: {fileID: 7612080915785530551}
+  - component: {fileID: 5095371514607587814}
   m_Layer: 0
   m_Name: Frenzy
   m_TagString: Untagged
@@ -7843,6 +7901,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ab5ed9b768dc4f1ba8695f9ab1e8aac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &5095371514607587814
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8026885569517044591}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d47a905acfa6141c4ac43c248ee43db6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  defaultSortingOrderResolverCollider: {fileID: 4518340953437237913}
+  grabbedSortingOrderResolverCollider: {fileID: 6113472226918677138}
 --- !u!1 &8070469860066932729
 GameObject:
   m_ObjectHideFlags: 0
@@ -10196,6 +10268,7 @@ GameObject:
   - component: {fileID: 3023176478887431983}
   - component: {fileID: 5963611338545104105}
   - component: {fileID: 9138009294443908171}
+  - component: {fileID: 2317022696232396331}
   m_Layer: 0
   m_Name: Juggle(Attack)
   m_TagString: Untagged
@@ -10262,6 +10335,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bounceState: {fileID: 7667994150933278078}
+--- !u!114 &2317022696232396331
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9158935340181543625}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d47a905acfa6141c4ac43c248ee43db6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  defaultSortingOrderResolverCollider: {fileID: 4518340953437237913}
+  grabbedSortingOrderResolverCollider: {fileID: 6113472226918677138}
 --- !u!1 &9206362244009254845
 GameObject:
   m_ObjectHideFlags: 0

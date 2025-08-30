@@ -38,8 +38,6 @@ namespace DadVSMe.Players.FSM
 
             defaultSortingOrderResolverCollider.enabled = true;
             grabbedSortingOrderResolverCollider.enabled = false;
-
-            brain.SetAsDefaultState();
         }
     }
 }
