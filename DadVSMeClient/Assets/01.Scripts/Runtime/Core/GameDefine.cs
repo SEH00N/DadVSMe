@@ -16,8 +16,10 @@ namespace DadVSMe
         public static readonly TagHandle EnemyTag = TagHandle.GetExistingTag("Enemy");
         public static readonly TagHandle PlayerTag = TagHandle.GetExistingTag("Player");
 
+        public const int PLAYER_LAYER_MASK = 1 << 8;
         public const int BOUNDARY_LAYER_MASK = 1 << 9;
         public const int ITEM_LAYER_MASK = 1 << 12;
+        public const int ENEMY_LAYER_MASK = 1 << 13;
 
         public const float GRAVITY_SCALE = 6.5f;
 

@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using H00N.AI;
 using UnityEngine;
@@ -19,6 +20,7 @@ namespace DadVSMe.Entities
         [HideInInspector] public bool isDie = false;
         [HideInInspector] public EAttackAttribute hitAttribute;
         [HideInInspector] public EAttackAttribute attackAttribute;
+        public Action<Unit> OnBowlingEvent;
 
         public IAIData Initialize()
         {

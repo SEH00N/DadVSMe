@@ -3,12 +3,15 @@ using UnityEngine;
 
 namespace DadVSMe
 {
-    public class DynamicAttackData : IAttackData, IAttackFeedbackDataContainer
+    public class DynamicAttackData : IAttackData, IAttackFeedbackDataContainer, IJuggleAttackData
     {
         private int damage;
         public int Damage => damage;
 
         public EAttackFeedback AttackFeedback => staticAttackData.AttackFeedback;
+
+        public float JuggleForce => (staticAttackData as IJuggleAttackData)?.JuggleForce ?? 0f;
+        public Vector2 JuggleDirection => (staticAttackData as IJuggleAttackData)?.JuggleDirection ?? Vector2.zero;
 
         public AttackDataBase staticAttackData;
 

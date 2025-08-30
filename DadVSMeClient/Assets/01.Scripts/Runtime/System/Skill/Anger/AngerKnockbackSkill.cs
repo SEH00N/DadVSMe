@@ -7,6 +7,7 @@ namespace DadVSMe
 {
     public class AngerKnockbackSkill : UnitSkill
     {
+        private Unit owner = null;
         private AttackDataBase attackData;
         private float knockbackRange;
         private float levelUpIncreaseRate;
@@ -21,7 +22,8 @@ namespace DadVSMe
         public override void OnRegist(UnitSkillComponent ownerComponent)
         {
             base.OnRegist(ownerComponent);
-            ownerComponent.GetComponent<FSMBrain>().OnStateChangedEvent.AddListener(OnStatChanged);
+            owner = ownerComponent.GetComponent<Unit>();
+            owner.FSMBrain.OnStateChangedEvent.AddListener(OnStatChanged);
         }
 
         public override void Execute()
@@ -31,6 +33,10 @@ namespace DadVSMe
             if (cols.Length == 0)
                 return;
 
+            UnitFSMData unitFSMData = owner.FSMBrain.GetAIData<UnitFSMData>();
+            EAttackAttribute attackAttribute = unitFSMData.attackAttribute;
+            unitFSMData.attackAttribute = EAttackAttribute.Crazy;
+
             foreach (var col in cols)
             {
                 if (col.gameObject == ownerComponent.gameObject)
@@ -39,8 +45,11 @@ namespace DadVSMe
                 if (col.gameObject.TryGetComponent<UnitHealth>(out UnitHealth targetHealth))
                 {
                     targetHealth.Attack(ownerComponent.GetComponent<Unit>(), attackData);
+                    _ = new PlayHitFeedback(attackData, attackAttribute, targetHealth.transform.position, Vector3.zero, unitFSMData.forwardDirection);
                 }
             }
+
+            unitFSMData.attackAttribute = attackAttribute;
         }
 
         public override void OnUnregist()

@@ -1,3 +1,4 @@
+using System;
 using DadVSMe.Entities;
 using DadVSMe.Players.FSM;
 using H00N.AI.FSM;
@@ -7,10 +8,11 @@ namespace DadVSMe
 {
     public class BowlingSkill : UnitSkill
     {
+        private Unit owner = null;
         private BowlingSkillData data;
         private PlayerFSMData fsmData;
-        private Entity target;
-        private Collider2D checkCol;
+        // private Entity target;
+        // private Collider2D checkCol;
 
         public BowlingSkill(BowlingSkillData data)
         {
@@ -20,7 +22,8 @@ namespace DadVSMe
         public override void OnRegist(UnitSkillComponent ownerComponent)
         {
             base.OnRegist(ownerComponent);
-            fsmData = ownerComponent.GetComponent<FSMBrain>().GetAIData<PlayerFSMData>();
+            owner = ownerComponent.GetComponent<Unit>();
+            fsmData = owner.FSMBrain.GetAIData<PlayerFSMData>();
             if (fsmData == null)
                 return;
 
@@ -34,47 +37,64 @@ namespace DadVSMe
 
         private void OnGrabbedEntityChanged(Entity target)
         {
-            if (target != null && target.TryGetComponent<FSMBrain>(out FSMBrain prevBrain))
-            {
-                prevBrain.OnStateChangedEvent.RemoveListener(OnStateChanged);
-            }
+            Unit attacker = target as Unit;
+            if(attacker != null)
+                attacker.FSMBrain.GetAIData<UnitFSMData>().OnBowlingEvent += (otherUnit) => HandleEnemyBowling(attacker, otherUnit);
 
-            this.target = target;
+            // if (target != null && target.TryGetComponent<FSMBrain>(out FSMBrain prevBrain))
+            // {
+            //     prevBrain.OnStateChangedEvent.RemoveListener(OnStateChanged);
+            // }
 
-            if (target.TryGetComponent<FSMBrain>(out FSMBrain brain))
-            {
-                brain.OnStateChangedEvent.AddListener(OnStateChanged);
-            }
+            // this.target = target;
+
+            // if (target.TryGetComponent<FSMBrain>(out FSMBrain brain))
+            // {
+            //     brain.OnStateChangedEvent.AddListener(OnStateChanged);
+            // }
         }
 
-        private void OnStateChanged(FSMState currentState, FSMState targetState)
+        private void HandleEnemyBowling(Unit attacker, Unit otherUnit)
         {
-            if (targetState.gameObject.name.Contains("Throw") || targetState.gameObject.name.Contains("Juggle"))
-            {
-                checkCol = target.GetComponent<CapsuleCollider2D>();
-                target.OnTriggerEnterEvent += OnTriggerEnter;
-            }
-            else
-            {
-                checkCol = null;
-                target.OnTriggerEnterEvent -= OnTriggerEnter;
-            }
-        }
-
-        private void OnTriggerEnter(Collider2D col)
-        {
-            if (checkCol.IsTouching(col) == false)
+            if(otherUnit == attacker || otherUnit == owner)
                 return;
 
-            if (col.gameObject.TryGetComponent<UnitHealth>(out UnitHealth health))
-            {
-                DynamicAttackData attackData = new DynamicAttackData(data.bowlingHitAttackData);
-                attackData.SetDamage(attackData.Damage + (int)(data.levelUpIncreaseRate * level));
+            DynamicAttackData attackData = new DynamicAttackData(data.bowlingHitAttackData);
+            attackData.SetDamage(attackData.Damage + (int)(data.levelUpIncreaseRate * level));
 
-                health.Attack(target as Unit, attackData);
-                UnitFSMData unitFSMData = ownerComponent.GetComponent<FSMBrain>().GetAIData<UnitFSMData>();
-                _ = new PlayHitFeedback(attackData, unitFSMData.attackAttribute, health.transform.position, Vector3.zero, unitFSMData.forwardDirection);
-            }
+            otherUnit.UnitHealth.Attack(attacker, attackData);
+            UnitFSMData unitFSMData = ownerComponent.GetComponent<FSMBrain>().GetAIData<UnitFSMData>();
+            _ = new PlayHitFeedback(attackData, unitFSMData.attackAttribute, otherUnit.transform.position, Vector3.zero, unitFSMData.forwardDirection);
         }
+
+        // private void OnStateChanged(FSMState currentState, FSMState targetState)
+        // {
+        //     if (targetState.gameObject.name.Contains("Throw") || targetState.gameObject.name.Contains("Juggle"))
+        //     {
+        //         // checkCol = target.GetComponent<CapsuleCollider2D>();
+        //         target.OnTriggerEnterEvent += OnTriggerEnter;
+        //     }
+        //     else
+        //     {
+        //         // checkCol = null;
+        //         target.OnTriggerEnterEvent -= OnTriggerEnter;
+        //     }
+        // }
+
+        // private void OnTriggerEnter(Collider2D col)
+        // {
+        //     // if (checkCol.IsTouching(col) == false)
+        //     //     return;
+
+        //     if (col.gameObject.TryGetComponent<UnitHealth>(out UnitHealth health))
+        //     {
+        //         DynamicAttackData attackData = new DynamicAttackData(data.bowlingHitAttackData);
+        //         attackData.SetDamage(attackData.Damage + (int)(data.levelUpIncreaseRate * level));
+
+        //         health.Attack(target as Unit, attackData);
+        //         UnitFSMData unitFSMData = ownerComponent.GetComponent<FSMBrain>().GetAIData<UnitFSMData>();
+        //         _ = new PlayHitFeedback(attackData, unitFSMData.attackAttribute, health.transform.position, Vector3.zero, unitFSMData.forwardDirection);
+        //     }
+        // }
     }
 }

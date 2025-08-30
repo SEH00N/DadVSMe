@@ -3,7 +3,7 @@ using UnityEngine;
 namespace DadVSMe.Entities
 {
     [CreateAssetMenu(menuName = "DadVSMe/AttackData/JuggleAttackData")]
-    public class JuggleAttackData : AttackDataBase
+    public class JuggleAttackData : AttackDataBase, IJuggleAttackData
     {
         [SerializeField] float juggleForce = 0f;
         public float JuggleForce => juggleForce;

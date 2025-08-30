@@ -15,10 +15,12 @@ MonoBehaviour:
   damage: 5
   isRageAttack: 0
   feedbackDatas:
-  - attackAttribute: 0
+  - attackAttribute: 2
+    attackEffects: []
     hitEffects:
     - key: VFX_Impact1
     - key: VFX_Blood1
+    - key: VFX_CrazyHit
     attackSounds: []
     hitSounds:
     - key: sfx_punch_small_0
