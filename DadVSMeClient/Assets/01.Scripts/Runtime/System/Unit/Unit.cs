@@ -18,6 +18,7 @@ namespace DadVSMe.Entities
 
         public FSMBrain FSMBrain => fsmBrain;
         public UnitHealth UnitHealth => unitHealth; // uniy health is used frequently. allow external access for performance. 
+        public Collider2D UnitCollider => unitCollider;
 
         // protected virtual RigidbodyType2D DefaultRigidbodyType => RigidbodyType2D.Kinematic;
 

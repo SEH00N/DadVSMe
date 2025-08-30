@@ -40,10 +40,11 @@ namespace DadVSMe.Enemies.FSM
 
             updateTimer = 0f;
 
-            Vector2 direction = (Vector2)(enemyFSMData.Player.transform.position - brain.transform.position);
-            Vector3 destination = enemyFSMData.Player.transform.position + new Vector3(xPadding * -Mathf.Sign(direction.x), 0f, 0f);
-            
-            unitMovement.SetMovementVelocity(destination.normalized * unitStatData[EUnitStat.MoveSpeed].FinalValue);
+            float directionFromPlayer = Mathf.Sign((enemyFSMData.Player.transform.position - brain.transform.position).x);
+            Vector3 destination = enemyFSMData.Player.transform.position + new Vector3(xPadding * -directionFromPlayer, 0f, 0f);
+            Vector3 direction = destination - brain.transform.position;
+
+            unitMovement.SetMovementVelocity(direction.normalized * unitStatData[EUnitStat.MoveSpeed].FinalValue);
         }
 
         public override void ExitState()
