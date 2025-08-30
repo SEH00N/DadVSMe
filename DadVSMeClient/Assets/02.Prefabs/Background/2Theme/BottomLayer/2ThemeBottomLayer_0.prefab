@@ -847,6 +847,8 @@ GameObject:
   m_Component:
   - component: {fileID: 7136736337853606454}
   - component: {fileID: 7632383202918254633}
+  - component: {fileID: 7913347121894177006}
+  - component: {fileID: 7900225977353171408}
   m_Layer: 0
   m_Name: deco_2_1
   m_TagString: Untagged
@@ -924,6 +926,73 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!60 &7913347121894177006
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2872702329978269132}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 8.63, y: 4.64}
+    newSize: {x: 8.63, y: 4.64}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 4.091477, y: -0.49763265}
+      - {x: 1.5064851, y: 1.0352906}
+      - {x: -3.1631846, y: 0.9879471}
+      - {x: 0.37262046, y: -1.8777013}
+      - {x: 4.1718154, y: -2.1170738}
+  m_UseDelaunayMesh: 0
+--- !u!114 &7900225977353171408
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2872702329978269132}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6b531da3096245309ed7a81e6d09be8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  staticEntity: 1
+  entityAnimator: {fileID: 0}
+  sortingOrderResolver: {fileID: 0}
 --- !u!1 &3145776512896833470
 GameObject:
   m_ObjectHideFlags: 0

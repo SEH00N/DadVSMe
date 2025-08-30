@@ -21,10 +21,10 @@ namespace DadVSMe.Players
         public event Action OnAngerGaugeChangedEvent = null;
         public event Action OnEXPChangedEvent = null;
 
-        // private void Start()
-        // {
-        //     Initialize(new PlayerEntityData());
-        // }
+        private void Start()
+        {
+            Initialize(new PlayerEntityData());
+        }
 
         protected override void InitializeInternal(IEntityData data)
         {

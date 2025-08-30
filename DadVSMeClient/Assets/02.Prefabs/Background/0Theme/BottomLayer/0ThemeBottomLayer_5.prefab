@@ -152,6 +152,9 @@ MonoBehaviour:
   bossSpawnCinemachineCamera: {fileID: 2591341683189990174}
   bossDeadCinemachineCamera: {fileID: 9158303237300184336}
   bossWaveCinemachineCamera: {fileID: 6302755796960930885}
+  productionPrefab:
+    key: BossProduction
+  bossProfileVisual: {fileID: -3508773092274479801, guid: 2df8c737491977e41b790af2e105873f, type: 3}
 --- !u!1 &489711018251132189
 GameObject:
   m_ObjectHideFlags: 0

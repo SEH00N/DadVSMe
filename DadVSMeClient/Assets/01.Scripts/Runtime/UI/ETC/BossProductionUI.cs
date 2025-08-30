@@ -41,13 +41,13 @@ namespace DadVSMe
             await UniTask.DelayFrame(3);
 
             _ = _bannerTransform.DOLocalMove(_bannerNormalPosition, APPEAR_TIME).SetEase(Ease.InQuart).SetUpdate(true);
-            await UniTask.Delay(TimeSpan.FromSeconds(INTERVAL_TIME));
+            await UniTask.Delay(TimeSpan.FromSeconds(INTERVAL_TIME), true);
             _ = _profileTransform.DOLocalMove(_profileNormalPosition, APPEAR_TIME).SetEase(Ease.InQuart).SetUpdate(true);
-            await UniTask.Delay(TimeSpan.FromSeconds(APPEAR_TIME));
+            await UniTask.Delay(TimeSpan.FromSeconds(APPEAR_TIME), true);
             await _profileTransform.DOLocalMove(_profileIntervalPosition, WAIT_TIME).SetUpdate(true);
 
             _ = _profileTransform.DOLocalMove(_profileEndPosition, DISAPPEAR_TIME).SetEase(Ease.InExpo).SetUpdate(true);
-            await UniTask.Delay(TimeSpan.FromSeconds(INTERVAL_TIME));
+            await UniTask.Delay(TimeSpan.FromSeconds(INTERVAL_TIME), true);
             await _bannerTransform.DOLocalMove(_bannerEndPosition, DISAPPEAR_TIME).SetEase(Ease.InExpo).SetUpdate(true);
         }
     }
