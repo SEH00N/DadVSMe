@@ -94,13 +94,16 @@ namespace DadVSMe
         {
             await particlePrefab.InitializeAsync();
 
-            ParticleSystem particle = PoolManager.Spawn<ParticleSystem>(particlePrefab.Key, transform);
-            particle.transform.localPosition = SpawnOffset;
-            particle.Play();
+            try {
+                ParticleSystem particle = PoolManager.Spawn<ParticleSystem>(particlePrefab.Key, transform);
+                particle.transform.localPosition = SpawnOffset;
+                particle.Play();
 
-            await UniTask.Delay(System.TimeSpan.FromSeconds(burnTime), cancellationToken: destroyCancellationToken);
+                await UniTask.Delay(System.TimeSpan.FromSeconds(burnTime), cancellationToken: destroyCancellationToken);
 
-            PoolManager.Despawn(particle.GetComponent<PoolReference>());
+                PoolManager.Despawn(particle.GetComponent<PoolReference>());
+            }
+            catch (OperationCanceledException) { }
         }
     }
 }
