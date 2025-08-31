@@ -8,6 +8,8 @@ namespace DadVSMe.Players.FSM
 {
     public class PlayerDieAction : DieAction
     {
+        private const float CHARACTER_ZOOM_BLEND_TIME = 9f;
+        private const float FADE_DURATION = 1f;
         private EntityAnimator entityAnimator = null;
 
         public override void Init(FSMBrain brain, FSMState state)
@@ -21,6 +23,8 @@ namespace DadVSMe.Players.FSM
             base.EnterState();
             entityAnimator.RemoveAnimationEventListener(EEntityAnimationEventType.End, HandleAnimationEnd);   
             entityAnimator.AddAnimationEventListener(EEntityAnimationEventType.End, HandleAnimationEnd);   
+
+            _ = new ChangeCinemachineCamera(GameInstance.GameCycle.CharacterZoomCinemachineCamera, CHARACTER_ZOOM_BLEND_TIME);
         }
 
         public override void ExitState()
@@ -29,9 +33,15 @@ namespace DadVSMe.Players.FSM
             entityAnimator.RemoveAnimationEventListener(EEntityAnimationEventType.End, HandleAnimationEnd);   
         }
 
-        private void HandleAnimationEnd(EntityAnimationEventData eventData)
+        private async void HandleAnimationEnd(EntityAnimationEventData eventData)
         {
-            SceneManager.TryLoadSceneAsync(GameDefine.GAME_OVER_SCENE_NAME, LoadSceneMode.Single).Forget();
+            TimeManager.SetTimeScale(0f, true);
+
+            await DOFade.FadeInAsync(FADE_DURATION);
+            await SceneManager.TryLoadSceneAsync(GameDefine.GAME_OVER_SCENE_NAME, LoadSceneMode.Single);
+            DOFade.FadeOutAsync(FADE_DURATION).Forget();
+
+            TimeManager.SetTimeScale(1f, true);
         }
     }
 }

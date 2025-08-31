@@ -16,9 +16,9 @@ namespace DadVSMe.UI
             await SceneManager.TryLoadSceneAsync(GameDefine.GAME_SCENE_NAME, LoadSceneMode.Single);
 
             // Initialize GameCycle
-            await GameInstance.GameCycle.InitializeAsync();
+            GameInstance.GameCycle.InitializeAsync().Forget();
 
-            // FadeOut Immediately
+            // FadeOut
             _ = DOFade.FadeOutAsync(3.5f);
         }
 

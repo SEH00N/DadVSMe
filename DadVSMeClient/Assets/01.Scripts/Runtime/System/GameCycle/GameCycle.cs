@@ -11,11 +11,21 @@ namespace DadVSMe.GameCycles
 {
     public class GameCycle : MonoBehaviour
     {
+        private const float GAME_START_TIME_SCALE = 0.3f;
+        private const float GAME_START_TIME_SCALE_BLEND_DURATION = 2f;
+        private const float GAME_START_DEADLINE_MOVE_DISTANCE = 50f;
+        private const float GAME_START_DEADLINE_MOVE_GAP = 7.5f;
+        private const float GAME_START_DEADLINE_MOVE_DURATION = 1.225f;
+        private const float GAME_START_DEADLINE_MOVE_WAIT_DURATION = 0.85f;
+        private const float GAME_START_MAIN_CAMERA_BLEND_DURATION = 0.45f;
+        private const float GAME_START_MAIN_CAMERA_RELEASE_DURATION = -0.1f;
+
         [SerializeField] CinemachineCamera mainCinemachineCamera = null;
         public CinemachineCamera MainCinemachineCamera => mainCinemachineCamera;
 
         [SerializeField] CinemachineCamera characterZoomCinemachineCamera = null;
-        
+        public CinemachineCamera CharacterZoomCinemachineCamera => characterZoomCinemachineCamera;
+
         [SerializeField] HUDUI hudUI = null;
         public HUDUI HUDUI => hudUI;
 
@@ -58,30 +68,25 @@ namespace DadVSMe.GameCycles
             await PlayGameStartDirecting();
         }
 
-        public float test = 2f;
-        public float test1 = 1f;
-        public float test2 = 0.75f;
-        public float test3 = 0.2f;
-
         private async UniTask PlayGameStartDirecting()
         {
             deadline.SetSpeed(0f);
 
-            TimeManager.SetTimeScale(0.3f, true);
-            TimeManager.SetTimeScale(GameDefine.DEFAULT_TIME_SCALE, true, 2f);
+            TimeManager.SetTimeScale(GAME_START_TIME_SCALE, true);
+            TimeManager.SetTimeScale(GameDefine.DEFAULT_TIME_SCALE, true, GAME_START_TIME_SCALE_BLEND_DURATION);
 
             _ = new ChangeCinemachineCamera(characterZoomCinemachineCamera, 0f);
 
-            Vector3 targetPosition = new Vector3(startLine.position.x - 7.5f, deadline.transform.position.y, deadline.transform.position.z);
-            Vector3 startPosition = targetPosition + Vector3.left * 42.5f;
+            Vector3 targetPosition = new Vector3(startLine.position.x - GAME_START_DEADLINE_MOVE_GAP, deadline.transform.position.y, deadline.transform.position.z);
+            Vector3 startPosition = targetPosition + Vector3.left * (GAME_START_DEADLINE_MOVE_DISTANCE - GAME_START_DEADLINE_MOVE_GAP);
             deadline.transform.position = startPosition;
 
-            _ = deadline.transform.DOMove(targetPosition, test).SetEase(Ease.InQuint);
-            await UniTask.WaitForSeconds(test1);
+            _ = deadline.transform.DOMove(targetPosition, GAME_START_DEADLINE_MOVE_DURATION).SetEase(Ease.InQuint);
+            await UniTask.WaitForSeconds(GAME_START_DEADLINE_MOVE_WAIT_DURATION);
             // _ = new ChangeCinemachineCamera(mainCinemachineCamera, 1f);
             // await UniTask.WaitForSeconds(1f);
 
-            await deadline.PlayBumpPlayerDirecting(test2, test3);
+            await deadline.PlayBumpPlayerDirecting(GAME_START_MAIN_CAMERA_BLEND_DURATION, GAME_START_MAIN_CAMERA_RELEASE_DURATION);
         }
 
         public void Pause()
