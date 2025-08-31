@@ -17,7 +17,7 @@ namespace DadVSMe.UI
 
         [SerializeField] GameObject cutscenePanelObject = null;
         [SerializeField] VideoPlayer videoPlayer = null;
-        // [SerializeField] AddressableAsset<VideoClip> videoClipAsset = null;
+        [SerializeField] AddressableAsset<BGMAudioLibrary> bgmAudioLibrary = null;
 
         private CancellationTokenSource cancellationTokenSource = new CancellationTokenSource();
 
@@ -36,7 +36,7 @@ namespace DadVSMe.UI
                 await DOFade.FadeInAsync().AttachExternalCancellation(cancellationTokenSource.Token);
 
                 // Load video clip
-                // await videoClipAsset.InitializeAsync().AttachExternalCancellation(cancellationTokenSource.Token);
+                await bgmAudioLibrary.InitializeAsync().AttachExternalCancellation(cancellationTokenSource.Token);
 
                 cutscenePanelObject.SetActive(true);
                 // videoPlayer.clip = videoClipAsset;
@@ -49,6 +49,7 @@ namespace DadVSMe.UI
 
                 // Play video
                 videoPlayer.Play();
+                AudioManager.Instance.PlayBGM(bgmAudioLibrary, loadCache: false);
 
                 // Wait for video to finish
                 await UniTask.Delay(TimeSpan.FromSeconds(videoPlayer.length + VIDEO_WAIT_TIME), cancellationToken: cancellationTokenSource.Token);
