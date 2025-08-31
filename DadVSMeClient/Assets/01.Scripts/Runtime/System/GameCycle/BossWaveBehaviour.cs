@@ -6,6 +6,7 @@ using H00N.Resources.Addressables;
 using H00N.Resources.Pools;
 using Unity.Cinemachine;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace DadVSMe.GameCycles
 {
@@ -27,6 +28,7 @@ namespace DadVSMe.GameCycles
         [SerializeField] GameObject bossWaveBlockObject = null;
         [SerializeField] Transform bossSpawnPoint = null;
         [SerializeField] float conditionDistance = 10f;
+        [SerializeField] bool isFinalBoss = false;
 
         [Header("Spawn Info")]
         [SerializeField] AddressableAsset<Unit> bossPrefab = null;
@@ -145,17 +147,23 @@ namespace DadVSMe.GameCycles
             HandleBossDead();
         }
 
-        private async void HandleBossDead()
+        private void HandleBossDead()
+        {
+            if(isFinalBoss)
+                EndingDirecting();
+            else
+                PlayBossClearDirecting();
+        }
+
+        private async void PlayBossClearDirecting()
         {
             GameInstance.GameCycle.Pause();
-            GameInstance.GameCycle.SetBossClearDirecting(true);
+            InputManager.DisableInput();
 
+            GameInstance.GameCycle.SetBossClearDirecting(true);
             AudioManager.Instance.PlayBGM(GameInstance.GameCycle.MainBGMLibrary, loadCache: true);
 
             bossWaveBlockObject.SetActive(false);
-
-            // Set Player Hold
-            InputManager.DisableInput();
 
             // Play Camera Trnasitioning
             TimeManager.SetTimeScale(BOSS_DEAD_ZOOM_TIME_SCALE, true, 0.5f);
@@ -169,10 +177,32 @@ namespace DadVSMe.GameCycles
             TimeManager.SetTimeScale(GameDefine.DEFAULT_TIME_SCALE, true, 0.5f);
             await GameInstance.GameCycle.Deadline.PlayBumpPlayerDirecting(BOSS_WAVE_MAIN_CAMERA_BLEND_TIME, BOSS_WAVE_MAIN_CAMERA_RELEASE_DURATION);
 
-            InputManager.EnableInput<PlayerInputReader>();
-
             GameInstance.GameCycle.SetBossClearDirecting(false);
+
+            InputManager.EnableInput<PlayerInputReader>();
             GameInstance.GameCycle.Resume();
+        }
+
+        private async void EndingDirecting()
+        {
+            GameInstance.GameCycle.Pause();
+            InputManager.DisableInput();
+
+            TimeManager.SetTimeScale(BOSS_DEAD_ZOOM_TIME_SCALE, true, 0.5f);
+            bossDeadCinemachineCamera.Follow = bossUnit.transform;
+            _ = new ChangeCinemachineCamera(bossDeadCinemachineCamera, BOSS_DEAD_BLEND_TIME);
+
+            bossUnit = null;
+
+            await UniTask.WaitForSeconds(BOSS_DEAD_ZOOM_TIME, ignoreTimeScale: true);
+
+            await DOFade.FadeInAsync(2f);
+            await SceneManager.TryLoadSceneAsync(GameDefine.GAME_CLEAR_SCENE_NAME, LoadSceneMode.Single);
+            DOFade.FadeOutAsync(1f).Forget();
+
+            TimeManager.SetTimeScale(2f, true);
+
+            InputManager.EnableInput<PlayerInputReader>();
         }
 
         #if UNITY_EDITOR
