@@ -1,5 +1,6 @@
 using System.Threading.Tasks;
 using Cysharp.Threading.Tasks;
+using DadVSMe.Inputs;
 using DadVSMe.Players;
 using DadVSMe.UI.HUD;
 using DG.Tweening;
@@ -12,13 +13,14 @@ namespace DadVSMe.GameCycles
     public class GameCycle : MonoBehaviour
     {
         private const float GAME_START_TIME_SCALE = 0.3f;
-        private const float GAME_START_TIME_SCALE_BLEND_DURATION = 2f;
+        private const float GAME_START_TIME_SCALE_BLEND_DURATION = 10f;
         private const float GAME_START_DEADLINE_MOVE_DISTANCE = 50f;
         private const float GAME_START_DEADLINE_MOVE_GAP = 7.5f;
         private const float GAME_START_DEADLINE_MOVE_DURATION = 1.225f;
         private const float GAME_START_DEADLINE_MOVE_WAIT_DURATION = 0.85f;
         private const float GAME_START_MAIN_CAMERA_BLEND_DURATION = 0.45f;
         private const float GAME_START_MAIN_CAMERA_RELEASE_DURATION = -0.1f;
+        private const float DEADLINE_SPEED = 2f;
 
         [SerializeField] CinemachineCamera mainCinemachineCamera = null;
         public CinemachineCamera MainCinemachineCamera => mainCinemachineCamera;
@@ -71,6 +73,7 @@ namespace DadVSMe.GameCycles
         private async UniTask PlayGameStartDirecting()
         {
             deadline.SetSpeed(0f);
+            InputManager.DisableInput();
 
             TimeManager.SetTimeScale(GAME_START_TIME_SCALE, true);
             TimeManager.SetTimeScale(GameDefine.DEFAULT_TIME_SCALE, true, GAME_START_TIME_SCALE_BLEND_DURATION);
@@ -87,6 +90,8 @@ namespace DadVSMe.GameCycles
             // await UniTask.WaitForSeconds(1f);
 
             await deadline.PlayBumpPlayerDirecting(GAME_START_MAIN_CAMERA_BLEND_DURATION, GAME_START_MAIN_CAMERA_RELEASE_DURATION);
+            deadline.SetSpeed(DEADLINE_SPEED);
+            InputManager.EnableInput<PlayerInputReader>();
         }
 
         public void Pause()
