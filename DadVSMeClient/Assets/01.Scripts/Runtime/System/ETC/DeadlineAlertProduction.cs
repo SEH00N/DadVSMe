@@ -22,7 +22,7 @@ namespace DadVSMe.Production
         private const float PANEL_MAX_SCALE = 1.7f;
 
         private const float VIGNETTE_VALUE = 0.5f;
-        private const float VIGNETTE_FADE_TIME = 0.12f;
+        private const float VIGNETTE_FADE_TIME = 0.4f;
 
         private bool _alertFlag = false;
         private Tween _vignetteFadeTween = null;
@@ -62,8 +62,6 @@ namespace DadVSMe.Production
 
         private void FadeVignette(bool alertFlag)
         {
-            if (_vignette == null) return;
-
             _vignetteFadeTween?.Kill();
 
             float targetValue = alertFlag ? VIGNETTE_VALUE : 0f;
