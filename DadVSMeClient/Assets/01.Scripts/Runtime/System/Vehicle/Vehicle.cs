@@ -11,12 +11,21 @@ namespace DadVSMe.Entities
         [SerializeField] AttackDataBase attackData = null;
 
         private IRider rider = null;
+        private UnitFSMData riderFSMData = null;
 
         protected override void InitializeInternal(IEntityData data)
         {
             base.InitializeInternal(data);
             unitHealth.OnHPChangedEvent += HandleOwnerHPChanged;
             _ = new InitializeAttackFeedback(attackData);
+        }
+
+        private void FixedUpdate()
+        {
+            if(riderFSMData == null)
+                return;
+
+            riderFSMData.groundPositionY = unitFSMData.groundPositionY;
         }
 
         public void RideOn(IRider rider)
@@ -29,7 +38,10 @@ namespace DadVSMe.Entities
             rider.RideOn(this);
 
             if(rider is Unit riderUnit == true)
+            {
                 AddChildSortingOrderResolver(riderUnit);
+                riderFSMData = riderUnit.FSMBrain.GetAIData<UnitFSMData>();
+            }
 
             unitHealth.OnHPChangedEvent += HandleOwnerHPChanged;
         }
@@ -58,7 +70,6 @@ namespace DadVSMe.Entities
 
             PoolManager.Despawn(this);
         }
-
 
         private void Explosion()
         {

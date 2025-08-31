@@ -99,8 +99,13 @@ namespace DadVSMe
             if(check == false || result == false)
                 return this;
 
-            result = target.GetComponent<Enemy>().Weight <= weight;
+            if(target is IGrabbable grabbable == false)
+            {
+                result = false;
+                return this;
+            }
 
+            result = grabbable.Weight <= weight;
             return this;
         }
     }

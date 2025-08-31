@@ -3851,7 +3851,7 @@ MonoBehaviour:
     attackVerticalDistance: 0.75
     checkDirection: 1
     directionMatch: 1
-    checkStatic: 0
+    checkStatic: 1
     staticCompare: 0
     checkFloat: 1
     floatCompare: 0
@@ -9288,7 +9288,7 @@ MonoBehaviour:
     attackVerticalDistance: 0.75
     checkDirection: 1
     directionMatch: 1
-    checkStatic: 0
+    checkStatic: 1
     staticCompare: 0
     checkFloat: 1
     floatCompare: 0
@@ -9749,6 +9749,7 @@ MonoBehaviour:
   unitRigidbody: {fileID: 8451211484433483914}
   unitCollider: {fileID: 496568060240948358}
   holdState: {fileID: 5807568429010325276}
+  size: {x: 0, y: 0}
   onAttackTargetEvent:
     m_PersistentCalls:
       m_Calls: []
