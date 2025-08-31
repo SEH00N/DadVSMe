@@ -1,4 +1,5 @@
 using System;
+using System.IO;
 using System.Threading;
 using Cysharp.Threading.Tasks;
 using H00N.Resources;
@@ -16,7 +17,7 @@ namespace DadVSMe.UI
 
         [SerializeField] GameObject cutscenePanelObject = null;
         [SerializeField] VideoPlayer videoPlayer = null;
-        [SerializeField] AddressableAsset<VideoClip> videoClipAsset = null;
+        // [SerializeField] AddressableAsset<VideoClip> videoClipAsset = null;
 
         private CancellationTokenSource cancellationTokenSource = new CancellationTokenSource();
 
@@ -35,10 +36,11 @@ namespace DadVSMe.UI
                 await DOFade.FadeInAsync().AttachExternalCancellation(cancellationTokenSource.Token);
 
                 // Load video clip
-                await videoClipAsset.InitializeAsync().AttachExternalCancellation(cancellationTokenSource.Token);
+                // await videoClipAsset.InitializeAsync().AttachExternalCancellation(cancellationTokenSource.Token);
 
                 cutscenePanelObject.SetActive(true);
-                videoPlayer.clip = videoClipAsset;
+                // videoPlayer.clip = videoClipAsset;
+                videoPlayer.url = Path.Combine(Application.streamingAssetsPath, "IntroVideo.mp4");
                 videoPlayer.Prepare();
                 await UniTask.WaitUntil(() => videoPlayer.isPrepared, cancellationToken: cancellationTokenSource.Token);
 
@@ -59,7 +61,7 @@ namespace DadVSMe.UI
             }
             catch(OperationCanceledException) { }
             finally {
-                ResourceManager.ReleaseResource(videoClipAsset);
+                // ResourceManager.ReleaseResource(videoClipAsset);
                 cancellationTokenSource?.Dispose();
                 cancellationTokenSource = null;
             }

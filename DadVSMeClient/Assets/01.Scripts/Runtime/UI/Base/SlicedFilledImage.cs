@@ -7,11 +7,12 @@ using UnityEngine.U2D;
 #endif
 using Sprites = UnityEngine.Sprites;
 
+namespace DadVSMe.UI
+{
+
 #if UNITY_EDITOR
 using UnityEditor;
 
-namespace DadVSMe.UI
-{
 
 	// Custom Editor to order the variables in the Inspector similar to Image component
 	[CustomEditor(typeof(SlicedFilledImage)), CanEditMultipleObjects]

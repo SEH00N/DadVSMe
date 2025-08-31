@@ -1634,6 +1634,7 @@ MonoBehaviour:
   bossWaveBlockObject: {fileID: 1093238129}
   bossSpawnPoint: {fileID: 1583991617}
   conditionDistance: 15
+  isFinalBoss: 0
   bossPrefab:
     key: James
   enemyData:
@@ -1645,6 +1646,9 @@ MonoBehaviour:
   bossSpawnCinemachineCamera: {fileID: 589343068}
   bossDeadCinemachineCamera: {fileID: 1204486799}
   bossWaveCinemachineCamera: {fileID: 1978694772}
+  productionPrefab:
+    key: 
+  bossProfileVisual: {fileID: 0}
 --- !u!4 &316717862
 Transform:
   m_ObjectHideFlags: 0
@@ -2433,8 +2437,6 @@ Transform:
   - {fileID: 634391006}
   - {fileID: 1198957208}
   - {fileID: 1106353783}
-  - {fileID: 1780399271}
-  - {fileID: 952697996}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1818360608 &482625653
@@ -3188,6 +3190,7 @@ MonoBehaviour:
   bossWaveBlockObject: {fileID: 305278413}
   bossSpawnPoint: {fileID: 251646810}
   conditionDistance: 15
+  isFinalBoss: 0
   bossPrefab:
     key: James
   enemyData:
@@ -3199,6 +3202,9 @@ MonoBehaviour:
   bossSpawnCinemachineCamera: {fileID: 1543812092}
   bossDeadCinemachineCamera: {fileID: 677807846}
   bossWaveCinemachineCamera: {fileID: 1959803585}
+  productionPrefab:
+    key: 
+  bossProfileVisual: {fileID: 0}
 --- !u!4 &617681960
 Transform:
   m_ObjectHideFlags: 0
@@ -5475,68 +5481,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1666251540}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &952697995
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 482625652}
-    m_Modifications:
-    - target: {fileID: 5022486646916959457, guid: 39ce4c477c94b034789f970a668d2945, type: 3}
-      propertyPath: m_Name
-      value: 1ThemeBottomLayer_5
-      objectReference: {fileID: 0}
-    - target: {fileID: 8279146867405540737, guid: 39ce4c477c94b034789f970a668d2945, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 347.55
-      objectReference: {fileID: 0}
-    - target: {fileID: 8279146867405540737, guid: 39ce4c477c94b034789f970a668d2945, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -6.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8279146867405540737, guid: 39ce4c477c94b034789f970a668d2945, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8279146867405540737, guid: 39ce4c477c94b034789f970a668d2945, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8279146867405540737, guid: 39ce4c477c94b034789f970a668d2945, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8279146867405540737, guid: 39ce4c477c94b034789f970a668d2945, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8279146867405540737, guid: 39ce4c477c94b034789f970a668d2945, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8279146867405540737, guid: 39ce4c477c94b034789f970a668d2945, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8279146867405540737, guid: 39ce4c477c94b034789f970a668d2945, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8279146867405540737, guid: 39ce4c477c94b034789f970a668d2945, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 39ce4c477c94b034789f970a668d2945, type: 3}
---- !u!4 &952697996 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 8279146867405540737, guid: 39ce4c477c94b034789f970a668d2945, type: 3}
-  m_PrefabInstance: {fileID: 952697995}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &959585118
 GameObject:
   m_ObjectHideFlags: 0
@@ -6509,6 +6453,7 @@ MonoBehaviour:
   bossWaveBlockObject: {fileID: 1361203071}
   bossSpawnPoint: {fileID: 825863760}
   conditionDistance: 15
+  isFinalBoss: 0
   bossPrefab:
     key: Bully
   enemyData:
@@ -6520,6 +6465,9 @@ MonoBehaviour:
   bossSpawnCinemachineCamera: {fileID: 1474963448}
   bossDeadCinemachineCamera: {fileID: 1046205468}
   bossWaveCinemachineCamera: {fileID: 767504601}
+  productionPrefab:
+    key: 
+  bossProfileVisual: {fileID: 0}
 --- !u!4 &1165071414
 Transform:
   m_ObjectHideFlags: 0
@@ -6892,6 +6840,7 @@ MonoBehaviour:
   bossWaveBlockObject: {fileID: 1658211818}
   bossSpawnPoint: {fileID: 715841006}
   conditionDistance: 15
+  isFinalBoss: 0
   bossPrefab:
     key: ButtEnemy
   enemyData:
@@ -6903,6 +6852,9 @@ MonoBehaviour:
   bossSpawnCinemachineCamera: {fileID: 1770822781}
   bossDeadCinemachineCamera: {fileID: 838805860}
   bossWaveCinemachineCamera: {fileID: 1878105578}
+  productionPrefab:
+    key: 
+  bossProfileVisual: {fileID: 0}
 --- !u!4 &1207917207
 Transform:
   m_ObjectHideFlags: 0
@@ -9680,68 +9632,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1207917207}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &1780399270
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 482625652}
-    m_Modifications:
-    - target: {fileID: 8479699562356072505, guid: 96ecb494c24c036449a3c048e96bae30, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 320.13
-      objectReference: {fileID: 0}
-    - target: {fileID: 8479699562356072505, guid: 96ecb494c24c036449a3c048e96bae30, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -6.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8479699562356072505, guid: 96ecb494c24c036449a3c048e96bae30, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8479699562356072505, guid: 96ecb494c24c036449a3c048e96bae30, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8479699562356072505, guid: 96ecb494c24c036449a3c048e96bae30, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8479699562356072505, guid: 96ecb494c24c036449a3c048e96bae30, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8479699562356072505, guid: 96ecb494c24c036449a3c048e96bae30, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8479699562356072505, guid: 96ecb494c24c036449a3c048e96bae30, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8479699562356072505, guid: 96ecb494c24c036449a3c048e96bae30, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8479699562356072505, guid: 96ecb494c24c036449a3c048e96bae30, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9039751718229237467, guid: 96ecb494c24c036449a3c048e96bae30, type: 3}
-      propertyPath: m_Name
-      value: 1ThemeBottomLayer_4
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 96ecb494c24c036449a3c048e96bae30, type: 3}
---- !u!4 &1780399271 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 8479699562356072505, guid: 96ecb494c24c036449a3c048e96bae30, type: 3}
-  m_PrefabInstance: {fileID: 1780399270}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1788660017
 GameObject:
   m_ObjectHideFlags: 0
@@ -10942,6 +10832,7 @@ MonoBehaviour:
   bossWaveBlockObject: {fileID: 70984982}
   bossSpawnPoint: {fileID: 1653985196}
   conditionDistance: 15
+  isFinalBoss: 0
   bossPrefab:
     key: Sunchips
   enemyData:
@@ -10953,6 +10844,9 @@ MonoBehaviour:
   bossSpawnCinemachineCamera: {fileID: 1522889041}
   bossDeadCinemachineCamera: {fileID: 327071442}
   bossWaveCinemachineCamera: {fileID: 1613679005}
+  productionPrefab:
+    key: 
+  bossProfileVisual: {fileID: 0}
 --- !u!4 &1997290621
 Transform:
   m_ObjectHideFlags: 0
@@ -11116,6 +11010,7 @@ MonoBehaviour:
   bossWaveBlockObject: {fileID: 1726304123}
   bossSpawnPoint: {fileID: 867319740}
   conditionDistance: 15
+  isFinalBoss: 0
   bossPrefab:
     key: Ninja
   enemyData:
@@ -11127,6 +11022,9 @@ MonoBehaviour:
   bossSpawnCinemachineCamera: {fileID: 878898166}
   bossDeadCinemachineCamera: {fileID: 1386275907}
   bossWaveCinemachineCamera: {fileID: 303077133}
+  productionPrefab:
+    key: 
+  bossProfileVisual: {fileID: 0}
 --- !u!4 &2003664137
 Transform:
   m_ObjectHideFlags: 0
