@@ -33,7 +33,7 @@ namespace DadVSMe
                 return;
 
             Vector3[] points = new Vector3[attackNum + 1];
-            List<UnitHealth> targets = new();
+            List<IHealth> targets = new();
             points[0] = instigator.transform.position;
             int count = 0;
 
@@ -52,13 +52,13 @@ namespace DadVSMe
                     if (col.gameObject == instigator.gameObject)
                         continue;
 
-                    if (col.TryGetComponent<UnitHealth>(out UnitHealth health))
+                    if (col.TryGetComponent<IHealth>(out IHealth health))
                     {
                         if (targets.Contains(health))
                             continue;
 
                         count++;
-                        points[count] = health.transform.position;
+                        points[count] = health.Position;
                         targets.Add(health);
 
                         findTarget = true;
@@ -94,7 +94,7 @@ namespace DadVSMe
             Despawn();
         }
 
-        private async void AttackAsync(List<UnitHealth> targets, Unit instigator, IAttackData attackData, IAttackFeedbackDataContainer feedbackDataContainer)
+        private async void AttackAsync(List<IHealth> targets, Unit instigator, IAttackData attackData, IAttackFeedbackDataContainer feedbackDataContainer)
         {
             if(targets.Count > 2)
             {
@@ -110,9 +110,9 @@ namespace DadVSMe
 
             for(int i = 0; i < targets.Count; i++)
             {
-                UnitHealth health = targets[i];
+                IHealth health = targets[i];
                 health.Attack(instigator, attackData);
-                _ = new PlayHitFeedback(feedbackDataContainer, unitFSMData.attackAttribute, health.transform.position, Vector3.zero, unitFSMData.forwardDirection);
+                _ = new PlayHitFeedback(feedbackDataContainer, unitFSMData.attackAttribute, health.Position, Vector3.zero, unitFSMData.forwardDirection);
                 await UniTask.Delay(TimeSpan.FromSeconds(.1f));
             }
 

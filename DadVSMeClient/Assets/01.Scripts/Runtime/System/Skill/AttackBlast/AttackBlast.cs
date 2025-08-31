@@ -113,12 +113,12 @@ namespace DadVSMe
             if (collision.gameObject.CompareTag("Enemy") == false)
                 return;
 
-            if (collision.gameObject.TryGetComponent<UnitHealth>(out UnitHealth targetHealth))
+            if (collision.gameObject.TryGetComponent<IHealth>(out IHealth targetHealth))
             {
                 PlayTimeScaleEffect();
                 targetHealth.Attack(instigator, attackData);
                 UnitFSMData unitFSMData = instigator.GetComponent<FSMBrain>().GetAIData<UnitFSMData>();
-                _ = new PlayHitFeedback(attackData, unitFSMData.attackAttribute, targetHealth.transform.position, Vector3.zero, unitFSMData.forwardDirection);
+                _ = new PlayHitFeedback(attackData, unitFSMData.attackAttribute, targetHealth.Position, Vector3.zero, unitFSMData.forwardDirection);
 
             }
 

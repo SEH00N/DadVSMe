@@ -67,6 +67,9 @@ namespace DadVSMe.GameCycles
             await mainBGMLibrary.InitializeAsync();
             AudioManager.Instance.PlayBGM(mainBGMLibrary, loadCache: false);
 
+            // Debug
+            return;
+
             await PlayGameStartDirecting();
         }
 

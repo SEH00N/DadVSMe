@@ -43,7 +43,7 @@ namespace DadVSMe
                 if(col.gameObject == owner.gameObject)
                     continue;
 
-                if (col.TryGetComponent<UnitHealth>(out UnitHealth health))
+                if (col.TryGetComponent<IHealth>(out IHealth health))
                 {
                     health.Attack(owner, attackData);
                 }

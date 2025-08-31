@@ -50,12 +50,12 @@ namespace DadVSMe.Entities
         public void Check(Unit unit, List<Unit> targets, Action<Unit> onMatch) => Check(unit, targets, null, onMatch);
         public void Check(Unit unit, List<Unit> targets, Transform pivot, Action<Unit> onMatch)
         {
-            foreach (Unit target in targets)
+            for(int i = targets.Count - 1; i >= 0; i--)
             {
-                if (Check(unit, target, pivot) == false)
+                if (Check(unit, targets[i], pivot) == false)
                     continue;
 
-                onMatch?.Invoke(target);
+                onMatch?.Invoke(targets[i]);
             }
         }
 

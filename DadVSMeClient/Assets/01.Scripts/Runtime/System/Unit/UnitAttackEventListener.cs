@@ -6,13 +6,18 @@ namespace DadVSMe.Entities
 {
     public class UnitAttackEventListener : MonoBehaviour
     {
-        [SerializeField] FSMBrain fsmBrain = null;
+        [SerializeField] Unit unit = null;
 
         private UnitFSMData fsmData = new UnitFSMData();
 
-        public void Initialize()
+        private void Awake()
         {
-            fsmData = fsmBrain.GetAIData<UnitFSMData>();
+            unit.OnInitializedEvent += Initialize;
+        }
+
+        private void Initialize(IEntityData data)
+        {
+            fsmData = unit.FSMBrain.GetAIData<UnitFSMData>();
         }
 
         public void OnAttack(IAttacker attacker, IAttackData attackData)

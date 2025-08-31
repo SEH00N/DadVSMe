@@ -9745,7 +9745,6 @@ MonoBehaviour:
   unitMovement: {fileID: 279169761548483819}
   fsmBrain: {fileID: 2841000604668159261}
   unitHealth: {fileID: 6165701722836179940}
-  unitAttackEventListener: {fileID: 8895890805159774065}
   unitSkillComponent: {fileID: 6550646681929325183}
   unitRigidbody: {fileID: 8451211484433483914}
   unitCollider: {fileID: 496568060240948358}
@@ -9982,7 +9981,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1bd0c3919e0924b2e8cd573812f1afa9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fsmBrain: {fileID: 2841000604668159261}
+  unit: {fileID: 1174489111746341445}
 --- !u!61 &496568060240948358
 BoxCollider2D:
   m_ObjectHideFlags: 0

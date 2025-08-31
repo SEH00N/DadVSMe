@@ -51,7 +51,7 @@ namespace DadVSMe
                 return;
             }
 
-            if (target.TryGetComponent<UnitHealth>(out UnitHealth targetHealth))
+            if (target.TryGetComponent<IHealth>(out IHealth targetHealth))
             {
                 DespawnInternal();
                 Vector3 direction = (target.transform.position - transform.position).normalized;

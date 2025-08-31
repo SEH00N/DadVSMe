@@ -67,6 +67,7 @@ namespace DadVSMe.Enemies
             if(animal == null)
                 return;
 
+            unit.RemoveChildSortingOrderResolver(animal);
             PoolManager.Despawn(animal);
         }
 

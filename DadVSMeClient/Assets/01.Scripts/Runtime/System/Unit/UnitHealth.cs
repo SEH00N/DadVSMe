@@ -1,13 +1,13 @@
 using System;
-using DadVSMe.Core.UI;
-using H00N.AI.FSM;
 using UnityEngine;
 using UnityEngine.Events;
 
 namespace DadVSMe.Entities
 {
-    public class UnitHealth : MonoBehaviour
+    public class UnitHealth : MonoBehaviour, IHealth
     {
+        public Vector3 Position => transform.position;
+
         public UnityEvent<IAttacker, IAttackData> onAttackEvent = null;
         public event Action OnHPChangedEvent = null;
 

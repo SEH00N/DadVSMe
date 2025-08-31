@@ -5,7 +5,7 @@ using UnityEngine;
 
 namespace DadVSMe.Enemies
 {
-    public class Enemy : Unit, IGrabbable
+    public class Enemy : Unit, IGrabbable, IRider
     {
         public event Action<Enemy> onDespawned;
 
@@ -13,6 +13,7 @@ namespace DadVSMe.Enemies
         // [SerializeField] NPCMovement npcMovement = null;
         [SerializeField] EnemyDetector enemyDetector = null;
         [SerializeField] FSMState grabState = null;
+        [SerializeField] FSMState ridingState = null;
 
         [field: SerializeField]
         public float Weight { get; set; }
@@ -63,6 +64,21 @@ namespace DadVSMe.Enemies
         {
             onDespawned?.Invoke(this);
             base.DespawnInternal();
+        }
+
+        public void RideOn(Vehicle vehicle)
+        {
+            staticEntity = true;
+            fsmBrain.ChangeState(ridingState);
+            unitRigidbody.bodyType = RigidbodyType2D.Kinematic;
+        }
+
+        public void RideOff(Vehicle vehicle)
+        {
+            staticEntity = false;
+            skipUpdate = true;
+            fsmBrain.SetAsDefaultState();
+            unitRigidbody.bodyType = RigidbodyType2D.Dynamic;
         }
     }
 }

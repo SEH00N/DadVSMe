@@ -8,8 +8,8 @@ namespace DadVSMe.Entities
     public class UnitFSMData : IAIData
     {
         public int enemyMaxCount = 5;
+        public Unit unit = null;
 
-        [HideInInspector] public Unit unit = null;
         [HideInInspector] public List<Unit> enemies = new List<Unit>();
         [HideInInspector] public IAttackData attackData = null;
         [HideInInspector] public int forwardDirection = 1;

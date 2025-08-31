@@ -1654,6 +1654,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 482625652}
     m_Modifications:
+    - target: {fileID: 5032617496165127601, guid: 9eb020472c035ee46ba55db34836912b, type: 3}
+      propertyPath: spawnInfoList.Array.data[0].spawnTable.Array.data[0].enemyData.key
+      value: VehicleNinjaEnemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 5032617496165127601, guid: 9eb020472c035ee46ba55db34836912b, type: 3}
+      propertyPath: spawnInfoList.Array.data[0].spawnTable.Array.data[1].enemyData.key
+      value: VehicleNinjaEnemy
+      objectReference: {fileID: 0}
     - target: {fileID: 6075791408892131617, guid: 9eb020472c035ee46ba55db34836912b, type: 3}
       propertyPath: m_Name
       value: 2ThemeBottomLayer_1

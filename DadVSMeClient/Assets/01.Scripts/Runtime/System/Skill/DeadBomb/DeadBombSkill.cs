@@ -58,12 +58,12 @@ namespace DadVSMe
                 if (col.gameObject == attackTarget.gameObject)
                     continue;
 
-                if (col.gameObject.TryGetComponent<UnitHealth>(out UnitHealth unitHealth))
+                if (col.gameObject.TryGetComponent<IHealth>(out IHealth unitHealth))
                 {
                     DynamicAttackData attackData = new DynamicAttackData(this.attackData);
                     attackData.SetDamage(attackData.Damage + (int)(levelUpIncreaseRate * level));
                     unitHealth.Attack(owner, attackData);
-                    _ = new PlayHitFeedback(attackData, unitFSMData.attackAttribute, unitHealth.transform.position, Vector3.zero, unitFSMData.forwardDirection);
+                    _ = new PlayHitFeedback(attackData, unitFSMData.attackAttribute, unitHealth.Position, Vector3.zero, unitFSMData.forwardDirection);
                 }
             }
             
@@ -89,7 +89,7 @@ namespace DadVSMe
             if (playerBrain.GetAIData<PlayerFSMData>().isAnger == false)
                 return;
 
-            if (target.TryGetComponent<UnitHealth>(out UnitHealth targetHealth))
+            if (target.TryGetComponent<IHealth>(out IHealth targetHealth))
             {
                 if (targetHealth.CurrentHP <= 0f)
                 {

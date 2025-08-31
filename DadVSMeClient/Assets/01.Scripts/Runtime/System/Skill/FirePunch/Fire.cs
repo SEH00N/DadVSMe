@@ -21,7 +21,7 @@ namespace DadVSMe
         private Unit instigator;
         private float burnTime;
         private float attackDelay;
-        private UnitHealth targetHealth;
+        private IHealth targetHealth;
         private float currentBurnTime = 0;
         private bool isBurn = false;
         private int burnCount = 0;
@@ -38,7 +38,7 @@ namespace DadVSMe
             isBurn = false;
             burnCount = 0;
 
-            if (target.TryGetComponent<UnitHealth>(out UnitHealth targetHealth))
+            if (target.TryGetComponent<IHealth>(out IHealth targetHealth))
             {
                 if (target.GetComponentInChildren<Fire>() != null)
                     return;
@@ -77,8 +77,8 @@ namespace DadVSMe
                     EAttackAttribute attackAttribute = unitFSMData.attackAttribute;
                     unitFSMData.attackAttribute = EAttackAttribute.Fire;
                     
-                    targetHealth.Attack(instigator, attackData);
-                    _ = new PlayHitFeedback(feedbackDataContainer, unitFSMData.attackAttribute, targetHealth.transform.position, Vector3.zero, unitFSMData.forwardDirection);
+                targetHealth.Attack(instigator, attackData);
+                    _ = new PlayHitFeedback(feedbackDataContainer, unitFSMData.attackAttribute, targetHealth.Position, Vector3.zero, unitFSMData.forwardDirection);
                     
                     unitFSMData.attackAttribute = attackAttribute;
                 }

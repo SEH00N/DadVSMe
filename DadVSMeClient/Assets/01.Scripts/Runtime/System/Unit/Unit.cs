@@ -10,15 +10,16 @@ namespace DadVSMe.Entities
         [SerializeField] protected UnitMovement unitMovement = null;
         [SerializeField] protected FSMBrain fsmBrain = null;
         [SerializeField] protected UnitHealth unitHealth = null;
-        [SerializeField] protected UnitAttackEventListener unitAttackEventListener = null;
         [SerializeField] protected UnitSkillComponent unitSkillComponent;
         [SerializeField] protected Rigidbody2D unitRigidbody = null;
         [SerializeField] protected Collider2D unitCollider = null;
         [SerializeField] protected FSMState holdState = null;
+        [SerializeField] protected Vector2 size = Vector2.zero;
 
         public FSMBrain FSMBrain => fsmBrain;
         public UnitHealth UnitHealth => unitHealth; // uniy health is used frequently. allow external access for performance. 
         public Collider2D UnitCollider => unitCollider;
+        public Vector2 Size => size;
 
         // protected virtual RigidbodyType2D DefaultRigidbodyType => RigidbodyType2D.Kinematic;
 
@@ -45,7 +46,6 @@ namespace DadVSMe.Entities
             unitStatData = fsmBrain.GetAIData<UnitStatData>();
 
             unitHealth.Initialize(unitStatData[EUnitStat.MaxHp]);
-            unitAttackEventListener.Initialize();
             unitSkillComponent?.Initialize();
 
             unitFSMData.isFloat = false;

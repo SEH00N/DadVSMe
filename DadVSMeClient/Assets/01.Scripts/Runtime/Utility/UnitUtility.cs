@@ -39,7 +39,7 @@ namespace DadVSMe
             if(check == false || result == false)
                 return this;
 
-            result = Mathf.Abs(target.transform.position.x - pivot.position.x) <= distance;
+            result = Mathf.Abs(target.transform.position.x - pivot.position.x) <= distance + target.Size.x / 2f;
 
             return this;
         }
@@ -49,7 +49,7 @@ namespace DadVSMe
             if(check == false || result == false)
                 return this;
 
-            result = Mathf.Abs(target.transform.position.y - pivot.position.y) <= distance;
+            result = Mathf.Abs(target.transform.position.y - pivot.position.y) <= distance + target.Size.y / 2f;
 
             return this;
         }

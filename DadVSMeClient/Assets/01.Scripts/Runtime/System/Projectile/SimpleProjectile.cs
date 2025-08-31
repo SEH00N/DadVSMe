@@ -70,7 +70,7 @@ namespace DadVSMe
             if(other.CompareTag(targetTag) == false)
                 return;
 
-            if(other.TryGetComponent<UnitHealth>(out UnitHealth unitHealth) == false)
+            if(other.TryGetComponent<IHealth>(out IHealth unitHealth) == false)
                 return;
 
             UnitFSMData unitFSMData = owner.FSMBrain.GetAIData<UnitFSMData>();
