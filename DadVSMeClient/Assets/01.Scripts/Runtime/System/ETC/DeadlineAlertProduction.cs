@@ -1,3 +1,4 @@
+using DG.Tweening;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Rendering;
@@ -20,11 +21,22 @@ namespace DadVSMe.Production
         private const float PANEL_MIN_SCALE = 0.5f;
         private const float PANEL_MAX_SCALE = 1.7f;
 
+        private const float VIGNETTE_VALUE = 0.5f;
+        private const float VIGNETTE_FADE_TIME = 0.12f;
+
         private bool _alertFlag = false;
+        private Tween _vignetteFadeTween = null;
+        private Vignette _vignette = null;
 
         private void Start()
         {
             _alertFlag = false;
+
+            if(_volume.profile.TryGet(out Vignette vignette))
+            {
+                _vignette = vignette;
+                _vignette.intensity.value = 0;
+            }
         }
 
         private void Update()
@@ -34,10 +46,7 @@ namespace DadVSMe.Production
 
             if(alertFlag != _alertFlag)
             {
-                if(_volume.profile.TryGet(out Vignette vignette))
-                {
-                    vignette.active = alertFlag;
-                }
+                FadeVignette(alertFlag);
 
                 _remainDistanceText.color = alertFlag ? Color.red : Color.white;
                 _alertFlag = alertFlag;
@@ -49,6 +58,22 @@ namespace DadVSMe.Production
             float value = Mathf.Lerp(PANEL_MIN_SCALE, PANEL_MAX_SCALE, t);
 
             _remainDistanceTransform.localScale = Vector2.one * value;
+        }
+
+        private void FadeVignette(bool alertFlag)
+        {
+            if (_vignette == null) return;
+
+            _vignetteFadeTween?.Kill();
+
+            float targetValue = alertFlag ? VIGNETTE_VALUE : 0f;
+
+            _vignetteFadeTween = DOTween.To(
+                () => _vignette.intensity.value,
+                x => _vignette.intensity.value = x,
+                targetValue,
+                VIGNETTE_FADE_TIME
+            ).SetEase(Ease.OutQuad);
         }
     }
 }
