@@ -19,7 +19,7 @@ namespace DadVSMe.UI
             await GameInstance.GameCycle.InitializeAsync();
 
             // FadeOut Immediately
-            _ = DOFade.FadeOutAsync();
+            _ = DOFade.FadeOutAsync(3.5f);
         }
 
         public async void OnTouchTitleButton()

@@ -2,6 +2,7 @@ using System.Threading.Tasks;
 using Cysharp.Threading.Tasks;
 using DadVSMe.Players;
 using DadVSMe.UI.HUD;
+using DG.Tweening;
 using H00N.Resources.Addressables;
 using Unity.Cinemachine;
 using UnityEngine;
@@ -12,6 +13,8 @@ namespace DadVSMe.GameCycles
     {
         [SerializeField] CinemachineCamera mainCinemachineCamera = null;
         public CinemachineCamera MainCinemachineCamera => mainCinemachineCamera;
+
+        [SerializeField] CinemachineCamera characterZoomCinemachineCamera = null;
         
         [SerializeField] HUDUI hudUI = null;
         public HUDUI HUDUI => hudUI;
@@ -49,10 +52,36 @@ namespace DadVSMe.GameCycles
             MainPlayer.Initialize(new PlayerEntityData());
             hudUI.Initialize();
 
-            _ = new ChangeCinemachineCamera(mainCinemachineCamera);
-
             await mainBGMLibrary.InitializeAsync();
             AudioManager.Instance.PlayBGM(mainBGMLibrary, loadCache: false);
+
+            await PlayGameStartDirecting();
+        }
+
+        public float test = 2f;
+        public float test1 = 1f;
+        public float test2 = 0.75f;
+        public float test3 = 0.2f;
+
+        private async UniTask PlayGameStartDirecting()
+        {
+            deadline.SetSpeed(0f);
+
+            TimeManager.SetTimeScale(0.3f, true);
+            TimeManager.SetTimeScale(GameDefine.DEFAULT_TIME_SCALE, true, 2f);
+
+            _ = new ChangeCinemachineCamera(characterZoomCinemachineCamera, 0f);
+
+            Vector3 targetPosition = new Vector3(startLine.position.x - 7.5f, deadline.transform.position.y, deadline.transform.position.z);
+            Vector3 startPosition = targetPosition + Vector3.left * 42.5f;
+            deadline.transform.position = startPosition;
+
+            _ = deadline.transform.DOMove(targetPosition, test).SetEase(Ease.InQuint);
+            await UniTask.WaitForSeconds(test1);
+            // _ = new ChangeCinemachineCamera(mainCinemachineCamera, 1f);
+            // await UniTask.WaitForSeconds(1f);
+
+            await deadline.PlayBumpPlayerDirecting(test2, test3);
         }
 
         public void Pause()

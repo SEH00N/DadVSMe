@@ -24,7 +24,7 @@ namespace DadVSMe.UI
             GameInstance.GameCycle.InitializeAsync().Forget();
 
             // FadeOut
-            await DOFade.FadeOutAsync();
+            await DOFade.FadeOutAsync(3.5f);
         }
          
         public async void OnTouchSettingButton()

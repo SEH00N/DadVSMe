@@ -20,6 +20,8 @@ namespace DadVSMe.GameCycles
         private const float BOSS_DEAD_BLEND_TIME = 2.2f;
 
         private const float BOSS_WAVE_BLEND_TIME = 2f;
+        private const float BOSS_WAVE_MAIN_CAMERA_BLEND_TIME = 0.5f;
+        private const float BOSS_WAVE_MAIN_CAMERA_RELEASE_DURATION = 0.5f;
 
         [Header("Options")]
         [SerializeField] GameObject bossWaveBlockObject = null;
@@ -165,7 +167,7 @@ namespace DadVSMe.GameCycles
             await UniTask.WaitForSeconds(BOSS_DEAD_ZOOM_TIME, ignoreTimeScale: true);
 
             TimeManager.SetTimeScale(GameDefine.DEFAULT_TIME_SCALE, true, 0.5f);
-            await GameInstance.GameCycle.Deadline.PlayBossClearDirecting();
+            await GameInstance.GameCycle.Deadline.PlayBumpPlayerDirecting(BOSS_WAVE_MAIN_CAMERA_BLEND_TIME, BOSS_WAVE_MAIN_CAMERA_RELEASE_DURATION);
 
             InputManager.EnableInput<PlayerInputReader>();
 

@@ -3,6 +3,7 @@ using UnityEngine;
 
 namespace DadVSMe
 {
+    [ExecuteAlways]
     public class PositionConstraint : MonoBehaviour
     {
         [SerializeField] Transform target = null;
@@ -14,6 +15,9 @@ namespace DadVSMe
 
         private void LateUpdate()
         {
+            if(target == null)
+                return;
+
             float targetZ = target.position.z;
             if(zMinimum)
                 targetZ = Mathf.Max(targetZ, minZ);

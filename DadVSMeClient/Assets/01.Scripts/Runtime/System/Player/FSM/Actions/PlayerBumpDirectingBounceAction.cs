@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace DadVSMe.Players.FSM
 {
-    public class PlayerBossClearDirectingBounceAction : FSMAction
+    public class PlayerBumpDirectingBounceAction : FSMAction
     {
         private const float HARD_BOUNCE_FORCE_THRESHOLD = 20f;
 

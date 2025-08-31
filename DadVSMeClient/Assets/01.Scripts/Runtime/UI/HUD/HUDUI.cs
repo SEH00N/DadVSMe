@@ -24,6 +24,7 @@ namespace DadVSMe.UI.HUD
             expBarUI.Initialize(player);
             skillInfoUI.Initialize(player.GetComponent<UnitSkillComponent>());
             gameProgressUI.Initialize(gameCycle.StartLine, gameCycle.EndLine, gameCycle.Deadline.transform, player.transform);
+            goPopupUI.gameObject.SetActive(false);
         }
 
         public void ActiveGoPopupUI()

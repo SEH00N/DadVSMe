@@ -1,6 +1,7 @@
 using System;
 using Cysharp.Threading.Tasks;
 using DadVSMe.Entities;
+using DG.Tweening;
 using UnityEngine;
 
 namespace DadVSMe
@@ -8,9 +9,6 @@ namespace DadVSMe
     // Dad == Dead
     public class Deadline : MonoBehaviour, IAttacker
     {
-        private const float BOSS_CLEAR_DIRECTING_CAMERA_RELEASE_BLEND_DURATION = 0.5f;
-        private const float BOSS_CLEAR_DIRECTING_CAMERA_RELEASE_DURATION = 1f;
-
         private const string BOSS_CLEAR_DIRECTING_JUMP_ANIMATION_NAME = "Jump";
         private const float BOSS_CLEAR_DIRECTING_JUMP_TRIGGER_DURATION = 0.1f;
         private const float BOSS_CLEAR_DIRECTING_JUMP_TRIGGER_TIME_FREEZE_DELAY = 0.1f;
@@ -21,7 +19,7 @@ namespace DadVSMe
         private const float BOSS_CLEAR_DIRECTING_CAMERA_SHAKE_AMPLITUDE = 14f;
         private const float BOSS_CLEAR_DIRECTING_CAMERA_SHAKE_FREQUENCY = 8f;
 
-        private const float BOSS_CLEAR_DIRECTING_FINISHING_DURATION = 3f;
+        private const float BOSS_CLEAR_DIRECTING_FINISHING_DURATION = 3.5f;
 
         [SerializeField] Animator deadlineAnimator = null;
         [SerializeField] JuggleAttackData deadlineJuggleAttackData = null;
@@ -41,6 +39,9 @@ namespace DadVSMe
 
         private void FixedUpdate()
         {
+            if(_moveSpeed == 0f)
+                return;
+            
             Vector3 movement = transform.right * (_moveSpeed * Time.fixedDeltaTime);
             transform.position += movement;
         }
@@ -50,12 +51,20 @@ namespace DadVSMe
             gameObject.SetActive(isActive);
         }
 
-        public async UniTask PlayBossClearDirecting()
+        public void SetSpeed(float speed)
+        {
+            _moveSpeed = speed;
+        }
+
+        public async UniTask PlayBumpPlayerDirecting(float mainCameraBlendDuration, float cameraReleaseDuration)
         {
             // Release Camera
-            _ = new ChangeCinemachineCamera(GameInstance.GameCycle.MainCinemachineCamera, BOSS_CLEAR_DIRECTING_CAMERA_RELEASE_BLEND_DURATION);
+            _ = new ChangeCinemachineCamera(GameInstance.GameCycle.MainCinemachineCamera, mainCameraBlendDuration);
 
-            await UniTask.Delay(TimeSpan.FromSeconds(BOSS_CLEAR_DIRECTING_CAMERA_RELEASE_DURATION), ignoreTimeScale: true);
+            await UniTask.Delay(TimeSpan.FromSeconds(mainCameraBlendDuration + cameraReleaseDuration), ignoreTimeScale: true);
+
+            // Kill Remaining Tween
+            transform.DOKill();
 
             // Deadline Positioning
             Vector3 offset = deadlineJumpTriggerTargetTransform.position - GameInstance.GameCycle.MainPlayer.transform.position;
