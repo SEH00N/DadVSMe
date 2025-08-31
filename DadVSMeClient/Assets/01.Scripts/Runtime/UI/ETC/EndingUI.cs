@@ -29,8 +29,8 @@ namespace DadVSMe.UI
 
             foreach (Image image in imageList)
             {
-                await UniTask.WaitForSeconds(3f);
-                await image.DOFade(0f, 1.5f).SetEase(Ease.OutCubic);
+                await UniTask.WaitForSeconds(4f);
+                await image.DOFade(0f, 2f).SetEase(Ease.OutCubic);
             }
 
             await UniTask.WaitForSeconds(1f);
