@@ -284,8 +284,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bossWaveBlockObject: {fileID: 2744068803149100508}
-  bossSpawnPoint: {fileID: 1779985346301296455}
-  conditionDistance: 22
   isFinalBoss: 0
   bossSpawnInfo:
     spawnPoint: {fileID: 1779985346301296455}
@@ -298,12 +296,6 @@ MonoBehaviour:
       statData:
         key: JamesStatData_Wave1
       offset: {x: 0, y: 0}
-  bossPrefab:
-    key: James
-  enemyData:
-    key: JamesEnemyData
-  statData:
-    key: JamesStatData_Wave1
   bgmLibrary:
     key: BullyBGM
   bossSpawnCinemachineCamera: {fileID: 1226103034720073128}

@@ -139,8 +139,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bossWaveBlockObject: {fileID: 1296530983757933818}
-  bossSpawnPoint: {fileID: 7114636499739644057}
-  conditionDistance: 22
   isFinalBoss: 0
   bossSpawnInfo:
     spawnPoint: {fileID: 7114636499739644057}
@@ -153,12 +151,6 @@ MonoBehaviour:
       statData:
         key: KidStatData_Wave2
       offset: {x: 0, y: 0}
-  bossPrefab:
-    key: ButtEnemy
-  enemyData:
-    key: ButtEnemyData_6 (Ronald)
-  statData:
-    key: KidStatData_Wave2
   bgmLibrary:
     key: BullyBGM
   bossSpawnCinemachineCamera: {fileID: 2591341683189990174}
