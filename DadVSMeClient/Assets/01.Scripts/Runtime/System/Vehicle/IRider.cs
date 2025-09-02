@@ -8,6 +8,6 @@ namespace DadVSMe.Entities
         public UnitHealth UnitHealth { get; }
 
         public void RideOn(Vehicle vehicle);
-        public void RideOff(Vehicle vehicle);
+        public void RideOff();
     }
 }

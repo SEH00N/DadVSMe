@@ -1,3 +1,4 @@
+using System.Linq;
 using H00N.Resources.Pools;
 using UnityEngine;
 
@@ -40,9 +41,7 @@ namespace DadVSMe.Entities
 
                 Vector2 direction = enemy.transform.position - transform.position;
                 if(Mathf.Abs(direction.x) < collisionAttackWidth * 0.5f && Mathf.Abs(direction.y) < collisionAttackHeight * 0.5f)
-                {
-                    enemy.UnitHealth.Attack(this, collisionAttackData);
-                }
+                    AttackToTarget(enemy);
             });
         }
 
@@ -53,14 +52,20 @@ namespace DadVSMe.Entities
             rider.transform.SetParent(rideTransform);
             rider.transform.SetLocalPositionAndRotation(Vector3.zero, Quaternion.identity);
             rider.transform.localScale = Vector3.one;
-            rider.RideOn(this);
 
             if(rider is Unit riderUnit == true)
             {
                 AddChildSortingOrderResolver(riderUnit);
                 riderFSMData = riderUnit.FSMBrain.GetAIData<UnitFSMData>();
+                Object[] holders = riderFSMData.holders.ToArray();
+                if(holders.Length > 0)
+                {
+                    SetHold(true, holders);
+                    riderUnit.SetHold(false, holders);
+                }
             }
 
+            rider.RideOn(this);
             unitHealth.OnHPChangedEvent += HandleOwnerHPChanged;
         }
 
@@ -72,7 +77,7 @@ namespace DadVSMe.Entities
                 RemoveChildSortingOrderResolver(riderUnit);
 
             rider.transform.SetParent(null);
-            rider.RideOff(this);
+            rider.RideOff();
 
             rider = null;
         }
@@ -89,12 +94,24 @@ namespace DadVSMe.Entities
             PoolManager.Despawn(this);
         }
 
+        private void AttackToTarget(Unit target)
+        {
+            EAttackAttribute attackAttribute = unitFSMData.attackAttribute;
+            unitFSMData.attackAttribute = EAttackAttribute.Normal;
+
+            target.UnitHealth.Attack(this, collisionAttackData);
+            _ = new PlayHitFeedback(collisionAttackData, unitFSMData.attackAttribute, target.transform.position, Vector3.zero, unitFSMData.forwardDirection);
+
+            unitFSMData.attackAttribute = attackAttribute;
+        }
+
         private void Explosion()
         {
             EAttackAttribute attackAttribute = unitFSMData.attackAttribute;
             unitFSMData.attackAttribute = EAttackAttribute.Fire;
 
             _ = new PlayAttackFeedback(explosionAttackData, unitFSMData.attackAttribute, transform.position, Vector3.zero, unitFSMData.forwardDirection);
+            _ = new PlayAttackSound(explosionAttackData, unitFSMData.attackAttribute);
 
             Collider2D[] cols = Physics2D.OverlapBoxAll(transform.position, new Vector2(explosionAttackWidth, collisionAttackHeight), 0, GameDefine.PLAYER_LAYER_MASK);
             foreach (var col in cols)

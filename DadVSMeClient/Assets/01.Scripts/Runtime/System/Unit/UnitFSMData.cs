@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using H00N.AI;
 using UnityEngine;
+using Object = UnityEngine.Object;
 
 namespace DadVSMe.Entities
 {
@@ -18,12 +19,14 @@ namespace DadVSMe.Entities
         [HideInInspector] public bool isFloat = false;
         [HideInInspector] public bool isLie = false;
         [HideInInspector] public bool isDie = false;
+        [HideInInspector] public HashSet<Object> holders = null;
         [HideInInspector] public EAttackAttribute hitAttribute;
         [HideInInspector] public EAttackAttribute attackAttribute;
         public Action<Unit> OnBowlingEvent;
 
         public IAIData Initialize()
         {
+            holders = new HashSet<Object>();
             attackAttribute = EAttackAttribute.Normal;
             return this;
         }

@@ -2,6 +2,7 @@ using System;
 using DadVSMe.Entities;
 using H00N.AI.FSM;
 using UnityEngine;
+using Object = UnityEngine.Object;
 
 namespace DadVSMe.Enemies
 {
@@ -18,6 +19,7 @@ namespace DadVSMe.Enemies
         [field: SerializeField]
         public float Weight { get; set; }
 
+        private Vehicle vehicle = null;
         private Unit grabber = null;
         private bool skipUpdate = false;
 
@@ -68,17 +70,29 @@ namespace DadVSMe.Enemies
 
         public void RideOn(Vehicle vehicle)
         {
+            this.vehicle = vehicle;
+
             staticEntity = true;
             fsmBrain.ChangeState(ridingState);
             unitRigidbody.bodyType = RigidbodyType2D.Kinematic;
         }
 
-        public void RideOff(Vehicle vehicle)
+        public void RideOff()
         {
             staticEntity = false;
             skipUpdate = true;
             fsmBrain.SetAsDefaultState();
             unitRigidbody.bodyType = RigidbodyType2D.Dynamic;
+
+            vehicle = null;
+        }
+
+        public override void SetHold(bool isHold, params Object[] holders)
+        {
+            if(vehicle != null)
+                vehicle.SetHold(isHold, holders);
+            else
+                base.SetHold(isHold, holders);
         }
     }
 }

@@ -7,13 +7,14 @@ namespace DadVSMe.Enemies
 {
     public class ATVPatrolAction : FSMAction
     {
-        private const float BOUNDARY_CHECK_DISTANCE = 3f;
+        private const float BOUNDARY_CHECK_DISTANCE = 3.5f;
         private const float PLAYER_CHECK_DISTANCE = 10f;
 
         private EnemyFSMData enemyFSMData = null;
         private UnitMovement unitMovement = null;
         private UnitStatData unitStatData = null;
-
+        private UnitFSMData unitFSMData = null;
+        
         private Vector2 patrolDirection = Vector2.zero;
 
         public override void Init(FSMBrain brain, FSMState state)
@@ -22,6 +23,7 @@ namespace DadVSMe.Enemies
             enemyFSMData = brain.GetAIData<EnemyFSMData>();
             unitMovement = brain.GetComponent<UnitMovement>();
             unitStatData = brain.GetAIData<UnitStatData>();
+            unitFSMData = brain.GetAIData<UnitFSMData>();
         }
 
         public override void EnterState()
@@ -49,13 +51,17 @@ namespace DadVSMe.Enemies
                 return;
             }
 
-            if(Physics2D.Raycast(brain.transform.position, patrolDirection, BOUNDARY_CHECK_DISTANCE, GameDefine.BOUNDARY_LAYER_MASK))
+            Vector2 movementDireciton = patrolDirection * unitStatData[EUnitStat.MoveSpeed].FinalValue;
+            Vector2 movement = movementDireciton * (Time.deltaTime * BOUNDARY_CHECK_DISTANCE);
+
+            Collider2D unitCollider = unitFSMData.unit.UnitCollider;
+            if(Physics2D.OverlapBox((Vector2)unitCollider.bounds.center + movement, unitCollider.bounds.size, unitFSMData.unit.transform.eulerAngles.z, GameDefine.BOUNDARY_LAYER_MASK))
             {
                 brain.SetAsDefaultState();
                 return;
             }
 
-            unitMovement.SetMovementVelocity(patrolDirection * unitStatData[EUnitStat.MoveSpeed].FinalValue);
+            unitMovement.SetMovementVelocity(movementDireciton);
             if(patrolDirection.sqrMagnitude >= 0.01f)
                 return;
 

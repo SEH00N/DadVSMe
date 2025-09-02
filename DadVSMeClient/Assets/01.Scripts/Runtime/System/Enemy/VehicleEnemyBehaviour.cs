@@ -23,7 +23,7 @@ namespace DadVSMe.Enemies
             if(unit is IRider rider == false)
                 return;
 
-            unit.SetHold(true);
+            unit.SetHold(true, this);
             SpawnVehicleAsync(vehicleEnemyData.VehiclePrefab, rider).Forget();
         }
 
@@ -34,7 +34,7 @@ namespace DadVSMe.Enemies
             vehicle.transform.position = unit.transform.position;
             vehicle.Initialize(new VehicleEntityData());
 
-            unit.SetHold(false);
+            unit.SetHold(false, this);
             vehicle.RideOn(rider);
         }
     }

@@ -1,6 +1,7 @@
 using UnityEngine;
 using H00N.AI.FSM;
 using UnityEngine.Events;
+using System.Collections.Generic;
 
 namespace DadVSMe.Entities
 {
@@ -102,15 +103,26 @@ namespace DadVSMe.Entities
                 unitFSMData.attackAttribute = attackAttribute;
         }
 
-        public void SetHold(bool isHold)
+        public virtual void SetHold(bool isHold, params Object[] holders)
         {
+            if(holders == null)
+                return;
+
             if(isHold)
             {
-                fsmBrain.ChangeState(holdState);
+                foreach(Object holder in holders)
+                    unitFSMData.holders.Add(holder);
+
+                if(unitFSMData.holders.Count > 0)
+                    fsmBrain.ChangeState(holdState);
             }
             else
             {
-                fsmBrain.SetAsDefaultState();
+                foreach(Object holder in holders)
+                    unitFSMData.holders.Remove(holder);
+
+                if(unitFSMData.holders.Count == 0)
+                    fsmBrain.SetAsDefaultState();
             }
         }
     }

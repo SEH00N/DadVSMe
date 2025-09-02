@@ -112,11 +112,11 @@ namespace DadVSMe.GameCycles
             AudioManager.Instance.PlayBGM(bgmLibrary, loadCache: false);
 
             // Set Player Hold
-            GameInstance.GameCycle.MainPlayer.SetHold(true);
+            GameInstance.GameCycle.MainPlayer.SetHold(true, this);
 
             // Set Boss Hold
             bossUnits.ForEach(unit => {
-                unit.SetHold(true);
+                unit.SetHold(true, this);
             });
 
             // Play Camera Trnasitioning
@@ -141,11 +141,11 @@ namespace DadVSMe.GameCycles
             bossWaveCinemachineCamera.Follow = GameInstance.CameraLookTransform;
 
             // Release Player
-            GameInstance.GameCycle.MainPlayer.SetHold(false);
+            GameInstance.GameCycle.MainPlayer.SetHold(false, this);
 
             // Release Boss
             bossUnits.ForEach(unit => {
-                unit.SetHold(false);
+                unit.SetHold(false, this);
             });
 
             // Set Boss Wave Block Object Active
