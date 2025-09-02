@@ -103,6 +103,7 @@ namespace DadVSMe.GameCycles
                 bossUnits.Add(bossUnit);
             }
 
+            GameInstance.GameCycle.SetBossWave(true);
             PlayBossDirecting();
         }
     
@@ -179,6 +180,8 @@ namespace DadVSMe.GameCycles
 
         private void HandleBossDead(Unit bossUnit)
         {
+            GameInstance.GameCycle.SetBossWave(false);
+
             if(isFinalBoss)
                 EndingDirecting(bossUnit);
             else

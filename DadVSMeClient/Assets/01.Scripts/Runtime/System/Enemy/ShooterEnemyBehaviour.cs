@@ -35,7 +35,7 @@ namespace DadVSMe.Enemies
             if(animal == null)
                 return;
             
-            if(unitFSMData.isDie || unitFSMData.isFloat || unitFSMData.isLie || unit.FSMBrain.CurrentState == grabState)
+            if(unitFSMData.isDie || unitFSMData.isFloat || unitFSMData.isLie || unit.FSMBrain.CurrentState == grabState || GameInstance.GameCycle.IsBossWave)
             {
                 shootTimer = 0f;
                 return;

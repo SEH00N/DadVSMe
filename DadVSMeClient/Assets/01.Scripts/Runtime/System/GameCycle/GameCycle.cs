@@ -51,6 +51,7 @@ namespace DadVSMe.GameCycles
 
         public bool IsPaused { get; private set; } = false;
         public bool IsBossClearDirecting { get; private set; } = false;
+        public bool IsBossWave { get; private set; } = false;
 
         #if UNITY_EDITOR
         // Debug
@@ -109,6 +110,11 @@ namespace DadVSMe.GameCycles
         public void SetBossClearDirecting(bool isBossClearDirecting)
         {
             IsBossClearDirecting = isBossClearDirecting;
+        }
+
+        public void SetBossWave(bool isBossWave)
+        {
+            IsBossWave = isBossWave;
         }
     }
 }
