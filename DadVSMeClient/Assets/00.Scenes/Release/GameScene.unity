@@ -3410,6 +3410,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4897992221451090437, guid: 9a84858bbcfca4777acd41476a8c75bc, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: df054680ac047487f906024a3f85b64b, type: 2}
+    - target: {fileID: 4897992221451090437, guid: 9a84858bbcfca4777acd41476a8c75bc, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 1388018867989317063, guid: df054680ac047487f906024a3f85b64b, type: 2}
+    - target: {fileID: 4897992221451090437, guid: 9a84858bbcfca4777acd41476a8c75bc, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7274651545292941299, guid: 9a84858bbcfca4777acd41476a8c75bc, type: 3}
       propertyPath: m_Name
       value: HUDUI

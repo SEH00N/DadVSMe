@@ -1,0 +1,1643 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: GameResourceAssets
+  m_EditorClassIdentifier: 
+  m_GroupName: GameResourceAssets
+  m_GUID: d3bbe144c5fa1594d8878229dda64f31
+  m_SerializeEntries:
+  - m_GUID: 008553a22a736444eaa39c87d85cef6f
+    m_Address: Assets/03.Assets/Sprite/Character/Sunchips/sunchips_hit3.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 01f34d8220a3749949f94641d0ffc6a1
+    m_Address: Assets/03.Assets/Sprite/Props/building_2.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 04cd8e7c8797f4dd38cca1d5f881cc66
+    m_Address: Assets/03.Assets/Sprite/Character/Dude/dash.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 0520d641ccffc4a1892c399fa7b0ef9e
+    m_Address: Assets/03.Assets/Sprite/Props/deco_0.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 05629dec69bff494eb572d69ee05b5e5
+    m_Address: Assets/03.Assets/Sprite/Character/Dude/juggle1.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 05902e49756f84231a8385a284929d24
+    m_Address: Assets/03.Assets/Sprite/Character/Kid/kid_bounce1_crazy.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 05f70198cc17f4d35a43958c555aa4ca
+    m_Address: Assets/03.Assets/Sprite/Props/object_6.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 08a73e44fac975f4da8c02d1fefb9fc8
+    m_Address: Assets/03.Assets/Sprite/VFX/fireball.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 08ae6f239daf94cfe9c83dacbd44f1a8
+    m_Address: Assets/03.Assets/Sprite/Props/building_9.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 095469f4adfae40e081047d57862ae12
+    m_Address: Assets/03.Assets/Sprite/Character/Bully/bully_attack1.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 0a52dd3a442504a929ce368982d35d13
+    m_Address: Assets/03.Assets/Sprite/Character/Kid/kid_juggle_crazy.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 0bd101d2be7ff40e8ab6fc9b4f2b4b72
+    m_Address: Assets/03.Assets/Sprite/Character/Sunchips/sunchips_attack4.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 0c3b8336783af45058793ed86d30f667
+    m_Address: Assets/03.Assets/Sprite/Character/Sunchips/sunchips_idle.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 0c4ef894101df4ecc8f34809be86c096
+    m_Address: Assets/03.Assets/Sprite/Character/Sunchips/sunchips_attack3.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 0d6efc9ca2da048b78d6d18c76794dea
+    m_Address: Assets/03.Assets/Sprite/Props/fence_4.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 0e3856d1b9acd4487810191ce8eae4d2
+    m_Address: Assets/03.Assets/UI/ETC/icon_setting.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 1003f537989a64d178dc91bed09bb97f
+    m_Address: Assets/03.Assets/Sprite/Character/Dude/grabhit2.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 100e9a2301e7249bcbe223c833154d4d
+    m_Address: Assets/03.Assets/Sprite/Character/Dude/punch1_4.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 10970c409ff7d45f5be845ab0f6f05a7
+    m_Address: Assets/03.Assets/Sprite/Animal/Mole/mole_0.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 11901eb723f09493ca8af2fdc568fca8
+    m_Address: Assets/03.Assets/Sprite/Character/Kid/kid_thrown2_normal_body.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 12c1e7ddeb2f3466ebd121615a1b721c
+    m_Address: Assets/03.Assets/Sprite/Character/Dude/stomp.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 13c5aa357d00245ca8e1dc1079b9be4f
+    m_Address: Assets/03.Assets/Sprite/Character/Sunchips/sunchips_attack3_animation.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 13f4a9c288ea14077a5244e4be7f6bfd
+    m_Address: Assets/03.Assets/Sprite/Character/Dude/punch2_2.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 150b84749e54b4bdd9673fc7183f9ad8
+    m_Address: Assets/03.Assets/Sprite/Props/deco_8.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 166fcd051d7a74d6db6ef08d195b0327
+    m_Address: Assets/03.Assets/Sprite/Props/object_13.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 1748a0d400b2040b4b252785f659ebf8
+    m_Address: Assets/03.Assets/Sprite/Character/Sunchips/sunchips_hit2.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 1796c0adaa9a84b51b2310e6e25d1716
+    m_Address: Assets/03.Assets/Sprite/Props/floor_deco_6.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 1798253175c554d60ae697e7a6591c67
+    m_Address: Assets/03.Assets/Sprite/Character/Kid/kid_grabhit2_body.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 17a3b0447866c4b3bb40f7beb83c51cf
+    m_Address: Assets/03.Assets/Sprite/VFX/atv_explode.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 1911e798010bd476e8a96a7637b41dd2
+    m_Address: Assets/03.Assets/UI/ETC/HUDIcon.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 193838cdeecd0469dbdfc319c0d51937
+    m_Address: Assets/03.Assets/Sprite/Props/building_20.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 1ce9761bfcbe34f288bebc8a1dcde54e
+    m_Address: Assets/03.Assets/Sprite/Character/Kid/kid_juggle_normal_body.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 1d8bb1350876e4600aa67f4fdde68500
+    m_Address: Assets/03.Assets/Sprite/Props/floor_deco_1.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 1e3f847a56d8d40c486d5e8ad20b093c
+    m_Address: SkillIcon_1
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 1e9b2ccbd692b4ba8aea1de77e3838ea
+    m_Address: Assets/03.Assets/UI/ETC/icon_home.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 1f76c236efb8547eaac8e62ab6563709
+    m_Address: Assets/03.Assets/Sprite/Boulder/blue_medium.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 22aa1c38cdeb04e9fb2b8fd3f63f468f
+    m_Address: Assets/03.Assets/Sprite/VFX/sunchips.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 22cd52f53fcd5415b8e75c7d00a20975
+    m_Address: Assets/03.Assets/Sprite/Character/Sunchips/sunchips_attack2.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 238f6ffb909f54a7ca5805ca775c1031
+    m_Address: Assets/03.Assets/Sprite/Props/building_19.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 23d5a8e0e411741e19e27ac3f550f41c
+    m_Address: Assets/03.Assets/Sprite/Character/Dude/bounce1.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 24a081ee58f1f478b8f2ece1a05aebe6
+    m_Address: Assets/03.Assets/Sprite/VFX/fire1.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 24c0816fd5ef146b58a9f74c7ab284af
+    m_Address: Assets/03.Assets/Sprite/Animal/Flamingo/flamingo_0.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 283a844dcb904442fb9ad137c8c884df
+    m_Address: Assets/03.Assets/Sprite/Props/floor_deco_5.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 28509f817f1ee41e6987a8e32b6d9daf
+    m_Address: Assets/03.Assets/Sprite/Props/deco_6.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 2a583bf77066b4d31b6445372c2a61cd
+    m_Address: Assets/03.Assets/Sprite/Props/building_13.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 2abeb512325ca4220bc26f08cead0e72
+    m_Address: Assets/03.Assets/Sprite/Props/floor_deco_0.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 2b8b0757faad147ff871e30dffba5dbe
+    m_Address: Assets/03.Assets/Sprite/Animal/Flamingo/flamingo_1.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 2bcbb5b3ac6ef45ab88522ed1c0d2213
+    m_Address: Assets/03.Assets/Sprite/Character/Kid/kid_idle_body.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 2ce521675a8994a68b7b4bfd3bbff80d
+    m_Address: Assets/03.Assets/Sprite/Props/building_3.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 2df8c737491977e41b790af2e105873f
+    m_Address: Assets/03.Assets/UI/BossProfile/RonaldProfile.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 2e92b0861c5064f85b30ca116d367055
+    m_Address: Assets/03.Assets/UI/ETC/ui_go.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 2f08588cdf0dc4338aa305a7716bcb52
+    m_Address: Assets/03.Assets/Sprite/Entities/atv_body.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 2f34952e2085b42b5a40ea58505bd54b
+    m_Address: Assets/03.Assets/Sprite/Character/Bully/bully_bounce2_crazy.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 3081941cb07c141f8ae19743997fbdc1
+    m_Address: Assets/03.Assets/Sprite/Character/Sunchips/sunchips_juggle_crazy.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 32da0b837300c413cb092a5c7b511dd4
+    m_Address: SkillIcon_7
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 32dd752f88fa54bcf8da1dc3b97785e4
+    m_Address: Assets/03.Assets/Sprite/Props/floor_8.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 335806aae4bca42ce926e6a1fff18699
+    m_Address: Assets/03.Assets/Sprite/Character/Bully/bully_hit2.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 34612d50a6f21452fae367f1deb363b3
+    m_Address: Assets/03.Assets/Sprite/Character/Kid/kid_hit2_hand.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 374b65a4c924343058a4def1ae717e2a
+    m_Address: Assets/03.Assets/Sprite/Props/building_14.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 37e77048e6e2447158844831655c1a8b
+    m_Address: Assets/03.Assets/Sprite/Props/object_11.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 3837dea621b0342a0882c057cbbf4cff
+    m_Address: Assets/03.Assets/Sprite/Props/fence_5.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 3b83b1cd245c14acbbb1bab7a842ecab
+    m_Address: Assets/03.Assets/Sprite/Props/fence_0.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 3bebdf48d7cfb41eba993b7143dcf32b
+    m_Address: Assets/03.Assets/Sprite/Character/Kid/kid_walk_body.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 3c40154bae22d4cf5a74c98d926821e2
+    m_Address: Assets/03.Assets/Sprite/Props/tree_3.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 3cd364fa5803341eabc42a69caae7790
+    m_Address: Assets/03.Assets/Sprite/Character/Dude/jugglehit2.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 3d8725bafec124b5f801e73eb0499710
+    m_Address: Assets/03.Assets/Sprite/Props/building_12.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 3d90c14670c644642b4d2bd2b7e8bb8f
+    m_Address: Assets/03.Assets/Sprite/Character/Kid/kid_bounce2_normal_body.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 3ed6eeb6c5d8d43e9b75ab1222ae9e4e
+    m_Address: Assets/03.Assets/Sprite/Character/Bully/bully_lie.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 3f2378f36e4254786bc4d50ee556ce30
+    m_Address: Assets/03.Assets/Sprite/Character/Kid/kid_juggle_normal_hand.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 4058322ae1a8142bdb21f0b878a6781a
+    m_Address: Assets/03.Assets/Sprite/Props/floor_deco_2.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 424696ed6089d4ed19631422b4c26b77
+    m_Address: Assets/03.Assets/Sprite/Character/Dude/stand.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 44b573d7e6bc347f181f35db5a8aa43b
+    m_Address: Assets/03.Assets/Sprite/Props/floor_0.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 456ad64e4b9f54f2a9ef704d211a2f37
+    m_Address: Assets/03.Assets/Sprite/Props/fence_1.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 4682d2a0af6834f10804477b965412fe
+    m_Address: Assets/03.Assets/Sprite/Character/Sunchips/sunchips_bounce1_crazy.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 46e1820db0398484d8d702c4b9b508cd
+    m_Address: Assets/03.Assets/Sprite/Character/Kid/kid_hit1_body.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 4a075a3aa49e744969bbe4c700ad0541
+    m_Address: Assets/03.Assets/Sprite/Props/floor_deco_4.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 4de5fb7871b6c487c96e2758b10bff87
+    m_Address: Assets/03.Assets/Sprite/Character/Kid/ninja_jump.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 4dfa7e54f23794c40826c4bf1d345d80
+    m_Address: Assets/03.Assets/Sprite/Character/Bully/bully_attack3.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 4e05841e130604f9683685513c23c909
+    m_Address: Assets/03.Assets/Sprite/VFX/burnsmoke.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 4f5d86c5657f74f48a2bf38130fa9804
+    m_Address: Assets/03.Assets/Sprite/Props/object_3.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 52ccca4a1217f42d88a429fc4db99eea
+    m_Address: Assets/03.Assets/Sprite/VFX/blood2.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 5358abfbc4754424ea799013c965435b
+    m_Address: Assets/03.Assets/Sprite/Props/object_5.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 53abca2736ab14b0ebc59addc4f84b03
+    m_Address: Assets/03.Assets/Sprite/VFX/blood1.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 53c5233ab35564775870467cf740c0f2
+    m_Address: Assets/03.Assets/Sprite/Character/Sunchips/sunchips_juggle_fire.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 555798edd5b9646fa84b06b77fe2c96e
+    m_Address: Assets/03.Assets/Sprite/Character/Kid/kid_hit3_body.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 56493a1502b5340519547e7388f36fa7
+    m_Address: Assets/03.Assets/Sprite/Character/Dude/punch1_2.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 56bd3e418494547e5b2ce89647f336b2
+    m_Address: Assets/03.Assets/Sprite/Props/building_21.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 5760cc83f65ee41f69d159ffbbc4e876
+    m_Address: Assets/03.Assets/Sprite/Character/Sunchips/sunchips_attack4_animation.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 59d2dd4b2818a462c9eba566dea7cc58
+    m_Address: Assets/03.Assets/Sprite/Props/object_4.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 5a7a278415f064bf6b2bdf58ef6a0635
+    m_Address: Assets/03.Assets/Sprite/Character/Kid/james_shoot.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 5b39e567871464b6ab35e1788662d34a
+    m_Address: Assets/03.Assets/UI/ETC/CardBase.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 5c65ca484428d46738d7cf59b2b2d519
+    m_Address: Assets/03.Assets/Sprite/Props/object_14.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 5cba974b567a943bf926344368a7956c
+    m_Address: Assets/03.Assets/Sprite/Props/floor_9.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 5ee60797b889d49b08b2325a04a006ca
+    m_Address: Assets/03.Assets/Sprite/Character/Bully/bully_juggle_normal.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 5f4cf977edb2e4666b67bd4151b94acb
+    m_Address: Assets/03.Assets/Sprite/Character/Sunchips/sunchips_hit1.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 5f8f4430271f04997826992a9ccdcc70
+    m_Address: Assets/03.Assets/Sprite/Character/Dude/uppercut.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 615ee3ccceb903e48ab2c5758afcf81a
+    m_Address: Assets/03.Assets/UI/ETC/Banner_nineslice.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 6219640001d114a1d86cbc535b17c0a5
+    m_Address: Assets/03.Assets/Sprite/Character/Kid/kid_clothes.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 62a0684eed1f84e43a79046b32cd223b
+    m_Address: Assets/03.Assets/Sprite/Props/floor_deco_3.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 651cb286341c645feb32207af9ed9e18
+    m_Address: Assets/03.Assets/Sprite/Props/object_2.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 6693b3758a4a042c7aa59e9c0b2c850b
+    m_Address: Assets/03.Assets/Sprite/Props/building_8.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 66bf3459aafed473e860331c29af30c5
+    m_Address: Assets/03.Assets/Sprite/Props/floor_7.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 66eaa07468e8f4b04b072be723f7e1d0
+    m_Address: Assets/03.Assets/Sprite/Character/Kid/kid_thrown1_fire.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 6840ed44c7e6743f4a72f8ee94251ebb
+    m_Address: Assets/03.Assets/Sprite/Props/building_15.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 6b16e53a3905e49b58551a6f400432ae
+    m_Address: SkillIcon_3
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 6b8af504e82b244e7a028e4bf964ae3e
+    m_Address: Assets/03.Assets/Sprite/Character/Kid/kid_bounce1_normal_body.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 6c77b5005d440476ea5bb2e3d0c5cea5
+    m_Address: Assets/03.Assets/Sprite/Props/car_tire.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 6ca87c95294c24795890424d730af3c5
+    m_Address: Assets/03.Assets/Sprite/Props/car_body.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 6d853978134e549b4b813ee533f67929
+    m_Address: Assets/03.Assets/Sprite/VFX/impact2.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 6e0cb63023a864f8a9896751a7ad3f25
+    m_Address: Assets/03.Assets/Sprite/Character/Kid/kid_hat.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 6ee18f81d809b48a88ee8639e81d281f
+    m_Address: Assets/03.Assets/Sprite/Character/Dude/crazy.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 6fa07e1533dc34eea93a89f7fef4e756
+    m_Address: Assets/03.Assets/Sprite/Props/goal_net_1.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 701cf477005164186919ade949956306
+    m_Address: Assets/03.Assets/Sprite/Props/object_9.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 7097e5123b6984d0085eda5202042351
+    m_Address: Assets/03.Assets/Sprite/Animal/Racoon/racoon_1.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 70bba005aa1ab4abca275c7db28e6453
+    m_Address: Assets/03.Assets/Sprite/Character/Bully/bully_standup.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 70cdd390532d949a4b3b2644581c122f
+    m_Address: Assets/03.Assets/Sprite/Character/Dude/powerup.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 713fe895b95b34d3db78dfe28e46e61d
+    m_Address: Assets/03.Assets/Sprite/Character/Dude/frenzied.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 72c007105a884423ab416ec42af3f1fd
+    m_Address: Assets/03.Assets/Sprite/Character/Dude/knuckles.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 741178f1919e149b0a859847619db240
+    m_Address: Assets/03.Assets/Sprite/Character/Bully/bully_hit1.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 744c4842656bc41829973451e5690483
+    m_Address: Assets/03.Assets/Sprite/Character/Bully/bully_bounce1_normal.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 7583242884d3540f5b1771ac043ffa7e
+    m_Address: Assets/03.Assets/Sprite/Character/Bully/bully_bounce2_fire.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 75a47becff56645bb9af91fb787bc151
+    m_Address: Assets/03.Assets/Sprite/Props/deco_2.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 75dda547e1d3d4f9b9bd667fc0a88360
+    m_Address: SkillIcon_9
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 7644950bcc6534835996f0b4f9f039e8
+    m_Address: Assets/03.Assets/Sprite/Character/Sunchips/sunchips_attack1.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 774e5ded77d9f488295a6a3bf9df0f0e
+    m_Address: Assets/03.Assets/Sprite/Props/object_1.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 776a0c75f502541fc92a32a10520b25d
+    m_Address: Assets/03.Assets/Sprite/Character/Dude/bounce2.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 78532ce11cf634a1191d9d0a987e1409
+    m_Address: Assets/03.Assets/Sprite/Character/Dude/grab_walk.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 793962ad790c3476a9ba5d349bb4b748
+    m_Address: Assets/03.Assets/Sprite/Animal/Racoon/racoon_2.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 7a4a4724c0c17471fbcc87a27caebcf6
+    m_Address: Assets/03.Assets/Sprite/Props/floor_6.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 7b0a41d854ce947b28e6c95b4ab0535f
+    m_Address: Assets/03.Assets/Sprite/Props/object_10.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 7d895ebf5c0e142cc8a980efc7a1fed1
+    m_Address: Assets/03.Assets/UI/ETC/CardParts.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 8174a2c412048415fbc195a8ce0d0f9c
+    m_Address: Assets/03.Assets/Sprite/Character/Dude/throw2.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 82b09f675568b44b4849cdaa97d56a72
+    m_Address: Assets/03.Assets/Sprite/Character/Sunchips/sunchips_bounce1_fire.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 8463f0e020071473eafccaea4d2d3d33
+    m_Address: Assets/03.Assets/Sprite/Character/Dude/punch1_3.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 8558a1d25aa404e0e830b71e50af6be7
+    m_Address: Assets/03.Assets/Sprite/Props/building_16.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 86b031491c8144572bb22a2a2ab79ec5
+    m_Address: Assets/03.Assets/Sprite/Props/deco_9.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 875de751e46fa4ab693be08c7a0ce8fb
+    m_Address: Assets/03.Assets/Sprite/Props/building_11.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 88207c79b5e304caf9c4840476557df2
+    m_Address: Assets/03.Assets/UI/ETC/Banner.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 88a42144398524c3ea60e0b9c78dd076
+    m_Address: Assets/03.Assets/Sprite/Props/deco_4.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 893ec2321128c4e8aace0506424258ed
+    m_Address: SkillIcon_10
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 8956f16c971522a40a41f3cf78e56841
+    m_Address: Assets/03.Assets/UI/BossProfile/ATV_3_Profile.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 89f19175eb4ee4b29af083389642ad0b
+    m_Address: Assets/03.Assets/Sprite/Props/building_4.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 8a0eb1b7e5fc343f9ab08c86efd497ed
+    m_Address: Assets/03.Assets/Sprite/VFX/dust1.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 8ac38dd91936640e8b3dd48bebeda959
+    m_Address: Assets/03.Assets/Sprite/Character/Sunchips/sunchips_move.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 8ad6b9bf755414d7fb7b50b6613d42b7
+    m_Address: Assets/03.Assets/Sprite/Props/object_0.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 8af92110fcbc02f4e92a1fc54757718b
+    m_Address: Assets/03.Assets/UI/BossProfile/ATV_DUO_Profile.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 8b2391f767a2f41daa4c9fabc5475614
+    m_Address: Assets/03.Assets/Sprite/Props/building_18.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 8bae8b3683ba5c54ea0db5e086ed426b
+    m_Address: Assets/03.Assets/UI/BossProfile/JamesProfile.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 8c098d7a58da74f7bb780abdf9fb8e94
+    m_Address: Assets/03.Assets/Sprite/Character/Kid/kid_grabhit1_body.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 8d3d97e7edade4319a3ec5f2d4fd0cfd
+    m_Address: Assets/03.Assets/Sprite/Props/tree_1.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 8d8304e47391f46d7b2f32107d1bc564
+    m_Address: Assets/03.Assets/Sprite/Props/floor_5.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 8e711c3147aee4a238e34aab1c4a42e5
+    m_Address: Assets/03.Assets/Sprite/Props/deco_7.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 8f12160d677e6465f92d783292db4690
+    m_Address: Assets/03.Assets/Sprite/Character/Dude/die.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 900092baf8762f744be3b3de41b8c498
+    m_Address: Assets/03.Assets/UI/BossProfile/BullyProfile.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 906bbf31189474f2190ca14616890cad
+    m_Address: Assets/03.Assets/Sprite/Props/fence_2.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 90ccc271ccdf1479b93e5498c49014b7
+    m_Address: Assets/03.Assets/Sprite/Props/bush_1.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 9227d37d85cd3445f9fb37b782c45ad7
+    m_Address: Assets/03.Assets/Sprite/VFX/dust2.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 92e974d1d152d48f98953bd9f2bc9c88
+    m_Address: Assets/03.Assets/Sprite/Props/background2_3.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 9355b8f8ddf3544bbad61c3133f5bc91
+    m_Address: Assets/03.Assets/Sprite/Character/Sunchips/sunchips_standup.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 9378cadfee7804ec39eed78b72b48cc7
+    m_Address: Assets/03.Assets/Sprite/Character/Bully/bully_idle.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 9411d704595ec44288ac0f1fa03791cd
+    m_Address: Assets/03.Assets/Sprite/Character/Kid/kid_hit4_body.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 956b1897785374400a2b6eac048f4ecd
+    m_Address: Assets/03.Assets/Sprite/Character/Bully/bully_juggle_crazy.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 961654c4454f84c52afbaf0ed6741c30
+    m_Address: Assets/03.Assets/Sprite/Props/deco_10.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 970d0055cb2b04a59b5887eb722794c0
+    m_Address: Assets/03.Assets/Sprite/Character/Dude/throw.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 9749218807adb49f1aee7bb729e9d2fd
+    m_Address: Assets/03.Assets/Sprite/Props/goal_net_3.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 9843b04d5c0414a6a862a80f241f41ba
+    m_Address: Assets/03.Assets/Sprite/Props/building_6.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 9baf5cf4007954646a075deca2383017
+    m_Address: Assets/03.Assets/Sprite/VFX/heal.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 9c8f19705ab3b42a58f5a28089103399
+    m_Address: Assets/03.Assets/Sprite/Character/Bully/bully_move.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 9fa0236091d924997aa95a005a4b9e94
+    m_Address: Assets/03.Assets/Sprite/Props/floor_2.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a0531317dbfad4754908594469b00df5
+    m_Address: Assets/03.Assets/Sprite/Props/floor_4.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a0e2542a02ac645408bf35fe7ee0f4da
+    m_Address: Assets/03.Assets/Sprite/Props/deco_1.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a1feb48355c714f2fbf51550b90ad7c1
+    m_Address: Assets/03.Assets/Sprite/Props/bush_0.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a2a828e752aa1492da42bbbdce502a6a
+    m_Address: Assets/03.Assets/Sprite/Character/Kid/kid_atv.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a2c04d7868ede42c2b203a90fb4794a6
+    m_Address: Assets/03.Assets/Sprite/Character/Dude/punch1_1.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a3f6e9ed6ef9246fb814a64382836638
+    m_Address: Assets/03.Assets/Sprite/Character/Kid/kid_hit2_body.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a4087af89c8354edfb7c1a32e223c4be
+    m_Address: Assets/03.Assets/Sprite/Character/Dude/jugglehit3.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a8e695ddc5c52463e9e0b99c1234c3f5
+    m_Address: Assets/03.Assets/Sprite/Character/Bully/bully_bounce1_crazy.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: abe7481780017445c8765dff81c3087a
+    m_Address: Assets/03.Assets/Sprite/Character/Kid/ninja_kick.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ac09ba49195924102ba29cdf8c26061d
+    m_Address: Assets/03.Assets/UI/ETC/Icon_Dad.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ae5c6d3ce2d414823ae0824aa4bd973e
+    m_Address: Assets/03.Assets/Sprite/Character/Bully/bully_attack4.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ae64c57a44eeb4e9eadb6f422abdd189
+    m_Address: Assets/03.Assets/Sprite/Character/Dude/grab_stand.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ae679527b913b49eeb850d09c968ee7f
+    m_Address: Assets/03.Assets/Sprite/VFX/shockwave_attack_blast.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ae69cc595278a463db29117e8511105c
+    m_Address: Assets/03.Assets/Sprite/Character/Dude/dashpunch.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: aeca90047b99543e3b787dffd2afef8c
+    m_Address: Assets/03.Assets/Sprite/Character/Kid/kid_bounce2_fire.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: afd5560852c1548838000bb3f0137a61
+    m_Address: Assets/03.Assets/Sprite/VFX/ragesmoke.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b0f59f295a59b4330a03c8a3ada737fe
+    m_Address: Assets/03.Assets/Sprite/VFX/explosion1.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b2118365732ea44859ea2d580c7c67e3
+    m_Address: Assets/03.Assets/Sprite/Props/fence_3.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b26142da353e84683af0b39f6d5c3928
+    m_Address: SkillIcon_8
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b46d5e6ef6ad846f9a0d163be0996a17
+    m_Address: Assets/03.Assets/Sprite/VFX/impact1.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b480ccd7a8a844e31a8fe9921b48c68c
+    m_Address: Assets/03.Assets/Sprite/Character/Dude/hitground1.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b4d52592a882842cd962fdaba4b0cc15
+    m_Address: Assets/03.Assets/Sprite/Props/tree_4.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b6476c02f79f02a4998fd46e7de2a0e6
+    m_Address: Assets/03.Assets/UI/BossProfile/SunchipProfile.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b72a9f39b7e9d42b8a2c4d352c9b4b0c
+    m_Address: Assets/03.Assets/Sprite/Props/object_12.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b89fac712db1342acaed8efb3960f359
+    m_Address: Assets/03.Assets/Sprite/Props/deco_3.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b8bc5f7285a704f3d8455066db6841df
+    m_Address: Assets/03.Assets/Sprite/Character/Kid/kid_thrown2_fire.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ba83bbde1399a41708df04d713d241f9
+    m_Address: Assets/03.Assets/Sprite/Props/floor_1.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: bb9da38dba5334cf085d8d92cd6593ef
+    m_Address: Assets/03.Assets/Sprite/Character/Dude/knife1.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: bca20222809d44719bdb7a891f503cf9
+    m_Address: Assets/03.Assets/Sprite/Props/background2_2.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: bcc5a5994de014dc5a5548f91026d6ce
+    m_Address: Assets/03.Assets/Sprite/Entities/atv_wheel.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: bcdf554208da747d0bdaa72f1aeaa245
+    m_Address: Assets/03.Assets/Sprite/VFX/shockwave.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: bd09e1a9ee92e4148879cdf0592ab52c
+    m_Address: Assets/03.Assets/Sprite/Character/Dude/flinch1.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: bd309fa9aa3f0480b99d580c4faae886
+    m_Address: Assets/03.Assets/Sprite/Character/Bully/bully_bounce2_normal.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: be2fb4fc8c50643ea8ee97c4ee617553
+    m_Address: Assets/03.Assets/Sprite/Character/Kid/ninja_spin.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: bef541dc8b62648988df6bbf8d4f0aff
+    m_Address: Assets/03.Assets/Sprite/Character/Kid/kid_bounce1_fire.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c05a85f2a938340cb89c5db2901cc7cf
+    m_Address: Assets/03.Assets/Sprite/Entities/spit.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c24ad796783f24fbb86e48ab0c548af4
+    m_Address: SkillIcon_0
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c33f162d7029a48b3a1497323b5ee10c
+    m_Address: Assets/03.Assets/Sprite/Character/Kid/kid_thrown1_crazy.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c34f5bb2ab4bb4939866cbfe20b7e8dc
+    m_Address: Assets/03.Assets/Sprite/Props/object_7.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c370ac26eefc2456bb1de7cb6c4d7732
+    m_Address: Assets/03.Assets/Sprite/Props/object_15.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c4bfe3315b7f344bcb89295bdafceb44
+    m_Address: Assets/03.Assets/UI/ETC/icon_play.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c53f7485c5e384ecd9e56a67d7829dab
+    m_Address: Assets/03.Assets/Sprite/Character/Dude/jugglehit1.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c598f01413177400481ca8364e8a554a
+    m_Address: Assets/03.Assets/Sprite/Props/background2_0.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c6a5cc97591fb4d978ad354856e404f4
+    m_Address: Assets/03.Assets/Sprite/Props/deco_5.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c8b4bc61d092243649eb8abb4a294614
+    m_Address: Assets/03.Assets/Sprite/Character/Dude/grabhit1.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c8f7f379f94a64df4b5666a715d76283
+    m_Address: Assets/03.Assets/Sprite/Character/Kid/kid_thrown2_crazy.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c9006e0735058a24887e163b9712c113
+    m_Address: Assets/03.Assets/UI/BossProfile/NinjaProfile.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c94a8271c0f1548b6bea01a5c968b77a
+    m_Address: Assets/03.Assets/Sprite/Character/Sunchips/sunchips_bounce1_normal.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c9f1e0c39d3fc4b579aba961f62a3774
+    m_Address: Assets/03.Assets/Sprite/Props/goal_net_0.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ca624f471253b436881503f8c0d9b799
+    m_Address: Assets/03.Assets/Sprite/Props/background2_1.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: cbcfd2db4b21e4ccfb73bd9a58656eb9
+    m_Address: Assets/03.Assets/Sprite/Animal/Racoon/racoon_0.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: cbfaf75b6409e47078b0b646a0c4c312
+    m_Address: Assets/03.Assets/Sprite/Props/floor_deco_8.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: cc009f97b5ec74debae0835c656f5269
+    m_Address: Assets/03.Assets/Animation
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: cc57dd7a3e8e540fd9d09988d1e23c91
+    m_Address: Assets/03.Assets/Sprite/Props/bush_2.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ccff1d59603e74e5eae5e720c17c063e
+    m_Address: Assets/03.Assets/Sprite/VFX/attack_blast.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ce695984b17714f7f8d5844e31d34d15
+    m_Address: Assets/03.Assets/UI/ETC/Frame0.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: cf9721bb0e6924f24bbb1a94bed4c738
+    m_Address: Assets/03.Assets/Sprite/Character/Kid/kid_bounce2_crazy.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d2a6052a9548641998048b646d994583
+    m_Address: Assets/03.Assets/Sprite/Props/building_7.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d2adcc92372344385b58104a986bb345
+    m_Address: Assets/03.Assets/Sprite/Character/Sunchips/sunchips_lie.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d40e478b4966e471aafc780299ac1100
+    m_Address: Assets/03.Assets/Sprite/Character/Dude/walk.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d56527ba43f1b487ebdf0c4b553fcd04
+    m_Address: Assets/03.Assets/Sprite/Props/building_1.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d6492c3b72da541cdbf0e3883afd5c6b
+    m_Address: Assets/03.Assets/Sprite/VFX/rageimpact.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d6defbbc1d1624821906c601fd8899f2
+    m_Address: Assets/03.Assets/Sprite/Character/Bully/bully_attack2.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d81ad58fac0e54c4c95e59e1650f670d
+    m_Address: Assets/03.Assets/Sprite/Character/Dude/punch2_3.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d8fbdae9cfaa346fdb41558ed508b842
+    m_Address: Assets/03.Assets/Sprite/Character/Bully/bully_hit3.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d9dbc104e40e84434a230346e73fde6c
+    m_Address: Assets/03.Assets/Sprite/Props/object_8.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: dbb8de24788dd4ec59b36c154b277812
+    m_Address: Assets/03.Assets/Sprite/Character/Kid/kid_riding_body.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: df79985bf89e344d3aac2c3f093cf50f
+    m_Address: Assets/03.Assets/Sprite/Character/Kid/kid_grabbed_body.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e098d75d19cbc4931a755f955d937335
+    m_Address: SkillIcon_6
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e157284f9fa7547c78e675f55a1397f6
+    m_Address: Assets/03.Assets/Sprite/Entities/dart.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e322ef463dd844f3ca75baaf9ff1c107
+    m_Address: Assets/03.Assets/Sprite/Props/building_5.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e394fa412eb964f899ee656d8bb57116
+    m_Address: Assets/03.Assets/Sprite/VFX/impact3.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e3a9d2c74205b4c2c877f9e12c7e5be5
+    m_Address: Assets/03.Assets/Sprite/Character/Kid/kid_lie_body.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e522dd16b75a94c238f3f8fbc6560b84
+    m_Address: Assets/03.Assets/Sprite/Character/Sunchips/sunchips_bounce2_fire.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e57903a6b47b449508df6353f179a171
+    m_Address: Assets/03.Assets/Sprite/Character/Bully/bully_bounce1_fire.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e737abea2a13742f592c385a22c953fb
+    m_Address: Assets/03.Assets/Sprite/Character/Bully/bully_juggle_fire.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e73f01c1ab27f412ab04808e0be38c1f
+    m_Address: Assets/03.Assets/Sprite/Character/Kid/kid_butt_body.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e7984e08bf899482a8a1abcd672c672e
+    m_Address: SkillIcon_4
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e9485163aca1d40e59e05b8f7da576e6
+    m_Address: Assets/03.Assets/Sprite/Props/building_0.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ea25096640b804211b79af855f4ade8d
+    m_Address: SkillIcon_2
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ec5f444833e4f4b56896abe165f3ea8e
+    m_Address: Assets/03.Assets/Sprite/Character/Dude/punch2_1.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ed747eb79c54443c9892776e8e521578
+    m_Address: Assets/03.Assets/Sprite/Character/Dude/knife2.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ee6b5b957939c420ba3421ce0f471cf3
+    m_Address: Assets/03.Assets/Sprite/Props/floor_3.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ef0f5b3fbc59c4ead8509afd7dec0c7c
+    m_Address: SkillIcon_5
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ef33683e4390c42a7a19fec0c2b44d3f
+    m_Address: Assets/03.Assets/Sprite/Props/building_10.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: efa25f78129b849e1ae5e642964e299c
+    m_Address: Assets/03.Assets/Sprite/Boulder/red_medium.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f08f4126f47ae48f0ba3a2237f09cadc
+    m_Address: Assets/03.Assets/Sprite/Props/healpack.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f1d8539e01cc44109a9edac2c5eb1fa0
+    m_Address: Assets/03.Assets/Sprite/Character/Sunchips/sunchips_juggle_normal.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f1e689c1a78d44b2494d54c492e0341c
+    m_Address: Assets/03.Assets/Sprite/Character/Kid/kid_riding_hand.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f1fb18383b40a4093925e5369b8119ff
+    m_Address: Assets/03.Assets/Sprite/Character/Kid/kid_thrown1_normal_body.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f4187143262f14e568f66b0da16cc652
+    m_Address: Assets/03.Assets/Sprite/Props/tree_0.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f49f4d27ad14343e79fa19cebe87c389
+    m_Address: Assets/03.Assets/Sprite/Character/Sunchips/sunchips_bounce2_crazy.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f5d423fe25bfb4eb996e6114e0500636
+    m_Address: Assets/03.Assets/Sprite/Props/tree_2.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f5d8923e1ff3a488fa6ea92c1413a9d1
+    m_Address: Assets/03.Assets/UI/ETC/1x1.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f6499947fc01c45ba9513b82b90b592b
+    m_Address: Assets/03.Assets/Sprite/VFX/ninja.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f8f22f1d252a340089136039c36dc562
+    m_Address: Assets/03.Assets/Sprite/Character/Sunchips/sunchips_bounce2_normal.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: fb1501af9523d42d4b026a54b99589e2
+    m_Address: Assets/03.Assets/Sprite/Character/Dude/dashslam.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: fc8a2ea3bca9b4702aae078c0306d125
+    m_Address: Assets/03.Assets/Sprite/Props/floor_deco_7.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: fc9c1709aacf549a7bc89324acec4739
+    m_Address: Assets/03.Assets/Sprite/Character/Kid/kid_juggle_fire.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: fe24a17be5e8e4ec197bfff9ffcb720b
+    m_Address: Assets/03.Assets/Sprite/Props/building_17.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ff57bfb4a2ded43f4b3273865f9b49c4
+    m_Address: Assets/03.Assets/Sprite/Props/goal_net_2.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: cfd052ceeb2354823b4fa30d195a2e8a, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: 11b28191c7de9a0498d7494d5e5521e1, type: 2}
+    - {fileID: 11400000, guid: ddfdf08853884314b866b803110bf0ef, type: 2}

@@ -1,0 +1,48 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: FontAssets
+  m_EditorClassIdentifier: 
+  m_GroupName: FontAssets
+  m_GUID: dac98e68a2b52224fb2c6929a2c3e2ba
+  m_SerializeEntries:
+  - m_GUID: 50069f0ca29de4d17b6d7433f8117170
+    m_Address: Assets/03.Assets/Font/SSFlowerRoadRegular SDF Material Outline.mat
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 5fd1aee8d79a043a7ba2899fd5b76cea
+    m_Address: Assets/03.Assets/Font/SSFlowerRoadRegular SDF Material Credit.mat
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 82a1239c050fb40debe3a53ccf2c30f2
+    m_Address: Assets/03.Assets/Font/SSFlowerRoadRegular.ttf
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b8be05a3a93294086954f27c1e6f2e58
+    m_Address: Assets/03.Assets/Font/SSFlowerRoadRegular SDF Material Thin Outline.mat
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: df054680ac047487f906024a3f85b64b
+    m_Address: Assets/03.Assets/Font/SSFlowerRoadRegular SDF.asset
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: cfd052ceeb2354823b4fa30d195a2e8a, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: 49d69bb7045859a498f15a3a570a3e68, type: 2}
+    - {fileID: 11400000, guid: c53f8061197c4834e9738f8016d6d391, type: 2}
