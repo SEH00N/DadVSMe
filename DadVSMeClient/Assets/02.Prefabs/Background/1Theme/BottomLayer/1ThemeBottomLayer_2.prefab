@@ -286,6 +286,18 @@ MonoBehaviour:
   bossWaveBlockObject: {fileID: 2744068803149100508}
   bossSpawnPoint: {fileID: 1779985346301296455}
   conditionDistance: 22
+  isFinalBoss: 0
+  bossSpawnInfo:
+    spawnPoint: {fileID: 1779985346301296455}
+    conditionDistance: 22
+    spawnTable:
+    - prefab:
+        key: James
+      enemyData:
+        key: JamesEnemyData
+      statData:
+        key: JamesStatData_Wave1
+      offset: {x: 0, y: 0}
   bossPrefab:
     key: James
   enemyData:

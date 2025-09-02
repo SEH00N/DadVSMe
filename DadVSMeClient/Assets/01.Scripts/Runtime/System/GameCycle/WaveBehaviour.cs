@@ -1,12 +1,33 @@
 using System;
+using System.Collections.Generic;
 using System.Threading;
 using Cysharp.Threading.Tasks;
+using DadVSMe.Enemies;
+using DadVSMe.Entities;
+using H00N.Resources.Addressables;
 using UnityEngine;
 
 namespace DadVSMe.GameCycles
 {
     public abstract class WaveBehaviour : MonoBehaviour
     {
+        [Serializable]
+        public struct SpawnInfo
+        {
+            [Serializable]
+            public struct SpawnTableData
+            {
+                public AddressableAsset<Unit> prefab;
+                public AddressableAsset<EnemyDataBase> enemyData;
+                public AddressableAsset<UnitStatData> statData;
+                public Vector2 offset;
+            }
+
+            public Transform spawnPoint;
+            public float conditionDistance;
+            public List<SpawnTableData> spawnTable;
+        }
+
         private const float UDPATE_INTERVAL = 0.5f;
 
         private CancellationTokenSource cancellationTokenSource = new CancellationTokenSource();

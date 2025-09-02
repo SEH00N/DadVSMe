@@ -52,11 +52,13 @@ namespace DadVSMe.GameCycles
         public bool IsPaused { get; private set; } = false;
         public bool IsBossClearDirecting { get; private set; } = false;
 
+        #if UNITY_EDITOR
         // Debug
         private void Start()
         {
             InitializeAsync().Forget();
         }
+        #endif
 
         public async UniTask InitializeAsync()
         {
@@ -66,9 +68,6 @@ namespace DadVSMe.GameCycles
 
             await mainBGMLibrary.InitializeAsync();
             AudioManager.Instance.PlayBGM(mainBGMLibrary, loadCache: false);
-
-            // Debug
-            return;
 
             await PlayGameStartDirecting();
         }

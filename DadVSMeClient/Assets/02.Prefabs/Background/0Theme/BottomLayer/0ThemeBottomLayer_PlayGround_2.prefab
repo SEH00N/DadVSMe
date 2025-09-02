@@ -1791,6 +1791,17 @@ MonoBehaviour:
   bossSpawnPoint: {fileID: 4153984398937616287}
   conditionDistance: 22
   isFinalBoss: 0
+  bossSpawnInfo:
+    spawnPoint: {fileID: 4153984398937616287}
+    conditionDistance: 22
+    spawnTable:
+    - prefab:
+        key: Bully
+      enemyData:
+        key: BullyEnemyData
+      statData:
+        key: BullyStatData_Wave1
+      offset: {x: 0, y: 0}
   bossPrefab:
     key: Bully
   enemyData:

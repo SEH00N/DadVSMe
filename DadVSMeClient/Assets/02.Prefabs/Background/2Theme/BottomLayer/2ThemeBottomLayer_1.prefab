@@ -1251,14 +1251,14 @@ MonoBehaviour:
     - prefab:
         key: Ninja
       enemyData:
-        key: NinjaEnemyData
+        key: VehicleNinjaEnemy
       statData:
         key: NinjaStatData_Wave2
       offset: {x: -1.5, y: 1.75}
     - prefab:
         key: Ninja
       enemyData:
-        key: NinjaEnemyData
+        key: VehicleNinjaEnemy
       statData:
         key: NinjaStatData_Wave2
       offset: {x: 1.5, y: -1.75}

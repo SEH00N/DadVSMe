@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using Cysharp.Threading.Tasks;
 using DadVSMe.Enemies;
 using DadVSMe.Entities;
@@ -26,14 +27,8 @@ namespace DadVSMe.GameCycles
 
         [Header("Options")]
         [SerializeField] GameObject bossWaveBlockObject = null;
-        [SerializeField] Transform bossSpawnPoint = null;
-        [SerializeField] float conditionDistance = 10f;
         [SerializeField] bool isFinalBoss = false;
-
-        [Header("Spawn Info")]
-        [SerializeField] AddressableAsset<Unit> bossPrefab = null;
-        [SerializeField] AddressableAsset<EnemyDataBase> enemyData = null;
-        [SerializeField] AddressableAsset<UnitStatData> statData = null;
+        [SerializeField] SpawnInfo bossSpawnInfo;
 
         [Header("Directing")]
         [SerializeField] AddressableAsset<BGMAudioLibrary> bgmLibrary = null;
@@ -44,13 +39,19 @@ namespace DadVSMe.GameCycles
         [SerializeField] AddressableAsset<BossProductionUI> productionPrefab = null;
         [SerializeField] Sprite bossProfileVisual = null;
 
-        private Unit bossUnit = null;
+        private List<Unit> bossUnits = null;
 
         private void Awake()
         {
-            bossPrefab.InitializeAsync().Forget();
-            enemyData.InitializeAsync().Forget();
-            statData.InitializeAsync().Forget();
+            bossUnits ??= new List<Unit>();
+            bossUnits.Clear();
+
+            bossSpawnInfo.spawnTable.ForEach(spawnTable => {
+                spawnTable.prefab.InitializeAsync().Forget();
+                spawnTable.enemyData.InitializeAsync().Forget();
+                spawnTable.statData.InitializeAsync().Forget();
+            });
+
             bgmLibrary.InitializeAsync().Forget();
             productionPrefab.InitializeAsync().Forget();
         }
@@ -65,10 +66,14 @@ namespace DadVSMe.GameCycles
         {
             base.PostOnDisable();
 
-            if(bossUnit != null && bossUnit.UnitHealth != null)
+            if(bossUnits != null)
             {
-                bossUnit.UnitHealth.OnHPChangedEvent -= HandleBossHPChanged;
-                bossUnit = null;
+                bossUnits.ForEach(unit => {
+                    if(unit.UnitHealth != null)
+                        unit.UnitHealth.OnHPChangedEvent -= HandleBossHPChanged;
+                });
+
+                bossUnits = null;
             }
         }
 
@@ -77,8 +82,8 @@ namespace DadVSMe.GameCycles
             if(GameInstance.GameCycle == null || GameInstance.GameCycle.MainPlayer == null)
                 return false;
 
-            Vector2 direction = GameInstance.GameCycle.MainPlayer.transform.position - bossSpawnPoint.position;
-            if(direction.sqrMagnitude >= conditionDistance * conditionDistance)
+            Vector2 direction = GameInstance.GameCycle.MainPlayer.transform.position - bossSpawnInfo.spawnPoint.position;
+            if(direction.sqrMagnitude >= bossSpawnInfo.conditionDistance * bossSpawnInfo.conditionDistance)
                 return false;
 
             SpawnBoss();
@@ -87,11 +92,16 @@ namespace DadVSMe.GameCycles
 
         private void SpawnBoss()
         {
-            bossUnit = PoolManager.Spawn<Unit>(bossPrefab.Key, GameInstance.GameCycle.transform);
-            bossUnit.transform.position = bossSpawnPoint.position;
-            bossUnit.FSMBrain.SetAIData(statData.Asset);
-            bossUnit.Initialize(enemyData.Asset);
-            bossUnit.UnitHealth.OnHPChangedEvent += HandleBossHPChanged;
+            foreach (SpawnInfo.SpawnTableData spawnTable in bossSpawnInfo.spawnTable)
+            {
+                Unit bossUnit = PoolManager.Spawn<Unit>(spawnTable.prefab.Key, GameInstance.GameCycle.transform);
+                bossUnit.transform.position = bossSpawnInfo.spawnPoint.position + (Vector3)spawnTable.offset;
+                bossUnit.FSMBrain.SetAIData<UnitStatData>(spawnTable.statData);
+                bossUnit.Initialize(spawnTable.enemyData.Asset);
+                bossUnit.UnitHealth.OnHPChangedEvent += HandleBossHPChanged;
+
+                bossUnits.Add(bossUnit);
+            }
 
             PlayBossDirecting();
         }
@@ -105,7 +115,9 @@ namespace DadVSMe.GameCycles
             GameInstance.GameCycle.MainPlayer.SetHold(true);
 
             // Set Boss Hold
-            bossUnit.SetHold(true);
+            bossUnits.ForEach(unit => {
+                unit.SetHold(true);
+            });
 
             // Play Camera Trnasitioning
             TimeManager.SetTimeScale(BOSS_SPAWN_ZOOM_TIME_SCALE, true, 0.5f);
@@ -132,7 +144,9 @@ namespace DadVSMe.GameCycles
             GameInstance.GameCycle.MainPlayer.SetHold(false);
 
             // Release Boss
-            bossUnit.SetHold(false);
+            bossUnits.ForEach(unit => {
+                unit.SetHold(false);
+            });
 
             // Set Boss Wave Block Object Active
             bossWaveBlockObject.SetActive(true);
@@ -140,22 +154,38 @@ namespace DadVSMe.GameCycles
 
         private void HandleBossHPChanged()
         {
-            if(bossUnit.GetComponent<UnitHealth>().CurrentHP > 0)
+            Unit bossUnit = null;
+
+            bool isAllBossDead = true;
+            for(int i = bossUnits.Count - 1; i >= 0; i--)
+            {
+                bossUnit = bossUnits[i];
+                if(bossUnit.UnitHealth.CurrentHP > 0)
+                {
+                    isAllBossDead = false;
+                    continue;
+                }
+
+                bossUnit.UnitHealth.OnHPChangedEvent -= HandleBossHPChanged;
+                bossUnits.RemoveAt(i);
+            }
+
+            if(isAllBossDead == false)
                 return;
 
-            bossUnit.UnitHealth.OnHPChangedEvent -= HandleBossHPChanged;
-            HandleBossDead();
+            bossUnits.Clear();
+            HandleBossDead(bossUnit);
         }
 
-        private void HandleBossDead()
+        private void HandleBossDead(Unit bossUnit)
         {
             if(isFinalBoss)
-                EndingDirecting();
+                EndingDirecting(bossUnit);
             else
-                PlayBossClearDirecting();
+                PlayBossClearDirecting(bossUnit);
         }
 
-        private async void PlayBossClearDirecting()
+        private async void PlayBossClearDirecting(Unit bossUnit)
         {
             GameInstance.GameCycle.Pause();
             InputManager.DisableInput();
@@ -170,8 +200,6 @@ namespace DadVSMe.GameCycles
             bossDeadCinemachineCamera.Follow = bossUnit.transform;
             _ = new ChangeCinemachineCamera(bossDeadCinemachineCamera, BOSS_DEAD_BLEND_TIME);
 
-            bossUnit = null;
-
             await UniTask.WaitForSeconds(BOSS_DEAD_ZOOM_TIME, ignoreTimeScale: true);
 
             TimeManager.SetTimeScale(GameDefine.DEFAULT_TIME_SCALE, true, 0.5f);
@@ -183,7 +211,7 @@ namespace DadVSMe.GameCycles
             GameInstance.GameCycle.Resume();
         }
 
-        private async void EndingDirecting()
+        private async void EndingDirecting(Unit bossUnit)
         {
             GameInstance.GameCycle.Pause();
             InputManager.DisableInput();
@@ -191,8 +219,6 @@ namespace DadVSMe.GameCycles
             TimeManager.SetTimeScale(BOSS_DEAD_ZOOM_TIME_SCALE, true, 0.5f);
             bossDeadCinemachineCamera.Follow = bossUnit.transform;
             _ = new ChangeCinemachineCamera(bossDeadCinemachineCamera, BOSS_DEAD_BLEND_TIME);
-
-            bossUnit = null;
 
             await UniTask.WaitForSeconds(BOSS_DEAD_ZOOM_TIME, ignoreTimeScale: true);
 
@@ -208,11 +234,17 @@ namespace DadVSMe.GameCycles
         #if UNITY_EDITOR
         private void OnDrawGizmos()
         {
-            if(bossSpawnPoint == null)
+            if(bossSpawnInfo.spawnPoint == null)
                 return;
 
             Gizmos.color = Color.blue;
-            Gizmos.DrawWireSphere(bossSpawnPoint.position, conditionDistance);
+            Gizmos.DrawWireSphere(bossSpawnInfo.spawnPoint.position, bossSpawnInfo.conditionDistance);
+
+            foreach (SpawnInfo.SpawnTableData spawnTable in bossSpawnInfo.spawnTable)
+            {
+                Gizmos.color = Color.red;
+                Gizmos.DrawWireSphere(bossSpawnInfo.spawnPoint.position + (Vector3)spawnTable.offset, 0.5f);
+            }
         }
         #endif
     }

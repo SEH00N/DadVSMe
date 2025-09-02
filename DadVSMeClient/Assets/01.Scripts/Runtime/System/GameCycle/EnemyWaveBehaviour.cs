@@ -11,23 +11,6 @@ namespace DadVSMe.GameCycles
 {
     public class EnemyWaveBehaviour : WaveBehaviour
     {
-        [Serializable]
-        public struct SpawnInfo
-        {
-            [Serializable]
-            public struct SpawnTableData
-            {
-                public AddressableAsset<Unit> prefab;
-                public AddressableAsset<EnemyDataBase> enemyData;
-                public AddressableAsset<UnitStatData> statData;
-                public Vector2 offset;
-            }
-
-            public Transform spawnPoint;
-            public float conditionDistance;
-            public List<SpawnTableData> spawnTable;
-        }
-
         [SerializeField] List<SpawnInfo> spawnInfoList = new List<SpawnInfo>();
         private List<SpawnInfo> spawnInfoQueue = null;
 
