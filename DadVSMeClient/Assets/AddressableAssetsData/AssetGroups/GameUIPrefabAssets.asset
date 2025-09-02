@@ -24,10 +24,11 @@ MonoBehaviour:
   - m_GUID: 17d9a483b4428aa419a996d680270f19
     m_Address: SettingPopupUI
     m_ReadOnly: 0
-    m_SerializedLabels: []
+    m_SerializedLabels:
+    - game-assets
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 19e6c1da3cd287a47887617806da0afb
-    m_Address: Assets/02.Prefabs/UI/ETC/PausePopupUI.prefab
+    m_Address: PausePopupUI
     m_ReadOnly: 0
     m_SerializedLabels:
     - game-assets
@@ -40,6 +41,12 @@ MonoBehaviour:
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 69aac2c21a5784de28bc56eaefec7ba7
     m_Address: SkillCardElementUI
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - game-assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 8a157556c4e3f4c438ca651860ef60f3
+    m_Address: DamageText
     m_ReadOnly: 0
     m_SerializedLabels:
     - game-assets
