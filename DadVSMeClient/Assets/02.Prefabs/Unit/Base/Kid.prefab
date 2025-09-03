@@ -1551,18 +1551,6 @@ MonoBehaviour:
   onStateEnterEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: DadVSMe.Entities.NPCMovement, DadVSMe
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 7463771367122635574}
         m_TargetAssemblyTypeName: DadVSMe.Entities.EntityAnimator, DadVSMe
         m_MethodName: PlayAnimation
@@ -1573,6 +1561,18 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: KidIdle
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 8371870542813127976}
+        m_TargetAssemblyTypeName: DadVSMe.Entities.Unit, DadVSMe
+        m_MethodName: SetFloat
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
   onStateExitEvent:
