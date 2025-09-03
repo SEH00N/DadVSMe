@@ -14,6 +14,7 @@ namespace DadVSMe.Enemies
         [SerializeField] Unit unit = null;
         [SerializeField] Transform animalFollowTarget = null;
         [SerializeField] FSMState grabState = null;
+        [SerializeField] FSMState holdState = null;
 
         [SerializeField] PoolReference poolReference = null;
         public PoolReference PoolReference => poolReference;
@@ -35,7 +36,14 @@ namespace DadVSMe.Enemies
             if(animal == null)
                 return;
             
-            if(unitFSMData.isDie || unitFSMData.isFloat || unitFSMData.isLie || unit.FSMBrain.CurrentState == grabState || GameInstance.GameCycle.IsBossWave)
+            if(
+                unitFSMData.isDie || 
+                unitFSMData.isFloat || 
+                unitFSMData.isLie || 
+                unit.FSMBrain.CurrentState == grabState || 
+                unit.FSMBrain.CurrentState == holdState || 
+                GameInstance.GameCycle.IsBossWave
+            )
             {
                 shootTimer = 0f;
                 return;

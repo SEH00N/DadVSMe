@@ -695,7 +695,7 @@ Transform:
   m_GameObject: {fileID: 3648092825560181931}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -29.53, y: 0, z: 0}
+  m_LocalPosition: {x: -26.9, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 30, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1604,6 +1604,7 @@ MonoBehaviour:
       statData:
         key: SunchipsStatData
       offset: {x: 0, y: 0}
+      startWithHold: 0
   bgmLibrary:
     key: SunchipsBGM
   bossSpawnCinemachineCamera: {fileID: 7171166202217833398}
@@ -2530,7 +2531,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 1.3826485, y: 6.3207035}
+  m_Offset: {x: 2.6867828, y: 6.3207035}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -2540,7 +2541,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 32.657555, y: 19.314621}
+  m_Size: {x: 30.049286, y: 19.314621}
   m_EdgeRadius: 0
 --- !u!1 &8316124818777815065
 GameObject:

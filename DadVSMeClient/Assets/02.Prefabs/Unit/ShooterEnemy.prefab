@@ -130,10 +130,22 @@ MonoBehaviour:
   unit: {fileID: 2796991845617505701}
   animalFollowTarget: {fileID: 1112523958414263869}
   grabState: {fileID: 5403887987130952777}
+  holdState: {fileID: 8514959057541589010}
   poolReference: {fileID: 2796991845617505701}
 --- !u!114 &5403887987130952777 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1729459063318387908, guid: 16129bf7803a2466f867a51ceea4c109, type: 3}
+  m_PrefabInstance: {fileID: 5980273037908177037}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3515528adf73f471f8009033ff01c22f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &8514959057541589010 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2654032514642745503, guid: 16129bf7803a2466f867a51ceea4c109, type: 3}
   m_PrefabInstance: {fileID: 5980273037908177037}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}

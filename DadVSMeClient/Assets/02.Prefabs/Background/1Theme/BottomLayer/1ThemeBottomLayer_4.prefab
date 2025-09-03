@@ -657,6 +657,7 @@ MonoBehaviour:
       statData:
         key: KidStatData_Wave3
       offset: {x: -0.94, y: 1.5}
+      startWithHold: 0
     - prefab:
         key: SimpleEnemy
       enemyData:
@@ -664,6 +665,7 @@ MonoBehaviour:
       statData:
         key: KidStatData_Wave3
       offset: {x: -1.45, y: -0.18}
+      startWithHold: 0
     - prefab:
         key: SimpleEnemy
       enemyData:
@@ -671,6 +673,7 @@ MonoBehaviour:
       statData:
         key: KidStatData_Wave3
       offset: {x: 0.83, y: 0.94}
+      startWithHold: 0
     - prefab:
         key: SimpleEnemy
       enemyData:
@@ -678,6 +681,7 @@ MonoBehaviour:
       statData:
         key: KidStatData_Wave3
       offset: {x: 0.13, y: -0.79}
+      startWithHold: 0
 --- !u!1 &1713393388430635197
 GameObject:
   m_ObjectHideFlags: 0
@@ -2235,6 +2239,7 @@ MonoBehaviour:
       statData:
         key: KidStatData_Wave2
       offset: {x: -0.94, y: 1.5}
+      startWithHold: 1
     - prefab:
         key: ShooterEnemy
       enemyData:
@@ -2242,6 +2247,7 @@ MonoBehaviour:
       statData:
         key: KidStatData_Wave2
       offset: {x: -1.45, y: -0.18}
+      startWithHold: 1
     - prefab:
         key: James
       enemyData:
@@ -2249,6 +2255,7 @@ MonoBehaviour:
       statData:
         key: JamesStatData_Wave3
       offset: {x: 0.83, y: 0.94}
+      startWithHold: 1
     - prefab:
         key: James
       enemyData:
@@ -2256,6 +2263,7 @@ MonoBehaviour:
       statData:
         key: JamesStatData_Wave3
       offset: {x: 0.13, y: -0.79}
+      startWithHold: 1
 --- !u!1 &9039751718229237467
 GameObject:
   m_ObjectHideFlags: 0

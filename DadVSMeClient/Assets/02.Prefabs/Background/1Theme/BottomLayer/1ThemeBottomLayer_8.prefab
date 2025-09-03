@@ -26,7 +26,7 @@ Transform:
   m_GameObject: {fileID: 407256649500556686}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -17.024994, y: 1.6750002, z: 0}
+  m_LocalPosition: {x: -14.11, y: 1.6750002, z: 0}
   m_LocalScale: {x: 1.25, y: 1.25, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -56,6 +56,7 @@ MonoBehaviour:
       statData:
         key: JamesStatData_Wave3
       offset: {x: 3.8, y: -1.64}
+      startWithHold: 0
     - prefab:
         key: ShooterEnemy
       enemyData:
@@ -63,6 +64,7 @@ MonoBehaviour:
       statData:
         key: KidStatData_Wave4
       offset: {x: 2.42, y: -0.14}
+      startWithHold: 0
     - prefab:
         key: ButtEnemy
       enemyData:
@@ -70,6 +72,7 @@ MonoBehaviour:
       statData:
         key: KidStatData_Wave4
       offset: {x: 1.28, y: 1.47}
+      startWithHold: 0
     - prefab:
         key: SimpleEnemy
       enemyData:
@@ -77,6 +80,7 @@ MonoBehaviour:
       statData:
         key: KidStatData_Wave4
       offset: {x: 0, y: 3.18}
+      startWithHold: 0
 --- !u!1 &981554245024509612
 GameObject:
   m_ObjectHideFlags: 0

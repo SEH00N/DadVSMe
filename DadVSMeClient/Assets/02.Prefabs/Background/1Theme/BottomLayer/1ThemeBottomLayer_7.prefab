@@ -310,6 +310,37 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &948984785849463176
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7160099575485361919}
+  m_Layer: 0
+  m_Name: 1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7160099575485361919
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 948984785849463176}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7831220725731344830}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1599854877876170348
 GameObject:
   m_ObjectHideFlags: 0
@@ -839,6 +870,136 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &2234472691207029131
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7395205901385354152}
+  - component: {fileID: 8391401574395609305}
+  m_Layer: 0
+  m_Name: EnemyWaveBehaviour (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7395205901385354152
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2234472691207029131}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -4.29, y: -0.6, z: 0}
+  m_LocalScale: {x: 1.25, y: 1.25, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 7544732730546848886}
+  m_Father: {fileID: 1022342873221465819}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8391401574395609305
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2234472691207029131}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3449044d2f928469f903bde1b8bcb986, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnInfoList:
+  - spawnPoint: {fileID: 7544732730546848886}
+    conditionDistance: 22
+    spawnTable:
+    - prefab:
+        key: ButtEnemy
+      enemyData:
+        key: ButtEnemyData_21 (Mario)
+      statData:
+        key: KidStatData_Wave2
+      offset: {x: -1.5, y: 0}
+      startWithHold: 0
+    - prefab:
+        key: SimpleEnemy
+      enemyData:
+        key: SimpleEnemyData_19 (Chaz)
+      statData:
+        key: KidStatData_Wave2
+      offset: {x: 1.5, y: 0}
+      startWithHold: 0
+--- !u!1 &2265067658608136701
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7831220725731344830}
+  - component: {fileID: 5509539008423096131}
+  m_Layer: 0
+  m_Name: EnemyWaveBehaviour (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7831220725731344830
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2265067658608136701}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -6.81, y: 4.84, z: 0}
+  m_LocalScale: {x: 1.25, y: 1.25, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 7160099575485361919}
+  m_Father: {fileID: 1022342873221465819}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5509539008423096131
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2265067658608136701}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3449044d2f928469f903bde1b8bcb986, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnInfoList:
+  - spawnPoint: {fileID: 7160099575485361919}
+    conditionDistance: 22
+    spawnTable:
+    - prefab:
+        key: ButtEnemy
+      enemyData:
+        key: ButtEnemyData_21 (Mario)
+      statData:
+        key: KidStatData_Wave2
+      offset: {x: -1.5, y: 0}
+      startWithHold: 0
+    - prefab:
+        key: SimpleEnemy
+      enemyData:
+        key: SimpleEnemyData_19 (Chaz)
+      statData:
+        key: KidStatData_Wave2
+      offset: {x: 1.5, y: 0}
+      startWithHold: 0
 --- !u!1 &2405546659677499580
 GameObject:
   m_ObjectHideFlags: 0
@@ -1690,12 +1851,11 @@ Transform:
   m_GameObject: {fileID: 3557451810742183685}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -15.48748, y: 1.6750002, z: 0}
+  m_LocalPosition: {x: -16.32, y: 1.6750002, z: 0}
   m_LocalScale: {x: 1.25, y: 1.25, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4536652098167679601}
-  - {fileID: 8150650763523543775}
   m_Father: {fileID: 1022342873221465819}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &8091303216704677860
@@ -1721,6 +1881,7 @@ MonoBehaviour:
       statData:
         key: KidStatData_Wave2
       offset: {x: 0, y: 1.75}
+      startWithHold: 1
     - prefab:
         key: SimpleEnemy
       enemyData:
@@ -1728,6 +1889,7 @@ MonoBehaviour:
       statData:
         key: KidStatData_Wave2
       offset: {x: 0, y: 0}
+      startWithHold: 1
     - prefab:
         key: ButtEnemy
       enemyData:
@@ -1735,30 +1897,7 @@ MonoBehaviour:
       statData:
         key: KidStatData_Wave2
       offset: {x: 0, y: -1.75}
-  - spawnPoint: {fileID: 8150650763523543775}
-    conditionDistance: 22
-    spawnTable:
-    - prefab:
-        key: ShooterEnemy
-      enemyData:
-        key: ShooterEnemyData_31 (Shok)
-      statData:
-        key: KidStatData_Wave2
-      offset: {x: 0, y: 1.75}
-    - prefab:
-        key: SimpleEnemy
-      enemyData:
-        key: SimpleEnemyData_20 (Thud)
-      statData:
-        key: KidStatData_Wave2
-      offset: {x: 0, y: 0}
-    - prefab:
-        key: ShooterEnemy
-      enemyData:
-        key: ShooterEnemyData_38 (Brandon)
-      statData:
-        key: KidStatData_Wave2
-      offset: {x: 0, y: -1.75}
+      startWithHold: 1
 --- !u!1 &5166310697269334677
 GameObject:
   m_ObjectHideFlags: 0
@@ -1840,7 +1979,7 @@ Transform:
   m_GameObject: {fileID: 5166358689916166800}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1, y: -0.31, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2027,6 +2166,37 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 2.3306277, y: 0.24673235}
   m_EdgeRadius: 0
+--- !u!1 &6316992098456295566
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7544732730546848886}
+  m_Layer: 0
+  m_Name: 1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7544732730546848886
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6316992098456295566}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7395205901385354152}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &6411579621541713424
 GameObject:
   m_ObjectHideFlags: 0
@@ -2083,6 +2253,7 @@ MonoBehaviour:
       statData:
         key: JamesStatData_Wave3
       offset: {x: 3.96, y: 3.1}
+      startWithHold: 0
     - prefab:
         key: ShooterEnemy
       enemyData:
@@ -2090,6 +2261,7 @@ MonoBehaviour:
       statData:
         key: KidStatData_Wave4
       offset: {x: 2.34, y: 1.56}
+      startWithHold: 0
     - prefab:
         key: ButtEnemy
       enemyData:
@@ -2097,6 +2269,7 @@ MonoBehaviour:
       statData:
         key: KidStatData_Wave4
       offset: {x: 1.24, y: -0.1}
+      startWithHold: 0
     - prefab:
         key: SimpleEnemy
       enemyData:
@@ -2104,6 +2277,7 @@ MonoBehaviour:
       statData:
         key: KidStatData_Wave4
       offset: {x: 0, y: -2}
+      startWithHold: 0
 --- !u!1 &6537049943275422781
 GameObject:
   m_ObjectHideFlags: 0
@@ -2309,37 +2483,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1 &6885977991266197820
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 8150650763523543775}
-  m_Layer: 0
-  m_Name: 2
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &8150650763523543775
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6885977991266197820}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1, y: 0.41, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 7078113562917177935}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &7240323965641446006
 GameObject:
   m_ObjectHideFlags: 0
@@ -2498,6 +2641,8 @@ Transform:
   - {fileID: 6837135419535358350}
   - {fileID: 4729731123239647861}
   - {fileID: 7078113562917177935}
+  - {fileID: 7831220725731344830}
+  - {fileID: 7395205901385354152}
   - {fileID: 668628202537441939}
   - {fileID: 4665780678603926001}
   m_Father: {fileID: 0}

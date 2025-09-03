@@ -279,6 +279,7 @@ MonoBehaviour:
       statData:
         key: JamesStatData_Wave1
       offset: {x: 0, y: 0}
+      startWithHold: 0
   bgmLibrary:
     key: BullyBGM
   bossSpawnCinemachineCamera: {fileID: 1226103034720073128}
@@ -2025,6 +2026,7 @@ MonoBehaviour:
       statData:
         key: KidStatData_Wave3
       offset: {x: 0, y: 0}
+      startWithHold: 0
 --- !u!1 &8500332065608762787
 GameObject:
   m_ObjectHideFlags: 0

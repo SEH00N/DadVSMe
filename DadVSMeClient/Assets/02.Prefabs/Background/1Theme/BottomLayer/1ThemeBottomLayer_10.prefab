@@ -1442,6 +1442,7 @@ MonoBehaviour:
       statData:
         key: KidStatData_Wave5
       offset: {x: 0, y: 1}
+      startWithHold: 0
     - prefab:
         key: SimpleEnemy
       enemyData:
@@ -1449,6 +1450,7 @@ MonoBehaviour:
       statData:
         key: KidStatData_Wave5
       offset: {x: 0, y: -1}
+      startWithHold: 0
   - spawnPoint: {fileID: 1938881581507782397}
     conditionDistance: 22
     spawnTable:
@@ -1459,6 +1461,7 @@ MonoBehaviour:
       statData:
         key: KidStatData_Wave5
       offset: {x: 0, y: 1.5}
+      startWithHold: 0
     - prefab:
         key: ButtEnemy
       enemyData:
@@ -1466,6 +1469,7 @@ MonoBehaviour:
       statData:
         key: KidStatData_Wave5
       offset: {x: 0, y: 0}
+      startWithHold: 0
     - prefab:
         key: ButtEnemy
       enemyData:
@@ -1473,6 +1477,7 @@ MonoBehaviour:
       statData:
         key: KidStatData_Wave5
       offset: {x: 0, y: -1.5}
+      startWithHold: 0
   - spawnPoint: {fileID: 3560094544086946239}
     conditionDistance: 22
     spawnTable:
@@ -1483,6 +1488,7 @@ MonoBehaviour:
       statData:
         key: KidStatData_Wave5
       offset: {x: 0, y: 0}
+      startWithHold: 0
 --- !u!1 &6726282416467095858
 GameObject:
   m_ObjectHideFlags: 0
@@ -2164,6 +2170,7 @@ MonoBehaviour:
       statData:
         key: KidStatData_Wave5
       offset: {x: 0, y: 1.5}
+      startWithHold: 0
     - prefab:
         key: ButtEnemy
       enemyData:
@@ -2171,6 +2178,7 @@ MonoBehaviour:
       statData:
         key: KidStatData_Wave5
       offset: {x: 0, y: 0}
+      startWithHold: 0
     - prefab:
         key: ButtEnemy
       enemyData:
@@ -2178,6 +2186,7 @@ MonoBehaviour:
       statData:
         key: KidStatData_Wave5
       offset: {x: 0, y: -1.5}
+      startWithHold: 0
 --- !u!1 &8692021348031210149
 GameObject:
   m_ObjectHideFlags: 0

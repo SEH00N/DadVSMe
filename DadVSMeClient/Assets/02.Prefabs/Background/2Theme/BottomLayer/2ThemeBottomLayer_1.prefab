@@ -1153,6 +1153,7 @@ MonoBehaviour:
       statData:
         key: NinjaStatData_Wave2
       offset: {x: -1.5, y: 1.75}
+      startWithHold: 0
     - prefab:
         key: Ninja
       enemyData:
@@ -1160,6 +1161,7 @@ MonoBehaviour:
       statData:
         key: NinjaStatData_Wave2
       offset: {x: 1.5, y: -1.75}
+      startWithHold: 0
 --- !u!1 &5367175136059386929
 GameObject:
   m_ObjectHideFlags: 0
@@ -2035,6 +2037,7 @@ MonoBehaviour:
       statData:
         key: JamesStatData_Wave4
       offset: {x: 0, y: 1.75}
+      startWithHold: 0
     - prefab:
         key: James
       enemyData:
@@ -2042,6 +2045,7 @@ MonoBehaviour:
       statData:
         key: JamesStatData_Wave4
       offset: {x: 0, y: 0}
+      startWithHold: 0
     - prefab:
         key: James
       enemyData:
@@ -2049,6 +2053,7 @@ MonoBehaviour:
       statData:
         key: JamesStatData_Wave4
       offset: {x: 0, y: -1.75}
+      startWithHold: 0
 --- !u!1 &7892593581411084224
 GameObject:
   m_ObjectHideFlags: 0

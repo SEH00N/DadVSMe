@@ -1632,6 +1632,7 @@ MonoBehaviour:
       statData:
         key: KidStatData_Wave3
       offset: {x: -1, y: 0.5}
+      startWithHold: 0
     - prefab:
         key: SimpleEnemy
       enemyData:
@@ -1639,6 +1640,7 @@ MonoBehaviour:
       statData:
         key: KidStatData_Wave3
       offset: {x: 1, y: -0.5}
+      startWithHold: 0
   bgmLibrary:
     key: BullyBGM
   bossSpawnCinemachineCamera: {fileID: 6351282946937400870}

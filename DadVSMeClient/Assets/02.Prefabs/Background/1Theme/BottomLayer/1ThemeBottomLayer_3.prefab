@@ -88,37 +88,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1 &315608023628219211
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1897505539540199143}
-  m_Layer: 0
-  m_Name: 2
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1897505539540199143
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 315608023628219211}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 2417644548233307077}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &509562555390445813
 GameObject:
   m_ObjectHideFlags: 0
@@ -157,6 +126,7 @@ Transform:
   - {fileID: 6007963019782478097}
   - {fileID: 1704622862099992345}
   - {fileID: 2417644548233307077}
+  - {fileID: 5870607928212726660}
   - {fileID: 1287306128649745624}
   - {fileID: 1890260313229448517}
   m_Father: {fileID: 0}
@@ -520,12 +490,11 @@ Transform:
   m_GameObject: {fileID: 1419230425353764123}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -14.874992, y: 2.5749998, z: 0}
+  m_LocalPosition: {x: -14.94, y: 3.19, z: 0}
   m_LocalScale: {x: 1.25, y: 1.25, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 6850451385632017162}
-  - {fileID: 1897505539540199143}
   m_Father: {fileID: 419965157611855675}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &5286692071210593720
@@ -550,7 +519,8 @@ MonoBehaviour:
         key: ButtEnemyData_21 (Mario)
       statData:
         key: KidStatData_Wave2
-      offset: {x: 0, y: 1.75}
+      offset: {x: 0, y: 1.35}
+      startWithHold: 1
     - prefab:
         key: SimpleEnemy
       enemyData:
@@ -558,37 +528,15 @@ MonoBehaviour:
       statData:
         key: KidStatData_Wave2
       offset: {x: 0, y: 0}
+      startWithHold: 1
     - prefab:
         key: ButtEnemy
       enemyData:
         key: ButtEnemyData_24 (Farter)
       statData:
         key: KidStatData_Wave2
-      offset: {x: 0, y: -1.75}
-  - spawnPoint: {fileID: 1897505539540199143}
-    conditionDistance: 22
-    spawnTable:
-    - prefab:
-        key: ShooterEnemy
-      enemyData:
-        key: ShooterEnemyData_31 (Shok)
-      statData:
-        key: KidStatData_Wave2
-      offset: {x: 0, y: 1.75}
-    - prefab:
-        key: SimpleEnemy
-      enemyData:
-        key: SimpleEnemyData_20 (Thud)
-      statData:
-        key: KidStatData_Wave2
-      offset: {x: 0, y: 0}
-    - prefab:
-        key: ShooterEnemy
-      enemyData:
-        key: ShooterEnemyData_38 (Brandon)
-      statData:
-        key: KidStatData_Wave2
-      offset: {x: 0, y: -1.75}
+      offset: {x: 0, y: -1.35}
+      startWithHold: 1
 --- !u!1 &1444291075412645786
 GameObject:
   m_ObjectHideFlags: 0
@@ -702,7 +650,7 @@ Transform:
   m_GameObject: {fileID: 1535869976213310881}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.5374756, y: 2.5, z: 0}
+  m_LocalPosition: {x: -0.63, y: 2.99, z: 0}
   m_LocalScale: {x: 1.25, y: 1.25, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -731,7 +679,16 @@ MonoBehaviour:
         key: JamesEnemyData
       statData:
         key: JamesStatData_Wave2
-      offset: {x: 0, y: 0}
+      offset: {x: -1.5, y: 0}
+      startWithHold: 0
+    - prefab:
+        key: James
+      enemyData:
+        key: JamesEnemyData
+      statData:
+        key: JamesStatData_Wave2
+      offset: {x: 1.5, y: 0}
+      startWithHold: 0
 --- !u!1 &2072385249605573086
 GameObject:
   m_ObjectHideFlags: 0
@@ -2065,6 +2022,71 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &6115786053658005836
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5870607928212726660}
+  - component: {fileID: 4132137503002260476}
+  m_Layer: 0
+  m_Name: EnemyWaveBehaviour
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5870607928212726660
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6115786053658005836}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -19.26, y: 4.83, z: 0}
+  m_LocalScale: {x: 1.25, y: 1.25, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 3647447192012020569}
+  m_Father: {fileID: 419965157611855675}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4132137503002260476
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6115786053658005836}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3449044d2f928469f903bde1b8bcb986, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnInfoList:
+  - spawnPoint: {fileID: 3647447192012020569}
+    conditionDistance: 22
+    spawnTable:
+    - prefab:
+        key: ButtEnemy
+      enemyData:
+        key: ButtEnemyData_21 (Mario)
+      statData:
+        key: KidStatData_Wave2
+      offset: {x: -1.35, y: 0}
+      startWithHold: 0
+    - prefab:
+        key: SimpleEnemy
+      enemyData:
+        key: SimpleEnemyData_19 (Chaz)
+      statData:
+        key: KidStatData_Wave2
+      offset: {x: 0, y: 0}
+      startWithHold: 0
 --- !u!1 &6356851877258415057
 GameObject:
   m_ObjectHideFlags: 0
@@ -2334,6 +2356,37 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &7520963429932495080
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3647447192012020569}
+  m_Layer: 0
+  m_Name: 1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3647447192012020569
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7520963429932495080}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5870607928212726660}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &8009205395831024779
 GameObject:
   m_ObjectHideFlags: 0
@@ -2533,7 +2586,7 @@ Transform:
   m_GameObject: {fileID: 8481354034465559286}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2595,6 +2648,7 @@ MonoBehaviour:
       statData:
         key: KidStatData_Wave2
       offset: {x: -0.94, y: 1.5}
+      startWithHold: 0
     - prefab:
         key: SimpleEnemy
       enemyData:
@@ -2602,6 +2656,7 @@ MonoBehaviour:
       statData:
         key: KidStatData_Wave2
       offset: {x: -1.45, y: -0.18}
+      startWithHold: 0
     - prefab:
         key: ButtEnemy
       enemyData:
@@ -2609,6 +2664,7 @@ MonoBehaviour:
       statData:
         key: KidStatData_Wave2
       offset: {x: 0.83, y: 0.94}
+      startWithHold: 0
     - prefab:
         key: ShooterEnemy
       enemyData:
@@ -2616,3 +2672,4 @@ MonoBehaviour:
       statData:
         key: KidStatData_Wave2
       offset: {x: 0.13, y: -0.79}
+      startWithHold: 0
