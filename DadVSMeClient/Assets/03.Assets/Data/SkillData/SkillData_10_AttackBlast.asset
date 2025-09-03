@@ -1,0 +1,87 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8e5effae11794b5980b50c827fa6d2e, type: 3}
+  m_Name: SkillData_10_AttackBlast
+  m_EditorClassIdentifier: 
+  skillType: 1
+  skillName:
+    m_TableReference:
+      m_TableCollectionName: GUID:4b8a0843654704550b752a7cb2d1b194
+    m_TableEntryReference:
+      m_KeyId: 1653418745856
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  skillIcon:
+    key: SkillIcon_10
+  optionsPerLevel:
+  - skillDesc:
+      m_TableReference:
+        m_TableCollectionName: GUID:4b8a0843654704550b752a7cb2d1b194
+      m_TableEntryReference:
+        m_KeyId: 4205105820721152
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    attackBlastLifeTime: 0.25
+    additiveDamage: 1
+  - skillDesc:
+      m_TableReference:
+        m_TableCollectionName: 
+      m_TableEntryReference:
+        m_KeyId: 0
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    attackBlastLifeTime: 0.5
+    additiveDamage: 2
+  - skillDesc:
+      m_TableReference:
+        m_TableCollectionName: 
+      m_TableEntryReference:
+        m_KeyId: 0
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    attackBlastLifeTime: 0.75
+    additiveDamage: 3
+  - skillDesc:
+      m_TableReference:
+        m_TableCollectionName: 
+      m_TableEntryReference:
+        m_KeyId: 0
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    attackBlastLifeTime: 1
+    additiveDamage: 4
+  - skillDesc:
+      m_TableReference:
+        m_TableCollectionName: 
+      m_TableEntryReference:
+        m_KeyId: 0
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    attackBlastLifeTime: 1.25
+    additiveDamage: 5
+  prefab:
+    key: AttackBlast
+  references:
+    version: 2
+    RefIds: []

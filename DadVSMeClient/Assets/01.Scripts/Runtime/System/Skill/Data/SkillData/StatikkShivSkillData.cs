@@ -5,21 +5,17 @@ using UnityEngine;
 namespace DadVSMe
 {
     [CreateAssetMenu(fileName = "StatikkShivSkillData", menuName = "DadVSMe/SkillData/Data/StatikkShivSkillData")]
-    public class StatikkShivSkillData : SkillData
+    public class StatikkShivSkillData : SkillData<StatikkShivSkill, StatikkShivSkillData.Option>
     {
-        public AddressableAsset<StatikkShivLighting> prefab;
-        public AddressableAsset<AudioClip> sound;
-        public float checkTime;
-        public int targetAttackCount;
-        public int maxAttackTargetNum;
-        public float checkRadius;
-        public int levelUpIncreaseRate;
-        public AttackDataBase attackData;
-
-        public override UnitSkill CreateSkill()
+        [System.Serializable]
+        public class Option : SkillOption
         {
-            return new StatikkShivSkill(prefab, sound, checkTime, targetAttackCount,
-                maxAttackTargetNum, checkRadius, levelUpIncreaseRate, attackData);
+            [Range(0f, 1f)] public float executeChance;
+            public int additiveDamage;
         }
+
+        public AddressableAsset<StatikkShivLighting> prefab;
+        public AttackDataBase attackData;
+        public float checkRadius;
     }
 }

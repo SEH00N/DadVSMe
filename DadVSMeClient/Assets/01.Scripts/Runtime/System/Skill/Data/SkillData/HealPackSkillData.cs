@@ -3,9 +3,11 @@ using UnityEngine;
 namespace DadVSMe
 {
     [CreateAssetMenu(fileName = "HealPackSkillData", menuName = "DadVSMe/SkillData/Data/HealPackSkillData")]
-    public class HealPackSkillData : SkillData
+    public sealed class HealPackSkillData : SkillDataBase
     {
         public int healAmount;
-        public override UnitSkill CreateSkill() { return null; }
+
+        public override UnitSkillBase CreateSkill() => null;
+        public override T GetOption<T>(int level) => null;
     }
 }

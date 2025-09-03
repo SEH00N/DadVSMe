@@ -31,6 +31,12 @@ namespace DadVSMe.Localizations
         {
             try
             {
+                if(localizedString.IsEmpty)
+                {
+                    text.text = "";
+                    return;
+                }
+
                 string result = await localizedString.GetLocalizedStringAsync();
                 text.text = result;
             }

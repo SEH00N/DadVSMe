@@ -15,7 +15,7 @@ namespace DadVSMe.UI.Skills
     {
         public interface ICallback : IUICallback
         {
-            void OnSelectCard(SkillData skillData);
+            void OnSelectCard(SkillDataBase skillData);
         }
 
         // Animation Value
@@ -41,16 +41,18 @@ namespace DadVSMe.UI.Skills
         [SerializeField] AddressableAsset<AudioClip> despawnSound = null;
         [SerializeField] AddressableAsset<AudioClip> selectSound = null;
 
-        private SkillData skillData = null;
+        private SkillDataBase skillData = null;
 
-        public async UniTask Initialize(SkillData skillData, int currentLevel, ICallback callback, int index)
+        public async UniTask Initialize(SkillDataBase skillData, int currentLevel, ICallback callback, int index)
         {
             base.Initialize(callback);
             this.skillData = skillData;
 
+            int nextLevel = currentLevel + 1;
+
             new SetSprite(skillIcon, skillData.skillIcon);
             _ = new SetLocalizedString(skillData.skillName, nameText);
-            _ = new SetLocalizedString(currentLevel == 0 ? skillData.skillDesc : skillData.skillLevelUpDesc, descText);
+            _ = new SetLocalizedString(skillData.GetOption(nextLevel).skillDesc, descText);
 
             for(int i = 0; i < levelObjectList.Count; i++)
                 levelObjectList[i].SetActive(i < currentLevel);

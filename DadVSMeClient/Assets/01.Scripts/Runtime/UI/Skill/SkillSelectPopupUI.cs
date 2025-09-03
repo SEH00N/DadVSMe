@@ -9,7 +9,7 @@ namespace DadVSMe.UI.Skills
     {
         public interface ICallback : IUICallback
         {
-            void OnSelectSkill(SkillSelectPopupUI popupUI, SkillData skillData);
+            void OnSelectSkill(SkillSelectPopupUI popupUI, SkillDataBase skillData);
         }
 
         [SerializeField] List<SkillCardElementUI> elementUIList = new List<SkillCardElementUI>();
@@ -31,8 +31,8 @@ namespace DadVSMe.UI.Skills
                     elementUI.gameObject.SetActive(true);
 
                 SkillType skillType = skillList[i];
-                SkillData skillData = skillComponent.SkillDataContainer.GetSkillData(skillType);
-                UnitSkill unitSkill = skillComponent.GetSkill(skillType);
+                SkillDataBase skillData = skillComponent.SkillDataContainer.GetSkillData(skillType);
+                UnitSkillBase unitSkill = skillComponent.GetSkill(skillType);
                 elementUI.Initialize(skillData, unitSkill == null ? 0 : unitSkill.Level, this, i).Forget();
             }
         }
@@ -42,7 +42,7 @@ namespace DadVSMe.UI.Skills
             base.Release();
         }
 
-        public void OnSelectCard(SkillData skillData)
+        public void OnSelectCard(SkillDataBase skillData)
         {
             callback.OnSelectSkill(this, skillData);
         }

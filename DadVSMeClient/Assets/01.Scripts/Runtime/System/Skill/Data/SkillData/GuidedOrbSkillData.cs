@@ -5,17 +5,19 @@ using UnityEngine;
 namespace DadVSMe
 {
     [CreateAssetMenu(fileName = "GuidedOrbSkillData", menuName = "DadVSMe/SkillData/Data/GuidedOrbSkillData")]
-    public class GuidedOrbSkillData : SkillData
+    public class GuidedOrbSkillData : SkillData<GuidedOrbSkill, GuidedOrbSkillData.Option>
     {
+        [System.Serializable]
+        public class Option : SkillOption
+        {
+            public float coolTime;
+            public int spawnCount;
+            public int additiveDamage;
+        }
+
         public AddressableAsset<GuidedOrb> prefab = null;
-        public AddressableAsset<AudioClip> sound;
         public float coolTime;
         public int levelUpIncreaseRate;
         public AttackDataBase attackData;
-
-        public override UnitSkill CreateSkill()
-        {
-            return new GuidedOrbSkill(prefab, coolTime, levelUpIncreaseRate, sound, attackData);
-        }
     }
 }

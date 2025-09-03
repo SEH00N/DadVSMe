@@ -10,40 +10,29 @@ using UnityEngine;
 
 namespace DadVSMe
 {
-    public class DeadBombSkill : UnitSkill
+    public class DeadBombSkill : UnitSkill<DeadBombSkillData, DeadBombSkillData.Option>
     {
-        private AttackDataBase attackData;
-        private AddressableAsset<PoolableEffect> effectRef;
-        private AddressableAsset<AudioClip> soundRef;
-        private float attackRadius;
-        private float levelUpIncreaseRate;
+        private Unit attackTarget;
+        private Unit owner;
 
-        Unit attackTarget;
-        Unit owner;
-
-        public DeadBombSkill(AttackDataBase attackData, AddressableAsset<PoolableEffect> effectRef, AddressableAsset<AudioClip> soundRef,
-            float attackRadius, float levelUpIncreaseRate)
+        public override void OnRegist(UnitSkillComponent ownerComponent, SkillDataBase skillData)
         {
-            this.attackData = attackData;
-            this.effectRef = effectRef;
-            this.attackRadius = attackRadius;
-            this.levelUpIncreaseRate = levelUpIncreaseRate;
-            this.soundRef = soundRef;
+            base.OnRegist(ownerComponent, skillData);
 
-            effectRef.InitializeAsync().Forget();
-            soundRef.InitializeAsync().Forget();
-        }
-
-        public override void OnRegist(UnitSkillComponent ownerComponent)
-        {
-            base.OnRegist(ownerComponent);
-
+            _ = new InitializeAttackFeedback(GetData().attackData);
+            
             owner = ownerComponent.GetComponent<Unit>();
             owner.onAttackTargetEvent.AddListener(OnAttackTarget);
         }
 
         public override void Execute()
         {
+            DeadBombSkillData data = GetData();
+
+            AttackDataBase attackData = data.attackData;
+            float attackRadius = data.attackRadius;
+            int additiveDamage = GetOption().additiveDamage;
+
             Vector2 spawnPoint = attackTarget.transform.position;
             Collider2D[] cols = Physics2D.OverlapCircleAll(spawnPoint, attackRadius);
 
@@ -60,15 +49,17 @@ namespace DadVSMe
 
                 if (col.gameObject.TryGetComponent<IHealth>(out IHealth unitHealth))
                 {
-                    DynamicAttackData attackData = new DynamicAttackData(this.attackData);
-                    attackData.SetDamage(attackData.Damage + (int)(levelUpIncreaseRate * level));
-                    unitHealth.Attack(owner, attackData);
-                    _ = new PlayHitFeedback(attackData, unitFSMData.attackAttribute, unitHealth.Position, Vector3.zero, unitFSMData.forwardDirection);
+                    DynamicAttackData dynamicAttackData = new DynamicAttackData(attackData);
+                    dynamicAttackData.SetDamage(dynamicAttackData.Damage + additiveDamage);
+                    unitHealth.Attack(owner, dynamicAttackData);
+                    _ = new PlayHitFeedback(dynamicAttackData, unitFSMData.attackAttribute, unitHealth.Position, Vector3.zero, unitFSMData.forwardDirection);
                 }
             }
             
-            _ = new PlayEffect(effectRef, spawnPoint, 1);
-            _ = new PlaySound(soundRef);
+            _ = new PlayAttackFeedback(attackData, unitFSMData.attackAttribute, spawnPoint, Vector3.zero, unitFSMData.forwardDirection);
+            _ = new PlayAttackSound(attackData, unitFSMData.attackAttribute);
+            // _ = new PlayEffect(effectRef, spawnPoint, 1);
+            // _ = new PlaySound(soundRef);
 
             unitFSMData.attackAttribute = attackAttribute;
 
@@ -80,7 +71,7 @@ namespace DadVSMe
             base.OnUnregist();
 
             Unit owner = ownerComponent.GetComponent<Unit>();
-            owner.onAttackTargetEvent.AddListener(OnAttackTarget);
+            owner.onAttackTargetEvent.RemoveListener(OnAttackTarget);
         }
 
         private void OnAttackTarget(Unit target, IAttackData data)

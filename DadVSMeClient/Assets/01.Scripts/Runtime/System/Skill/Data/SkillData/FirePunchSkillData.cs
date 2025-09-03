@@ -5,18 +5,17 @@ using UnityEngine;
 namespace DadVSMe
 {
     [CreateAssetMenu(fileName = "FirePunchSkillData", menuName = "DadVSMe/SkillData/Data/FirePunchSkillData")]
-    public class FirePunchSkillData : SkillData
+    public class FirePunchSkillData : SkillData<FirePunchSkill, FirePunchSkillData.Option>
     {
-        public float levelUpIncreaseRate;
+        [System.Serializable]
+        public class Option : SkillOption
+        {
+            public float burnTime;
+            public float attackDelay;
+        }
+
         public AddressableAsset<ParticleSystem> particlePrefab;
         public AddressableAsset<Fire> firePrefab;
-        public float burnTime;
-        public float attackDelay;
         public AttackDataBase attackData;
-    
-        public override UnitSkill CreateSkill()
-        {
-            return new FirePunchSkill(attackData, levelUpIncreaseRate, particlePrefab, firePrefab, burnTime, attackDelay);
-        }
     }
 }

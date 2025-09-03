@@ -3,13 +3,12 @@ using UnityEngine;
 namespace DadVSMe
 {
     [CreateAssetMenu(fileName = "MaxHpUpSkillData", menuName = "DadVSMe/SkillData/Data/MaxHpUpSkillData")]
-    public class MaxHpUpSkillData : SkillData
+    public class MaxHpUpSkillData : SkillData<MaxHPUpSkill, MaxHpUpSkillData.Option>
     {
-        public float levelUpIncreaseRate;
-
-        public override UnitSkill CreateSkill()
+        [System.Serializable]
+        public class Option : SkillOption
         {
-            return new MaxHPUpSkill(levelUpIncreaseRate);
+            public float additiveValue;
         }
     }
 }

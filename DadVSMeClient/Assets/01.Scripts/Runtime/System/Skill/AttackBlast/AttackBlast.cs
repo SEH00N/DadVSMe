@@ -30,15 +30,17 @@ namespace DadVSMe
         private Unit instigator;
         private Vector3 originScale;
 
-        [SerializeField]
-        private float moveSpeed;
+        [SerializeField] float moveSpeed;
 
         private static bool timeScaleEffectAvailable = true;
         private CancellationTokenSource _lifetimeCts;
 
+        private int additiveDamage;
+
         void Awake()
         {
-            Initialize();
+            movement = GetComponent<UnitMovement>();
+            poolReference = GetComponent<PoolReference>();
             originScale = transform.localScale;
         }
 
@@ -47,10 +49,10 @@ namespace DadVSMe
             transform.localScale = originScale;
         }
 
-        public void Initialize()
+        public void Initialize(int additiveDamage)
         {
-            movement = GetComponent<UnitMovement>();
-            poolReference = GetComponent<PoolReference>();
+            this.additiveDamage = additiveDamage;
+            _ = new InitializeAttackFeedback(attackData);
         }
 
         public void SetInstigator(Unit instigator)
@@ -116,10 +118,13 @@ namespace DadVSMe
             if (collision.gameObject.TryGetComponent<IHealth>(out IHealth targetHealth))
             {
                 PlayTimeScaleEffect();
-                targetHealth.Attack(instigator, attackData);
-                UnitFSMData unitFSMData = instigator.GetComponent<FSMBrain>().GetAIData<UnitFSMData>();
-                _ = new PlayHitFeedback(attackData, unitFSMData.attackAttribute, targetHealth.Position, Vector3.zero, unitFSMData.forwardDirection);
 
+                DynamicAttackData dynamicAttackData = new DynamicAttackData(attackData);
+                dynamicAttackData.SetDamage(dynamicAttackData.Damage + additiveDamage);
+                targetHealth.Attack(instigator, dynamicAttackData);
+                
+                UnitFSMData unitFSMData = instigator.GetComponent<FSMBrain>().GetAIData<UnitFSMData>();
+                _ = new PlayHitFeedback(dynamicAttackData, unitFSMData.attackAttribute, targetHealth.Position, Vector3.zero, unitFSMData.forwardDirection);
             }
 
             // _lifetimeCts?.Cancel();

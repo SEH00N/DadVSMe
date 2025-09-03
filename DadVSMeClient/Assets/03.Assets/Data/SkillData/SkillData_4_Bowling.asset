@@ -1,0 +1,81 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 08e5000a75b44492daef8f87ab48517d, type: 3}
+  m_Name: SkillData_4_Bowling
+  m_EditorClassIdentifier: 
+  skillType: 10
+  skillName:
+    m_TableReference:
+      m_TableCollectionName: GUID:4b8a0843654704550b752a7cb2d1b194
+    m_TableEntryReference:
+      m_KeyId: 1524028661760
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  skillIcon:
+    key: SkillIcon_4
+  optionsPerLevel:
+  - skillDesc:
+      m_TableReference:
+        m_TableCollectionName: GUID:4b8a0843654704550b752a7cb2d1b194
+      m_TableEntryReference:
+        m_KeyId: 4204680245665792
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    additiveDamage: 10
+  - skillDesc:
+      m_TableReference:
+        m_TableCollectionName: 
+      m_TableEntryReference:
+        m_KeyId: 0
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    additiveDamage: 20
+  - skillDesc:
+      m_TableReference:
+        m_TableCollectionName: 
+      m_TableEntryReference:
+        m_KeyId: 0
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    additiveDamage: 30
+  - skillDesc:
+      m_TableReference:
+        m_TableCollectionName: 
+      m_TableEntryReference:
+        m_KeyId: 0
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    additiveDamage: 40
+  - skillDesc:
+      m_TableReference:
+        m_TableCollectionName: 
+      m_TableEntryReference:
+        m_KeyId: 0
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    additiveDamage: 50
+  bowlingHitAttackData: {fileID: 11400000, guid: 0ba59c8b1a7c44113832ef80ccf84883, type: 2}
+  references:
+    version: 2
+    RefIds: []

@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using Cysharp.Threading.Tasks;
 using DadVSMe.Core.Cam;
 using DadVSMe.Entities;
-using H00N.AI.FSM;
 using H00N.Resources.Pools;
 using UnityEngine;
 
@@ -11,6 +10,9 @@ namespace DadVSMe
 {
     public class StatikkShivLighting : MonoBehaviour
     {
+        private const int MAX_ATTACK_COUNT = 10;
+        private const float LIFE_TIME_SECOND = 5f;
+
         private PoolReference poolReference;
         public LineRenderer lineRenderer;
         public LineRendererAnimator lineRendererAnimator;
@@ -27,21 +29,18 @@ namespace DadVSMe
             lineRendererAnimator = GetComponent<LineRendererAnimator>();
         }
 
-        public async void Active(Unit instigator, int attackNum, float attackRadius, IAttackData attackData, IAttackFeedbackDataContainer feedbackDataContainer)
+        public async void Active(Unit instigator, float attackRadius, IAttackData attackData, IAttackFeedbackDataContainer feedbackDataContainer)
         {
             if (instigator == null)
                 return;
 
-            Vector3[] points = new Vector3[attackNum + 1];
+            List<Vector3> points = new();
             List<IHealth> targets = new();
-            points[0] = instigator.transform.position;
-            int count = 0;
+            HashSet<Collider2D> checkedColliders = new();
+            points.Add(instigator.transform.position);
 
-            for (int i = 0; i < attackNum; i++)
+            for (int i = 0; i < MAX_ATTACK_COUNT; i++)
             {
-                if (count >= attackNum)
-                    break;
-
                 Collider2D[] cols = Physics2D.OverlapCircleAll(points[i], attackRadius);
                 if (cols.Length == 0)
                     break;
@@ -49,26 +48,29 @@ namespace DadVSMe
                 bool findTarget = false;
                 foreach (var col in cols)
                 {
+                    if (targets.Count >= MAX_ATTACK_COUNT)
+                        break;
+
                     if (col.gameObject == instigator.gameObject)
                         continue;
 
+                    if (checkedColliders.Contains(col))
+                        continue;
+
+                    checkedColliders.Add(col);
                     if (col.TryGetComponent<IHealth>(out IHealth health))
                     {
                         if (targets.Contains(health))
                             continue;
 
-                        count++;
-                        points[count] = health.Position;
+                        points.Add(health.Position);
                         targets.Add(health);
 
                         findTarget = true;
-
-                        if (count >= attackNum)
-                            break;
                     }
                 }
 
-                if (count >= attackNum)
+                if (targets.Count >= MAX_ATTACK_COUNT)
                     break;
 
                 if (findTarget == false)
@@ -76,20 +78,13 @@ namespace DadVSMe
             }
 
             AttackAsync(targets, instigator, attackData, feedbackDataContainer);
-
-            points[0] = instigator.transform.position;
             lineRenderer.positionCount = targets.Count + 1;
             for (int i = 0; i <= targets.Count; i++)
-            {
                 lineRenderer.SetPosition(i, points[i]);
-            }
+
             lineRendererAnimator.StartAnimationPerSegment(appearTime, disappearTime);
 
-            // outlineRenderer.positionCount = targets.Count + 1;
-            // outlineRenderer.SetPositions(points);
-            // outlineRendererAnimator.StartAnimationPerSegment(.02f, .03f);
-
-            await UniTask.Delay(TimeSpan.FromSeconds(3));
+            await UniTask.Delay(TimeSpan.FromSeconds(LIFE_TIME_SECOND));
 
             Despawn();
         }

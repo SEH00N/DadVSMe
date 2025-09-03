@@ -6,28 +6,28 @@ using UnityEngine;
 
 namespace DadVSMe
 {
-    public class BowlingSkill : UnitSkill
+    public class BowlingSkill : UnitSkill<BowlingSkillData, BowlingSkillData.Option>
     {
         private Unit owner = null;
-        private BowlingSkillData data;
         private PlayerFSMData fsmData;
         // private Entity target;
         // private Collider2D checkCol;
 
-        public BowlingSkill(BowlingSkillData data)
+        public override void OnRegist(UnitSkillComponent ownerComponent, SkillDataBase skillData)
         {
-            this.data = data;
-        }
-
-        public override void OnRegist(UnitSkillComponent ownerComponent)
-        {
-            base.OnRegist(ownerComponent);
+            base.OnRegist(ownerComponent, skillData);
             owner = ownerComponent.GetComponent<Unit>();
             fsmData = owner.FSMBrain.GetAIData<PlayerFSMData>();
             if (fsmData == null)
                 return;
 
             fsmData.onGrabbedEntityChanged += OnGrabbedEntityChanged;
+        }
+
+        public override void OnUnregist()
+        {
+            base.OnUnregist();
+            fsmData.onGrabbedEntityChanged -= OnGrabbedEntityChanged;
         }
 
         public override void Execute()
@@ -59,8 +59,8 @@ namespace DadVSMe
             if(otherUnit == attacker || otherUnit == owner)
                 return;
 
-            DynamicAttackData attackData = new DynamicAttackData(data.bowlingHitAttackData);
-            attackData.SetDamage(attackData.Damage + (int)(data.levelUpIncreaseRate * level));
+            DynamicAttackData attackData = new DynamicAttackData(GetData().bowlingHitAttackData);
+            attackData.SetDamage(attackData.Damage + GetOption().additiveDamage);
 
             otherUnit.UnitHealth.Attack(attacker, attackData);
             UnitFSMData unitFSMData = ownerComponent.GetComponent<FSMBrain>().GetAIData<UnitFSMData>();

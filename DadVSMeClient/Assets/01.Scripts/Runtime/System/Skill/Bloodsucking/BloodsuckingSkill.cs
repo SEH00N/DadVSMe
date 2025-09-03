@@ -3,22 +3,13 @@ using UnityEngine;
 
 namespace DadVSMe
 {
-    public class BloodsuckingSkill : UnitSkill
+    public class BloodsuckingSkill : UnitSkill<BloodsuckingSkillData, BloodsuckingSkillData.Option>
     {
         private UnitHealth health;
 
-        private float healRatio;
-        private float healRatioIncreaseRate;
-
-        public BloodsuckingSkill(float healRatio, float healRatioIncreaseRate)
+        public override void OnRegist(UnitSkillComponent ownerComponent, SkillDataBase skillData)
         {
-            this.healRatio = healRatio;
-            this.healRatioIncreaseRate = healRatioIncreaseRate;
-        }
-
-        public override void OnRegist(UnitSkillComponent ownerComponent)
-        {
-            base.OnRegist(ownerComponent);
+            base.OnRegist(ownerComponent, skillData);
 
             Unit owner = ownerComponent.GetComponent<Unit>();
             owner.onAttackTargetEvent.AddListener(OnAttackTarget);
@@ -36,19 +27,12 @@ namespace DadVSMe
             base.OnUnregist();
 
             Unit owner = ownerComponent.GetComponent<Unit>();
-            owner.onAttackTargetEvent.AddListener(OnAttackTarget);
+            owner.onAttackTargetEvent.RemoveListener(OnAttackTarget);
         }
 
         private void OnAttackTarget(Unit target, IAttackData data)
         {
-            health.Heal((int)(data.Damage * healRatio));
-        }
-
-        public override void LevelUp()
-        {
-            base.LevelUp();
-
-            healRatio += healRatioIncreaseRate;
+            health.Heal((int)(data.Damage * GetOption().healRatio));
         }
     }
 }

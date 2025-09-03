@@ -6,9 +6,9 @@ namespace DadVSMe
     [CreateAssetMenu(fileName = "SkillDataContainer", menuName = "DadVSMe/SkillData/SkillContainer")]
     public class SkillDataContainer : ScriptableObject
     {
-        [SerializeField] private SerializableDictionary<SkillType, SkillData> datas;
+        [SerializeField] private SerializableDictionary<SkillType, SkillDataBase> datas;
 
-        public UnitSkill CreateSkill(SkillType skillType)
+        public UnitSkillBase CreateSkill(SkillType skillType)
         {
             if (datas.ContainsKey(skillType))
             {
@@ -18,7 +18,7 @@ namespace DadVSMe
             return null;
         }
 
-        public SkillData GetSkillData(SkillType skillType)
+        public SkillDataBase GetSkillData(SkillType skillType)
         {
             return datas[skillType];
         }

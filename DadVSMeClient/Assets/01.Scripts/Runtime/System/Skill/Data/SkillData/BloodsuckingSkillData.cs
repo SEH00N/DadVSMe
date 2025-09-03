@@ -3,14 +3,12 @@ using UnityEngine;
 namespace DadVSMe
 {
     [CreateAssetMenu(fileName = "BloodsuckingSkillData", menuName = "DadVSMe/SkillData/Data/BloodsuckingSkillData")]
-    public class BloodsuckingSkillData : SkillData
+    public class BloodsuckingSkillData : SkillData<BloodsuckingSkill, BloodsuckingSkillData.Option>
     {
-        public float healRatio;
-        public float healRatioIncreaseRate;
-
-        public override UnitSkill CreateSkill()
+        [System.Serializable]
+        public class Option : SkillOption
         {
-            return new BloodsuckingSkill(healRatio, healRatioIncreaseRate);
+            public float healRatio;
         }
     }
 }

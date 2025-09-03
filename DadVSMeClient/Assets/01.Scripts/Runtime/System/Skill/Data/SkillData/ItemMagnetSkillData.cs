@@ -3,15 +3,12 @@ using UnityEngine;
 namespace DadVSMe
 {
     [CreateAssetMenu(fileName = "ItemMagnetSkillData", menuName = "DadVSMe/SkillData/Data/ItemMagnetSkillData")]
-    public class ItemMagnetSkillData : SkillData
+    public class ItemMagnetSkillData : SkillData<ItemMagnetSkill, ItemMagnetSkillData.Option>
     {
-        public float checkRadius;
-        public float levelUpIncreaseRate;
-        public float magnetSpeedMultiplier;
-        
-        public override UnitSkill CreateSkill()
+        [System.Serializable]
+        public class Option : SkillOption
         {
-            return new ItemMagnetSkill(Time.deltaTime, checkRadius, levelUpIncreaseRate, magnetSpeedMultiplier);
+            public float additiveValue;
         }
     }
 }

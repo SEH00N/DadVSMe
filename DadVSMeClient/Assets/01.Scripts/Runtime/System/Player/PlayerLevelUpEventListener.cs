@@ -74,7 +74,7 @@ namespace DadVSMe.Players
                     if(skillType == SkillType.HealPack)
                         continue;
 
-                    UnitSkill unitSkill = playerSkillComponent.GetSkill(skillType);
+                    UnitSkillBase unitSkill = playerSkillComponent.GetSkill(skillType);
                     if(unitSkill != null && unitSkill.Level >= GameDefine.MAX_SKILL_LEVEL)
                         continue;
 
@@ -99,7 +99,7 @@ namespace DadVSMe.Players
             return true;
         }
 
-        public async void OnSelectSkill(SkillSelectPopupUI popupUI, SkillData skillData)
+        public async void OnSelectSkill(SkillSelectPopupUI popupUI, SkillDataBase skillData)
         {
             if(skillData.skillType == SkillType.HealPack)
                 player.UnitHealth.Heal((skillData as HealPackSkillData).healAmount);

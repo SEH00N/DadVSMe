@@ -1,5 +1,3 @@
-using System;
-using Cysharp.Threading.Tasks;
 using DadVSMe.Entities;
 using H00N.Resources.Addressables;
 using H00N.Resources.Pools;
@@ -7,49 +5,55 @@ using UnityEngine;
 
 namespace DadVSMe
 {
-    public class GuidedOrbSkill : AutoActiveSkill
+    public class GuidedOrbSkill : AutoActiveSkill<GuidedOrbSkillData, GuidedOrbSkillData.Option>
     {
-        private AddressableAsset<GuidedOrb> prefab = null;
-        private AddressableAsset<AudioClip> sound;
+        private const float ORB_SPAWN_RADIUS = 3f;
 
-        private float orbSpawnRadius;
-        private float originCooltime;
-        private int spawnCount;
-        private int levelUpIncreaseRate;
-        private AttackDataBase attackData;
+        // private AddressableAsset<GuidedOrb> prefab = null;
+        // private AddressableAsset<AudioClip> sound;
 
-        public GuidedOrbSkill(AddressableAsset<GuidedOrb> prefab, float cooltime, int levelUpIncreaseRate,
-            AddressableAsset<AudioClip> sound, AttackDataBase attackData) : base(cooltime)
-        {
-            prefab.InitializeAsync().Forget();
-            sound.InitializeAsync().Forget();
+        // private float orbSpawnRadius;
+        // private float originCooltime;
+        // private int spawnCount;
+        // private int levelUpIncreaseRate;
+        // private AttackDataBase attackData;
 
-            this.prefab = prefab;
-            this.sound = sound;
-            this.attackData = attackData;
-            this.levelUpIncreaseRate = levelUpIncreaseRate;
-            originCooltime = cooltime;
-            orbSpawnRadius = 3f;
-            spawnCount = 2;
-        }
+        // public GuidedOrbSkill(AddressableAsset<GuidedOrb> prefab, float cooltime, int levelUpIncreaseRate,
+        //     AddressableAsset<AudioClip> sound, AttackDataBase attackData) : base(cooltime)
+        // {
+        //     prefab.InitializeAsync().Forget();
+        //     sound.InitializeAsync().Forget();
+
+        //     this.prefab = prefab;
+        //     this.sound = sound;
+        //     this.attackData = attackData;
+        //     this.levelUpIncreaseRate = levelUpIncreaseRate;
+        //     originCooltime = cooltime;
+        //     orbSpawnRadius = 3f;
+        //     spawnCount = 2;
+        // }
 
         public override void Execute()
         {
-            base.Execute();
+            GuidedOrbSkillData data = GetData();
+            GuidedOrbSkillData.Option option = GetOption();
 
+            AttackDataBase attackData = data.attackData;
+            AddressableAsset<GuidedOrb> prefab = data.prefab;
+            int spawnCount = option.spawnCount;
+            int additiveDamage = option.additiveDamage;
+            
             float angle = 360f / spawnCount;
             float currentAngle = 0f;
 
-            DynamicAttackData attackData = new DynamicAttackData(this.attackData);
-            attackData.SetDamage(attackData.Damage + (int)(levelUpIncreaseRate * level));
+            DynamicAttackData dynamicAttackData = new DynamicAttackData(attackData);
+            dynamicAttackData.SetDamage(dynamicAttackData.Damage + additiveDamage);
 
             while (currentAngle < 360f)
             {
                 currentAngle += angle;
-                Vector2 spawnPoint = ownerComponent.transform.position +
-                    new Vector3(Mathf.Sin(currentAngle * Mathf.Deg2Rad), Mathf.Cos(currentAngle * Mathf.Deg2Rad)) * orbSpawnRadius;
+                Vector2 spawnPoint = ownerComponent.transform.position + new Vector3(Mathf.Sin(currentAngle * Mathf.Deg2Rad), Mathf.Cos(currentAngle * Mathf.Deg2Rad)) * ORB_SPAWN_RADIUS;
                 Collider2D[] cols = Physics2D.OverlapCircleAll(spawnPoint, 10f);
-
 
                 if (cols.Length == 0)
                     continue;
@@ -74,21 +78,20 @@ namespace DadVSMe
                 if (target == null)
                     continue;
 
-                GuidedOrb guidedOrb = PoolManager.Spawn<GuidedOrb>(prefab, GameInstance.GameCycle.transform);
+                GuidedOrb guidedOrb = PoolManager.Spawn<GuidedOrb>(prefab.Key, GameInstance.GameCycle.transform);
                 guidedOrb.transform.position = spawnPoint;
-                guidedOrb.SetInstigator(ownerComponent.GetComponent<Unit>(), attackData, attackData);
+                guidedOrb.SetInstigator(ownerComponent.GetComponent<Unit>(), dynamicAttackData, dynamicAttackData);
                 guidedOrb.SetTarget(target);
                 guidedOrb.Launch();
             }
 
-            _ = new PlaySound(sound);
+            _ = new PlayAttackFeedback(attackData, EAttackAttribute.Crazy, ownerComponent.transform.position, Vector3.zero, 1);
+            _ = new PlayAttackSound(attackData, EAttackAttribute.Crazy);
         }
 
-        public override void LevelUp()
+        protected override float GetCoolTime()
         {
-            base.LevelUp();
-
-            spawnCount += 1;
+            return GetOption().coolTime;
         }
     }
 }

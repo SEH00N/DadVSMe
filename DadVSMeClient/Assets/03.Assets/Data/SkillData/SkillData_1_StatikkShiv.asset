@@ -1,0 +1,89 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0575a8e10fced45989ff2ed6d42e7c5d, type: 3}
+  m_Name: SkillData_1_StatikkShiv
+  m_EditorClassIdentifier: 
+  skillType: 2
+  skillName:
+    m_TableReference:
+      m_TableCollectionName: GUID:4b8a0843654704550b752a7cb2d1b194
+    m_TableEntryReference:
+      m_KeyId: 1412393066496
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  skillIcon:
+    key: SkillIcon_1
+  optionsPerLevel:
+  - skillDesc:
+      m_TableReference:
+        m_TableCollectionName: GUID:4b8a0843654704550b752a7cb2d1b194
+      m_TableEntryReference:
+        m_KeyId: 4204422375661568
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    executeChance: 0.07
+    additiveDamage: 3
+  - skillDesc:
+      m_TableReference:
+        m_TableCollectionName: 
+      m_TableEntryReference:
+        m_KeyId: 0
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    executeChance: 0.09
+    additiveDamage: 6
+  - skillDesc:
+      m_TableReference:
+        m_TableCollectionName: 
+      m_TableEntryReference:
+        m_KeyId: 0
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    executeChance: 0.12
+    additiveDamage: 9
+  - skillDesc:
+      m_TableReference:
+        m_TableCollectionName: 
+      m_TableEntryReference:
+        m_KeyId: 0
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    executeChance: 0.15
+    additiveDamage: 12
+  - skillDesc:
+      m_TableReference:
+        m_TableCollectionName: 
+      m_TableEntryReference:
+        m_KeyId: 0
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    executeChance: 0.2
+    additiveDamage: 15
+  prefab:
+    key: StatikkShivLighting
+  attackData: {fileID: 11400000, guid: 0763bdd92eb894e3fbd618de93edd024, type: 2}
+  checkRadius: 5
+  references:
+    version: 2
+    RefIds: []

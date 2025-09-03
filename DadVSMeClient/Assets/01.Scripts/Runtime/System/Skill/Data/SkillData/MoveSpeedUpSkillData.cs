@@ -3,13 +3,12 @@ using UnityEngine;
 namespace DadVSMe
 {
     [CreateAssetMenu(fileName = "MoveSpeedUpSkillData", menuName = "DadVSMe/SkillData/Data/MoveSpeedUpSkillData")]
-    public class MoveSpeedUpSkillData : SkillData
+    public class MoveSpeedUpSkillData : SkillData<MoveSpeedUpSkill, MoveSpeedUpSkillData.Option>
     {
-        public float levelUpIncreaseRate;
-
-        public override UnitSkill CreateSkill()
+        [System.Serializable]
+        public class Option : SkillOption
         {
-            return new MoveSpeedUpSkill(levelUpIncreaseRate);
+            public float additiveValue;
         }
     }
 }

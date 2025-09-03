@@ -10,8 +10,8 @@ namespace DadVSMe
         [SerializeField] private SkillDataContainer skillDataContainer;
         public SkillDataContainer SkillDataContainer => skillDataContainer;
 
-        private Dictionary<SkillType, UnitSkill> skillContainer;
-        public Dictionary<SkillType, UnitSkill> SkillContainer => skillContainer;
+        private Dictionary<SkillType, UnitSkillBase> skillContainer;
+        public Dictionary<SkillType, UnitSkillBase> SkillContainer => skillContainer;
         public event Action<SkillType> OnSkillChangedEvent;
 
         public virtual void Initialize()
@@ -32,15 +32,15 @@ namespace DadVSMe
 
         public void RegistSkill(SkillType skillType)
         {
-            if (skillContainer.TryGetValue(skillType, out UnitSkill unitSkill))
+            if (skillContainer.TryGetValue(skillType, out UnitSkillBase unitSkill))
             {
                 unitSkill.LevelUp();
             }
             else
             {
-                UnitSkill newSkill = skillDataContainer.CreateSkill(skillType);
+                UnitSkillBase newSkill = skillDataContainer.CreateSkill(skillType);
                 skillContainer[skillType] = newSkill;
-                newSkill.OnRegist(this);
+                newSkill.OnRegist(this, skillDataContainer.GetSkillData(skillType));
             }
 
             OnSkillChangedEvent?.Invoke(skillType);
@@ -48,7 +48,7 @@ namespace DadVSMe
 
         public void UnregistSkill(SkillType skillType)
         {
-            if (skillContainer.TryGetValue(skillType, out UnitSkill unitSkill))
+            if (skillContainer.TryGetValue(skillType, out UnitSkillBase unitSkill))
             {
                 unitSkill.OnUnregist();
                 skillContainer.Remove(skillType);
@@ -60,9 +60,9 @@ namespace DadVSMe
             OnSkillChangedEvent?.Invoke(skillType);
         }
 
-        public UnitSkill GetSkill(SkillType skillType)
+        public UnitSkillBase GetSkill(SkillType skillType)
         {
-            skillContainer.TryGetValue(skillType, out UnitSkill unitSkill);
+            skillContainer.TryGetValue(skillType, out UnitSkillBase unitSkill);
             return unitSkill;
         }
 

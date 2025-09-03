@@ -1,0 +1,90 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8406349c18bf04ebb9721bf6faa347fa, type: 3}
+  m_Name: SkillData_9_FirePunch
+  m_EditorClassIdentifier: 
+  skillType: 0
+  skillName:
+    m_TableReference:
+      m_TableCollectionName: GUID:4b8a0843654704550b752a7cb2d1b194
+    m_TableEntryReference:
+      m_KeyId: 1645239853056
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  skillIcon:
+    key: SkillIcon_9
+  optionsPerLevel:
+  - skillDesc:
+      m_TableReference:
+        m_TableCollectionName: GUID:4b8a0843654704550b752a7cb2d1b194
+      m_TableEntryReference:
+        m_KeyId: 4205051294769152
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    burnTime: 2
+    attackDelay: 1
+  - skillDesc:
+      m_TableReference:
+        m_TableCollectionName: 
+      m_TableEntryReference:
+        m_KeyId: 0
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    burnTime: 2.2
+    attackDelay: 1
+  - skillDesc:
+      m_TableReference:
+        m_TableCollectionName: 
+      m_TableEntryReference:
+        m_KeyId: 0
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    burnTime: 2.4
+    attackDelay: 1
+  - skillDesc:
+      m_TableReference:
+        m_TableCollectionName: 
+      m_TableEntryReference:
+        m_KeyId: 0
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    burnTime: 2.6
+    attackDelay: 1
+  - skillDesc:
+      m_TableReference:
+        m_TableCollectionName: 
+      m_TableEntryReference:
+        m_KeyId: 0
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    burnTime: 2.8
+    attackDelay: 1
+  particlePrefab:
+    key: Particle_BurnSmoke
+  firePrefab:
+    key: Fire
+  attackData: {fileID: 11400000, guid: 67226be775cf346ac8d2658a0f70bb90, type: 2}
+  references:
+    version: 2
+    RefIds: []

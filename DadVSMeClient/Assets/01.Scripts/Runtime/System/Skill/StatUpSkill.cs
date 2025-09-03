@@ -1,26 +1,22 @@
-using UnityEngine;
+using DadVSMe.Entities;
 
 namespace DadVSMe
 {
-    public class StatUpSkill : UnitSkill
+    public abstract class StatUpSkill<TData, TOption> : UnitSkill<TData, TOption> where TData : SkillDataBase where TOption : SkillOption
     {
-        public override void OnRegist(UnitSkillComponent ownerComponent)
-        {
-            base.OnRegist(ownerComponent);
+        protected UnitStatData statData = null;
 
+        public override void OnRegist(UnitSkillComponent ownerComponent, SkillDataBase skillData)
+        {
+            statData = ownerComponent.GetComponent<Unit>().FSMBrain.GetAIData<UnitStatData>();
+            base.OnRegist(ownerComponent, skillData);
             Execute();
         }
 
-        public override void LevelUp()
+        protected override void OnLevelUp()
         {
-            base.LevelUp();
-
+            base.OnLevelUp();
             Execute();
-        }
-
-        public override void Execute()
-        {
-            
         }
     }
 }

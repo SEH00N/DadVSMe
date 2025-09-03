@@ -4,15 +4,14 @@ using UnityEngine;
 namespace DadVSMe
 {
     [CreateAssetMenu(fileName = "AngerKnockbackSkillData", menuName = "DadVSMe/SkillData/Data/AngerKnockbackSkillData")]
-    public class AngerKnockbackSkillData : SkillData
+    public class AngerKnockbackSkillData : SkillData<AngerKnockbackSkill, AngerKnockbackSkillData.Option>
     {
-        public AttackDataBase attackData;
-        public float knockbackRange;
-        public float levelUpIncreaseRate;
-
-        public override UnitSkill CreateSkill()
+        [System.Serializable]
+        public class Option : SkillOption
         {
-            return new AngerKnockbackSkill(attackData, knockbackRange, levelUpIncreaseRate);
+            public float knockbackRange;
         }
+
+        public AttackDataBase attackData;
     }
 }

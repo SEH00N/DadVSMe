@@ -5,29 +5,25 @@ using UnityEngine;
 
 namespace DadVSMe
 {
-    public class AngerKnockbackSkill : UnitSkill
+    public class AngerKnockbackSkill : UnitSkill<AngerKnockbackSkillData, AngerKnockbackSkillData.Option>
     {
         private Unit owner = null;
-        private AttackDataBase attackData;
-        private float knockbackRange;
-        private float levelUpIncreaseRate;
 
-        public AngerKnockbackSkill(AttackDataBase attackData, float knockbackRange, float levelUpIncreaseRate) : base()
+        public override void OnRegist(UnitSkillComponent ownerComponent, SkillDataBase skillData)
         {
-            this.attackData = attackData;
-            this.knockbackRange = knockbackRange;
-            this.levelUpIncreaseRate = levelUpIncreaseRate;
-        }
+            base.OnRegist(ownerComponent, skillData);
 
-        public override void OnRegist(UnitSkillComponent ownerComponent)
-        {
-            base.OnRegist(ownerComponent);
+            _ = new InitializeAttackFeedback(GetData().attackData);
+
             owner = ownerComponent.GetComponent<Unit>();
             owner.FSMBrain.OnStateChangedEvent.AddListener(OnStatChanged);
         }
 
         public override void Execute()
         {
+            float knockbackRange = GetOption().knockbackRange;
+            AttackDataBase attackData = GetData().attackData;
+
             Collider2D[] cols = Physics2D.OverlapCircleAll(ownerComponent.transform.position, knockbackRange);
 
             if (cols.Length == 0)
@@ -49,6 +45,9 @@ namespace DadVSMe
                 }
             }
 
+            _ = new PlayAttackFeedback(attackData, unitFSMData.attackAttribute, ownerComponent.transform.position, Vector3.zero, unitFSMData.forwardDirection);
+            _ = new PlayAttackSound(attackData, unitFSMData.attackAttribute);
+
             unitFSMData.attackAttribute = attackAttribute;
         }
 
@@ -56,13 +55,6 @@ namespace DadVSMe
         {
             base.OnUnregist();
             ownerComponent.GetComponent<FSMBrain>().OnStateChangedEvent.RemoveListener(OnStatChanged);
-        }
-
-        public override void LevelUp()
-        {
-            base.LevelUp();
-
-            knockbackRange = levelUpIncreaseRate;
         }
 
         private void OnStatChanged(FSMState current, FSMState target)

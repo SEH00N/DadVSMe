@@ -1,21 +1,18 @@
 using DadVSMe.Entities;
-using H00N.Resources.Addressables;
 using UnityEngine;
 
 namespace DadVSMe
 {
     [CreateAssetMenu(fileName = "DeadBombSkillData", menuName = "DadVSMe/SkillData/Data/DeadBombSkillData")]
-    public class DeadBombSkillData : SkillData
+    public class DeadBombSkillData : SkillData<DeadBombSkill, DeadBombSkillData.Option>
     {
-        public AttackDataBase attackData;
-        public AddressableAsset<PoolableEffect> effectRef;
-        public AddressableAsset<AudioClip> soundRef;
-        public float attackRadius;
-        public float levelUpIncreaseRate;
-        
-        public override UnitSkill CreateSkill()
+        [System.Serializable]
+        public class Option : SkillOption
         {
-            return new DeadBombSkill(attackData, effectRef, soundRef, attackRadius, levelUpIncreaseRate);
+            public int additiveDamage;
         }
+
+        public AttackDataBase attackData;
+        public float attackRadius;
     }
 }

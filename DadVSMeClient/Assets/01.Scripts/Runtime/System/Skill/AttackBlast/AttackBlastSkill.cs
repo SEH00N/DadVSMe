@@ -2,44 +2,35 @@ using System;
 using Cysharp.Threading.Tasks;
 using DadVSMe.Entities;
 using DadVSMe.Entities.FSM;
-using DadVSMe.Players.FSM;
 using H00N.AI.FSM;
-using H00N.Resources;
 using H00N.Resources.Addressables;
 using H00N.Resources.Pools;
 using UnityEngine;
 
 namespace DadVSMe
 {
-    public class AttackBlastSkill : UnitSkill
+    public class AttackBlastSkill : UnitSkill<AttackBlastSkillData, AttackBlastSkillData.Option>
     {
         private const float SPAWN_RANDOMNESS = 0.5f;
         private static readonly Vector2 SpawnOffset = new Vector2(1.5f, 2f);
 
-        private AddressableAsset<AttackBlast> prefab = null;
-        private float attackBlastLifeTime;
-        private float levelUpIncreaseRate;
+        // private float attackBlastLifeTime;
 
-        public AttackBlastSkill(AddressableAsset<AttackBlast> prefab, float attackBlastLifeTime, float levelUpIncreaseRate)
+        public override void OnRegist(UnitSkillComponent ownerComponent, SkillDataBase skillData)
         {
-            prefab.InitializeAsync().Forget();
+            base.OnRegist(ownerComponent, skillData);
 
-            this.prefab = prefab;
-            this.attackBlastLifeTime = attackBlastLifeTime;
-            this.levelUpIncreaseRate = levelUpIncreaseRate;
-        }
-
-        public override void OnRegist(UnitSkillComponent ownerComponent)
-        {
-            base.OnRegist(ownerComponent);
-
+            GetData().prefab.InitializeAsync().Forget();
             ownerComponent.GetComponent<FSMBrain>().OnStateChangedEvent.AddListener(OnOwnerStatChanged);
         }
 
         public override void Execute()
         {
-            AttackBlast attackBlast = PoolManager.Spawn<AttackBlast>(prefab, GameInstance.GameCycle.transform);
+            AddressableAsset<AttackBlast> prefab = GetData().prefab;
+            float attackBlastLifeTime = GetOption().attackBlastLifeTime;
 
+            AttackBlast attackBlast = PoolManager.Spawn<AttackBlast>(prefab, GameInstance.GameCycle.transform);
+            attackBlast.Initialize(GetOption().additiveDamage);
             attackBlast.SetInstigator(ownerComponent.gameObject.GetComponent<Unit>());
 
             Transform ownerTrm = ownerComponent.transform;
@@ -65,13 +56,6 @@ namespace DadVSMe
                 if(target.gameObject.name.Contains("Punch1_"))
                     Execute();
             }
-        }
-
-        public override void LevelUp()
-        {
-            base.LevelUp();
-
-            attackBlastLifeTime += levelUpIncreaseRate;
         }
     }
 }

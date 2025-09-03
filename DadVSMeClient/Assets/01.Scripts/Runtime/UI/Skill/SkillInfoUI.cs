@@ -15,8 +15,8 @@ namespace DadVSMe.UI.Skills
             int i = 0;
             foreach(SkillType skillType in unitSkillComponent)
             {
-                SkillData skillData = unitSkillComponent.SkillDataContainer.GetSkillData(skillType);
-                UnitSkill unitSkill = unitSkillComponent.GetSkill(skillType);
+                SkillDataBase skillData = unitSkillComponent.SkillDataContainer.GetSkillData(skillType);
+                UnitSkillBase unitSkill = unitSkillComponent.GetSkill(skillType);
                 elementUIList[i].Initialize(skillData, unitSkill?.Level ?? 0);
                 i++;
             }
@@ -29,7 +29,7 @@ namespace DadVSMe.UI.Skills
 
         private void HandleSkillChanged(SkillType skillType)
         {
-            SkillData skillData = unitSkillComponent.SkillDataContainer.GetSkillData(skillType);
+            SkillDataBase skillData = unitSkillComponent.SkillDataContainer.GetSkillData(skillType);
             for(int i = 0; i < elementUIList.Count; i++)
             {
                 SkillInfoElementUI elementUI = elementUIList[i];

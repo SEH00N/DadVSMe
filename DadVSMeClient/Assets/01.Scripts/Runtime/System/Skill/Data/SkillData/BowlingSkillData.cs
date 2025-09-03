@@ -4,14 +4,14 @@ using UnityEngine;
 namespace DadVSMe
 {
     [CreateAssetMenu(fileName = "BowlingSkillData", menuName = "DadVSMe/SkillData/Data/BowlingSkillData")]
-    public class BowlingSkillData : SkillData
+    public class BowlingSkillData : SkillData<BowlingSkill, BowlingSkillData.Option>
     {
-        public float levelUpIncreaseRate;
-        public AttackDataBase bowlingHitAttackData;
-    
-        public override UnitSkill CreateSkill()
+        [System.Serializable]
+        public class Option : SkillOption
         {
-            return new BowlingSkill(this);
+            public int additiveDamage;
         }
+
+        public AttackDataBase bowlingHitAttackData;
     }
 }

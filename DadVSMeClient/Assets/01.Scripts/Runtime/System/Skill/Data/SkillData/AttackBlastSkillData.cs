@@ -4,15 +4,15 @@ using UnityEngine;
 namespace DadVSMe
 {
     [CreateAssetMenu(fileName = "AttackBlastSkillData", menuName = "DadVSMe/SkillData/Data/AttackBlastSkillData")]
-    public class AttackBlastSkillData : SkillData
+    public class AttackBlastSkillData : SkillData<AttackBlastSkill, AttackBlastSkillData.Option>
     {
-        public AddressableAsset<AttackBlast> prefab;
-        public float attackBlastLifeTime;
-        public float levelUpIncreaseRate;
-
-        public override UnitSkill CreateSkill()
+        [System.Serializable]
+        public class Option : SkillOption
         {
-            return new AttackBlastSkill(prefab, attackBlastLifeTime, levelUpIncreaseRate);
+            public float attackBlastLifeTime;
+            public int additiveDamage;
         }
+
+        public AddressableAsset<AttackBlast> prefab;
     }
 }

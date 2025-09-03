@@ -1,5 +1,3 @@
-using System;
-using Cysharp.Threading.Tasks;
 using DadVSMe.Entities;
 using H00N.Resources.Addressables;
 using H00N.Resources.Pools;
@@ -7,44 +5,45 @@ using UnityEngine;
 
 namespace DadVSMe
 {
-    public class FirePunchSkill : UnitSkill
+    public class FirePunchSkill : UnitSkill<FirePunchSkillData, FirePunchSkillData.Option>
     {
         private static readonly Vector2 SpawnOffset = new Vector2(0f, 1.5f);
 
-        private float levelUpIncreaseRate;
-        private AddressableAsset<ParticleSystem> particlePrefab;
-        private AddressableAsset<Fire> firePrefab;
-        private float burnTime;
-        private float attackDelay;
-        private AttackDataBase attackData;
+        // private float levelUpIncreaseRate;
+        // private AddressableAsset<ParticleSystem> particlePrefab;
+        // private AddressableAsset<Fire> firePrefab;
+        // private float burnTime;
+        // private float attackDelay;
+        // private AttackDataBase attackData;
 
         private Unit owner;
 
-        public FirePunchSkill(AttackDataBase attackData, float levelUpIncreaseRate, AddressableAsset<ParticleSystem> particlePrefab, AddressableAsset<Fire> firePrefab, float burnTime, float attackDelay) : base()
-        {
-            this.levelUpIncreaseRate = levelUpIncreaseRate;
-            this.particlePrefab = particlePrefab;
-            this.firePrefab = firePrefab;
-            this.burnTime = burnTime;
-            this.attackDelay = attackDelay;
-            this.attackData = attackData;
+        // public FirePunchSkill(AttackDataBase attackData, float levelUpIncreaseRate, AddressableAsset<ParticleSystem> particlePrefab, AddressableAsset<Fire> firePrefab, float burnTime, float attackDelay) : base()
+        // {
+        //     this.levelUpIncreaseRate = levelUpIncreaseRate;
+        //     this.particlePrefab = particlePrefab;
+        //     this.firePrefab = firePrefab;
+        //     this.burnTime = burnTime;
+        //     this.attackDelay = attackDelay;
+        //     this.attackData = attackData;
 
-            firePrefab.InitializeAsync().Forget();
-            particlePrefab.InitializeAsync().Forget();
-        }
 
-        public override void OnRegist(UnitSkillComponent ownerComponent)
+        // }
+
+        public override void OnRegist(UnitSkillComponent ownerComponent, SkillDataBase skillData)
         {
-            base.OnRegist(ownerComponent);
+            base.OnRegist(ownerComponent, skillData);
 
             owner = ownerComponent.GetComponent<Unit>();
             owner.onAttackTargetEvent.AddListener(OnAttackTarget);
+
             Execute();
             SpawnEffectAsync();
         }
 
         private async void SpawnEffectAsync()
         {
+            AddressableAsset<ParticleSystem> particlePrefab = GetData().particlePrefab;
             await particlePrefab.InitializeAsync();
 
             ParticleSystem particle = PoolManager.Spawn<ParticleSystem>(particlePrefab.Key, ownerComponent.gameObject.transform);
@@ -52,10 +51,20 @@ namespace DadVSMe
             particle.Play();
         }
 
-        private void OnAttackTarget(Unit target, IAttackData attackData)
+        private async void OnAttackTarget(Unit target, IAttackData attackData)
         {
-            Fire fire = PoolManager.Spawn(firePrefab, GameInstance.GameCycle.transform).GetComponent<Fire>();
-            fire.Init(ownerComponent.GetComponent<Unit>(), target, this.attackData, this.attackData, burnTime, attackDelay);
+            FirePunchSkillData data = GetData();
+            FirePunchSkillData.Option option = GetOption();
+
+            AttackDataBase fireAttackData = data.attackData;
+            AddressableAsset<Fire> firePrefab = data.firePrefab;
+            float burnTime = option.burnTime;
+            float attackDelay = option.attackDelay;
+
+            await firePrefab.InitializeAsync();
+
+            Fire fire = PoolManager.Spawn(firePrefab.Key, GameInstance.GameCycle.transform).GetComponent<Fire>();
+            fire.Init(ownerComponent.GetComponent<Unit>(), target, fireAttackData, fireAttackData, burnTime, attackDelay);
         }
 
         public override void Execute()
@@ -69,13 +78,6 @@ namespace DadVSMe
 
             owner.SetAttackAttribute(EAttackAttribute.Normal);
             owner.onAttackTargetEvent.RemoveListener(OnAttackTarget);
-        }
-
-        public override void LevelUp()
-        {
-            base.LevelUp();
-
-            burnTime += levelUpIncreaseRate;
         }
     }
 }

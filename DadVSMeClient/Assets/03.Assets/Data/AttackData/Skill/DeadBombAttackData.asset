@@ -16,15 +16,13 @@ MonoBehaviour:
   isRageAttack: 0
   feedbackDatas:
   - attackAttribute: 1
-    attackEffects: []
+    attackEffects:
+    - key: VFX_DeadBomb
     hitEffects:
     - key: VFX_Impact1
     - key: VFX_Blood1
     attackSounds:
-    - key: sfx_swing_small_0
-    - key: sfx_swing_small_1
-    - key: sfx_swing_small_2
-    - key: sfx_swing_small_3
+    - key: sfx_explosion_0
     hitSounds:
     - key: sfx_punch_small_0
     - key: sfx_punch_small_1

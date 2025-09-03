@@ -1,0 +1,80 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7c66ab94339440c783945d28a10f857, type: 3}
+  m_Name: SkillData_5_Bloodsucking
+  m_EditorClassIdentifier: 
+  skillType: 7
+  skillName:
+    m_TableReference:
+      m_TableCollectionName: GUID:4b8a0843654704550b752a7cb2d1b194
+    m_TableEntryReference:
+      m_KeyId: 1542139666432
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  skillIcon:
+    key: SkillIcon_5
+  optionsPerLevel:
+  - skillDesc:
+      m_TableReference:
+        m_TableCollectionName: GUID:4b8a0843654704550b752a7cb2d1b194
+      m_TableEntryReference:
+        m_KeyId: 4204786780987392
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    healRatio: 0.5
+  - skillDesc:
+      m_TableReference:
+        m_TableCollectionName: 
+      m_TableEntryReference:
+        m_KeyId: 0
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    healRatio: 0.6
+  - skillDesc:
+      m_TableReference:
+        m_TableCollectionName: 
+      m_TableEntryReference:
+        m_KeyId: 0
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    healRatio: 0.7
+  - skillDesc:
+      m_TableReference:
+        m_TableCollectionName: 
+      m_TableEntryReference:
+        m_KeyId: 0
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    healRatio: 0.8
+  - skillDesc:
+      m_TableReference:
+        m_TableCollectionName: 
+      m_TableEntryReference:
+        m_KeyId: 0
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    healRatio: 0.9
+  references:
+    version: 2
+    RefIds: []

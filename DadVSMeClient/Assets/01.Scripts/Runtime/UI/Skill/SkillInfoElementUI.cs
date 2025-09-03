@@ -15,10 +15,10 @@ namespace DadVSMe.UI.Skills
         [SerializeField] Image skillIconImage = null;
         [SerializeField] List<Image> levelObjectList = null;
 
-        private SkillData skillData;
-        public SkillData SkillData => skillData;
+        private SkillDataBase skillData;
+        public SkillDataBase SkillData => skillData;
 
-        public void Initialize(SkillData skillData, int currentLevel)
+        public void Initialize(SkillDataBase skillData, int currentLevel)
         {
             this.skillData = skillData;
 

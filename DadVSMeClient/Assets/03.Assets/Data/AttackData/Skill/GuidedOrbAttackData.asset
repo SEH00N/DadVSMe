@@ -21,7 +21,8 @@ MonoBehaviour:
     - key: VFX_Impact1
     - key: VFX_Blood1
     - key: VFX_CrazyHit
-    attackSounds: []
+    attackSounds:
+    - key: GuidedOrbSpawn
     hitSounds:
     - key: sfx_punch_small_0
     - key: sfx_punch_small_1
