@@ -21,9 +21,10 @@ namespace DadVSMe
         public const int ITEM_LAYER_MASK = 1 << 12;
         public const int ENEMY_LAYER_MASK = 1 << 13;
 
-        public const float GRAVITY_SCALE = 6.5f;
+        public const float GRAVITY_SCALE = 8f;
 
         public const int MAX_SKILL_LEVEL = 5;
+        public const int SKILL_INVENTORY_COUNT = 6;
 
         public const float DEFAULT_FADE_DURATION = 0.75f;
         public const float DEFAULT_TIME_SCALE = 1f;

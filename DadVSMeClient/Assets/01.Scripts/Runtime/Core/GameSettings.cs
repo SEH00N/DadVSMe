@@ -5,6 +5,16 @@ namespace DadVSMe
 {
     public static class GameSettings
     {
+        #if UNITY_EDITOR
+        public static class Editor
+        {
+            public static bool SHOULD_PLAY_GAME_START_DIRECTING {
+                get => UnityEditor.EditorPrefs.GetInt("ShouldPlayGameStartDirecting", 1) == 1;
+                set => UnityEditor.EditorPrefs.SetInt("ShouldPlayGameStartDirecting", value ? 1 : 0);
+            }
+        }
+        #endif
+
         private static float masterVolume = float.MinValue;
         public static float MasterVolume {
             get {

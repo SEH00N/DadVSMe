@@ -2954,8 +2954,8 @@ MonoBehaviour:
   unitRigidbody: {fileID: 8522405111466415502}
   unitCollider: {fileID: 6169808395141815018}
   holdState: {fileID: 2654032514642745503}
-  bounceState: {fileID: 3987183898820894391}
   size: {x: 0, y: 0}
+  bounceState: {fileID: 3987183898820894391}
   onAttackTargetEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -2994,12 +2994,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a291a51120d374a879997b596c73db3c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  invincibilityTime: 0
   onAttackEvent:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 7031250399494906082}
         m_TargetAssemblyTypeName: DadVSMe.Entities.UnitAttackEventListener, DadVSMe
         m_MethodName: OnAttack
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  onHealEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 7031250399494906082}
+        m_TargetAssemblyTypeName: DadVSMe.Entities.UnitHealthEventListener, DadVSMe
+        m_MethodName: OnHeal
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3091,6 +3107,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   unit: {fileID: 8371870542813127976}
+  damageTextPrefab:
+    key: DamageText
 --- !u!114 &2441180411158270835
 MonoBehaviour:
   m_ObjectHideFlags: 0

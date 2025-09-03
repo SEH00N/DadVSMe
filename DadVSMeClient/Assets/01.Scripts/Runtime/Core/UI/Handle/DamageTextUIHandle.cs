@@ -13,17 +13,17 @@ namespace DadVSMe
     {
         public override async void Execute(DamageTextUIHandleParameter handleParameter)
         {
-            AddressableAsset<DamageText> textRef =
-                handleParameter.feedbackData.GetFeedbackData(handleParameter.attackAttribute)?.hitText;
+            // AddressableAsset<DamageText> textRef =
+            //     handleParameter.feedbackData.GetFeedbackData(handleParameter.attackAttribute)?.hitText;
 
-            if (textRef == null)
+            if (handleParameter.damageTextPrefab == null)
                 return;
-            if (string.IsNullOrEmpty(textRef.Key))
+            if (string.IsNullOrEmpty(handleParameter.damageTextPrefab.Key))
                 return;
                 
-            await textRef.InitializeAsync();
+            await handleParameter.damageTextPrefab.InitializeAsync();
 
-            DamageText text = PoolManager.Spawn(textRef).GetComponent<DamageText>();
+            DamageText text = PoolManager.Spawn(handleParameter.damageTextPrefab).GetComponent<DamageText>();
 
             if (text == null)
                 return;
@@ -53,7 +53,7 @@ namespace DadVSMe
     {
         public Transform target;
         public Vector3 upOffset;
-        public IAttackFeedbackDataContainer feedbackData;
+        public AddressableAsset<DamageText> damageTextPrefab;
         public float damage;
         public EAttackAttribute attackAttribute;
         public bool isCritical = false;

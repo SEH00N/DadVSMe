@@ -9818,6 +9818,21 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  onHealEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 8895890805159774065}
+        m_TargetAssemblyTypeName: DadVSMe.Entities.UnitHealthEventListener, DadVSMe
+        m_MethodName: OnHeal
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2841000604668159261
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9967,6 +9982,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5175a02657ee944efa2fca1173a2eb90, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 1174489111746341445}
   playerSkillComponent: {fileID: 6550646681929325183}
   skillSelectPopupUIPrefab:
     key: SkillSelectPopupUI
@@ -9985,6 +10001,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   unit: {fileID: 1174489111746341445}
+  damageTextPrefab:
+    key: DamageText
 --- !u!61 &496568060240948358
 BoxCollider2D:
   m_ObjectHideFlags: 0

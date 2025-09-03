@@ -1,12 +1,13 @@
 using DadVSMe.Core.UI;
-using H00N.AI.FSM;
+using H00N.Resources.Addressables;
 using UnityEngine;
 
 namespace DadVSMe.Entities
 {
-    public class UnitAttackEventListener : MonoBehaviour
+    public class UnitHealthEventListener : MonoBehaviour
     {
         [SerializeField] Unit unit = null;
+        [SerializeField] AddressableAsset<DamageText> damageTextPrefab = null;
 
         private UnitFSMData fsmData = new UnitFSMData();
 
@@ -30,20 +31,25 @@ namespace DadVSMe.Entities
             fsmData.attackData = attackData;
             fsmData.hitAttribute = attacker.AttackAttribute;
 
-            SpawnDamageText(attacker, attackData, attackData as IAttackFeedbackDataContainer);
+            SpawnDamageText(attacker.AttackAttribute, attackData.Damage * attacker.AttackPower);
         }
 
-        private void SpawnDamageText(IAttacker attacker, IAttackData attackData, IAttackFeedbackDataContainer feedbackData)
+        public void OnHeal(int amount)
         {
-            if(feedbackData == null)
+            SpawnDamageText(EAttackAttribute.Normal, -amount);
+        }
+
+        private void SpawnDamageText(EAttackAttribute attackAttribute, float damage)
+        {
+            if(Mathf.Abs(damage) < 0.01f)
                 return;
 
             var handle = UIManager.CreateUIHandle<DamageTextUIHandlse, DamageTextUIHandleParameter>(out DamageTextUIHandleParameter param);
             param.target = transform;
-            param.attackAttribute = attacker.AttackAttribute;
-            param.feedbackData = feedbackData;
+            param.attackAttribute = attackAttribute;
+            param.damageTextPrefab = damageTextPrefab;
             param.upOffset = Vector3.up;
-            param.damage = attackData.Damage * attacker.AttackPower;
+            param.damage = damage;
 
             handle.Execute(param);
         }

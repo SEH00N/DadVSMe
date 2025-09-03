@@ -70,6 +70,11 @@ namespace DadVSMe.GameCycles
             await mainBGMLibrary.InitializeAsync();
             AudioManager.Instance.PlayBGM(mainBGMLibrary, loadCache: false);
 
+            #if UNITY_EDITOR
+            if(GameSettings.Editor.SHOULD_PLAY_GAME_START_DIRECTING == false)
+                return;
+            #endif
+
             await PlayGameStartDirecting();
         }
 

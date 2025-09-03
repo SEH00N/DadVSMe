@@ -15,6 +15,6 @@ namespace DadVSMe
         ItemMagnet,
         DeadBomb,
         Bowling,
-        
+        HealPack
     }
 }

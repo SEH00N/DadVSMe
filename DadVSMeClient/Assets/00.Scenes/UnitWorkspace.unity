@@ -2032,7 +2032,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _pausePopupPrefab:
-    key: Assets/02.Prefabs/UI/ETC/PausePopupUI.prefab
+    key: PausePopupUI
   _settingPopupPrefab:
     key: SettingPopupUI
 --- !u!4 &562978054
@@ -2102,15 +2102,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bossWaveBlockObject: {fileID: 986724322}
-  bossSpawnPoint: {fileID: 2053846672}
-  conditionDistance: 10
   isFinalBoss: 0
-  bossPrefab:
-    key: Bully
-  enemyData:
-    key: Bully
-  statData:
-    key: BullyStatData
+  bossSpawnInfo:
+    spawnPoint: {fileID: 0}
+    conditionDistance: 0
+    spawnTable: []
   bgmLibrary:
     key: BullyBGM
   bossSpawnCinemachineCamera: {fileID: 2009102084}
@@ -2853,14 +2849,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 995546407}
     m_Modifications:
-    - target: {fileID: 1174489111746341445, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
-      propertyPath: itemFidnRadius
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2841000604668159261, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
-      propertyPath: managedReferences[3777565259024040135].baseLevelUpXP
-      value: 300
-      objectReference: {fileID: 0}
     - target: {fileID: 7488116858921959985, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
       propertyPath: m_LocalPosition.x
       value: -7.12
@@ -2901,14 +2889,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8407812844467455088, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
-      propertyPath: playerSkillComponent
-      value: 
-      objectReference: {fileID: 832768501}
-    - target: {fileID: 8407812844467455088, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
-      propertyPath: skillSelectPopupUIPrefab.key
-      value: SkillSelectPopupUI
-      objectReference: {fileID: 0}
     - target: {fileID: 8996695108358816546, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
       propertyPath: m_Name
       value: Player
@@ -2934,17 +2914,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7488116858921959985, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
   m_PrefabInstance: {fileID: 832768498}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &832768501 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6550646681929325183, guid: 9131e00d983e343f3b5745b7314873a3, type: 3}
-  m_PrefabInstance: {fileID: 832768498}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4ac7311ac0ae245a39789789efa20658, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &846318927
 GameObject:
   m_ObjectHideFlags: 0
@@ -3286,7 +3255,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 139d283b93a7449a48400577844c6801, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  deadlineCollisionAttackData: {fileID: 11400000, guid: 7ff324354c9144979bdc2a83e1b8105c, type: 2}
+  deadlineCollisionPlayerAttackData: {fileID: 11400000, guid: 7ff324354c9144979bdc2a83e1b8105c, type: 2}
+  deadlineCollisionEnemyAttackData: {fileID: 11400000, guid: 78747e3fcf3342645930e1fd09b7f3a6, type: 2}
 --- !u!61 &896525987
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3642,15 +3612,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bossWaveBlockObject: {fileID: 2102441580}
-  bossSpawnPoint: {fileID: 1110768749}
-  conditionDistance: 10
   isFinalBoss: 0
-  bossPrefab:
-    key: James
-  enemyData:
-    key: JamesEnemyData
-  statData:
-    key: JamesStatData
+  bossSpawnInfo:
+    spawnPoint: {fileID: 0}
+    conditionDistance: 0
+    spawnTable: []
   bgmLibrary:
     key: BullyBGM
   bossSpawnCinemachineCamera: {fileID: 1305793398}

@@ -89,13 +89,16 @@ namespace DadVSMe.UI.Skills
 
         public async void OnTouchThis()
         {
-            for(int i = 0; i < levelObjectList.Count; i++)
+            if(skillData.skillType != SkillType.HealPack)
             {
-                if(levelObjectList[i].activeSelf)
-                    continue;
+                for(int i = 0; i < levelObjectList.Count; i++)
+                {
+                    if(levelObjectList[i].activeSelf)
+                        continue;
 
-                levelObjectList[i].SetActive(true);
-                break;
+                    levelObjectList[i].SetActive(true);
+                    break;
+                }
             }
 
             IsSelected = true;

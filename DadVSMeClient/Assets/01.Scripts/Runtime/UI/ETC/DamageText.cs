@@ -23,6 +23,7 @@ namespace DadVSMe
         [Header("Colors")]
         [SerializeField] Color defaultColor = Color.white;
         [SerializeField] Color criticalColor = Color.red;
+        [SerializeField] Color healColor = Color.green;
         [SerializeField] SerializableDictionary<EAttackAttribute, Color> attackAttributeColors = new SerializableDictionary<EAttackAttribute, Color>();
 
         [Header("Anim")]
@@ -75,8 +76,17 @@ namespace DadVSMe
             _follow = follow;
             _offset = headOffsetWorld;
 
-            tmp.SetText(amount.ToString("N0"));
-            tmp.color = critical ? criticalColor : GetColor(attackAttribute);
+            if(amount < 0)
+            {
+                tmp.SetText($"+{Mathf.Abs(amount):N0}");
+                tmp.color = healColor;
+            }
+            else
+            {
+                tmp.SetText(amount.ToString("N0"));
+                tmp.color = critical ? criticalColor : GetColor(attackAttribute);
+            }
+
             tmp.fontSize = Random.Range(fontSizeMin, fontSizeMax);
 
             _spawnJitter = new Vector3(

@@ -11,18 +11,16 @@ namespace DadVSMe.Players
     {
         private const int SKILL_COUNT = 3;
 
-        [SerializeField] UnitSkillComponent playerSkillComponent;
-        [SerializeField] AddressableAsset<SkillSelectPopupUI> skillSelectPopupUIPrefab;
-        [SerializeField] AddressableAsset<AudioClip> levelUpSound;
+        [SerializeField] Player player = null;
+        [SerializeField] UnitSkillComponent playerSkillComponent = null;
+        [SerializeField] AddressableAsset<SkillSelectPopupUI> skillSelectPopupUIPrefab = null;
+        [SerializeField] AddressableAsset<AudioClip> levelUpSound = null;
 
         private void Awake()
         {
             skillSelectPopupUIPrefab.InitializeAsync().Forget();
             levelUpSound.InitializeAsync().Forget();
         }
-
-        [ContextMenu("Levelip")]
-        public void LEVEL() => OnLevelUp(0);
 
         public async void OnLevelUp(int _)
         {
@@ -43,14 +41,27 @@ namespace DadVSMe.Players
             List<SkillType> availableSkillTypes = new List<SkillType>(SKILL_COUNT);
             while(availableSkillTypes.Count < SKILL_COUNT)
             {
-                SkillType skillType = EnumHelper.GetRandomValue<SkillType>();
+                SkillType skillType;
+                if(playerSkillComponent.SkillContainer.Count >= GameDefine.SKILL_INVENTORY_COUNT)
+                {
+                    skillType = SkillType.HealPack;
+                }
+                else
+                {
+                    skillType = EnumHelper.GetRandomValue<SkillType>();
+                    if(skillType == SkillType.HealPack)
+                        continue;
+                }
 
-                UnitSkill unitSkill = playerSkillComponent.GetSkill(skillType);
-                if(unitSkill != null && unitSkill.Level >= GameDefine.MAX_SKILL_LEVEL)
-                    continue;
+                if(skillType != SkillType.HealPack)
+                {
+                    UnitSkill unitSkill = playerSkillComponent.GetSkill(skillType);
+                    if(unitSkill != null && unitSkill.Level >= GameDefine.MAX_SKILL_LEVEL)
+                        continue;
 
-                if(availableSkillTypes.Contains(skillType))
-                    continue;
+                    if(availableSkillTypes.Contains(skillType))
+                        continue;
+                }
 
                 availableSkillTypes.Add(skillType);
             }
@@ -60,7 +71,10 @@ namespace DadVSMe.Players
 
         public async void OnSelectSkill(SkillSelectPopupUI popupUI, SkillData skillData)
         {
-            playerSkillComponent.RegistSkill(skillData.skillType);
+            if(skillData.skillType == SkillType.HealPack)
+                player.UnitHealth.Heal((skillData as HealPackSkillData).healAmount);
+            else
+                playerSkillComponent.RegistSkill(skillData.skillType);
 
             await popupUI.DespawnUIAnimation();
 

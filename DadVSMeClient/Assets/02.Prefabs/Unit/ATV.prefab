@@ -1261,6 +1261,7 @@ MonoBehaviour:
   unitCollider: {fileID: 6780582940993229153}
   holdState: {fileID: 8941043866130852149}
   size: {x: 1.5, y: 1}
+  bounceState: {fileID: 0}
   onAttackTargetEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -1302,12 +1303,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a291a51120d374a879997b596c73db3c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  invincibilityTime: 0
   onAttackEvent:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 2689623307382111171}
         m_TargetAssemblyTypeName: DadVSMe.Entities.UnitAttackEventListener, DadVSMe
         m_MethodName: OnAttack
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  onHealEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2689623307382111171}
+        m_TargetAssemblyTypeName: DadVSMe.Entities.UnitHealthEventListener, DadVSMe
+        m_MethodName: OnHeal
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1399,6 +1416,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   unit: {fileID: 8278906057818038628}
+  damageTextPrefab:
+    key: DamageText
 --- !u!50 &3817803994475382817
 Rigidbody2D:
   serializedVersion: 5

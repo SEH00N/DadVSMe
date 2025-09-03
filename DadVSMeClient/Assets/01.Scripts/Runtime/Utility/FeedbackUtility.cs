@@ -20,7 +20,7 @@ namespace DadVSMe
                 feedbackDataContainer.GetFeedbackData(attackAttribute)?.hitEffects.ForEach(effect => _ = effect.InitializeAsync());
                 feedbackDataContainer.GetFeedbackData(attackAttribute)?.attackSounds.ForEach(sound => _ = sound.InitializeAsync());
                 feedbackDataContainer.GetFeedbackData(attackAttribute)?.hitSounds.ForEach(sound => _ = sound.InitializeAsync());
-                _ = feedbackDataContainer.GetFeedbackData(attackAttribute)?.hitText?.InitializeAsync();
+                // _ = feedbackDataContainer.GetFeedbackData(attackAttribute)?.hitText?.InitializeAsync();
             }
         }
     }

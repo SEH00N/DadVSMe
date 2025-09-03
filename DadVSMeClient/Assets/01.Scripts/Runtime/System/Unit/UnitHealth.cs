@@ -1,4 +1,6 @@
 using System;
+using DadVSMe.Core.UI;
+using H00N.Resources.Addressables;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -11,6 +13,7 @@ namespace DadVSMe.Entities
         public Vector3 Position => transform.position;
 
         public UnityEvent<IAttacker, IAttackData> onAttackEvent = null;
+        public UnityEvent<int> onHealEvent = null;
         public event Action OnHPChangedEvent = null;
 
         private UnitStat hpStat = null;
@@ -42,6 +45,7 @@ namespace DadVSMe.Entities
         {
             currentHP += amount;
             currentHP = Mathf.Min(currentHP, (int)hpStat.FinalValue);
+            onHealEvent?.Invoke(amount);
             OnHPChangedEvent?.Invoke();
         }
     }
