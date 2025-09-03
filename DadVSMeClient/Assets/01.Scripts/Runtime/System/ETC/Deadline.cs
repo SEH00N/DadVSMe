@@ -9,6 +9,7 @@ namespace DadVSMe
     // Dad == Dead
     public class Deadline : MonoBehaviour, IAttacker
     {
+        private const string BOSS_CLEAR_DIRECTING_IDLE_ANIMATION_NAME = "Idle";
         private const string BOSS_CLEAR_DIRECTING_JUMP_ANIMATION_NAME = "Jump";
         private const float BOSS_CLEAR_DIRECTING_JUMP_TRIGGER_DURATION = 0.1f;
         private const float BOSS_CLEAR_DIRECTING_JUMP_TRIGGER_TIME_FREEZE_DELAY = 0.1f;
@@ -94,10 +95,13 @@ namespace DadVSMe
             await UniTask.Delay(TimeSpan.FromSeconds(BOSS_CLEAR_DIRECTING_JUMP_TRIGGER_TIME_FREEZE_DURATION), ignoreTimeScale: true);
             TimeManager.SetTimeScale(GameDefine.DEFAULT_TIME_SCALE, true);
 
+
             await UniTask.Delay(TimeSpan.FromSeconds(BOSS_CLEAR_DIRECTING_FINISHING_DURATION), ignoreTimeScale: true);
 
             // Go! Text
             GameInstance.GameCycle.HUDUI.ActiveGoPopupUI();
+
+            deadlineAnimator.Play(BOSS_CLEAR_DIRECTING_IDLE_ANIMATION_NAME);
         }
     }
 }
