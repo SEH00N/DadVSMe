@@ -25,6 +25,9 @@ namespace DadVSMe.UI
         private const float DISAPPEAR_TIME = 0.2f;
         private const float DIMMED_VALUE = 0.5f;
 
+        [SerializeField] AddressableAsset<AudioClip> _popupSound = null;
+        [SerializeField] AddressableAsset<AudioClip> _buttonSound = null;
+
         [Header("Animation")]
         [SerializeField] Image _backgroundDimmed;
         [SerializeField] Transform _panelTransform;
@@ -38,6 +41,8 @@ namespace DadVSMe.UI
         {
             base.Initialize(callback);
             
+            _ = new PlaySound(_popupSound);
+
             Color color = _backgroundDimmed.color;
             color.a = 0;
             _backgroundDimmed.color = color;
@@ -69,6 +74,8 @@ namespace DadVSMe.UI
 
         public async void OnTouchTitleButton()
         {
+            _ = new PlaySound(_buttonSound);
+
             await DOFade.FadeInAsync();
 
             await new ReleaseResourceByLabel().ReleaseAsync(GameDefine.ADDRESSABLES_LABEL_GAME_ASSETS);
@@ -80,9 +87,21 @@ namespace DadVSMe.UI
             _ = DOFade.FadeOutAsync(0f);
         }
 
-        public void OnTouchResumeButton() => OnTouchResumeButtonAsync().Forget();
-        public async UniTask OnTouchResumeButtonAsync()
+        public void OnTouchResumeButton()
         {
+            // _ = new PlaySound(_buttonSound);
+            ResumeInternalAsync().Forget();
+        }
+
+        public void OnTouchResumeButtonWithSound()
+        {
+            ResumeInternalAsync().Forget();
+        }
+
+        public async UniTask ResumeInternalAsync()
+        {
+            _ = new PlaySound(_popupSound);
+
             Color color = _backgroundDimmed.color;
             color.a = DIMMED_VALUE;
             _backgroundDimmed.color = color;
@@ -101,6 +120,8 @@ namespace DadVSMe.UI
 
         public void OnTouchSettingButton()
         {
+            // _ = new PlaySound(_buttonSound);
+
             callback?.OnTouchSettingButton();
         }
 

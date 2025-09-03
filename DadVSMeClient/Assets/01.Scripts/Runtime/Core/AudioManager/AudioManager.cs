@@ -69,11 +69,11 @@ namespace DadVSMe
             if (effectAudioPlayTimeBuffer.ContainsKey(audioName) == false)
                 effectAudioPlayTimeBuffer.Add(audioName, float.MinValue);
 
-            if (Time.time - effectAudioPlayTimeBuffer[audioName] <= PLAY_INTERVAL_THRESHOLD)
+            if (Time.unscaledTime - effectAudioPlayTimeBuffer[audioName] <= PLAY_INTERVAL_THRESHOLD)
                 return;
 
             AudioHelper.PlayOneShot(sfxPlayer, clip);
-            effectAudioPlayTimeBuffer[audioName] = Time.time;
+            effectAudioPlayTimeBuffer[audioName] = Time.unscaledTime;
         }
     }
 }

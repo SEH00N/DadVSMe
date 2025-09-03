@@ -2,6 +2,7 @@ using Cysharp.Threading.Tasks;
 using DadVSMe.UI;
 using DG.Tweening;
 using System;
+using H00N.Resources.Addressables;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -9,6 +10,8 @@ namespace DadVSMe
 {
     public class BossProductionUI : PoolableBehaviourUI
     {
+        [SerializeField] AddressableAsset<AudioClip> _popupSound = null;
+
         [Header("Transform")]
         [SerializeField] RectTransform _bannerTransform;
         [SerializeField] RectTransform _profileTransform;
@@ -37,6 +40,8 @@ namespace DadVSMe
         public async UniTask Initialize(Sprite bossVisual)
         {
             base.Initialize();
+
+            _ = new PlaySound(_popupSound);
 
             _profileImage.sprite = bossVisual;
             _bannerTransform.anchoredPosition = _bannerStartPosition;

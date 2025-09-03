@@ -49,9 +49,6 @@ namespace DadVSMe
             // Handle Unity Null Expression
             if(this == null)
                 return;
-            
-            if(Time.timeScale != GameDefine.DEFAULT_TIME_SCALE)
-                return;
 
             // _playerInputReader.OnPressPauseEvent -= HandleSpawnPausePopupUI;
 
@@ -62,7 +59,7 @@ namespace DadVSMe
             }
             else if(_pausePopupUI != null)
             {
-                await _pausePopupUI.OnTouchResumeButtonAsync();
+                await _pausePopupUI.ResumeInternalAsync();
                 _pausePopupUI = null;
             }
             else
@@ -73,6 +70,9 @@ namespace DadVSMe
 
         private void SpawnPausePopupUI()
         {
+            if(Time.timeScale != GameDefine.DEFAULT_TIME_SCALE)
+                return;
+
             if(_unitSkillComponent == null)
                 _unitSkillComponent = GameInstance.GameCycle.MainPlayer.GetComponent<UnitSkillComponent>();
 

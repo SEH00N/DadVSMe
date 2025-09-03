@@ -44,7 +44,7 @@ namespace DadVSMe.UI
 
             var popup = PoolManager.Spawn<SettingPopupUI>(settingPopupUIPrefab, transform);
             popup.StretchRect();
-            _ = new PlaySound(clickSound);
+            // _ = new PlaySound(clickSound);
 
             popup.Initialize().Forget();
         }

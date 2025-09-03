@@ -4,12 +4,16 @@ using System;
 using UnityEngine.UI;
 using Cysharp.Threading.Tasks;
 using DG.Tweening;
+using H00N.Resources.Addressables;
 
 namespace DadVSMe.UI.Setting
 {
     public class SettingPopupUI : PoolableBehaviourUI
     {
         private const string BLOCK_KEY = "SettingPopupUI";
+
+        [SerializeField] AddressableAsset<AudioClip> _popupSound = null;
+        [SerializeField] AddressableAsset<AudioClip> _buttonSound = null;
 
         [Header("Slider")]
         [SerializeField] Slider _masterVolumeSlider;
@@ -30,6 +34,10 @@ namespace DadVSMe.UI.Setting
 
         public async UniTask Initialize()
         {
+            base.Initialize();
+
+            _ = new PlaySound(_popupSound);
+
             // _masterVolumeSlider.value = GetNormalizedVolume(EAudioChannel.Master);
             // _bgmVolumeSlider.value = GetNormalizedVolume(EAudioChannel.BGM);
             // _sfxVolumeSlider.value = GetNormalizedVolume(EAudioChannel.SFX);
@@ -94,9 +102,21 @@ namespace DadVSMe.UI.Setting
             AudioManager.Instance.SetVolume(EAudioChannel.SFX, value);
         }
 
-        public void OnTouchConfirmButton() => OnTouchConfirmButtonAsync().Forget();
+        public void OnTouchConfirmButton()
+        {
+            // _ = new PlaySound(_buttonSound);
+            OnTouchConfirmButtonAsync().Forget();
+        }
+
+        public void OnTouchConfirmButtonWithSound()
+        {
+            OnTouchConfirmButtonAsync().Forget();
+        }
+
         public async UniTask OnTouchConfirmButtonAsync()
         {
+            _ = new PlaySound(_popupSound);
+
             InputBlock.Block(BLOCK_KEY);
             await PlayDisappearAnimation();
             InputBlock.Release(BLOCK_KEY);

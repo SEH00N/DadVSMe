@@ -704,7 +704,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 8110206094429133215}
         m_TargetAssemblyTypeName: DadVSMe.UI.Setting.SettingPopupUI, DadVSMe
-        m_MethodName: OnTouchConfirmButton
+        m_MethodName: OnTouchConfirmButtonWithSound
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2431,6 +2431,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 598fe6ac0a9e50045a9181b1992cb0a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _popupSound:
+    key: ui_transition_1
+  _buttonSound:
+    key: ui_button_click_2
   _masterVolumeSlider: {fileID: 1663325223300863309}
   _masterVolumeSliderFill: {fileID: 8369647604776779168}
   _bgmVolumeSlider: {fileID: 7314667549895421569}

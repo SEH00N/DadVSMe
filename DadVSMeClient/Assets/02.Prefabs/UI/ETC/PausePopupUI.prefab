@@ -997,6 +997,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 159328ac4d9f6874f95da5c39fb81f8e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _popupSound:
+    key: ui_transition_1
+  _buttonSound:
+    key: ui_button_click_2
   _backgroundDimmed: {fileID: 1693356057628276797}
   _panelTransform: {fileID: 8599531484391461653}
   _skillInfoUI: {fileID: 1232186779337742412}
@@ -1124,7 +1128,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 3390859495793276679}
         m_TargetAssemblyTypeName: DadVSMe.UI.PausePopupUI, DadVSMe
-        m_MethodName: OnTouchResumeButton
+        m_MethodName: OnTouchResumeButtonWithSound
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

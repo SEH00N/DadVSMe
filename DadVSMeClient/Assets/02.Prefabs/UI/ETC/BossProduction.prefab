@@ -253,6 +253,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 675ba0eb8d4d5104293ab0ef331773ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _popupSound:
+    key: ui_transition_0
   _bannerTransform: {fileID: 8649746704565079356}
   _profileTransform: {fileID: 4059361792692753317}
   _bannerStartPosition: {x: 2060, y: 210}
