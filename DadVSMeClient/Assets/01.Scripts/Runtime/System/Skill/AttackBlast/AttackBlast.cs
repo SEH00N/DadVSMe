@@ -100,7 +100,7 @@ namespace DadVSMe
         private async void PlayStartEffectAsync()
         {
             await startEffectPrefab.InitializeAsync();
-            PoolableEffect effect = PoolManager.Spawn<PoolableEffect>(startEffectPrefab.Key);
+            PoolableEffect effect = PoolManager.Spawn<PoolableEffect>(startEffectPrefab.Key, GameInstance.GameCycle.transform);
             effect.transform.position = effectSpawnPoint.position;
             effect.transform.localScale = new Vector3(Mathf.Abs(effect.transform.localScale.x) * Mathf.Sign(transform.localScale.x), effect.transform.localScale.y, effect.transform.localScale.z);
             effect.Play();

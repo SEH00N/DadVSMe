@@ -34,7 +34,7 @@ namespace DadVSMe
         {
             float random = Random.value;
             PoolReference prefab = random < healPackProbability ? healPackPrefab.Asset : expPrefab.Asset;
-            return PoolManager.Spawn<Item>(prefab);
+            return PoolManager.Spawn<Item>(prefab, GameInstance.GameCycle.transform);
         }
     }
 }

@@ -38,7 +38,7 @@ namespace DadVSMe.Entities.FSM
 
         protected override void OnAttack(EntityAnimationEventData eventData)
         {
-            Projectile projectile = PoolManager.Spawn<Projectile>(projectilePrefab.Key);
+            Projectile projectile = PoolManager.Spawn<Projectile>(projectilePrefab.Key, GameInstance.GameCycle.transform);
             projectile.transform.position = firePosition.position;
             projectile.Initialize(unitFSMData.unit, (Vector2)targetPosition.position);
 

@@ -38,7 +38,7 @@ namespace DadVSMe
         // 중복 실행 방지
         _loopCts?.Cancel();
         _loopCts?.Dispose();
-        _loopCts = new CancellationTokenSource();
+        _loopCts = CancellationTokenSource.CreateLinkedTokenSource(ownerComponent.destroyCancellationToken);
 
         // 필요하면 파괴 시에도 끊고 싶을 때는 Destroy 토큰과 링크:
         // _loopCts = CancellationTokenSource.CreateLinkedTokenSource(this.GetCancellationTokenOnDestroy());

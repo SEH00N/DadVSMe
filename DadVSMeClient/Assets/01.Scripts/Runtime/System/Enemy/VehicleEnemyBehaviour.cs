@@ -30,7 +30,7 @@ namespace DadVSMe.Enemies
         private async UniTask SpawnVehicleAsync(AddressableAsset<Vehicle> vehiclePrefab, IRider rider)
         {
             await vehiclePrefab.InitializeAsync();
-            Vehicle vehicle = PoolManager.Spawn<Vehicle>(vehiclePrefab.Key);
+            Vehicle vehicle = PoolManager.Spawn<Vehicle>(vehiclePrefab.Key, GameInstance.GameCycle.transform);
             vehicle.transform.position = unit.transform.position;
             vehicle.Initialize(new VehicleEntityData());
 

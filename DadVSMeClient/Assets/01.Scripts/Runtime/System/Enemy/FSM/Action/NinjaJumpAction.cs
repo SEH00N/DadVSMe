@@ -44,7 +44,7 @@ namespace DadVSMe.Enemies.FSM
 
             _onSpinning = false;
 
-            var fx = PoolManager.Spawn<PoolableAnimationEffect>(jumpupDustFX.Key);
+            var fx = PoolManager.Spawn<PoolableAnimationEffect>(jumpupDustFX.Key, GameInstance.GameCycle.transform);
             fx.transform.position = brain.transform.position;
             fx.Play();
         }

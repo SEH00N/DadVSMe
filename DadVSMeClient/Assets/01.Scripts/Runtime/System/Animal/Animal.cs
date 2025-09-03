@@ -45,7 +45,7 @@ namespace DadVSMe.Animals
 
         private void HandleAnimationTriggerEvent(EntityAnimationEventData eventData)
         {
-            Projectile projectile = PoolManager.Spawn<Projectile>(animalEntityData.ProjectilePrefab.Key);
+            Projectile projectile = PoolManager.Spawn<Projectile>(animalEntityData.ProjectilePrefab.Key, GameInstance.GameCycle.transform);
             projectile.transform.position = firePosition.position + Vector3.up * Y_OFFSET;
             projectile.Initialize(owner, targetPositionCache);
         }

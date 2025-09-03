@@ -52,7 +52,7 @@ namespace DadVSMe
 
         public override void Execute()
         {
-            StatikkShivLighting statikkShivLighting = PoolManager.Spawn<StatikkShivLighting>(prefab);
+            StatikkShivLighting statikkShivLighting = PoolManager.Spawn<StatikkShivLighting>(prefab, GameInstance.GameCycle.transform);
             DynamicAttackData attackData = new DynamicAttackData(this.attackData);
             attackData.SetDamage(attackData.Damage + (int)(levelUpIncreaseRate * level));
             statikkShivLighting.Active(ownerComponent.GetComponent<Unit>(), maxAttackTargetNum, checkRadius, attackData, attackData);

@@ -74,7 +74,7 @@ namespace DadVSMe
                 if (target == null)
                     continue;
 
-                GuidedOrb guidedOrb = PoolManager.Spawn<GuidedOrb>(prefab);
+                GuidedOrb guidedOrb = PoolManager.Spawn<GuidedOrb>(prefab, GameInstance.GameCycle.transform);
                 guidedOrb.transform.position = spawnPoint;
                 guidedOrb.SetInstigator(ownerComponent.GetComponent<Unit>(), attackData, attackData);
                 guidedOrb.SetTarget(target);

@@ -43,9 +43,6 @@ namespace DadVSMe.GameCycles
 
         private void Awake()
         {
-            bossUnits ??= new List<Unit>();
-            bossUnits.Clear();
-
             bossSpawnInfo.spawnTable.ForEach(spawnTable => {
                 spawnTable.prefab.InitializeAsync().Forget();
                 spawnTable.enemyData.InitializeAsync().Forget();
@@ -59,6 +56,10 @@ namespace DadVSMe.GameCycles
         protected override void PostOnEnable()
         {
             base.PostOnEnable();
+
+            bossUnits ??= new List<Unit>();
+            bossUnits.Clear();
+
             bossWaveBlockObject.SetActive(false);
         }
 

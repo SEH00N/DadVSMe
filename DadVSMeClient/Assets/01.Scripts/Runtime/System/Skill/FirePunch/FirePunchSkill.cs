@@ -54,7 +54,7 @@ namespace DadVSMe
 
         private void OnAttackTarget(Unit target, IAttackData attackData)
         {
-            Fire fire = PoolManager.Spawn(firePrefab).GetComponent<Fire>();
+            Fire fire = PoolManager.Spawn(firePrefab, GameInstance.GameCycle.transform).GetComponent<Fire>();
             fire.Init(ownerComponent.GetComponent<Unit>(), target, this.attackData, this.attackData, burnTime, attackDelay);
         }
 

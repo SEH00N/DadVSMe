@@ -23,7 +23,7 @@ namespace DadVSMe
                 
             await handleParameter.damageTextPrefab.InitializeAsync();
 
-            DamageText text = PoolManager.Spawn(handleParameter.damageTextPrefab).GetComponent<DamageText>();
+            DamageText text = PoolManager.Spawn<DamageText>(handleParameter.damageTextPrefab, GameInstance.GameCycle.transform);
 
             if (text == null)
                 return;

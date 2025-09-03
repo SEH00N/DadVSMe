@@ -71,7 +71,7 @@ namespace DadVSMe
             if (effect == null || string.IsNullOrEmpty(effect.Key))
                 return;
 
-            PoolableEffect poolableEffect = PoolManager.Spawn<PoolableEffect>(effect.Key);
+            PoolableEffect poolableEffect = PoolManager.Spawn<PoolableEffect>(effect.Key, GameInstance.GameCycle.transform);
             position.z += -0.01f;
             poolableEffect.transform.position = new Vector3(position.x, position.y, position.z);
             poolableEffect.transform.localScale = new Vector3(poolableEffect.transform.localScale.x * Mathf.Sign(forwardDirection), poolableEffect.transform.localScale.y, poolableEffect.transform.localScale.z);

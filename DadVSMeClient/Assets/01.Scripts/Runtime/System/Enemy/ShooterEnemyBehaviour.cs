@@ -74,7 +74,7 @@ namespace DadVSMe.Enemies
         private async UniTask SpawnAnimalAsync(AddressableAsset<Animal> animalPrefab, AnimalEntityData animalEntityData)
         {
             await animalPrefab.InitializeAsync();
-            animal = PoolManager.Spawn<Animal>(animalPrefab.Key);
+            animal = PoolManager.Spawn<Animal>(animalPrefab.Key, GameInstance.GameCycle.transform);
             animal.transform.position = animalFollowTarget.position;
             animal.Initialize(animalEntityData);
             animal.SetOwner(unit);

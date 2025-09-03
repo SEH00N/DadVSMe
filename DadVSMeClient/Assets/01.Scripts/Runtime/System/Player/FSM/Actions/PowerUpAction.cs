@@ -29,7 +29,7 @@ namespace DadVSMe
         {
             base.EnterState();
 
-            particle = PoolManager.Spawn<ParticleSystem>(powerUpParticle);
+            particle = PoolManager.Spawn<ParticleSystem>(powerUpParticle, GameInstance.GameCycle.transform);
             particle.transform.SetParent(brain.transform);
             particle.transform.localPosition = positionOffset;
             particle.transform.localScale = Vector3.one;

@@ -84,7 +84,7 @@ namespace DadVSMe.Enemies.FSM
             {
                 var forward = unitFSMData.forwardDirection;
 
-                var afterImage = PoolManager.Spawn<NinjaAfterImage>(ninjaAfterImagePrefab);
+                var afterImage = PoolManager.Spawn<NinjaAfterImage>(ninjaAfterImagePrefab, GameInstance.GameCycle.transform);
                 afterImage.Initialize((Vector2)brain.transform.position + spawnOffset, forward);
                 spawnedAfterImageContainer.Add(afterImage);
 

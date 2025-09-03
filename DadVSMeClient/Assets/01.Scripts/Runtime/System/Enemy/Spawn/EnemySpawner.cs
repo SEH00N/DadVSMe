@@ -203,7 +203,7 @@ namespace DadVSMe.Enemies
                 return;
             }
 
-            Enemy enemy = PoolManager.Spawn<Enemy>(prefab.Key);
+            Enemy enemy = PoolManager.Spawn<Enemy>(prefab.Key, GameInstance.GameCycle.transform);
             enemy.Initialize(unitData);
             enemy.transform.position = GetSpawnPos(Camera.main, _backgroundLimitTrm, _deadlineTrm);
 

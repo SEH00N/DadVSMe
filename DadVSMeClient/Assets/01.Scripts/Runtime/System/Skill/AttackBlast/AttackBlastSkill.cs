@@ -38,7 +38,7 @@ namespace DadVSMe
 
         public override void Execute()
         {
-            AttackBlast attackBlast = PoolManager.Spawn<AttackBlast>(prefab);
+            AttackBlast attackBlast = PoolManager.Spawn<AttackBlast>(prefab, GameInstance.GameCycle.transform);
 
             attackBlast.SetInstigator(ownerComponent.gameObject.GetComponent<Unit>());
 
