@@ -15,8 +15,8 @@ namespace DadVSMe.Entities
         [SerializeField] protected Rigidbody2D unitRigidbody = null;
         [SerializeField] protected Collider2D unitCollider = null;
         [SerializeField] protected FSMState holdState = null;
-        [SerializeField] protected FSMState bounceState = null;
         [SerializeField] protected Vector2 size = Vector2.zero;
+        [SerializeField] protected FSMState bounceState = null;
 
         public FSMBrain FSMBrain => fsmBrain;
         public UnitHealth UnitHealth => unitHealth; // uniy health is used frequently. allow external access for performance. 
@@ -57,6 +57,9 @@ namespace DadVSMe.Entities
 
         protected virtual void Update()
         {
+            if(unitFSMData == null)
+                return;
+
             if(unitFSMData.isFloat == false || fsmBrain.CurrentState == bounceState)
                 return;
 
