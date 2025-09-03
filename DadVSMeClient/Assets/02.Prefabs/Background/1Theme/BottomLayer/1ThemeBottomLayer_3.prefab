@@ -213,8 +213,8 @@ Transform:
   m_GameObject: {fileID: 586662356165600171}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.900017, y: 8.5, z: 0}
-  m_LocalScale: {x: 43.41, y: 5, z: 1}
+  m_LocalPosition: {x: -4.900017, y: 21, z: 0}
+  m_LocalScale: {x: 43.41, y: 30, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 221508129694952698}
@@ -330,7 +330,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4563252686597404174}
   - component: {fileID: 575613678358201038}
-  - component: {fileID: 1938634061470134396}
   m_Layer: 0
   m_Name: Visual (6)
   m_TagString: Untagged
@@ -408,22 +407,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &1938634061470134396
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 920139378582303613}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9809bf1345abc5648af68b3a82653f08, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_OverrideArea: 0
-  m_Area: 0
-  m_IgnoreFromBuild: 0
-  m_AffectedAgents: ffffffff
 --- !u!1 &978339428992747138
 GameObject:
   m_ObjectHideFlags: 0
@@ -434,7 +417,6 @@ GameObject:
   m_Component:
   - component: {fileID: 3646974838749441092}
   - component: {fileID: 857612738967578326}
-  - component: {fileID: 2900120143629939681}
   m_Layer: 0
   m_Name: GroundVisual_4 (5)
   m_TagString: Untagged
@@ -512,22 +494,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &2900120143629939681
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 978339428992747138}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9809bf1345abc5648af68b3a82653f08, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_OverrideArea: 0
-  m_Area: 0
-  m_IgnoreFromBuild: 0
-  m_AffectedAgents: ffffffff
 --- !u!1 &1419230425353764123
 GameObject:
   m_ObjectHideFlags: 0
@@ -1037,7 +1003,6 @@ GameObject:
   m_Component:
   - component: {fileID: 5443889029630498497}
   - component: {fileID: 6079203408546400083}
-  - component: {fileID: 300343326658590901}
   m_Layer: 0
   m_Name: GroundVisual_4 (7)
   m_TagString: Untagged
@@ -1115,22 +1080,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &300343326658590901
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2287417024452332654}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9809bf1345abc5648af68b3a82653f08, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_OverrideArea: 0
-  m_Area: 0
-  m_IgnoreFromBuild: 0
-  m_AffectedAgents: ffffffff
 --- !u!1 &2996541619481184205
 GameObject:
   m_ObjectHideFlags: 0
@@ -1141,7 +1090,6 @@ GameObject:
   m_Component:
   - component: {fileID: 6948046604088145351}
   - component: {fileID: 8128779202173022118}
-  - component: {fileID: 421249708440831948}
   m_Layer: 0
   m_Name: GroundVisual_4
   m_TagString: Untagged
@@ -1219,22 +1167,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &421249708440831948
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2996541619481184205}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9809bf1345abc5648af68b3a82653f08, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_OverrideArea: 0
-  m_Area: 0
-  m_IgnoreFromBuild: 0
-  m_AffectedAgents: ffffffff
 --- !u!1 &3026265892870137871
 GameObject:
   m_ObjectHideFlags: 0
@@ -1292,8 +1224,8 @@ Transform:
   m_GameObject: {fileID: 3540754510496525945}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.900017, y: -4.9, z: 0}
-  m_LocalScale: {x: 43.41, y: 5, z: 1}
+  m_LocalPosition: {x: -4.900017, y: -17.4, z: 0}
+  m_LocalScale: {x: 43.41, y: 30, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 221508129694952698}
@@ -1472,7 +1404,6 @@ GameObject:
   m_Component:
   - component: {fileID: 5302021459632109981}
   - component: {fileID: 8499108882977843751}
-  - component: {fileID: 1413872305080697341}
   m_Layer: 0
   m_Name: GroundVisual_4 (4)
   m_TagString: Untagged
@@ -1550,22 +1481,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &1413872305080697341
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4398497174621569540}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9809bf1345abc5648af68b3a82653f08, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_OverrideArea: 0
-  m_Area: 0
-  m_IgnoreFromBuild: 0
-  m_AffectedAgents: ffffffff
 --- !u!1 &4569627837713989499
 GameObject:
   m_ObjectHideFlags: 0
@@ -1663,7 +1578,6 @@ GameObject:
   m_Component:
   - component: {fileID: 7657444817123453391}
   - component: {fileID: 1461777856324968250}
-  - component: {fileID: 7933943004667857160}
   m_Layer: 0
   m_Name: GroundVisual_4 (2)
   m_TagString: Untagged
@@ -1741,22 +1655,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &7933943004667857160
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4590580812097846769}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9809bf1345abc5648af68b3a82653f08, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_OverrideArea: 0
-  m_Area: 0
-  m_IgnoreFromBuild: 0
-  m_AffectedAgents: ffffffff
 --- !u!1 &4623222835118772003
 GameObject:
   m_ObjectHideFlags: 0
@@ -1767,7 +1665,6 @@ GameObject:
   m_Component:
   - component: {fileID: 9020802382120629735}
   - component: {fileID: 6919350088412504202}
-  - component: {fileID: 5819325613334457648}
   m_Layer: 0
   m_Name: GroundVisual_4 (1)
   m_TagString: Untagged
@@ -1845,22 +1742,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &5819325613334457648
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4623222835118772003}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9809bf1345abc5648af68b3a82653f08, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_OverrideArea: 0
-  m_Area: 0
-  m_IgnoreFromBuild: 0
-  m_AffectedAgents: ffffffff
 --- !u!1 &4742660469662134132
 GameObject:
   m_ObjectHideFlags: 0
@@ -2107,7 +1988,6 @@ GameObject:
   m_Component:
   - component: {fileID: 7106003610738374577}
   - component: {fileID: 8969504466205950127}
-  - component: {fileID: 8897470237963901553}
   m_Layer: 0
   m_Name: GroundVisual_4 (6)
   m_TagString: Untagged
@@ -2185,22 +2065,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &8897470237963901553
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5911547139042283076}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9809bf1345abc5648af68b3a82653f08, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_OverrideArea: 0
-  m_Area: 0
-  m_IgnoreFromBuild: 0
-  m_AffectedAgents: ffffffff
 --- !u!1 &6356851877258415057
 GameObject:
   m_ObjectHideFlags: 0
@@ -2393,7 +2257,6 @@ GameObject:
   m_Component:
   - component: {fileID: 6747069924154907928}
   - component: {fileID: 1725724271711668077}
-  - component: {fileID: 4522545931218545941}
   m_Layer: 0
   m_Name: GroundVisual_4 (3)
   m_TagString: Untagged
@@ -2471,22 +2334,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &4522545931218545941
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7307275403323570160}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9809bf1345abc5648af68b3a82653f08, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_OverrideArea: 0
-  m_Area: 0
-  m_IgnoreFromBuild: 0
-  m_AffectedAgents: ffffffff
 --- !u!1 &8009205395831024779
 GameObject:
   m_ObjectHideFlags: 0

@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 9013510813492275576}
   - component: {fileID: 3651436508193863045}
-  - component: {fileID: 6523831042507461678}
   m_Layer: 0
   m_Name: Visual
   m_TagString: Untagged
@@ -88,22 +87,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &6523831042507461678
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 949929768661700840}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9809bf1345abc5648af68b3a82653f08, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_OverrideArea: 0
-  m_Area: 0
-  m_IgnoreFromBuild: 0
-  m_AffectedAgents: ffffffff
 --- !u!1 &1534884392605196679
 GameObject:
   m_ObjectHideFlags: 0
@@ -588,7 +571,6 @@ GameObject:
   m_Component:
   - component: {fileID: 7774962588377820684}
   - component: {fileID: 9046346677924561858}
-  - component: {fileID: 7403010817032835976}
   m_Layer: 0
   m_Name: Visual (6)
   m_TagString: Untagged
@@ -666,22 +648,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &7403010817032835976
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3630797003609491524}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9809bf1345abc5648af68b3a82653f08, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_OverrideArea: 0
-  m_Area: 0
-  m_IgnoreFromBuild: 0
-  m_AffectedAgents: ffffffff
 --- !u!1 &4103627828940226315
 GameObject:
   m_ObjectHideFlags: 0
@@ -692,7 +658,6 @@ GameObject:
   m_Component:
   - component: {fileID: 7820737894579319332}
   - component: {fileID: 8618735447891743782}
-  - component: {fileID: 1674217521837498027}
   m_Layer: 0
   m_Name: Visual (2)
   m_TagString: Untagged
@@ -770,22 +735,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &1674217521837498027
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4103627828940226315}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9809bf1345abc5648af68b3a82653f08, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_OverrideArea: 0
-  m_Area: 0
-  m_IgnoreFromBuild: 0
-  m_AffectedAgents: ffffffff
 --- !u!1 &4178051260487318686
 GameObject:
   m_ObjectHideFlags: 0
@@ -1311,8 +1260,8 @@ Transform:
   m_GameObject: {fileID: 7050582118385990241}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.3900032, y: -4.9, z: 0}
-  m_LocalScale: {x: 22.9, y: 5, z: 1}
+  m_LocalPosition: {x: 2.3900032, y: -17.4, z: 0}
+  m_LocalScale: {x: 22.9, y: 30, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3320045786157750507}
@@ -1634,8 +1583,8 @@ Transform:
   m_GameObject: {fileID: 7813916498777857334}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.3900032, y: 8.5, z: 0}
-  m_LocalScale: {x: 22.9, y: 5, z: 1}
+  m_LocalPosition: {x: 2.3900032, y: 21, z: 0}
+  m_LocalScale: {x: 22.9, y: 30, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3320045786157750507}
@@ -1727,7 +1676,6 @@ GameObject:
   m_Component:
   - component: {fileID: 3754834155967442372}
   - component: {fileID: 7084861495538833971}
-  - component: {fileID: 2966837758959419798}
   m_Layer: 0
   m_Name: Visual (1)
   m_TagString: Untagged
@@ -1805,22 +1753,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &2966837758959419798
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8806793607279894097}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9809bf1345abc5648af68b3a82653f08, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_OverrideArea: 0
-  m_Area: 0
-  m_IgnoreFromBuild: 0
-  m_AffectedAgents: ffffffff
 --- !u!1 &8843700008430066556
 GameObject:
   m_ObjectHideFlags: 0

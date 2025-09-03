@@ -26,8 +26,8 @@ Transform:
   m_GameObject: {fileID: 94104523712140785}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -16.279984, y: -4.9, z: 0}
-  m_LocalScale: {x: 30.699997, y: 5, z: 1}
+  m_LocalPosition: {x: -16.279984, y: -17.4, z: 0}
+  m_LocalScale: {x: 30.699997, y: 30, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 7691045581225970584}
@@ -175,7 +175,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2902516020510748390}
   - component: {fileID: 6912530404037363212}
-  - component: {fileID: 2961810875652450263}
   m_Layer: 0
   m_Name: Ground
   m_TagString: Untagged
@@ -253,22 +252,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &2961810875652450263
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1099647209108120116}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9809bf1345abc5648af68b3a82653f08, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_OverrideArea: 0
-  m_Area: 0
-  m_IgnoreFromBuild: 0
-  m_AffectedAgents: ffffffff
 --- !u!1 &1108035684069534500
 GameObject:
   m_ObjectHideFlags: 0
@@ -295,8 +278,8 @@ Transform:
   m_GameObject: {fileID: 1108035684069534500}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -16.279984, y: 8.5, z: 0}
-  m_LocalScale: {x: 30.699997, y: 5, z: 1}
+  m_LocalPosition: {x: -16.279984, y: 21, z: 0}
+  m_LocalScale: {x: 30.699997, y: 30, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 7691045581225970584}
@@ -887,7 +870,6 @@ GameObject:
   m_Component:
   - component: {fileID: 3952494733475997871}
   - component: {fileID: 81884417909415483}
-  - component: {fileID: 6458159197851977222}
   m_Layer: 0
   m_Name: GroundVisual_4 (4)
   m_TagString: Untagged
@@ -965,22 +947,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &6458159197851977222
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4552423912096597857}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9809bf1345abc5648af68b3a82653f08, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_OverrideArea: 0
-  m_Area: 0
-  m_IgnoreFromBuild: 0
-  m_AffectedAgents: ffffffff
 --- !u!1 &4612859301616283653
 GameObject:
   m_ObjectHideFlags: 0
@@ -991,7 +957,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4810491671415477736}
   - component: {fileID: 4903406987732424689}
-  - component: {fileID: 3445055177949090796}
   m_Layer: 0
   m_Name: GroundVisual_4
   m_TagString: Untagged
@@ -1069,22 +1034,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &3445055177949090796
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4612859301616283653}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9809bf1345abc5648af68b3a82653f08, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_OverrideArea: 0
-  m_Area: 0
-  m_IgnoreFromBuild: 0
-  m_AffectedAgents: ffffffff
 --- !u!1 &4816402300184758140
 GameObject:
   m_ObjectHideFlags: 0
@@ -1248,7 +1197,6 @@ GameObject:
   m_Component:
   - component: {fileID: 6956016295171794750}
   - component: {fileID: 6980212596152414930}
-  - component: {fileID: 3094901852852428180}
   m_Layer: 0
   m_Name: GroundVisual_4 (3)
   m_TagString: Untagged
@@ -1326,22 +1274,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &3094901852852428180
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5322557382986100721}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9809bf1345abc5648af68b3a82653f08, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_OverrideArea: 0
-  m_Area: 0
-  m_IgnoreFromBuild: 0
-  m_AffectedAgents: ffffffff
 --- !u!1 &5485711058796868071
 GameObject:
   m_ObjectHideFlags: 0
@@ -1501,7 +1433,6 @@ GameObject:
   m_Component:
   - component: {fileID: 5776241163254303568}
   - component: {fileID: 4279152191185803441}
-  - component: {fileID: 2419164234928929686}
   m_Layer: 0
   m_Name: GroundVisual_4 (1)
   m_TagString: Untagged
@@ -1579,22 +1510,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &2419164234928929686
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6630139863644995054}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9809bf1345abc5648af68b3a82653f08, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_OverrideArea: 0
-  m_Area: 0
-  m_IgnoreFromBuild: 0
-  m_AffectedAgents: ffffffff
 --- !u!1 &6644232555746177143
 GameObject:
   m_ObjectHideFlags: 0
@@ -1867,7 +1782,6 @@ GameObject:
   m_Component:
   - component: {fileID: 3066125518173627993}
   - component: {fileID: 20176968416085614}
-  - component: {fileID: 6314765026183340561}
   m_Layer: 0
   m_Name: GroundVisual_4 (2)
   m_TagString: Untagged
@@ -1945,22 +1859,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &6314765026183340561
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7917546294989670671}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9809bf1345abc5648af68b3a82653f08, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_OverrideArea: 0
-  m_Area: 0
-  m_IgnoreFromBuild: 0
-  m_AffectedAgents: ffffffff
 --- !u!1 &9056148369512081710
 GameObject:
   m_ObjectHideFlags: 0

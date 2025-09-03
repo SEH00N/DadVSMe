@@ -7,11 +7,12 @@ using UnityEngine;
 namespace DadVSMe.Editors
 {
     [CustomEditor(typeof(GroundBehaviour))]
+    [CanEditMultipleObjects]
     public class GroundBehaviourEditor : Editor
     {
         private const float NAV_MESH_SURFACE_VOLUME_OFFSET = 5f;
         private const float COLLIDER_WIDTH_OFFSET = 5f;
-        private const float COLLIDER_HEIGHT = 5f;
+        private const float COLLIDER_HEIGHT = 30f;
         private const float COLLIDER_TOP_POSITION = 6f;
         private const float COLLIDER_BOTTOM_POSITION = -2.4f;
 
@@ -21,13 +22,15 @@ namespace DadVSMe.Editors
 
             if (GUILayout.Button("Set Up"))
             {
-                SetUp();
+                foreach(Object target in targets)
+                {
+                    SetUp((GroundBehaviour)target);
+                }
             }
         }
 
-        private void SetUp()
+        private void SetUp(GroundBehaviour groundBehaviour)
         {
-            GroundBehaviour groundBehaviour = (GroundBehaviour)target;
             Undo.RegisterFullObjectHierarchyUndo(groundBehaviour, "GroundBehaviour Set Up");
 
             Bounds bounds = SetUpSpriteRenderersAndGetBounds(groundBehaviour);
@@ -46,8 +49,11 @@ namespace DadVSMe.Editors
             SpriteRenderer[] spriteRenderers = groundBehaviour.GetComponentsInChildren<SpriteRenderer>();
             foreach (SpriteRenderer spriteRenderer in spriteRenderers)
             {
-                if(spriteRenderer.TryGetComponent<NavMeshModifier>(out NavMeshModifier navMeshModifier) == false)
-                    navMeshModifier = spriteRenderer.gameObject.AddComponent<NavMeshModifier>();
+                if(spriteRenderer.TryGetComponent<NavMeshModifier>(out NavMeshModifier navMeshModifier))
+                {
+                    DestroyImmediate(navMeshModifier);
+                    // navMeshModifier = spriteRenderer.gameObject.AddComponent<NavMeshModifier>();
+                }
 
                 if (first)
                 {
@@ -102,31 +108,30 @@ namespace DadVSMe.Editors
             if(navMeshTransform != null)
                 DestroyImmediate(navMeshTransform.gameObject);
             
-            return;
-            SerializedProperty navMeshSurfaceProperty = serializedObject.FindProperty("navMeshSurface");
+            // SerializedProperty navMeshSurfaceProperty = serializedObject.FindProperty("navMeshSurface");
 
-            NavMeshSurface navMeshSurface = navMeshSurfaceProperty.objectReferenceValue as NavMeshSurface;
-            if (navMeshSurface == null)
-            {
-                navMeshSurface = groundBehaviour.GetComponentInChildren<NavMeshSurface>();
-                if (navMeshSurface == null)
-                {
-                    GameObject navMeshObject = new GameObject("NavMesh", typeof(NavMeshSurface), typeof(CollectSources2d));
-                    navMeshSurface = navMeshObject.GetComponent<NavMeshSurface>();
-                    navMeshSurface.transform.SetParent(groundBehaviour.transform);
-                    navMeshSurfaceProperty.objectReferenceValue = navMeshSurface;
-                }
-            }
+            // NavMeshSurface navMeshSurface = navMeshSurfaceProperty.objectReferenceValue as NavMeshSurface;
+            // if (navMeshSurface == null)
+            // {
+            //     navMeshSurface = groundBehaviour.GetComponentInChildren<NavMeshSurface>();
+            //     if (navMeshSurface == null)
+            //     {
+            //         GameObject navMeshObject = new GameObject("NavMesh", typeof(NavMeshSurface), typeof(CollectSources2d));
+            //         navMeshSurface = navMeshObject.GetComponent<NavMeshSurface>();
+            //         navMeshSurface.transform.SetParent(groundBehaviour.transform);
+            //         navMeshSurfaceProperty.objectReferenceValue = navMeshSurface;
+            //     }
+            // }
 
-            navMeshSurface.transform.SetAsFirstSibling();
-            navMeshSurface.transform.SetLocalPositionAndRotation(Vector3.zero, Quaternion.Euler(-90f, 0, 0));
-            navMeshSurface.transform.localScale = Vector3.one;
-            navMeshSurface.collectObjects = CollectObjects.Volume;
+            // navMeshSurface.transform.SetAsFirstSibling();
+            // navMeshSurface.transform.SetLocalPositionAndRotation(Vector3.zero, Quaternion.Euler(-90f, 0, 0));
+            // navMeshSurface.transform.localScale = Vector3.one;
+            // navMeshSurface.collectObjects = CollectObjects.Volume;
 
-            bounds.size += Vector3.one * NAV_MESH_SURFACE_VOLUME_OFFSET;
-            bounds = RotateBounds(bounds, new Vector3(90f, 0f, 0f));
-            navMeshSurface.size = bounds.size;
-            navMeshSurface.center = bounds.center;
+            // bounds.size += Vector3.one * NAV_MESH_SURFACE_VOLUME_OFFSET;
+            // bounds = RotateBounds(bounds, new Vector3(90f, 0f, 0f));
+            // navMeshSurface.size = bounds.size;
+            // navMeshSurface.center = bounds.center;
         }
 
         private static Bounds RotateBounds(Bounds bounds, Vector3 eulerAngles)
