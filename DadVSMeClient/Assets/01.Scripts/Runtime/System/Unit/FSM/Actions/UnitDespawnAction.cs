@@ -33,7 +33,6 @@ namespace DadVSMe.Entities.FSM
 
         private void HandleAnimationEndEvent(EntityAnimationEventData eventData)
         {
-            brain.GetComponent<Entity>().OnDespawnEvent?.Invoke();
             PoolManager.Despawn(unitFSMData.unit);
         }
     }

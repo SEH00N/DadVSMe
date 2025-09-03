@@ -15,7 +15,7 @@ namespace DadVSMe.Entities
         [SerializeField] protected EntitySortingOrderResolver sortingOrderResolver = null;
 
         public event Action<IEntityData> OnInitializedEvent = null;
-        public Action OnDespawnEvent = null;
+        public event Action OnDespawnEvent = null;
 
         private float currentDepth = 0f;
 
@@ -23,8 +23,6 @@ namespace DadVSMe.Entities
         public IEntityData DataInfo => dataInfo;
 
         public bool StaticEntity => staticEntity;
-
-        public event Action<Collider2D> OnTriggerEnterEvent;
 
         private void Start()
         {
@@ -76,9 +74,10 @@ namespace DadVSMe.Entities
             sortingOrderResolver.RemoveChild(child);
         }
 
-        protected virtual void OnTriggerEnter2D(Collider2D collision)
+        protected override void DespawnInternal()
         {
-            OnTriggerEnterEvent?.Invoke(collision);
+            base.DespawnInternal();
+            OnDespawnEvent?.Invoke();
         }
     }
 }

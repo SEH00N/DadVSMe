@@ -47,16 +47,22 @@ namespace DadVSMe
 
                 StartBurn();
             }
+            else
+            {
+                PoolManager.Despawn(poolReference);
+                return;
+            }
+
+            target.OnDespawnEvent += HandleTargetDespawn;
         }
 
         private void StartBurn()
         {
             SpawnEffectAsync();
-
             isBurn = true;
         }
 
-        void Update()
+        private void Update()
         {
             if (isBurn)
             {
@@ -86,6 +92,11 @@ namespace DadVSMe
         private void EndBurn()
         {
             PoolManager.Despawn(poolReference);
+        }
+
+        private void HandleTargetDespawn()
+        {
+            EndBurn();
         }
 
         private async void SpawnEffectAsync()
