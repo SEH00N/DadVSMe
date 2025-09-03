@@ -64,7 +64,7 @@ namespace DadVSMe
                         continue;
                     
                     // Do not targeting grabbed or floated enemy
-                    if(unit.StaticEntity)
+                    if(unit.StaticEntity || unit.UnitHealth.CurrentHP <= 0)
                         continue;
 
                     target = unit;
