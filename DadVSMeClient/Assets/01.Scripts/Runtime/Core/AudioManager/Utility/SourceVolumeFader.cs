@@ -60,7 +60,7 @@ namespace DadVSMe
             float timer = Mathf.Lerp(0, duration, process);
             while (timer < duration)
             {
-                timer += Time.deltaTime;
+                timer += Time.unscaledDeltaTime;
                 process = timer / duration;
 
                 float volume = fadeCurve.Evaluate(process);
