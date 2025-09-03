@@ -15,6 +15,7 @@ namespace DadVSMe.Entities
         [SerializeField] protected Rigidbody2D unitRigidbody = null;
         [SerializeField] protected Collider2D unitCollider = null;
         [SerializeField] protected FSMState holdState = null;
+        [SerializeField] protected FSMState bounceState = null;
         [SerializeField] protected Vector2 size = Vector2.zero;
 
         public FSMBrain FSMBrain => fsmBrain;
@@ -52,6 +53,19 @@ namespace DadVSMe.Entities
             unitFSMData.isFloat = false;
             unitFSMData.isLie = false;
             unitFSMData.isDie = false;
+        }
+
+        protected virtual void Update()
+        {
+            if(unitFSMData.isFloat == false || fsmBrain.CurrentState == bounceState)
+                return;
+
+            // if the bounce is not due to a collision, the bounce is checked based on the last ground position.
+            if(transform.position.y >= unitFSMData.groundPositionY || unitRigidbody.linearVelocity.y > 0)
+                return;
+
+            unitFSMData.collisionData = new UnitCollisionData(unitRigidbody.linearVelocity, Vector2.up, new Vector2(transform.position.x, unitFSMData.groundPositionY));
+            fsmBrain.ChangeState(bounceState);
         }
 
         protected override void LateUpdate()

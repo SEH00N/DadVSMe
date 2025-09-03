@@ -2954,6 +2954,8 @@ MonoBehaviour:
   unitRigidbody: {fileID: 8522405111466415502}
   unitCollider: {fileID: 6169808395141815018}
   holdState: {fileID: 2654032514642745503}
+  bounceState: {fileID: 3987183898820894391}
+  size: {x: 0, y: 0}
   onAttackTargetEvent:
     m_PersistentCalls:
       m_Calls: []

@@ -40,6 +40,11 @@ namespace DadVSMe.Entities
         public override void ExitState()
         {
             base.ExitState();
+            
+            brain.transform.rotation = Quaternion.identity;
+            unitRigidbody.angularVelocity = 0f;
+            unitRigidbody.constraints |= RigidbodyConstraints2D.FreezeRotation;
+
             unitFSMData.OnBowlingEvent = null;
             hitColliders.Clear();
         }
@@ -60,16 +65,6 @@ namespace DadVSMe.Entities
                 if(col.TryGetComponent<Unit>(out Unit unit))
                     unitFSMData.OnBowlingEvent?.Invoke(unit);
             }
-
-            // if the bounce is not due to a collision, the bounce is checked based on the last ground position.
-            if(brain.transform.position.y >= unitFSMData.groundPositionY || unitRigidbody.linearVelocity.y > 0)
-                return;
-
-            brain.transform.rotation = Quaternion.identity;
-            unitRigidbody.angularVelocity = 0f;
-            unitRigidbody.constraints |= RigidbodyConstraints2D.FreezeRotation;
-            unitFSMData.collisionData = new UnitCollisionData(unitRigidbody.linearVelocity, Vector2.up, new Vector2(brain.transform.position.x, unitFSMData.groundPositionY));
-            brain.ChangeState(bounceState);
         }
     }
 }
