@@ -28,6 +28,9 @@ namespace DadVSMe.Enemies
             base.InitializeInternal(data);
             // npcMovement.Initialize();
             enemyDetector.Initialize();
+
+            unitFSMData.forwardDirection = -1;
+            entityAnimator.SetRotation(unitFSMData.forwardDirection > 0);
         }
 
         protected override void LateUpdate()
@@ -75,6 +78,8 @@ namespace DadVSMe.Enemies
             staticEntity = true;
             fsmBrain.ChangeState(ridingState);
             unitRigidbody.bodyType = RigidbodyType2D.Kinematic;
+            unitFSMData.forwardDirection = 1;
+            entityAnimator.SetRotation(unitFSMData.forwardDirection > 0);
         }
 
         public void RideOff()
