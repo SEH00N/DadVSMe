@@ -131,7 +131,10 @@ namespace DadVSMe.Entities
                     unitFSMData.holders.Add(holder);
 
                 if(unitFSMData.holders.Count > 0)
+                {
                     fsmBrain.ChangeState(holdState);
+                    SetFloat(false);
+                }
             }
             else
             {
