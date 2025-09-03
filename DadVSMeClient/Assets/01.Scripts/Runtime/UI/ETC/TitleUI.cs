@@ -1,5 +1,4 @@
 using UnityEngine;
-using UnityEngine.SceneManagement;
 using Cysharp.Threading.Tasks;
 using H00N.Resources.Addressables;
 using DadVSMe.UI.Setting;
@@ -20,22 +19,10 @@ namespace DadVSMe.UI
             clickSound.InitializeAsync().Forget();
         }
 
-        public async void OnTouchStartButton()
+        public void OnTouchStartButton()
         {
             _ = new PlaySound(clickSound);
-
-            // FadeIn
-            await DOFade.FadeInAsync();
-
-            // Load Resources
-            await new LoadResourceByLabel().LoadAsync(GameDefine.ADDRESSABLES_LABEL_GAME_ASSETS);
-
-            // Load game scene
-            await SceneManager.TryLoadSceneAsync(GameDefine.GAME_SCENE_NAME, LoadSceneMode.Single);
-            GameInstance.GameCycle.InitializeAsync().Forget();
-
-            // FadeOut
-            await DOFade.FadeOutAsync(3.5f);
+            _ = new StartGame().StartGameAsync(loadResources: true);
         }
          
         public async void OnTouchSettingButton()

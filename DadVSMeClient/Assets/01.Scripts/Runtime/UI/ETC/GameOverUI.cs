@@ -7,19 +7,9 @@ namespace DadVSMe.UI
 {
     public class GameOverUI : MonoBehaviour
     {
-        public async void OnTouchRetryButton()
+        public void OnTouchRetryButton()
         {
-            // FadeIn
-            await DOFade.FadeInAsync();
-
-            // Load Game Scene
-            await SceneManager.TryLoadSceneAsync(GameDefine.GAME_SCENE_NAME, LoadSceneMode.Single);
-
-            // Initialize GameCycle
-            GameInstance.GameCycle.InitializeAsync().Forget();
-
-            // FadeOut
-            _ = DOFade.FadeOutAsync(3.5f);
+            _ = new StartGame().StartGameAsync(loadResources: false);
         }
 
         public async void OnTouchTitleButton()
