@@ -6,6 +6,8 @@ namespace DadVSMe.Entities
 {
     public class UnitHealth : MonoBehaviour, IHealth
     {
+        [SerializeField] float invincibilityTime = 0f;
+
         public Vector3 Position => transform.position;
 
         public UnityEvent<IAttacker, IAttackData> onAttackEvent = null;
@@ -16,6 +18,8 @@ namespace DadVSMe.Entities
         private int currentHP;
         public int CurrentHP => currentHP;
 
+        private float lastAttackTime = 0f;
+
         public void Initialize(UnitStat hpStat)
         {
             this.hpStat = hpStat;
@@ -24,6 +28,11 @@ namespace DadVSMe.Entities
 
         public void Attack(IAttacker attacker, IAttackData attackData)
         {
+            if(Time.time - lastAttackTime < invincibilityTime)
+                return;
+
+            lastAttackTime = Time.time;
+
             currentHP -= (int)attackData.Damage;
             onAttackEvent?.Invoke(attacker, attackData);
             OnHPChangedEvent?.Invoke();
