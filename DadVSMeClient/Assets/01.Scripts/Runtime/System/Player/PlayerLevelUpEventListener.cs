@@ -32,7 +32,7 @@ namespace DadVSMe.Players
         public async void OnLevelUp(int _)
         {
             if(GameInstance.GameCycle.IsPaused)
-                await UniTask.WaitUntil(() => GameInstance.GameCycle.IsPaused == false);
+                await UniTask.WaitUntil(() => GameInstance.GameCycle.IsPaused == false, cancellationToken: player.destroyCancellationToken);
 
             new PlaySound(levelUpSound);
             
