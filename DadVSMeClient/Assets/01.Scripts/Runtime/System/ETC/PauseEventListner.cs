@@ -49,6 +49,9 @@ namespace DadVSMe
             // Handle Unity Null Expression
             if(this == null)
                 return;
+            
+            if(Time.timeScale != GameDefine.DEFAULT_TIME_SCALE)
+                return;
 
             // _playerInputReader.OnPressPauseEvent -= HandleSpawnPausePopupUI;
 
