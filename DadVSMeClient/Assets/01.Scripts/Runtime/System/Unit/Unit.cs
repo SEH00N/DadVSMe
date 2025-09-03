@@ -120,6 +120,11 @@ namespace DadVSMe.Entities
                 unitFSMData.attackAttribute = attackAttribute;
         }
 
+        public void SetHold()
+        {
+            fsmBrain.ChangeState(holdState);
+        }
+
         public virtual void SetHold(bool isHold, params Object[] holders)
         {
             if(holders == null)

@@ -61,6 +61,9 @@ namespace DadVSMe.GameCycles
                 enemy.transform.position = spawnPosition;
                 enemy.FSMBrain.SetAIData(spawnTable.statData.Asset);
                 enemy.Initialize(spawnTable.enemyData.Asset);
+
+                if(spawnTable.startWithHold)
+                    enemy.SetHold();
             }
         }
 

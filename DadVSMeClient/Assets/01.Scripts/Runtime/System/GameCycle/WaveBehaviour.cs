@@ -21,6 +21,7 @@ namespace DadVSMe.GameCycles
                 public AddressableAsset<EnemyDataBase> enemyData;
                 public AddressableAsset<UnitStatData> statData;
                 public Vector2 offset;
+                public bool startWithHold;
             }
 
             public Transform spawnPoint;

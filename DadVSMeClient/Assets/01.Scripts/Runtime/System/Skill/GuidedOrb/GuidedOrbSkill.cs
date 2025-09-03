@@ -33,7 +33,7 @@ namespace DadVSMe
         //     spawnCount = 2;
         // }
 
-        public override void Execute()
+        public override async void Execute()
         {
             GuidedOrbSkillData data = GetData();
             GuidedOrbSkillData.Option option = GetOption();
@@ -42,6 +42,8 @@ namespace DadVSMe
             AddressableAsset<GuidedOrb> prefab = data.prefab;
             int spawnCount = option.spawnCount;
             int damage = option.damage;
+
+            await prefab.InitializeAsync();
             
             float angle = 360f / spawnCount;
             float currentAngle = 0f;
