@@ -15,7 +15,7 @@ MonoBehaviour:
   audioLibraryTables:
   - audioClip: {fileID: 8300000, guid: 974832e9ea4a745c788b94ea162bd06c, type: 3}
     fadeInData:
-      fadeDuration: 0
+      fadeDuration: 0.5
       fadeCurve:
         serializedVersion: 2
         m_Curve:
@@ -41,7 +41,7 @@ MonoBehaviour:
         m_PostInfinity: 2
         m_RotationOrder: 4
     fadeOutData:
-      fadeDuration: 0
+      fadeDuration: 0.5
       fadeCurve:
         serializedVersion: 2
         m_Curve:
