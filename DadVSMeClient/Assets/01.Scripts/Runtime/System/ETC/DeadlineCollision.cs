@@ -5,6 +5,7 @@ namespace DadVSMe
 {
     public class DeadlineCollision : MonoBehaviour, IAttacker
     {
+        private const float OFFSET = 0.75f;
         private const float CAMERA_SHAKE_DURATION = 0.325f;
         private const float CAMERA_SHAKE_AMPLITUDE = 14f;
         private const float CAMERA_SHAKE_FREQUENCY = 8f;
@@ -31,7 +32,7 @@ namespace DadVSMe
                 return;
 
             unitHealth.Attack(this, attackData);
-            _ = new PlayHitFeedback(attackData, EAttackAttribute.Crazy, GameInstance.GameCycle.MainPlayer.transform.position, Vector3.zero, 1);
+            _ = new PlayHitFeedback(attackData, EAttackAttribute.Crazy, other.transform.position + Vector3.up * OFFSET, Vector3.zero, 1);
 
             if(shakeCamera)
                 _ = new ShakeCamera(GameInstance.GameCycle.MainCinemachineCamera, CAMERA_SHAKE_DURATION, CAMERA_SHAKE_AMPLITUDE, CAMERA_SHAKE_FREQUENCY);
