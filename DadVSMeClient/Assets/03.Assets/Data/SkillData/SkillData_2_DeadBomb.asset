@@ -34,7 +34,7 @@ MonoBehaviour:
       m_FallbackState: 0
       m_WaitForCompletion: 0
       m_LocalVariables: []
-    additiveDamage: 2
+    damage: 10
   - skillDesc:
       m_TableReference:
         m_TableCollectionName: 
@@ -44,7 +44,7 @@ MonoBehaviour:
       m_FallbackState: 0
       m_WaitForCompletion: 0
       m_LocalVariables: []
-    additiveDamage: 4
+    damage: 15
   - skillDesc:
       m_TableReference:
         m_TableCollectionName: 
@@ -54,7 +54,7 @@ MonoBehaviour:
       m_FallbackState: 0
       m_WaitForCompletion: 0
       m_LocalVariables: []
-    additiveDamage: 6
+    damage: 20
   - skillDesc:
       m_TableReference:
         m_TableCollectionName: 
@@ -64,7 +64,7 @@ MonoBehaviour:
       m_FallbackState: 0
       m_WaitForCompletion: 0
       m_LocalVariables: []
-    additiveDamage: 8
+    damage: 30
   - skillDesc:
       m_TableReference:
         m_TableCollectionName: 
@@ -74,7 +74,7 @@ MonoBehaviour:
       m_FallbackState: 0
       m_WaitForCompletion: 0
       m_LocalVariables: []
-    additiveDamage: 10
+    damage: 45
   attackData: {fileID: 11400000, guid: 4d77a75604ed84d8d9ad821222b6d9c0, type: 2}
   attackRadius: 5
   references:

@@ -12,8 +12,7 @@ namespace DadVSMe
 {
     public class GuidedOrb : MonoBehaviour, IPoolableBehaviour
     {
-        private IAttackData attackData;
-        private IAttackFeedbackDataContainer feedbackDataContainer;
+        private DynamicAttackData attackData;
 
         private PoolReference poolReference;
         private BezierMover bezierMover;
@@ -59,9 +58,9 @@ namespace DadVSMe
                 UnitFSMData unitFSMData = instigator.FSMBrain.GetAIData<UnitFSMData>();
                 EAttackAttribute attackAttribute = unitFSMData.attackAttribute;
                 unitFSMData.attackAttribute = EAttackAttribute.Crazy;
-                
+
                 targetHealth.Attack(instigator, attackData);
-                _ = new PlayHitFeedback(feedbackDataContainer, unitFSMData.attackAttribute, transform.position, Vector3.zero, (int)Mathf.Sign(direction.x));
+                _ = new PlayHitFeedback(attackData, unitFSMData.attackAttribute, transform.position, Vector3.zero, (int)Mathf.Sign(direction.x));
 
                 unitFSMData.attackAttribute = attackAttribute;
             }
@@ -80,11 +79,10 @@ namespace DadVSMe
             transform.rotation = Quaternion.Euler(0, 0, degree);
         }
 
-        public void SetInstigator(Unit instigator, IAttackData attackData, IAttackFeedbackDataContainer feedbackDataContainer)
+        public void SetInstigator(Unit instigator, DynamicAttackData attackData)
         {
             this.instigator = instigator;
             this.attackData = attackData;
-            this.feedbackDataContainer = feedbackDataContainer;
         }
 
         public void SetTarget(Unit target)

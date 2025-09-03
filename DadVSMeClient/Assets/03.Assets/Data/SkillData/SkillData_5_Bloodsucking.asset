@@ -34,7 +34,8 @@ MonoBehaviour:
       m_FallbackState: 0
       m_WaitForCompletion: 0
       m_LocalVariables: []
-    healRatio: 0.5
+    healChance: 0.05
+    healRatio: 0.05
   - skillDesc:
       m_TableReference:
         m_TableCollectionName: 
@@ -44,7 +45,8 @@ MonoBehaviour:
       m_FallbackState: 0
       m_WaitForCompletion: 0
       m_LocalVariables: []
-    healRatio: 0.6
+    healChance: 0.06
+    healRatio: 0.075
   - skillDesc:
       m_TableReference:
         m_TableCollectionName: 
@@ -54,7 +56,8 @@ MonoBehaviour:
       m_FallbackState: 0
       m_WaitForCompletion: 0
       m_LocalVariables: []
-    healRatio: 0.7
+    healChance: 0.09
+    healRatio: 0.1
   - skillDesc:
       m_TableReference:
         m_TableCollectionName: 
@@ -64,7 +67,8 @@ MonoBehaviour:
       m_FallbackState: 0
       m_WaitForCompletion: 0
       m_LocalVariables: []
-    healRatio: 0.8
+    healChance: 0.11
+    healRatio: 0.15
   - skillDesc:
       m_TableReference:
         m_TableCollectionName: 
@@ -74,7 +78,8 @@ MonoBehaviour:
       m_FallbackState: 0
       m_WaitForCompletion: 0
       m_LocalVariables: []
-    healRatio: 0.9
+    healChance: 0.15
+    healRatio: 0.2
   references:
     version: 2
     RefIds: []

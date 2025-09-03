@@ -15,8 +15,7 @@ namespace DadVSMe
         [SerializeField] AddressableAsset<ParticleSystem> particlePrefab;
         [SerializeField] PoolReference poolReference;
 
-        private IAttackData attackData;
-        private IAttackFeedbackDataContainer feedbackDataContainer;
+        private DynamicAttackData attackData;
         private Unit target;
         private Unit instigator;
         private float burnTime;
@@ -25,12 +24,11 @@ namespace DadVSMe
         private float currentBurnTime = 0;
         private bool isBurn = false;
         private int burnCount = 0;
-        
-        public void Init(Unit instigator, Unit target, IAttackData attackData, IAttackFeedbackDataContainer feedbackDataContainer, float burnTime, float attackDelay)
+
+        public void Init(Unit instigator, Unit target, DynamicAttackData attackData, float burnTime, float attackDelay)
         {
             this.instigator = instigator;
             this.attackData = attackData;
-            this.feedbackDataContainer = feedbackDataContainer;
             this.burnTime = burnTime;
             this.attackDelay = attackDelay;
             this.target = target;
@@ -42,7 +40,7 @@ namespace DadVSMe
             {
                 if (target.GetComponentInChildren<Fire>() != null)
                     return;
-                    
+
                 this.targetHealth = targetHealth;
                 transform.SetParent(target.transform);
                 transform.localPosition = Vector3.zero;
@@ -76,10 +74,10 @@ namespace DadVSMe
                     UnitFSMData unitFSMData = instigator.GetComponent<FSMBrain>().GetAIData<UnitFSMData>();
                     EAttackAttribute attackAttribute = unitFSMData.attackAttribute;
                     unitFSMData.attackAttribute = EAttackAttribute.Fire;
-                    
-                targetHealth.Attack(instigator, attackData);
-                    _ = new PlayHitFeedback(feedbackDataContainer, unitFSMData.attackAttribute, targetHealth.Position, Vector3.zero, unitFSMData.forwardDirection);
-                    
+
+                    targetHealth.Attack(instigator, attackData);
+                    _ = new PlayHitFeedback(attackData, unitFSMData.attackAttribute, targetHealth.Position, Vector3.zero, unitFSMData.forwardDirection);
+
                     unitFSMData.attackAttribute = attackAttribute;
                 }
             }
@@ -94,7 +92,8 @@ namespace DadVSMe
         {
             await particlePrefab.InitializeAsync();
 
-            try {
+            try
+            {
                 ParticleSystem particle = PoolManager.Spawn<ParticleSystem>(particlePrefab.Key, transform);
                 particle.transform.localPosition = SpawnOffset;
                 particle.Play();

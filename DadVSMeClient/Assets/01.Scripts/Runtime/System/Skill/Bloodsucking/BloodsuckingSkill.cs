@@ -32,6 +32,9 @@ namespace DadVSMe
 
         private void OnAttackTarget(Unit target, IAttackData data)
         {
+            if(Random.Range(0f, 1f) > GetOption().healChance)
+                return;
+
             health.Heal((int)(data.Damage * GetOption().healRatio));
         }
     }

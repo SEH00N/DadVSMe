@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stats:
   - statType: 0
-    defaultValue: 10000
+    defaultValue: 200
     finalValue: 0
     onStatChanged:
       m_PersistentCalls:
@@ -38,7 +38,19 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls: []
   - statType: 4
+    defaultValue: 1
+    finalValue: 0
+    onStatChanged:
+      m_PersistentCalls:
+        m_Calls: []
+  - statType: 5
     defaultValue: 5
+    finalValue: 0
+    onStatChanged:
+      m_PersistentCalls:
+        m_Calls: []
+  - statType: 6
+    defaultValue: 0.5
     finalValue: 0
     onStatChanged:
       m_PersistentCalls:

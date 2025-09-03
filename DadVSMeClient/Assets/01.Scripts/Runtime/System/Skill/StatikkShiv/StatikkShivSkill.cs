@@ -39,14 +39,14 @@ namespace DadVSMe
             AddressableAsset<StatikkShivLighting> prefab = data.prefab;
             AttackDataBase attackData = data.attackData;
             float checkRadius = data.checkRadius;
-            int additiveDamage = option.additiveDamage;
+            int damage = option.damage;
 
             await prefab.InitializeAsync();
 
             StatikkShivLighting statikkShivLighting = PoolManager.Spawn<StatikkShivLighting>(prefab, GameInstance.GameCycle.transform);
             DynamicAttackData dynamicAttackData = new DynamicAttackData(attackData);
-            dynamicAttackData.SetDamage(attackData.Damage + additiveDamage);
-            statikkShivLighting.Active(ownerComponent.GetComponent<Unit>(), checkRadius, dynamicAttackData, dynamicAttackData);
+            dynamicAttackData.SetDamage(damage);
+            statikkShivLighting.Active(ownerComponent.GetComponent<Unit>(), checkRadius, dynamicAttackData);
         }
     }
 }

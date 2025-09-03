@@ -68,15 +68,15 @@ namespace DadVSMe.Players
         public async UniTask ActiveAnger()
         {
             playerFSMData.isAnger = true;
-            unitStatData[EUnitStat.MoveSpeed].RegistAddModifier(10);
-            unitStatData[EUnitStat.AttackPowerMultiplier].RegistAddModifier(0.5f);
+            unitStatData[EUnitStat.MoveSpeed].RegistAddModifier(unitStatData[EUnitStat.AngerMoveSpeedModifier].FinalValue);
+            unitStatData[EUnitStat.AttackPowerMultiplier].RegistAddModifier(unitStatData[EUnitStat.AttackPowerMultiplierModifier].FinalValue);
             unitFSMData.attackAttribute = EAttackAttribute.Crazy;
             onStartAngerEvent?.Invoke();
 
-            await UniTask.Delay(System.TimeSpan.FromSeconds(playerFSMData.angerTime));
+            await UniTask.Delay(TimeSpan.FromSeconds(playerFSMData.angerTime));
 
-            unitStatData[EUnitStat.MoveSpeed].UnregistAddModifier(10);
-            unitStatData[EUnitStat.AttackPowerMultiplier].UnregistAddModifier(0.5f);
+            unitStatData[EUnitStat.MoveSpeed].UnregistAddModifier(unitStatData[EUnitStat.AngerMoveSpeedModifier].FinalValue);
+            unitStatData[EUnitStat.AttackPowerMultiplier].UnregistAddModifier(unitStatData[EUnitStat.AttackPowerMultiplierModifier].FinalValue);
             unitFSMData.attackAttribute = EAttackAttribute.Normal;
             playerFSMData.isAnger = false;
             onEndAngerEvent?.Invoke();

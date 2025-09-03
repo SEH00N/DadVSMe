@@ -31,7 +31,7 @@ namespace DadVSMe
 
             AttackDataBase attackData = data.attackData;
             float attackRadius = data.attackRadius;
-            int additiveDamage = GetOption().additiveDamage;
+            int damage = GetOption().damage;
 
             Vector2 spawnPoint = attackTarget.transform.position;
             Collider2D[] cols = Physics2D.OverlapCircleAll(spawnPoint, attackRadius);
@@ -50,7 +50,7 @@ namespace DadVSMe
                 if (col.gameObject.TryGetComponent<IHealth>(out IHealth unitHealth))
                 {
                     DynamicAttackData dynamicAttackData = new DynamicAttackData(attackData);
-                    dynamicAttackData.SetDamage(dynamicAttackData.Damage + additiveDamage);
+                    dynamicAttackData.SetDamage(damage);
                     unitHealth.Attack(owner, dynamicAttackData);
                     _ = new PlayHitFeedback(dynamicAttackData, unitFSMData.attackAttribute, unitHealth.Position, Vector3.zero, unitFSMData.forwardDirection);
                 }
@@ -87,6 +87,7 @@ namespace DadVSMe
                     attackTarget = target;
 
                     EntityAnimator animator = target.GetComponent<EntityAnimator>();
+                    attackTarget.OnDespawnEvent -= Execute;
                     attackTarget.OnDespawnEvent += Execute;
                 }
             }

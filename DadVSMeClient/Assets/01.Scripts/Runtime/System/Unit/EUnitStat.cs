@@ -9,5 +9,7 @@ namespace DadVSMe
         AttackPowerMultiplier,
         DashSpeed,
         ItemMagnetRadius,
+        AngerMoveSpeedModifier,
+        AttackPowerMultiplierModifier,
     }
 }

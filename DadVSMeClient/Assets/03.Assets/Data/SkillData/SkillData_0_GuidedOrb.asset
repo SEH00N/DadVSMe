@@ -35,8 +35,20 @@ MonoBehaviour:
       m_WaitForCompletion: 0
       m_LocalVariables: []
     coolTime: 5
-    spawnCount: 1
-    additiveDamage: 1
+    spawnCount: 2
+    damage: 7
+  - skillDesc:
+      m_TableReference:
+        m_TableCollectionName: 
+      m_TableEntryReference:
+        m_KeyId: 0
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    coolTime: 4.5
+    spawnCount: 3
+    damage: 10
   - skillDesc:
       m_TableReference:
         m_TableCollectionName: 
@@ -47,8 +59,8 @@ MonoBehaviour:
       m_WaitForCompletion: 0
       m_LocalVariables: []
     coolTime: 4
-    spawnCount: 2
-    additiveDamage: 2
+    spawnCount: 4
+    damage: 15
   - skillDesc:
       m_TableReference:
         m_TableCollectionName: 
@@ -59,8 +71,8 @@ MonoBehaviour:
       m_WaitForCompletion: 0
       m_LocalVariables: []
     coolTime: 3
-    spawnCount: 3
-    additiveDamage: 3
+    spawnCount: 5
+    damage: 22
   - skillDesc:
       m_TableReference:
         m_TableCollectionName: 
@@ -71,24 +83,10 @@ MonoBehaviour:
       m_WaitForCompletion: 0
       m_LocalVariables: []
     coolTime: 2
-    spawnCount: 4
-    additiveDamage: 4
-  - skillDesc:
-      m_TableReference:
-        m_TableCollectionName: 
-      m_TableEntryReference:
-        m_KeyId: 0
-        m_Key: 
-      m_FallbackState: 0
-      m_WaitForCompletion: 0
-      m_LocalVariables: []
-    coolTime: 1
-    spawnCount: 5
-    additiveDamage: 5
+    spawnCount: 6
+    damage: 30
   prefab:
     key: GuidedOrb
-  coolTime: 1
-  levelUpIncreaseRate: 3
   attackData: {fileID: 11400000, guid: f0d151216dd084c54829d62ccfbe7b64, type: 2}
   references:
     version: 2

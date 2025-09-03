@@ -60,7 +60,7 @@ namespace DadVSMe
                 return;
 
             DynamicAttackData attackData = new DynamicAttackData(GetData().bowlingHitAttackData);
-            attackData.SetDamage(attackData.Damage + GetOption().additiveDamage);
+            attackData.SetDamage(GetOption().damage);
 
             otherUnit.UnitHealth.Attack(attacker, attackData);
             UnitFSMData unitFSMData = ownerComponent.GetComponent<FSMBrain>().GetAIData<UnitFSMData>();

@@ -1,4 +1,5 @@
 using System;
+using System.Threading;
 using Cysharp.Threading.Tasks;
 using DadVSMe.Entities;
 using DadVSMe.Entities.FSM;
@@ -14,23 +15,27 @@ namespace DadVSMe
         private const float SPAWN_RANDOMNESS = 0.5f;
         private static readonly Vector2 SpawnOffset = new Vector2(1.5f, 2f);
 
-        // private float attackBlastLifeTime;
+        private int stackCount = 0;
 
         public override void OnRegist(UnitSkillComponent ownerComponent, SkillDataBase skillData)
         {
             base.OnRegist(ownerComponent, skillData);
 
+            stackCount = GetOption().stackCount;
+
             GetData().prefab.InitializeAsync().Forget();
             ownerComponent.GetComponent<FSMBrain>().OnStateChangedEvent.AddListener(OnOwnerStatChanged);
+
+            UpdateLoop(ownerComponent.destroyCancellationToken);
         }
 
         public override void Execute()
         {
             AddressableAsset<AttackBlast> prefab = GetData().prefab;
-            float attackBlastLifeTime = GetOption().attackBlastLifeTime;
+            float attackBlastLifeTime = GetData().attackBlastLifeTime;
 
             AttackBlast attackBlast = PoolManager.Spawn<AttackBlast>(prefab, GameInstance.GameCycle.transform);
-            attackBlast.Initialize(GetOption().additiveDamage);
+            attackBlast.Initialize(GetOption().damage);
             attackBlast.SetInstigator(ownerComponent.gameObject.GetComponent<Unit>());
 
             Transform ownerTrm = ownerComponent.transform;
@@ -51,10 +56,25 @@ namespace DadVSMe
 
         private void OnOwnerStatChanged(FSMState current, FSMState target)
         {
-            if (target.TryGetComponent<AttackActionBase>(out AttackActionBase attack))
+            if(stackCount <= 0)
+                return;
+
+            if (target.TryGetComponent<AttackActionBase>(out AttackActionBase attack) == false)
+                return;
+
+            if (target.gameObject.name.Contains("Punch1_") == false)
+                return;
+
+            stackCount--;
+            Execute();
+        }
+
+        private async void UpdateLoop(CancellationToken cancellationToken)
+        {
+            while (!cancellationToken.IsCancellationRequested)
             {
-                if(target.gameObject.name.Contains("Punch1_"))
-                    Execute();
+                await UniTask.WaitForSeconds(GetOption().cooltime, cancellationToken: cancellationToken);
+                stackCount = Mathf.Min(stackCount + 1, GetOption().stackCount);
             }
         }
     }

@@ -34,7 +34,7 @@ MonoBehaviour:
       m_FallbackState: 0
       m_WaitForCompletion: 0
       m_LocalVariables: []
-    additiveDamage: 10
+    damage: 10
   - skillDesc:
       m_TableReference:
         m_TableCollectionName: 
@@ -44,7 +44,7 @@ MonoBehaviour:
       m_FallbackState: 0
       m_WaitForCompletion: 0
       m_LocalVariables: []
-    additiveDamage: 20
+    damage: 20
   - skillDesc:
       m_TableReference:
         m_TableCollectionName: 
@@ -54,7 +54,7 @@ MonoBehaviour:
       m_FallbackState: 0
       m_WaitForCompletion: 0
       m_LocalVariables: []
-    additiveDamage: 30
+    damage: 30
   - skillDesc:
       m_TableReference:
         m_TableCollectionName: 
@@ -64,7 +64,7 @@ MonoBehaviour:
       m_FallbackState: 0
       m_WaitForCompletion: 0
       m_LocalVariables: []
-    additiveDamage: 40
+    damage: 40
   - skillDesc:
       m_TableReference:
         m_TableCollectionName: 
@@ -74,7 +74,7 @@ MonoBehaviour:
       m_FallbackState: 0
       m_WaitForCompletion: 0
       m_LocalVariables: []
-    additiveDamage: 50
+    damage: 50
   bowlingHitAttackData: {fileID: 11400000, guid: 0ba59c8b1a7c44113832ef80ccf84883, type: 2}
   references:
     version: 2

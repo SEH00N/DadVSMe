@@ -11,7 +11,7 @@ namespace DadVSMe
         public class Option : SkillOption
         {
             [Range(0f, 1f)] public float executeChance;
-            public int additiveDamage;
+            public int damage;
         }
 
         public AddressableAsset<StatikkShivLighting> prefab;

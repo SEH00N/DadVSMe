@@ -41,13 +41,13 @@ namespace DadVSMe
             AttackDataBase attackData = data.attackData;
             AddressableAsset<GuidedOrb> prefab = data.prefab;
             int spawnCount = option.spawnCount;
-            int additiveDamage = option.additiveDamage;
+            int damage = option.damage;
             
             float angle = 360f / spawnCount;
             float currentAngle = 0f;
 
             DynamicAttackData dynamicAttackData = new DynamicAttackData(attackData);
-            dynamicAttackData.SetDamage(dynamicAttackData.Damage + additiveDamage);
+            dynamicAttackData.SetDamage(damage);
 
             while (currentAngle < 360f)
             {
@@ -80,7 +80,7 @@ namespace DadVSMe
 
                 GuidedOrb guidedOrb = PoolManager.Spawn<GuidedOrb>(prefab.Key, GameInstance.GameCycle.transform);
                 guidedOrb.transform.position = spawnPoint;
-                guidedOrb.SetInstigator(ownerComponent.GetComponent<Unit>(), dynamicAttackData, dynamicAttackData);
+                guidedOrb.SetInstigator(ownerComponent.GetComponent<Unit>(), dynamicAttackData);
                 guidedOrb.SetTarget(target);
                 guidedOrb.Launch();
             }

@@ -10,12 +10,13 @@ namespace DadVSMe
         [System.Serializable]
         public class Option : SkillOption
         {
-            public float burnTime;
-            public float attackDelay;
+            public float attackCount;
+            public int damage;
         }
 
         public AddressableAsset<ParticleSystem> particlePrefab;
         public AddressableAsset<Fire> firePrefab;
         public AttackDataBase attackData;
+        public float attackDelay;
     }
 }

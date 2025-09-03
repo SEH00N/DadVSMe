@@ -12,12 +12,10 @@ namespace DadVSMe
         {
             public float coolTime;
             public int spawnCount;
-            public int additiveDamage;
+            public int damage;
         }
 
         public AddressableAsset<GuidedOrb> prefab = null;
-        public float coolTime;
-        public int levelUpIncreaseRate;
         public AttackDataBase attackData;
     }
 }

@@ -29,7 +29,7 @@ namespace DadVSMe
             lineRendererAnimator = GetComponent<LineRendererAnimator>();
         }
 
-        public async void Active(Unit instigator, float attackRadius, IAttackData attackData, IAttackFeedbackDataContainer feedbackDataContainer)
+        public async void Active(Unit instigator, float attackRadius, DynamicAttackData attackData)
         {
             if (instigator == null)
                 return;
@@ -77,7 +77,7 @@ namespace DadVSMe
                     break;
             }
 
-            AttackAsync(targets, instigator, attackData, feedbackDataContainer);
+            AttackAsync(targets, instigator, attackData);
             lineRenderer.positionCount = targets.Count + 1;
             for (int i = 0; i <= targets.Count; i++)
                 lineRenderer.SetPosition(i, points[i]);
@@ -89,7 +89,7 @@ namespace DadVSMe
             Despawn();
         }
 
-        private async void AttackAsync(List<IHealth> targets, Unit instigator, IAttackData attackData, IAttackFeedbackDataContainer feedbackDataContainer)
+        private async void AttackAsync(List<IHealth> targets, Unit instigator, DynamicAttackData attackData)
         {
             if(targets.Count > 2)
             {
@@ -107,7 +107,7 @@ namespace DadVSMe
             {
                 IHealth health = targets[i];
                 health.Attack(instigator, attackData);
-                _ = new PlayHitFeedback(feedbackDataContainer, unitFSMData.attackAttribute, health.Position, Vector3.zero, unitFSMData.forwardDirection);
+                _ = new PlayHitFeedback(attackData, unitFSMData.attackAttribute, health.Position, Vector3.zero, unitFSMData.forwardDirection);
                 await UniTask.Delay(TimeSpan.FromSeconds(.1f));
             }
 

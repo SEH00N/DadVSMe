@@ -34,8 +34,9 @@ MonoBehaviour:
       m_FallbackState: 0
       m_WaitForCompletion: 0
       m_LocalVariables: []
-    attackBlastLifeTime: 0.25
-    additiveDamage: 1
+    stackCount: 5
+    cooltime: 4
+    damage: 5
   - skillDesc:
       m_TableReference:
         m_TableCollectionName: 
@@ -45,8 +46,9 @@ MonoBehaviour:
       m_FallbackState: 0
       m_WaitForCompletion: 0
       m_LocalVariables: []
-    attackBlastLifeTime: 0.5
-    additiveDamage: 2
+    stackCount: 6
+    cooltime: 3.5
+    damage: 7
   - skillDesc:
       m_TableReference:
         m_TableCollectionName: 
@@ -56,8 +58,9 @@ MonoBehaviour:
       m_FallbackState: 0
       m_WaitForCompletion: 0
       m_LocalVariables: []
-    attackBlastLifeTime: 0.75
-    additiveDamage: 3
+    stackCount: 7
+    cooltime: 3
+    damage: 10
   - skillDesc:
       m_TableReference:
         m_TableCollectionName: 
@@ -67,8 +70,9 @@ MonoBehaviour:
       m_FallbackState: 0
       m_WaitForCompletion: 0
       m_LocalVariables: []
-    attackBlastLifeTime: 1
-    additiveDamage: 4
+    stackCount: 8
+    cooltime: 2.5
+    damage: 14
   - skillDesc:
       m_TableReference:
         m_TableCollectionName: 
@@ -78,10 +82,12 @@ MonoBehaviour:
       m_FallbackState: 0
       m_WaitForCompletion: 0
       m_LocalVariables: []
-    attackBlastLifeTime: 1.25
-    additiveDamage: 5
+    stackCount: 9
+    cooltime: 2
+    damage: 19
   prefab:
     key: AttackBlast
+  attackBlastLifeTime: 0
   references:
     version: 2
     RefIds: []

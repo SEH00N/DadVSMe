@@ -35,6 +35,7 @@ MonoBehaviour:
       m_WaitForCompletion: 0
       m_LocalVariables: []
     knockbackRange: 10
+    damage: 20
   - skillDesc:
       m_TableReference:
         m_TableCollectionName: 
@@ -45,6 +46,7 @@ MonoBehaviour:
       m_WaitForCompletion: 0
       m_LocalVariables: []
     knockbackRange: 12.5
+    damage: 30
   - skillDesc:
       m_TableReference:
         m_TableCollectionName: 
@@ -55,6 +57,7 @@ MonoBehaviour:
       m_WaitForCompletion: 0
       m_LocalVariables: []
     knockbackRange: 15
+    damage: 40
   - skillDesc:
       m_TableReference:
         m_TableCollectionName: 
@@ -65,6 +68,7 @@ MonoBehaviour:
       m_WaitForCompletion: 0
       m_LocalVariables: []
     knockbackRange: 17.5
+    damage: 50
   - skillDesc:
       m_TableReference:
         m_TableCollectionName: 
@@ -75,6 +79,7 @@ MonoBehaviour:
       m_WaitForCompletion: 0
       m_LocalVariables: []
     knockbackRange: 20
+    damage: 60
   attackData: {fileID: 11400000, guid: b449f9396c65f4698ab47681246422cf, type: 2}
   references:
     version: 2

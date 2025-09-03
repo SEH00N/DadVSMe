@@ -35,7 +35,7 @@ MonoBehaviour:
       m_WaitForCompletion: 0
       m_LocalVariables: []
     executeChance: 0.07
-    additiveDamage: 3
+    damage: 7
   - skillDesc:
       m_TableReference:
         m_TableCollectionName: 
@@ -46,7 +46,7 @@ MonoBehaviour:
       m_WaitForCompletion: 0
       m_LocalVariables: []
     executeChance: 0.09
-    additiveDamage: 6
+    damage: 9
   - skillDesc:
       m_TableReference:
         m_TableCollectionName: 
@@ -57,7 +57,7 @@ MonoBehaviour:
       m_WaitForCompletion: 0
       m_LocalVariables: []
     executeChance: 0.12
-    additiveDamage: 9
+    damage: 12
   - skillDesc:
       m_TableReference:
         m_TableCollectionName: 
@@ -68,7 +68,7 @@ MonoBehaviour:
       m_WaitForCompletion: 0
       m_LocalVariables: []
     executeChance: 0.15
-    additiveDamage: 12
+    damage: 15
   - skillDesc:
       m_TableReference:
         m_TableCollectionName: 
@@ -79,7 +79,7 @@ MonoBehaviour:
       m_WaitForCompletion: 0
       m_LocalVariables: []
     executeChance: 0.2
-    additiveDamage: 15
+    damage: 20
   prefab:
     key: StatikkShivLighting
   attackData: {fileID: 11400000, guid: 0763bdd92eb894e3fbd618de93edd024, type: 2}

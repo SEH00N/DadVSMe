@@ -10,6 +10,7 @@ namespace DadVSMe
         public class Option : SkillOption
         {
             public float knockbackRange;
+            public int damage;
         }
 
         public AttackDataBase attackData;

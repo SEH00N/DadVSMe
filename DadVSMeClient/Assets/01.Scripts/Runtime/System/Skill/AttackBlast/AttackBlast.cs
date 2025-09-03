@@ -35,7 +35,7 @@ namespace DadVSMe
         private static bool timeScaleEffectAvailable = true;
         private CancellationTokenSource _lifetimeCts;
 
-        private int additiveDamage;
+        private int damage;
 
         void Awake()
         {
@@ -49,9 +49,9 @@ namespace DadVSMe
             transform.localScale = originScale;
         }
 
-        public void Initialize(int additiveDamage)
+        public void Initialize(int damage)
         {
-            this.additiveDamage = additiveDamage;
+            this.damage = damage;
             _ = new InitializeAttackFeedback(attackData);
         }
 
@@ -120,7 +120,7 @@ namespace DadVSMe
                 PlayTimeScaleEffect();
 
                 DynamicAttackData dynamicAttackData = new DynamicAttackData(attackData);
-                dynamicAttackData.SetDamage(dynamicAttackData.Damage + additiveDamage);
+                dynamicAttackData.SetDamage(damage);
                 targetHealth.Attack(instigator, dynamicAttackData);
                 
                 UnitFSMData unitFSMData = instigator.GetComponent<FSMBrain>().GetAIData<UnitFSMData>();

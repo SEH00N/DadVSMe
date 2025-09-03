@@ -8,6 +8,7 @@ namespace DadVSMe
         [System.Serializable]
         public class Option : SkillOption
         {
+            [Range(0f, 1f)] public float healChance;
             public float healRatio;
         }
     }

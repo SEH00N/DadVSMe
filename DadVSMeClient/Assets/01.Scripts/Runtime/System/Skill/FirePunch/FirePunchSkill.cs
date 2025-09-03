@@ -58,13 +58,17 @@ namespace DadVSMe
 
             AttackDataBase fireAttackData = data.attackData;
             AddressableAsset<Fire> firePrefab = data.firePrefab;
-            float burnTime = option.burnTime;
-            float attackDelay = option.attackDelay;
+            float attackDelay = data.attackDelay;
+            float attackCount = option.attackCount;
+            float burnTime = (attackCount * attackDelay) + 0.1f;
 
             await firePrefab.InitializeAsync();
 
+            DynamicAttackData dynamicAttackData = new DynamicAttackData(fireAttackData);
+            dynamicAttackData.SetDamage(option.damage);
+
             Fire fire = PoolManager.Spawn(firePrefab.Key, GameInstance.GameCycle.transform).GetComponent<Fire>();
-            fire.Init(ownerComponent.GetComponent<Unit>(), target, fireAttackData, fireAttackData, burnTime, attackDelay);
+            fire.Init(ownerComponent.GetComponent<Unit>(), target, dynamicAttackData, burnTime, attackDelay);
         }
 
         public override void Execute()

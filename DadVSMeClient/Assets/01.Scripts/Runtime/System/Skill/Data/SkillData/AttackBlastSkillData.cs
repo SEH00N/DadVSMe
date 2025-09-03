@@ -9,10 +9,12 @@ namespace DadVSMe
         [System.Serializable]
         public class Option : SkillOption
         {
-            public float attackBlastLifeTime;
-            public int additiveDamage;
+            public int stackCount;
+            public float cooltime;
+            public int damage;
         }
 
         public AddressableAsset<AttackBlast> prefab;
+        public float attackBlastLifeTime;
     }
 }

@@ -9,7 +9,7 @@ namespace DadVSMe
         [System.Serializable]
         public class Option : SkillOption
         {
-            public int additiveDamage;
+            public int damage;
         }
 
         public AttackDataBase attackData;
