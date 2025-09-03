@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 using Cysharp.Threading.Tasks;
 using DadVSMe.UI.Skills;
 using H00N.Resources.Addressables;
@@ -39,22 +40,34 @@ namespace DadVSMe.Players
         private static List<SkillType> GetAvailableSkillTypes(UnitSkillComponent playerSkillComponent)
         {
             List<SkillType> availableSkillTypes = new List<SkillType>(SKILL_COUNT);
+
+            bool isFullSlot = playerSkillComponent.SkillContainer.Count >= GameDefine.SKILL_INVENTORY_COUNT;
+            bool isAllMax = IsAllMax(playerSkillComponent);
+
+            if(isFullSlot && isAllMax)
+            {
+                for(int i = 0; i < SKILL_COUNT; ++i)
+                    availableSkillTypes.Add(SkillType.HealPack);
+                
+                return availableSkillTypes;
+            }
+
             while(availableSkillTypes.Count < SKILL_COUNT)
             {
                 SkillType skillType;
-                if(playerSkillComponent.SkillContainer.Count >= GameDefine.SKILL_INVENTORY_COUNT)
+                if(isFullSlot)
                 {
-                    skillType = SkillType.HealPack;
+                    int randomIndex = Random.Range(0, GameDefine.SKILL_INVENTORY_COUNT);
+                    skillType = playerSkillComponent.SkillContainer.Keys.ElementAt(randomIndex);
+                    if(playerSkillComponent.GetSkill(skillType).Level >= GameDefine.MAX_SKILL_LEVEL)
+                        continue;
                 }
                 else
                 {
                     skillType = EnumHelper.GetRandomValue<SkillType>();
                     if(skillType == SkillType.HealPack)
                         continue;
-                }
 
-                if(skillType != SkillType.HealPack)
-                {
                     UnitSkill unitSkill = playerSkillComponent.GetSkill(skillType);
                     if(unitSkill != null && unitSkill.Level >= GameDefine.MAX_SKILL_LEVEL)
                         continue;
@@ -67,6 +80,17 @@ namespace DadVSMe.Players
             }
 
             return availableSkillTypes;
+        }
+
+        private static bool IsAllMax(UnitSkillComponent playerSkillComponent)
+        {
+            foreach(var skill in playerSkillComponent.SkillContainer.Values)
+            {
+                if(skill.Level < GameDefine.MAX_SKILL_LEVEL)
+                    return false;
+            }
+
+            return true;
         }
 
         public async void OnSelectSkill(SkillSelectPopupUI popupUI, SkillData skillData)
