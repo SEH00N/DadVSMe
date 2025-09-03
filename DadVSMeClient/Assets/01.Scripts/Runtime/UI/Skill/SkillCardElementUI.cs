@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Cysharp.Threading.Tasks;
 using DadVSMe.Localizations;
 using DG.Tweening;
+using H00N.Resources.Addressables;
 using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
@@ -35,6 +36,11 @@ namespace DadVSMe.UI.Skills
         [SerializeField] List<GameObject> levelObjectList = null;
         [SerializeField] EventTrigger hoverTrigger = null;
 
+        [Header("Audio")]
+        [SerializeField] AddressableAsset<AudioClip> spawnSound = null;
+        [SerializeField] AddressableAsset<AudioClip> despawnSound = null;
+        [SerializeField] AddressableAsset<AudioClip> selectSound = null;
+
         private SkillData skillData = null;
 
         public async UniTask Initialize(SkillData skillData, int currentLevel, ICallback callback, int index)
@@ -56,10 +62,21 @@ namespace DadVSMe.UI.Skills
             transform.localScale = Vector3.zero;
             transform.rotation = Quaternion.identity;
 
+            PlaySpawnSound();
+
             await UniTask.DelayFrame(APPEAR_DELAY_FRAME * index);
             await PlayAppearAnimation();
 
             hoverTrigger.enabled = true;
+        }
+
+        private async void PlaySpawnSound()
+        {
+            for(int i = 0; i < 3; i++)
+            {
+                _ = new PlaySound(spawnSound, force: true);
+                await UniTask.Delay(TimeSpan.FromSeconds(0.2f), true, cancellationToken: destroyCancellationToken);
+            }
         }
 
         private async UniTask PlayAppearAnimation()
@@ -104,6 +121,7 @@ namespace DadVSMe.UI.Skills
             IsSelected = true;
 
             callback.OnSelectCard(skillData);
+            _ = new PlaySound(selectSound, force: true);
 
             InputBlock.Block(BLOCK_KEY);
             await UniTask.Delay(TimeSpan.FromSeconds(EXAGGERATE_TIME * 3), true, cancellationToken: destroyCancellationToken);
@@ -126,6 +144,7 @@ namespace DadVSMe.UI.Skills
         {
             transform.DOKill();
 
+            _ = new PlaySound(despawnSound, force: true);
             await transform.DOScale(Vector2.zero, EXAGGERATE_TIME).SetEase(Ease.InBack).SetUpdate(true);
         }
     }

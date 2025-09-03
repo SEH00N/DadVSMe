@@ -1504,6 +1504,12 @@ MonoBehaviour:
   - {fileID: 1804201329298309330}
   - {fileID: 7376824361013841781}
   hoverTrigger: {fileID: 7618397230442012425}
+  spawnSound:
+    key: ui_transition_1
+  despawnSound:
+    key: ui_transition_1
+  selectSound:
+    key: ui_button_click_2
 --- !u!222 &5130319477406117366
 CanvasRenderer:
   m_ObjectHideFlags: 0

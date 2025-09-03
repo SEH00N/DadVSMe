@@ -20,6 +20,11 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 0dc4f7c7557d34ffbbd7c177916ca69e
+    m_Address: ui_transition_1
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 1234f7df108a64969a93cedc3e549852
     m_Address: sfx_knife_spinning
     m_ReadOnly: 0
@@ -37,6 +42,11 @@ MonoBehaviour:
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 18d3d26c5b3604e368c1e3855a9f34a1
     m_Address: sfx_swing_hard_0
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 1c348fa46df4d42238e0389cba7b884b
+    m_Address: sfx_levelup
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
@@ -61,7 +71,7 @@ MonoBehaviour:
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 3306bf1544cff410e830418319425380
-    m_Address: button_hover_0
+    m_Address: ui_button_hover_0
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
@@ -100,13 +110,8 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 67d633e6809eb44cd88cd7d4cfa0e3a8
-    m_Address: sfx_levelup
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 6e4762c55af6840f8b8cc0b47b573329
-    m_Address: button_click_0
+    m_Address: ui_button_click_0
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
@@ -136,7 +141,7 @@ MonoBehaviour:
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 8c0ad1851cc174ed09848b0f99e3c2fd
-    m_Address: button_click_1
+    m_Address: ui_button_click_1
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
@@ -156,7 +161,7 @@ MonoBehaviour:
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 9b2a3023e223640068b02e9a233ef52c
-    m_Address: button_hover_1
+    m_Address: ui_button_hover_1
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
@@ -191,7 +196,7 @@ MonoBehaviour:
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: c86642cf7f79245a8bc9ae24be6c60f2
-    m_Address: button_hover_2
+    m_Address: ui_button_hover_2
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
@@ -200,7 +205,7 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: d8424d2dd049c4d089e65a1f6c65c3f9
+  - m_GUID: dad96e3d4ab5b4a4cb319927e11d0c09
     m_Address: ui_transition_0
     m_ReadOnly: 0
     m_SerializedLabels: []
@@ -217,6 +222,11 @@ MonoBehaviour:
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: eb90ee2fb71a94997beb7ca698ccbe2f
     m_Address: die_ascend
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f0166003adbed40229c2924756b8556d
+    m_Address: ui_button_click_2
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0

@@ -57,9 +57,14 @@ namespace DadVSMe
             bgmController.ResumeBGM(immediately);
         }
 
-        public void PlaySFX(AudioClip clip) => PlaySFX(clip.name, clip);
-        private void PlaySFX(string audioName, AudioClip clip)
+        public void PlaySFX(AudioClip clip, bool force = false) => PlaySFX(clip.name, clip, force);
+        private void PlaySFX(string audioName, AudioClip clip, bool force = false)
         {
+            if(force)
+            {
+                AudioHelper.PlayOneShot(sfxPlayer, clip);
+                return;
+            }
 
             if (effectAudioPlayTimeBuffer.ContainsKey(audioName) == false)
                 effectAudioPlayTimeBuffer.Add(audioName, float.MinValue);

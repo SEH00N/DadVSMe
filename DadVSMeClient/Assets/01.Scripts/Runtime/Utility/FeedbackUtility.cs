@@ -81,21 +81,21 @@ namespace DadVSMe
 
     public struct PlaySound
     {
-        public PlaySound(List<AddressableAsset<AudioClip>> sounds)
+        public PlaySound(List<AddressableAsset<AudioClip>> sounds, bool force = false)
         {
             if (sounds == null || sounds.Count <= 0)
                 return;
 
             AddressableAsset<AudioClip> sound = sounds.PickRandom();
-            PlayInternalAsync(sound);
+            PlayInternalAsync(sound, force);
         }
         
-        public PlaySound(AddressableAsset<AudioClip> sound)
+        public PlaySound(AddressableAsset<AudioClip> sound, bool force = false)
         {
-            PlayInternalAsync(sound);
+            PlayInternalAsync(sound, force);
         }
 
-        private async void PlayInternalAsync(AddressableAsset<AudioClip> sound)
+        private async void PlayInternalAsync(AddressableAsset<AudioClip> sound, bool force)
         {
             if(sound == null || string.IsNullOrEmpty(sound.Key))
                 return;
@@ -104,7 +104,7 @@ namespace DadVSMe
             if(sound.Asset == null)
                 await sound.InitializeAsync();
 
-            AudioManager.Instance.PlaySFX(sound);
+            AudioManager.Instance.PlaySFX(sound, force);
         }
     }
 }

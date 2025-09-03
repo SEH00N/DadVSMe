@@ -1,6 +1,7 @@
 using System;
 using Cysharp.Threading.Tasks;
 using DG.Tweening;
+using H00N.Resources.Addressables;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
@@ -15,6 +16,7 @@ namespace DadVSMe.UI
 
         private const float ANIMATION_DURATION = 0.6f;
 
+        [SerializeField] AddressableAsset<AudioClip> clickSound = null;
         [SerializeField] CanvasGroup canvasGroup = null;
         [SerializeField] Ease enterEase = Ease.OutBack;
         [SerializeField] Ease exitEase = Ease.OutBack;
@@ -64,6 +66,8 @@ namespace DadVSMe.UI
 
             isTweening = true;
             transform.DOKill();
+
+            _ = new PlaySound(clickSound);
 
             canvasGroup.alpha = 1;
             canvasGroup.blocksRaycasts = false;
