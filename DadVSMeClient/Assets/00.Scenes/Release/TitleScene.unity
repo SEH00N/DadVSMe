@@ -241,6 +241,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   settingPopupUIPrefab:
     key: SettingPopupUI
+  transitionSounds:
+  - key: ui_transition_0
+  - key: ui_transition_0
+  - key: sfx_punch_small_0
+  - key: ui_transition_1
+  - key: ui_transition_1
+  - key: ui_transition_1
+  - key: ui_transition_1
+  clickSound:
+    key: ui_button_click_2
 --- !u!95 &61069313
 Animator:
   serializedVersion: 7

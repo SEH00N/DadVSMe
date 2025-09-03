@@ -10,6 +10,7 @@ namespace DadVSMe
         public const string GAME_OVER_SCENE_NAME = "GameOverScene";
         public const string GAME_CLEAR_SCENE_NAME = "GameClearScene";
 
+        public const string ADDRESSABLES_LABEL_PRELOAD = "preload";
         public const string ADDRESSABLES_LABEL_GAME_ASSETS = "game-assets";
 
         public static readonly TagHandle EntitySortingOrderProviderTag = TagHandle.GetExistingTag("EntitySortingOrderProvider");

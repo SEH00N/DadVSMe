@@ -1849,8 +1849,8 @@ AnimationClip:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
-        time: 2.55
-        value: 1111
+        time: 2.4333334
+        value: 178
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -1858,7 +1858,7 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 2.65
+        time: 2.5333333
         value: -20
         inSlope: 0
         outSlope: 0
@@ -1879,7 +1879,7 @@ AnimationClip:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
-        time: 2.55
+        time: 2.4333334
         value: -20
         inSlope: 0
         outSlope: 0
@@ -4717,8 +4717,8 @@ AnimationClip:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
-        time: 2.55
-        value: 1111
+        time: 2.4333334
+        value: 178
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -4726,7 +4726,7 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 2.65
+        time: 2.5333333
         value: -20
         inSlope: 0
         outSlope: 0
@@ -4747,7 +4747,7 @@ AnimationClip:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
-        time: 2.55
+        time: 2.4333334
         value: -20
         inSlope: 0
         outSlope: 0
@@ -4874,4 +4874,53 @@ AnimationClip:
     flags: 0
   m_HasGenericRootTransform: 0
   m_HasMotionFloatCurves: 0
-  m_Events: []
+  m_Events:
+  - time: 0.36666667
+    functionName: PlaySound
+    data: 
+    objectReferenceParameter: {fileID: 11400000, guid: bdf05c6b8b3964bcbae4e01c9d1db82e, type: 2}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 0.56666666
+    functionName: PlaySound
+    data: 
+    objectReferenceParameter: {fileID: 11400000, guid: bdf05c6b8b3964bcbae4e01c9d1db82e, type: 2}
+    floatParameter: 0
+    intParameter: 1
+    messageOptions: 0
+  - time: 1.3166667
+    functionName: PlaySound
+    data: 
+    objectReferenceParameter: {fileID: 11400000, guid: bdf05c6b8b3964bcbae4e01c9d1db82e, type: 2}
+    floatParameter: 0
+    intParameter: 2
+    messageOptions: 0
+  - time: 1.3333334
+    functionName: PlaySound
+    data: 
+    objectReferenceParameter: {fileID: 11400000, guid: bdf05c6b8b3964bcbae4e01c9d1db82e, type: 2}
+    floatParameter: 0
+    intParameter: 3
+    messageOptions: 0
+  - time: 2.1666667
+    functionName: PlaySound
+    data: 
+    objectReferenceParameter: {fileID: 11400000, guid: bdf05c6b8b3964bcbae4e01c9d1db82e, type: 2}
+    floatParameter: 0
+    intParameter: 4
+    messageOptions: 0
+  - time: 2.3
+    functionName: PlaySound
+    data: 
+    objectReferenceParameter: {fileID: 11400000, guid: bdf05c6b8b3964bcbae4e01c9d1db82e, type: 2}
+    floatParameter: 0
+    intParameter: 5
+    messageOptions: 0
+  - time: 2.4166667
+    functionName: PlaySound
+    data: 
+    objectReferenceParameter: {fileID: 11400000, guid: bdf05c6b8b3964bcbae4e01c9d1db82e, type: 2}
+    floatParameter: 0
+    intParameter: 6
+    messageOptions: 0
