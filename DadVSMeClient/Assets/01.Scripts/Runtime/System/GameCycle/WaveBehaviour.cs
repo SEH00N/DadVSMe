@@ -84,6 +84,12 @@ namespace DadVSMe.GameCycles
                 {
                     await UniTask.Delay(TimeSpan.FromSeconds(UDPATE_INTERVAL), cancellationToken: cancellationToken);
 
+                    if(GameInstance.GameCycle == null)
+                        break;
+                    
+                    if(GameInstance.GameCycle.IsPaused || GameInstance.GameCycle.IsBossWave)
+                        continue;
+
                     bool isEnd = OnUpdate();
                     if(isEnd)
                         break;
