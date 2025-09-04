@@ -9933,6 +9933,9 @@ MonoBehaviour:
   unitCollider: {fileID: 496568060240948358}
   holdState: {fileID: 5807568429010325276}
   size: {x: 0, y: 0}
+  floatingStates:
+  - {fileID: 7667994150933278078}
+  - {fileID: 5512892847475762571}
   bounceState: {fileID: 7667994150933278078}
   onAttackTargetEvent:
     m_PersistentCalls:

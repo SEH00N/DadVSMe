@@ -16,6 +16,7 @@ namespace DadVSMe.Entities
         [SerializeField] protected Collider2D unitCollider = null;
         [SerializeField] protected FSMState holdState = null;
         [SerializeField] protected Vector2 size = Vector2.zero;
+        [SerializeField] protected List<FSMState> floatingStates = new List<FSMState>();
         [SerializeField] protected FSMState bounceState = null;
 
         public FSMBrain FSMBrain => fsmBrain;
@@ -58,7 +59,10 @@ namespace DadVSMe.Entities
             if(unitFSMData == null)
                 return;
 
-            if(unitFSMData.isFloat == false || fsmBrain.CurrentState == bounceState)
+            if(unitFSMData.isFloat == false)
+                return;
+
+            if(floatingStates.Contains(fsmBrain.CurrentState))
                 return;
 
             // if the bounce is not due to a collision, the bounce is checked based on the last ground position.
