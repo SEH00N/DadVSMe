@@ -34,46 +34,51 @@ MonoBehaviour:
       m_FallbackState: 0
       m_WaitForCompletion: 0
       m_LocalVariables: []
+    chance: 0.3
     damage: 10
   - skillDesc:
       m_TableReference:
-        m_TableCollectionName: 
+        m_TableCollectionName: GUID:4b8a0843654704550b752a7cb2d1b194
       m_TableEntryReference:
-        m_KeyId: 0
+        m_KeyId: 4204484795293696
         m_Key: 
       m_FallbackState: 0
       m_WaitForCompletion: 0
       m_LocalVariables: []
+    chance: 0.4
     damage: 15
   - skillDesc:
       m_TableReference:
-        m_TableCollectionName: 
+        m_TableCollectionName: GUID:4b8a0843654704550b752a7cb2d1b194
       m_TableEntryReference:
-        m_KeyId: 0
+        m_KeyId: 4204490600210432
         m_Key: 
       m_FallbackState: 0
       m_WaitForCompletion: 0
       m_LocalVariables: []
+    chance: 0.5
     damage: 20
   - skillDesc:
       m_TableReference:
-        m_TableCollectionName: 
+        m_TableCollectionName: GUID:4b8a0843654704550b752a7cb2d1b194
       m_TableEntryReference:
-        m_KeyId: 0
+        m_KeyId: 4204514717458432
         m_Key: 
       m_FallbackState: 0
       m_WaitForCompletion: 0
       m_LocalVariables: []
+    chance: 0.6
     damage: 30
   - skillDesc:
       m_TableReference:
-        m_TableCollectionName: 
+        m_TableCollectionName: GUID:4b8a0843654704550b752a7cb2d1b194
       m_TableEntryReference:
-        m_KeyId: 0
+        m_KeyId: 4204521495453696
         m_Key: 
       m_FallbackState: 0
       m_WaitForCompletion: 0
       m_LocalVariables: []
+    chance: 0.7
     damage: 45
   attackData: {fileID: 11400000, guid: 4d77a75604ed84d8d9ad821222b6d9c0, type: 2}
   attackRadius: 5

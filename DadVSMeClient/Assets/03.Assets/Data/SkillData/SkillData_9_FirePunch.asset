@@ -38,9 +38,9 @@ MonoBehaviour:
     damage: 5
   - skillDesc:
       m_TableReference:
-        m_TableCollectionName: 
+        m_TableCollectionName: GUID:4b8a0843654704550b752a7cb2d1b194
       m_TableEntryReference:
-        m_KeyId: 0
+        m_KeyId: 4205065836421120
         m_Key: 
       m_FallbackState: 0
       m_WaitForCompletion: 0
@@ -49,37 +49,37 @@ MonoBehaviour:
     damage: 7
   - skillDesc:
       m_TableReference:
-        m_TableCollectionName: 
+        m_TableCollectionName: GUID:4b8a0843654704550b752a7cb2d1b194
       m_TableEntryReference:
-        m_KeyId: 0
+        m_KeyId: 4205089043505152
         m_Key: 
       m_FallbackState: 0
       m_WaitForCompletion: 0
       m_LocalVariables: []
     attackCount: 5
-    damage: 8
+    damage: 10
   - skillDesc:
       m_TableReference:
-        m_TableCollectionName: 
+        m_TableCollectionName: GUID:4b8a0843654704550b752a7cb2d1b194
       m_TableEntryReference:
-        m_KeyId: 0
+        m_KeyId: 4205094294773760
         m_Key: 
       m_FallbackState: 0
       m_WaitForCompletion: 0
       m_LocalVariables: []
     attackCount: 6
-    damage: 11
+    damage: 14
   - skillDesc:
       m_TableReference:
-        m_TableCollectionName: 
+        m_TableCollectionName: GUID:4b8a0843654704550b752a7cb2d1b194
       m_TableEntryReference:
-        m_KeyId: 0
+        m_KeyId: 4205100674310144
         m_Key: 
       m_FallbackState: 0
       m_WaitForCompletion: 0
       m_LocalVariables: []
     attackCount: 7
-    damage: 15
+    damage: 20
   particlePrefab:
     key: Particle_BurnSmoke
   firePrefab:

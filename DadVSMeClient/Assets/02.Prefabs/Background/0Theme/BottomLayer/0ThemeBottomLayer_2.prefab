@@ -781,6 +781,71 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &2768851344271628379
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7095012218340361417}
+  - component: {fileID: 5074196001519852663}
+  m_Layer: 0
+  m_Name: EnemyWaveBehaviour (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7095012218340361417
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2768851344271628379}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 22.05, y: 2.5749998, z: 0}
+  m_LocalScale: {x: 1.25, y: 1.25, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 2265151258319726447}
+  m_Father: {fileID: 3954003982585432525}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5074196001519852663
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2768851344271628379}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3449044d2f928469f903bde1b8bcb986, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnInfoList:
+  - spawnPoint: {fileID: 2265151258319726447}
+    conditionDistance: 20
+    spawnTable:
+    - prefab:
+        key: SimpleEnemy
+      enemyData:
+        key: SimpleEnemyData_2 (Tommy)
+      statData:
+        key: KidStatData_Wave1
+      offset: {x: -0.45, y: 1.28}
+      startWithHold: 1
+    - prefab:
+        key: SimpleEnemy
+      enemyData:
+        key: SimpleEnemyData_3 (Danny)
+      statData:
+        key: KidStatData_Wave1
+      offset: {x: 0, y: -1.63}
+      startWithHold: 0
 --- !u!1 &2777991672940205924
 GameObject:
   m_ObjectHideFlags: 0
@@ -1201,7 +1266,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawnInfoList:
   - spawnPoint: {fileID: 2326386255144380547}
-    conditionDistance: 15
+    conditionDistance: 20
     spawnTable:
     - prefab:
         key: SimpleEnemy
@@ -1897,7 +1962,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawnInfoList:
   - spawnPoint: {fileID: 3321131602950705692}
-    conditionDistance: 15
+    conditionDistance: 20
     spawnTable:
     - prefab:
         key: SimpleEnemy
@@ -1976,6 +2041,37 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9bded73c08f24bba8884710f32f58a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &6452795422137673035
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2265151258319726447}
+  m_Layer: 0
+  m_Name: 1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2265151258319726447
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6452795422137673035}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7095012218340361417}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &6939320168230980316
 GameObject:
   m_ObjectHideFlags: 0
@@ -2493,6 +2589,7 @@ Transform:
   - {fileID: 2491164020443295337}
   - {fileID: 8876633284021201884}
   - {fileID: 3507805890491095303}
+  - {fileID: 7095012218340361417}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &6076602060825198319

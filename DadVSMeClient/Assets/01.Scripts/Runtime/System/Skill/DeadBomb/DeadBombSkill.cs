@@ -80,17 +80,20 @@ namespace DadVSMe
             if (playerBrain.GetAIData<PlayerFSMData>().isAnger == false)
                 return;
 
-            if (target.TryGetComponent<IHealth>(out IHealth targetHealth))
-            {
-                if (targetHealth.CurrentHP <= 0f)
-                {
-                    attackTarget = target;
+            if (target.TryGetComponent<IHealth>(out IHealth targetHealth) == false)
+                return;
 
-                    EntityAnimator animator = target.GetComponent<EntityAnimator>();
-                    attackTarget.OnDespawnEvent -= Execute;
-                    attackTarget.OnDespawnEvent += Execute;
-                }
-            }
+            if (targetHealth.CurrentHP > 0f)
+                return;
+
+            if (UnityEngine.Random.value > GetOption().chance)
+                return;
+
+            attackTarget = target;
+
+            EntityAnimator animator = target.GetComponent<EntityAnimator>();
+            attackTarget.OnDespawnEvent -= Execute;
+            attackTarget.OnDespawnEvent += Execute;
         }
     }
 }
