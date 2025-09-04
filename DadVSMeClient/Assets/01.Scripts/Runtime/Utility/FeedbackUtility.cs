@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using DadVSMe.Entities;
 using H00N.Extensions;
@@ -97,14 +98,20 @@ namespace DadVSMe
 
         private async void PlayInternalAsync(AddressableAsset<AudioClip> sound, bool force)
         {
-            if(sound == null || string.IsNullOrEmpty(sound.Key))
-                return;
+            try {
+                if(sound == null || string.IsNullOrEmpty(sound.Key))
+                    return;
 
-            // not loaded yet
-            if(sound.Asset == null)
-                await sound.InitializeAsync();
+                // not loaded yet
+                if(sound.Asset == null)
+                    await sound.InitializeAsync();
 
-            AudioManager.Instance.PlaySFX(sound, force);
+                AudioManager.Instance.PlaySFX(sound, force);
+            }
+            catch(Exception ex)
+            {
+                Debug.LogError(ex);
+            }
         }
     }
 }
