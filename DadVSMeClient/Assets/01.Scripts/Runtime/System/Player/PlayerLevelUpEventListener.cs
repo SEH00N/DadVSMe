@@ -23,11 +23,11 @@ namespace DadVSMe.Players
             levelUpSound.InitializeAsync().Forget();
         }
 
-        private void Update()
-        {
-            if(Input.GetKey(KeyCode.LeftControl) && Input.GetKeyDown(KeyCode.A))
-                OnLevelUp(0);
-        }
+        // private void Update()
+        // {
+        //     if(Input.GetKey(KeyCode.LeftControl) && Input.GetKeyDown(KeyCode.A))
+        //         OnLevelUp(0);
+        // }
 
         public async void OnLevelUp(int _)
         {
