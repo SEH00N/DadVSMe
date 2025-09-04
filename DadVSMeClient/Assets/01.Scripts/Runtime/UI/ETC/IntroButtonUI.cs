@@ -15,19 +15,13 @@ namespace DadVSMe.UI
 
         private const float ANIMATION_DURATION = 0.6f;
 
-        [SerializeField] AddressableAsset<AudioClip> clickSound = null;
-        [SerializeField] AddressableAsset<AudioClip> tweenSound = null;
+        [SerializeField] AudioClip clickSound = null;
+        [SerializeField] AudioClip tweenSound = null;
         [SerializeField] CanvasGroup canvasGroup = null;
         [SerializeField] Ease enterEase = Ease.OutBack;
         [SerializeField] Ease exitEase = Ease.OutBack;
 
         private bool isTweening = false;
-
-        private void Awake()
-        {
-            clickSound.InitializeAsync().Forget();
-            tweenSound.InitializeAsync().Forget();
-        }
 
         public void OnPointerEnter(PointerEventData eventData)
         {
@@ -73,7 +67,7 @@ namespace DadVSMe.UI
             isTweening = true;
             transform.DOKill();
 
-            _ = new PlaySound(clickSound);
+            AudioManager.Instance.PlaySFX(clickSound, force: true);
 
             canvasGroup.alpha = 1;
             canvasGroup.blocksRaycasts = false;
@@ -81,7 +75,7 @@ namespace DadVSMe.UI
 
             await transform.DOLocalRotate(new Vector3(0, 0, 360), ANIMATION_DURATION, RotateMode.LocalAxisAdd).SetEase(Ease.OutQuart);
 
-            _ = new PlaySound(tweenSound);
+            AudioManager.Instance.PlaySFX(tweenSound, force: true);
 
             _ = canvasGroup.DOFade(0, ANIMATION_DURATION).SetEase(Ease.Linear);
             _ = transform.DOLocalRotate(new Vector3(0, 0, 360 * 2.5f), ANIMATION_DURATION, RotateMode.LocalAxisAdd).SetEase(Ease.Linear);

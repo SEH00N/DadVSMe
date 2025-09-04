@@ -11,7 +11,7 @@ namespace DadVSMe.UI
 {
     public class IntroUI : MonoBehaviour
     {
-        private const float VIDEO_WAIT_TIME = -0.75f;
+        private const float WAIT_TIME = 29f;
         private const float DELAY_TIME = 1.2f;
 
         [SerializeField] GameObject cutscenePanelObject = null;
@@ -55,7 +55,7 @@ namespace DadVSMe.UI
                 AudioManager.Instance.PlayBGM(bgmAudioLibrary, loadCache: false);
 
                 // Wait for video to finish
-                await UniTask.Delay(TimeSpan.FromSeconds(videoPlayer.length + VIDEO_WAIT_TIME), cancellationToken: cancellationTokenSource.Token);
+                await UniTask.Delay(TimeSpan.FromSeconds(WAIT_TIME), cancellationToken: cancellationTokenSource.Token);
 
                 if(cancellationTokenSource.IsCancellationRequested)
                     return;
@@ -77,7 +77,7 @@ namespace DadVSMe.UI
             cancellationTokenSource?.Dispose();
             cancellationTokenSource = null;
 
-            videoPlayer.time = videoPlayer.length + VIDEO_WAIT_TIME;
+            videoPlayer.Stop();
             await SceneManager.TryLoadSceneAsync(GameDefine.TITLE_SCENE_NAME, LoadSceneMode.Single);
         }
     }

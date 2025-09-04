@@ -900,10 +900,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a4ba27e1a6bc4402af6a5a86a6a16b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  clickSound:
-    key: ui_button_click_2
-  tweenSound:
-    key: ui_transition_3
+  clickSound: {fileID: 8300000, guid: f0166003adbed40229c2924756b8556d, type: 3}
+  tweenSound: {fileID: 8300000, guid: dd4cb87b35843444bab7d65c81ec6211, type: 3}
   canvasGroup: {fileID: 1202251956}
   enterEase: 27
   exitEase: 27
