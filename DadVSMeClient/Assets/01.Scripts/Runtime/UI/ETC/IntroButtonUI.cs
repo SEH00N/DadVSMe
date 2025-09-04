@@ -4,7 +4,6 @@ using DG.Tweening;
 using H00N.Resources.Addressables;
 using UnityEngine;
 using UnityEngine.EventSystems;
-using UnityEngine.UI;
 
 namespace DadVSMe.UI
 {
@@ -17,11 +16,18 @@ namespace DadVSMe.UI
         private const float ANIMATION_DURATION = 0.6f;
 
         [SerializeField] AddressableAsset<AudioClip> clickSound = null;
+        [SerializeField] AddressableAsset<AudioClip> tweenSound = null;
         [SerializeField] CanvasGroup canvasGroup = null;
         [SerializeField] Ease enterEase = Ease.OutBack;
         [SerializeField] Ease exitEase = Ease.OutBack;
 
         private bool isTweening = false;
+
+        private void Awake()
+        {
+            clickSound.InitializeAsync().Forget();
+            tweenSound.InitializeAsync().Forget();
+        }
 
         public void OnPointerEnter(PointerEventData eventData)
         {
@@ -74,6 +80,8 @@ namespace DadVSMe.UI
             transform.localScale = Vector3.one * DEFAULT_SCALE;
 
             await transform.DOLocalRotate(new Vector3(0, 0, 360), ANIMATION_DURATION, RotateMode.LocalAxisAdd).SetEase(Ease.OutQuart);
+
+            _ = new PlaySound(tweenSound);
 
             _ = canvasGroup.DOFade(0, ANIMATION_DURATION).SetEase(Ease.Linear);
             _ = transform.DOLocalRotate(new Vector3(0, 0, 360 * 2.5f), ANIMATION_DURATION, RotateMode.LocalAxisAdd).SetEase(Ease.Linear);

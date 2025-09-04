@@ -19,7 +19,7 @@ namespace DadVSMe
         public static float MasterVolume {
             get {
                 if(masterVolume == float.MinValue)
-                    masterVolume = PlayerPrefs.GetFloat("MasterVolume", 1f);
+                    masterVolume = PlayerPrefs.GetFloat("MasterVolume", 0.5f);
 
                 return masterVolume;
             }
@@ -34,7 +34,7 @@ namespace DadVSMe
         public static float BGMVolume {
             get {
                 if(bgmVolume == float.MinValue)
-                    bgmVolume = PlayerPrefs.GetFloat("BGMVolume", 1f);
+                    bgmVolume = PlayerPrefs.GetFloat("BGMVolume", 0.5f);
 
                 return bgmVolume;
             }
@@ -49,7 +49,7 @@ namespace DadVSMe
         public static float SFXVolume {
             get {
                 if(sfxVolume == float.MinValue)
-                    sfxVolume = PlayerPrefs.GetFloat("SFXVolume", 1f);
+                    sfxVolume = PlayerPrefs.GetFloat("SFXVolume", 0.5f);
 
                 return sfxVolume;
             }
