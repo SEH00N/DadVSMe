@@ -1,5 +1,4 @@
 using System;
-using Cysharp.Threading.Tasks;
 using DadVSMe.Entities;
 using DadVSMe.Players.FSM;
 using UnityEngine;
@@ -9,17 +8,19 @@ namespace DadVSMe.Players
 {
     public class Player : Unit
     {
+        private const float ANGER_GAUGE_DECREMENT_THRESHOLD = 1f;
+
         [Header("Player")]
         [SerializeField] EnemyDetector enemyDetector = null;
         [SerializeField] PlayerItemCollector itemCollector = null;
-
-        // protected override RigidbodyType2D DefaultRigidbodyType => RigidbodyType2D.Dynamic;
+        [SerializeField] GameObject powerUpEffect = null;
 
         private PlayerFSMData playerFSMData = null;
 
         public UnityEvent<int> onLevelUpEvent;
-        public event Action OnAngerGaugeChangedEvent = null;
         public event Action OnEXPChangedEvent = null;
+
+        private float lastAngerGauseModifiedTime = 0f;
 
         //private void Start()
         //{
@@ -33,53 +34,66 @@ namespace DadVSMe.Players
             itemCollector.Initialize(this);
             enemyDetector.Initialize();
 
+            unitHealth.onAttackEvent.AddListener(HandleGetAttacked);
             onAttackTargetEvent.AddListener(OnAttackTarget);
-            onStartAngerEvent.AddListener(OnStartAnger);
 
             playerFSMData = fsmBrain.GetAIData<PlayerFSMData>();
         }
 
+        private void HandleGetAttacked(IAttacker attacker, IAttackData attackData)
+        {
+            if(attackData.Damage <= 0f)
+                return;
+            
+            DeactiveAnger();
+        }
+
         private void OnAttackTarget(Unit target, IAttackData attackData)
         {
-            if (playerFSMData.isAnger)
-                return;
-
             if(attackData is AttackDataBase data == false)
                 return;
 
             if (data.IsRageAttack == false)
                 return;
 
-            playerFSMData.currentAngerGauge = Mathf.Min(playerFSMData.currentAngerGauge + 5, playerFSMData.maxAngerGauge);
-            OnAngerGaugeChangedEvent?.Invoke();
+            playerFSMData.currentAngerGauge = Mathf.Min(playerFSMData.currentAngerGauge + GameDefine.ANGER_GAUGE_INCREMENT, playerFSMData.maxAngerGauge);
+            lastAngerGauseModifiedTime = Time.time;
         }
 
-        public void OnStartAnger()
+        protected override void Update()
         {
-            playerFSMData.currentAngerGauge = 0f;
-            OnAngerGaugeChangedEvent?.Invoke();
+            base.Update();
+
+            // if(playerFSMData.isAnger == false)
+
+            if(playerFSMData.currentAngerGauge <= 0f)
+                return;
+
+            if(Time.time - lastAngerGauseModifiedTime < ANGER_GAUGE_DECREMENT_THRESHOLD)
+                return;
+            
+            playerFSMData.currentAngerGauge = Mathf.Max(playerFSMData.currentAngerGauge - GameDefine.ANGER_GAUGE_DECREMENT * Time.deltaTime, 0f);
+            if(playerFSMData.currentAngerGauge <= 0f && playerFSMData.isAnger)
+                DeactiveAnger();
         }
 
-        public async void ActiveAngerForUnityEvent()
-        {
-            await ActiveAnger();
-        }
-
-        public async UniTask ActiveAnger()
+        public void ActiveAnger()
         {
             playerFSMData.isAnger = true;
             unitStatData[EUnitStat.MoveSpeed].RegistAddModifier(unitStatData[EUnitStat.AngerMoveSpeedModifier].FinalValue);
             unitStatData[EUnitStat.AttackPowerMultiplier].RegistAddModifier(unitStatData[EUnitStat.AttackPowerMultiplierModifier].FinalValue);
             unitFSMData.attackAttribute = EAttackAttribute.Crazy;
-            onStartAngerEvent?.Invoke();
+            powerUpEffect.SetActive(true);
+        }
 
-            await UniTask.Delay(TimeSpan.FromSeconds(playerFSMData.angerTime));
-
+        private void DeactiveAnger()
+        {
             unitStatData[EUnitStat.MoveSpeed].UnregistAddModifier(unitStatData[EUnitStat.AngerMoveSpeedModifier].FinalValue);
             unitStatData[EUnitStat.AttackPowerMultiplier].UnregistAddModifier(unitStatData[EUnitStat.AttackPowerMultiplierModifier].FinalValue);
             unitFSMData.attackAttribute = EAttackAttribute.Normal;
             playerFSMData.isAnger = false;
-            onEndAngerEvent?.Invoke();
+            playerFSMData.currentAngerGauge = 0f;
+            powerUpEffect.SetActive(false);
         }
 
         public void GetExp(int amount)
@@ -87,9 +101,7 @@ namespace DadVSMe.Players
             playerFSMData.currentExp += amount;
 
             while (playerFSMData.levelUpExp <= playerFSMData.currentExp)
-            {
                 LevelUp();
-            }
 
             OnEXPChangedEvent?.Invoke();
         }

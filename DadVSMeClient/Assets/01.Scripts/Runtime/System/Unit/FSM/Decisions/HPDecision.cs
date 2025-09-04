@@ -1,9 +1,11 @@
 using H00N.AI.FSM;
+using UnityEngine;
 
 namespace DadVSMe.Entities.FSM
 {
     public class HPDecision : FSMDecision
     {
+        [SerializeField] float hpThreshold = 0f;
         private UnitHealth unitHealth = null;
 
         public override void Init(FSMBrain brain, FSMState state)
@@ -14,7 +16,7 @@ namespace DadVSMe.Entities.FSM
 
         public override bool MakeDecision()
         {
-            return unitHealth.CurrentHP <= 0;
+            return unitHealth.CurrentHP <= hpThreshold;
         }
     }
 }

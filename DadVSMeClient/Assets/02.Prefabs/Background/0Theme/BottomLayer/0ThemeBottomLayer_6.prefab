@@ -1172,7 +1172,7 @@ MonoBehaviour:
       statData:
         key: KidStatData_Wave1
       offset: {x: 0, y: 0.75}
-      startWithHold: 1
+      startWithHold: 0
     - prefab:
         key: SimpleEnemy
       enemyData:
@@ -1180,7 +1180,7 @@ MonoBehaviour:
       statData:
         key: KidStatData_Wave1
       offset: {x: -0.81, y: -0.75}
-      startWithHold: 1
+      startWithHold: 0
     - prefab:
         key: SimpleEnemy
       enemyData:
@@ -1188,7 +1188,7 @@ MonoBehaviour:
       statData:
         key: KidStatData_Wave1
       offset: {x: 0.81, y: -0.75}
-      startWithHold: 1
+      startWithHold: 0
 --- !u!1 &7387875328770333759
 GameObject:
   m_ObjectHideFlags: 0

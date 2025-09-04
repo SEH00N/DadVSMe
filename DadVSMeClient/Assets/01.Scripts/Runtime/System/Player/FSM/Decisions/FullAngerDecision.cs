@@ -1,6 +1,4 @@
-using DadVSMe.Entities;
 using H00N.AI.FSM;
-using UnityEngine;
 
 namespace DadVSMe.Players.FSM
 {
@@ -17,6 +15,12 @@ namespace DadVSMe.Players.FSM
 
         public override bool MakeDecision()
         {
+            if(fsmData == null)
+                return false;
+            
+            if(fsmData.isAnger)
+                return false;
+
             return fsmData.currentAngerGauge >= fsmData.maxAngerGauge;
         }
     }

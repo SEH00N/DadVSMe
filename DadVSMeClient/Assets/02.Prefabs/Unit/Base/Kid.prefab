@@ -134,7 +134,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3515528adf73f471f8009033ff01c22f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  autoTransitioning: 0
+  autoTransitioning: 1
   onStateEnterEvent:
     m_PersistentCalls:
       m_Calls:
@@ -2513,6 +2513,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isReverse: 0
+  hpThreshold: -999
 --- !u!1 &6235753948883095332
 GameObject:
   m_ObjectHideFlags: 0
@@ -2632,6 +2633,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isReverse: 0
+  hpThreshold: 0
 --- !u!1 &6329864930482399154
 GameObject:
   m_ObjectHideFlags: 0
@@ -3021,6 +3023,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isReverse: 0
+  hpThreshold: 0
 --- !u!1 &6945144695061183823
 GameObject:
   m_ObjectHideFlags: 0
@@ -3095,12 +3098,6 @@ MonoBehaviour:
   size: {x: 0, y: 0}
   bounceState: {fileID: 3987183898820894391}
   onAttackTargetEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  onStartAngerEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  onEndAngerEvent:
     m_PersistentCalls:
       m_Calls: []
   enemyDetector: {fileID: 5256345900857985724}
@@ -3533,6 +3530,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isReverse: 0
+  hpThreshold: 0
 --- !u!1 &7411320072174639445
 GameObject:
   m_ObjectHideFlags: 0

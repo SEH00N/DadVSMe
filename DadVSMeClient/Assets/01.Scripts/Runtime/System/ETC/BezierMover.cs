@@ -117,14 +117,14 @@ namespace DadVSMe
             float delay = Mathf.Max(0f, delayBeforeHoming);
             if (delay > 0f)
             {
-                Vector3 basePos = transform.position;
+                Vector2 basePos = (Vector2)transform.position;
                 float end = Time.time + delay;
                 while (Time.time < end)
                 {
                     ct.ThrowIfCancellationRequested();
                     float wobble = Mathf.Sin(Time.time * 60f) * 0.005f;
                     // Vector3 prevPosition = transform.position;
-                    Vector3 targetPosition = basePos + UnityEngine.Random.insideUnitSphere * 0.01f + Vector3.up * wobble;
+                    Vector3 targetPosition = basePos + (Random.insideUnitCircle * 0.02f) + (Vector2.up * wobble);
                     transform.position = targetPosition;
 
                     if(target)

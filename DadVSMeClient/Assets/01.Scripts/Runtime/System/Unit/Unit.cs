@@ -34,8 +34,6 @@ namespace DadVSMe.Entities
         public float AttackPower => unitStatData[EUnitStat.AttackPowerMultiplier].FinalValue;
 
         public UnityEvent<Unit, IAttackData> onAttackTargetEvent = null;
-        public UnityEvent onStartAngerEvent;
-        public UnityEvent onEndAngerEvent;
 
         protected override void InitializeInternal(IEntityData data)
         {

@@ -8,13 +8,16 @@ namespace DadVSMe.Enemies.FSM
     {
         private const float UPDATE_INTERVAL = 0.1f;
 
-        [SerializeField] float xPadding = 1f;
+        [SerializeField] float xPaddingMin = 1f;
+        [SerializeField] float xPaddingMax = 1f;
 
         private EnemyFSMData enemyFSMData = null;
         private UnitMovement unitMovement = null;
         private UnitStatData unitStatData = null;
 
         private float updateTimer = 0f;
+
+        private float currentXPadding = 0f;
 
         public override void Init(FSMBrain brain, FSMState state)
         {
@@ -28,6 +31,8 @@ namespace DadVSMe.Enemies.FSM
         {
             base.EnterState();
             unitMovement.SetActive(true);
+
+            currentXPadding = Random.Range(xPaddingMin, xPaddingMax);
         }
 
         public override void UpdateState()
@@ -41,7 +46,7 @@ namespace DadVSMe.Enemies.FSM
             updateTimer = 0f;
 
             float directionFromPlayer = Mathf.Sign((enemyFSMData.Player.transform.position - brain.transform.position).x);
-            Vector3 destination = enemyFSMData.Player.transform.position + new Vector3(xPadding * -directionFromPlayer, 0f, 0f);
+            Vector3 destination = enemyFSMData.Player.transform.position + new Vector3(currentXPadding * -directionFromPlayer, 0f, 0f);
             Vector3 direction = destination - brain.transform.position;
 
             unitMovement.SetMovementVelocity(direction.normalized * unitStatData[EUnitStat.MoveSpeed].FinalValue);

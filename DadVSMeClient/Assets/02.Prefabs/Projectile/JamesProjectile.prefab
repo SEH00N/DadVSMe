@@ -74,11 +74,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b7167793c4f24260abca517f7b74331, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  onInitializedEvent:
+    m_PersistentCalls:
+      m_Calls: []
   targetTag: Player
   attackData: {fileID: 11400000, guid: f5f41c2b40ce84cacb902d4d9cfd320b, type: 2}
   lifeTime: 3
   collisionType: 2
-  initialVelocity: {x: 3, y: 1}
+  initialVelocity: {x: 2, y: 1}
 --- !u!61 &8198412885572378507
 BoxCollider2D:
   m_ObjectHideFlags: 0

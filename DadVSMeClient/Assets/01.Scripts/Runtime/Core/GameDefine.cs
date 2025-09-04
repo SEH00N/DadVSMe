@@ -29,5 +29,8 @@ namespace DadVSMe
 
         public const float DEFAULT_FADE_DURATION = 0.75f;
         public const float DEFAULT_TIME_SCALE = 1f;
+
+        public const float ANGER_GAUGE_INCREMENT = 3f;
+        public const float ANGER_GAUGE_DECREMENT = 2f;
     }
 }

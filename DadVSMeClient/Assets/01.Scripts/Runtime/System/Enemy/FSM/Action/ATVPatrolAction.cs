@@ -10,6 +10,8 @@ namespace DadVSMe.Enemies
         private const float BOUNDARY_CHECK_DISTANCE = 3.5f;
         private const float PLAYER_CHECK_DISTANCE = 10f;
 
+        private const float DIRECTION_RANDOMNESS = 15f;
+
         private EnemyFSMData enemyFSMData = null;
         private UnitMovement unitMovement = null;
         private UnitStatData unitStatData = null;
@@ -35,7 +37,7 @@ namespace DadVSMe.Enemies
             Vector2 currentPosition = brain.transform.position;
             
             Vector3 direction = targetPosition - currentPosition;
-            patrolDirection = direction.normalized;
+            patrolDirection = Quaternion.Euler(0f, 0f, Random.Range(-DIRECTION_RANDOMNESS, DIRECTION_RANDOMNESS)) * direction.normalized;
         }
 
         public override void UpdateState()
