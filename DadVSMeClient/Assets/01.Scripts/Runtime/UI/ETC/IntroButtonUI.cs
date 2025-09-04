@@ -63,27 +63,46 @@ namespace DadVSMe.UI
         {
             if(isTweening)
                 return;
+            
+            Debug.Log("AAAAAAA");
 
             isTweening = true;
             transform.DOKill();
 
+            Debug.Log("BBBBBBB");
+
             AudioManager.Instance.PlaySFX(clickSound, force: true);
+
+            Debug.Log("CCCCCCC");
 
             canvasGroup.alpha = 1;
             canvasGroup.blocksRaycasts = false;
             transform.localScale = Vector3.one * DEFAULT_SCALE;
 
+            Debug.Log("DDDDDDD");
+
             await transform.DOLocalRotate(new Vector3(0, 0, 360), ANIMATION_DURATION, RotateMode.LocalAxisAdd).SetEase(Ease.OutQuart);
 
+            Debug.Log("EEEEEEE");
+
             AudioManager.Instance.PlaySFX(tweenSound, force: true);
+
+            Debug.Log("FFFFFFFFF");
 
             _ = canvasGroup.DOFade(0, ANIMATION_DURATION).SetEase(Ease.Linear);
             _ = transform.DOLocalRotate(new Vector3(0, 0, 360 * 2.5f), ANIMATION_DURATION, RotateMode.LocalAxisAdd).SetEase(Ease.Linear);
             _ = transform.DOScale(Vector3.zero, ANIMATION_DURATION).SetEase(Ease.Linear);
 
+            Debug.Log("GGGGGGG");
+
             await UniTask.Delay(TimeSpan.FromSeconds(ANIMATION_DURATION));
 
+            Debug.Log("HHHHHHH");
+
             isTweening = false;
+
+            Debug.Log("IIIIIII");
+
             transform.parent.gameObject.SetActive(false);
         }
     }
