@@ -333,9 +333,9 @@ MonoBehaviour:
     conditionDistance: 20
     spawnTable:
     - prefab:
-        key: ButtEnemy
+        key: SimpleEnemy
       enemyData:
-        key: ButtEnemyData_13 (Harry)
+        key: SimpleEnemyData_13 (Harry)
       statData:
         key: KidStatData_Wave2
       offset: {x: -0.94, y: 1.5}
@@ -349,9 +349,9 @@ MonoBehaviour:
       offset: {x: -1.45, y: -0.18}
       startWithHold: 1
     - prefab:
-        key: ButtEnemy
+        key: SimpleEnemy
       enemyData:
-        key: ButtEnemyData_14 (Robble)
+        key: SimpleEnemyData_14 (Robble)
       statData:
         key: KidStatData_Wave2
       offset: {x: 0.83, y: 0.94}
