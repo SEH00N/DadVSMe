@@ -2831,7 +2831,7 @@ Transform:
   m_GameObject: {fileID: 7502292806761279969}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 16.61, y: 7.25, z: -2}
+  m_LocalPosition: {x: 16.54, y: 6.77, z: -2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2880,7 +2880,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 2045851267
   m_SortingLayer: -1
-  m_SortingOrder: 0
+  m_SortingOrder: 999
   m_Sprite: {fileID: -7039638303207936411, guid: 37e77048e6e2447158844831655c1a8b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -3632,7 +3632,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2691492642869023714}
   - component: {fileID: 6951029952363797461}
-  - component: {fileID: 5618798494958016121}
   - component: {fileID: 8864449330716352261}
   m_Layer: 9
   m_Name: floor_deco_4_0 (1)
@@ -3697,9 +3696,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingLayerID: 2045851267
+  m_SortingLayer: -1
+  m_SortingOrder: 999
   m_Sprite: {fileID: 9158738958064624113, guid: b89fac712db1342acaed8efb3960f359, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -3711,21 +3710,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &5618798494958016121
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8268593090224086853}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a6b531da3096245309ed7a81e6d09be8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  staticEntity: 1
-  entityAnimator: {fileID: 0}
-  sortingOrderResolver: {fileID: 0}
 --- !u!61 &8864449330716352261
 BoxCollider2D:
   m_ObjectHideFlags: 0

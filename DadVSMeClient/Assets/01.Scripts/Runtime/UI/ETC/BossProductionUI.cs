@@ -11,6 +11,7 @@ namespace DadVSMe
     public class BossProductionUI : PoolableBehaviourUI
     {
         [SerializeField] AddressableAsset<AudioClip> _popupSound = null;
+        [SerializeField] AddressableAsset<AudioClip> _fadeoutSound = null;
 
         [Header("Transform")]
         [SerializeField] RectTransform _bannerTransform;
@@ -58,8 +59,12 @@ namespace DadVSMe
             await UniTask.Delay(TimeSpan.FromSeconds(APPEAR_TIME), true);
             await _profileTransform.DOLocalMove(_profileIntervalPosition, WAIT_TIME).SetUpdate(true);
 
+            _ = new PlaySound(_fadeoutSound, force: true);
+            
             _ = _profileTransform.DOLocalMove(_profileEndPosition, DISAPPEAR_TIME).SetEase(Ease.InExpo).SetUpdate(true);
             await UniTask.Delay(TimeSpan.FromSeconds(INTERVAL_TIME), true);
+
+            _ = new PlaySound(_fadeoutSound, force: true);
             await _bannerTransform.DOLocalMove(_bannerEndPosition, DISAPPEAR_TIME).SetEase(Ease.InExpo).SetUpdate(true);
 
             await _backgroundImageCanvasGroup.DOFade(0f, APPEAR_TIME * BACKGROUND_TRANSITION_TIME_RATIO).SetEase(Ease.InQuart).SetUpdate(true);

@@ -149,7 +149,7 @@ MonoBehaviour:
       enemyData:
         key: ButtEnemyData_6 (Ronald)
       statData:
-        key: KidStatData_Wave2
+        key: RonaldStatData_Wave1
       offset: {x: 0, y: 0}
       startWithHold: 0
   bgmLibrary:
@@ -1219,7 +1219,7 @@ Transform:
   m_GameObject: {fileID: 2342017713973949643}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.68, y: 6.78, z: -2}
+  m_LocalPosition: {x: -1.84, y: 6.69, z: -2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1271,7 +1271,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 4867959920361670167, guid: 7b0a41d854ce947b28e6c95b4ab0535f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 1
+  m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 1.8, y: 2.75}
@@ -2097,7 +2097,7 @@ Transform:
   m_GameObject: {fileID: 4057735440307727930}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 19.73, y: 7.26, z: -2}
+  m_LocalPosition: {x: 20.27, y: 6.69, z: -2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2522,7 +2522,7 @@ Transform:
   m_GameObject: {fileID: 4548103466017147859}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 21.58, y: 7, z: -2}
+  m_LocalPosition: {x: 21.63001, y: 6.84, z: -2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2728,7 +2728,7 @@ Transform:
   m_GameObject: {fileID: 5361623495045138871}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 11.6, y: 7.72, z: -3}
+  m_LocalPosition: {x: 11.6, y: 7.88, z: -3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
