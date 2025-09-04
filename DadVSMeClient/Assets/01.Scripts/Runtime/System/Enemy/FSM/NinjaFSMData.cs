@@ -9,6 +9,8 @@ namespace DadVSMe.Enemies.FSM
 
         public IAIData Initialize()
         {
+            jumpAttackTimer = 0f;
+
             return this;
         }
     }

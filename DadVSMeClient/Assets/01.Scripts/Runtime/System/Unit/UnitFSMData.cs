@@ -26,8 +26,19 @@ namespace DadVSMe.Entities
 
         public IAIData Initialize()
         {
+            enemies = new List<Unit>();
+            attackData = null;
+            forwardDirection = 1;
+            groundPositionY = 0f;
+            collisionData = new UnitCollisionData();
+            isFloat = false;
+            isLie = false;
+            isDie = false;
             holders = new HashSet<Object>();
+            hitAttribute = EAttackAttribute.Normal;
             attackAttribute = EAttackAttribute.Normal;
+            OnBowlingEvent = null;
+
             return this;
         }
     }

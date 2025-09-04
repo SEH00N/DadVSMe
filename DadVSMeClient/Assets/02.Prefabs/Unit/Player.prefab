@@ -2193,6 +2193,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce2c5030048594232858a76ca88b168d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  deadEffectSound:
+    key: sfx_explosion_0
 --- !u!1 &2243480463503903260
 GameObject:
   m_ObjectHideFlags: 0

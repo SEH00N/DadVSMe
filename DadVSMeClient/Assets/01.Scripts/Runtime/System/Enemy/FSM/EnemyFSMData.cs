@@ -25,6 +25,8 @@ namespace DadVSMe.Enemies.FSM
 
         public IAIData Initialize()
         {
+            player = null;
+
             return this;
         }
     }

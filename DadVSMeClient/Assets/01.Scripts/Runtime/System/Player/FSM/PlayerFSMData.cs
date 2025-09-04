@@ -34,6 +34,16 @@ namespace DadVSMe.Players.FSM
 
         public IAIData Initialize()
         {
+            grabbedEntity = null;
+
+            isComboReading = false;
+            isComboFailed = false;
+            grabAttackCount = 0;
+            onGrabbedEntityChanged = null;
+
+            currentAngerGauge = 0;
+            isAnger = false;
+
             levelUpExp = baseLevelUpXP;
             currentLevel = 1;
             currentExp = 0;

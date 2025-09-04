@@ -1144,7 +1144,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawnInfoList:
   - spawnPoint: {fileID: 2053360697291961743}
-    conditionDistance: 22
+    conditionDistance: 15
     spawnTable:
     - prefab:
         key: Ninja
@@ -2028,7 +2028,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawnInfoList:
   - spawnPoint: {fileID: 3189676535610448508}
-    conditionDistance: 22
+    conditionDistance: 15
     spawnTable:
     - prefab:
         key: James

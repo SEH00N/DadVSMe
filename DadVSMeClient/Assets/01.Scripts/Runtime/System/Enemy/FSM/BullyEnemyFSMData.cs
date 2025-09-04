@@ -12,6 +12,9 @@ namespace DadVSMe.Enemies.FSM
 
         public IAIData Initialize()
         {
+            currnetAttack1Cooltime = 0f;
+            currnetAttack2Cooltime = 0f;
+
             return this;
         }
     }

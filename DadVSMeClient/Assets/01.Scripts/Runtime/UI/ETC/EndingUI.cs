@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using Cysharp.Threading.Tasks;
 using DG.Tweening;
+using H00N.Resources.Addressables;
 using UnityEngine;
 using UnityEngine.UI;
 

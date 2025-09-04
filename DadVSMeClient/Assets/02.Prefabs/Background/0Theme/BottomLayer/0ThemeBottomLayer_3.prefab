@@ -1752,7 +1752,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawnInfoList:
   - spawnPoint: {fileID: 1813970852810149949}
-    conditionDistance: 22
+    conditionDistance: 15
     spawnTable:
     - prefab:
         key: SimpleEnemy
@@ -2248,7 +2248,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawnInfoList:
   - spawnPoint: {fileID: 40963834284253834}
-    conditionDistance: 22
+    conditionDistance: 15
     spawnTable:
     - prefab:
         key: SimpleEnemy
@@ -2386,7 +2386,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawnInfoList:
   - spawnPoint: {fileID: 5076562896334469923}
-    conditionDistance: 22
+    conditionDistance: 15
     spawnTable:
     - prefab:
         key: SimpleEnemy

@@ -9,6 +9,7 @@ namespace DadVSMe.Enemies.FSM
 
         public IAIData Initialize()
         {
+            buttTimer = 0f;
             return this;
         }
     }

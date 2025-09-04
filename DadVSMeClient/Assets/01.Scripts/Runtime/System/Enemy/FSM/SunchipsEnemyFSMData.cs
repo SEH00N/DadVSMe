@@ -15,6 +15,12 @@ namespace DadVSMe.Enemies.FSM
 
         public IAIData Initialize()
         {
+            shootCount = 0;
+            shootCooltime = 0f;
+            buttTimer = 0f;
+            frenzyTarget = null;
+            currentFrenzyCooltime = 0f;
+
             return this;
         }
     }

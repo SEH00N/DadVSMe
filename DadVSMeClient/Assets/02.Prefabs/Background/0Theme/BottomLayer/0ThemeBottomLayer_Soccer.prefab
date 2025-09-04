@@ -330,7 +330,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawnInfoList:
   - spawnPoint: {fileID: 1495555468565540927}
-    conditionDistance: 22
+    conditionDistance: 15
     spawnTable:
     - prefab:
         key: ButtEnemy
@@ -2885,7 +2885,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawnInfoList:
   - spawnPoint: {fileID: 5072542675269226105}
-    conditionDistance: 22
+    conditionDistance: 15
     spawnTable:
     - prefab:
         key: ButtEnemy

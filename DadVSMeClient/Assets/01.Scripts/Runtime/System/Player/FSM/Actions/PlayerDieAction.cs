@@ -2,12 +2,15 @@ using Cysharp.Threading.Tasks;
 using DadVSMe.Entities;
 using DadVSMe.Entities.FSM;
 using H00N.AI.FSM;
+using H00N.Resources.Addressables;
+using UnityEngine;
 using UnityEngine.SceneManagement;
 
 namespace DadVSMe.Players.FSM
 {
     public class PlayerDieAction : DieAction
     {
+        [SerializeField] AddressableAsset<AudioClip> deadEffectSound = null;
         private const float CHARACTER_ZOOM_BLEND_TIME = 9f;
         private const float FADE_DURATION = 1f;
         private EntityAnimator entityAnimator = null;
@@ -16,6 +19,7 @@ namespace DadVSMe.Players.FSM
         {
             base.Init(brain, state);
             entityAnimator = brain.GetComponent<EntityAnimator>();
+            deadEffectSound.InitializeAsync().Forget();
         }
 
         public override void EnterState()
@@ -23,6 +27,9 @@ namespace DadVSMe.Players.FSM
             base.EnterState();
             entityAnimator.RemoveAnimationEventListener(EEntityAnimationEventType.End, HandleAnimationEnd);   
             entityAnimator.AddAnimationEventListener(EEntityAnimationEventType.End, HandleAnimationEnd);   
+
+            entityAnimator.RemoveAnimationEventListener(EEntityAnimationEventType.Trigger, HandleAnimationTrigger);   
+            entityAnimator.AddAnimationEventListener(EEntityAnimationEventType.Trigger, HandleAnimationTrigger);   
 
             _ = new ChangeCinemachineCamera(GameInstance.GameCycle.CharacterZoomCinemachineCamera, CHARACTER_ZOOM_BLEND_TIME);
         }
@@ -42,6 +49,11 @@ namespace DadVSMe.Players.FSM
             DOFade.FadeOutAsync(FADE_DURATION).Forget();
 
             TimeManager.SetTimeScale(1f, true);
+        }
+
+        private void HandleAnimationTrigger(EntityAnimationEventData eventData)
+        {
+            AudioManager.Instance.PlaySFX(deadEffectSound, force: true);
         }
     }
 }
