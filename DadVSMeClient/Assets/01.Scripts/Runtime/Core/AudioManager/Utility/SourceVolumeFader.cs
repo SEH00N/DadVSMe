@@ -17,15 +17,6 @@ namespace DadVSMe
             player = GetComponent<AudioSource>();
         }
 
-        #if UNITY_EDITOR
-        [SerializeField, Range(0f, 1f)] float slider = 0f;
-        private void Update()
-        {
-            if (player.clip)
-                slider = player.time / player.clip.length;
-        }
-        #endif
-
         public void DoFade(FadeData fadeData, EFadeState fadeState, EFadeState targetFadeState, Action callback = null)
         {
             if (this.fadeState != fadeState)
@@ -56,12 +47,12 @@ namespace DadVSMe
                 yield break;
             }
 
-            float duration = Mathf.Min(fadeDuration, player.clip.length);
-            float timer = Mathf.Lerp(0, duration, process);
-            while (timer < duration)
+            // float duration = Mathf.Min(fadeDuration, player.clip.length);
+            float timer = Mathf.Lerp(0, fadeDuration, process);
+            while (timer < fadeDuration)
             {
                 timer += Time.unscaledDeltaTime;
-                process = timer / duration;
+                process = timer / fadeDuration;
 
                 float volume = fadeCurve.Evaluate(process);
                 volume = Mathf.Clamp(volume, 0, volumeLimit);

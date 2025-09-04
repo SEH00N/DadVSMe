@@ -9,6 +9,7 @@ namespace DadVSMe
     public class BGMAudioLibraryTable
     {
         public AudioClip audioClip;
+        public float length;
         public FadeData fadeInData;
         public FadeData fadeOutData;
     }

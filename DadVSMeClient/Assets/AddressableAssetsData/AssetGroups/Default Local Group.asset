@@ -14,7 +14,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_GroupName: Default Local Group
   m_GUID: 9249e757cc3c04767b44cb815a980850
-  m_SerializeEntries: []
+  m_SerializeEntries:
+  - m_GUID: 2b51360781d2a427bbd4e57224ac493d
+    m_Address: Assets/99.ETC/Audio/AudioMixer.mixer
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: cfd052ceeb2354823b4fa30d195a2e8a, type: 2}
   m_SchemaSet:

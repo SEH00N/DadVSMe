@@ -135,7 +135,7 @@ namespace DadVSMe
 
             player.DoFadeIn(); // 실행과 동시에 fade in
 
-            float delayDuration = bgmTable.audioClip.length - progress;
+            float delayDuration = bgmTable.length - progress;
             if (transitioning) // transitioning이 true라면 fade duration 까지만 놓고
                 delayDuration -= bgmTable.fadeOutData.fadeDuration;
 
