@@ -20,7 +20,7 @@ namespace DadVSMe
         private const float BOSS_CLEAR_DIRECTING_CAMERA_SHAKE_AMPLITUDE = 14f;
         private const float BOSS_CLEAR_DIRECTING_CAMERA_SHAKE_FREQUENCY = 8f;
 
-        private const float BOSS_CLEAR_DIRECTING_FINISHING_DURATION = 3.5f;
+        private const float BOSS_CLEAR_DIRECTING_FINISHING_DURATION = 3f;
 
         [SerializeField] Animator deadlineAnimator = null;
         [SerializeField] JuggleAttackData deadlineJuggleAttackData = null;
