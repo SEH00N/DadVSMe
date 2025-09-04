@@ -10,7 +10,7 @@ namespace DadVSMe.Enemies
         private const float BOUNDARY_CHECK_DISTANCE = 3.5f;
         private const float PLAYER_CHECK_DISTANCE = 10f;
 
-        private const float DIRECTION_RANDOMNESS = 15f;
+        private const int MAX_COUNTER = 10;
 
         private EnemyFSMData enemyFSMData = null;
         private UnitMovement unitMovement = null;
@@ -18,6 +18,8 @@ namespace DadVSMe.Enemies
         private UnitFSMData unitFSMData = null;
         
         private Vector2 patrolDirection = Vector2.zero;
+
+        private int counter = 0;
 
         public override void Init(FSMBrain brain, FSMState state)
         {
@@ -33,25 +35,35 @@ namespace DadVSMe.Enemies
             base.EnterState();
             unitMovement.SetActive(true);
 
-            Vector2 targetPosition = enemyFSMData.Player.transform.position;
-            Vector2 currentPosition = brain.transform.position;
-            
-            Vector3 direction = targetPosition - currentPosition;
-            patrolDirection = Quaternion.Euler(0f, 0f, Random.Range(-DIRECTION_RANDOMNESS, DIRECTION_RANDOMNESS)) * direction.normalized;
+            counter++;
+            if(counter > MAX_COUNTER)
+            {
+                counter = 0;
+
+                Vector2 targetPosition = enemyFSMData.Player.transform.position;
+                Vector2 currentPosition = brain.transform.position;
+                
+                Vector3 direction = targetPosition - currentPosition;
+                patrolDirection = direction.normalized;
+            }
+            else
+            {
+                patrolDirection = Quaternion.Euler(0f, 0f, Random.Range(0f, 360f)) * Vector2.right;
+            }
         }
 
         public override void UpdateState()
         {
             base.UpdateState();
 
-            Vector2 targetPosition = enemyFSMData.Player.transform.position;
-            Vector2 currentPosition = brain.transform.position;
-            Vector2 targetDirection = targetPosition - currentPosition;
-            if(Mathf.Sign(targetDirection.x) != Mathf.Sign(patrolDirection.x) && targetDirection.sqrMagnitude >= PLAYER_CHECK_DISTANCE * PLAYER_CHECK_DISTANCE)
-            {
-                brain.SetAsDefaultState();
-                return;
-            }
+            // Vector2 targetPosition = enemyFSMData.Player.transform.position;
+            // Vector2 currentPosition = brain.transform.position;
+            // Vector2 targetDirection = targetPosition - currentPosition;
+            // if(Mathf.Sign(targetDirection.x) != Mathf.Sign(patrolDirection.x) && targetDirection.sqrMagnitude >= PLAYER_CHECK_DISTANCE * PLAYER_CHECK_DISTANCE)
+            // {
+            //     brain.SetAsDefaultState();
+            //     return;
+            // }
 
             Vector2 movementDireciton = patrolDirection * unitStatData[EUnitStat.MoveSpeed].FinalValue;
             Vector2 movement = movementDireciton * (Time.deltaTime * BOUNDARY_CHECK_DISTANCE);
