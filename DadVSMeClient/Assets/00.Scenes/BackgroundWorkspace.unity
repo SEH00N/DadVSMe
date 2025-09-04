@@ -1342,22 +1342,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 482625652}
     m_Modifications:
-    - target: {fileID: 3865834927760513137, guid: a191219164f6da04cbda231d2c9251d6, type: 3}
-      propertyPath: spawnInfoList.Array.data[0].spawnTable.Array.data[0].startWithHold
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3865834927760513137, guid: a191219164f6da04cbda231d2c9251d6, type: 3}
-      propertyPath: spawnInfoList.Array.data[0].spawnTable.Array.data[1].startWithHold
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3865834927760513137, guid: a191219164f6da04cbda231d2c9251d6, type: 3}
-      propertyPath: spawnInfoList.Array.data[0].spawnTable.Array.data[2].startWithHold
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3865834927760513137, guid: a191219164f6da04cbda231d2c9251d6, type: 3}
-      propertyPath: spawnInfoList.Array.data[0].spawnTable.Array.data[3].startWithHold
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 4182483190324818261, guid: a191219164f6da04cbda231d2c9251d6, type: 3}
       propertyPath: m_Name
       value: 0ThemeBottomLayer_Soccer

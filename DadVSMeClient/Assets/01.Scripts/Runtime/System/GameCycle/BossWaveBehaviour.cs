@@ -194,6 +194,8 @@ namespace DadVSMe.GameCycles
             GameInstance.GameCycle.Pause();
             InputManager.DisableInput();
 
+            GameInstance.GameCycle.MainPlayer.Stat[EUnitStat.ItemMagnetRadius].RegistAddModifier(50f);
+
             GameInstance.GameCycle.SetBossClearDirecting(true);
             AudioManager.Instance.PlayBGM(GameInstance.GameCycle.MainBGMLibrary, loadCache: true);
 
@@ -207,8 +209,10 @@ namespace DadVSMe.GameCycles
             await UniTask.WaitForSeconds(BOSS_DEAD_ZOOM_TIME, ignoreTimeScale: true);
 
             TimeManager.SetTimeScale(GameDefine.DEFAULT_TIME_SCALE, true, 0.5f);
+
             await GameInstance.GameCycle.Deadline.PlayBumpPlayerDirecting(BOSS_WAVE_MAIN_CAMERA_BLEND_TIME, BOSS_WAVE_MAIN_CAMERA_RELEASE_DURATION);
 
+            GameInstance.GameCycle.MainPlayer.Stat[EUnitStat.ItemMagnetRadius].UnregistAddModifier(50f);
             GameInstance.GameCycle.SetBossClearDirecting(false);
 
             InputManager.EnableInput<PlayerInputReader>();
