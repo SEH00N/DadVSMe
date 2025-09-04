@@ -36,7 +36,7 @@ namespace DadVSMe
             gameObject.GetComponent<AudioManager>().Initialize();
 
             // Game Initialize
-            Application.targetFrameRate = 60;
+            // Application.targetFrameRate = 60;
             InputManager.EnableInput<PlayerInputReader>();
 
             return UniTask.CompletedTask;
