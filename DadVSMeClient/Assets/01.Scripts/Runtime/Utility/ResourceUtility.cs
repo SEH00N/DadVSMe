@@ -1,19 +1,18 @@
-using System.Collections.Generic;
 using Cysharp.Threading.Tasks;
 using H00N.Resources.Addressables;
-using H00N.Resources.Pools;
 using UnityEngine;
 
 namespace DadVSMe
 {
     public struct ReleaseResourceByLabel
     {
-        public async UniTask ReleaseAsync(string label)
+        public UniTask ReleaseAsync(string label)
         {
-            List<string> resources = new List<string>();
-            await AddressableResourceLoader.ReleaseResourcesByLabelAsync(label, resources);
-            foreach (string resource in resources)
-                PoolManager.RemovePool(resource);
+            // List<string> resources = new List<string>();
+            // await AddressableResourceLoader.ReleaseResourcesByLabelAsync(label, resources);
+            // foreach (string resource in resources)
+            //     PoolManager.RemovePool(resource);
+            return UniTask.CompletedTask;
         }
     }
 

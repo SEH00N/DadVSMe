@@ -21,6 +21,12 @@ namespace DadVSMe.UI
 
         private CancellationTokenSource cancellationTokenSource = new CancellationTokenSource();
 
+        // private void Start()
+        // {
+        //     // Load Resources
+        //     new LoadResourceByLabel().LoadAsync(GameDefine.ADDRESSABLES_LABEL_GAME_ASSETS).Forget();
+        // }
+
         public async void OnTouchStartButton()
         {
             try 

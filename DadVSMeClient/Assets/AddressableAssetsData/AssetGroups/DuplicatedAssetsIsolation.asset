@@ -10,33 +10,23 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
-  m_Name: SceneAssets
+  m_Name: DuplicatedAssetsIsolation
   m_EditorClassIdentifier: 
-  m_GroupName: SceneAssets
-  m_GUID: 8ec532e207af545628aa06904f1053ab
+  m_GroupName: DuplicatedAssetsIsolation
+  m_GUID: 9e999535dc53a374e8ab697668350177
   m_SerializeEntries:
-  - m_GUID: 2a3d70de2e4cf4247b56367aacb5cdf6
-    m_Address: TitleScene
+  - m_GUID: b449f9396c65f4698ab47681246422cf
+    m_Address: Assets/03.Assets/Data/AttackData/Skill/AngerKnockbackAttackData.asset
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 6ac4b494edb0b4c59bcc3150df5ad896
-    m_Address: GameScene
+  - m_GUID: d2a3ba00e1ffc4a6aa429b164ea114cc
+    m_Address: Assets/03.Assets/Data/AttackData/Kid/Kid_DefaultJuggle.asset
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 70ac3782c1e7349619fd952aa2118f7c
-    m_Address: GameClearScene
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: a5a718987071e479ba0a34ac2dd2be60
-    m_Address: GameOverScene
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: cf3da7c29005a40c6b664739d856011c
-    m_Address: IntroScene
+  - m_GUID: d93bda65b7aa940269e4ff4fa155bff2
+    m_Address: Assets/03.Assets/Data/AttackData/GameCycle/BoundaryCollisionAttack.asset
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
@@ -44,5 +34,5 @@ MonoBehaviour:
   m_Settings: {fileID: 11400000, guid: cfd052ceeb2354823b4fa30d195a2e8a, type: 2}
   m_SchemaSet:
     m_Schemas:
-    - {fileID: 11400000, guid: 52165a4e968b545ecbd23ab63445c925, type: 2}
-    - {fileID: 11400000, guid: 2e04b85b60efb43b3a0e4cf10c4f2fb3, type: 2}
+    - {fileID: 11400000, guid: bb06d604f13ec1c48b27a800e80441b3, type: 2}
+    - {fileID: 11400000, guid: 1e945892caf02194da7bda6478fe8cca, type: 2}
