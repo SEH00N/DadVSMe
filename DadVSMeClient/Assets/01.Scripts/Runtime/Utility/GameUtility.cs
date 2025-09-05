@@ -13,7 +13,7 @@ namespace DadVSMe
             if(loadResources)
             {
                 // Load Resources
-                await new LoadResourceByLabel().LoadAsync(GameDefine.ADDRESSABLES_LABEL_GAME_ASSETS);
+                // await new LoadResourceByLabel().LoadAsync(GameDefine.ADDRESSABLES_LABEL_GAME_ASSETS);
             }
 
             // Load game scene
